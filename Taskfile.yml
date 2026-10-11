@@ -106,3 +106,10 @@ tasks:
       vars: [ARTIFACTS]
     cmds:
       - uv run --script experiments/staff_coordinates.py --source-views --artifacts '{{.ARTIFACTS}}'
+
+  geometry:norwegian-preflight:
+    desc: Freeze complete half canvases and unmasked native extraction diagnostics; never fit
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --script experiments/norwegian_preflight.py --collection '{{.COLLECTION}}' --artifacts '{{.ARTIFACTS}}'

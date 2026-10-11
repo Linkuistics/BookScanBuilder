@@ -1,0 +1,1217 @@
+{
+  "scope": "unmasked acquisition diagnostic, no physical identity or held-out acceptance",
+  "independent_marks": null,
+  "holdouts": null,
+  "model": null,
+  "application": null,
+  "control_pixel_match_k4": true,
+  "split_recombines_exactly": true,
+  "settings": {
+    "threshold": 180,
+    "longest_filter": 0.8,
+    "minimum": 15,
+    "sampling_if_future_fit": 30,
+    "reduction_if_future_fit": 1
+  },
+  "spec": {
+    "sources": {
+      "spread": {
+        "source": "Processed Books/Norwegian - An Essential Grammar (Routledge)/Norwegian - An Essential Grammar (Routledge).pdf",
+        "sha256": "a21736ada0c088ab9e4f89a264c303788ccf22c4ee647b5dfb5f076ea1b750d3",
+        "dimensions": [
+          3591,
+          2695
+        ]
+      },
+      "control": {
+        "source": "Processed Books/Algorithm Design/Algorithm Design.pdf",
+        "sha256": "b9d6f1fd08560f06ec8653375a5866dbe1ba971d780dfecd1a0211fb2f66deab",
+        "dimensions": [
+          2350,
+          2721
+        ]
+      }
+    },
+    "page": 20,
+    "dpi": 300,
+    "canvas": "complete default MediaBox RGB, no trim or scale",
+    "spread_render_sha256": "38c1b4450bd152a6be72f7a1021dacbb9406b2ed22ffea865a019f39340110d8",
+    "split_x": 1785,
+    "split_method": "Codex manually chose vertical seam from unchanged spread and native gutter crop before any fit; each source pixel retained exactly once",
+    "origin": "native pixel centres, x right/y down; left origin [0,0], right origin [1785,0] in spread",
+    "canvases": {
+      "left": [
+        1785,
+        2695
+      ],
+      "right": [
+        1806,
+        2695
+      ]
+    },
+    "holdouts": null,
+    "physical_baseline_marks": null,
+    "pinned_native_source": "/private/tmp/bookscan-staff-k26-reproduced/dewarp2-1.87.0.c",
+    "historical_control": "/private/tmp/bookscan-geometry-k4-final/control.png",
+    "crops": {
+      "left": {
+        "gutter-upper": [
+          1485,
+          100,
+          1785,
+          550
+        ],
+        "gutter-middle": [
+          1485,
+          1050,
+          1785,
+          1500
+        ],
+        "gutter-lower": [
+          1485,
+          1950,
+          1785,
+          2400
+        ]
+      },
+      "right": {
+        "gutter-upper": [
+          0,
+          100,
+          500,
+          550
+        ],
+        "gutter-middle": [
+          0,
+          1050,
+          500,
+          1500
+        ],
+        "gutter-lower": [
+          0,
+          1950,
+          500,
+          2400
+        ]
+      }
+    }
+  },
+  "commands": [
+    {
+      "argv": [
+        "pdftoppm",
+        "-f",
+        "20",
+        "-l",
+        "20",
+        "-singlefile",
+        "-r",
+        "300",
+        "-png",
+        "/Volumes/Glass/Book Conversion/Processed Books/Norwegian - An Essential Grammar (Routledge)/Norwegian - An Essential Grammar (Routledge).pdf",
+        "/private/tmp/bookscan-norwegian-k32-final/spread"
+      ],
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "pdftoppm",
+        "-f",
+        "20",
+        "-l",
+        "20",
+        "-singlefile",
+        "-r",
+        "300",
+        "-png",
+        "/Volumes/Glass/Book Conversion/Processed Books/Algorithm Design/Algorithm Design.pdf",
+        "/private/tmp/bookscan-norwegian-k32-final/control"
+      ],
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "poppler": "pdftoppm version 26.10.0\nCopyright 2005-2026 The Poppler Developers - http://poppler.freedesktop.org\nCopyright 1996-2011, 2022 Glyph & Cog, LLC\n",
+  "before": {
+    "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
+    "/Users/antony/Development/BookScanBuilder/experiments/norwegian_canvases.json": "164243989ffe84600802c549be9d585d6f0178895edc2e00fc08ddd1808e8d0e",
+    "/Users/antony/Development/BookScanBuilder/experiments/norwegian_preflight.py": "b07789dad569d3d3c35a9f97d472134882c7b1891c297f9ac138ffafeb33e39b",
+    "/Users/antony/Development/BookScanBuilder/experiments/staff_coordinates.py": "c072ca27b75eefb72de169714e38a776c6a4a54832c4a9a2bcce76136aa7a0c2",
+    "/Users/antony/Development/BookScanBuilder/Taskfile.yml": "f0355668f5116e7f46ac831672ffa6ae5cd7a84879064b655cae35014bd8f5ff",
+    "/opt/homebrew/Cellar/leptonica/1.87.0/lib/libleptonica.6.dylib": "f9e973f4a61ba251ccb7a0d4545ce7e00e6d2c90ee4a55313012e68da7a7ebfa",
+    "/private/tmp/bookscan-staff-k26-reproduced/dewarp2-1.87.0.c": "f92430cbd2eedced417d82c20cbfd15d60886294f40fb6f7d5806265e28f2853",
+    "/private/tmp/bookscan-geometry-k4-final/control.png": "63e3914ac7b4f95b86680ae5554c99e18d0e24609e19843ad4a6e9d12cdf183d",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/page-geometry-frozen.json": "4d718063df70d4ac59cfdb36fe471acda11ee9ef0d4022d070e31110fb928cb2",
+    "/Volumes/Glass/Book Conversion/Processed Books/Norwegian - An Essential Grammar (Routledge)/Norwegian - An Essential Grammar (Routledge).pdf": "a21736ada0c088ab9e4f89a264c303788ccf22c4ee647b5dfb5f076ea1b750d3",
+    "/Volumes/Glass/Book Conversion/Processed Books/Algorithm Design/Algorithm Design.pdf": "b9d6f1fd08560f06ec8653375a5866dbe1ba971d780dfecd1a0211fb2f66deab",
+    "/private/tmp/bookscan-norwegian-k32-final/spread.png": "38c1b4450bd152a6be72f7a1021dacbb9406b2ed22ffea865a019f39340110d8",
+    "/private/tmp/bookscan-norwegian-k32-final/left.png": "e9a73730fd2cc3ff5c850a209be0cf639149010e65e67365de7d46012d5e060c",
+    "/private/tmp/bookscan-norwegian-k32-final/right.png": "db5b62db60b3ec04b2d06d21dead8ba40ce692e1138cbff8c0f58373492275b0",
+    "/private/tmp/bookscan-norwegian-k32-final/control.png": "63e3914ac7b4f95b86680ae5554c99e18d0e24609e19843ad4a6e9d12cdf183d"
+  },
+  "after": {
+    "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
+    "/Users/antony/Development/BookScanBuilder/experiments/norwegian_canvases.json": "164243989ffe84600802c549be9d585d6f0178895edc2e00fc08ddd1808e8d0e",
+    "/Users/antony/Development/BookScanBuilder/experiments/norwegian_preflight.py": "b07789dad569d3d3c35a9f97d472134882c7b1891c297f9ac138ffafeb33e39b",
+    "/Users/antony/Development/BookScanBuilder/experiments/staff_coordinates.py": "c072ca27b75eefb72de169714e38a776c6a4a54832c4a9a2bcce76136aa7a0c2",
+    "/Users/antony/Development/BookScanBuilder/Taskfile.yml": "f0355668f5116e7f46ac831672ffa6ae5cd7a84879064b655cae35014bd8f5ff",
+    "/opt/homebrew/Cellar/leptonica/1.87.0/lib/libleptonica.6.dylib": "f9e973f4a61ba251ccb7a0d4545ce7e00e6d2c90ee4a55313012e68da7a7ebfa",
+    "/private/tmp/bookscan-staff-k26-reproduced/dewarp2-1.87.0.c": "f92430cbd2eedced417d82c20cbfd15d60886294f40fb6f7d5806265e28f2853",
+    "/private/tmp/bookscan-geometry-k4-final/control.png": "63e3914ac7b4f95b86680ae5554c99e18d0e24609e19843ad4a6e9d12cdf183d",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/page-geometry-frozen.json": "4d718063df70d4ac59cfdb36fe471acda11ee9ef0d4022d070e31110fb928cb2",
+    "/Volumes/Glass/Book Conversion/Processed Books/Norwegian - An Essential Grammar (Routledge)/Norwegian - An Essential Grammar (Routledge).pdf": "a21736ada0c088ab9e4f89a264c303788ccf22c4ee647b5dfb5f076ea1b750d3",
+    "/Volumes/Glass/Book Conversion/Processed Books/Algorithm Design/Algorithm Design.pdf": "b9d6f1fd08560f06ec8653375a5866dbe1ba971d780dfecd1a0211fb2f66deab",
+    "/private/tmp/bookscan-norwegian-k32-final/spread.png": "38c1b4450bd152a6be72f7a1021dacbb9406b2ed22ffea865a019f39340110d8",
+    "/private/tmp/bookscan-norwegian-k32-final/left.png": "e9a73730fd2cc3ff5c850a209be0cf639149010e65e67365de7d46012d5e060c",
+    "/private/tmp/bookscan-norwegian-k32-final/right.png": "db5b62db60b3ec04b2d06d21dead8ba40ce692e1138cbff8c0f58373492275b0",
+    "/private/tmp/bookscan-norwegian-k32-final/control.png": "63e3914ac7b4f95b86680ae5554c99e18d0e24609e19843ad4a6e9d12cdf183d"
+  },
+  "outputs": {
+    "control-automatic-overlay.png": "a17ed1b197a0b3da38a7df7edaa6ab9c31bffe4b4a7ce7833a687ca65eae94d3",
+    "control.png": "63e3914ac7b4f95b86680ae5554c99e18d0e24609e19843ad4a6e9d12cdf183d",
+    "left-automatic-overlay.png": "a9284e5d89bd5567d560d4e95944437fd877fdbcc907cedd35a550af3be25149",
+    "left-gutter-lower.png": "ac4946598ab1f69548012e9ef0930799357eb08ba096deabb5d26f3e97d4b804",
+    "left-gutter-middle.png": "80da459d42c6967af7c39d0e5c9d1acc2a62b888b3990735292673ddb21d001f",
+    "left-gutter-upper.png": "0bf1f6189346c9bfd9ff53a58f2c1e3317c096bb65a497f4d732bc8ed19731e3",
+    "left.png": "e9a73730fd2cc3ff5c850a209be0cf639149010e65e67365de7d46012d5e060c",
+    "right-automatic-overlay.png": "395b1dcca48db4df09326f88efc836434f4c96ecb5959dd33120ae6e46bda4a1",
+    "right-gutter-lower.png": "0a3207543fdf42f895659d4af8096e44fb3d4751e95df3b6fa2f70e905d4ff63",
+    "right-gutter-middle.png": "cff760ec2f259097bac622168b08a68f01171f5d989978d9a69b869827e757a7",
+    "right-gutter-upper.png": "2062c15de53e1345747fdf6105a62857448d10e76c2895145b0635c3e06437f6",
+    "right.png": "db5b62db60b3ec04b2d06d21dead8ba40ce692e1138cbff8c0f58373492275b0",
+    "spread.png": "38c1b4450bd152a6be72f7a1021dacbb9406b2ed22ffea865a019f39340110d8"
+  },
+  "results": {
+    "left": {
+      "dimensions": [
+        1785,
+        2695
+      ],
+      "native_gate": {
+        "retained_count": 15,
+        "first_y_float32": [
+          198.0,
+          314.0,
+          371.0,
+          457.0,
+          654.0,
+          1055.0,
+          1441.0,
+          1523.0,
+          1691.0,
+          1807.0,
+          1933.0,
+          2044.0,
+          2152.0,
+          2271.0,
+          2389.0
+        ],
+        "first_y_native_integer": [
+          198,
+          314,
+          371,
+          457,
+          654,
+          1055,
+          1441,
+          1523,
+          1691,
+          1807,
+          1933,
+          2044,
+          2152,
+          2271,
+          2389
+        ],
+        "top_count": 6,
+        "bottom_count": 9,
+        "vertical_span_fraction_float32": 0.8129870295524597,
+        "passed": true
+      },
+      "extracted_count": 36,
+      "extracted_points_in_full_native_record": true,
+      "retained_line_extents": [
+        {
+          "automatic_index": 0,
+          "points": 1329,
+          "first": [
+            273.0,
+            1933.0
+          ],
+          "last": [
+            1601.0,
+            1931.0
+          ],
+          "x_min": 273.0,
+          "x_max": 1601.0
+        },
+        {
+          "automatic_index": 1,
+          "points": 1328,
+          "first": [
+            279.0,
+            1441.0
+          ],
+          "last": [
+            1606.0,
+            1473.0
+          ],
+          "x_min": 279.0,
+          "x_max": 1606.0
+        },
+        {
+          "automatic_index": 2,
+          "points": 1328,
+          "first": [
+            274.0,
+            2044.0
+          ],
+          "last": [
+            1601.0,
+            2043.0
+          ],
+          "x_min": 274.0,
+          "x_max": 1601.0
+        },
+        {
+          "automatic_index": 3,
+          "points": 1328,
+          "first": [
+            289.0,
+            371.0
+          ],
+          "last": [
+            1616.0,
+            380.0
+          ],
+          "x_min": 289.0,
+          "x_max": 1616.0
+        },
+        {
+          "automatic_index": 4,
+          "points": 1328,
+          "first": [
+            273.0,
+            2152.0
+          ],
+          "last": [
+            1600.0,
+            2158.0
+          ],
+          "x_min": 273.0,
+          "x_max": 1600.0
+        },
+        {
+          "automatic_index": 5,
+          "points": 1327,
+          "first": [
+            278.0,
+            1691.0
+          ],
+          "last": [
+            1604.0,
+            1710.0
+          ],
+          "x_min": 278.0,
+          "x_max": 1604.0
+        },
+        {
+          "automatic_index": 6,
+          "points": 1327,
+          "first": [
+            273.0,
+            2389.0
+          ],
+          "last": [
+            1599.0,
+            2402.0
+          ],
+          "x_min": 273.0,
+          "x_max": 1599.0
+        },
+        {
+          "automatic_index": 7,
+          "points": 1327,
+          "first": [
+            276.0,
+            1807.0
+          ],
+          "last": [
+            1602.0,
+            1826.0
+          ],
+          "x_min": 276.0,
+          "x_max": 1602.0
+        },
+        {
+          "automatic_index": 8,
+          "points": 1327,
+          "first": [
+            280.0,
+            1523.0
+          ],
+          "last": [
+            1606.0,
+            1530.0
+          ],
+          "x_min": 280.0,
+          "x_max": 1606.0
+        },
+        {
+          "automatic_index": 9,
+          "points": 1321,
+          "first": [
+            298.0,
+            198.0
+          ],
+          "last": [
+            1618.0,
+            189.0
+          ],
+          "x_min": 298.0,
+          "x_max": 1618.0
+        },
+        {
+          "automatic_index": 10,
+          "points": 1248,
+          "first": [
+            270.0,
+            2271.0
+          ],
+          "last": [
+            1517.0,
+            2283.0
+          ],
+          "x_min": 270.0,
+          "x_max": 1517.0
+        },
+        {
+          "automatic_index": 11,
+          "points": 1181,
+          "first": [
+            289.0,
+            457.0
+          ],
+          "last": [
+            1469.0,
+            492.0
+          ],
+          "x_min": 289.0,
+          "x_max": 1469.0
+        },
+        {
+          "automatic_index": 12,
+          "points": 1130,
+          "first": [
+            239.0,
+            654.0
+          ],
+          "last": [
+            1368.0,
+            666.0
+          ],
+          "x_min": 239.0,
+          "x_max": 1368.0
+        },
+        {
+          "automatic_index": 13,
+          "points": 1122,
+          "first": [
+            291.0,
+            314.0
+          ],
+          "last": [
+            1412.0,
+            319.0
+          ],
+          "x_min": 291.0,
+          "x_max": 1412.0
+        },
+        {
+          "automatic_index": 14,
+          "points": 1070,
+          "first": [
+            234.0,
+            1055.0
+          ],
+          "last": [
+            1303.0,
+            1067.0
+          ],
+          "x_min": 234.0,
+          "x_max": 1303.0
+        }
+      ]
+    },
+    "right": {
+      "dimensions": [
+        1806,
+        2695
+      ],
+      "native_gate": {
+        "retained_count": 10,
+        "first_y_float32": [
+          152.0,
+          605.0,
+          1076.0,
+          1306.0,
+          1595.0,
+          1772.0,
+          1941.0,
+          2115.0,
+          2228.0,
+          2286.0
+        ],
+        "first_y_native_integer": [
+          152,
+          605,
+          1076,
+          1306,
+          1595,
+          1772,
+          1941,
+          2115,
+          2228,
+          2286
+        ],
+        "top_count": 4,
+        "bottom_count": 6,
+        "vertical_span_fraction_float32": 0.7918367385864258,
+        "passed": false
+      },
+      "extracted_count": 34,
+      "extracted_points_in_full_native_record": true,
+      "retained_line_extents": [
+        {
+          "automatic_index": 0,
+          "points": 1379,
+          "first": [
+            216.0,
+            152.0
+          ],
+          "last": [
+            1594.0,
+            143.0
+          ],
+          "x_min": 216.0,
+          "x_max": 1594.0
+        },
+        {
+          "automatic_index": 1,
+          "points": 1370,
+          "first": [
+            212.0,
+            1595.0
+          ],
+          "last": [
+            1581.0,
+            1598.0
+          ],
+          "x_min": 212.0,
+          "x_max": 1581.0
+        },
+        {
+          "automatic_index": 2,
+          "points": 1337,
+          "first": [
+            208.0,
+            2228.0
+          ],
+          "last": [
+            1544.0,
+            2228.0
+          ],
+          "x_min": 208.0,
+          "x_max": 1544.0
+        },
+        {
+          "automatic_index": 3,
+          "points": 1329,
+          "first": [
+            210.0,
+            1076.0
+          ],
+          "last": [
+            1538.0,
+            1067.0
+          ],
+          "x_min": 210.0,
+          "x_max": 1538.0
+        },
+        {
+          "automatic_index": 4,
+          "points": 1321,
+          "first": [
+            266.0,
+            605.0
+          ],
+          "last": [
+            1586.0,
+            606.0
+          ],
+          "x_min": 266.0,
+          "x_max": 1586.0
+        },
+        {
+          "automatic_index": 5,
+          "points": 1303,
+          "first": [
+            258.0,
+            2286.0
+          ],
+          "last": [
+            1560.0,
+            2287.0
+          ],
+          "x_min": 258.0,
+          "x_max": 1560.0
+        },
+        {
+          "automatic_index": 6,
+          "points": 1228,
+          "first": [
+            210.0,
+            1941.0
+          ],
+          "last": [
+            1437.0,
+            1944.0
+          ],
+          "x_min": 210.0,
+          "x_max": 1437.0
+        },
+        {
+          "automatic_index": 7,
+          "points": 1181,
+          "first": [
+            263.0,
+            1772.0
+          ],
+          "last": [
+            1443.0,
+            1777.0
+          ],
+          "x_min": 263.0,
+          "x_max": 1443.0
+        },
+        {
+          "automatic_index": 8,
+          "points": 1164,
+          "first": [
+            211.0,
+            1306.0
+          ],
+          "last": [
+            1374.0,
+            1315.0
+          ],
+          "x_min": 211.0,
+          "x_max": 1374.0
+        },
+        {
+          "automatic_index": 9,
+          "points": 1123,
+          "first": [
+            258.0,
+            2115.0
+          ],
+          "last": [
+            1380.0,
+            2113.0
+          ],
+          "x_min": 258.0,
+          "x_max": 1380.0
+        }
+      ]
+    },
+    "control": {
+      "dimensions": [
+        2350,
+        2721
+      ],
+      "native_gate": {
+        "retained_count": 35,
+        "first_y_float32": [
+          304.0,
+          357.0,
+          403.0,
+          458.0,
+          502.0,
+          548.0,
+          610.0,
+          734.0,
+          807.0,
+          865.0,
+          908.0,
+          972.0,
+          1092.0,
+          1147.0,
+          1210.0,
+          1263.0,
+          1329.0,
+          1382.0,
+          1448.0,
+          1556.0,
+          1628.0,
+          1676.0,
+          1736.0,
+          1776.0,
+          1847.0,
+          1902.0,
+          1944.0,
+          2000.0,
+          2054.0,
+          2108.0,
+          2161.0,
+          2226.0,
+          2269.0,
+          2410.0,
+          2444.0
+        ],
+        "first_y_native_integer": [
+          304,
+          357,
+          403,
+          458,
+          502,
+          548,
+          610,
+          734,
+          807,
+          865,
+          908,
+          972,
+          1092,
+          1147,
+          1210,
+          1263,
+          1329,
+          1382,
+          1448,
+          1556,
+          1628,
+          1676,
+          1736,
+          1776,
+          1847,
+          1902,
+          1944,
+          2000,
+          2054,
+          2108,
+          2161,
+          2226,
+          2269,
+          2410,
+          2444
+        ],
+        "top_count": 17,
+        "bottom_count": 18,
+        "vertical_span_fraction_float32": 0.7864755392074585,
+        "passed": true
+      },
+      "extracted_count": 40,
+      "extracted_points_in_full_native_record": true,
+      "retained_line_extents": [
+        {
+          "automatic_index": 0,
+          "points": 1385,
+          "first": [
+            727.0,
+            1676.0
+          ],
+          "last": [
+            2111.0,
+            1686.0
+          ],
+          "x_min": 727.0,
+          "x_max": 2111.0
+        },
+        {
+          "automatic_index": 1,
+          "points": 1385,
+          "first": [
+            727.0,
+            865.0
+          ],
+          "last": [
+            2111.0,
+            865.0
+          ],
+          "x_min": 727.0,
+          "x_max": 2111.0
+        },
+        {
+          "automatic_index": 2,
+          "points": 1385,
+          "first": [
+            727.0,
+            2054.0
+          ],
+          "last": [
+            2111.0,
+            2052.0
+          ],
+          "x_min": 727.0,
+          "x_max": 2111.0
+        },
+        {
+          "automatic_index": 3,
+          "points": 1385,
+          "first": [
+            728.0,
+            2444.0
+          ],
+          "last": [
+            2112.0,
+            2445.0
+          ],
+          "x_min": 728.0,
+          "x_max": 2112.0
+        },
+        {
+          "automatic_index": 4,
+          "points": 1385,
+          "first": [
+            727.0,
+            2000.0
+          ],
+          "last": [
+            2111.0,
+            1999.0
+          ],
+          "x_min": 727.0,
+          "x_max": 2111.0
+        },
+        {
+          "automatic_index": 5,
+          "points": 1384,
+          "first": [
+            727.0,
+            403.0
+          ],
+          "last": [
+            2110.0,
+            412.0
+          ],
+          "x_min": 727.0,
+          "x_max": 2110.0
+        },
+        {
+          "automatic_index": 6,
+          "points": 1384,
+          "first": [
+            727.0,
+            807.0
+          ],
+          "last": [
+            2110.0,
+            798.0
+          ],
+          "x_min": 727.0,
+          "x_max": 2110.0
+        },
+        {
+          "automatic_index": 7,
+          "points": 1384,
+          "first": [
+            726.0,
+            610.0
+          ],
+          "last": [
+            2109.0,
+            626.0
+          ],
+          "x_min": 726.0,
+          "x_max": 2109.0
+        },
+        {
+          "automatic_index": 8,
+          "points": 1384,
+          "first": [
+            728.0,
+            2226.0
+          ],
+          "last": [
+            2111.0,
+            2227.0
+          ],
+          "x_min": 728.0,
+          "x_max": 2111.0
+        },
+        {
+          "automatic_index": 9,
+          "points": 1384,
+          "first": [
+            728.0,
+            2161.0
+          ],
+          "last": [
+            2111.0,
+            2160.0
+          ],
+          "x_min": 728.0,
+          "x_max": 2111.0
+        },
+        {
+          "automatic_index": 10,
+          "points": 1384,
+          "first": [
+            727.0,
+            1776.0
+          ],
+          "last": [
+            2110.0,
+            1794.0
+          ],
+          "x_min": 727.0,
+          "x_max": 2110.0
+        },
+        {
+          "automatic_index": 11,
+          "points": 1384,
+          "first": [
+            728.0,
+            1736.0
+          ],
+          "last": [
+            2111.0,
+            1728.0
+          ],
+          "x_min": 728.0,
+          "x_max": 2111.0
+        },
+        {
+          "automatic_index": 12,
+          "points": 1384,
+          "first": [
+            727.0,
+            304.0
+          ],
+          "last": [
+            2110.0,
+            298.0
+          ],
+          "x_min": 727.0,
+          "x_max": 2110.0
+        },
+        {
+          "automatic_index": 13,
+          "points": 1383,
+          "first": [
+            728.0,
+            972.0
+          ],
+          "last": [
+            2110.0,
+            966.0
+          ],
+          "x_min": 728.0,
+          "x_max": 2110.0
+        },
+        {
+          "automatic_index": 14,
+          "points": 1383,
+          "first": [
+            729.0,
+            1847.0
+          ],
+          "last": [
+            2111.0,
+            1836.0
+          ],
+          "x_min": 729.0,
+          "x_max": 2111.0
+        },
+        {
+          "automatic_index": 15,
+          "points": 1383,
+          "first": [
+            728.0,
+            1944.0
+          ],
+          "last": [
+            2110.0,
+            1946.0
+          ],
+          "x_min": 728.0,
+          "x_max": 2110.0
+        },
+        {
+          "automatic_index": 16,
+          "points": 1383,
+          "first": [
+            727.0,
+            458.0
+          ],
+          "last": [
+            2109.0,
+            465.0
+          ],
+          "x_min": 727.0,
+          "x_max": 2109.0
+        },
+        {
+          "automatic_index": 17,
+          "points": 1383,
+          "first": [
+            728.0,
+            1902.0
+          ],
+          "last": [
+            2110.0,
+            1884.0
+          ],
+          "x_min": 728.0,
+          "x_max": 2110.0
+        },
+        {
+          "automatic_index": 18,
+          "points": 1383,
+          "first": [
+            726.0,
+            502.0
+          ],
+          "last": [
+            2108.0,
+            518.0
+          ],
+          "x_min": 726.0,
+          "x_max": 2108.0
+        },
+        {
+          "automatic_index": 19,
+          "points": 1383,
+          "first": [
+            728.0,
+            1147.0
+          ],
+          "last": [
+            2110.0,
+            1151.0
+          ],
+          "x_min": 728.0,
+          "x_max": 2110.0
+        },
+        {
+          "automatic_index": 20,
+          "points": 1383,
+          "first": [
+            728.0,
+            1628.0
+          ],
+          "last": [
+            2110.0,
+            1625.0
+          ],
+          "x_min": 728.0,
+          "x_max": 2110.0
+        },
+        {
+          "automatic_index": 21,
+          "points": 1383,
+          "first": [
+            729.0,
+            2269.0
+          ],
+          "last": [
+            2111.0,
+            2281.0
+          ],
+          "x_min": 729.0,
+          "x_max": 2111.0
+        },
+        {
+          "automatic_index": 22,
+          "points": 1382,
+          "first": [
+            729.0,
+            357.0
+          ],
+          "last": [
+            2110.0,
+            357.0
+          ],
+          "x_min": 729.0,
+          "x_max": 2110.0
+        },
+        {
+          "automatic_index": 23,
+          "points": 1382,
+          "first": [
+            728.0,
+            2108.0
+          ],
+          "last": [
+            2109.0,
+            2105.0
+          ],
+          "x_min": 728.0,
+          "x_max": 2109.0
+        },
+        {
+          "automatic_index": 24,
+          "points": 1381,
+          "first": [
+            730.0,
+            1382.0
+          ],
+          "last": [
+            2110.0,
+            1393.0
+          ],
+          "x_min": 730.0,
+          "x_max": 2110.0
+        },
+        {
+          "automatic_index": 25,
+          "points": 1381,
+          "first": [
+            729.0,
+            908.0
+          ],
+          "last": [
+            2109.0,
+            905.0
+          ],
+          "x_min": 729.0,
+          "x_max": 2109.0
+        },
+        {
+          "automatic_index": 26,
+          "points": 1380,
+          "first": [
+            731.0,
+            1448.0
+          ],
+          "last": [
+            2110.0,
+            1438.0
+          ],
+          "x_min": 731.0,
+          "x_max": 2110.0
+        },
+        {
+          "automatic_index": 27,
+          "points": 1380,
+          "first": [
+            730.0,
+            1329.0
+          ],
+          "last": [
+            2109.0,
+            1325.0
+          ],
+          "x_min": 730.0,
+          "x_max": 2109.0
+        },
+        {
+          "automatic_index": 28,
+          "points": 1378,
+          "first": [
+            731.0,
+            548.0
+          ],
+          "last": [
+            2108.0,
+            562.0
+          ],
+          "x_min": 731.0,
+          "x_max": 2108.0
+        },
+        {
+          "automatic_index": 29,
+          "points": 1311,
+          "first": [
+            801.0,
+            1556.0
+          ],
+          "last": [
+            2111.0,
+            1578.0
+          ],
+          "x_min": 801.0,
+          "x_max": 2111.0
+        },
+        {
+          "automatic_index": 30,
+          "points": 1311,
+          "first": [
+            800.0,
+            734.0
+          ],
+          "last": [
+            2110.0,
+            750.0
+          ],
+          "x_min": 800.0,
+          "x_max": 2110.0
+        },
+        {
+          "automatic_index": 31,
+          "points": 1311,
+          "first": [
+            801.0,
+            1263.0
+          ],
+          "last": [
+            2111.0,
+            1277.0
+          ],
+          "x_min": 801.0,
+          "x_max": 2111.0
+        },
+        {
+          "automatic_index": 32,
+          "points": 1308,
+          "first": [
+            802.0,
+            2410.0
+          ],
+          "last": [
+            2109.0,
+            2408.0
+          ],
+          "x_min": 802.0,
+          "x_max": 2109.0
+        },
+        {
+          "automatic_index": 33,
+          "points": 1306,
+          "first": [
+            804.0,
+            1092.0
+          ],
+          "last": [
+            2109.0,
+            1093.0
+          ],
+          "x_min": 804.0,
+          "x_max": 2109.0
+        },
+        {
+          "automatic_index": 34,
+          "points": 1249,
+          "first": [
+            728.0,
+            1210.0
+          ],
+          "last": [
+            1976.0,
+            1210.0
+          ],
+          "x_min": 728.0,
+          "x_max": 1976.0
+        }
+      ]
+    }
+  },
+  "full_native_record": {
+    "external_path": "/private/tmp/bookscan-norwegian-k32-final/preflight.json",
+    "external_sha256": "d8cb5d08125fafb2d9197e8f8623070fe29788dec251bc61903ba3c7faa8e638",
+    "archive": "norwegian-preflight-native.json.gz",
+    "archive_sha256": "0e06f7001d037b0e983d6b0a0dee4df5552ca09fb2170728e66a28f50cdeb63e",
+    "lossless_gzip": true
+  }
+}

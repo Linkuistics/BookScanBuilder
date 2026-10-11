@@ -382,3 +382,17 @@ comparison paths are in `docs/acceptance/prepared-pdf.md`, using
 producer reports remain historical and unchanged; preparation visual approval
 still belongs separately to `page-geometry-k4` and is checked by
 `corrected-book-k5`.
+
+## Norwegian prerequisite decomposition
+
+`norwegian-gutter-k31` has decomposed at its allowed complete inspectable
+prerequisite boundary. `norwegian-preflight-k32` freezes the full RGB source,
+manual seam canvases and unmasked native extraction diagnostics in
+`docs/experiments/norwegian-gutter.md`; it generates no rigid/model/corrected
+output and supplies no independent marks or held-out acceptance. The remaining
+prototype child keeps source observations/blind repeats/physical verification,
+masked native prerequisites and conditional complete output/control/sampler/
+measurement/reaction evidence live before a fresh root planning consumer and
+k27 → k28. That planner consumes both the partial and completed/unsupported
+result, preserving every inherited obligation. No partial count licenses
+production or closes k31.

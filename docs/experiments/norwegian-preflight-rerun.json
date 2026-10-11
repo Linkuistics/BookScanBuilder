@@ -1,0 +1,40 @@
+{
+  "final": "/private/tmp/bookscan-norwegian-k32-final",
+  "rerun": "/private/tmp/bookscan-norwegian-k32-rerun",
+  "same_results_per_case": {
+    "left": true,
+    "right": true,
+    "control": true
+  },
+  "same_output_per_file": {
+    "control-automatic-overlay.png": true,
+    "control.png": true,
+    "left-automatic-overlay.png": true,
+    "left-gutter-lower.png": true,
+    "left-gutter-middle.png": true,
+    "left-gutter-upper.png": true,
+    "left.png": true,
+    "right-automatic-overlay.png": true,
+    "right-gutter-lower.png": true,
+    "right-gutter-middle.png": true,
+    "right-gutter-upper.png": true,
+    "right.png": true,
+    "spread.png": true
+  },
+  "stable_read_subjects_final": true,
+  "stable_read_subjects_rerun": true,
+  "shared_subjects": [
+    "/Users/antony/Development/BookScanBuilder/Taskfile.yml",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/page-geometry-frozen.json",
+    "/Users/antony/Development/BookScanBuilder/experiments/norwegian_canvases.json",
+    "/Users/antony/Development/BookScanBuilder/experiments/norwegian_preflight.py",
+    "/Users/antony/Development/BookScanBuilder/experiments/staff_coordinates.py",
+    "/Volumes/Glass/Book Conversion/Processed Books/Algorithm Design/Algorithm Design.pdf",
+    "/Volumes/Glass/Book Conversion/Processed Books/Norwegian - An Essential Grammar (Routledge)/Norwegian - An Essential Grammar (Routledge).pdf",
+    "/opt/homebrew/Cellar/leptonica/1.87.0/lib/libleptonica.6.dylib",
+    "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm",
+    "/private/tmp/bookscan-geometry-k4-final/control.png",
+    "/private/tmp/bookscan-staff-k26-reproduced/dewarp2-1.87.0.c"
+  ],
+  "shared_subjects_match": true
+}

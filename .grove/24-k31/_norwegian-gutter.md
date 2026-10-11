@@ -1,4 +1,4 @@
-# norwegian-gutter-k31
+# norwegian-gutter-k31 — brief
 
 
 ## Goal
@@ -125,3 +125,19 @@ its fresh planner and k27, and label partial evidence honestly. Do not cut an
 adapter/setup-only child or retire a supported result without its independent
 measurement and reaction. A precisely recorded decisive prerequisite failure
 may close the bounded trial, with every unperformed obligation handed forward.
+
+## Decomposition
+
+`norwegian-preflight-k32` freezes full source/half canvases and complete unmasked
+native extraction diagnostics, independently inspectable without an output model.
+The remaining prototype child owns independent source observations/blind repeats,
+physical verification, declared holdouts and exact masked preflight, then any
+permitted output/control/sampler/measurement and human comparisons. Unmasked
+acquisition cannot close the trial or replace that prerequisite. A fresh root
+planning consumer remains before k27 on every eventual outcome.
+
+The remaining complete trial is `norwegian-comparison-k33`; the unconditional
+root planning handoff is `norwegian-gutter-k34`, already placed immediately
+before k27. k32 retires without closing this node. k33 owns every missing
+independent-observation/masked-gate/output/control/sampler/reaction obligation;
+k34 consumes its actual result and preserves k27 then k28.

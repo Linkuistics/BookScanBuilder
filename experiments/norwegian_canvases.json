@@ -1,0 +1,83 @@
+{
+  "sources": {
+    "spread": {
+      "source": "Processed Books/Norwegian - An Essential Grammar (Routledge)/Norwegian - An Essential Grammar (Routledge).pdf",
+      "sha256": "a21736ada0c088ab9e4f89a264c303788ccf22c4ee647b5dfb5f076ea1b750d3",
+      "dimensions": [
+        3591,
+        2695
+      ]
+    },
+    "control": {
+      "source": "Processed Books/Algorithm Design/Algorithm Design.pdf",
+      "sha256": "b9d6f1fd08560f06ec8653375a5866dbe1ba971d780dfecd1a0211fb2f66deab",
+      "dimensions": [
+        2350,
+        2721
+      ]
+    }
+  },
+  "page": 20,
+  "dpi": 300,
+  "canvas": "complete default MediaBox RGB, no trim or scale",
+  "spread_render_sha256": "38c1b4450bd152a6be72f7a1021dacbb9406b2ed22ffea865a019f39340110d8",
+  "split_x": 1785,
+  "split_method": "Codex manually chose vertical seam from unchanged spread and native gutter crop before any fit; each source pixel retained exactly once",
+  "origin": "native pixel centres, x right/y down; left origin [0,0], right origin [1785,0] in spread",
+  "canvases": {
+    "left": [
+      1785,
+      2695
+    ],
+    "right": [
+      1806,
+      2695
+    ]
+  },
+  "holdouts": null,
+  "physical_baseline_marks": null,
+  "pinned_native_source": "/private/tmp/bookscan-staff-k26-reproduced/dewarp2-1.87.0.c",
+  "historical_control": "/private/tmp/bookscan-geometry-k4-final/control.png",
+  "crops": {
+    "left": {
+      "gutter-upper": [
+        1485,
+        100,
+        1785,
+        550
+      ],
+      "gutter-middle": [
+        1485,
+        1050,
+        1785,
+        1500
+      ],
+      "gutter-lower": [
+        1485,
+        1950,
+        1785,
+        2400
+      ]
+    },
+    "right": {
+      "gutter-upper": [
+        0,
+        100,
+        500,
+        550
+      ],
+      "gutter-middle": [
+        0,
+        1050,
+        500,
+        1500
+      ],
+      "gutter-lower": [
+        0,
+        1950,
+        500,
+        2400
+      ]
+    }
+  }
+}
