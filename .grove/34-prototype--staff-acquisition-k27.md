@@ -55,6 +55,18 @@ Generate no fitted model, rigid image or corrected image in this session.
 
 ## Done when
 
+- Consume k40's `rotation-processor-k41` design and actual lazy planning/working
+  handoff before this source repair. Its complete intermediate rotation/review/
+  assembly/aligned-OCR/export increment is distinct from music or within-page
+  acceptance. Design or working export does not alter this source-only protocol,
+  authorize a fit or accept music/geometry/preparation. Keep k28 as the fresh
+  consumer of this repair on every outcome, carrying the actual intermediate
+  artifacts/limitations and all unresolved k40/k28 obligations. No Norwegian
+  study or repeated identical missing-response completion is commissioned by
+  k40. Both Norwegian source replies remain unavailable independently; preserve
+  any later actual reply explicitly. This repair still owns the separate exact
+  historical geometry/preparation response questions below.
+
 - Read `norwegian-measurement-k38`, `geometry-policy-k39` and its actual fresh
   planning consumer `geometry-policy-k40`. Carry exact per-half source
   dispositions

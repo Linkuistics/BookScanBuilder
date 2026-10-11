@@ -33,6 +33,32 @@ Preparation's working contract/evidence are `docs/specs/prepared-pdf.md` and
 
 ## Done when
 
+- Consume k40's commissioned `rotation-processor-k41` agreement and its ACTUAL
+  planning/working successors, plus the planning review/integration, alongside
+  k27's complete source result. The intermediate increment includes full-page
+  render, supported rigid rotation with unknown distortion usable/flagged, safe
+  borders/spread split, review and adjustment of any page, post-split decisions
+  and accepted-image/aligned-English-OCR/export with its own acceptance. Its
+  design may precede demonstrated nonrigid evidence under “agreed”; do not
+  recommission the same initial processor design from older prerequisite wording.
+  Once its design is agreed, its planner owns complete working slices, keeping
+  representation/review/reader/export together. If its actual handoff lacks an
+  agreed design or complete useful product, retain the precise missing work
+  before k22; do not assume the queued design delivered it. All within-page,
+  representative geometry/reaction and full-default criteria below remain owned
+  here. The older representative-geometry prerequisites for production below
+  govern complete nonrigid commitment; intermediate implementation requires its
+  OWN complete rotation/preservation/review/assembly/OCR acceptance, not an
+  assumed Norwegian or music correction. Extend/revise the coherent processor
+  design from actual nonrigid evidence
+  and obtain that agreement before its implementation planning. Intermediate
+  rotation/preservation acceptance cannot accept unmeasured curvature, and a
+  flag cannot satisfy correction. Appearance requires accepted complete default
+  correction, not the intermediate alone. Commission no new Norwegian study
+  without the separately justified explicit changed-observation choice, and no
+  automatic identical response/planning loop. Pass every inherited obligation
+  through ANY evidence/response completion to a fresh planner on EVERY outcome.
+
 - Consume `norwegian-measurement-k38`'s actual human-completion plan,
   `geometry-policy-k39` and its fresh planning consumer `geometry-policy-k40`
   before using k27's result. k38 commissions no new Norwegian study or production method; k39
@@ -226,8 +252,10 @@ and carries every inherited comparison/product obligation, rather than
 automatically cutting another trial.
 
 
-The current next evidence is source acquisition only. The field/confidence/
-review interface and production manual controls remain unsettled; commission
-their design when evidence makes the questions concrete. This leaf must leave
+The current next music evidence is source acquisition only. k40 now commissions
+k41's complete intermediate design before k27; its agreed artifact and actual
+working handoff are consumed here, not assumed. The nonrigid field/confidence
+policy and any additional adjustment needs remain evidence-dependent; revise
+the coherent design when that question is concrete. This leaf must leave
 actionable upstream work before k22 on every incomplete outcome, never treat
-a retired experiment as a delivered processor.
+a retired experiment or intermediate flagged export as complete root geometry.

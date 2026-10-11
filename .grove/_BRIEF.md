@@ -61,10 +61,12 @@ the trial, not to promise an algorithm's success.
 | Increment | Useful handoff | Dependency and ownership |
 | --- | --- | --- |
 | Explicit PDF preparation | One prepared PDF, with selected content order and explicit front/back covers, usable by ordinary PDF tools | First independently useful increment in this tree. `prepared-pdf-k9` and `prepared-pdf-k12` supply the integrated design; `prepared-pdf-k10` cuts `prepared-pdf-k13`, the complete command and its verification, ahead of geometry. No correction service is needed. |
-| Corrected searchable book | One prepared PDF processed through accepted geometry, border removal, post-split assembly decisions, review adjustments and aligned English OCR into an exported PDF | Depends on working preparation's public contract and demonstrated geometry. `norwegian-measurement-k35` delivers a bounded per-half blind-addressing control failure; `norwegian-measurement-k38` consumes it and commissions human policy/source-response completion `geometry-policy-k39` before source-only `staff-acquisition-k27`, preserving `corrected-book-k28` after music acquisition. k39 cuts a fresh planner from actual responses before k27; k28 consumes that chain before cutting justified evidence/design/working processor slices ahead of appearance. The corrected-image schema and its working reader/export path belong to this same increment. |
+| Rotation, review and searchable export | One sole PDF processed through supported rigid rotation, safe borders/splitting, review/any-page adjustment, explicit post-split decisions and aligned English OCR; unresolved distortion stays usable and flagged | k39's “agreed” permits considering this independently useful intermediate increment before demonstrated nonrigid correction. `geometry-policy-k40` commissions the design agreement `rotation-processor-k41` before k27; k41 cuts its implementation-planning consumer lazily from an agreed artifact. Its own public/visual acceptance is required. Representation and working review/reader/export land together. This is no within-page or full-root acceptance. |
+| Corrected searchable book | The working review/export seam extended through demonstrated within-page correction and independent acceptance of the full representative set | Depends on preparation and the intermediate seam, with its own evidence/design agreement before nonrigid implementation. k35's failed fixed-grid addressing attempt remains bounded; k39/k40 commission no new Norwegian study. `staff-acquisition-k27` then `corrected-book-k28` stay live in their relative order. k28 consumes the intermediate design/actual working successors and music result before cutting only justified geometry/completion/design/working slices ahead of appearance. All unresolved comparisons/reactions and root geometry criteria remain owned; flags cannot satisfy them. |
 | Optional appearance cleanup | Preview and selectively apply whitening or noise removal while keeping the working default processor and its accepted-image/OCR alignment | `appearance-cleanup-k22` owns the precise successor design question after the default processor works, then cuts its planning consumer before `workflow-acceptance-k23`. Compare faint print, music, illustration and colour before choosing a cleanup method. |
 
-The user chose one workspace and one Grove tree for all three increments.
+The user chose one workspace and one Grove tree for the working increments,
+including the intermediate stage now considered under k39's permission.
 Preparation design/planning run first, and insert their implementation and
 required reviews before geometry; preparation is useful without correction.
 `page-geometry-k4` is a throwaway two-page comparison with a user reaction,
@@ -318,10 +320,12 @@ geometry, representative cases or final integrated root acceptance.
 
 ## On the horizon
 
-The production correction field, automatic confidence policy and manual
-adjustment controls depend on the user's reaction to the real-page trial.
-Their implementation decomposition cannot yet be stated honestly. Concrete
-whitening/noise-removal mechanisms still need appearance evidence, but their
+The production nonrigid correction field and its confidence policy depend on
+independent evidence and the user's reaction to the real-page trial. Their
+implementation decomposition cannot yet be stated honestly. The complete
+intermediate rotation/review/adjustment/export design is now the precise
+`rotation-processor-k41` agreement question; its implementation is not assumed.
+Concrete whitening/noise-removal mechanisms still need appearance evidence, but their
 precisely known preview/fidelity design question is now `appearance-cleanup-k22`
 after the working default accepted-image/export seam. No method is chosen here.
 
@@ -516,3 +520,41 @@ independent measurement/reaction, music20/music140/fixture-pool, preparation,
 fixed-case, processor-design/default-product/OCR/appearance and root acceptance
 criterion remains live. Neither policy option supplies representative evidence,
 chooses production technology or closes within-page geometry/root acceptance.
+
+## Intermediate processor design handoff
+
+`geometry-policy-k40` commissions `rotation-processor-k41` before k27: design
+the smallest complete supported-rotation/flagged-unknown/review/any-page-edit/
+post-split-assembly/aligned-English-OCR/export workflow, with its own public and
+visual acceptance and human design agreement before implementation planning.
+This changes the next question from another source study to a useful product
+design. It selects no method, technology or interface and grants no correction
+approval. Unknown within-page distortion cannot become an unflagged “correct”
+classification merely because measurement is unavailable. The intermediate
+accepted-image representation and working review/reader/export stay together.
+All fixed cases are assessed independently for its actual rotation/preservation
+claims while their unresolved nonrigid acceptance remains with k28.
+
+k41 cuts its fresh implementation planner lazily before k27 from the actual
+agreed design, assessing any design review before that consumer. The planner
+chooses complete working slices, preserves k27 → k28, and keeps the full default
+correction increment before k22/k23. k27's music source protocol is unchanged;
+k28 consumes the intermediate agreement and actual working successors rather
+than duplicating its initial design. It still owns the exact within-page
+evidence/completion and later geometry-design agreement. The root Done when
+is unchanged. Appearance requires accepted complete default correction, not
+the intermediate export alone; final k23 still verifies all root criteria.
+
+This planning cut earns an external `review-planning` of k40 before k41, focused
+on the completeness of the useful intermediate boundary, honest unknown/flagged
+geometry and preservation of every inherited evidence/product dependency.
+Integration is cut lazily from actual findings immediately before its consumer.
+No in-session reviewer, future design review, implementation subtree, Norwegian
+study or repeated identical response completion is pre-created. The current
+handoff is k40 → its planning review/any earned integration → k41 → its lazy
+planning/working successors → k27 → k28 → actual within-page/default-completion
+successors → k22 → its appearance successors → k23, in the same workspace/tree.
+Numerical source admissibility and source reactions stay separate under “yes”;
+both Norwegian source replies remain unavailable, real-anchor/output reactions
+unperformed, and historical geometry/preparation separately “Not inspected yet”.
+No intermediate design/export or flag closes those obligations by proxy.

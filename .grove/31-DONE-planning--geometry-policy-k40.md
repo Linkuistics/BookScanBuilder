@@ -161,3 +161,141 @@ and full contracts, not abbreviations or assumed successor products. k39's
 source presentations grant no real-anchor/output, music, historical geometry,
 preparation or production approval. The root's within-page criterion is still
 required even if an intermediate working processor is designed or delivered.
+
+## Decisions (running log)
+
+Bootstrap adopted the mandated planning leaf in the stated jj workspace; the
+working change was empty at parent `d398632e`. Read the glossary, cited
+prepared-page-hints ADR, root brief and complete k39/k38/k37/k35 handoff,
+including the raw observer reports and the full k31/k32/k33/k34 and k21/k27/k28
+contracts, k25/k30's confirmed choices and live k22/k23 consumers. The existing
+Taskfile remains the reusable development entry point.
+
+Apply the actual policy replies “yes” and “agreed” without re-asking either.
+Numerical admissibility and source-view reaction are independent dispositions;
+all physical/calibration/systematic requirements remain. Both Norwegian halves
+failed their fixed-grid addressing controls before real acquisition. Each source
+reply remains unavailable with no human inspected path or defect; real-anchor
+and correction reactions are unperformed. Historical geometry and preparation
+remain separately “Not inspected yet” with k27 then k28. No later answer is
+recorded. Commission no Norwegian measurement, annotation adapter, retry or
+identical missing-response loop: there is no separately chosen genuinely changed
+observation. The full conditional k31 comparison remains outstanding.
+
+The next precise useful question is the design agreement for a complete
+rotation-and-review processor: how can one sole-PDF workflow correct rigid
+rotation where supported, retain and flag unresolved within-page distortion,
+permit review and adjustment of any page, make post-split assembly decisions
+and export the accepted images with aligned English OCR? k39 permits considering
+this before demonstrated nonrigid correction. Choose to commission that design
+now, before k27; choose no method, technology, interface or implementation here.
+It must demonstrate its own preservation/rotation/review/assembly/OCR acceptance
+seam and obtain agreement before implementation planning. Unsupported geometry
+stays usable and flagged. A product's honest limitation is not proof that its
+remaining distortion meets the root's geometry criterion.
+
+The working increments are preparation → complete rotation/review/searchable
+export → demonstrated within-page corrected/searchable export → optional
+appearance. The intermediate export is independently useful; its accepted-image
+representation and working reader/export land together, with all review,
+any-page adjustment, spread/border and post-split controls in the same useful
+handoff. The later correction increment builds on that seam rather than
+replacing it. The human's settled one-workspace/one-tree choice governs these
+stages, so no separate Grove or workspace is created. k27 then k28 remain live
+in their relative order; k28 owns the actual evidence/design successors for
+within-page completion before k22/k23. Appearance requires the accepted complete
+default correction increment, not merely an intermediate export. No production
+subtree is invented before the design agreement.
+
+This stage boundary earns an external planning review before the design runs.
+The load-bearing doubt is whether a complete useful intermediate handoff can
+be planned without making unresolved geometry look accepted, losing any-page
+adjustment/assembly/OCR scope or allowing appearance/root closure prematurely.
+The review must also challenge whether flags have a defensible basis when
+within-page measurement is unavailable, rather than treating a missing detector
+as evidence that a page is correct. Spend no competing in-session reviewer.
+Cut the review lazily as the last work act after the design charter and consuming
+contracts exist; its integration is earned only by actual actionable findings.
+The design cuts its own planning consumer lazily from an agreed artifact before
+k27; that consumer decides complete working slices without commandeering k27's
+source protocol or duplicating k28's within-page evidence ownership.
+
+Inserted `rotation-processor-k41` before k27 and wrote its entire complete
+design charter. The root's increment table, current handoff and horizon now
+distinguish intermediate rotation/review/export from later within-page
+completion. k27/k28's own criteria consume the actual design/working handoff
+without changing music's source-only evidence; k28 keeps the subsequent
+nonrigid evidence/design/default acceptance. k22/k23 explicitly require full
+default/root geometry rather than treating intermediate flags as acceptance.
+No new method, production code, experiment, Taskfile recipe or visual approval
+is chosen. This reversible task ordering fails the hard-to-reverse ADR test;
+the prepared-page-hints ADR remains the minimal coherent set.
+
+Fresh integrity consumption checks every one of k35's nine readbacks/errors
+and closed intervals against its key, including agreement on A's wrong (6,3),
+and reads all per-control raster/rerun records. Every one of the canonical
+record's 64 subjects matches its declared identity individually and stays
+unchanged before/after; the record itself remains SHA-256
+`12a36d66bb3e3265c91578d095fb455bdaea4cf265eefeab95e0c06a9f94e3ed`.
+The compact sorted read-subject map hashes to
+`90d45eb5cc0b8943070b7e90c948a46e242f2c82e8e847dc9255089c4c2335c3`.
+This verifies retained evidence identities and reported outcomes, not new
+baseline observations or viewer calibration. No source was re-rendered or
+re-presented, so no human inspected path or new response is claimed.
+
+Tier 2 graph verification uses project
+`Users-antony-Development-BookScanBuilder`, coverage generation
+`2026-10-11T23:45:52Z`. Complete symbol search and both-direction one-hop
+trace pages plus exact centres/preflight snippets distinguish extraction-only
+native observation from model/output work and arithmetic from physical
+admissibility. A file-regex-filtered search returned no rows; the broader
+exact-symbol search resolved the functions, so no absence claim rests on it.
+Coverage records no gap or metadata mismatch in checked current text/code paths;
+the six PNGs are deliberately excluded, and the gzip/uv.lock have untracked
+freshness metadata. PNG/lock bytes were read and hash-verified directly; the
+gzip was also decompressed/read directly and retained its frozen hash.
+Coverage is best-effort, not completeness proof.
+
+Enumerated both jj file manifests and compared every path outside `.grove/`
+byte for byte with the parent: all 77 paths remain identical, with no additions
+or deletions there. Root Done when is byte-identical, and the comparator
+detects a deliberate scanner-border wording mutation. The four consumers'
+COMPLETE original Done when sections remain verbatim beneath their explicit
+new scope/dependency clauses. All current live headers/order were checked,
+and all read subjects stayed stable. Only Grove markdown changes; no new or
+affected development recipe/test subject is changed, so no new product test
+run is due and no fresh test-suite success is claimed. k40's completed plan
+now supplies the exact justified design question, all inherited obligations
+and a lazy implementation-planning handoff. Cut its external planning review
+before k41 as the last work act, then verify/retire/seal with insertion/moves
+together. Root still has live design/music/planning/appearance/acceptance work;
+no ancestor closes, promotion or teardown is due.
+
+Inserted `geometry-policy-k42` before k41 as the scheduled planning review,
+with `**Reviews:** geometry-policy-k40` and this session's own dispatch run
+from the environment. Its complete charter challenges intermediate usefulness,
+unknown/flagged geometry, all inherited comparison/music/response/product scope,
+old production-prerequisite consistency and full-default/appearance/root
+ownership. No competing reviewer or speculative integration is created; an
+integration, if earned, must precede k41. Final live order is k40 → k42 → k41
+→ k27 → k28 → k22 → k23, with lazy agreed-design/working and within-page
+successors still explicitly owned.
+
+Final verification independently resolves all seven handles and reads the
+complete review/design charters. The first verification assertion was invalid:
+the script stripped a newline from only the parent k40 charter. Diagnostic
+length/tail comparisons established that the original charter was already
+byte-identical; the corrected exact comparison and deliberate charter mutation
+control pass. The canonical full manifest/byte comparison passes again for
+every outside-Grove path, root Done when and every original consumer criterion,
+with stable read subjects and no code/experiment/Taskfile change. Coverage
+generation `2026-10-11T23:49:59Z`, recorded `2026-10-11T23:50:36Z`, has no
+recorded gap or metadata mismatch in the current checked text/code paths,
+including new review/design and moved consumers. The excluded PNGs and untracked
+gzip/lock retain the direct byte/hash/decompression checks above. This is
+best-effort verification, not a completeness claim. All k40 Done when clauses
+are satisfied by the actual policy/evidence disposition, smallest complete
+design cut, preserved consumers and lazy review/planning handoffs. Retire only
+k40, seal this focused change including all insertion/moves, then send
+`harness-dispatch exit` as the final action. Root remains live; no close cascade
+or teardown is due.

@@ -27,6 +27,13 @@ using the root's representative real fixtures. Read the final workflow consumer
 
 ## Done when
 
+- Consume k40/k41's actual intermediate design/working handoff through k28 and
+  its successors. A usable rigid-plus-flagged searchable export supplies a
+  reusable seam but does not satisfy the complete default within-page geometry
+  and representative acceptance required before this optional increment. Keep
+  missing correction/evidence/design/response/working scope live before this leaf;
+  no flagged unknown or intermediate approval closes it.
+
 - Trace the working default processor and its acceptance to k28 and its actual
   cut successors and their complete Norwegian/music evidence;
   k21 is a retired leaf, not a node with descendants. Retain all unresolved

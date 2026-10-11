@@ -25,6 +25,13 @@ do not substitute the historical two-page experiment for a processor.
 
 ## Done when
 
+- Trace the k40/k41 intermediate design and actual working handoff through k28
+  and its complete-default successors. Intermediate rotation/review/searchable
+  export and its own acceptance do not satisfy the root's within-page correction
+  criterion. Verify that later geometry and all fixed cases are actually accepted;
+  insert any missing evidence/design/response/working scope before final acceptance.
+  Flags and unavailable measurements grant no root completion or visual approval.
+
 - Trace geometry/default-product prerequisites to k28 and the successors it
   actually cuts; k21 has no descendants. Retain and verify unresolved music,
   preparation and every representative-case obligation even if an independent
