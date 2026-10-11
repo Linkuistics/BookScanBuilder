@@ -12,8 +12,10 @@ evidence and retain any missing scope before root closure.
 
 ## Context
 
-Read the root brief, `corrected-book-k21` descendants' designs/results, the
-landed appearance agreement from `appearance-cleanup-k22` and its successors,
+Read the root brief, `corrected-book-k28` and its cut successors' designs/results,
+`corrected-book-k30`'s repaired evidence and `norwegian-gutter-k31`'s independent
+result/planner, the landed appearance agreement from
+`appearance-cleanup-k22` and its successors,
 and the working products' public contracts/acceptance notes. This leaf must
 remain after their complete working increments and required review/repair.
 If any prerequisite is absent, name and insert that work before this leaf;
@@ -21,6 +23,11 @@ do not substitute the historical two-page experiment for a processor.
 
 ## Done when
 
+- Trace geometry/default-product prerequisites to k28 and the successors it
+  actually cuts; k21 has no descendants. Retain and verify unresolved music,
+  preparation and every representative-case obligation even if an independent
+  gutter result is accepted. Trials/source-only acquisition cannot replace the
+  working processor or this root-wide integrated acceptance.
 - Extend/use a verified `process:` Taskfile acceptance recipe wrapping the actual
   public commands. Prepare explicit real selections from Raw Scans, Processed
   Books and Needing Cleanup with assigned covers, retaining each source's

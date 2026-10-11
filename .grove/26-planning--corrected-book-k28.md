@@ -19,20 +19,39 @@ historical diagnostics; k27 is the new observation, never a completed correction
 Read `corrected-book-k25`'s confirmed unchanged-fixture/gate and independent
 gutter-sequencing policies, `docs/experiments/staff-guides.md`, k4's frozen
 `docs/experiments/page-geometry.md` and `docs/research/scan-geometry-a.md`.
+Read the full `.grove/20-k20/_staff-guides.md` comparison contract and
+`corrected-book-k30`'s integration/confirmed ordering, together with any
+`norwegian-gutter-k31` result and the fresh planning handoff it cuts before k27.
 Preparation's working contract/evidence are `docs/specs/prepared-pdf.md` and
 `docs/acceptance/prepared-pdf.md`. k22 and k23 remain successor consumers.
 
 ## Done when
 
-- Classify k27 by physical acquisition, exact prerequisite coverage/separation,
-  measured uncertainty and source-view reaction separately. A source-only pass
-  is admissible acquisition for a possible model trial, not supported correction;
+- Classify k27 by its ordered source-only outcomes and retain automatic and
+  manual acquisition separately. Check complete extraction-only automatic
+  diagnostics, the declared T/B/D/I fit and A/E/H evaluation roster, genuine
+  endpoint preflight, fresh-context provenance, per-point/per-rule independent
+  source verification, exact prerequisite coverage/separation, repeatability,
+  systematic uncertainty, per-rule rise/curvature and source-view reaction.
+  Automatic coordinate prerequisite success stops manual marking and earns a
+  changed automatic-trial question; it does not establish default model validity.
+  Admissible manual source evidence is only acquisition for a possible model
+  trial, not supported correction;
   a numerical pass on invalid points proves neither. A failed native gate,
-  ambiguous marks/repeatability, unavailable source response or unavailable
-  instrument has its own precise observation-completion question. No failed
-  source result diagnoses model/sampler/two-axis quality. Do not automatically
+  ambiguous marks/repeatability, unresolved independent verification/bias,
+  repeatable-but-too-coarse evidence, unavailable source response or unavailable
+  instrument has its own precise observation-completion question. Compare
+  recorded uncertainty against source nonrigidity rather than raw global tilt;
+  reduced disagreement or a hand-set true flag alone cannot warrant a trial.
+  No failed source result diagnoses model/sampler/two-axis quality. Do not automatically
   rerun the same acquisition; name the changed observation and falsifiable
-  hypothesis before cutting any further completion.
+  hypothesis before cutting any further completion. A roster change, including
+  formerly untraced staffs, requires its own predeclared acquisition question;
+  preserve complete A/E/H exclusions and unchanged gates. Fixture reselection
+  stays within k25's six surveyed pages 20/40/60/100/180/220; 60/180 were not
+  exhaustively preflight-rejected, so do not claim the pool exhausted from their
+  visual nonselection. Leaving that pool needs a fresh human decision. No new
+  fixture, changed roster or unconditional manual retry follows silently.
 - If admissible acquisition warrants it, commission the complete bounded
   matched automatic/manual music trial on the same page 20 / printed 6,
   unchanged family/settings/whole-staff holdouts and fresh pre-output freeze.
@@ -44,16 +63,19 @@ Preparation's working contract/evidence are `docs/specs/prepared-pdf.md` and
   A trace-input seam and its usable comparison belong together, not in a
   horizontal adapter-only leaf. Page 140 remains unsupported diagnostic;
   page-20 success cannot repair its automatic extraction or replace fixed cases.
-- On any acquisition outcome, retain the separately permitted automatic
-  Norwegian-gutter question from k21/k25: can the existing per-page vertical
+- On any acquisition outcome, consume the independently sequenced
+  `norwegian-gutter-k31` and its fresh planning result. Its k21/k25 question is:
+  can the existing per-page vertical
   candidate improve both manually separated page-20 / printed-36–37 halves
   beyond rigid deskew at unchanged validity/native-sampler settings, preserving
-  shape/detail and verified Algorithm Design page-20 control? If commissioning
-  it, state independent fit/evaluation exclusions, exact per-half preflight/
-  coverage, measured source/output uncertainty, rejection/inconclusive outcomes
-  and separate human reactions before output. Unsupported halves stay usable/
-  flagged; no borrowed fit or forced validity. This is an independent question,
-  not expansion/acceptance of music. Carry every unresolved music obligation.
+  shape/detail and verified Algorithm Design page-20 control? Do not commission
+  the same trial again merely because this charter previously retained permission
+  for it. Keep exact per-half acquisition/coverage/model/application/measurement/
+  reaction distinctions and any named completion; a further observation needs
+  a changed falsifiable question and another fresh planner. Unsupported halves
+  stay usable/flagged; no borrowed fit or forced validity. This independent
+  result supplies no expansion/acceptance of music or preparation. Carry every
+  unresolved obligation from k31 and its consumer alongside k27's handoff.
 - Obtain or retain precise response-completion work for the historical
   geometry and preparation views separately, using k27's recorded inspected
   paths/responses and the exact questions in its charter. “Not inspected yet”,

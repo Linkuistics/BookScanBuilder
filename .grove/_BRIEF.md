@@ -61,7 +61,7 @@ the trial, not to promise an algorithm's success.
 | Increment | Useful handoff | Dependency and ownership |
 | --- | --- | --- |
 | Explicit PDF preparation | One prepared PDF, with selected content order and explicit front/back covers, usable by ordinary PDF tools | First independently useful increment in this tree. `prepared-pdf-k9` and `prepared-pdf-k12` supply the integrated design; `prepared-pdf-k10` cuts `prepared-pdf-k13`, the complete command and its verification, ahead of geometry. No correction service is needed. |
-| Corrected searchable book | One prepared PDF processed through accepted geometry, border removal, post-split assembly decisions, review adjustments and aligned English OCR into an exported PDF | Depends on working preparation's public contract and demonstrated geometry. `corrected-book-k21` consumes the inconclusive `staff-guides-k20` result and commissions source-only `staff-acquisition-k27`; `corrected-book-k28` consumes every outcome before cutting further evidence/design/working processor slices ahead of appearance. The corrected-image schema and its working reader/export path belong to this same increment. |
+| Corrected searchable book | One prepared PDF processed through accepted geometry, border removal, post-split assembly decisions, review adjustments and aligned English OCR into an exported PDF | Depends on working preparation's public contract and demonstrated geometry. Integration `corrected-book-k30` places independent `norwegian-gutter-k31` and its fresh planning consumer before source-only `staff-acquisition-k27`; `corrected-book-k28` consumes their evidence and every acquisition outcome before cutting further evidence/design/working processor slices ahead of appearance. The corrected-image schema and its working reader/export path belong to this same increment. |
 | Optional appearance cleanup | Preview and selectively apply whitening or noise removal while keeping the working default processor and its accepted-image/OCR alignment | `appearance-cleanup-k22` owns the precise successor design question after the default processor works, then cuts its planning consumer before `workflow-acceptance-k23`. Compare faint print, music, illustration and colour before choosing a cleanup method. |
 
 The user chose one workspace and one Grove tree for all three increments.
@@ -162,7 +162,7 @@ evidence and human judgment before production commitment. The current live
 leaf order and the default-processor/appearance/final-acceptance dependencies
 remain the same; no additional trial is pre-created by this permission.
 
-The live ordering after k21's retirement is its planning review, source-only
+The ordering initially left by k21's retirement was its planning review, source-only
 `staff-acquisition-k27`, fresh `corrected-book-k28` planning, optional-appearance
 design, and final integrated workflow acceptance. The fresh planner inserts
 justified trials/completion, processor design agreement and working
@@ -207,15 +207,51 @@ preparation questions separately and retains any missing answers or defects.
 
 k28 reads the complete k21 contract and inserts the next justified completion
 or complete matched automatic/manual comparison on page 20, including the
-missing output/control/sampler/reaction evidence. It retains the independently
-permitted automatic Norwegian-gutter question regardless of music status;
-that separate trial is not commissioned by k21 and cannot accept music or
-preparation. No unconditional manual retry, music expansion, interpolation or
+missing output/control/sampler/reaction evidence. It now consumes the independent
+automatic Norwegian-gutter result commissioned by k30 as k31, regardless of
+music status; that trial cannot accept music or preparation. No unconditional
+manual retry, music expansion, interpolation or
 two-axis change follows from this acquisition failure. Every further trial or
 response completion gets a fresh planner before appearance. The fixed real
 representative cases and the default processor's accepted-image/review/post-
 split assembly/aligned-OCR/export increment remain outstanding; k22 and k23
 cannot consume assumed products. This successor plan earns review before k27.
+
+Integration `corrected-book-k30` repairs that plan before acquisition. k27 first
+records unchanged automatic acquisition diagnostics through an extraction-only
+path and genuine manual endpoint/native-gate evidence; automatic prerequisite
+success changes the question for k28 and stops the dense manual pass, without
+claiming model validity. The repair retains the T/B/D/I fit roster and complete
+A/E/H exclusions. Dense first marking and whole-trace repeats receive stripped
+coordinate-free packets in fresh contexts; every eligible observation has an
+independent native-source verification record. Same-context agreement and
+sampled human inspection cannot calibrate the other points. Known-centre
+validation remains labelled separately and proves no real-page accuracy.
+Recorded rise/curvature and systematic uncertainty accompany repeatability;
+repeatable-but-too-coarse evidence cannot earn a trial. A point invalidated after
+freeze voids the attempt rather than becoming an omitted column. First-pass
+child completion never classifies the overall acquisition; concrete remaining
+repeat/preflight/reaction work stays live before k28. Roster changes need a
+separate declared question, and leaving the six-page surveyed fixture pool
+needs a fresh human decision; visual nonselection did not exhaust its gates.
+k28 carries these outcome questions and the complete inherited processor,
+appearance and root acceptance contract. k22/k23 read k28 and its actual cut
+successors, rather than nonexistent k21 descendants. No visual approval,
+production method or corrected result is established by these plan repairs.
+
+The human approved k30's recommendation to run the independent Norwegian-gutter
+trial before music acquisition. The current live sequence is k31, its fresh
+planning consumer cut lazily by k31 before k27, then k27 → k28 → k22 → k23.
+k31 asks whether the unchanged automatic vertical candidate improves both
+manually separated Norwegian page-20 / printed-36–37 halves beyond rigid,
+with independent measurement/reactions and verified Algorithm Design control/
+native-sampler evidence. Each half has its own prerequisite/model/application/
+quality/measurement/reaction outcome; one half or the control cannot accept
+another. Unsupported halves stay usable/flagged with no borrowed/forced model.
+That fresh planner preserves k27/k28's relative order and carries every unresolved
+music/preparation/representative/product/appearance/root-acceptance obligation.
+k28 consumes the independent result without automatically commissioning it again.
+This sequencing approval changes no method, validity rule or visual disposition.
 
 ## On the horizon
 
