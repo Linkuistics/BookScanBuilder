@@ -10,7 +10,7 @@ correction-method evidence. Grow only the work that can now be stated precisely.
 
 - `plan-k1` records the confirmed user decisions and inspected inputs.
 - `scan-geometry-k2` precedes this leaf; read its survey at
-  `docs/research/scan-geometry.md` before deciding the correction trial.
+  `docs/research/scan-geometry-a.md` before deciding the correction trial.
 - The preparation stage merges explicitly chosen covers and content into one
   PDF. The main stage processes that single PDF without discovering content or
   covers across the collection folders. The user's shell supplies the batch
