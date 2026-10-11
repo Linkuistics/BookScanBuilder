@@ -74,14 +74,23 @@ bounded repair trial, and shapes the next processor work. It must keep enough
 live work here to check the root's end-to-end Done when against the integrated
 increments; completion of a prototype or preparation does not close this root.
 
-Preparation's implementation is one complete vertical slice: selection/roles,
-copying and source gates, runtime validation, safe publication, packaging,
-Taskfile integration and public-command acceptance land together. A planning
-review of `prepared-pdf-k10` runs before `prepared-pdf-k13`; any actionable
+Preparation's useful PDF handoff includes selection/roles, copying and source
+gates, runtime validation, safe publication, packaging, Taskfile integration and
+public-command acceptance. Prefer one complete implementation leaf. If
+`prepared-pdf-k13` exceeds one session, its declared fallback permits decomposition
+into a complete dry-run preview and the complete writing command, each with its
+own verification/docs. The preview validates real selections through every source
+gate and reports planned order/roles; it shares the source-projection operation
+with the writing child. Its temporary `prepare:plan` runner explicitly requires
+dry-run, and the public `bookscan prepare`/`prepare:run` install only with working
+writes. This keeps the public write/error contract intact. The preview creates
+no PDF and cannot satisfy preparation's handoff; the writing child stays live
+ahead of geometry until all preparation acceptance is complete. No horizontal
+adapter/setup/test-only or real-acceptance-only cut earns a leaf.
+A planning review of `prepared-pdf-k10` runs before `prepared-pdf-k13`; actionable
 findings integrate before implementation. The finished implementation assesses
 its need for a product review and inserts required review/integration before
-`page-geometry-k4`. No adapter-only or test-only handoff earns its own leaf, and
-no speculative preparation subsystem or future review chain is pre-created.
+`page-geometry-k4`. No speculative subtree or future review chain is pre-created.
 
 Preparation's unstarted task contracts came from producer revision `1ada47bd`:
 its old `prepared-pdf-k4` and `prepared-pdf-k5` are now local `prepared-pdf-k9`
@@ -99,6 +108,22 @@ wrappers its lasting recipes call, or remove/replace and verify those recipes
 when discarding the wrapper. Processor acceptance owns the final check from
 working preparation through one-PDF processing/export, with the collection
 unavailable to the processor.
+
+Preparation's `prepare:check` needs neither the collection nor Poppler.
+`prepare:acceptance` owns synthetic/real renders; its synthetic-only mode must
+work with the collection unavailable. Product fixtures are test-owned and do not
+import the historical experiment. The actual `prepare:run` recipe verifies
+spaced-path/exclusion forwarding against direct command output. Signal and kill
+acceptance targets the installed writer PID with observed private barriers,
+not a uv/Task launcher; ordinary subprocess checks retain the locked uv entry.
+
+`prepared-pdf-k13` supplies automated evidence and comparison paths in
+`docs/acceptance/prepared-pdf.md`. If preparation visual approval is pending,
+`page-geometry-k4` presents those working-command comparisons alongside its
+geometry trial, asks for a separate preparation response and records it there
+and in its own running log. `corrected-book-k5` checks that response and retains
+precise repair/missing-comparison work before processor acceptance when needed.
+Pixel equality and code review do not settle the user's visual judgment.
 
 ## On the horizon
 

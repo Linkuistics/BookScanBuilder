@@ -16,11 +16,24 @@ All stages now use this workspace and tree. If preparation's contract or
 working product is missing, insert the exact completion work before its
 consumer; do not build a processor against an assumed handoff.
 
+Read `docs/acceptance/prepared-pdf.md` and `page-geometry-k4`'s separate
+preparation visual response. That prototype owns presenting any pending working
+preparation comparisons; neither its geometry reaction nor the old dependency
+probe substitutes for this response.
+
 ## Done when
 
 - Classify the core result as supported for further trial, rejected or
   inconclusive using the actual model diagnostics, held-out lines, control
   and user response. No invented numerical acceptance threshold.
+- Check preparation's automated command acceptance and the recorded human
+  visual response independently. If rejected, name the observed defect and
+  commission bounded preparation repair with its comparison/response obligation
+  before processor acceptance. If missing/inconclusive, retain exact work to
+  obtain the missing comparison or ask the specific unresolved visual question.
+  Carry any unresolved preparation obligation into successor planning leaves;
+  do not label preparation accepted or close root acceptance on automated
+  equality, a code review or a geometry response alone.
 - If the automatic core survives, commission a bounded expanded visual trial
   at the same settings. Its exact cases are listed below; it must obtain a user
   reaction and assess each case independently before algorithm commitment.

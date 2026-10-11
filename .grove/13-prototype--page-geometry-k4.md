@@ -21,6 +21,12 @@ one-based PDF page numbers:
   calling it already correct. If unsuitable, name and verify a replacement;
   folder membership is not evidence of straightness.
 
+Read preparation's working-command comparisons and automated result at
+`docs/acceptance/prepared-pdf.md`, supplied by `prepared-pdf-k13` or its completed
+children. The historical dependency-copy experiment is not that product's visual
+acceptance. This session also owns obtaining any pending preparation response;
+keep it distinct from the geometry reaction.
+
 Installed tools and versions are research observations, not this trial's
 verification. Recheck the specific tools actually used. Prefer a small wrapper
 around the installed Leptonica API over a new application or learned-model port.
@@ -70,6 +76,17 @@ around the installed Leptonica API over a new application or learned-model port.
   beyond rigid deskew without unacceptable shape/detail changes. Record the
   response, including rejection or inconclusive evidence, in the running log
   and a durable experiment note at `docs/experiments/page-geometry.md`.
+- Present any pending preparation source/output comparisons from the working
+  command at useful zoom: music/faint detail, colour, margins, complete
+  spread/landscape canvas and both explicitly assigned cover pages. Ask whether
+  their visible appearance and canvas are preserved; record the user's
+  preparation acceptance, rejection or inconclusive response, the inspected
+  comparison/report paths and any specific defect in this leaf's running log
+  and `docs/acceptance/prepared-pdf.md`. Record this separately from geometry
+  acceptance. If the working comparisons are missing or the response is
+  unavailable, identify that exact gap for `corrected-book-k5`; automated pixel
+  equality alone cannot turn it into approval. A preparation rejection remains
+  explicit even when the geometry candidate is accepted.
 - Include and verify root Taskfile tasks once setup/build, explicit fixture
   rendering and repeatable comparison commands are concrete. Keep human guide
   marking and visual acceptance explicit; a numeric residual is not approval.

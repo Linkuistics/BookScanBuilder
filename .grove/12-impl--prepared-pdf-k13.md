@@ -18,9 +18,12 @@ ordinary PDF before geometry or OCR work begins.
   `prepared-pdf-k10` planned this handoff. Read any intervening planning review
   and integration from their committed handles before implementation.
 - `docs/research/prepared-pdf-copy.md`, its retained JSON report and
-  `experiments/prepared_pdf_copy.py` provide bounded copying evidence and reusable
-  labelled-fixture/render mechanics. Their fingerprint is not the specified
-  runtime projected-page comparator; the probe is not command acceptance.
+  `experiments/prepared_pdf_copy.py` provide bounded copying evidence and examples
+  of labelled-fixture/render mechanics. Keep that historical script/report
+  frozen; product checks use test-owned fixture builders, never imports from
+  `experiments/`. Their fingerprint is not the specified runtime projected-page
+  comparator; the probe is not command acceptance. Its recorded Taskfile digest
+  identifies the historical recipe, not the later extended Taskfile.
 - `Taskfile.yml` already wraps the experiment and design diagrams. Extend it
   in place; keep the experiment wrapper while a lasting recipe calls it.
 - The root brief supplies explicit real-source paths and the integrated outcome.
@@ -32,8 +35,13 @@ ordinary PDF before geometry or OCR work begins.
 ### Complete command and preservation
 
 - Python 3.12, pinned pikepdf 10.16.0 and a locked uv environment install
-  `bookscan`. Public subprocess checks invoke `uv run --locked bookscan prepare`;
+  `bookscan`. Ordinary public subprocess checks invoke `uv run --locked bookscan
+  prepare`. After locked setup, signal/kill checks directly invoke that same
+  environment's installed console script (normally `.venv/bin/bookscan`),
+  recording its actual PID; no uv or Task launcher is the signal target.
   Poppler remains an acceptance dependency, independent of runtime use.
+  Record actual uv/Task versions: integration observed uv 0.13.0 and Task 3.54.0,
+  but the current Taskfile/plan does not pin these executables.
 - Implement the spec's exact options/arity, singleton checks, one-based PDF-page
   grammar, repetitions, ascending/descending ranges and unioned exclusions.
   Group front/content/back independently of argument interleaving, retain order
@@ -104,22 +112,46 @@ ordinary PDF before geometry or OCR work begins.
   cases prove syntax before missing source, source before occupied output,
   collision before generic occupation, missing output before missing content.
   Check early JSON detection and help precedence.
+- Check help content with focused assertions for role grouping, the page grammar
+  and single-quoted `!`, examples, failure/retry/no-overwrite behaviour, and
+  dry-run's source-hashing/gating cost and non-reservation/write-I/O limit.
+  Compare exact destination-directory listings (including dotfiles) before and
+  after every public dry-run success/failure case. In the private host, trap
+  staging/temporary-file creation and assert no copy/save/output-reopen/commit
+  call, so create-then-delete cannot pass the no-write check. With stable sources
+  and destination preconditions, let dry-run return `planned`, then inject
+  staged-file creation failure on write: `WRITE_FAILED`/5, no destination and
+  unchanged sources. Do not depend on the executing user's permission privileges.
 - Exercise every source gate in dry-run/write, including late raw-traversal
   warnings, empty-form acceptance, malformed/unsupported extensions,
   appearance-state annotations, border/default links, external streams and
   repeated annotated pages. Accepted discarded/private keys must not falsely
   reject. Mutate nested bytes/DecodeParms/JBIG2Globals, every geometry value and
   retained dictionaries/markers to prove runtime validation detects faults.
-- Use real public subprocesses for parsing, copying, collisions and OS signals;
+- Use real public subprocesses for parsing, copying and collisions;
   a private adapter/subprocess host controls copy/save/reopen/validation,
   permission/flush/fsync/mode/link faults, source changes, concurrent occupation,
   warnings, cleanup and result delivery. Match errors to the spec's phases.
   Check sentinel destinations and original digests after failures. Verify
   stream-only saving, private naming/mode and startup-umask final permissions.
-- SIGINT/SIGTERM before publication yield INTERRUPTED/130 or 143. Exercise
-  pending cancellation, blocked-region/post-link signals, EPIPE and cleanup
-  failures against the commit-point rule. Kill during writing and after link
-  before unlink: the destination is absent or complete. No-link filesystems
+- Deliver actual SIGINT/SIGTERM to the directly launched console-script PID;
+  synchronize a pre-publication barrier through a private test channel and
+  require INTERRUPTED/130 or 143. For narrow windows the private subprocess host
+  runs the same preparation operation/publication adapter at fixed hooks:
+  before signal blocking with cancellation pending, after blocking but before
+  link, after successful link/commit-state recording but before unblocking,
+  and after link before private-name removal. Send real signals to that host's
+  recorded PID at the acknowledged hook (self-signalling is also valid).
+  Pending pre-region cancellation aborts; inside-region/post-link cancellation
+  yields written/0, complete destination and POST_COMMIT_SIGNAL where reportable.
+  Exercise EPIPE and cleanup failures against the same commit-point rule.
+  SIGKILL the writer PID only after its writing or post-link barrier is observed;
+  record hook/state evidence and wait for process death. During-writing kill
+  leaves no destination; after-link kill leaves a complete destination with the
+  private name still present, both names for the same file, observed before kill
+  and after exit. Assert no surviving writer/descendant can publish later.
+  Kill cases promise no JSON result; keep test cleanup separate from observed
+  application cleanup. No-link filesystems
   fail explicitly; repeat success gives OUTPUT_EXISTS/4 without changing output.
   Pre-commit cleanup failure retains the original error and TEMP_CLEANUP_FAILED
   warning/path. Include dry-run result-delivery failure and post-commit warnings.
@@ -134,18 +166,81 @@ ordinary PDF before geometry or OCR work begins.
   `prepare:check`, `prepare:acceptance` as specified: locked setup/dependency
   checks, forwarded arguments to the installed command, formatting/lint/type
   plus synthetic/fault checks, and real acceptance in an unused caller-selected
-  artifact directory with explicit collection root. Synthetic checks need no
-  collection. Run all new/changed recipes and existing recipes affected by setup.
+  artifact directory with explicit collection root. `prepare:check` runs
+  structural/order/role/error/fault checks without Poppler or the collection;
+  do not import acceptance render helpers there. `prepare:acceptance` owns all
+  matched synthetic and real renders: provide `MODE=synthetic` that requires only
+  Poppler and generated fixtures and never resolves/opens the collection, and
+  `MODE=real`/`MODE=all` with the explicit collection root (`all` by default).
+  All modes require an unused artifact directory outside the collection.
+  Run the synthetic mode with the collection unavailable; run real/all modes
+  for the required real pages. Generate synthetic gates, annotations, nested
+  streams/decoder globals and geometry fixtures in test-owned code; deliberately
+  malformed/recovery and lazy-warning specimens must first demonstrate the
+  intended library observation, not accidentally fail in an earlier phase.
+  Run all new/changed recipes and existing recipes affected by setup.
   Retain or explicitly replace/remove and verify existing wrapper-backed recipes.
+- Verify the actual `task prepare:run -- --content '<generated path with
+  spaces>.pdf' 'all,!3' --output '<spaced destination>.pdf' --dry-run --json`
+  result against direct invocation: identical resolved source, pages and roles.
+  Neither `.CLI_ARGS` nor `.CLI_ARGS_LIST` is assumed broken; integration tested
+  both on Task 3.54.0. If using the list, shell-quote every element. Keep this
+  recipe-level check in collection-independent checks and repeat it after
+  recipe/tool changes; success of the scratch forwarding probe is not acceptance
+  of the future installed command.
 - Add durable setup/usage documentation with quoted paths, single-quoted `!`,
   interior-cover/no-cover examples, dry-run/JSON/support limits and no-overwrite/
-  retry behaviour. Record reproduction/comparison paths and any still-pending
-  human visual acceptance. Update “not yet implemented” wording in the spec only
-  after command verification. Keep checks with implementation, not a test-only leaf.
+  retry behaviour. Record reproduction/comparison paths, automated assertions
+  and any still-pending human visual acceptance in
+  `docs/acceptance/prepared-pdf.md`. Supply the working command's full-page/crop
+  comparisons to `page-geometry-k4`, which owns obtaining and recording the
+  preparation-specific user response; `corrected-book-k5` checks its disposition
+  before treating preparation as accepted. Update “not yet implemented” wording
+  in the spec only after command verification. Keep checks with implementation,
+  not a test-only leaf.
 - Commit product, verification, docs and retirement here. Assess the finished
   implementation for an earned `review-impl`; insert required review before
   `page-geometry-k4`, naming this producer handle. That review cuts integration
   lazily before consumers. Spend no in-session reviewer beside a scheduled review.
+
+## Declared fallback if this leaf exceeds one session
+
+Prefer the complete command in one session when it fits. If it does not, use
+`leaf-decompose` on this leaf and keep its full charter as the node brief. Cut
+exactly the following useful vertical handoffs, in order under that node; do not
+pre-create this subtree, and do not leave partial work installed as the public
+writing command. Both handoffs include their own checks and usage documentation.
+
+1. **Complete dry-run preview.** Locked packaging, shared parsing/reporting and
+   selections, every phase-1–5 source gate/raw traversal, bounds/order/roles,
+   destination/alias preconditions, hashes/stability recheck, help/JSON and all
+   applicable errors are working. A temporary `prepare:plan` recipe runs a
+   packaged preview module in the locked environment and requires explicit
+   `--dry-run`; it never exposes a write path. Verify its forwarding, help and
+   zero-write behaviour plus planned order/roles for every real/root fixture
+   and generated gate/failure case. It is useful for validating selections
+   before writing. Do not install the `bookscan` console entry or `prepare:run`
+   until normal writing is implemented; no new public error code or unimplemented
+   write stub is authorized. Deliver `prepare:setup`/`prepare:check` for this
+   preview, with clearly scoped docs and test results. Hand over the shared
+   immutable source projection/geometry and source-lifetime operation, parser,
+   reporting and test-owned fixtures to the writing child; sources are still
+   reopened/rechecked on each later invocation, not cached across sessions.
+2. **Complete preparation command.** Reuse that planner without a second gate
+   implementation; add complete copy/save/markers, recursive staged comparison,
+   publication/signal/kill host, planned-then-write-failure checks and every
+   write-specific acceptance obligation above. Install `bookscan prepare` and
+   `prepare:run` only when both dry-run and normal writes pass. Deliver both
+   synthetic and real render modes and the durable human-comparison handoff;
+   remove the preview recipe/module or route it through the now-complete command
+   and reverify it. Assess `review-impl` for the completed product/node before
+   geometry and settle the node's complete Done when before closing it.
+
+The preview child cannot satisfy the root's prepared-PDF handoff. The writing
+child remains live inside this node ahead of `page-geometry-k4`; geometry never
+consumes a preview as a working preparation product. A test-only, adapter-only
+or dependency-only child, or a second child consisting solely of real acceptance,
+does not meet this fallback. Preserve all reviewed gates and public semantics.
 
 ## Notes
 
@@ -155,7 +250,8 @@ with synthetic/subprocess checks under `tests/` and one explicit-fixture
 acceptance runner. Follow the spec's ownership; private filenames are not a
 public contract. Read the Python coding skill before writing code. Start with
 failing public selection/order tests, then bring copying/gates/validation/
-publication and their checks to one complete green command in this same slice.
+publication and their checks to one complete green command here, or use the
+explicit preview→writing fallback above when the leaf proves too large.
 
 Do not weaken reviewed gates to make the bounded sample pass. A genuine support
 or contract change needs an explicit design decision. Geometry, border or
