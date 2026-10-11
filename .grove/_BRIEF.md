@@ -125,6 +125,13 @@ and in its own running log. `corrected-book-k5` checks that response and retains
 precise repair/missing-comparison work before processor acceptance when needed.
 Pixel equality and code review do not settle the user's visual judgment.
 
+`page-geometry-k4` now supplies the frozen two-page experiment in
+`docs/experiments/page-geometry.md`: automatic music extraction failed on both
+held-out and full input. Its separate geometry/preparation review PDFs were
+presented, but the human responses were unavailable. `corrected-book-k5` retains
+those exact visual questions alongside the bounded staff-trace follow-up decision;
+neither preparation nor geometry has human visual approval from this session.
+
 ## On the horizon
 
 The production correction field, automatic confidence policy and manual

@@ -99,6 +99,24 @@ pages. These are fixed test questions, not evidence that the method succeeds:
 
 ## Notes
 
+`page-geometry-k4` delivers frozen evidence and ordinary comparisons at
+`/private/tmp/bookscan-geometry-k4-final`, with durable results in
+`docs/experiments/page-geometry.md`. Music's held-out fit found four long lines;
+the separate full-input diagnostic found one. Both failed the unchanged minimum
+of fifteen and copied RGB unchanged, so automatic extraction fails on the full
+fixture too. The native sampler diagnostic matches its declared float32/integer
+mapping, but this does not establish visual fidelity or select a geometry family.
+The specific next technical question is independently supplied staff traces;
+do not automatically add another sampler or a two-axis field without evidence.
+
+Human reactions were requested separately through `geometry-review.pdf` and
+`preparation-review.pdf`, but no response arrived in that session. Their human
+dispositions remain inconclusive/unavailable, not acceptance or human rejection.
+Obtain the exact visual answers recorded in the experiment and preparation note
+before promoting either approval. The preparation comparisons are present and
+use the current working command's k19-all views; the gap is the user's response,
+not a missing render. Preserve these obligations in any successor cut.
+
 The two-stage boundary remains preparation by explicit inputs, then one PDF
 through the processor. The user's shell owns collection iteration. An already
 assembled PDF is valid input; the processor never discovers cover files.

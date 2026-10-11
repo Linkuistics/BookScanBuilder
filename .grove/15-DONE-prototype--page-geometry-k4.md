@@ -133,3 +133,74 @@ cover pages 1/4. Exact pixel equality is automated evidence; obtain and record
 the separate preparation-specific visual response as already chartered above.
 An external implementation review precedes this trial and creates integration
 lazily if needed. Keep any rejection/inconclusive response for `corrected-book-k5`.
+
+## Decisions (running log)
+
+The existing charter is the experiment design: use installed Leptonica 1.87.0
+through a small C wrapper, preserve full-page Poppler 26.10.0 RGB PNG renders at
+300 dpi, and keep the wrapper separate from product code. No horizontal field,
+cleanup, neighbouring model or learned port is included. Rigid skew is estimated
+from the same held-out analysis mask. No production algorithm is selected.
+
+Independent coordinates are being frozen in
+`experiments/page_geometry_guides.json` before any candidate or deskew output is
+generated. Holdouts conservatively erase complete rectangular bands around each
+physical evaluation line, including its full visible extent; the RGB reference
+remains untouched. The control's three independent baseline rows differ by
+roughly 0–2 pixels across their sampled widths, consistent with an approximately
+straight page at render/marking precision, not proof of perfect geometry. Its
+trial policy will retain the unchanged image; a separately declared smooth
++/-2.25 pixel diagnostic field exercises the native sampler.
+
+The first evaluation attempt (`/private/tmp/bookscan-geometry-k4-v2`) caught an
+instrument defect: the independent sampler used float64 subtraction instead of
+the native C float32 intermediate. Eleven RGB pixels straddled different
+half-row boundaries. A one-variable diagnostic reproduced eleven mismatches
+with float64 and zero with float32. Correct the checker, explicitly record that
+arithmetic convention, and rerun all subjects frozen; v2 is not final evidence.
+No guide points, field amplitude or detail crops are tuned after viewing output.
+The holdout's four long music fitting lines are insufficient for the unchanged
+minimum of fifteen. Add a separately labelled full-input diagnostic to determine
+whether that failure is induced solely by exclusion; never treat it as held-out
+validation or lower the required line count.
+
+Final frozen experiment at `/private/tmp/bookscan-geometry-k4-final` completed
+with matching before/after subjects and coordinate digests. The frozen record is
+`4d718063df70d4ac59cfdb36fe471acda11ee9ef0d4022d070e31110fb928cb2`.
+All independent points, crop boxes, source/render/marked/mask hashes agree with
+the original pre-output v2 freeze; only the diagnostic's arithmetic declaration
+was clarified. The held-out music fit found four long lines; full-input diagnostic
+found one. Both failed the unchanged minimum of fifteen and produced exact RGB
+copies. Recommend rejecting this automatic extractor for this fixture; the
+held-out geometry comparison alone is inconclusive, and this does not reject
+all line-guided or vertical-field methods. Control fit built a valid model with
+32 long lines but supplies no music result. The trial control policy keeps an
+exact unchanged copy. The forced diagnostic agrees with an independent sampler
+at every RGB channel, has 4,145,240 nonidentity integer-row mappings, nonzero
+fractional coordinates in all named detail crops and no out-of-bounds reads.
+This verifies the integer sampler convention, not absence of sampling damage.
+
+Presented separate lossless PDFs `geometry-review.pdf` (12 pages) and
+`preparation-review.pdf` (16 pages) in that final directory. Their decoded RGB
+streams were rechecked against every source PNG; preparation uses the current
+`/private/tmp/bookscan-prepared-k19-all` working-command comparisons. Asked for
+separate geometry and preparation reactions, recommending automatic-extractor
+rejection and preservation acceptance only if the visual pairs agree.
+
+All new geometry tasks ran successfully, the experiment passes Ruff, and shared
+`prepare:setup`/`prepare:check` passed (231 tests, Ruff and strict pyright). Neither
+preparation implementation nor its existing task commands were changed. The
+retained C/Python/JSON wrappers are all dependencies of the new recipes; renders,
+binary and convenience review PDFs remain disposable outside the collection.
+
+No reply arrived to either visual question during the review window. Record
+both human dispositions as inconclusive because the response is unavailable,
+not acceptance, human rejection or permission inferred from silence. The exact
+views/questions and recommendations are retained in the experiment and
+preparation acceptance notes, and explicitly handed to `corrected-book-k5`.
+That live consumer already owns missing/inconclusive-response completion, so
+no duplicate speculative leaf is needed. The bounded trial can end on its
+technical extraction-failure evidence plus that explicit human-evidence gap,
+as its charter permits; root acceptance and production choices remain open.
+The root still has live `corrected-book-k5`; no parent node closes in this cascade.
+The throwaway experiment does not earn a separate product review chain.

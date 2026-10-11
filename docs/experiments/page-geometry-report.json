@@ -1,0 +1,418 @@
+{
+  "before": {
+    "/Users/antony/Development/BookScanBuilder/experiments/page_geometry.py": "c19a30515a7fb80727860e4f646d96824c1efe8764cb1a67e4d50bcf44ff2c75",
+    "/Users/antony/Development/BookScanBuilder/experiments/page_geometry_guides.json": "58c6889b7e6ee8318b4c18de20d2a78eac3a4af0e4578a2f82065c6f5db3a881",
+    "/Users/antony/Development/BookScanBuilder/experiments/page_geometry.c": "d0e29b3c54fae6a6b7bd782da6c866bc8ce8e87c3f345fa07391edd3c7bfa567",
+    "/Users/antony/Development/BookScanBuilder/Taskfile.yml": "831de9dc6d6a4b409e77e12173c2d3a073180a2495529118adde367fc4c05cb8",
+    "/Volumes/Glass/Book Conversion/Raw Scans/Fundamentals of Musical Composition.pdf": "3235a842d619a18b11e2fbdb3b5b6666adeb223959cafd4b1d67f27f0dbfe780",
+    "/Volumes/Glass/Book Conversion/Processed Books/Algorithm Design/Algorithm Design.pdf": "b9d6f1fd08560f06ec8653375a5866dbe1ba971d780dfecd1a0211fb2f66deab",
+    "/private/tmp/bookscan-page-geometry": "c828af831c35e94ff32da0dc8bec2239c403c616210724fa29ac48427ad62d43",
+    "/private/tmp/bookscan-geometry-k4-final/frozen.json": "4d718063df70d4ac59cfdb36fe471acda11ee9ef0d4022d070e31110fb928cb2",
+    "/private/tmp/bookscan-geometry-k4-final/frozen.sha256": "abe3449d234b7d262269f16d6319b2f426f3ad209b24ea2828b911d1a71876c7",
+    "/private/tmp/bookscan-geometry-k4-final/music.png": "7811202f5745b0547a344fce650ce12c8343bd2721c0a09f05ab307e262be096",
+    "/private/tmp/bookscan-geometry-k4-final/music-marked.png": "0c24875302cc43cfa57272307801ce949e9d0d0ca3472845903d1d51b234df0b",
+    "/private/tmp/bookscan-geometry-k4-final/music-analysis.png": "401b920723100c867d5a9b1709b58dc83c153a121e2a0b1974452c03f24a0091",
+    "/private/tmp/bookscan-geometry-k4-final/music-exclusion.png": "b36c9e5032f2b0ae5cc7d4338ab0dcd64b2ddf053abfd6f2cd2ab1bb4eea9e73",
+    "/private/tmp/bookscan-geometry-k4-final/control.png": "63e3914ac7b4f95b86680ae5554c99e18d0e24609e19843ad4a6e9d12cdf183d",
+    "/private/tmp/bookscan-geometry-k4-final/control-marked.png": "9cdde4e85c2651eae87f9dcb736faf83423aa810bec51abd58e7fe4ac776b99b",
+    "/private/tmp/bookscan-geometry-k4-final/control-analysis.png": "ef248281a8c7c6a9e95946d29125d0008d5e5f7103e033b4a25e6e508bcef2ae",
+    "/private/tmp/bookscan-geometry-k4-final/control-exclusion.png": "cbc0f76bae48eb356ff9a6be9acaa27493d4dbbbd9b05471be646c9e8fc1d964"
+  },
+  "frozen_sha256_before": "4d718063df70d4ac59cfdb36fe471acda11ee9ef0d4022d070e31110fb928cb2",
+  "settings": {
+    "threshold": 180,
+    "sampling": 30,
+    "reduction": 1,
+    "minlines": 15,
+    "short_line_fraction": 0.8,
+    "horizontal": false,
+    "neighbours": false,
+    "white_outside": 255
+  },
+  "pages": {
+    "music": {
+      "status": {
+        "leptonica": "leptonica-1.87.0",
+        "width": 1720,
+        "height": 2459,
+        "build_return": 1,
+        "vsuccess": 0,
+        "vvalid": 0,
+        "apply_return": -1,
+        "long_line_count": 4,
+        "mincurv": 0,
+        "maxcurv": 0,
+        "diagnostic": 0,
+        "skew_status": 0,
+        "angle_degrees": 0.84375,
+        "skew_confidence": 29.0715332
+      },
+      "holdout_fit_violations": [],
+      "lines": [
+        {
+          "id": "ex101-top",
+          "unchanged": {
+            "slope_degrees": -0.628380128265983,
+            "end_to_end_rise_pixels": -8.0,
+            "curvature_peak_to_peak_pixels": 0.6451612903225623,
+            "rms_to_straight_line_pixels": 0.20478155158843567
+          },
+          "rigid": {
+            "slope_degrees": 0.21536930115896014,
+            "end_to_end_rise_pixels": 2.6033594142732,
+            "curvature_peak_to_peak_pixels": 0.6451285415586767,
+            "rms_to_straight_line_pixels": 0.2047706826033366
+          },
+          "candidate": null,
+          "candidate_points": null
+        },
+        {
+          "id": "ex102-system1-top",
+          "unchanged": {
+            "slope_degrees": -0.7895656183754102,
+            "end_to_end_rise_pixels": -18.0,
+            "curvature_peak_to_peak_pixels": 1.2688352521217894,
+            "rms_to_straight_line_pixels": 0.37022666046020575
+          },
+          "rigid": {
+            "slope_degrees": 0.0541837985581662,
+            "end_to_end_rise_pixels": 1.5871105217918284,
+            "curvature_peak_to_peak_pixels": 1.2687214499750326,
+            "rms_to_straight_line_pixels": 0.3701916730019826
+          },
+          "candidate": null,
+          "candidate_points": null
+        },
+        {
+          "id": "ex102-system3-top",
+          "unchanged": {
+            "slope_degrees": -0.9410519268576482,
+            "end_to_end_rise_pixels": -22.0,
+            "curvature_peak_to_peak_pixels": 0.7148136765874824,
+            "rms_to_straight_line_pixels": 0.2170309030219491
+          },
+          "rigid": {
+            "slope_degrees": -0.09730212720066508,
+            "end_to_end_rise_pixels": -2.4124557631964763,
+            "curvature_peak_to_peak_pixels": 0.7147175948864515,
+            "rms_to_straight_line_pixels": 0.21700194317081808
+          },
+          "candidate": null,
+          "candidate_points": null
+        },
+        {
+          "id": "ex102-system5-top",
+          "unchanged": {
+            "slope_degrees": -0.8902166251348358,
+            "end_to_end_rise_pixels": -12.0,
+            "curvature_peak_to_peak_pixels": 1.338461538461388,
+            "rms_to_straight_line_pixels": 0.42479255872571714
+          },
+          "rigid": {
+            "slope_degrees": -0.04646873242295533,
+            "end_to_end_rise_pixels": -0.21815220579856032,
+            "curvature_peak_to_peak_pixels": 1.33828939041814,
+            "rms_to_straight_line_pixels": 0.42474142581224017
+          },
+          "candidate": null,
+          "candidate_points": null
+        }
+      ],
+      "verticals": []
+    },
+    "control": {
+      "status": {
+        "leptonica": "leptonica-1.87.0",
+        "width": 2350,
+        "height": 2721,
+        "build_return": 0,
+        "vsuccess": 1,
+        "vvalid": 1,
+        "apply_return": 0,
+        "long_line_count": 32,
+        "mincurv": -4,
+        "maxcurv": 5,
+        "diagnostic": 0,
+        "skew_status": 0,
+        "angle_degrees": -0.015625,
+        "skew_confidence": 16.899004
+      },
+      "holdout_fit_violations": [],
+      "lines": [
+        {
+          "id": "upper-lecture-baseline",
+          "unchanged": {
+            "slope_degrees": -0.06690942591594445,
+            "end_to_end_rise_pixels": -1.5,
+            "curvature_peak_to_peak_pixels": 0.5328838745184612,
+            "rms_to_straight_line_pixels": 0.20694963348124099
+          },
+          "rigid": {
+            "slope_degrees": -0.0825344230386617,
+            "end_to_end_rise_pixels": -1.8517928672176822,
+            "curvature_peak_to_peak_pixels": 0.5328840841260671,
+            "rms_to_straight_line_pixels": 0.2069497070829595
+          },
+          "candidate": {
+            "slope_degrees": -0.05979177154266026,
+            "end_to_end_rise_pixels": -1.3420210809617856,
+            "curvature_peak_to_peak_pixels": 0.5401969859792075,
+            "rms_to_straight_line_pixels": 0.20574153611858034
+          },
+          "candidate_points": [
+            [
+              810,
+              304.9794386734507
+            ],
+            [
+              1150,
+              304.99604705833866
+            ],
+            [
+              1550,
+              304.0384246092227
+            ],
+            [
+              1950,
+              304.10578538336983
+            ],
+            [
+              2100,
+              303.63741759248893
+            ]
+          ]
+        },
+        {
+          "id": "middle-syllabus-baseline",
+          "unchanged": {
+            "slope_degrees": -9.107949487266253e-15,
+            "end_to_end_rise_pixels": 0.0,
+            "curvature_peak_to_peak_pixels": 0.0,
+            "rms_to_straight_line_pixels": 4.547473508864641e-13
+          },
+          "rigid": {
+            "slope_degrees": -0.015625000000017427,
+            "end_to_end_rise_pixels": -0.3108867691580599,
+            "curvature_peak_to_peak_pixels": 4.547473508864641e-13,
+            "rms_to_straight_line_pixels": 4.823324033076557e-13
+          },
+          "candidate": {
+            "slope_degrees": 0.00831637704173553,
+            "end_to_end_rise_pixels": 0.1650564606666194,
+            "curvature_peak_to_peak_pixels": 0.0214287496335146,
+            "rms_to_straight_line_pixels": 0.010166824979203645
+          },
+          "candidate_points": [
+            [
+              810,
+              1286.9644448619101
+            ],
+            [
+              1150,
+              1286.9942343134114
+            ],
+            [
+              1550,
+              1287.0504257523305
+            ],
+            [
+              1950,
+              1287.1295013225767
+            ]
+          ]
+        },
+        {
+          "id": "lower-full-book-baseline",
+          "unchanged": {
+            "slope_degrees": 0.05705532019231295,
+            "end_to_end_rise_pixels": 1.5,
+            "curvature_peak_to_peak_pixels": 0.4523080627404852,
+            "rms_to_straight_line_pixels": 0.17138233350538196
+          },
+          "rigid": {
+            "slope_degrees": 0.041430322165583434,
+            "end_to_end_rise_pixels": 1.1482070212282451,
+            "curvature_peak_to_peak_pixels": 0.45230793778728184,
+            "rms_to_straight_line_pixels": 0.17138229333702915
+          },
+          "candidate": {
+            "slope_degrees": 0.03314609753998139,
+            "end_to_end_rise_pixels": 0.9333658743767046,
+            "curvature_peak_to_peak_pixels": 0.8314323768349823,
+            "rms_to_straight_line_pixels": 0.2842365234578396
+          },
+          "candidate_points": [
+            [
+              810,
+              2227.008988317222
+            ],
+            [
+              1150,
+              2227.0490922836075
+            ],
+            [
+              1550,
+              2226.7927420843253
+            ],
+            [
+              1950,
+              2227.343810098598
+            ],
+            [
+              2100,
+              2227.9423541915985
+            ]
+          ]
+        }
+      ],
+      "verticals": [],
+      "field_range_pixels": [
+        -0.5087597370147705,
+        4.847508907318115
+      ],
+      "trial_policy_pixels_unchanged": true
+    }
+  },
+  "logs": {
+    "music": {
+      "argv": [
+        "/private/tmp/bookscan-page-geometry",
+        "/private/tmp/bookscan-geometry-k4-final/music.png",
+        "/private/tmp/bookscan-geometry-k4-final/music-analysis.png",
+        "/private/tmp/bookscan-geometry-k4-final/music-fit",
+        "fit"
+      ],
+      "log": "Warning in dewarpBuildPageModel: linecount 4 < min req'd number of lines (15) for model\nWarning in dewarpWriteStream: no disparity arrays!\n"
+    },
+    "control": {
+      "argv": [
+        "/private/tmp/bookscan-page-geometry",
+        "/private/tmp/bookscan-geometry-k4-final/control.png",
+        "/private/tmp/bookscan-geometry-k4-final/control-analysis.png",
+        "/private/tmp/bookscan-geometry-k4-final/control-fit",
+        "fit"
+      ],
+      "log": "Info in dewarpFindVertDisparity: \nPage 0\nInfo in dewarpFindVertDisparity: Pass 1: Curvature: medval = -0.000000, meddev = 0.000001\nInfo in dewarpFindVertDisparity: Pass 2: Min/max curvature = (-4, 5)\nInfo in dewarpFindHorizDisparity: Left quad LSF median error =  9.87\nInfo in dewarpFindHorizDisparity: Left edge slope = 3\nInfo in dewarpFindHorizDisparity: Left edge curvature = -1\nInfo in dewarpFindHorizDisparity: Right quad LSF median error =  0.52\nInfo in dewarpFindHorizDisparity: Right edge slope = 1\nInfo in dewarpFindHorizDisparity: Right edge curvature = 0\nInfo in dewarpBuildPageModel: hsuccess = 1\nInfo in dewarpaInsertRefModels: maxdist < 2; no ref models can be used\n"
+    },
+    "full_input_diagnostic": "Warning in dewarpBuildPageModel: linecount 1 < min req'd number of lines (15) for model\nWarning in dewarpWriteStream: no disparity arrays!\n",
+    "diagnostic": ""
+  },
+  "music_full_input_diagnostic": {
+    "status": {
+      "leptonica": "leptonica-1.87.0",
+      "width": 1720,
+      "height": 2459,
+      "build_return": 1,
+      "vsuccess": 0,
+      "vvalid": 0,
+      "apply_return": -1,
+      "long_line_count": 1,
+      "mincurv": 0,
+      "maxcurv": 0,
+      "diagnostic": 0,
+      "skew_status": 0,
+      "angle_degrees": 0.84375,
+      "skew_confidence": 29.8835754
+    },
+    "held_out_evidence": false,
+    "purpose": "Distinguish holdout-induced model failure from full-input extraction failure"
+  },
+  "diagnostic": {
+    "declared_parameters": {
+      "mapping": "output(x,y) reads source(x,y-d); native row = C truncation(float32(y-d)+double(0.5)), white outside",
+      "field": "d=2.25*sin(2*pi*x/(width-1))*sin(pi*y/(height-1))",
+      "amplitude_pixels": 2.25,
+      "sampler": "Leptonica dewarpaApplyDisparity, RGB32, grayin=255, useboth=0, no neighbours",
+      "purpose": "Forced sampler test only; deliberate deformation, not a correction policy"
+    },
+    "formula_max_error_pixels": 1.1920851861191295e-07,
+    "native_vs_independent_sampler_mismatched_channels": 0,
+    "nonidentity_rounded_coordinates": 4145240,
+    "out_of_bounds_pixels": 0,
+    "crops": {
+      "upper": {
+        "nonidentity_rounded_coordinates": 21811,
+        "fractional_coordinates": 59338,
+        "displacement_range": [
+          -0.2084544450044632,
+          0.8721420764923096
+        ],
+        "centre_mapping": [
+          720,
+          260,
+          259.3759460449219,
+          259
+        ]
+      },
+      "middle": {
+        "nonidentity_rounded_coordinates": 44604,
+        "fractional_coordinates": 64656,
+        "displacement_range": [
+          -2.03998064994812,
+          0.6783267855644226
+        ],
+        "centre_mapping": [
+          1060,
+          1230,
+          1229.3292236328125,
+          1229
+        ]
+      },
+      "lower": {
+        "nonidentity_rounded_coordinates": 64800,
+        "fractional_coordinates": 64576,
+        "displacement_range": [
+          -1.355927586555481,
+          -0.7372797727584839
+        ],
+        "centre_mapping": [
+          1450,
+          2160,
+          2160.9111328125,
+          2161
+        ]
+      },
+      "edge": {
+        "nonidentity_rounded_coordinates": 0,
+        "fractional_coordinates": 131926,
+        "displacement_range": [
+          -0.29405686259269714,
+          -0.0
+        ],
+        "centre_mapping": [
+          2300,
+          0,
+          0.0,
+          0
+        ]
+      }
+    }
+  },
+  "after": {
+    "/Users/antony/Development/BookScanBuilder/experiments/page_geometry.py": "c19a30515a7fb80727860e4f646d96824c1efe8764cb1a67e4d50bcf44ff2c75",
+    "/Users/antony/Development/BookScanBuilder/experiments/page_geometry_guides.json": "58c6889b7e6ee8318b4c18de20d2a78eac3a4af0e4578a2f82065c6f5db3a881",
+    "/Users/antony/Development/BookScanBuilder/experiments/page_geometry.c": "d0e29b3c54fae6a6b7bd782da6c866bc8ce8e87c3f345fa07391edd3c7bfa567",
+    "/Users/antony/Development/BookScanBuilder/Taskfile.yml": "831de9dc6d6a4b409e77e12173c2d3a073180a2495529118adde367fc4c05cb8",
+    "/Volumes/Glass/Book Conversion/Raw Scans/Fundamentals of Musical Composition.pdf": "3235a842d619a18b11e2fbdb3b5b6666adeb223959cafd4b1d67f27f0dbfe780",
+    "/Volumes/Glass/Book Conversion/Processed Books/Algorithm Design/Algorithm Design.pdf": "b9d6f1fd08560f06ec8653375a5866dbe1ba971d780dfecd1a0211fb2f66deab",
+    "/private/tmp/bookscan-page-geometry": "c828af831c35e94ff32da0dc8bec2239c403c616210724fa29ac48427ad62d43",
+    "/private/tmp/bookscan-geometry-k4-final/frozen.json": "4d718063df70d4ac59cfdb36fe471acda11ee9ef0d4022d070e31110fb928cb2",
+    "/private/tmp/bookscan-geometry-k4-final/frozen.sha256": "abe3449d234b7d262269f16d6319b2f426f3ad209b24ea2828b911d1a71876c7",
+    "/private/tmp/bookscan-geometry-k4-final/music.png": "7811202f5745b0547a344fce650ce12c8343bd2721c0a09f05ab307e262be096",
+    "/private/tmp/bookscan-geometry-k4-final/music-marked.png": "0c24875302cc43cfa57272307801ce949e9d0d0ca3472845903d1d51b234df0b",
+    "/private/tmp/bookscan-geometry-k4-final/music-analysis.png": "401b920723100c867d5a9b1709b58dc83c153a121e2a0b1974452c03f24a0091",
+    "/private/tmp/bookscan-geometry-k4-final/music-exclusion.png": "b36c9e5032f2b0ae5cc7d4338ab0dcd64b2ddf053abfd6f2cd2ab1bb4eea9e73",
+    "/private/tmp/bookscan-geometry-k4-final/control.png": "63e3914ac7b4f95b86680ae5554c99e18d0e24609e19843ad4a6e9d12cdf183d",
+    "/private/tmp/bookscan-geometry-k4-final/control-marked.png": "9cdde4e85c2651eae87f9dcb736faf83423aa810bec51abd58e7fe4ac776b99b",
+    "/private/tmp/bookscan-geometry-k4-final/control-analysis.png": "ef248281a8c7c6a9e95946d29125d0008d5e5f7103e033b4a25e6e508bcef2ae",
+    "/private/tmp/bookscan-geometry-k4-final/control-exclusion.png": "cbc0f76bae48eb356ff9a6be9acaa27493d4dbbbd9b05471be646c9e8fc1d964"
+  },
+  "frozen_sha256_after": "4d718063df70d4ac59cfdb36fe471acda11ee9ef0d4022d070e31110fb928cb2",
+  "limitations": [
+    "Residuals transport frozen source points through the fields; not re-marked output ground truth.",
+    "Control is approximately straight at marker precision, not a certified flat original.",
+    "Holdout masks can make automatic fitting inconclusive. No full-input evidence is silently substituted.",
+    "Sampler agreement proves declared integer-row mapping, not absence of visual sampling damage.",
+    "No numerical score is human acceptance. Inspect native crops, complete pages and borders."
+  ]
+}

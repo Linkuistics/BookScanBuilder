@@ -153,12 +153,29 @@ cross-page resource duplication; these costs do not alter visual fidelity.
 
 ## Human response and review
 
-Human visual approval is **pending**. `page-geometry-k4` must present the final
-working-command comparisons, obtain a separate preparation acceptance,
-rejection or inconclusive response and record the inspected paths/defects here
-and in its running log. `corrected-book-k5` checks that disposition and retains
-precise repair/missing-comparison work before processor acceptance. Pixel
+Human visual approval is **pending**. `page-geometry-k4` presented the final
+working-command comparisons and recorded the unavailable response below and
+in its running log. `corrected-book-k5` checks that disposition and retains
+the precise missing-response or repair work before processor acceptance. Pixel
 equality and code review cannot substitute for the user's response.
+
+`page-geometry-k4` presented the current working-command comparisons separately
+from geometry in `/private/tmp/bookscan-geometry-k4-final/preparation-review.pdf`
+(16 lossless pages). It pairs source/output full pages and native detail for
+Schoenberg colour, Fundamentals 40/140, Norwegian's entire spread, Counterpoint's
+landscape canvas, Algorithm Design and both explicitly assigned Strings covers.
+The inputs are the `before`/`after` PNGs and centre/detail/margin pairs listed
+above under `/private/tmp/bookscan-prepared-k19-all`; the PDF's manifest records
+every exact path/hash and verifies its decoded RGB streams. The existing frozen
+report remains `prepared-pdf-k19-all-report.json`, unchanged by this trial.
+
+A separate preparation-specific visual response was requested, but no reply
+arrived during this session's review window. Disposition: **inconclusive because
+the human response is unavailable**; no observed human defect and no approval
+are recorded. `corrected-book-k5` must ask whether those exact views preserve
+music/faint marks, colour, margins, complete canvases and both cover pages, and
+record the user's inspected paths and acceptance/rejection/remaining ambiguity.
+Geometry's automatic-extractor failure does not settle preparation's judgment.
 
 The preparation subsystem's external review `prepared-pdf-k18` completed before
 geometry; integration `prepared-pdf-k19` resolves its findings. Its scrutiny

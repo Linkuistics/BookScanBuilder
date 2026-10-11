@@ -1,0 +1,483 @@
+{
+  "guide_sha256": "8335ba9dd56f10a53fa11794d8b198f8b26d8631a08e6b2f1d88ae97b83bc651",
+  "guide_record": {
+    "marker": "Codex executing page-geometry-k4, before any candidate/deskew output",
+    "origin": "top-left pixel centre (0,0); x right, y down; units: native 300-dpi pixels",
+    "method": "Manually identify printed staff rules on unchanged RGB crops; place points at dark rule centres, avoiding barlines/notation where possible. Control: independently identified printed text baselines; modal bottom ink row in manually selected word patches, excluding descenders. Pixel uncertainty approximately +/-1 on unobscured points, +/-2 where notation overlaps. Fit/evaluation roles frozen before model execution.",
+    "music": {
+      "source": "Raw Scans/Fundamentals of Musical Composition.pdf",
+      "page": 140,
+      "source_sha256": "3235a842d619a18b11e2fbdb3b5b6666adeb223959cafd4b1d67f27f0dbfe780",
+      "dimensions": [
+        1720,
+        2459
+      ],
+      "lines": [
+        {
+          "id": "ex101-top",
+          "role": "evaluation",
+          "points": [
+            [
+              250,
+              406
+            ],
+            [
+              400,
+              404.5
+            ],
+            [
+              550,
+              402.5
+            ],
+            [
+              700,
+              401.5
+            ],
+            [
+              850,
+              399.5
+            ],
+            [
+              970,
+              398
+            ]
+          ],
+          "exclude": [
+            200,
+            385,
+            1030,
+            425
+          ]
+        },
+        {
+          "id": "ex102-system1-top",
+          "role": "evaluation",
+          "points": [
+            [
+              250,
+              785
+            ],
+            [
+              450,
+              783
+            ],
+            [
+              650,
+              780.5
+            ],
+            [
+              850,
+              778
+            ],
+            [
+              1050,
+              774.5
+            ],
+            [
+              1250,
+              772
+            ],
+            [
+              1450,
+              769
+            ],
+            [
+              1580,
+              767
+            ]
+          ],
+          "exclude": [
+            200,
+            750,
+            1650,
+            805
+          ]
+        },
+        {
+          "id": "ex102-system3-top",
+          "role": "evaluation",
+          "points": [
+            [
+              250,
+              1375
+            ],
+            [
+              450,
+              1371.5
+            ],
+            [
+              650,
+              1368.5
+            ],
+            [
+              850,
+              1365
+            ],
+            [
+              1050,
+              1362
+            ],
+            [
+              1250,
+              1359
+            ],
+            [
+              1450,
+              1355
+            ],
+            [
+              1580,
+              1353
+            ]
+          ],
+          "exclude": [
+            200,
+            1335,
+            1650,
+            1395
+          ]
+        },
+        {
+          "id": "ex102-system5-top",
+          "role": "evaluation",
+          "points": [
+            [
+              250,
+              1947.5
+            ],
+            [
+              400,
+              1945.5
+            ],
+            [
+              550,
+              1944
+            ],
+            [
+              700,
+              1941
+            ],
+            [
+              850,
+              1938
+            ],
+            [
+              1050,
+              1935.5
+            ]
+          ],
+          "exclude": [
+            200,
+            1915,
+            1140,
+            1975
+          ]
+        },
+        {
+          "id": "ex101-bass-top",
+          "role": "fit-reference",
+          "points": [
+            [
+              250,
+              532
+            ],
+            [
+              600,
+              528
+            ],
+            [
+              950,
+              522
+            ]
+          ]
+        },
+        {
+          "id": "system2-top",
+          "role": "fit-reference",
+          "points": [
+            [
+              250,
+              1080
+            ],
+            [
+              850,
+              1069
+            ],
+            [
+              1550,
+              1060
+            ]
+          ]
+        },
+        {
+          "id": "system4-top",
+          "role": "fit-reference",
+          "points": [
+            [
+              250,
+              1665
+            ],
+            [
+              850,
+              1656
+            ],
+            [
+              1550,
+              1644
+            ]
+          ]
+        }
+      ],
+      "verticals": [
+        {
+          "id": "ex101-barline",
+          "points": [
+            [
+              498,
+              402
+            ],
+            [
+              499,
+              480
+            ],
+            [
+              500,
+              574
+            ]
+          ]
+        },
+        {
+          "id": "system3-barline",
+          "points": [
+            [
+              813,
+              1365
+            ],
+            [
+              814,
+              1450
+            ],
+            [
+              815,
+              1542
+            ]
+          ]
+        },
+        {
+          "id": "system5-final",
+          "points": [
+            [
+              1095,
+              1935
+            ],
+            [
+              1094,
+              2020
+            ],
+            [
+              1093,
+              2105
+            ]
+          ]
+        }
+      ],
+      "crops": {
+        "upper": [
+          210,
+          380,
+          1040,
+          620
+        ],
+        "middle": [
+          750,
+          1300,
+          1160,
+          1580
+        ],
+        "lower": [
+          250,
+          1880,
+          860,
+          2140
+        ],
+        "faint": [
+          1090,
+          360,
+          1510,
+          620
+        ],
+        "edge": [
+          0,
+          0,
+          1720,
+          45
+        ]
+      }
+    },
+    "control": {
+      "source": "Processed Books/Algorithm Design/Algorithm Design.pdf",
+      "page": 20,
+      "source_sha256": "b9d6f1fd08560f06ec8653375a5866dbe1ba971d780dfecd1a0211fb2f66deab",
+      "dimensions": [
+        2350,
+        2721
+      ],
+      "lines": [
+        {
+          "id": "upper-lecture-baseline",
+          "role": "evaluation",
+          "points": [
+            [
+              810,
+              305
+            ],
+            [
+              1150,
+              305
+            ],
+            [
+              1550,
+              304
+            ],
+            [
+              1950,
+              304
+            ],
+            [
+              2100,
+              303.5
+            ]
+          ],
+          "exclude": [
+            710,
+            278,
+            2130,
+            327
+          ]
+        },
+        {
+          "id": "middle-syllabus-baseline",
+          "role": "evaluation",
+          "points": [
+            [
+              810,
+              1287
+            ],
+            [
+              1150,
+              1287
+            ],
+            [
+              1550,
+              1287
+            ],
+            [
+              1950,
+              1287
+            ]
+          ],
+          "exclude": [
+            710,
+            1250,
+            2130,
+            1305
+          ]
+        },
+        {
+          "id": "lower-full-book-baseline",
+          "role": "evaluation",
+          "points": [
+            [
+              810,
+              2226.5
+            ],
+            [
+              1150,
+              2227
+            ],
+            [
+              1550,
+              2227
+            ],
+            [
+              1950,
+              2227.5
+            ],
+            [
+              2100,
+              2228
+            ]
+          ],
+          "exclude": [
+            710,
+            2180,
+            2130,
+            2245
+          ]
+        }
+      ],
+      "crops": {
+        "upper": [
+          720,
+          260,
+          1260,
+          370
+        ],
+        "middle": [
+          1060,
+          1230,
+          1600,
+          1350
+        ],
+        "lower": [
+          1450,
+          2160,
+          1990,
+          2280
+        ],
+        "edge": [
+          2300,
+          0,
+          2350,
+          2721
+        ]
+      },
+      "diagnostic": {
+        "mapping": "output(x,y) reads source(x,y-d); native row = C truncation(y-d+0.5), white outside",
+        "field": "d=2.25*sin(2*pi*x/(width-1))*sin(pi*y/(height-1))",
+        "amplitude_pixels": 2.25,
+        "sampler": "Leptonica dewarpaApplyDisparity, RGB32, grayin=255, useboth=0, no neighbours",
+        "purpose": "Forced sampler test only; deliberate deformation, not a correction policy"
+      }
+    }
+  },
+  "render_report_sha256": "18c265a76a3d917c630194e01464f512f715653f8df9bec659b4dcb2b31b706a",
+  "pages": {
+    "music": {
+      "source_sha256": "3235a842d619a18b11e2fbdb3b5b6666adeb223959cafd4b1d67f27f0dbfe780",
+      "dimensions": [
+        1720,
+        2459
+      ],
+      "files": {
+        "": "7811202f5745b0547a344fce650ce12c8343bd2721c0a09f05ab307e262be096",
+        "-marked": "0c24875302cc43cfa57272307801ce949e9d0d0ca3472845903d1d51b234df0b",
+        "-analysis": "401b920723100c867d5a9b1709b58dc83c153a121e2a0b1974452c03f24a0091",
+        "-exclusion": "b36c9e5032f2b0ae5cc7d4338ab0dcd64b2ddf053abfd6f2cd2ab1bb4eea9e73"
+      }
+    },
+    "control": {
+      "source_sha256": "b9d6f1fd08560f06ec8653375a5866dbe1ba971d780dfecd1a0211fb2f66deab",
+      "dimensions": [
+        2350,
+        2721
+      ],
+      "files": {
+        "": "63e3914ac7b4f95b86680ae5554c99e18d0e24609e19843ad4a6e9d12cdf183d",
+        "-marked": "9cdde4e85c2651eae87f9dcb736faf83423aa810bec51abd58e7fe4ac776b99b",
+        "-analysis": "ef248281a8c7c6a9e95946d29125d0008d5e5f7103e033b4a25e6e508bcef2ae",
+        "-exclusion": "cbc0f76bae48eb356ff9a6be9acaa27493d4dbbbd9b05471be646c9e8fc1d964"
+      }
+    }
+  }
+}

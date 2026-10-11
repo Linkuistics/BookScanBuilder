@@ -4,6 +4,7 @@ vars:
   COLLECTION: /Volumes/Glass/Book Conversion
   DESIGN_PORT: '8769'
   MODE: all
+  GEOMETRY_BINARY: /private/tmp/bookscan-page-geometry
 
 tasks:
   prepare:copy-experiment:
@@ -50,3 +51,37 @@ tasks:
       vars: [ARTIFACTS]
     cmds:
       - uv run --locked python tests/prepare_acceptance.py --mode '{{.MODE}}' --artifacts '{{.ARTIFACTS}}' {{if ne .MODE "synthetic"}}--collection '{{.COLLECTION}}'{{end}}
+
+  geometry:setup:
+    desc: Check the bounded experiment's renderer/compiler/native library
+    cmds:
+      - command -v pdftoppm
+      - command -v clang
+      - pkg-config --modversion lept
+      - uv run --script experiments/page_geometry.py --help
+
+  geometry:build:
+    desc: Build disposable Leptonica wrapper outside the product package
+    cmds:
+      - clang -Wall -Wextra -Werror -O2 experiments/page_geometry.c $(pkg-config --cflags --libs lept) -o '{{.GEOMETRY_BINARY}}'
+
+  geometry:render:
+    desc: Render the two explicitly identified complete source pages at 300 dpi
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --script experiments/page_geometry.py render --collection '{{.COLLECTION}}' --artifacts '{{.ARTIFACTS}}'
+
+  geometry:mark:
+    desc: Freeze independent manual coordinates and holdout masks; inspect marked PNGs before compare
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --script experiments/page_geometry.py mark --artifacts '{{.ARTIFACTS}}'
+
+  geometry:compare:
+    desc: Evaluate frozen guides and sampler; human visual judgment remains explicit
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --script experiments/page_geometry.py compare --collection '{{.COLLECTION}}' --artifacts '{{.ARTIFACTS}}' --binary '{{.GEOMETRY_BINARY}}'
