@@ -53,6 +53,39 @@ question; its quality must be demonstrated before a method is treated as
 settled. One focused survey is sufficient at this point; its job is to inform
 the trial, not to promise an algorithm's success.
 
+## Working increments
+
+| Increment | Useful handoff | Dependency and grove |
+| --- | --- | --- |
+| Explicit PDF preparation | One prepared PDF, with selected content order and explicit front/back covers, usable by ordinary PDF tools | Independent product increment. Separate jj workspace and grove: `/Users/antony/Development/BookScanBuilder.prepare-pdf`. Read its root brief for the scoped design and planning leaves. |
+| Corrected searchable book | One prepared PDF processed through accepted geometry, border removal, review adjustments and aligned English OCR into an exported PDF | Depends on preparation's public contract and demonstrated geometry. `corrected-book-k5` creates a separate processor grove when the trial evidence is sufficient. The corrected-image schema and its working reader/export path belong to this same increment. |
+| Optional appearance cleanup | Preview and selectively apply whitening or noise removal while keeping the working default processor and its accepted-image/OCR alignment | A separate successor grove after the default processor works. Its design must compare faint print, music, illustration and colour before choosing a cleanup method. |
+
+This grove currently supplies the bounded geometry evidence and the handoff
+plan. `page-geometry-k4` is a throwaway two-page comparison with a user reaction,
+not a production increment or a settled algorithm. `corrected-book-k5` then
+checks that result, commissions the precisely specified expanded fixtures or a
+bounded repair trial, and shapes the next processor grove. It must keep enough
+live work here to check the root's end-to-end Done when against the integrated
+increments; completion of a prototype or sibling grove does not close this root.
+
+Product groves are sequential at integration: land the preparation contract,
+then build a single-PDF processor against it. Preparation design can proceed
+without waiting for the geometry trial. No background drivers are launched by
+this planning session. When bringing stage results together, integrate product
+artifacts and durable documents through jj; keep each grove's task tree local
+to its workspace rather than merging unrelated `.grove/` histories.
+
+## On the horizon
+
+The production correction field, automatic confidence policy and manual
+adjustment controls depend on the user's reaction to the real-page trial.
+Their implementation decomposition cannot yet be stated honestly. Optional
+whitening and noise-removal mechanisms need appearance evidence; the precisely
+known preview/fidelity design question belongs to a successor appearance grove
+after the default processor supplies a working accepted-image/export seam.
+`corrected-book-k5` carries that handoff obligation. No method is chosen here.
+
 ## Pointers
 
 - `CONTEXT.md` — the project's terminology.
