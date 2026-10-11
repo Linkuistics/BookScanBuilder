@@ -61,8 +61,8 @@ the trial, not to promise an algorithm's success.
 | Increment | Useful handoff | Dependency and ownership |
 | --- | --- | --- |
 | Explicit PDF preparation | One prepared PDF, with selected content order and explicit front/back covers, usable by ordinary PDF tools | First independently useful increment in this tree. `prepared-pdf-k9` and `prepared-pdf-k12` supply the integrated design; `prepared-pdf-k10` cuts `prepared-pdf-k13`, the complete command and its verification, ahead of geometry. No correction service is needed. |
-| Corrected searchable book | One prepared PDF processed through accepted geometry, border removal, post-split assembly decisions, review adjustments and aligned English OCR into an exported PDF | Depends on working preparation's public contract and demonstrated geometry. `corrected-book-k5` cuts processor work in this tree when those inputs suffice. The corrected-image schema and its working reader/export path belong to this same increment. |
-| Optional appearance cleanup | Preview and selectively apply whitening or noise removal while keeping the working default processor and its accepted-image/OCR alignment | A successor increment in this tree after the default processor works. Its design must compare faint print, music, illustration and colour before choosing a cleanup method. |
+| Corrected searchable book | One prepared PDF processed through accepted geometry, border removal, post-split assembly decisions, review adjustments and aligned English OCR into an exported PDF | Depends on working preparation's public contract and demonstrated geometry. `corrected-book-k5` commissions `staff-guides-k20`; `corrected-book-k21` consumes it and cuts expanded evidence/design/working processor slices before appearance work. The corrected-image schema and its working reader/export path belong to this same increment. |
+| Optional appearance cleanup | Preview and selectively apply whitening or noise removal while keeping the working default processor and its accepted-image/OCR alignment | `appearance-cleanup-k22` owns the precise successor design question after the default processor works, then cuts its planning consumer before `workflow-acceptance-k23`. Compare faint print, music, illustration and colour before choosing a cleanup method. |
 
 The user chose one workspace and one Grove tree for all three increments.
 Preparation design/planning run first, and insert their implementation and
@@ -128,19 +128,34 @@ Pixel equality and code review do not settle the user's visual judgment.
 `page-geometry-k4` now supplies the frozen two-page experiment in
 `docs/experiments/page-geometry.md`: automatic music extraction failed on both
 held-out and full input. Its separate geometry/preparation review PDFs were
-presented, but the human responses were unavailable. `corrected-book-k5` retains
-those exact visual questions alongside the bounded staff-trace follow-up decision;
-neither preparation nor geometry has human visual approval from this session.
+presented, but the human responses were unavailable. `corrected-book-k5`
+commissions the bounded `staff-guides-k20` follow-up and hands those exact visual
+questions to it and `corrected-book-k21`; neither preparation nor geometry has
+recorded human visual approval. Technical rejection of the automatic extractor
+does not reject the vertical family or establish a sampler defect. Independent
+staff traces are the only new trial commissioned.
+
+The live ordering is staff-guide evidence, fresh corrected-book planning,
+optional-appearance design, and final integrated workflow acceptance. The fresh
+planner inserts expanded trials/completion, processor design agreement and
+working implementation before appearance design. That design inserts its
+evidence/planning/implementation before final acceptance. No production leaves
+are invented ahead of geometry/adjustment evidence. `workflow-acceptance-k23`
+owns the root-wide product check through collection-isolated public processing,
+post-split decisions, review edits, aligned OCR and optional appearance; each
+default-processor slice still verifies its useful handoff before optional work.
+Missing scope must be cut before root closure, not declared satisfied by a
+retired trial or a design. This plan earns an external planning review before
+its consumers run; integrations, if required, are cut lazily by that review.
 
 ## On the horizon
 
 The production correction field, automatic confidence policy and manual
 adjustment controls depend on the user's reaction to the real-page trial.
-Their implementation decomposition cannot yet be stated honestly. Optional
-whitening and noise-removal mechanisms need appearance evidence; the precisely
-known preview/fidelity design question belongs to successor leaves in this tree
-after the default processor supplies a working accepted-image/export seam.
-`corrected-book-k5` carries that handoff obligation. No method is chosen here.
+Their implementation decomposition cannot yet be stated honestly. Concrete
+whitening/noise-removal mechanisms still need appearance evidence, but their
+precisely known preview/fidelity design question is now `appearance-cleanup-k22`
+after the working default accepted-image/export seam. No method is chosen here.
 
 ## Pointers
 

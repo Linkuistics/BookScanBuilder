@@ -1,0 +1,47 @@
+# appearance-cleanup-k22
+
+
+## Goal
+
+Design previewable optional paper whitening and noise removal on top of the
+working default processor, preserving accepted geometry, colour and fine detail.
+This is the successor increment; default corrected/searchable export remains
+independently useful with appearance cleanup disabled.
+
+
+
+## Context
+
+Consume the landed processor design, working accepted-image/review/OCR/export
+seam and `corrected-book-k21` descendants' acceptance evidence. If those are
+missing, insert precise prerequisite work before this leaf. Compare source and
+default results for faint text, music/stencil detail, illustration and colour
+using the root's representative real fixtures. Read the final workflow consumer
+`workflow-acceptance-k23`; it must remain behind this increment's implementation.
+
+## Done when
+
+- Answer the concrete design question: what minimal optional method and preview/
+  apply/revert controls improve paper/noise while retaining faint printing,
+  notation, illustrations and intentional colour? Use matched full-page/native
+  detail evidence and human judgment, stating rejected choices and limitations.
+  Neither geometry acceptance nor an OCR score establishes appearance fidelity.
+- Specify opt-in behaviour, per-page review and usable unchanged outcomes;
+  applying accepted cleanup changes the final visible image, and dependent OCR
+  is regenerated/aligned to that image. Disabled/reverted cleanup preserves the
+  working default seam. No silently global whitening/denoising or replacement
+  of visible content by recognized text.
+- Deliver the design agreement/spec and its checkable tests against the existing
+  seam; commission bounded appearance evidence first if the design lacks it.
+  Do not choose technology merely from startup or a fitted score.
+- Cut a fresh planning handoff (and any earned design review) BEFORE the next
+  live integrated acceptance consumer, so production work for this increment
+  lands before `workflow-acceptance-k23`. Keep final acceptance live. Preserve
+  shared Taskfile verification, original digests and human comparison evidence
+  in those task contracts; this design alone cannot close the root.
+
+## Notes
+
+This precise preview/fidelity question earns a leaf now. Concrete method,
+implementation language and interface are not selected. Stay in the existing
+workspace/tree; integrate with the shipped processor rather than replacing it.

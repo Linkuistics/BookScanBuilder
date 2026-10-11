@@ -132,3 +132,59 @@ Grow the next actionable leaves only. Unknown correction technology, confidence
 calibration and review-interface mechanics belong in the brief until a precise
 question can be cut. Report unsupported cases honestly rather than silently
 relaxing the root's quality requirements.
+
+## Decisions (running log)
+
+The frozen core report rejects automatic text-line extraction on this music
+fixture at the declared settings: four held-out and one full-input long lines,
+both invalid against the unchanged fifteen-line minimum. The full-input
+diagnostic establishes extraction failure independently of holdout masking;
+the music field-quality question remains inconclusive because no field exists.
+The verified control and nonidentity native-sampler diagnostic do not supply
+music improvement or human visual approval. Commission one independently
+traced-staff trial to isolate extraction from the existing vertical model,
+with rejection/inconclusive outcomes explicit. Do not expand fixtures, change
+interpolation or introduce a two-axis model on this evidence.
+
+Preparation's current k19 synthetic/real/all acceptance is usable automated
+evidence, separately from its unavailable visual response. Both frozen reports'
+before/after subjects agree. All seventeen geometry subjects still match;
+all thirty-three non-Taskfile preparation subjects still match. Preparation's
+historical Taskfile digest predates geometry's additions, rather than proving
+the combined file unchanged. Both ordinary review PDFs are present. The exact
+two visual questions have been asked again; no approval or defect is inferred
+from silence. The staff trial and its planning consumer retain those responses
+and any resulting repair before processor acceptance.
+
+The working increments remain explicit preparation, the complete default
+corrected/searchable processor, then optional appearance cleanup, in the one
+workspace/tree chosen by the user. The next evidence trial is not a working
+product increment. Cut that trial and a fresh planning consumer now; production
+design and vertical implementation wait for accepted expanded geometry evidence
+and concrete adjustment needs. Retain a precise optional-appearance design
+question and a final integrated workflow acceptance leaf behind that consumer;
+it must insert all required producer work before those consumers. The corrected
+image representation and its working review/OCR/export reader belong together.
+
+The actionable successor handles are `staff-guides-k20`,
+`corrected-book-k21`, `appearance-cleanup-k22` and `workflow-acceptance-k23`, in
+dependency order under the existing root. Their charters keep unresolved human
+responses explicit and require inserting upstream products before consumers.
+This orchestration is load-bearing and earns a scheduled external planning
+review before the staff trial; no in-session reviewer is spent beside it.
+No production choice or hard-to-reverse cross-increment decision was made, so
+the existing prepared-page-hints ADR remains sufficient and unchanged.
+
+Fresh `task prepare:check` verification passed Ruff formatting/lint, strict
+pyright and all 231 tests. Product code, dependencies and Taskfile are unchanged
+by this planning work. The graph's task evidence paths had no recorded coverage
+gap at generation `2026-10-11T05:48:17Z`; markdown/config/JSON evidence was read
+directly. This is bounded evidence, not a completeness claim about the codebase.
+
+No reply to either re-presented visual question arrived while this plan was
+prepared and verified. Both human dispositions therefore remain unavailable/
+inconclusive, with their exact inspected-view questions in `staff-guides-k20`
+and `corrected-book-k21`; no preparation repair defect has been invented.
+The successor contracts and root brief were checked against this leaf's Done
+when, with production commitment deferred to evidence and design. The root
+retains live work, so retiring this planning leaf closes no ancestor node.
