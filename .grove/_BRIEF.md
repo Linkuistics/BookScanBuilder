@@ -61,7 +61,7 @@ the trial, not to promise an algorithm's success.
 | Increment | Useful handoff | Dependency and ownership |
 | --- | --- | --- |
 | Explicit PDF preparation | One prepared PDF, with selected content order and explicit front/back covers, usable by ordinary PDF tools | First independently useful increment in this tree. `prepared-pdf-k9` and `prepared-pdf-k12` supply the integrated design; `prepared-pdf-k10` cuts `prepared-pdf-k13`, the complete command and its verification, ahead of geometry. No correction service is needed. |
-| Corrected searchable book | One prepared PDF processed through accepted geometry, border removal, post-split assembly decisions, review adjustments and aligned English OCR into an exported PDF | Depends on working preparation's public contract and demonstrated geometry. `corrected-book-k5` commissions `staff-guides-k20`; `corrected-book-k21` consumes it and cuts expanded evidence/design/working processor slices before appearance work. The corrected-image schema and its working reader/export path belong to this same increment. |
+| Corrected searchable book | One prepared PDF processed through accepted geometry, border removal, post-split assembly decisions, review adjustments and aligned English OCR into an exported PDF | Depends on working preparation's public contract and demonstrated geometry. `corrected-book-k21` consumes the inconclusive `staff-guides-k20` result and commissions source-only `staff-acquisition-k27`; `corrected-book-k28` consumes every outcome before cutting further evidence/design/working processor slices ahead of appearance. The corrected-image schema and its working reader/export path belong to this same increment. |
 | Optional appearance cleanup | Preview and selectively apply whitening or noise removal while keeping the working default processor and its accepted-image/OCR alignment | `appearance-cleanup-k22` owns the precise successor design question after the default processor works, then cuts its planning consumer before `workflow-acceptance-k23`. Compare faint print, music, illustration and colour before choosing a cleanup method. |
 
 The user chose one workspace and one Grove tree for all three increments.
@@ -162,10 +162,11 @@ evidence and human judgment before production commitment. The current live
 leaf order and the default-processor/appearance/final-acceptance dependencies
 remain the same; no additional trial is pre-created by this permission.
 
-The live ordering is staff-guide evidence, fresh corrected-book planning,
-optional-appearance design, and final integrated workflow acceptance. The fresh
-planner inserts expanded trials/completion, processor design agreement and
-working implementation before appearance design. That design inserts its
+The live ordering after k21's retirement is its planning review, source-only
+`staff-acquisition-k27`, fresh `corrected-book-k28` planning, optional-appearance
+design, and final integrated workflow acceptance. The fresh planner inserts
+justified trials/completion, processor design agreement and working
+implementation before appearance design. That design inserts its
 evidence/planning/implementation before final acceptance. No production leaves
 are invented ahead of geometry/adjustment evidence. `workflow-acceptance-k23`
 owns the root-wide product check through collection-isolated public processing,
@@ -188,7 +189,33 @@ unperformed output/control/sampler/visual comparison and a fresh planning
 consumer after any commissioned completion. This neither rejects the vertical
 family nor licenses music expansion. The user explicitly answered “Not
 inspected yet” separately for historical geometry and preparation views;
-their visual responses remain unresolved. k21, k22 and k23 stay live and ordered.
+their visual responses remain unresolved. k21 consumes that result through the
+repair and fresh planning work below; k22 and k23 remain ordered consumers.
+
+`corrected-book-k21` commissions `staff-acquisition-k27` as a complete
+source-only repair, followed on every outcome by `corrected-book-k28` before
+appearance. The change under test is exact native-patch manual observation
+instead of wide-strip estimates: fresh genuine rule-centre marks, a blind repeat
+of representative whole traces, measured uncertainty, unchanged A/E/H whole-
+staff exclusions and exact native count/rounding/coverage gates. The rejected
+records stay frozen. No real fit or corrected output follows within that repair,
+even on success. Invalid/ambiguous acquisition, insufficient coverage,
+unresolved measurement/instrument or an unavailable source-view reaction have
+precise consumer questions; numerical gate success is not physical-source or
+model acceptance. The repair also re-presents the historical geometry and
+preparation questions separately and retains any missing answers or defects.
+
+k28 reads the complete k21 contract and inserts the next justified completion
+or complete matched automatic/manual comparison on page 20, including the
+missing output/control/sampler/reaction evidence. It retains the independently
+permitted automatic Norwegian-gutter question regardless of music status;
+that separate trial is not commissioned by k21 and cannot accept music or
+preparation. No unconditional manual retry, music expansion, interpolation or
+two-axis change follows from this acquisition failure. Every further trial or
+response completion gets a fresh planner before appearance. The fixed real
+representative cases and the default processor's accepted-image/review/post-
+split assembly/aligned-OCR/export increment remain outstanding; k22 and k23
+cannot consume assumed products. This successor plan earns review before k27.
 
 ## On the horizon
 

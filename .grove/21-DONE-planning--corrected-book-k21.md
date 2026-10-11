@@ -165,3 +165,89 @@ Grow actionable work just in time. Field representation, confidence calibration,
 guide/review interface and manual adjustment controls are still unsettled. Do
 not prescribe those mechanisms before trial evidence can support their design.
 Neither pending human reaction at k5 was acceptance or human rejection.
+
+## Decisions (running log)
+
+Consumed k20/k26's committed source-only result and k25's confirmed policies.
+The first applicable outcome is inconclusive acquisition: physical-source
+inspection rejects the first marks, despite passing numerical prerequisites.
+No supplied-trace model, application, output comparison or matched automatic
+page-20 acquisition result exists. This is not model-family rejection,
+sampler damage, a two-axis defect or a corrected-image measurement result.
+Retain page 20 / printed 6 as a candidate and page 140 as the historical
+unsupported-layout diagnostic; neither becomes representative acceptance.
+
+Commission one complete source-acquisition repair, before a fresh planning
+consumer: visually place new physical-rule centres from native-resolution
+patches with exact pixel addressing, then repeat representative traces without
+first marks or lists. Wide-strip marking left observable invalid marks;
+native patch observation is the precise change to test, not a new extractor or
+correction family. Keep the existing whole-staff exclusions and native gates,
+reject obscured/outside-rule points, and measure positional/slope/curvature
+repeatability before any output. The first-pass diagnostic record stays frozen.
+This leaf creates no model or corrected image, including after a gate pass.
+Its successor planner owns whether admissible evidence warrants the complete
+matched automatic/manual, rigid, output/control/sampler and human-view trial.
+No unconditional retry or output-only leaf follows a failed acquisition.
+
+The independent automatic Norwegian-gutter question permitted by the user is
+still valid, but is not commissioned alongside this single acquisition repair.
+It would answer a different question and cannot repair these source marks.
+The fresh consumer retains that precise alternative on every outcome, alongside
+all music obligations; it may choose it without treating music as supported.
+Do not add interpolation, two-axis correction or every representative fixture
+to a source-only completion.
+
+Preparation's working public contract and automated acceptance are separate
+from human approval. Both historical visual responses are explicitly “Not
+inspected yet”; no defect or approval has been recorded. The repair leaf also
+re-presents the exact historical geometry/preparation questions separately,
+records inspected paths and any response, and hands unavailable/ambiguous
+answers to its planner for precise response completion. This does not require
+rerendering present matched views or inventing preparation repair.
+
+The useful product increments remain explicit preparation, the complete
+default corrected/searchable processor, then optional appearance, in the one
+workspace/tree chosen by the user. The source repair is an evidence handoff,
+not a product increment. Production design and implementation are premature;
+retain the inherited accepted-image/review/post-split assembly/OCR/export
+contract in the fresh planner before k22, and k23's integrated acceptance after
+appearance. Corrected-image data and its working reader/export land together.
+This successor orchestration earns an external planning review before its
+consumers; no in-session reviewer is spent beside that scheduled review.
+
+The successor handles are `staff-acquisition-k27` and `corrected-book-k28`,
+ordered before unchanged k22/k23. Their complete charters retain the manual
+source repair, exact exclusions/gates, honest outcome distinctions, separate
+historical responses and unconditional fresh planning handoff. No node is
+created: these are two focused sessions, not a pre-grown production subtree.
+The root's working-increment table and live ordering now name this handoff.
+No hard-to-reverse production decision is settled, so the prepared-page-hints
+ADR remains the minimal coherent set and is unchanged.
+
+Fresh `prepare:check` passes format/lint, strict pyright and all 231 tests;
+`geometry:staff-check` passes format/lint and all four native boundary tests.
+All 22 staff-report subjects match their recorded before/after map, including
+original PDF, full render, pinned source/library, coordinates, first pass,
+instrument, tests, Taskfile and source displays. The 17 k4 subjects also match
+individually except its historical Taskfile digest, which predates the retained
+staff recipes; both recorded before/after maps agree and both reports stayed
+unchanged during this verification. Both historical review PDFs remain present.
+This plan modifies no product, experiment, dependency, Taskfile, report or ADR.
+The root Done when section and k22/k23 bodies match the prior task exactly.
+
+Tier 2 graph verification used project
+`Users-antony-Development-BookScanBuilder`, generation
+`2026-10-11T07:03:47Z`, with no recorded issue/metadata mismatch in the twenty
+evidence paths checked. The preflight's exact snippet and both-direction trace
+confirm the retained coordinate gate and its run/native-boundary test callers;
+all relevant query pages were complete. Markdown/config/JSON evidence was read
+directly. Coverage is best-effort, not a repo-completeness claim.
+
+Checked this leaf's Done when against the two successor charters: the observed
+acquisition failure earns only its precise repair; no source-only result
+promotes correction. Every missing music/preparation/representative/product
+obligation stays with k27/k28 and the ordered k22/k23 consumers. Retiring k21
+leaves root work live and closes no ancestor. The review will inspect this
+committed plan before k27; any actionable integration belongs immediately
+before that next live sibling. No human policy or visual approval is inferred.
