@@ -25,6 +25,9 @@ Read the full `.grove/20-k20/_staff-guides.md` comparison contract and
 The committed `norwegian-gutter-k34` decision commissions source-only
 `norwegian-measurement-k35` and its fresh planning consumer before k27 on every
 outcome; read their complete contracts and actual result, not an assumed fit.
+Read `norwegian-gutter-k37`'s classifications and any actual human policy replies.
+It repairs k35's early addressing/frozen-mask checks and systematic-limit contract;
+the review's universal right-half impossibility claim was not established.
 Preparation's working contract/evidence are `docs/specs/prepared-pdf.md` and
 `docs/acceptance/prepared-pdf.md`. k22 and k23 remain successor consumers.
 
@@ -97,6 +100,28 @@ Preparation's working contract/evidence are `docs/specs/prepared-pdf.md` and
   source result diagnoses native damage or a two-axis need, grants music/
   preparation acceptance or licenses production. Further completion still
   requires a changed falsifiable question and fresh planning on every outcome.
+  Consume k37's ordering repair: a failed frozen-mask/native feasibility check
+  stops that half before dense marking and retains all unperformed comparison
+  work. Its result proves only that frozen attempt's outcome. An archived
+  removal-only bound does not decide general masked re-extraction. Require
+  exact-format addressing controls and positional glyph-class/sampling/JPEG/
+  resampling limits; internal contrasts and repeat agreement alone do not
+  establish baseline accuracy. A fixture change, different holdout concept or
+  changed gate is a separately stated policy question, never a silent rescue.
+  Respect k25's music pool permission/limits; Norwegian fixture/holdout/gate
+  changes have no blanket permission from that music-only rule. Put any proposed
+  contract change to the human with its evidence, while retaining the failed
+  attempt and the independent half's obligations.
+- Read k37's human policy disposition before changing either dependency:
+  (a) should measurement admissibility be separate from an unavailable source
+  reaction, with no implied visual approval; (b) may a rigid-plus-flagged
+  intermediate working processor be designed while nonrigid evidence continues?
+  Both were recommended and put to the human. An unavailable reply leaves the
+  existing source-reaction ranking and demonstrated-geometry prerequisite in
+  force. Retain the precise response-completion question rather than substituting
+  another trial. Any later approval still requires processor design before
+  implementation planning, the complete useful default handoff and its own
+  evidence/reactions, with all within-page and fixed-case root criteria live.
 - Obtain or retain precise response-completion work for the historical
   geometry and preparation views separately, using k27's recorded inspected
   paths/responses and the exact questions in its charter. “Not inspected yet”,

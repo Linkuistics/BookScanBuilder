@@ -13,8 +13,10 @@ evidence and retain any missing scope before root closure.
 ## Context
 
 Read the root brief, `corrected-book-k28` and its cut successors' designs/results,
-`corrected-book-k30`'s repaired evidence and `norwegian-gutter-k31`'s independent
-result/planner, the landed appearance agreement from
+`corrected-book-k30`'s repaired evidence and the actual committed Norwegian/music
+chain carried by k28 (k31 → k34 → k35 → its fresh planner before k27, including
+k37's review disposition and explicit policy replies), the landed appearance
+agreement from
 `appearance-cleanup-k22` and its successors,
 and the working products' public contracts/acceptance notes. This leaf must
 remain after their complete working increments and required review/repair.

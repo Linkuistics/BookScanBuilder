@@ -282,8 +282,22 @@ Failure or too-coarse/systematically unresolved evidence receives its exact
 next question; no forced validity, gate/holdout rescue or same-viewer retry.
 This is evidence within the default increment, not another product stage.
 
-The resulting order is k34's planning review, k35, its fresh planner cut on
-every outcome before k27, then k27 → k28 → k22 → k23. k27/k28 retain their
+`norwegian-gutter-k37` integrates k36's review before k35. Require an exact-format
+blind known-centre addressing check and coordinate-free physical holdout/region
+declaration, freeze and unchanged masked-native feasibility before dense marks.
+Stop a failed half without classifying the other or spending its dense pass.
+The archive constrains removal of unchanged traces (right at most ten; left
+loses the minimum on removal of a retained trace), but pinned extraction includes
+vertical filtering/component recovery and a relative length threshold: it does
+not prove general masked impossibility. No gate-driven holdout search or rescue
+is permitted. k35 records glyph/font/style contrasts and positional coverage,
+220-ppi JPEG sampling versus the 300-dpi render, compression/resampling and
+unresolved common bias separately from repeatability. Internal contrasts and
+synthetic addressing success cannot certify real baseline accuracy. k28 and
+actual successors carry these dispositions; k22/k23 consume that current chain.
+
+The resulting order is k34's planning review and k37 integration, k35, its fresh
+planner cut on every outcome before k27, then k27 → k28 → k22 → k23. k27/k28 retain their
 relative order. k28 consumes k31/k34 and k35's actual completion and planner,
 without recommissioning the old Norwegian trial. All conditional masked-fit/
 rigid/output/control/nonidentity-sampler/independent-measurement and separate
@@ -291,6 +305,15 @@ human comparison obligations remain unperformed until explicitly justified
 and delivered. Every unresolved music/preparation/fixed-case/design/default-
 product/appearance/root obligation stays with these consumers. No production
 decision, source approval, historical response or corrected result is inferred.
+
+k37 put two policy recommendations to the human: separate numerical source
+admissibility from an unavailable source reaction, and allow consideration of a
+rigid-plus-flagged intermediate processor while nonrigid evidence continues.
+Absent an explicit reply, source-reaction ranking and demonstrated-geometry
+prerequisites remain unchanged. k35's fresh planner and k28 carry the precise
+unanswered choices; another measurement trial cannot supply a human reply.
+No policy option waives processor design, useful default acceptance, within-page
+geometry, representative cases or final integrated root acceptance.
 
 ## On the horizon
 

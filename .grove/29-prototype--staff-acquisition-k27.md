@@ -26,6 +26,11 @@ Generate no fitted model, rigid image or corrected image in this session.
   and its fresh planner before this leaf on every outcome. Consume their actual
   evidence/protocol limitations; numerical addressing or acquisition success
   on text baselines grants no admissibility to this music-rule repair.
+  Read `norwegian-gutter-k37`'s verified review disposition: k35 now checks
+  addressing and frozen physical-mask feasibility before dense marking, and
+  separates glyph-class, sampling/compression and shared systematic uncertainty.
+  Carry applicable instrument limitations into this rule-centre protocol;
+  neither a Norwegian gate failure nor JPEG/glyph contrasts calibrate music.
 - `docs/experiments/staff-guides.md`, its selection/first-pass/report records,
   and `experiments/staff_coordinates.json`: frozen rejected diagnostics, not
   input to a real fit. Preserve these records; put new passes/results in

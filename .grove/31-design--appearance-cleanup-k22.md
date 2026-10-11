@@ -15,8 +15,10 @@ independently useful with appearance cleanup disabled.
 Consume the landed processor design, working accepted-image/review/OCR/export
 seam and `corrected-book-k28` plus the successors it cuts and their acceptance
 evidence. Read `corrected-book-k30` for the repaired evidence/ordering contract.
-The independent `norwegian-gutter-k31` and its fresh planner precede k27/k28;
-consume their result/completion evidence through those actual successors.
+Use k28 and its actual cut successors as the source of current prerequisites,
+including the independent k31 result, k34's k35 source measurement and its
+mandatory fresh planner before k27, with k37's review disposition and any
+explicit policy replies. Consume committed results, not an abbreviated chain.
 If those are missing, insert precise prerequisite work before this leaf.
 Compare source and
 default results for faint text, music/stencil detail, illustration and colour
@@ -26,7 +28,7 @@ using the root's representative real fixtures. Read the final workflow consumer
 ## Done when
 
 - Trace the working default processor and its acceptance to k28 and its actual
-  cut successors, including k31 and its independently sequenced gutter planner;
+  cut successors and their complete Norwegian/music evidence;
   k21 is a retired leaf, not a node with descendants. Retain all unresolved
   music/preparation/representative work and insert missing default prerequisites
   before this leaf; no source-only acquisition or gutter trial supplies a
