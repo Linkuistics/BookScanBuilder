@@ -1,0 +1,1323 @@
+{
+  "kind": "coordinate-only acquisition diagnostic; no model or correction generated",
+  "acquisition_admissible": false,
+  "outcome": "inconclusive acquisition",
+  "acquisition_failure": "Initial wide-strip visual observations are diagnostic only: native patches show occluded/outside-rule points and centre offsets exceeding provisional +/-3 pixels. No trace is admitted to a fit. Repair source observations and obtain a fresh blind-to-marks repeat/freeze before fitting.",
+  "preflight": {
+    "retained_count": 20,
+    "retained_points": [
+      [
+        [
+          172.0,
+          273.0
+        ],
+        [
+          260.0,
+          273.0
+        ],
+        [
+          360.0,
+          273.5
+        ],
+        [
+          460.0,
+          273.5
+        ],
+        [
+          560.0,
+          273.5
+        ],
+        [
+          660.0,
+          274.0
+        ],
+        [
+          760.0,
+          274.0
+        ],
+        [
+          860.0,
+          274.0
+        ],
+        [
+          960.0,
+          274.0
+        ],
+        [
+          1060.0,
+          274.0
+        ],
+        [
+          1160.0,
+          274.0
+        ],
+        [
+          1260.0,
+          274.5
+        ],
+        [
+          1360.0,
+          274.5
+        ],
+        [
+          1460.0,
+          274.5
+        ],
+        [
+          1568.0,
+          274.5
+        ]
+      ],
+      [
+        [
+          172.0,
+          285.5
+        ],
+        [
+          260.0,
+          285.5
+        ],
+        [
+          460.0,
+          286.0
+        ],
+        [
+          560.0,
+          286.0
+        ],
+        [
+          660.0,
+          286.5
+        ],
+        [
+          860.0,
+          286.5
+        ],
+        [
+          960.0,
+          286.5
+        ],
+        [
+          1060.0,
+          286.5
+        ],
+        [
+          1160.0,
+          286.5
+        ],
+        [
+          1260.0,
+          287.0
+        ],
+        [
+          1360.0,
+          287.0
+        ],
+        [
+          1460.0,
+          287.0
+        ],
+        [
+          1568.0,
+          287.0
+        ]
+      ],
+      [
+        [
+          172.0,
+          298.0
+        ],
+        [
+          260.0,
+          298.0
+        ],
+        [
+          460.0,
+          298.5
+        ],
+        [
+          560.0,
+          298.5
+        ],
+        [
+          660.0,
+          299.0
+        ],
+        [
+          860.0,
+          299.0
+        ],
+        [
+          960.0,
+          299.0
+        ],
+        [
+          1160.0,
+          299.0
+        ],
+        [
+          1260.0,
+          299.5
+        ],
+        [
+          1460.0,
+          299.5
+        ],
+        [
+          1568.0,
+          299.5
+        ]
+      ],
+      [
+        [
+          172.0,
+          310.5
+        ],
+        [
+          260.0,
+          310.5
+        ],
+        [
+          460.0,
+          311.0
+        ],
+        [
+          660.0,
+          311.5
+        ],
+        [
+          860.0,
+          311.5
+        ],
+        [
+          1060.0,
+          311.5
+        ],
+        [
+          1260.0,
+          312.0
+        ],
+        [
+          1460.0,
+          312.0
+        ],
+        [
+          1568.0,
+          312.0
+        ]
+      ],
+      [
+        [
+          172.0,
+          323.0
+        ],
+        [
+          260.0,
+          323.0
+        ],
+        [
+          660.0,
+          324.0
+        ],
+        [
+          760.0,
+          324.0
+        ],
+        [
+          860.0,
+          324.0
+        ],
+        [
+          1060.0,
+          324.0
+        ],
+        [
+          1260.0,
+          324.5
+        ],
+        [
+          1360.0,
+          324.5
+        ],
+        [
+          1568.0,
+          324.5
+        ]
+      ],
+      [
+        [
+          172.0,
+          398.0
+        ],
+        [
+          260.0,
+          398.0
+        ],
+        [
+          360.0,
+          398.5
+        ],
+        [
+          460.0,
+          398.5
+        ],
+        [
+          560.0,
+          398.5
+        ],
+        [
+          660.0,
+          399.0
+        ],
+        [
+          760.0,
+          399.0
+        ],
+        [
+          860.0,
+          399.0
+        ],
+        [
+          960.0,
+          399.0
+        ],
+        [
+          1260.0,
+          399.0
+        ],
+        [
+          1360.0,
+          399.0
+        ],
+        [
+          1460.0,
+          399.0
+        ],
+        [
+          1568.0,
+          399.0
+        ]
+      ],
+      [
+        [
+          172.0,
+          410.5
+        ],
+        [
+          360.0,
+          411.0
+        ],
+        [
+          460.0,
+          411.0
+        ],
+        [
+          560.0,
+          411.0
+        ],
+        [
+          660.0,
+          411.5
+        ],
+        [
+          760.0,
+          411.5
+        ],
+        [
+          860.0,
+          411.5
+        ],
+        [
+          1060.0,
+          411.5
+        ],
+        [
+          1360.0,
+          411.5
+        ],
+        [
+          1460.0,
+          411.5
+        ],
+        [
+          1568.0,
+          411.5
+        ]
+      ],
+      [
+        [
+          172.0,
+          423.0
+        ],
+        [
+          360.0,
+          423.5
+        ],
+        [
+          560.0,
+          423.5
+        ],
+        [
+          660.0,
+          424.0
+        ],
+        [
+          860.0,
+          424.0
+        ],
+        [
+          960.0,
+          424.0
+        ],
+        [
+          1060.0,
+          424.0
+        ],
+        [
+          1260.0,
+          424.0
+        ],
+        [
+          1360.0,
+          424.0
+        ],
+        [
+          1460.0,
+          424.0
+        ],
+        [
+          1568.0,
+          424.0
+        ]
+      ],
+      [
+        [
+          172.0,
+          435.5
+        ],
+        [
+          660.0,
+          436.5
+        ],
+        [
+          760.0,
+          436.5
+        ],
+        [
+          860.0,
+          436.5
+        ],
+        [
+          960.0,
+          436.5
+        ],
+        [
+          1160.0,
+          436.5
+        ],
+        [
+          1260.0,
+          436.5
+        ],
+        [
+          1360.0,
+          436.5
+        ],
+        [
+          1460.0,
+          436.5
+        ],
+        [
+          1568.0,
+          436.5
+        ]
+      ],
+      [
+        [
+          172.0,
+          448.0
+        ],
+        [
+          260.0,
+          448.0
+        ],
+        [
+          460.0,
+          448.5
+        ],
+        [
+          560.0,
+          448.5
+        ],
+        [
+          660.0,
+          449.0
+        ],
+        [
+          760.0,
+          449.0
+        ],
+        [
+          860.0,
+          449.0
+        ],
+        [
+          1060.0,
+          449.0
+        ],
+        [
+          1160.0,
+          449.0
+        ],
+        [
+          1260.0,
+          449.0
+        ],
+        [
+          1360.0,
+          449.0
+        ],
+        [
+          1460.0,
+          449.0
+        ],
+        [
+          1568.0,
+          449.0
+        ]
+      ],
+      [
+        [
+          172.0,
+          994.0
+        ],
+        [
+          260.0,
+          994.0
+        ],
+        [
+          360.0,
+          994.0
+        ],
+        [
+          460.0,
+          994.0
+        ],
+        [
+          560.0,
+          994.0
+        ],
+        [
+          660.0,
+          994.0
+        ],
+        [
+          760.0,
+          994.0
+        ],
+        [
+          860.0,
+          994.0
+        ],
+        [
+          960.0,
+          994.0
+        ],
+        [
+          1060.0,
+          994.0
+        ],
+        [
+          1160.0,
+          994.0
+        ],
+        [
+          1260.0,
+          994.0
+        ],
+        [
+          1360.0,
+          994.0
+        ],
+        [
+          1460.0,
+          994.0
+        ],
+        [
+          1568.0,
+          994.0
+        ]
+      ],
+      [
+        [
+          172.0,
+          1006.5
+        ],
+        [
+          260.0,
+          1006.5
+        ],
+        [
+          360.0,
+          1006.5
+        ],
+        [
+          460.0,
+          1006.5
+        ],
+        [
+          760.0,
+          1006.5
+        ],
+        [
+          960.0,
+          1006.5
+        ],
+        [
+          1060.0,
+          1006.5
+        ],
+        [
+          1360.0,
+          1006.5
+        ],
+        [
+          1460.0,
+          1006.5
+        ],
+        [
+          1568.0,
+          1006.5
+        ]
+      ],
+      [
+        [
+          172.0,
+          1019.0
+        ],
+        [
+          260.0,
+          1019.0
+        ],
+        [
+          660.0,
+          1019.0
+        ],
+        [
+          760.0,
+          1019.0
+        ],
+        [
+          960.0,
+          1019.0
+        ],
+        [
+          1060.0,
+          1019.0
+        ],
+        [
+          1160.0,
+          1019.0
+        ],
+        [
+          1360.0,
+          1019.0
+        ],
+        [
+          1460.0,
+          1019.0
+        ],
+        [
+          1568.0,
+          1019.0
+        ]
+      ],
+      [
+        [
+          172.0,
+          1031.5
+        ],
+        [
+          260.0,
+          1031.5
+        ],
+        [
+          360.0,
+          1031.5
+        ],
+        [
+          460.0,
+          1031.5
+        ],
+        [
+          560.0,
+          1031.5
+        ],
+        [
+          860.0,
+          1031.5
+        ],
+        [
+          1060.0,
+          1031.5
+        ],
+        [
+          1160.0,
+          1031.5
+        ],
+        [
+          1460.0,
+          1031.5
+        ],
+        [
+          1568.0,
+          1031.5
+        ]
+      ],
+      [
+        [
+          172.0,
+          1044.0
+        ],
+        [
+          260.0,
+          1044.0
+        ],
+        [
+          360.0,
+          1044.0
+        ],
+        [
+          460.0,
+          1044.0
+        ],
+        [
+          560.0,
+          1044.0
+        ],
+        [
+          660.0,
+          1044.0
+        ],
+        [
+          760.0,
+          1044.0
+        ],
+        [
+          860.0,
+          1044.0
+        ],
+        [
+          960.0,
+          1044.0
+        ],
+        [
+          1060.0,
+          1044.0
+        ],
+        [
+          1160.0,
+          1044.0
+        ],
+        [
+          1260.0,
+          1044.0
+        ],
+        [
+          1360.0,
+          1044.0
+        ],
+        [
+          1460.0,
+          1044.0
+        ],
+        [
+          1568.0,
+          1044.0
+        ]
+      ],
+      [
+        [
+          172.0,
+          2037.5
+        ],
+        [
+          260.0,
+          2037.5
+        ],
+        [
+          360.0,
+          2037.5
+        ],
+        [
+          460.0,
+          2037.5
+        ],
+        [
+          560.0,
+          2037.5
+        ],
+        [
+          660.0,
+          2037.5
+        ],
+        [
+          760.0,
+          2037.5
+        ],
+        [
+          860.0,
+          2037.5
+        ],
+        [
+          960.0,
+          2037.0
+        ],
+        [
+          1060.0,
+          2036.5
+        ],
+        [
+          1160.0,
+          2036.0
+        ],
+        [
+          1260.0,
+          2035.5
+        ],
+        [
+          1360.0,
+          2035.0
+        ],
+        [
+          1460.0,
+          2035.0
+        ],
+        [
+          1568.0,
+          2035.0
+        ]
+      ],
+      [
+        [
+          172.0,
+          2050.0
+        ],
+        [
+          260.0,
+          2050.0
+        ],
+        [
+          360.0,
+          2050.0
+        ],
+        [
+          460.0,
+          2050.0
+        ],
+        [
+          560.0,
+          2050.0
+        ],
+        [
+          660.0,
+          2050.0
+        ],
+        [
+          760.0,
+          2050.0
+        ],
+        [
+          860.0,
+          2050.0
+        ],
+        [
+          960.0,
+          2049.5
+        ],
+        [
+          1060.0,
+          2049.0
+        ],
+        [
+          1160.0,
+          2048.5
+        ],
+        [
+          1260.0,
+          2048.0
+        ],
+        [
+          1360.0,
+          2047.5
+        ],
+        [
+          1460.0,
+          2047.5
+        ],
+        [
+          1568.0,
+          2047.5
+        ]
+      ],
+      [
+        [
+          172.0,
+          2062.5
+        ],
+        [
+          260.0,
+          2062.5
+        ],
+        [
+          360.0,
+          2062.5
+        ],
+        [
+          460.0,
+          2062.5
+        ],
+        [
+          560.0,
+          2062.5
+        ],
+        [
+          660.0,
+          2062.5
+        ],
+        [
+          960.0,
+          2062.0
+        ],
+        [
+          1160.0,
+          2061.0
+        ],
+        [
+          1360.0,
+          2060.0
+        ],
+        [
+          1460.0,
+          2060.0
+        ],
+        [
+          1568.0,
+          2060.0
+        ]
+      ],
+      [
+        [
+          172.0,
+          2075.0
+        ],
+        [
+          260.0,
+          2075.0
+        ],
+        [
+          460.0,
+          2075.0
+        ],
+        [
+          560.0,
+          2075.0
+        ],
+        [
+          660.0,
+          2075.0
+        ],
+        [
+          860.0,
+          2075.0
+        ],
+        [
+          960.0,
+          2074.5
+        ],
+        [
+          1160.0,
+          2073.5
+        ],
+        [
+          1260.0,
+          2073.0
+        ],
+        [
+          1360.0,
+          2072.5
+        ],
+        [
+          1460.0,
+          2072.5
+        ],
+        [
+          1568.0,
+          2072.5
+        ]
+      ],
+      [
+        [
+          172.0,
+          2087.5
+        ],
+        [
+          260.0,
+          2087.5
+        ],
+        [
+          360.0,
+          2087.5
+        ],
+        [
+          460.0,
+          2087.5
+        ],
+        [
+          560.0,
+          2087.5
+        ],
+        [
+          660.0,
+          2087.5
+        ],
+        [
+          760.0,
+          2087.5
+        ],
+        [
+          860.0,
+          2087.5
+        ],
+        [
+          960.0,
+          2087.0
+        ],
+        [
+          1060.0,
+          2086.5
+        ],
+        [
+          1160.0,
+          2086.0
+        ],
+        [
+          1260.0,
+          2085.5
+        ],
+        [
+          1360.0,
+          2085.0
+        ],
+        [
+          1460.0,
+          2085.0
+        ],
+        [
+          1568.0,
+          2085.0
+        ]
+      ]
+    ],
+    "first_y_float32": [
+      273.0,
+      285.5,
+      298.0,
+      310.5,
+      323.0,
+      398.0,
+      410.5,
+      423.0,
+      435.5,
+      448.0,
+      994.0,
+      1006.5,
+      1019.0,
+      1031.5,
+      1044.0,
+      2037.5,
+      2050.0,
+      2062.5,
+      2075.0,
+      2087.5
+    ],
+    "first_y_native_integer": [
+      273,
+      286,
+      298,
+      311,
+      323,
+      398,
+      411,
+      423,
+      436,
+      448,
+      994,
+      1007,
+      1019,
+      1032,
+      1044,
+      2038,
+      2050,
+      2063,
+      2075,
+      2088
+    ],
+    "top_count": 15,
+    "bottom_count": 5,
+    "vertical_span_fraction_float32": 0.743852436542511,
+    "passed": true,
+    "retained_ids": [
+      "p20-T-r1",
+      "p20-T-r2",
+      "p20-T-r3",
+      "p20-T-r4",
+      "p20-T-r5",
+      "p20-B-r1",
+      "p20-B-r2",
+      "p20-B-r3",
+      "p20-B-r4",
+      "p20-B-r5",
+      "p20-D-r1",
+      "p20-D-r2",
+      "p20-D-r3",
+      "p20-D-r4",
+      "p20-D-r5",
+      "p20-I-r1",
+      "p20-I-r2",
+      "p20-I-r3",
+      "p20-I-r4",
+      "p20-I-r5"
+    ]
+  },
+  "nearest_fit_distances": {
+    "A": {
+      "each_fit_rule_pixels": {
+        "p20-T-r1": 382.5,
+        "p20-T-r2": 370,
+        "p20-T-r3": 357.5,
+        "p20-T-r4": 345,
+        "p20-T-r5": 332.5,
+        "p20-B-r1": 258,
+        "p20-B-r2": 245.5,
+        "p20-B-r3": 233,
+        "p20-B-r4": 220.5,
+        "p20-B-r5": 208,
+        "p20-D-r1": 285,
+        "p20-D-r2": 297.5,
+        "p20-D-r3": 310,
+        "p20-D-r4": 322.5,
+        "p20-D-r5": 335,
+        "p20-I-r1": 1326,
+        "p20-I-r2": 1338.5,
+        "p20-I-r3": 1351,
+        "p20-I-r4": 1363.5,
+        "p20-I-r5": 1376
+      },
+      "nearest_pixels": 208
+    },
+    "E": {
+      "each_fit_rule_pixels": {
+        "p20-T-r1": 972.5,
+        "p20-T-r2": 960,
+        "p20-T-r3": 947.5,
+        "p20-T-r4": 935,
+        "p20-T-r5": 922.5,
+        "p20-B-r1": 848,
+        "p20-B-r2": 835.5,
+        "p20-B-r3": 823,
+        "p20-B-r4": 810.5,
+        "p20-B-r5": 798,
+        "p20-D-r1": 253,
+        "p20-D-r2": 240.5,
+        "p20-D-r3": 228,
+        "p20-D-r4": 215.5,
+        "p20-D-r5": 203,
+        "p20-I-r1": 737.5,
+        "p20-I-r2": 750.0,
+        "p20-I-r3": 762.5,
+        "p20-I-r4": 775.0,
+        "p20-I-r5": 787.5
+      },
+      "nearest_pixels": 203
+    },
+    "H": {
+      "each_fit_rule_pixels": {
+        "p20-T-r1": 1606.5,
+        "p20-T-r2": 1594,
+        "p20-T-r3": 1581.5,
+        "p20-T-r4": 1569,
+        "p20-T-r5": 1556.5,
+        "p20-B-r1": 1482,
+        "p20-B-r2": 1469.5,
+        "p20-B-r3": 1457,
+        "p20-B-r4": 1444.5,
+        "p20-B-r5": 1432,
+        "p20-D-r1": 887,
+        "p20-D-r2": 874.5,
+        "p20-D-r3": 862,
+        "p20-D-r4": 849.5,
+        "p20-D-r5": 837,
+        "p20-I-r1": 104,
+        "p20-I-r2": 116.5,
+        "p20-I-r3": 129,
+        "p20-I-r4": 141.5,
+        "p20-I-r5": 154
+      },
+      "nearest_pixels": 104
+    }
+  },
+  "repeatability": [
+    {
+      "id": "p20-T-r3",
+      "role": "fit",
+      "max_abs_delta_pixels": 1.0,
+      "rms_delta_pixels": 0.45643546458763845,
+      "first_shape": {
+        "rise_pixels": 0.5714285714286733,
+        "curvature_peak_to_peak_pixels": 0.4285714285714448
+      },
+      "repeat_shape": {
+        "rise_pixels": 0.4761904761904734,
+        "curvature_peak_to_peak_pixels": 0.940476190476204
+      },
+      "rise_difference_pixels": -0.09523809523819993,
+      "curvature_difference_pixels": 0.5119047619047592
+    },
+    {
+      "id": "p20-A-r3",
+      "role": "evaluation",
+      "max_abs_delta_pixels": 4.0,
+      "rms_delta_pixels": 3.453776401067595,
+      "first_shape": {
+        "rise_pixels": 2.1800000000003052,
+        "curvature_peak_to_peak_pixels": 0.8720000000000709
+      },
+      "repeat_shape": {
+        "rise_pixels": 1.9200000000002357,
+        "curvature_peak_to_peak_pixels": 0.5760000000001355
+      },
+      "rise_difference_pixels": -0.2600000000000695,
+      "curvature_difference_pixels": -0.2959999999999354
+    },
+    {
+      "id": "p20-D-r3",
+      "role": "fit",
+      "max_abs_delta_pixels": 6.0,
+      "rms_delta_pixels": 5.621387729022079,
+      "first_shape": {
+        "rise_pixels": 1.4311220986655306e-13,
+        "curvature_peak_to_peak_pixels": 1.1368683772161603e-13
+      },
+      "repeat_shape": {
+        "rise_pixels": 1.1262135922331507,
+        "curvature_peak_to_peak_pixels": 0.8592233009708252
+      },
+      "rise_difference_pixels": 1.1262135922330074,
+      "curvature_difference_pixels": 0.8592233009707115
+    },
+    {
+      "id": "p20-E-r3",
+      "role": "evaluation",
+      "max_abs_delta_pixels": 4.0,
+      "rms_delta_pixels": 4.0,
+      "first_shape": {
+        "rise_pixels": 0.5384615384614868,
+        "curvature_peak_to_peak_pixels": 0.23076923076928324
+      },
+      "repeat_shape": {
+        "rise_pixels": 0.5384615384615599,
+        "curvature_peak_to_peak_pixels": 0.23076923076905587
+      },
+      "rise_difference_pixels": 7.30526750203353e-14,
+      "curvature_difference_pixels": -2.2737367544323206e-13
+    },
+    {
+      "id": "p20-H-r3",
+      "role": "evaluation",
+      "max_abs_delta_pixels": 1.5,
+      "rms_delta_pixels": 1.0723805294763609,
+      "first_shape": {
+        "rise_pixels": 0.0,
+        "curvature_peak_to_peak_pixels": 0.0
+      },
+      "repeat_shape": {
+        "rise_pixels": -1.12500000000007,
+        "curvature_peak_to_peak_pixels": 1.102272727272748
+      },
+      "rise_difference_pixels": -1.12500000000007,
+      "curvature_difference_pixels": 1.102272727272748
+    },
+    {
+      "id": "p20-I-r3",
+      "role": "fit",
+      "max_abs_delta_pixels": 2.5,
+      "rms_delta_pixels": 2.222048604328897,
+      "first_shape": {
+        "rise_pixels": -2.631578947368628,
+        "curvature_peak_to_peak_pixels": 0.34210526315791867
+      },
+      "repeat_shape": {
+        "rise_pixels": -4.210526315789866,
+        "curvature_peak_to_peak_pixels": 0.5789473684208133
+      },
+      "rise_difference_pixels": -1.5789473684212378,
+      "curvature_difference_pixels": 0.23684210526289462
+    }
+  ],
+  "subjects_before": {
+    "/Users/antony/Development/BookScanBuilder/experiments/staff_coordinates.json": "a97f876ebe9de92f11ceb83fc9f1829ed63740045b1c74f0dffcdaeffb0b72a8",
+    "/Users/antony/Development/BookScanBuilder/experiments/staff_coordinates.py": "c072ca27b75eefb72de169714e38a776c6a4a54832c4a9a2bcce76136aa7a0c2",
+    "/Users/antony/Development/BookScanBuilder/Taskfile.yml": "1ea8f3e901b87e5e57d3c0e37d1871e6ad5008ce389a74272cfdc9621dad7d82",
+    "/Volumes/Glass/Book Conversion/Raw Scans/Fundamentals of Musical Composition.pdf": "3235a842d619a18b11e2fbdb3b5b6666adeb223959cafd4b1d67f27f0dbfe780",
+    "/private/tmp/bookscan-staff-k20-selection/page-20.png": "b4ec82c9b9885691aaa08f1f25df7d614bc447b2980880ea4da84e491ad312fd",
+    "/private/tmp/bookscan-staff-k20-selection/dewarp2-1.87.0.c": "f92430cbd2eedced417d82c20cbfd15d60886294f40fb6f7d5806265e28f2853",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/staff-coordinates-first-pass.json": "07d1b1218d3a2a0ede65aee9f61e6b3c762d8a9d6f3c000537f071145454105f",
+    "/Users/antony/Development/BookScanBuilder/experiments/test_staff_coordinates.py": "b24fa12d6f82d29ea9f1c92fa3b44dc2bb5fbb0865d7a1660d812bf44d923197",
+    "/opt/homebrew/Cellar/leptonica/1.87.0/lib/libleptonica.dylib": "f9e973f4a61ba251ccb7a0d4545ce7e00e6d2c90ee4a55313012e68da7a7ebfa",
+    "/private/tmp/bookscan-staff-k20-selection/staff-T.png": "7b900fafeaa2a9d5029ccb9ee02308816ed946f127f50af3ff0fa3f06c21f14b",
+    "/private/tmp/bookscan-staff-k20-selection/staff-B.png": "eab64b8e4ec2ea3f0f8ddf6d22a6025cd7dca8fb561a991c167b2f8249080417",
+    "/private/tmp/bookscan-staff-k20-selection/staff-A.png": "0e85f6aa45296517110d8e74d5cb546a11755d9284fe1ae80ca4b05661b48c86",
+    "/private/tmp/bookscan-staff-k20-selection/staff-D.png": "4bd3173e55a119589cdeb418d64eeab3e66a43e4ddb18bda0b826595c6d88313",
+    "/private/tmp/bookscan-staff-k20-selection/staff-E.png": "84610ed9e997eff85c855499d9cb82932c59c3515c8ff0360490724ac30bf154",
+    "/private/tmp/bookscan-staff-k20-selection/staff-H.png": "0e9412752716262dfd889ec7ae406a7dd2718dd8593eff676e769d9ca54ebc2d",
+    "/private/tmp/bookscan-staff-k20-selection/staff-I.png": "0b48edffbdaf2eafa3d1d3a345fd254a1dd9f44fcc6772a7926e32842c35a78c",
+    "/private/tmp/bookscan-staff-k20-selection/repeat-T.png": "d649938e3637ee37073da43870993f597371635163e21b02d00cc3b5bdd9e120",
+    "/private/tmp/bookscan-staff-k20-selection/repeat-A.png": "69ee1a42dc4e3741e32c99dbeee8a656d88b8cd2df0c73fd608d4a91bac11c0a",
+    "/private/tmp/bookscan-staff-k20-selection/repeat-D.png": "de3a8d6faf2b4d2437f11896f7a8b312ad9e2cb609bb52ab5089c9861642e30a",
+    "/private/tmp/bookscan-staff-k20-selection/repeat-E.png": "88cbc144fd0420b3348843867c56d4586124ac56be58c7baf0c892b7c443f11f",
+    "/private/tmp/bookscan-staff-k20-selection/repeat-H.png": "5c66699831f619bd1afb7833fc5f0d006ad90d10ef3e0ac272bd0661ae85d9e1",
+    "/private/tmp/bookscan-staff-k20-selection/repeat-I.png": "7e5423a2c71b30ba05767b0a2cad265b37379ef688d61d86d7dbc5dd2b252b9f"
+  },
+  "subjects_after": {
+    "/Users/antony/Development/BookScanBuilder/experiments/staff_coordinates.json": "a97f876ebe9de92f11ceb83fc9f1829ed63740045b1c74f0dffcdaeffb0b72a8",
+    "/Users/antony/Development/BookScanBuilder/experiments/staff_coordinates.py": "c072ca27b75eefb72de169714e38a776c6a4a54832c4a9a2bcce76136aa7a0c2",
+    "/Users/antony/Development/BookScanBuilder/Taskfile.yml": "1ea8f3e901b87e5e57d3c0e37d1871e6ad5008ce389a74272cfdc9621dad7d82",
+    "/Volumes/Glass/Book Conversion/Raw Scans/Fundamentals of Musical Composition.pdf": "3235a842d619a18b11e2fbdb3b5b6666adeb223959cafd4b1d67f27f0dbfe780",
+    "/private/tmp/bookscan-staff-k20-selection/page-20.png": "b4ec82c9b9885691aaa08f1f25df7d614bc447b2980880ea4da84e491ad312fd",
+    "/private/tmp/bookscan-staff-k20-selection/dewarp2-1.87.0.c": "f92430cbd2eedced417d82c20cbfd15d60886294f40fb6f7d5806265e28f2853",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/staff-coordinates-first-pass.json": "07d1b1218d3a2a0ede65aee9f61e6b3c762d8a9d6f3c000537f071145454105f",
+    "/Users/antony/Development/BookScanBuilder/experiments/test_staff_coordinates.py": "b24fa12d6f82d29ea9f1c92fa3b44dc2bb5fbb0865d7a1660d812bf44d923197",
+    "/opt/homebrew/Cellar/leptonica/1.87.0/lib/libleptonica.dylib": "f9e973f4a61ba251ccb7a0d4545ce7e00e6d2c90ee4a55313012e68da7a7ebfa",
+    "/private/tmp/bookscan-staff-k20-selection/staff-T.png": "7b900fafeaa2a9d5029ccb9ee02308816ed946f127f50af3ff0fa3f06c21f14b",
+    "/private/tmp/bookscan-staff-k20-selection/staff-B.png": "eab64b8e4ec2ea3f0f8ddf6d22a6025cd7dca8fb561a991c167b2f8249080417",
+    "/private/tmp/bookscan-staff-k20-selection/staff-A.png": "0e85f6aa45296517110d8e74d5cb546a11755d9284fe1ae80ca4b05661b48c86",
+    "/private/tmp/bookscan-staff-k20-selection/staff-D.png": "4bd3173e55a119589cdeb418d64eeab3e66a43e4ddb18bda0b826595c6d88313",
+    "/private/tmp/bookscan-staff-k20-selection/staff-E.png": "84610ed9e997eff85c855499d9cb82932c59c3515c8ff0360490724ac30bf154",
+    "/private/tmp/bookscan-staff-k20-selection/staff-H.png": "0e9412752716262dfd889ec7ae406a7dd2718dd8593eff676e769d9ca54ebc2d",
+    "/private/tmp/bookscan-staff-k20-selection/staff-I.png": "0b48edffbdaf2eafa3d1d3a345fd254a1dd9f44fcc6772a7926e32842c35a78c",
+    "/private/tmp/bookscan-staff-k20-selection/repeat-T.png": "d649938e3637ee37073da43870993f597371635163e21b02d00cc3b5bdd9e120",
+    "/private/tmp/bookscan-staff-k20-selection/repeat-A.png": "69ee1a42dc4e3741e32c99dbeee8a656d88b8cd2df0c73fd608d4a91bac11c0a",
+    "/private/tmp/bookscan-staff-k20-selection/repeat-D.png": "de3a8d6faf2b4d2437f11896f7a8b312ad9e2cb609bb52ab5089c9861642e30a",
+    "/private/tmp/bookscan-staff-k20-selection/repeat-E.png": "88cbc144fd0420b3348843867c56d4586124ac56be58c7baf0c892b7c443f11f",
+    "/private/tmp/bookscan-staff-k20-selection/repeat-H.png": "5c66699831f619bd1afb7833fc5f0d006ad90d10ef3e0ac272bd0661ae85d9e1",
+    "/private/tmp/bookscan-staff-k20-selection/repeat-I.png": "7e5423a2c71b30ba05767b0a2cad265b37379ef688d61d86d7dbc5dd2b252b9f"
+  },
+  "record_sha256": "a97f876ebe9de92f11ceb83fc9f1829ed63740045b1c74f0dffcdaeffb0b72a8",
+  "outputs": {
+    "separation-overlay.png": "c8b2fa76b76dc54093514778de53dae3d4b7d138a0e974164e295781900d93b3",
+    "upper-overlay.png": "9d445ef1b5863b47e0a9fe215fef6d701b1ac6b577ce66f9ee0a09029488807e",
+    "middle-overlay.png": "659995fa7b739e558d22d295ed5286da2f7b92a69a491ccb485ae79690b88b49",
+    "lower-overlay.png": "b3ed0f58dd083edfba3420b6ecddc001f6bddacdb9f941a98bd07e6d9163e52e"
+  }
+}

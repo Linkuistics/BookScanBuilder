@@ -1,0 +1,73 @@
+{
+  "source": "/Volumes/Glass/Book Conversion/Raw Scans/Fundamentals of Musical Composition.pdf",
+  "source_sha256": "3235a842d619a18b11e2fbdb3b5b6666adeb223959cafd4b1d67f27f0dbfe780",
+  "render_policy": "pdftoppm complete default MediaBox, 300 dpi, RGB PNG; bounded visual selection only, no six model trials",
+  "pages": [
+    {
+      "pdf_page": 20,
+      "printed_page": 6,
+      "render": "/private/tmp/bookscan-staff-k20-selection/page-20.png",
+      "sha256": "b4ec82c9b9885691aaa08f1f25df7d614bc447b2980880ea4da84e491ad312fd",
+      "observation": "Candidate: full-width music from upper through lower page; admissible dense tracing remains unresolved.",
+      "dimensions": [
+        1702,
+        2440
+      ]
+    },
+    {
+      "pdf_page": 40,
+      "printed_page": 26,
+      "render": "/private/tmp/bookscan-staff-k20-selection/page-40.png",
+      "sha256": "857b2fb6f9ef7a6651d135be95be549967cd6f53a1fd3a3628667dcb1c8b00e1",
+      "observation": "Prose only; no music-staff fit attempted.",
+      "dimensions": [
+        1692,
+        2443
+      ]
+    },
+    {
+      "pdf_page": 60,
+      "printed_page": 46,
+      "render": "/private/tmp/bookscan-staff-k20-selection/page-60.png",
+      "sha256": "517bce80919ae612e7030d47ca2fe9fc564127d5d2e7c3724b2af9f7caa3524d",
+      "observation": "Upper/middle grand staffs; lower system shorter. Not selected; no exhaustive gate claim.",
+      "dimensions": [
+        1705,
+        2438
+      ]
+    },
+    {
+      "pdf_page": 100,
+      "printed_page": 86,
+      "render": "/private/tmp/bookscan-staff-k20-selection/page-100.png",
+      "sha256": "7252a40d66352ef9c04d5cb8631aa8b7458b7f7372bac8fb00802e9458980472",
+      "observation": "Prose only; no music-staff fit attempted.",
+      "dimensions": [
+        1703,
+        2440
+      ]
+    },
+    {
+      "pdf_page": 180,
+      "printed_page": 166,
+      "render": "/private/tmp/bookscan-staff-k20-selection/page-180.png",
+      "sha256": "0bb15f1a614cf7f27b7a7a8f6105dbf147bd2c80919f76766b87b448864c84a6",
+      "observation": "Music concentrated upper/middle; not selected; no exhaustive gate claim.",
+      "dimensions": [
+        1713,
+        2450
+      ]
+    },
+    {
+      "pdf_page": 220,
+      "printed_page": 206,
+      "render": "/private/tmp/bookscan-staff-k20-selection/page-220.png",
+      "sha256": "41c6f42d15bbec92bdb7bf4acb9b0a157ad9c00a435790bf730074564e0c8133",
+      "observation": "Prose only; no music-staff fit attempted.",
+      "dimensions": [
+        1699,
+        2445
+      ]
+    }
+  ]
+}

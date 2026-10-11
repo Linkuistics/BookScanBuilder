@@ -1,4 +1,4 @@
-# staff-guides-k20
+# staff-guides-k20 — brief
 
 
 ## Goal
@@ -186,3 +186,24 @@ State the unresolved gap and keep that child and `corrected-book-k21` live in
 order. Do not create a standalone adapter, tracing UI or setup-only child, and
 do not call coordinate evidence a completed corrected-image trial. An infeasible
 preflight may itself be the bounded inconclusive result consumed by k21.
+
+## Decomposition and bounded outcome
+
+`staff-coordinates-k26` delivers the complete source-acquisition diagnostic
+boundary. Its first dense visual pass failed native source verification:
+occluded/outside-rule observations and 4–6-pixel representative discrepancies
+make its coordinates inadmissible. Exact native numerical gates pass only on
+those rejected records. This triggers the first ordered outcome, inconclusive
+acquisition; it is not a model or sampler rejection. No real fit was forced,
+and no correction-only child was cut after that prerequisite failure.
+
+The bounded trial can close on that expressly allowed failure branch. Its
+durable result is `docs/experiments/staff-guides.md`, with source overlays,
+first/final coordinate records and exact native diagnostic reports. `k21`
+owns the precise source-marking/repeatability completion before a fresh frozen
+preflight, then the still-unperformed matched fit/output comparison if justified.
+Both historical visual questions were answered “Not inspected yet” and remain
+unresolved; the new source-overlay question has no recorded response. These
+obligations are promoted to the root brief and k21 before retirement; neither
+completion of k26 nor node closure grants an accepted correction or music
+expansion. Root appearance/processor/acceptance work stays live.

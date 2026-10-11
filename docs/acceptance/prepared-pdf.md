@@ -159,6 +159,16 @@ in its running log. `corrected-book-k5` checks that disposition and retains
 the precise missing-response or repair work before processor acceptance. Pixel
 equality and code review cannot substitute for the user's response.
 
+In `staff-guides-k20`, the same current preparation-specific views in
+`/private/tmp/bookscan-geometry-k4-final/preparation-review.pdf` were presented
+again with the question whether they preserve music/faint marks, colour, margins,
+the Norwegian spread, Counterpoint landscape canvas, Algorithm Design and both
+Strings covers, separately from geometry. The user
+explicitly answered **“Not inspected yet”** on 2026-10-11. No inspected page,
+acceptance, rejection or visible defect is recorded; approval remains pending.
+`corrected-book-k21` retains the exact visual-response completion. The staff
+acquisition diagnostic neither accepts nor rejects preparation.
+
 `page-geometry-k4` presented the current working-command comparisons separately
 from geometry in `/private/tmp/bookscan-geometry-k4-final/preparation-review.pdf`
 (16 lossless pages). It pairs source/output full pages and native detail for

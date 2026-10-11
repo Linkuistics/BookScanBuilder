@@ -20,6 +20,18 @@ contract/evidence at `docs/specs/prepared-pdf.md` and
 `appearance-cleanup-k22` and `workflow-acceptance-k23`; their order expresses
 dependencies, not permission to run against a missing processor.
 
+The k20 source-only result is `docs/experiments/staff-guides.md`, produced by
+`staff-coordinates-k26`: inconclusive acquisition. Its initial dense visual
+records fail native source inspection (occluded/outside-rule points and centre
+spot-check discrepancies up to 6 pixels). Numerical native gates pass on
+rejected coordinates only; `acquisition_admissible=false` forbids reuse as fit
+input. No selected-page automatic/manual model comparison was run. Decide the
+precise genuine manual-marking/repeatability completion at unchanged settings
+or commission a separately stated acquisition experiment; retain a fresh
+planning consumer after that completion as required below. Page 20 / printed 6
+is a candidate, not a proved suitable or accepted correction fixture. Both
+historical geometry/preparation responses are explicitly “Not inspected yet”.
+
 ## Done when
 
 - Classify the traced core as supported for further trial, rejected or

@@ -175,6 +175,21 @@ Missing scope must be cut before root closure, not declared satisfied by a
 retired trial or a design. This plan earns an external planning review before
 its consumers run; integrations, if required, are cut lazily by that review.
 
+`staff-guides-k20` decomposed to `staff-coordinates-k26` and closes on its
+expressly allowed inconclusive-acquisition branch. The source-only result in
+`docs/experiments/staff-guides.md` rejects the initial dense visual coordinates:
+occluded/outside-rule points and 4–6-pixel representative discrepancies exceed
+the stated uncertainty. Native count/coverage gates pass only on inadmissible
+diagnostic coordinates; no model/correction or matched page-20 automatic
+comparison was generated. Page 20 / printed 6 remains a candidate whose genuine
+source tracing and repeatability need precise completion. k21 owns that named
+question before a fresh pre-output freeze/native preflight, and retains the
+unperformed output/control/sampler/visual comparison and a fresh planning
+consumer after any commissioned completion. This neither rejects the vertical
+family nor licenses music expansion. The user explicitly answered “Not
+inspected yet” separately for historical geometry and preparation views;
+their visual responses remain unresolved. k21, k22 and k23 stay live and ordered.
+
 ## On the horizon
 
 The production correction field, automatic confidence policy and manual
