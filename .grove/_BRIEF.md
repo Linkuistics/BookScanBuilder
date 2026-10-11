@@ -31,7 +31,10 @@ single PDF. The user will use the shell to iterate over the collection.
   of any page available before export. Review changes appear in the final PDF.
 - Assembly preserves source order by default, supports reordering and
   user-controlled exclusion of blanks or duplicates, and supports inserting
-  cover pages. Front and back covers have explicit roles and placement.
+  cover pages. Preparation supplies these controls for selected PDF pages;
+  the processor supplies exclusion/reordering for the book pages created by
+  splitting a spread, before final OCR/export. Front and back covers have
+  explicit roles and placement.
 - The output retains visible page images and has an English OCR text layer
   whose search and selection positions align with the corrected images.
 - Originals remain untouched, and already-correct pages are not degraded.
@@ -55,26 +58,38 @@ the trial, not to promise an algorithm's success.
 
 ## Working increments
 
-| Increment | Useful handoff | Dependency and grove |
+| Increment | Useful handoff | Dependency and ownership |
 | --- | --- | --- |
-| Explicit PDF preparation | One prepared PDF, with selected content order and explicit front/back covers, usable by ordinary PDF tools | Independent product increment. Separate jj workspace and grove: `/Users/antony/Development/BookScanBuilder.prepare-pdf`. Read its root brief for the scoped design and planning leaves. |
-| Corrected searchable book | One prepared PDF processed through accepted geometry, border removal, review adjustments and aligned English OCR into an exported PDF | Depends on preparation's public contract and demonstrated geometry. `corrected-book-k5` creates a separate processor grove when the trial evidence is sufficient. The corrected-image schema and its working reader/export path belong to this same increment. |
-| Optional appearance cleanup | Preview and selectively apply whitening or noise removal while keeping the working default processor and its accepted-image/OCR alignment | A separate successor grove after the default processor works. Its design must compare faint print, music, illustration and colour before choosing a cleanup method. |
+| Explicit PDF preparation | One prepared PDF, with selected content order and explicit front/back covers, usable by ordinary PDF tools | First independently useful increment in this tree. `prepared-pdf-k9` establishes the design; `prepared-pdf-k10` cuts its working implementation ahead of geometry. No correction service is needed. |
+| Corrected searchable book | One prepared PDF processed through accepted geometry, border removal, post-split assembly decisions, review adjustments and aligned English OCR into an exported PDF | Depends on working preparation's public contract and demonstrated geometry. `corrected-book-k5` cuts processor work in this tree when those inputs suffice. The corrected-image schema and its working reader/export path belong to this same increment. |
+| Optional appearance cleanup | Preview and selectively apply whitening or noise removal while keeping the working default processor and its accepted-image/OCR alignment | A successor increment in this tree after the default processor works. Its design must compare faint print, music, illustration and colour before choosing a cleanup method. |
 
-This grove currently supplies the bounded geometry evidence and the handoff
-plan. `page-geometry-k4` is a throwaway two-page comparison with a user reaction,
+The user chose one workspace and one Grove tree for all three increments.
+Preparation design/planning run first, and insert their implementation and
+required reviews before geometry; preparation is useful without correction.
+`page-geometry-k4` is a throwaway two-page comparison with a user reaction,
 not a production increment or a settled algorithm. `corrected-book-k5` then
 checks that result, commissions the precisely specified expanded fixtures or a
-bounded repair trial, and shapes the next processor grove. It must keep enough
+bounded repair trial, and shapes the next processor work. It must keep enough
 live work here to check the root's end-to-end Done when against the integrated
-increments; completion of a prototype or sibling grove does not close this root.
+increments; completion of a prototype or preparation does not close this root.
 
-Product groves are sequential at integration: land the preparation contract,
-then build a single-PDF processor against it. Preparation design can proceed
-without waiting for the geometry trial. No background drivers are launched by
-this planning session. When bringing stage results together, integrate product
-artifacts and durable documents through jj; keep each grove's task tree local
-to its workspace rather than merging unrelated `.grove/` histories.
+Preparation's unstarted task contracts came from producer revision `1ada47bd`:
+its old `prepared-pdf-k4` and `prepared-pdf-k5` are now local `prepared-pdf-k9`
+and `prepared-pdf-k10`. The producer history is retained by the local bookmark
+`archive/prepared-pdf-plan`. Its old on-disk checkout is historical context,
+not an active Grove; continue all work here. `stage-handoff-k8` was abandoned
+with the separate-workspace plan. No cross-tree corrective handoff or product
+landing is required, and no driver is launched by this integration.
+
+Each increment extends the same root Taskfile: `prepare:`, `geometry:` and
+`process:` recipes have distinct names, while shared setup/dependencies are
+reconciled in place. Run new/changed tasks and existing tasks affected by each
+addition before relying on the combined file. The experiment must retain
+wrappers its lasting recipes call, or remove/replace and verify those recipes
+when discarding the wrapper. Processor acceptance owns the final check from
+working preparation through one-PDF processing/export, with the collection
+unavailable to the processor.
 
 ## On the horizon
 
@@ -82,7 +97,7 @@ The production correction field, automatic confidence policy and manual
 adjustment controls depend on the user's reaction to the real-page trial.
 Their implementation decomposition cannot yet be stated honestly. Optional
 whitening and noise-removal mechanisms need appearance evidence; the precisely
-known preview/fidelity design question belongs to a successor appearance grove
+known preview/fidelity design question belongs to successor leaves in this tree
 after the default processor supplies a working accepted-image/export seam.
 `corrected-book-k5` carries that handoff obligation. No method is chosen here.
 
@@ -109,6 +124,40 @@ and text selection; application of review adjustments; unchanged originals;
 and preservation of already-correct pages. Combine repeatable fixture checks
 with the user's visual judgment of before/after geometry samples. A numerical
 score alone does not establish visual acceptance.
+
+## Preparation acceptance cases
+
+Preparation accepts explicitly selected source PDFs/pages, preserves content
+order by default and permits deliberate reordering/exclusion at PDF-page
+granularity. Cover roles and placement are explicit, including multi-page
+covers and the already-assembled/no-cover case; page count or filename cannot
+decide roles. The processor owns equivalent controls for halves created by
+spread splitting. Preparation preserves each complete selected PDF page's
+visible content and canvas, with no spread classification, warping, appearance
+cleanup or OCR. Selection errors must be actionable; source/output collisions
+and failed/interrupted writes cannot corrupt originals.
+
+Paths below are relative to `/Volumes/Glass/Book Conversion`; page numbers are
+one-based PDF pages. The preparation design specifies the public command test
+seam and may validate copying assumptions with a bounded dependency experiment.
+The implementation exercises the working command with these cases.
+
+| Input case | Acceptance |
+| --- | --- |
+| `Raw Scans/Fundamentals of Musical Composition.pdf`, pages 40 and 140, with `Covers/SchoenbergComposition.pdf`, page 1 explicitly assigned front | Front then selected content order; mixed visible PDF objects and music marks remain intact, with no geometry/appearance change. |
+| `Processed Books/Norwegian - An Essential Grammar (Routledge)/Norwegian - An Essential Grammar (Routledge).pdf`, page 20 | Preserve the complete spread PDF page for later processor classification/splitting. |
+| `Needing Cleanup/Counterpoint in Composition.pdf`, page 20 | Preserve the single printed page and landscape canvas as one PDF page. |
+| `Processed Books/Algorithm Design/Algorithm Design.pdf`, page 20 | Preserve complete existing content; folder membership grants no correction exemption later. |
+| Distinctly labelled four-page cover fixture plus content fixture | Explicit front/back/interior/omitted selections and reordering yield the requested order. Choose an available real multi-page cover PDF by direct inspection as a companion case. |
+| Already-assembled input without a separate cover | Valid preparation use and valid single-PDF successor input without rediscovering covers. |
+
+Check page counts, full-page visible render comparisons and source digests
+before/after. Exercise invalid selections, output collisions and interrupted/
+failed writes at the public command seam. Keep copied fixtures and derived
+outputs outside the source collection. Synthetic order labels establish exact
+order; real-PDF comparisons establish fidelity. If role/provenance data is
+needed downstream, retain it with a handoff whose sole required input is the
+prepared PDF, with no mandatory sidecar or collection discovery.
 
 ## Notes
 

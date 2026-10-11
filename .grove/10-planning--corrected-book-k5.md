@@ -3,17 +3,18 @@
 ## Goal
 
 Use the two-page experiment and user reaction to cut the next bounded geometry
-work and the separate single-PDF processor increment. Preserve useful working
-handoffs; do not select a production algorithm from a startup or fitting score.
+work and the single-PDF processor increment in this workspace. Preserve useful
+working handoffs; do not select a production algorithm from startup or fitting.
 
 ## Context
 
 Read the committed result of `page-geometry-k4`, its running log and
 `docs/experiments/page-geometry.md`, plus `docs/research/scan-geometry-a.md`.
-Inspect the preparation grove at
-`/Users/antony/Development/BookScanBuilder.prepare-pdf` and its public contract
-when available. That independent grove need not have finished for this leaf
-to state the next correction question.
+Read the preparation contract at `docs/specs/prepared-pdf.md` and its working
+command/verification delivered by the leaves cut from `prepared-pdf-k10`.
+All stages now use this workspace and tree. If preparation's contract or
+working product is missing, insert the exact completion work before its
+consumer; do not build a processor against an assumed handoff.
 
 ## Done when
 
@@ -29,15 +30,29 @@ to state the next correction question.
   constrained two-axis field if vertical-only correction leaves widths or
   barlines wrong. State the hypothesis and rejection case. Do not commission
   all fallbacks or install a larger model merely because it exists.
-- Shape a separate processor grove once correction and adjustment needs can
+- If the core is inconclusive, identify the missing observation before choosing
+  another correction candidate. Cut a bounded completion/diagnostic trial for
+  that gap (for example valid holdout coverage or a sampler measurement), or
+  ask the user the specific unresolved visual comparison if their reaction is
+  the missing evidence. State what would resolve the question and retain a
+  planning consumer after that work. Do not treat inconclusive as supported,
+  expand at the same settings by default, or commission all repair hypotheses.
+- Shape processor leaves in this tree once correction and adjustment needs can
   be stated concretely. Its design agreement must precede production leaves.
   Keep render/split/crop/warp, accepted review edits, final OCR positions and
   export in one working product increment, with vertical implementation slices.
+  The processor owns user-controlled exclusion and reordering of book pages
+  created by a spread split, before final OCR/export. Preserve half-page
+  provenance and default order; a blank/duplicate flag cannot silently delete
+  a half. Include a spread with one blank half and a duplicated half that the
+  user excludes or moves, checking final order, retained geometry and aligned
+  OCR after the accepted decisions. Preparation's unsplit PDF-page controls
+  cannot satisfy these cases.
 - If this session commissions further trials, cut a planning handoff after those
   trials so their outcomes are consumed in fresh context. Production commitment
   waits for the expanded cases and user reaction, not just the two-page core.
-  Preserve an explicit successor-grove design question for optional whitening/
-  noise-removal previews after the default processor is working; appearance
+  Preserve an explicit successor design question in this tree for optional
+  whitening/noise-removal previews after the default processor is working; appearance
   cleanup need not delay that useful default-processor handoff.
 - The processor design/trials include a tiny searchable PDF from accepted
   images, actual English search/selection positions, an earlier-OCR fixture
@@ -47,6 +62,13 @@ to state the next correction question.
 - Retain explicit work in this root to verify the integrated stage products
   against its Done when. A completed evidence trial is not the full workflow.
   Preserve Taskfile verification and original-digest checks in future leaves.
+  The processor's working vertical slices verify the existing preparation
+  command and the isolated prepared-PDF input through final export. Extend the
+  shared Taskfile with `process:` recipes, reconcile setup/dependencies, and
+  verify introduced/changed recipes and existing recipes affected by them.
+  Cut bounded acceptance work here to check the preparation/processor product
+  together and retain any missing scope before root closure. No separate
+  workspace, cross-tree landing or driver launch is part of this plan.
 
 ## Expanded real-PDF acceptance cases
 
@@ -60,7 +82,7 @@ pages. These are fixed test questions, not evidence that the method succeeds:
 | `Needing Cleanup/Counterpoint in Composition.pdf`, 20 | Retain one printed page on its landscape canvas; preserve both columns. A landscape shape alone must not trigger a spread split. |
 | `Raw Scans/Fundamentals of Musical Composition.pdf`, 40 | Test prose, faint printing and music detail under the same candidate settings. |
 | `Covers/SchoenbergComposition.pdf`, 1 | Preserve colour and sparse lettering/rules. Unsupported geometry must remain usable and flagged, with no invented model from another page. |
-| Verified Algorithm Design page-20 control | Continue checking nondegradation as methods or samplers change; bypass alone does not test a warp's fidelity. |
+| Verified Algorithm Design page-20 control | Continue checking unchanged-policy nondegradation and the declared non-zero, fractional-coordinate sampler diagnostic from `page-geometry-k4` as methods or samplers change; bypass or an identity field does not establish sampler fidelity. |
 
 ## Notes
 
@@ -69,7 +91,7 @@ through the processor. The user's shell owns collection iteration. An already
 assembled PDF is valid input; the processor never discovers cover files.
 
 Default cleanup is geometry and scanner-border removal with colour/detail
-retained. A separate successor appearance increment supplies previewable
+retained. A successor appearance increment in this tree supplies previewable
 optional whitening/noise removal. Automatic work is followed by flagged-page
 review, any page can be adjusted, and every accepted
 change must appear in the final image and its OCR. The eventual design must

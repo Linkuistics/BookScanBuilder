@@ -31,8 +31,20 @@ around the installed Leptonica API over a new application or learned-model port.
   and margins. Source identities and SHA-256 digests match before and after.
   Record dimensions, DPI, tool versions and settings; upsampling adds no detail.
 - Independently marked guides sample upper/middle/lower and left/centre/right
-  geometry. Evaluation lines are distinct from fitted lines. Matched crops
-  include staff spacing, barlines, stems, dots, faint marks and glyph widths.
+  geometry. Before viewing any deskewed or candidate output, the executing
+  session marks the unchanged render (with the user's input if a printed line's
+  intent is uncertain) and freezes a coordinate record: source/render digests,
+  pixel origin/units, line IDs, fit/evaluation roles, sampled points, marker and
+  method. Save it as a machine-readable file with a marked unchanged image;
+  record its digest before and after evaluation. Matched crops include staff
+  spacing, barlines, stems, dots, faint marks and glyph widths.
+- Withhold whole physical evaluation lines, including their full visible
+  extent, from the disposable fitting analysis mask. Keep the retained RGB
+  render untouched. Save the exclusion mask and detected fitting lines; verify
+  no evaluation line entered the automatic fit. If withholding leaves too few
+  lines/coverage for a valid model, the held-out comparison is inconclusive.
+  An optional full-input fit is a separate diagnostic, never held-out evidence;
+  do not weaken model validity merely to finish the experiment.
 - The unchanged render, rigid-deskew baseline and per-page vertical-only
   candidate are compared at the same scale. Horizontal correction, neighbouring
   model substitution, whitening, denoising and lossy recompression are off.
@@ -41,8 +53,18 @@ around the installed Leptonica API over a new application or learned-model port.
   unsupported geometry, not correction.
 - Assess held-out residual slope/curvature and local shape across the whole
   page. Check clipping, thin-detail loss, horizontal distances and barline
-  geometry. Examine a forced candidate warp on the verified straight control
-  as a diagnostic as well as the decision to leave it unchanged.
+  geometry. Separately exercise the same sampler on the straight control with
+  a declared smooth vertical diagnostic field. Before inspecting output, save
+  its mapping convention and bounded parameters, chosen to give spatially
+  varying non-zero displacement and fractional source coordinates at the named
+  detail crops without clipping their content. Expose the actual field and
+  source coordinates so identity/copy/bypass cannot count as a sampler test.
+  Verify displacement still exercises a non-identity mapping after the native
+  sampler's coordinate rounding; otherwise the diagnostic is inconclusive.
+  Compare against the intended mapping and separate deliberate diagnostic
+  deformation from added sampling damage. This diagnostic chooses no production
+  field and does not establish the control's correction policy. Also check the
+  real policy leaves the verified control unchanged.
 - Give the user ordinary image files or a small comparison PDF with matched
   views and crops. Ask whether the candidate improves within-page geometry
   beyond rigid deskew without unacceptable shape/detail changes. Record the
@@ -52,6 +74,13 @@ around the installed Leptonica API over a new application or learned-model port.
   rendering and repeatable comparison commands are concrete. Keep human guide
   marking and visual acceptance explicit; a numeric residual is not approval.
   Store disposable renders separately from authoritative source PDFs.
+  Use `geometry:` task names. Record every wrapper and fixture dependency the
+  durable recipes call. Retain a reproducible experiment wrapper outside the
+  disposable output directory, or remove/replace its recipes and verify the
+  replacement when discarding it. A recipe calling a discarded wrapper cannot
+  survive. Extend the shared Taskfile containing preparation's `prepare:`
+  recipes; reconcile setup dependencies and run changed/new tasks and all
+  existing tasks affected by that combination before relying on it.
 
 ## Notes
 
@@ -60,10 +89,15 @@ even if the candidate fails. Do not turn it into a full-book processor, OCR
 pipeline or review application. No first test book or numerical quality
 threshold has been approved; these are candidate source pages.
 
-Reject or mark inconclusive if model extraction/validity fails, within-page
-residuals do not improve beyond rigid deskew, glyph or staff geometry worsens,
-content clips, thin marks disappear, or the control is visibly degraded. A
-better fitted staff alone cannot establish successful scanner-feed correction.
+Reject the automatic candidate for this fixture when a properly executed
+comparison demonstrates extraction/model failure, no improvement over rigid
+deskew, worsened glyph/staff geometry, clipping, thin-detail loss or unintended
+control degradation. Failure only after the holdout exclusion is inconclusive
+about the full-input automatic candidate and cannot be treated as acceptance.
+Missing independent evaluation coverage, a failed measurement/setup or an
+ambiguous/unavailable human reaction is also inconclusive: name the missing
+observation and what would resolve it. A better fitted staff alone cannot
+establish successful scanner-feed correction.
 Preserve originals and usable unchanged outputs on unsupported geometry.
 
 `corrected-book-k5` owns the next cut. Supply enough evidence to distinguish
