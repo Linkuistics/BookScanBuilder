@@ -22,6 +22,10 @@ Generate no fitted model, rigid image or corrected image in this session.
   the review integration and any human-confirmed sequencing choice.
   Consume the independent `norwegian-gutter-k31` result and its fresh planning
   handoff before this repair; neither supplies music or preparation acceptance.
+  `norwegian-gutter-k34` commissions source-only `norwegian-measurement-k35`
+  and its fresh planner before this leaf on every outcome. Consume their actual
+  evidence/protocol limitations; numerical addressing or acquisition success
+  on text baselines grants no admissibility to this music-rule repair.
 - `docs/experiments/staff-guides.md`, its selection/first-pass/report records,
   and `experiments/staff_coordinates.json`: frozen rejected diagnostics, not
   input to a real fit. Preserve these records; put new passes/results in
@@ -46,6 +50,11 @@ Generate no fitted model, rigid image or corrected image in this session.
 
 ## Done when
 
+- Consume k31/k34 and k35 plus its fresh planner's actual dispositions before
+  this repair. Carry any source-instrument limitations into the music protocol
+  without treating text-baseline success/failure as music-rule evidence. Keep
+  unresolved Norwegian comparisons and their planner's precise next question
+  for k28; this repair grants no Norwegian, control or preparation acceptance.
 - Before dense marking, freeze the complete roster: five physical rules in
   each fitting unit T/B/D/I, with whole evaluation staffs A/E/H and the exact
   frozen exclusion rectangles. Ex.4 c first staff, Ex.6 and Ex.7 a–e remain

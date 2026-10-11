@@ -119,3 +119,83 @@ yet” is invented. k31 closes only its admitted bounded inconclusive branch;
 its complete trial has not demonstrated correction. Preserve every criterion
 above and k27 → k28 → k22 → k23; k28 must consume this result and your exact
 completion decision, without silently recommissioning the old Norwegian trial.
+
+## Decisions (running log)
+
+Consumed k31/k32/k33's complete contracts and committed result. Each half's
+first applicable outcome is inconclusive acquisition/instrument/measurement:
+no numerical trace, independent verification or systematic uncertainty exists.
+The frozen full canvases retain their complete content; the packet omitted
+centre/outer detail, not the half images. Unmasked counts 15/10/35 decide no
+masked prerequisite. No model, application, corrected-output measurement or
+new control/sampler verification exists. Source/instrument response is unavailable;
+beyond-rigid and sampler questions are unperformed without comparisons. Neither
+the vertical family nor preparation/music is accepted or rejected by this result.
+
+Commission one complete source-measurement prototype, testing the changed
+instrument observation named by k33: pixel-addressed native patches with
+explicit non-descending glyph anchors across actual gutter/centre/outer ink.
+Its inspectable handoff includes fresh first marks, blind whole-line repeats,
+independent per-point verification, positional/slope/curvature and shared
+systematic limits, predeclared whole-line/region exclusions and exact masked
+native prerequisites, or a precise bounded failure. A display adapter alone,
+repeat agreement alone and automatic baseline relabelling cannot earn that
+handoff. No fit or corrected image is commissioned within this source slice.
+Its own fresh planner must be cut on every outcome before k27, preserving k27
+then k28 and the entire inherited comparison/product contract. This tests a
+specific changed observation; it is not an unconditional rerun of k31.
+
+Working increments remain preparation, the complete default corrected/searchable
+processor, then optional appearance in this one tree. Source measurement is
+evidence within the default increment, not an independent product stage.
+Corrected-image representation and its working reader/export remain together;
+production design/implementation is premature. No hard-to-reverse production
+decision is made, so the advisory prepared-page-hints ADR remains unchanged.
+
+Inserted `norwegian-measurement-k35` before k27 and updated k27/k28's own
+consumption criteria and the root's increment/ordering summary. Its fresh
+consumer is lazy: k35 cuts it from the actual result on every outcome before
+k27. Conditional corrected comparisons remain for that planner, not an
+unconditional output-only leaf. k22/k23's bodies and all root Done when
+criteria remain intact. No new node is needed for one focused source-evidence
+slice; k35 names its complete first-pass fallback only if it outgrows a session.
+
+This orchestration earns a `review-planning` before k35: independently verified
+glyph-bottom positions may still share a baseline bias, and preserving honest
+per-half failure/conditional-output ownership is load-bearing for downstream
+trials. The review must try to disprove the source-admissibility and unconditional
+fresh-consumer contracts, not assume a pixel display calibrates baseline truth.
+No in-session reviewer is spent beside the scheduled review. An integration,
+if earned, belongs before k35; none is pre-created.
+
+Fresh `geometry:staff-check` passes Ruff and all four native boundary tests;
+`prepare:check` passes Ruff, strict pyright and all 231 tests. Every k33 integrity
+subject (23) and k32 prerequisite subject (15) matches individually, with recorded
+before/after maps equal and reports unchanged during checking. The k4/staff maps
+also agree before/after; current subjects match except their historical Taskfile
+hashes, predating later retained recipes. Original PDFs match. The lossless
+native archive's compressed/decompressed hashes match its declaration; each
+compact gate and every retained-line extent agrees with the complete native
+record, and the itemwise rerun record agrees. Both historical review PDFs exist.
+No new render, marker, fit or measurement trial was run by this planning session.
+
+Tier 2 graph verification used project
+`Users-antony-Development-BookScanBuilder`, generations 2026-10-11T09:52:32Z
+and 2026-10-11T09:54:50Z. Relevant search and both-direction trace pages were
+complete; exact shared preflight/shape snippets distinguish native arithmetic
+from physical admissibility. Coverage checks report no recorded gaps for
+relied-on paths; the gzip archive is not tracked by graph metadata and was
+read/decompressed directly. Markdown/config/JSON and pinned native source
+were read directly. Coverage remains best-effort, not completeness proof.
+
+Verified the changed-path enumeration is confined to the task tree. Root Done
+when and k22/k23 bodies match the parent exactly; k27/k28 retain their relative
+order and complete original criteria with explicit Norwegian handoff additions.
+Checked this leaf's criteria against k35/k28: each unresolved half receives
+only the changed source observation, every unperformed conditional comparison
+and separate response stays owned, and all fixed cases/default-product/design/
+OCR/appearance/root work remains live. The root's summary and final prerequisite
+rollup now agree with k31's actual bounded closure and this next source slice.
+Cut the planning review as the last work act, then retire k34 and seal its
+focused change. Root work stays live, so no ancestor closes or ADR promotion
+is due. No in-session reviewer or new production decision is introduced.

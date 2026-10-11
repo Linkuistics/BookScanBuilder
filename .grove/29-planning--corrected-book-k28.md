@@ -22,6 +22,9 @@ gutter-sequencing policies, `docs/experiments/staff-guides.md`, k4's frozen
 Read the full `.grove/20-k20/_staff-guides.md` comparison contract and
 `corrected-book-k30`'s integration/confirmed ordering, together with any
 `norwegian-gutter-k31` result and the fresh planning handoff it cuts before k27.
+The committed `norwegian-gutter-k34` decision commissions source-only
+`norwegian-measurement-k35` and its fresh planning consumer before k27 on every
+outcome; read their complete contracts and actual result, not an assumed fit.
 Preparation's working contract/evidence are `docs/specs/prepared-pdf.md` and
 `docs/acceptance/prepared-pdf.md`. k22 and k23 remain successor consumers.
 
@@ -76,6 +79,24 @@ Preparation's working contract/evidence are `docs/specs/prepared-pdf.md` and
   stay usable/flagged; no borrowed fit or forced validity. This independent
   result supplies no expansion/acceptance of music or preparation. Carry every
   unresolved obligation from k31 and its consumer alongside k27's handoff.
+  Specifically consume k34's commissioned `norwegian-measurement-k35` result
+  and its unconditional fresh planner before k27. Its exact changed observation
+  is pixel-addressed native glyph anchoring with per-point independent source
+  verification, blind whole-line repeats and measured shared systematic limits,
+  predeclared exclusions and exact masked native prerequisites. Classify each
+  half by actual instrument/acquisition/coverage/verification/systematic-limit/
+  too-coarse/source-reaction evidence. A source-only success is no model or
+  corrected result; failed or unavailable measurement earns only a precisely
+  changed next observation, not the same viewer retry. Retain the complete
+  conditional rigid/automatic vertical/default-validity/field/application/copy,
+  independent output measurement beyond rigid, shape/faint-detail/clipping,
+  verified control and nonidentity fractional native-sampler comparisons plus
+  separate left/right/control human reactions. Missing output views mean those
+  reactions are unperformed; k33 source/instrument silence is unavailable,
+  distinct from historical geometry/preparation's “Not inspected yet”. No
+  source result diagnoses native damage or a two-axis need, grants music/
+  preparation acceptance or licenses production. Further completion still
+  requires a changed falsifiable question and fresh planning on every outcome.
 - Obtain or retain precise response-completion work for the historical
   geometry and preparation views separately, using k27's recorded inspected
   paths/responses and the exact questions in its charter. “Not inspected yet”,

@@ -61,7 +61,7 @@ the trial, not to promise an algorithm's success.
 | Increment | Useful handoff | Dependency and ownership |
 | --- | --- | --- |
 | Explicit PDF preparation | One prepared PDF, with selected content order and explicit front/back covers, usable by ordinary PDF tools | First independently useful increment in this tree. `prepared-pdf-k9` and `prepared-pdf-k12` supply the integrated design; `prepared-pdf-k10` cuts `prepared-pdf-k13`, the complete command and its verification, ahead of geometry. No correction service is needed. |
-| Corrected searchable book | One prepared PDF processed through accepted geometry, border removal, post-split assembly decisions, review adjustments and aligned English OCR into an exported PDF | Depends on working preparation's public contract and demonstrated geometry. Integration `corrected-book-k30` places independent `norwegian-gutter-k31` and its fresh planning consumer before source-only `staff-acquisition-k27`; `corrected-book-k28` consumes their evidence and every acquisition outcome before cutting further evidence/design/working processor slices ahead of appearance. The corrected-image schema and its working reader/export path belong to this same increment. |
+| Corrected searchable book | One prepared PDF processed through accepted geometry, border removal, post-split assembly decisions, review adjustments and aligned English OCR into an exported PDF | Depends on working preparation's public contract and demonstrated geometry. `norwegian-gutter-k34` consumes k31's bounded inconclusive result and commissions complete source measurement `norwegian-measurement-k35`, reviewed before execution, with another fresh planner on every outcome before source-only `staff-acquisition-k27`; `corrected-book-k28` consumes their actual evidence and every music-acquisition outcome before cutting further evidence/design/working processor slices ahead of appearance. The corrected-image schema and its working reader/export path belong to this same increment. |
 | Optional appearance cleanup | Preview and selectively apply whitening or noise removal while keeping the working default processor and its accepted-image/OCR alignment | `appearance-cleanup-k22` owns the precise successor design question after the default processor works, then cuts its planning consumer before `workflow-acceptance-k23`. Compare faint print, music, illustration and colour before choosing a cleanup method. |
 
 The user chose one workspace and one Grove tree for all three increments.
@@ -240,7 +240,7 @@ successors, rather than nonexistent k21 descendants. No visual approval,
 production method or corrected result is established by these plan repairs.
 
 The human approved k30's recommendation to run the independent Norwegian-gutter
-trial before music acquisition. The current live sequence is k31, its fresh
+trial before music acquisition. The sequence established by k30 was k31, its fresh
 planning consumer cut lazily by k31 before k27, then k27 → k28 → k22 → k23.
 k31 asks whether the unchanged automatic vertical candidate improves both
 manually separated Norwegian page-20 / printed-36–37 halves beyond rigid,
@@ -268,6 +268,29 @@ it must decide that complete evidence question rather than repeat the same
 viewer trial. All unperformed k31 comparison/control/sampler/reaction obligations
 and every unresolved music/preparation/fixed-case/default-product/appearance/
 root-acceptance obligation remain with k34 and the ordered consumers.
+
+`norwegian-gutter-k34` commissions `norwegian-measurement-k35`, a complete
+source-only instrument/measurement question: can pixel-addressed native patches
+with explicit physical non-descending glyph anchors supply fresh whole-line
+repeats, independent per-point verification and defensible shared systematic
+limits across actual gutter/centre/outer ink in both unchanged halves? It keeps
+the x=1785 split/full canvases, predeclares physical lines/ambiguity/exclusions
+before masked extraction and retains exact unchanged native gates. Repeatability
+and known-centre addressing controls cannot establish real baseline accuracy.
+No rigid/model/field/correction is generated, even on acquisition success.
+Failure or too-coarse/systematically unresolved evidence receives its exact
+next question; no forced validity, gate/holdout rescue or same-viewer retry.
+This is evidence within the default increment, not another product stage.
+
+The resulting order is k34's planning review, k35, its fresh planner cut on
+every outcome before k27, then k27 → k28 → k22 → k23. k27/k28 retain their
+relative order. k28 consumes k31/k34 and k35's actual completion and planner,
+without recommissioning the old Norwegian trial. All conditional masked-fit/
+rigid/output/control/nonidentity-sampler/independent-measurement and separate
+human comparison obligations remain unperformed until explicitly justified
+and delivered. Every unresolved music/preparation/fixed-case/design/default-
+product/appearance/root obligation stays with these consumers. No production
+decision, source approval, historical response or corrected result is inferred.
 
 ## On the horizon
 
@@ -399,16 +422,17 @@ producer reports remain historical and unchanged; preparation visual approval
 still belongs separately to `page-geometry-k4` and is checked by
 `corrected-book-k5`.
 
-## Norwegian prerequisite decomposition
+## Norwegian prerequisite decomposition and bounded closure
 
-`norwegian-gutter-k31` has decomposed at its allowed complete inspectable
+`norwegian-gutter-k31` decomposed at its allowed complete inspectable
 prerequisite boundary. `norwegian-preflight-k32` freezes the full RGB source,
 manual seam canvases and unmasked native extraction diagnostics in
 `docs/experiments/norwegian-gutter.md`; it generates no rigid/model/corrected
 output and supplies no independent marks or held-out acceptance. The remaining
-prototype child keeps source observations/blind repeats/physical verification,
-masked native prerequisites and conditional complete output/control/sampler/
-measurement/reaction evidence live before a fresh root planning consumer and
-k27 → k28. That planner consumes both the partial and completed/unsupported
-result, preserving every inherited obligation. No partial count licenses
-production or closes k31.
+child k33 closed only the admitted bounded inconclusive source-instrument branch,
+without independent numerical marks or a correction. k34 consumes both committed
+results and commissions k35's precise changed source-measurement question.
+All independent acquisition/holdout/masked-prerequisite and conditional complete
+output/control/sampler/measurement/reaction work remains with k35 and its fresh
+planner, before k27 → k28. No partial count licensed production or closed k31;
+its bounded instrument result, rather than count success, justified closure.
