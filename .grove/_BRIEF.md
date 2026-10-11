@@ -60,7 +60,7 @@ the trial, not to promise an algorithm's success.
 
 | Increment | Useful handoff | Dependency and ownership |
 | --- | --- | --- |
-| Explicit PDF preparation | One prepared PDF, with selected content order and explicit front/back covers, usable by ordinary PDF tools | First independently useful increment in this tree. `prepared-pdf-k9` establishes the design; `prepared-pdf-k10` cuts its working implementation ahead of geometry. No correction service is needed. |
+| Explicit PDF preparation | One prepared PDF, with selected content order and explicit front/back covers, usable by ordinary PDF tools | First independently useful increment in this tree. `prepared-pdf-k9` and `prepared-pdf-k12` supply the integrated design; `prepared-pdf-k10` cuts `prepared-pdf-k13`, the complete command and its verification, ahead of geometry. No correction service is needed. |
 | Corrected searchable book | One prepared PDF processed through accepted geometry, border removal, post-split assembly decisions, review adjustments and aligned English OCR into an exported PDF | Depends on working preparation's public contract and demonstrated geometry. `corrected-book-k5` cuts processor work in this tree when those inputs suffice. The corrected-image schema and its working reader/export path belong to this same increment. |
 | Optional appearance cleanup | Preview and selectively apply whitening or noise removal while keeping the working default processor and its accepted-image/OCR alignment | A successor increment in this tree after the default processor works. Its design must compare faint print, music, illustration and colour before choosing a cleanup method. |
 
@@ -73,6 +73,15 @@ checks that result, commissions the precisely specified expanded fixtures or a
 bounded repair trial, and shapes the next processor work. It must keep enough
 live work here to check the root's end-to-end Done when against the integrated
 increments; completion of a prototype or preparation does not close this root.
+
+Preparation's implementation is one complete vertical slice: selection/roles,
+copying and source gates, runtime validation, safe publication, packaging,
+Taskfile integration and public-command acceptance land together. A planning
+review of `prepared-pdf-k10` runs before `prepared-pdf-k13`; any actionable
+findings integrate before implementation. The finished implementation assesses
+its need for a product review and inserts required review/integration before
+`page-geometry-k4`. No adapter-only or test-only handoff earns its own leaf, and
+no speculative preparation subsystem or future review chain is pre-created.
 
 Preparation's unstarted task contracts came from producer revision `1ada47bd`:
 its old `prepared-pdf-k4` and `prepared-pdf-k5` are now local `prepared-pdf-k9`
