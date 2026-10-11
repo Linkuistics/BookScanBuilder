@@ -1,0 +1,485 @@
+{
+  "scope": "fixed 16x grid synthetic addressing failure; later source work unperformed",
+  "before": {
+    "/Users/antony/.cache/uv/archive-v0/HpiveqhXjjPuBLxB/lib/python3.12/site-packages/PIL/Image.py": "f7925e7e2d901487d960ec9f1cd0514f006dc2b9cd66c9f9a02b0b42c04b74af",
+    "/Users/antony/Development/BookScanBuilder/Taskfile.yml": "704d8f8706a9548d5c3cd81eee899b24607dad13e6312658836453cbb8101be6",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/norwegian-k33-integrity.json": "46ab45bc4906e8384efc12e424ff542ee848f36f9b90865a7ee50ff14862d912",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/norwegian-k35-controls/A-grid.png": "96358286122cc8d191072991fd72fff04d79d73051cd9b724a89c02a035d7809",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/norwegian-k35-controls/A-native.png": "6719f48867fb79ce11c0e4fc09341ac3e22c27356f787f46753bf4d3a7a1713b",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/norwegian-k35-controls/B-grid.png": "1d5238d751a17cf5b4750ec31d2786a70c51435aeab93e0d4afed9352da9f810",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/norwegian-k35-controls/B-native.png": "f5ea77790850d1875a18b71d4ecc59442d0cd015e47de16db910fa19f252cdc9",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/norwegian-k35-controls/C-grid.png": "9a212fd058b88e526aa936fc2e51d1a6d06f5ba881242c1e22b4e4d0e4e410be",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/norwegian-k35-controls/C-native.png": "f5b740706804bd923eb3730bccacc8d1a8bd0a84ef6b3184e5334cfd3d84cf35",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/norwegian-k35-controls/answer-key.json": "81fc9cc76e0906879955321b61b70aff4f986893eff26b4cd1f844d33f1c1f2f",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/norwegian-k35-controls/packet.json": "43db97772dc2a36c746b7ce2b92a732a3209bef6ea37971f25c96a23527cf078",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/norwegian-k35-observers.md": "bf1531fcf02f46b2949f5c0eb95fd320aa07b81778736374f207763461b0c673",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/norwegian-preflight-native.json.gz": "0e06f7001d037b0e983d6b0a0dee4df5552ca09fb2170728e66a28f50cdeb63e",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/norwegian-preflight-report.json": "2bac7ca992de098bbdc826ec3c9f287306029d3aefec0394c5aac0b92f7d6d1f",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/norwegian-preflight-rerun.json": "3dbb66e04ea91442b48c2db43d91669f2b62e62b2d694f5ff7290aef5d17c2f9",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/page-geometry-frozen.json": "4d718063df70d4ac59cfdb36fe471acda11ee9ef0d4022d070e31110fb928cb2",
+    "/Users/antony/Development/BookScanBuilder/experiments/norwegian_addressing.py": "fdce9350f45a1e9c6203a0ae278686fa9f117f44a528f62b17192071b64bc92a",
+    "/Users/antony/Development/BookScanBuilder/experiments/norwegian_canvases.json": "164243989ffe84600802c549be9d585d6f0178895edc2e00fc08ddd1808e8d0e",
+    "/Users/antony/Development/BookScanBuilder/experiments/norwegian_preflight.py": "b07789dad569d3d3c35a9f97d472134882c7b1891c297f9ac138ffafeb33e39b",
+    "/Users/antony/Development/BookScanBuilder/experiments/staff_coordinates.py": "c072ca27b75eefb72de169714e38a776c6a4a54832c4a9a2bcce76136aa7a0c2",
+    "/Users/antony/Development/BookScanBuilder/experiments/test_staff_coordinates.py": "b24fa12d6f82d29ea9f1c92fa3b44dc2bb5fbb0865d7a1660d812bf44d923197",
+    "/Users/antony/Development/BookScanBuilder/pyproject.toml": "68ac9672f31f87498ca1181023c21633bd5a65c71ae2c52c1509c3590f0878fb",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/__init__.py": "85c5b0a575baf76d88f82cf846975c55cb04e1d12bdc897dc2373c107b2d4bf0",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/cli.py": "2855939add03f5efcc7d78466ff7fc9512e13deac8f5852ef774af25ae805eaf",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/copying.py": "bfe5535869b34f0d8e1cb7c6b8034be2b0624f92ae5fb3ebe0c761f0ab5fc39c",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/pdf.py": "61fef21bf194b297682f3fa204cf112dcad81acaebfb83435b37b73f26d330fc",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/prepare.py": "447e914badee0ca78baeffce8c1e95d4be47d4d6f2967836f4552d87fa709e69",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/publication.py": "e7f475bde56d6846b3ff92f4a312cc3fe7ae62fe6240c4fb2229009e7156bc36",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/results.py": "60a3efe06d70b4cd3a46e90fb8de043c788b3d8c322387f6a0c9579afb23d474",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/selections.py": "274b8df5152398a99f8df7f13b2f3afb3652bf6cdef4f1771a5923deaae5e67a",
+    "/Users/antony/Development/BookScanBuilder/tests/pdf_fixtures.py": "c3ba3e489748f0422d24a45c0c6ce2fbcd90ddd5476a2ed04011da8041c22dbf",
+    "/Users/antony/Development/BookScanBuilder/tests/prepare_acceptance.py": "e23c7a73195891daec7c46f0ebdab4971ae1975373ad88559a111907d3c00f14",
+    "/Users/antony/Development/BookScanBuilder/tests/test_faults.py": "fa0fd6eb062fd30a88d62b472c3b306b7ae3e0cc25eadfc1ba7f63020c873999",
+    "/Users/antony/Development/BookScanBuilder/tests/test_preview.py": "fa3669f98acaee7c23f2ab766e2426e9b2b290328f4333faf28b89f6346aaabd",
+    "/Users/antony/Development/BookScanBuilder/tests/test_publication.py": "585ae5cd353fe3718fcbd3ed8790aa545640d091413b9cf499089dcc6c0831e3",
+    "/Users/antony/Development/BookScanBuilder/tests/test_validation.py": "626c142e959b37655cba1719d5d21264a82588de89fdb1911528470037caf6f2",
+    "/Users/antony/Development/BookScanBuilder/tests/test_writes.py": "99568cf403c5ee6c50f26ce443ff86e77c77c26e68ccbc3a92900816bd01bb94",
+    "/Users/antony/Development/BookScanBuilder/tests/writer_hooks.py": "b8d08fa1530796dbcd9f2fdce990afff94a1222ab5a00c4e6f841f6a03bb19a5",
+    "/Users/antony/Development/BookScanBuilder/uv.lock": "74ee6641f735a4f3048e4ff50a650dc4b10a3f6d1a5c589f11fb836babfc8724",
+    "/Volumes/Glass/Book Conversion/Processed Books/Algorithm Design/Algorithm Design.pdf": "b9d6f1fd08560f06ec8653375a5866dbe1ba971d780dfecd1a0211fb2f66deab",
+    "/Volumes/Glass/Book Conversion/Processed Books/Norwegian - An Essential Grammar (Routledge)/Norwegian - An Essential Grammar (Routledge).pdf": "a21736ada0c088ab9e4f89a264c303788ccf22c4ee647b5dfb5f076ea1b750d3",
+    "/opt/homebrew/Cellar/leptonica/1.87.0/lib/libleptonica.6.dylib": "f9e973f4a61ba251ccb7a0d4545ce7e00e6d2c90ee4a55313012e68da7a7ebfa",
+    "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
+    "/private/tmp/bookscan-geometry-k4-final/control.png": "63e3914ac7b4f95b86680ae5554c99e18d0e24609e19843ad4a6e9d12cdf183d",
+    "/private/tmp/bookscan-k35-verify.py": "8131e100bd1b50e2487cfa9f55bf8257b55cb50623f445e11c3cc4a281c06ff9",
+    "/private/tmp/bookscan-norwegian-k32-final/control.png": "63e3914ac7b4f95b86680ae5554c99e18d0e24609e19843ad4a6e9d12cdf183d",
+    "/private/tmp/bookscan-norwegian-k32-final/left-gutter-lower.png": "ac4946598ab1f69548012e9ef0930799357eb08ba096deabb5d26f3e97d4b804",
+    "/private/tmp/bookscan-norwegian-k32-final/left-gutter-middle.png": "80da459d42c6967af7c39d0e5c9d1acc2a62b888b3990735292673ddb21d001f",
+    "/private/tmp/bookscan-norwegian-k32-final/left-gutter-upper.png": "0bf1f6189346c9bfd9ff53a58f2c1e3317c096bb65a497f4d732bc8ed19731e3",
+    "/private/tmp/bookscan-norwegian-k32-final/left.png": "e9a73730fd2cc3ff5c850a209be0cf639149010e65e67365de7d46012d5e060c",
+    "/private/tmp/bookscan-norwegian-k32-final/right-gutter-lower.png": "0a3207543fdf42f895659d4af8096e44fb3d4751e95df3b6fa2f70e905d4ff63",
+    "/private/tmp/bookscan-norwegian-k32-final/right-gutter-middle.png": "cff760ec2f259097bac622168b08a68f01171f5d989978d9a69b869827e757a7",
+    "/private/tmp/bookscan-norwegian-k32-final/right-gutter-upper.png": "2062c15de53e1345747fdf6105a62857448d10e76c2895145b0635c3e06437f6",
+    "/private/tmp/bookscan-norwegian-k32-final/right.png": "db5b62db60b3ec04b2d06d21dead8ba40ce692e1138cbff8c0f58373492275b0",
+    "/private/tmp/bookscan-norwegian-k32-final/spread.png": "38c1b4450bd152a6be72f7a1021dacbb9406b2ed22ffea865a019f39340110d8",
+    "/private/tmp/bookscan-norwegian-k35-controls-final/A-grid.png": "96358286122cc8d191072991fd72fff04d79d73051cd9b724a89c02a035d7809",
+    "/private/tmp/bookscan-norwegian-k35-controls-final/A-native.png": "6719f48867fb79ce11c0e4fc09341ac3e22c27356f787f46753bf4d3a7a1713b",
+    "/private/tmp/bookscan-norwegian-k35-controls-final/B-grid.png": "1d5238d751a17cf5b4750ec31d2786a70c51435aeab93e0d4afed9352da9f810",
+    "/private/tmp/bookscan-norwegian-k35-controls-final/B-native.png": "f5ea77790850d1875a18b71d4ecc59442d0cd015e47de16db910fa19f252cdc9",
+    "/private/tmp/bookscan-norwegian-k35-controls-final/C-grid.png": "9a212fd058b88e526aa936fc2e51d1a6d06f5ba881242c1e22b4e4d0e4e410be",
+    "/private/tmp/bookscan-norwegian-k35-controls-final/C-native.png": "f5b740706804bd923eb3730bccacc8d1a8bd0a84ef6b3184e5334cfd3d84cf35",
+    "/private/tmp/bookscan-norwegian-k35-controls-final/answer-key.json": "81fc9cc76e0906879955321b61b70aff4f986893eff26b4cd1f844d33f1c1f2f",
+    "/private/tmp/bookscan-norwegian-k35-controls-final/packet.json": "43db97772dc2a36c746b7ce2b92a732a3209bef6ea37971f25c96a23527cf078",
+    "/private/tmp/bookscan-staff-k26-reproduced/dewarp2-1.87.0.c": "f92430cbd2eedced417d82c20cbfd15d60886294f40fb6f7d5806265e28f2853"
+  },
+  "after": {
+    "/Users/antony/.cache/uv/archive-v0/HpiveqhXjjPuBLxB/lib/python3.12/site-packages/PIL/Image.py": "f7925e7e2d901487d960ec9f1cd0514f006dc2b9cd66c9f9a02b0b42c04b74af",
+    "/Users/antony/Development/BookScanBuilder/Taskfile.yml": "704d8f8706a9548d5c3cd81eee899b24607dad13e6312658836453cbb8101be6",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/norwegian-k33-integrity.json": "46ab45bc4906e8384efc12e424ff542ee848f36f9b90865a7ee50ff14862d912",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/norwegian-k35-controls/A-grid.png": "96358286122cc8d191072991fd72fff04d79d73051cd9b724a89c02a035d7809",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/norwegian-k35-controls/A-native.png": "6719f48867fb79ce11c0e4fc09341ac3e22c27356f787f46753bf4d3a7a1713b",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/norwegian-k35-controls/B-grid.png": "1d5238d751a17cf5b4750ec31d2786a70c51435aeab93e0d4afed9352da9f810",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/norwegian-k35-controls/B-native.png": "f5ea77790850d1875a18b71d4ecc59442d0cd015e47de16db910fa19f252cdc9",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/norwegian-k35-controls/C-grid.png": "9a212fd058b88e526aa936fc2e51d1a6d06f5ba881242c1e22b4e4d0e4e410be",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/norwegian-k35-controls/C-native.png": "f5b740706804bd923eb3730bccacc8d1a8bd0a84ef6b3184e5334cfd3d84cf35",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/norwegian-k35-controls/answer-key.json": "81fc9cc76e0906879955321b61b70aff4f986893eff26b4cd1f844d33f1c1f2f",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/norwegian-k35-controls/packet.json": "43db97772dc2a36c746b7ce2b92a732a3209bef6ea37971f25c96a23527cf078",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/norwegian-k35-observers.md": "bf1531fcf02f46b2949f5c0eb95fd320aa07b81778736374f207763461b0c673",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/norwegian-preflight-native.json.gz": "0e06f7001d037b0e983d6b0a0dee4df5552ca09fb2170728e66a28f50cdeb63e",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/norwegian-preflight-report.json": "2bac7ca992de098bbdc826ec3c9f287306029d3aefec0394c5aac0b92f7d6d1f",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/norwegian-preflight-rerun.json": "3dbb66e04ea91442b48c2db43d91669f2b62e62b2d694f5ff7290aef5d17c2f9",
+    "/Users/antony/Development/BookScanBuilder/docs/experiments/page-geometry-frozen.json": "4d718063df70d4ac59cfdb36fe471acda11ee9ef0d4022d070e31110fb928cb2",
+    "/Users/antony/Development/BookScanBuilder/experiments/norwegian_addressing.py": "fdce9350f45a1e9c6203a0ae278686fa9f117f44a528f62b17192071b64bc92a",
+    "/Users/antony/Development/BookScanBuilder/experiments/norwegian_canvases.json": "164243989ffe84600802c549be9d585d6f0178895edc2e00fc08ddd1808e8d0e",
+    "/Users/antony/Development/BookScanBuilder/experiments/norwegian_preflight.py": "b07789dad569d3d3c35a9f97d472134882c7b1891c297f9ac138ffafeb33e39b",
+    "/Users/antony/Development/BookScanBuilder/experiments/staff_coordinates.py": "c072ca27b75eefb72de169714e38a776c6a4a54832c4a9a2bcce76136aa7a0c2",
+    "/Users/antony/Development/BookScanBuilder/experiments/test_staff_coordinates.py": "b24fa12d6f82d29ea9f1c92fa3b44dc2bb5fbb0865d7a1660d812bf44d923197",
+    "/Users/antony/Development/BookScanBuilder/pyproject.toml": "68ac9672f31f87498ca1181023c21633bd5a65c71ae2c52c1509c3590f0878fb",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/__init__.py": "85c5b0a575baf76d88f82cf846975c55cb04e1d12bdc897dc2373c107b2d4bf0",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/cli.py": "2855939add03f5efcc7d78466ff7fc9512e13deac8f5852ef774af25ae805eaf",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/copying.py": "bfe5535869b34f0d8e1cb7c6b8034be2b0624f92ae5fb3ebe0c761f0ab5fc39c",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/pdf.py": "61fef21bf194b297682f3fa204cf112dcad81acaebfb83435b37b73f26d330fc",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/prepare.py": "447e914badee0ca78baeffce8c1e95d4be47d4d6f2967836f4552d87fa709e69",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/publication.py": "e7f475bde56d6846b3ff92f4a312cc3fe7ae62fe6240c4fb2229009e7156bc36",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/results.py": "60a3efe06d70b4cd3a46e90fb8de043c788b3d8c322387f6a0c9579afb23d474",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/selections.py": "274b8df5152398a99f8df7f13b2f3afb3652bf6cdef4f1771a5923deaae5e67a",
+    "/Users/antony/Development/BookScanBuilder/tests/pdf_fixtures.py": "c3ba3e489748f0422d24a45c0c6ce2fbcd90ddd5476a2ed04011da8041c22dbf",
+    "/Users/antony/Development/BookScanBuilder/tests/prepare_acceptance.py": "e23c7a73195891daec7c46f0ebdab4971ae1975373ad88559a111907d3c00f14",
+    "/Users/antony/Development/BookScanBuilder/tests/test_faults.py": "fa0fd6eb062fd30a88d62b472c3b306b7ae3e0cc25eadfc1ba7f63020c873999",
+    "/Users/antony/Development/BookScanBuilder/tests/test_preview.py": "fa3669f98acaee7c23f2ab766e2426e9b2b290328f4333faf28b89f6346aaabd",
+    "/Users/antony/Development/BookScanBuilder/tests/test_publication.py": "585ae5cd353fe3718fcbd3ed8790aa545640d091413b9cf499089dcc6c0831e3",
+    "/Users/antony/Development/BookScanBuilder/tests/test_validation.py": "626c142e959b37655cba1719d5d21264a82588de89fdb1911528470037caf6f2",
+    "/Users/antony/Development/BookScanBuilder/tests/test_writes.py": "99568cf403c5ee6c50f26ce443ff86e77c77c26e68ccbc3a92900816bd01bb94",
+    "/Users/antony/Development/BookScanBuilder/tests/writer_hooks.py": "b8d08fa1530796dbcd9f2fdce990afff94a1222ab5a00c4e6f841f6a03bb19a5",
+    "/Users/antony/Development/BookScanBuilder/uv.lock": "74ee6641f735a4f3048e4ff50a650dc4b10a3f6d1a5c589f11fb836babfc8724",
+    "/Volumes/Glass/Book Conversion/Processed Books/Algorithm Design/Algorithm Design.pdf": "b9d6f1fd08560f06ec8653375a5866dbe1ba971d780dfecd1a0211fb2f66deab",
+    "/Volumes/Glass/Book Conversion/Processed Books/Norwegian - An Essential Grammar (Routledge)/Norwegian - An Essential Grammar (Routledge).pdf": "a21736ada0c088ab9e4f89a264c303788ccf22c4ee647b5dfb5f076ea1b750d3",
+    "/opt/homebrew/Cellar/leptonica/1.87.0/lib/libleptonica.6.dylib": "f9e973f4a61ba251ccb7a0d4545ce7e00e6d2c90ee4a55313012e68da7a7ebfa",
+    "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
+    "/private/tmp/bookscan-geometry-k4-final/control.png": "63e3914ac7b4f95b86680ae5554c99e18d0e24609e19843ad4a6e9d12cdf183d",
+    "/private/tmp/bookscan-k35-verify.py": "8131e100bd1b50e2487cfa9f55bf8257b55cb50623f445e11c3cc4a281c06ff9",
+    "/private/tmp/bookscan-norwegian-k32-final/control.png": "63e3914ac7b4f95b86680ae5554c99e18d0e24609e19843ad4a6e9d12cdf183d",
+    "/private/tmp/bookscan-norwegian-k32-final/left-gutter-lower.png": "ac4946598ab1f69548012e9ef0930799357eb08ba096deabb5d26f3e97d4b804",
+    "/private/tmp/bookscan-norwegian-k32-final/left-gutter-middle.png": "80da459d42c6967af7c39d0e5c9d1acc2a62b888b3990735292673ddb21d001f",
+    "/private/tmp/bookscan-norwegian-k32-final/left-gutter-upper.png": "0bf1f6189346c9bfd9ff53a58f2c1e3317c096bb65a497f4d732bc8ed19731e3",
+    "/private/tmp/bookscan-norwegian-k32-final/left.png": "e9a73730fd2cc3ff5c850a209be0cf639149010e65e67365de7d46012d5e060c",
+    "/private/tmp/bookscan-norwegian-k32-final/right-gutter-lower.png": "0a3207543fdf42f895659d4af8096e44fb3d4751e95df3b6fa2f70e905d4ff63",
+    "/private/tmp/bookscan-norwegian-k32-final/right-gutter-middle.png": "cff760ec2f259097bac622168b08a68f01171f5d989978d9a69b869827e757a7",
+    "/private/tmp/bookscan-norwegian-k32-final/right-gutter-upper.png": "2062c15de53e1345747fdf6105a62857448d10e76c2895145b0635c3e06437f6",
+    "/private/tmp/bookscan-norwegian-k32-final/right.png": "db5b62db60b3ec04b2d06d21dead8ba40ce692e1138cbff8c0f58373492275b0",
+    "/private/tmp/bookscan-norwegian-k32-final/spread.png": "38c1b4450bd152a6be72f7a1021dacbb9406b2ed22ffea865a019f39340110d8",
+    "/private/tmp/bookscan-norwegian-k35-controls-final/A-grid.png": "96358286122cc8d191072991fd72fff04d79d73051cd9b724a89c02a035d7809",
+    "/private/tmp/bookscan-norwegian-k35-controls-final/A-native.png": "6719f48867fb79ce11c0e4fc09341ac3e22c27356f787f46753bf4d3a7a1713b",
+    "/private/tmp/bookscan-norwegian-k35-controls-final/B-grid.png": "1d5238d751a17cf5b4750ec31d2786a70c51435aeab93e0d4afed9352da9f810",
+    "/private/tmp/bookscan-norwegian-k35-controls-final/B-native.png": "f5ea77790850d1875a18b71d4ecc59442d0cd015e47de16db910fa19f252cdc9",
+    "/private/tmp/bookscan-norwegian-k35-controls-final/C-grid.png": "9a212fd058b88e526aa936fc2e51d1a6d06f5ba881242c1e22b4e4d0e4e410be",
+    "/private/tmp/bookscan-norwegian-k35-controls-final/C-native.png": "f5b740706804bd923eb3730bccacc8d1a8bd0a84ef6b3184e5334cfd3d84cf35",
+    "/private/tmp/bookscan-norwegian-k35-controls-final/answer-key.json": "81fc9cc76e0906879955321b61b70aff4f986893eff26b4cd1f844d33f1c1f2f",
+    "/private/tmp/bookscan-norwegian-k35-controls-final/packet.json": "43db97772dc2a36c746b7ce2b92a732a3209bef6ea37971f25c96a23527cf078",
+    "/private/tmp/bookscan-staff-k26-reproduced/dewarp2-1.87.0.c": "f92430cbd2eedced417d82c20cbfd15d60886294f40fb6f7d5806265e28f2853"
+  },
+  "historical_taskfile_change": {
+    "/Users/antony/Development/BookScanBuilder/Taskfile.yml": {
+      "historical": "f0355668f5116e7f46ac831672ffa6ae5cd7a84879064b655cae35014bd8f5ff",
+      "current": "704d8f8706a9548d5c3cd81eee899b24607dad13e6312658836453cbb8101be6"
+    }
+  },
+  "other_22_historical_subjects_match": true,
+  "split_recombines_exactly": true,
+  "display_control_checks": [
+    {
+      "id": "A",
+      "unique_minimum": [
+        7,
+        3
+      ],
+      "all_512_cell_centres_match": true,
+      "grid_dimensions": [
+        640,
+        384
+      ]
+    },
+    {
+      "id": "B",
+      "unique_minimum": [
+        18,
+        11
+      ],
+      "all_512_cell_centres_match": true,
+      "grid_dimensions": [
+        640,
+        384
+      ]
+    },
+    {
+      "id": "C",
+      "unique_minimum": [
+        29,
+        6
+      ],
+      "all_512_cell_centres_match": true,
+      "grid_dimensions": [
+        640,
+        384
+      ]
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "task",
+        "geometry:norwegian-addressing",
+        "ARTIFACTS=/private/tmp/bookscan-norwegian-k35-controls-rerun"
+      ],
+      "exit": 0,
+      "stdout": "{\"scale\": 16, \"patch_dimensions\": [32, 16], \"grid_margin\": 64, \"addressing\": \"integer source pixel centres, x right/y down; add patch offset to half origin, then spread origin\", \"items\": [{\"id\": \"A\", \"half_origin\": [315, 180], \"spread_origin\": [0, 0], \"native_sha256\": \"6719f48867fb79ce11c0e4fc09341ac3e22c27356f787f46753bf4d3a7a1713b\", \"grid_sha256\": \"96358286122cc8d191072991fd72fff04d79d73051cd9b724a89c02a035d7809\"}, {\"id\": \"B\", \"half_origin\": [955, 1190], \"spread_origin\": [0, 0], \"native_sha256\": \"f5ea77790850d1875a18b71d4ecc59442d0cd015e47de16db910fa19f252cdc9\", \"grid_sha256\": \"1d5238d751a17cf5b4750ec31d2786a70c51435aeab93e0d4afed9352da9f810\"}, {\"id\": \"C\", \"half_origin\": [210, 2240], \"spread_origin\": [1785, 0], \"native_sha256\": \"f5b740706804bd923eb3730bccacc8d1a8bd0a84ef6b3184e5334cfd3d84cf35\", \"grid_sha256\": \"9a212fd058b88e526aa936fc2e51d1a6d06f5ba881242c1e22b4e4d0e4e410be\"}]}\n",
+      "stderr": "task: [geometry:norwegian-addressing] uv run --script experiments/norwegian_addressing.py --artifacts '/private/tmp/bookscan-norwegian-k35-controls-rerun'\n"
+    },
+    {
+      "argv": [
+        "task",
+        "geometry:staff-check"
+      ],
+      "exit": 0,
+      "stdout": "2 files already formatted\nAll checks passed!\n....                                                                     [100%]\n4 passed in 0.09s\n",
+      "stderr": "task: [geometry:staff-check] uv run --locked ruff format --check experiments/staff_coordinates.py experiments/test_staff_coordinates.py\nwarning: `VIRTUAL_ENV=/Users/antony/.cache/uv/builds-v0/.tmpzrUad9` does not match the project environment path `.venv` and will be ignored; use `--active` to target the active environment instead\ntask: [geometry:staff-check] uv run --locked ruff check experiments/staff_coordinates.py experiments/test_staff_coordinates.py\nwarning: `VIRTUAL_ENV=/Users/antony/.cache/uv/builds-v0/.tmpzrUad9` does not match the project environment path `.venv` and will be ignored; use `--active` to target the active environment instead\ntask: [geometry:staff-check] uv run --no-project --python 3.12 --with 'pytest==8.4.2' --with 'pillow==11.3.0' --with 'numpy==2.2.6' pytest -q experiments/test_staff_coordinates.py\n"
+    },
+    {
+      "argv": [
+        "task",
+        "prepare:check"
+      ],
+      "exit": 0,
+      "stdout": "16 files already formatted\nAll checks passed!\n0 errors, 0 warnings, 0 informations\nWARNING: there is a new pyright version available (v1.1.407 -> v1.1.414).\nPlease install the new version or set PYRIGHT_PYTHON_FORCE_VERSION to `latest`\n\n........................................................................ [ 31%]\n........................................................................ [ 62%]\n........................................................................ [ 93%]\n...............                                                          [100%]\n231 passed in 17.04s\n",
+      "stderr": "task: [prepare:check] uv run --locked ruff format --check src tests\nwarning: `VIRTUAL_ENV=/Users/antony/.cache/uv/builds-v0/.tmpzrUad9` does not match the project environment path `.venv` and will be ignored; use `--active` to target the active environment instead\ntask: [prepare:check] uv run --locked ruff check src tests\nwarning: `VIRTUAL_ENV=/Users/antony/.cache/uv/builds-v0/.tmpzrUad9` does not match the project environment path `.venv` and will be ignored; use `--active` to target the active environment instead\ntask: [prepare:check] uv run --locked pyright\nwarning: `VIRTUAL_ENV=/Users/antony/.cache/uv/builds-v0/.tmpzrUad9` does not match the project environment path `.venv` and will be ignored; use `--active` to target the active environment instead\ntask: [prepare:check] uv run --locked pytest -q\nwarning: `VIRTUAL_ENV=/Users/antony/.cache/uv/builds-v0/.tmpzrUad9` does not match the project environment path `.venv` and will be ignored; use `--active` to target the active environment instead\n"
+    },
+    {
+      "argv": [
+        "uv",
+        "run",
+        "--locked",
+        "ruff",
+        "format",
+        "--check",
+        "experiments/norwegian_addressing.py"
+      ],
+      "exit": 0,
+      "stdout": "1 file already formatted\n",
+      "stderr": "warning: `VIRTUAL_ENV=/Users/antony/.cache/uv/builds-v0/.tmpzrUad9` does not match the project environment path `.venv` and will be ignored; use `--active` to target the active environment instead\n"
+    },
+    {
+      "argv": [
+        "uv",
+        "run",
+        "--locked",
+        "ruff",
+        "check",
+        "experiments/norwegian_addressing.py"
+      ],
+      "exit": 0,
+      "stdout": "All checks passed!\n",
+      "stderr": "warning: `VIRTUAL_ENV=/Users/antony/.cache/uv/builds-v0/.tmpzrUad9` does not match the project environment path `.venv` and will be ignored; use `--active` to target the active environment instead\n"
+    }
+  ],
+  "control_rerun_per_file": {
+    "A-grid.png": true,
+    "A-native.png": true,
+    "packet.json": true,
+    "C-native.png": true,
+    "B-grid.png": true,
+    "C-grid.png": true,
+    "B-native.png": true,
+    "answer-key.json": true
+  },
+  "readbacks": [
+    {
+      "observer": "left_observer",
+      "id": "A",
+      "known_offset": [
+        7,
+        3
+      ],
+      "reported_offset": [
+        6,
+        3
+      ],
+      "reported_closed_x_interval": [
+        6,
+        6
+      ],
+      "reported_closed_y_interval": [
+        3,
+        3
+      ],
+      "error_read_minus_true": [
+        -1,
+        0
+      ],
+      "joint_interval_contains_truth": false
+    },
+    {
+      "observer": "left_observer",
+      "id": "B",
+      "known_offset": [
+        18,
+        11
+      ],
+      "reported_offset": [
+        19,
+        7
+      ],
+      "reported_closed_x_interval": [
+        19,
+        19
+      ],
+      "reported_closed_y_interval": [
+        7,
+        7
+      ],
+      "error_read_minus_true": [
+        1,
+        -4
+      ],
+      "joint_interval_contains_truth": false
+    },
+    {
+      "observer": "left_observer",
+      "id": "C",
+      "known_offset": [
+        29,
+        6
+      ],
+      "reported_offset": [
+        29,
+        13
+      ],
+      "reported_closed_x_interval": [
+        29,
+        29
+      ],
+      "reported_closed_y_interval": [
+        13,
+        13
+      ],
+      "error_read_minus_true": [
+        0,
+        7
+      ],
+      "joint_interval_contains_truth": false
+    },
+    {
+      "observer": "right_observer",
+      "id": "A",
+      "known_offset": [
+        7,
+        3
+      ],
+      "reported_offset": [
+        6,
+        3
+      ],
+      "reported_closed_x_interval": [
+        6,
+        6
+      ],
+      "reported_closed_y_interval": [
+        3,
+        3
+      ],
+      "error_read_minus_true": [
+        -1,
+        0
+      ],
+      "joint_interval_contains_truth": false
+    },
+    {
+      "observer": "right_observer",
+      "id": "B",
+      "known_offset": [
+        18,
+        11
+      ],
+      "reported_offset": [
+        18,
+        8
+      ],
+      "reported_closed_x_interval": [
+        18,
+        18
+      ],
+      "reported_closed_y_interval": [
+        8,
+        8
+      ],
+      "error_read_minus_true": [
+        0,
+        -3
+      ],
+      "joint_interval_contains_truth": false
+    },
+    {
+      "observer": "right_observer",
+      "id": "C",
+      "known_offset": [
+        29,
+        6
+      ],
+      "reported_offset": [
+        28,
+        4
+      ],
+      "reported_closed_x_interval": [
+        28,
+        28
+      ],
+      "reported_closed_y_interval": [
+        4,
+        4
+      ],
+      "error_read_minus_true": [
+        -1,
+        -2
+      ],
+      "joint_interval_contains_truth": false
+    },
+    {
+      "observer": "verifier_observer",
+      "id": "A",
+      "known_offset": [
+        7,
+        3
+      ],
+      "reported_offset": [
+        6,
+        3
+      ],
+      "reported_closed_x_interval": [
+        6,
+        6
+      ],
+      "reported_closed_y_interval": [
+        3,
+        3
+      ],
+      "error_read_minus_true": [
+        -1,
+        0
+      ],
+      "joint_interval_contains_truth": false
+    },
+    {
+      "observer": "verifier_observer",
+      "id": "B",
+      "known_offset": [
+        18,
+        11
+      ],
+      "reported_offset": [
+        17,
+        11
+      ],
+      "reported_closed_x_interval": [
+        17,
+        17
+      ],
+      "reported_closed_y_interval": [
+        11,
+        11
+      ],
+      "error_read_minus_true": [
+        -1,
+        0
+      ],
+      "joint_interval_contains_truth": false
+    },
+    {
+      "observer": "verifier_observer",
+      "id": "C",
+      "known_offset": [
+        29,
+        6
+      ],
+      "reported_offset": [
+        26,
+        8
+      ],
+      "reported_closed_x_interval": [
+        26,
+        26
+      ],
+      "reported_closed_y_interval": [
+        8,
+        8
+      ],
+      "error_read_minus_true": [
+        -3,
+        2
+      ],
+      "joint_interval_contains_truth": false
+    }
+  ],
+  "observer_packet_sha256": "43db97772dc2a36c746b7ce2b92a732a3209bef6ea37971f25c96a23527cf078",
+  "left_outcome": "unreliable instrument addressing",
+  "right_outcome": "unreliable instrument addressing",
+  "source_marks": null,
+  "physical_holdout_freeze": null,
+  "masked_extraction": null,
+  "source_systematic_bounds": null,
+  "model": null,
+  "field": null,
+  "corrected_output": null
+}

@@ -213,6 +213,17 @@ Generate no fitted model, rigid image or corrected image in this session.
 
 ## Notes
 
+k35 now records failure of all blind known-cell readings on its fixed 16×
+grid/view_image method in `docs/experiments/norwegian-measurement.md` and its
+linked observer/verification records. Each Norwegian half stops before real
+marks, holdouts or masked extraction; source and output reactions remain
+unavailable/unperformed as recorded, independently of historical views.
+Read its fresh planner before this repair. Do not reuse that failed grid method
+as calibrated music addressing or transfer synthetic errors to real staff
+uncertainty. A changed music observation format/method still requires its own
+known-centre controls and complete source verification under this charter.
+
+
 This is a complete source-evidence slice. No matched automatic/manual model,
 rigid/correction output, sampler or OCR is generated here, even on success.
 The independent automatic Norwegian-gutter question is commissioned as k31

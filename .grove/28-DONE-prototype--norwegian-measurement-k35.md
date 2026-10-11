@@ -231,3 +231,93 @@ and collection isolation, colour/faint/music/illustration fidelity, optional
 preview/apply/revert appearance after default export, final root acceptance,
 Taskfile checks and original digests. Do not replace these with source success
 or invent production technology, a separate workspace or a driver launch.
+
+## Decisions (running log)
+
+Adopt the reviewed k34/k37 source-only plan. Hypothesis before observations:
+labelled nearest-neighbour pixel cells and explicit physical glyph anchors can
+yield independently verifiable native positions across complete ink regions,
+with repeat and shared systematic limits that resolve nonrigidity. Reject
+unreproducible cell addressing before real marks; then reject a frozen physical
+holdout's failed unchanged masked prerequisite independently on each half.
+Addressing controls cannot establish baseline accuracy. Ambiguous/invalid points,
+incomplete spatial evidence or unbounded relevant bias stop later admission.
+No tolerance, model or correction is inferred from observer agreement.
+
+Use one fixed 16× nearest-neighbour 32×16-pixel patch format with a cell grid,
+patch-relative labelled axes, half-native origin and spread origin. The blind
+control falsifier is failure to identify a single isolated darkest source cell
+and reproduce its native/spread address: a one-cell feature is the instrument's
+required raster-reading unit, not a guessed real-baseline error tolerance.
+Three fresh observation contexts cover initial-left, initial-right and independent
+verification/repeat observer roles; each receives only controls/protocol first.
+No real first coordinates or automatic arrays enter those contexts. If controls
+pass, coordinate-free physical line/region declaration and independent identity
+verification precede the sole frozen masked feasibility run, before dense marks.
+Use the retained extraction-only centres/preflight path, never the fit wrapper.
+The existing Taskfile is the entry point; preserve every historical recipe.
+
+Bootstrap consumed the complete k31/k32/k33/k34/k37 and k21/k28 contracts,
+k25/k30's confirmed policies, glossary and prepared-page-hints ADR. Tier 2 graph
+project Users-antony-Development-BookScanBuilder at generation
+2026-10-11T10:20:00Z has no recorded coverage gap for relied-on instrument and
+record paths. Search and both-direction one-hop traces are complete. The native
+binding's graph has implausible inferred edges; exact source, not those edges,
+establishes its library calls. Coverage is best-effort. k32's 15 and k33's 23
+subjects match individually, original sources and all canvases exist, and the
+halves rejoin every spread RGB pixel exactly. These are identity checks only.
+
+The final grid controls reject the fixed-format addressing hypothesis before
+real acquisition. Every initial-left, initial-right and verifier/repeat joint
+reading misses the known target; their singleton confidence intervals exclude
+it. All three agree on A's wrong x=6 instead of 7, directly illustrating why
+same-model agreement is not calibration. Native raster and every enlarged cell
+centre independently reproduce the reference pixels; no answer key entered
+an observation context. Keep all nine readbacks/errors, exact supplied packet,
+observer hashes and failure records. Stop both halves independently at unreliable
+instrument addressing: do not mark real anchors, declare/freeze holdouts, run
+masked extraction, quantify source bias or create outputs after this failure.
+Those later obligations are unperformed, not failed acquisition or a model
+diagnosis. This rejects only this 16× grid/readout observation method and packet,
+not all pixel-addressed methods or the vertical correction family.
+
+The lint-only line-wrap was completed before the final control generation and
+before observer views. Initial pre-final files are excluded from evidence.
+A later historical-integrity assertion encountered the intentionally changed
+Taskfile hash; the actual source/canvas hashes still match. It did not produce
+an integrity report and is not credited as a bracketed run. Subsequent canonical
+verification records current Taskfile separately from historical subjects.
+Root full-page viewing is context only, without eligible numerical marks.
+The two separate human questions now show exact controls/source paths and
+recommend the bounded instrument failure. No real-anchor or correction view
+is falsely presented as available; response absence grants no approval.
+
+No human reply arrived during the separate source/instrument response window;
+record unavailable for each half, no inspected path/defect/approval and no
+invented “Not inspected yet”. Real-anchor and correction/control questions
+remain unperformed without their views. k37's policy replies also remain
+unavailable: existing reaction ranking and demonstrated-geometry prerequisites
+continue. The fresh planner owns those precise response-completion questions.
+
+Final canonical verification passes the new addressing task and its per-file
+rerun, source/display raster checks, all four geometry:staff-check tests and all
+231 prepare:check tests plus formatting/lint/strict pyright. All 64 declared
+subjects are unchanged before/after. Native/full source identity and exact
+recombination hold; historical Taskfile differs only because this session adds
+its independent control recipe. Observer packet hashes match retained copies.
+No masked extraction or source/correction measurement is claimed. The durable
+result is docs/experiments/norwegian-measurement.md, linked raw observer reports,
+ordinary control images, public packet/private key and verification JSON.
+No production decision or new uncertainty claim earns an ADR or review chain.
+The exact falsifier uses verified raster ground truth, not a discretionary
+method-acceptance judgment. The root still has live successors and will not close.
+
+As the last work act, insert the mandatory fresh planning consumer before k27,
+carrying this independently classified per-half addressing failure and every
+unperformed source/conditional comparison/product obligation. Its exact decision
+is whether a genuinely changed selected-cell/readout method or human policy/
+response completion justifies next work. Another instrument study needs a
+separately justified human choice, not a default same-grid retry. Preserve k27
+then k28 and k22/k23. Retire only this bounded source attempt and seal all its
+artifacts/tree changes together; no ancestor closes or review-creator naming is
+due. Send harness-dispatch exit as the final action.

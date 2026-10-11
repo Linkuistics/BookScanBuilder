@@ -182,6 +182,18 @@ Preparation's working contract/evidence are `docs/specs/prepared-pdf.md` and
 
 ## Notes
 
+Actual k35 handoff: each half fails the fixed 16× labelled-grid/view_image blind
+addressing controls, before physical roster/holdout freeze or masked extraction.
+Read `docs/experiments/norwegian-measurement.md`, every retained readback/error,
+packet and its fresh planner. Do not reinterpret this as a native gate/model
+failure, admit real coordinates, or repeat the same format by default. Both
+source/instrument reactions are unavailable; real-anchor and correction views
+were not generated, so those reactions are unperformed. k37's two human policy
+choices still have no reply and retain their existing constraints. The new
+planner before k27 consumes this exact result and carries every inherited
+comparison/product obligation, rather than automatically cutting another trial.
+
+
 The current next evidence is source acquisition only. The field/confidence/
 review interface and production manual controls remain unsettled; commission
 their design when evidence makes the questions concrete. This leaf must leave

@@ -1,0 +1,50 @@
+{
+  "scale": 16,
+  "patch_dimensions": [
+    32,
+    16
+  ],
+  "grid_margin": 64,
+  "addressing": "integer source pixel centres, x right/y down; add patch offset to half origin, then spread origin",
+  "items": [
+    {
+      "id": "A",
+      "half_origin": [
+        315,
+        180
+      ],
+      "spread_origin": [
+        0,
+        0
+      ],
+      "native_sha256": "6719f48867fb79ce11c0e4fc09341ac3e22c27356f787f46753bf4d3a7a1713b",
+      "grid_sha256": "96358286122cc8d191072991fd72fff04d79d73051cd9b724a89c02a035d7809"
+    },
+    {
+      "id": "B",
+      "half_origin": [
+        955,
+        1190
+      ],
+      "spread_origin": [
+        0,
+        0
+      ],
+      "native_sha256": "f5ea77790850d1875a18b71d4ecc59442d0cd015e47de16db910fa19f252cdc9",
+      "grid_sha256": "1d5238d751a17cf5b4750ec31d2786a70c51435aeab93e0d4afed9352da9f810"
+    },
+    {
+      "id": "C",
+      "half_origin": [
+        210,
+        2240
+      ],
+      "spread_origin": [
+        1785,
+        0
+      ],
+      "native_sha256": "f5b740706804bd923eb3730bccacc8d1a8bd0a84ef6b3184e5334cfd3d84cf35",
+      "grid_sha256": "9a212fd058b88e526aa936fc2e51d1a6d06f5ba881242c1e22b4e4d0e4e410be"
+    }
+  ]
+}

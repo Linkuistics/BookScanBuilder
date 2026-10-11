@@ -113,3 +113,10 @@ tasks:
       vars: [ARTIFACTS]
     cmds:
       - uv run --script experiments/norwegian_preflight.py --collection '{{.COLLECTION}}' --artifacts '{{.ARTIFACTS}}'
+
+  geometry:norwegian-addressing:
+    desc: Generate fixed-format blind pixel-address controls outside the collection; no baseline claim
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --script experiments/norwegian_addressing.py --artifacts '{{.ARTIFACTS}}'

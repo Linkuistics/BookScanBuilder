@@ -8,6 +8,15 @@ No rigid image, model, field, candidate, corrected-output measurement or human
 comparison has been produced. The diagnostic's line counts cannot accept or
 reject the held-out automatic candidate.
 
+k35 subsequently tested a fixed pixel-labelled patch format with blind
+known-cell controls. All nine joint readbacks failed, so each half stops at
+instrument addressing before real marks or masked extraction. Its complete
+bounded result, unchanged source checks, separate unavailable human reactions
+and mandatory fresh-planning handoff are in
+[Norwegian source measurement](norwegian-measurement.md). This rejects that
+specific grid/viewer observation attempt, not every instrument or the vertical
+family. The k32/k33 evidence below remains historical and unchanged.
+
 The hypothesis is unchanged: independently assess whether the existing automatic
 vertical candidate improves each Norwegian page-20 gutter half beyond rigid
 while preserving shape/detail and the verified Algorithm Design control.

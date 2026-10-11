@@ -61,7 +61,7 @@ the trial, not to promise an algorithm's success.
 | Increment | Useful handoff | Dependency and ownership |
 | --- | --- | --- |
 | Explicit PDF preparation | One prepared PDF, with selected content order and explicit front/back covers, usable by ordinary PDF tools | First independently useful increment in this tree. `prepared-pdf-k9` and `prepared-pdf-k12` supply the integrated design; `prepared-pdf-k10` cuts `prepared-pdf-k13`, the complete command and its verification, ahead of geometry. No correction service is needed. |
-| Corrected searchable book | One prepared PDF processed through accepted geometry, border removal, post-split assembly decisions, review adjustments and aligned English OCR into an exported PDF | Depends on working preparation's public contract and demonstrated geometry. `norwegian-gutter-k34` consumes k31's bounded inconclusive result and commissions complete source measurement `norwegian-measurement-k35`, reviewed before execution, with another fresh planner on every outcome before source-only `staff-acquisition-k27`; `corrected-book-k28` consumes their actual evidence and every music-acquisition outcome before cutting further evidence/design/working processor slices ahead of appearance. The corrected-image schema and its working reader/export path belong to this same increment. |
+| Corrected searchable book | One prepared PDF processed through accepted geometry, border removal, post-split assembly decisions, review adjustments and aligned English OCR into an exported PDF | Depends on working preparation's public contract and demonstrated geometry. `norwegian-measurement-k35` delivers a bounded per-half blind-addressing control failure; `norwegian-measurement-k38` consumes that actual result before source-only `staff-acquisition-k27`, preserving `corrected-book-k28` after music acquisition. k28 consumes the actual evidence before cutting further evidence/design/working processor slices ahead of appearance. The corrected-image schema and its working reader/export path belong to this same increment. |
 | Optional appearance cleanup | Preview and selectively apply whitening or noise removal while keeping the working default processor and its accepted-image/OCR alignment | `appearance-cleanup-k22` owns the precise successor design question after the default processor works, then cuts its planning consumer before `workflow-acceptance-k23`. Compare faint print, music, illustration and colour before choosing a cleanup method. |
 
 The user chose one workspace and one Grove tree for all three increments.
@@ -455,7 +455,23 @@ output and supplies no independent marks or held-out acceptance. The remaining
 child k33 closed only the admitted bounded inconclusive source-instrument branch,
 without independent numerical marks or a correction. k34 consumes both committed
 results and commissions k35's precise changed source-measurement question.
-All independent acquisition/holdout/masked-prerequisite and conditional complete
-output/control/sampler/measurement/reaction work remains with k35 and its fresh
-planner, before k27 → k28. No partial count licensed production or closed k31;
+All unperformed independent acquisition/holdout/masked-prerequisite and conditional
+complete output/control/sampler/measurement/reaction work remains with k35's fresh
+planner and actual cut successors, before k27 → k28. No partial count licensed production or closed k31;
 its bounded instrument result, rather than count success, justified closure.
+
+`norwegian-measurement-k35` closes its admitted early instrument outcome for each
+half: the fixed 16× labelled-grid/view_image method fails every blind known-cell
+readback in left/right/verifier contexts, even when they agree. Its ordinary
+native/grid controls, raw reports, error intervals and canonical verification
+are linked from `docs/experiments/norwegian-measurement.md`. Source/canvas identities
+and full split recombination hold; real marks/rosters/holdouts/masked extraction/
+systematic limits and all correction work remain unperformed. Each half's human
+source/instrument reply is unavailable; real-anchor/output reactions remain
+unperformed without views. This rejects only that attempted observation method,
+not every addressed instrument or the vertical family. `norwegian-measurement-k38`
+decides only a genuinely changed selected-cell/readout observation or precise
+human policy/response completion; another instrument study needs a separately
+justified human choice. No same-grid retry, baseline bias bound, model or
+production acceptance follows. k27 → k28 → k22 → k23 and every inherited
+music/preparation/fixed-case/default-product/appearance/root obligation stay live.
