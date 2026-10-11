@@ -104,6 +104,9 @@ after the default processor supplies a working accepted-image/export seam.
 ## Pointers
 
 - `CONTEXT.md` — the project's terminology.
+- `docs/specs/prepared-pdf.md` — preparation's public command, preservation and
+  single-PDF handoff contract; its dependency evidence and visual companion are
+  linked there. Design review runs before implementation planning consumes it.
 - `plan-k1` — the bootstrap requirements and running decision log.
 - `/Volumes/Glass/Book Conversion` — the input collection; exact inspected
   examples and PDF page numbers are recorded in `plan-k1`.

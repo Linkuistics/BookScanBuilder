@@ -1,0 +1,19 @@
+direction: down
+start: Start here\nResolve sources and destination {
+  style: {fill: "#19354D"; font-color: white; bold: true}
+}
+valid: Inputs and destination valid? {shape: diamond}
+temp: Write unique private temporary PDF\nIn destination directory
+check: Reopen and validate\nFlush and fsync complete file
+publish: Atomic no-clobber publication\nHard link to destination
+success: Complete prepared PDF\nRemove temporary name
+failure: Report actionable error\nNo new destination before commit
+start -> valid: 1. Check selections and aliases
+valid -> temp: 2. Yes and not dry-run
+valid -> failure: No
+temp -> check: 3. Copy succeeds
+temp -> failure: Write error or cancellation
+check -> publish: 4. Validation succeeds
+check -> failure: Validation error or cancellation
+publish -> success: 5. Link succeeds = commit point
+publish -> failure: Destination exists or link fails

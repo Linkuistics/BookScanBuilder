@@ -1,0 +1,20 @@
+direction: down
+start: Start here\nExplicit PDF selections {
+  style: {fill: "#19354D"; font-color: white; bold: true}
+}
+resolve: Validate selections\nand show dry-run order
+front: Front pages\nIn front argument order
+content: Content pages\nIn content argument order
+back: Back pages\nIn back argument order
+copy: Copy complete PDF pages\nPreserve page canvas and drawing
+output: One prepared PDF\nEmbedded per-page roles
+processor: Later processor\nOne PDF input
+start -> resolve: 1. Paths and page expressions
+resolve -> front: 2a. Explicit front roles
+resolve -> content: 2b. Includes interior cover pages
+resolve -> back: 2c. Explicit back roles
+front -> copy: 3. First
+content -> copy: 4. Next
+back -> copy: 5. Last
+copy -> output: 6. Validate and publish
+output -> processor: 7. No collection or sidecar
