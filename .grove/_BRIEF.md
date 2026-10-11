@@ -135,6 +135,33 @@ recorded human visual approval. Technical rejection of the automatic extractor
 does not reject the vertical family or establish a sampler defect. Independent
 staff traces are the only new trial commissioned.
 
+Integration `corrected-book-k25` repairs that trial's evidence contract: the
+coordinate-only preflight reproduces longest-line filtering, unique-line count
+and exact library coverage checks after whole-staff/system exclusions; nearby
+rules do not substitute for spatially separated evaluation. Dense manual traces
+and an independent repeat pass establish measured uncertainty before outputs.
+Prerequisite failure, invalid model, application/fallback copy, unresolved
+measurement and unavailable visual reaction carry different named next steps;
+none grants music expansion. Every further trial or completion, on any outcome
+branch, retains a fresh planning consumer ahead of appearance design. The
+coordinate/preflight evidence is the complete fallback slice if the trial
+needs decomposition; corrected-image comparison and human reactions remain
+owned by the complete prototype. These repairs grant neither human visual
+approval nor a production method.
+
+The user confirmed k25's two policy choices: k20 selects one suitable music
+page from the already surveyed set that passes unchanged validity/coverage
+checks, retaining page 140 as the historical unsupported-layout diagnostic.
+Its manual/automatic acquisition comparison uses that same selected fixture.
+After consuming k20, k21 may commission separately stated automatic
+prose/gutter evidence on Norwegian page 20 and the verified prose control even
+when music is rejected or inconclusive. That independent question does not
+expand or accept the music core; its fresh planning consumer retains unresolved
+music/preparation work. Each representative case still needs independent
+evidence and human judgment before production commitment. The current live
+leaf order and the default-processor/appearance/final-acceptance dependencies
+remain the same; no additional trial is pre-created by this permission.
+
 The live ordering is staff-guide evidence, fresh corrected-book planning,
 optional-appearance design, and final integrated workflow acceptance. The fresh
 planner inserts expanded trials/completion, processor design agreement and

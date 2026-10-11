@@ -15,10 +15,12 @@ not a production processor or an automatic music detector.
 
 - `page-geometry-k4`, `corrected-book-k5`, `docs/experiments/page-geometry.md`
   and its frozen JSON report/coordinate records; `docs/research/scan-geometry-a.md`.
-- Music fixture: `/Volumes/Glass/Book Conversion/Raw Scans/Fundamentals of
-  Musical Composition.pdf`, PDF page 140 (printed 126), full-page RGB 300 dpi.
-  Control: `Processed Books/Algorithm Design/Algorithm Design.pdf`, PDF page
-  20, relative to that collection. Recheck identities and control suitability.
+- Music source: `/Volumes/Glass/Book Conversion/Raw Scans/Fundamentals of
+  Musical Composition.pdf`, full-page RGB 300 dpi. Select one suitable music
+  fixture through the preflight below. Page 140 (printed 126) remains the
+  historical extraction/unsupported-layout diagnostic, not the required fitting
+  fixture. Control: `Processed Books/Algorithm Design/Algorithm Design.pdf`,
+  PDF page 20, relative to that collection. Recheck identities and suitability.
 - `docs/acceptance/prepared-pdf.md` and current k19-all comparisons. Separate
   pending geometry/preparation views are
   `/private/tmp/bookscan-geometry-k4-final/geometry-review.pdf` and
@@ -30,27 +32,70 @@ not a production processor or an automatic music detector.
 
 ## Done when
 
+- Before fitting or viewing new outputs, deliver a coordinate-only preflight
+  on the complete unchanged render. The user confirmed in `corrected-book-k25`
+  that fixture selection must preserve the validity rules. Inspect the previously
+  surveyed music pages 20, 40, 60, 100, 180 and 220 for suitability, then select
+  ONE page that can supply long fitting rules and separated held-out units under
+  these rules; record exact PDF/printed page, dimensions and source/render hashes.
+  This is bounded fixture selection, not six correction trials. Retain page 140
+  as an unsupported-layout diagnostic; its short outer systems leave roughly
+  42% vertical coverage after longest-line filtering. Do not relax a gate to fit
+  it. If no suitable fixture is found in this inspected set, report that bounded
+  selection gap to k21 without claiming the whole book unsuitable.
+  Verify the trace-input entry against pinned Leptonica 1.87.0 source: the
+  existing wrapper has no such input, and
+  `dewarpFindVertDisparity` omits the builder's prerequisite gates. Name the
+  entry used and reproduce the builder's 0.8 longest-line filtering, configured
+  fifteen-long-line minimum and coverage test for supplied fitting traces.
+  With whole held-out units removed, report unique retained counts, first-point
+  positions, counts in each page half (at least four each), and vertical span
+  divided by full image height (strictly greater than 0.50). Preserve the
+  library's coordinate/rounding semantics and default downstream model checks.
+  Retain the coordinate lists and separation overlay even if preflight fails.
+  A failed prerequisite or trace seam infeasible within the bounded trial is
+  inconclusive for this hypothesis, with the exact coverage/acquisition/
+  instrument gap handed to `corrected-book-k21`; do not build a forced real fit
+  or require a warp review
+  to establish a prerequisite failure. A full-input diagnostic cannot substitute
+  for the held-out preflight.
 - State and test this hypothesis: the existing vertical family may be usable
   when genuine staff traces replace the failed text-line extractor. Keep the
   existing model family, vertical-only application, default validity checks,
   fifteen-long-line minimum and native RGB sampler. Changing guide acquisition
   is the independent variable. No neighbouring model, two-axis field, alternate
   interpolation, appearance cleanup, crop or lossy recompression is added.
+  On the selected fixture retain the existing automatic extractor's diagnostics
+  under the same settings and holdout exclusions as the manual candidate. Compare
+  acquisition on that page; historical failure on page 140 is not a matched
+  automatic baseline for a different page. Manual success there cannot establish
+  correction on page 140 or repair of automatic music extraction.
 - On unchanged complete renders, independently trace individual physical staff
   rules across upper/middle/lower and left/centre/right content, distinguishing
   notation beams/slurs from rules. Freeze source/render digests, pixel origin,
   units, dense trace points, uncertainty, marker/method and fit/evaluation roles
-  BEFORE viewing the new outputs. Reuse original held-out line identities where
-  adequate; new observations need the same pre-output freeze. Original manual
+  BEFORE viewing the new outputs. Give the selected page new physical line/unit
+  identities and the same pre-output freeze. Original page-140 manual
   blue reference points are diagnostics, not already adequate dense fit traces.
-- Hold out whole physical evaluation lines across their full extent; supply
-  only independent fitting traces to the estimator and demonstrate the
-  separation in coordinate lists/overlays. Record actual unique line count and
-  spatial coverage. No duplicate traces, borrowed evaluation points, lowered
-  minimum or forced-valid real fit may manufacture support. If the fixture or
-  trace-input seam cannot support a valid held-out model under these conditions,
-  report the precise gap/inconclusive result rather than installing another
-  family. A full-input fit, if useful, is labelled diagnostic only.
+  Admit visually placed dense points on genuine physical rules; declare sampling
+  density and handling of obscured segments without inventing observations
+  through notation. Independently repeat a representative subset across page
+  bands and fitting/evaluation roles without showing the first marks, before
+  output, and retain both passes to measure positional/slope/curvature
+  repeatability. Seeded pixel snapping or automatic extraction is a different
+  acquisition experiment, not independent manual traces; commission it only
+  through a fresh planning question with its own extraction evidence.
+- Hold out complete staffs or systems, including every physical rule in the
+  chosen unit over its whole extent and a declared exclusion zone. Keep units
+  in upper/middle/lower bands where the fixture permits; record any missing band
+  as a coverage limitation. Supply only fitting traces outside these zones;
+  retain their nearest distances to each held-out unit, lists and overlays.
+  Close-rule interpolation alone cannot establish separated-region performance.
+  No duplicate traces, borrowed evaluation points, cropped canvas, shortened
+  long rules, weakened holdouts, lowered minimum or forced-valid fit may
+  manufacture support. Choose roles and check counts/coverage before output;
+  inadequate separated holdouts are an inconclusive coverage result, not a
+  reason to move holdouts after viewing output. A full-input fit is diagnostic.
 - Compare unchanged, rigid deskew and traced candidate at matched scale. Retain
   raw traces, model status, actual field/mapping and settings in ordinary files.
   Measure held-out slope/curvature and local scale/shear, and independently
@@ -58,20 +103,49 @@ not a production processor or an automatic music detector.
   transported source-guide residuals from independently marked output evidence.
   Check five-line spacing, barlines, stems, dots, accidentals, glyph widths,
   faint marks, borders, content clipping and extrapolation between systems.
-  Do not invent an agreed numerical acceptance threshold.
+  Report differences from rigid deskew alongside measured trace/output-marking
+  uncertainty and repeatability; source-guide transport is not independent
+  output ground truth. An indistinguishable difference is inconclusive for
+  improvement, not support or rejection. Do not invent an agreed numerical
+  acceptance threshold.
 - Keep the verified control unchanged under the declared trial policy. Retain
   the predeclared nonzero fractional-coordinate forced sampler diagnostic from
   k4 and its actual nonidentity rounded mappings at upper/middle/lower crops;
   an identity/copy is insufficient. Report deliberate diagnostic deformation
   separately from additional detail damage. Recheck mapping arithmetic when
   the wrapper changes; matching mapping alone does not grant visual approval.
-- Reject the traced candidate if a valid comparison shows no useful held-out
-  improvement over rigid deskew, shape/detail damage, clipping or control
-  degradation. Failure of the unchanged validity rules rejects that configured
-  candidate; insufficient holdout coverage or an unavailable/ambiguous human
-  reaction leaves the relevant question inconclusive. Record which failure is
-  extraction, model, sampling or measurement, without claiming all line-guided
-  correction failed. Unsupported output remains an unchanged usable image.
+- Classify the traced result by the first applicable outcome below, recording
+  later observations separately rather than merging causes:
+  - Failed guide/separation prerequisites or an infeasible trace-input seam:
+    inconclusive coverage/acquisition/instrument question, handed to k21 for
+    precise completion or a suitable fixture; no model-quality conclusion.
+  - With prerequisites met, builder/default model checks fail: reject this
+    configured fit, record the actual check and hand k21 a model-failure
+    question. This supplies no sampler or two-axis evidence.
+  - A valid fit cannot be applied or produces a fallback copy: inconclusive
+    application/instrument question, requiring bounded seam repair/recomparison
+    under the same settings. Record statuses and actual mapping so a copied
+    image cannot masquerade as correction.
+  - A valid applied comparison shows independently observed shape/detail damage,
+    clipping, control degradation or an explicit adverse traced-view reaction;
+    alternatively, adequate measurement establishes no useful improvement:
+    reject for that specific quality failure and hand k21 its supported next
+    question. A valid intentionally identity result is not a fallback copy and
+    establishes no improvement on a distorted fixture.
+  - With no independently established quality defect, a valid applied
+    comparison's improvement cannot be distinguished from measured uncertainty:
+    inconclusive measurement question, handed to k21 for precise repeatability/
+    measurement completion; no automatic expansion.
+  - Technical support with an unavailable/ambiguous traced-result reaction:
+    inconclusive visual question, handed to k21 for the exact inspected-view
+    response; silence grants nothing.
+  - Only adequate prerequisites, a valid applied model, improvement resolved
+    against measured uncertainty, intact independent shape/detail/control checks
+    and an explicit favourable traced-result reaction support further trial.
+  Invalidity/application failure is not an uncertainty-only comparison; no
+  copied or unsupported output supports expansion. Preserve the unchanged usable
+  image. Record extraction, coverage, model, sampling, measurement and human
+  gaps separately without claiming all line-guided correction failed.
 - Present full-page/native-detail ordinary images or a small matched PDF and
   obtain the user's reaction to the traced result. Also retain/ask the prior
   geometry question: do k4's music/rigid/control-sampler views support rejecting
@@ -103,3 +177,12 @@ its forced sampler matches declared integer mapping but has no human fidelity
 approval. This evidence earns exactly the staff-trace question. If the traced
 result later justifies sampler or two-axis work, let the fresh planning consumer
 cut that specific hypothesis. Do not commission the expanded set here.
+
+If this work exceeds one session, decompose at the complete coordinate-only
+evidence seam: the first child freezes admissible acquisition, repeatability,
+whole-unit holdouts, exact preflight and its inspected source overlays; the
+remaining prototype owns the trace-input comparison and human reactions.
+State the unresolved gap and keep that child and `corrected-book-k21` live in
+order. Do not create a standalone adapter, tracing UI or setup-only child, and
+do not call coordinate evidence a completed corrected-image trial. An infeasible
+preflight may itself be the bounded inconclusive result consumed by k21.

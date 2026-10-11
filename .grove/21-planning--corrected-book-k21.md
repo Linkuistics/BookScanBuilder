@@ -13,7 +13,8 @@ default-processor and optional-appearance increments in this one tree.
 
 Read the committed `corrected-book-k5` plan and `staff-guides-k20` result/log,
 its durable experiment note, k4's original frozen evidence and
-`docs/research/scan-geometry-a.md`. Read the complete working preparation
+`docs/research/scan-geometry-a.md`, plus the confirmed fixture/sequencing choices
+in `corrected-book-k25`. Read the complete working preparation
 contract/evidence at `docs/specs/prepared-pdf.md` and
 `docs/acceptance/prepared-pdf.md`. Later live consumers are
 `appearance-cleanup-k22` and `workflow-acceptance-k23`; their order expresses
@@ -22,12 +23,26 @@ dependencies, not permission to run against a missing processor.
 ## Done when
 
 - Classify the traced core as supported for further trial, rejected or
-  inconclusive from actual unique guides/coverage, unchanged validity checks,
-  independent held-outs, rigid baseline, shape/detail/control evidence and
-  user response. Automatic k4 extraction is rejected for the music fixture;
+  inconclusive using k20's ordered outcomes: prerequisite/acquisition gaps,
+  configured model-check rejection after passed prerequisites, failed application
+  or fallback copy, improvement indistinguishable from measured uncertainty,
+  observed quality rejection, and missing/ambiguous human reaction are different
+  evidence. Check unique guides after longest-line filtering, exact half-page
+  counts/vertical span, whole-staff/system exclusion and nearest-fit distances,
+  measured repeatability, independent output marks, rigid baseline and
+  shape/detail/control evidence. Automatic k4 extraction is rejected for page 140;
   its nonexistent field supplies no conclusion about the vertical family.
   Missing human or measurement evidence must be named and obtained through
-  precise completion work before promotion; never broaden an inconclusive core.
+  precise completion work before promotion; never broaden an inconclusive
+  music core. A failed preflight needs a suitable fixture or its precise
+  coverage/acquisition completion, not interpolation or a two-axis field.
+  An unavailable trace/application seam needs bounded instrument completion;
+  a below-uncertainty result needs measurement completion at unchanged settings;
+  an absent/ambiguous reaction needs the exact comparison-response question.
+  The selected music fixture must pass unchanged prerequisites; page 140 stays
+  an unsupported-layout diagnostic. Compare manual/automatic acquisition only
+  on the same fixture/settings/holdouts, and retain its exact identity. Do not
+  replace the fixed representative acceptance cases with the selected page.
 - Check preparation automated evidence and human visual disposition separately.
   The k19-all views exist; the recorded gap at k5 is the response, not rendering.
   Obtain the exact question carried by k20 or retain a response-completion leaf.
@@ -55,13 +70,44 @@ dependencies, not permission to run against a missing processor.
     bypass/identity field cannot establish sampler fidelity.
   Manual-guide success is not automatic extraction success. Unsupported layouts
   must be assessed honestly rather than given invented staff guides. Cut a fresh
-  planning consumer after any further evidence trial.
-- For a rejected core, commission only its supported next question: interpolation
-  for demonstrated native-sampler damage, or constrained two-axis mapping for
+  planning consumer as required unconditionally below.
+- The user confirmed in k25 that independent prose/gutter evidence need not wait
+  for supported music. After consuming k20, a rejected or inconclusive music
+  result may therefore lead to a bounded, separately stated automatic
+  prose/gutter trial: can the existing per-page vertical candidate improve the
+  Norwegian page-20 gutter halves beyond rigid deskew, under unchanged validity
+  and native-sampler settings, while preserving shape/detail and the verified
+  Algorithm Design page-20 control? Its valid prose fit is motivation, not gutter
+  evidence. Declare fitting/evaluation separation, coverage, measured uncertainty,
+  rejection/inconclusive cases and independent human reactions before outputs.
+  Manual separation of the Norwegian spread is permitted only for the evidence
+  trial; production still owns genuine spread splitting. Unsupported halves
+  remain usable/flagged, without borrowed models or forced fits. Do not label
+  this expansion or acceptance of an inconclusive music core, or bundle every
+  fallback/representative case into it. Retain the precise unresolved music and
+  preparation obligations in the trial and its fresh planning consumer; a
+  successful gutter result cannot settle them. This permission changes evidence
+  sequencing only, and commissions no trial until this planner states the
+  concrete hypothesis from the committed evidence.
+- For a rejected music core, its own next question must be evidence-supported:
+  interpolation for demonstrated native-sampler damage, or constrained
+  two-axis mapping for
   observed width/barline failure after vertical correction. A family/coverage
   failure needs its own precise evidence-backed question. State hypothesis and
   rejection case; no bundle of fallbacks or larger model by availability alone.
-- Once correction/adjustment needs are concrete and expanded cases accepted,
+  Distinguish failed prerequisites from a model that passed them but failed its
+  default consistency/curvature checks, and both from observed output defects.
+  Neither a fallback copy nor a measurement-noise result diagnoses sampling.
+- After ANY commissioned evidence trial, measurement/instrument completion or
+  visual-response completion, cut a fresh planning consumer that reads its
+  committed result and retains every unresolved music/preparation/product
+  obligation. This holds for supported, rejected and inconclusive branches,
+  including preflight-only results. Place that consumer before
+  `appearance-cleanup-k22`; a non-supported branch cannot fall through to
+  appearance design to invent missing processor planning. Commission only the
+  observation needed to resolve the named gap and its falsifiable outcome.
+- Once correction/adjustment needs are concrete and the representative cases
+  are independently accepted through their applicable evidence trials,
   cut a processor design agreement before production implementation planning.
   Keep full-page rendering, genuine-spread splitting, border removal/crop/warp,
   accepted review edits, post-split assembly, final English OCR and export in
