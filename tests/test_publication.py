@@ -233,7 +233,7 @@ def test_postcommit_delivery_keeps_success(tmp_path: Path) -> None:
 
 
 def start_writer(
-    tmp_path: Path, source: Path, hook: str, mask: int | None = None
+    tmp_path: Path, source: Path, hook: str, mask: int | None = None, *, dry: bool = False
 ) -> tuple[subprocess.Popen[str], Path]:
     customization = tmp_path / "instrumentation"
     customization.mkdir()
@@ -247,7 +247,7 @@ def start_writer(
     environment = os.environ.copy()
     environment["PYTHONPATH"] = os.pathsep.join([str(customization), str(root / "tests")])
     process = subprocess.Popen(
-        [str(root / ".venv/bin/bookscan"), "prepare", *args(source)],
+        [str(root / ".venv/bin/bookscan"), "prepare", *args(source, dry=dry)],
         env=environment,
         stdin=subprocess.PIPE,
         stdout=subprocess.PIPE,
@@ -261,6 +261,110 @@ def start_writer(
     record = json.loads(channel.read_text())
     assert record["pid"] == process.pid and record["hook"] == hook
     return process, channel
+
+
+@pytest.mark.parametrize(
+    "hook,dry,want,code",
+    [
+        ("validation", False, None, "INTERRUPTED"),
+        ("recheck", False, None, "INTERRUPTED"),
+        ("recheck", True, None, "INTERRUPTED"),
+        ("finish", False, None, "INTERRUPTED"),
+        ("dry-traversal", True, None, "INTERRUPTED"),
+        ("after-open", False, None, "INTERRUPTED"),
+        ("plan-emit", True, None, "INTERRUPTED"),
+        ("error-emit", False, 3, "SOURCE_NOT_FOUND"),
+        ("cleanup-error", False, 5, "OUTPUT_INVALID"),
+    ],
+)
+@pytest.mark.parametrize("signum", [signal.SIGINT, signal.SIGTERM])
+def test_signal_lifetime_gaps(
+    tmp_path: Path, hook: str, dry: bool, want: int | None, code: str, signum: signal.Signals
+) -> None:
+    """Catch relabelled cancellation, unowned files and interrupted error delivery/cleanup."""
+    source = labels(tmp_path / "in.pdf", 2)
+    before = digest(source)
+    argument = tmp_path / "missing.pdf" if hook == "error-emit" else source
+    process, channel = start_writer(tmp_path, argument, hook, dry=dry)
+    try:
+        os.kill(process.pid, signum)
+        stdout, stderr = process.communicate(input="continue\n", timeout=10)
+        assert process.returncode == (128 + signum if want is None else want), stderr + stdout
+        record = json.loads(stdout)
+        assert record["status"] == "error" and record["code"] == code
+        assert "Traceback" not in stderr
+        assert not (tmp_path / "out.pdf").exists()
+        assert not list(tmp_path.glob(".bookscan-prepare-*.tmp"))
+        assert digest(source) == before
+        (tmp_path / "evidence.json").write_text(
+            json.dumps(
+                {
+                    "pid": process.pid,
+                    "hook": hook,
+                    "dry_run": dry,
+                    "signal": int(signum),
+                    "exit": process.returncode,
+                    "result": record,
+                    "private_removed": True,
+                    "source_unchanged": True,
+                    "writer_reaped": process.poll() is not None,
+                    "observed_barrier": json.loads(channel.read_text()),
+                },
+                indent=2,
+            )
+        )
+    finally:
+        if process.poll() is None:
+            process.kill()
+            process.communicate(timeout=10)
+
+
+@pytest.mark.parametrize("signum", [signal.SIGINT, signal.SIGTERM])
+def test_second_signal_cannot_interrupt_cleanup(tmp_path: Path, signum: signal.Signals) -> None:
+    source = labels(tmp_path / "in.pdf", 2)
+    before = digest(source)
+    process, channel = start_writer(tmp_path, source, "cleanup-interrupted")
+    try:
+        os.kill(process.pid, signum)
+        assert process.stdin is not None
+        process.stdin.write("continue\n")
+        process.stdin.flush()
+        deadline = time.monotonic() + 10
+        while (
+            json.loads(channel.read_text())["hook"] != "cleanup-second-signal"
+            and process.poll() is None
+            and time.monotonic() < deadline
+        ):
+            time.sleep(0.01)
+        assert json.loads(channel.read_text())["hook"] == "cleanup-second-signal"
+        os.kill(process.pid, signum)
+        stdout, stderr = process.communicate(input="continue\n", timeout=10)
+        assert process.returncode == 128 + signum, stderr + stdout
+        record = json.loads(stdout)
+        assert record["code"] == "INTERRUPTED"
+        assert not list(tmp_path.glob(".bookscan-prepare-*.tmp"))
+        assert not (tmp_path / "out.pdf").exists() and digest(source) == before
+        (tmp_path / "evidence.json").write_text(
+            json.dumps(
+                {
+                    "pid": process.pid,
+                    "hook": "cleanup-interrupted",
+                    "signal": int(signum),
+                    "signals_sent": 2,
+                    "exit": process.returncode,
+                    "result": record,
+                    "private_removed": True,
+                    "source_unchanged": True,
+                    "writer_reaped": process.poll() is not None,
+                    "observed_barrier": json.loads(channel.read_text()),
+                },
+                indent=2,
+            )
+        )
+    finally:
+        if process.poll() is None:
+            process.kill()
+            process.communicate(timeout=10)
 
 
 @pytest.mark.parametrize(

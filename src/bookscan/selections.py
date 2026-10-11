@@ -50,7 +50,7 @@ def invalid(message: str) -> PreparationError:
     )
 
 
-def parse(args: list[str], *, preview: bool = False) -> Request:
+def parse(args: list[str]) -> Request:
     selections: list[Selection] = []
     seen: set[str] = set()
     output: Path | None = None
@@ -65,7 +65,14 @@ def parse(args: list[str], *, preview: bool = False) -> Request:
                 raise invalid(f"Repeated singleton option: {option}")
             seen.add(option)
         values: list[str] = []
-        while i < len(args) and not args[i].startswith("-"):
+        while i < len(args) and (
+            not args[i].startswith("-")
+            or (
+                option in {"--front", "--content", "--back"}
+                and len(values) == 1
+                and re.match(r"-[0-9]", args[i]) is not None
+            )
+        ):
             values.append(args[i])
             i += 1
         if option in {"--dry-run", "--json"}:
@@ -93,8 +100,6 @@ def parse(args: list[str], *, preview: bool = False) -> Request:
             "Add --content PDF [PAGES].",
             2,
         )
-    if preview and "--dry-run" not in seen:
-        raise invalid("The temporary preview requires explicit --dry-run.")
     return Request(tuple(selections), output, "--dry-run" in seen, "--json" in seen)
 
 

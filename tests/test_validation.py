@@ -12,7 +12,7 @@ from test_preview import labels
 
 from bookscan import copying
 from bookscan.pdf import Geometry, Node, Projection, Ref, items
-from bookscan.prepare import plan
+from bookscan.prepare import operate
 from bookscan.results import PreparationError
 from bookscan.selections import parse
 
@@ -51,7 +51,7 @@ from bookscan.selections import parse
 )
 def test_runtime_rejects_mutation(tmp_path: Path, mutation: str) -> None:
     source = rich_pdf(tmp_path / "in.pdf")
-    expected = plan(
+    expected = operate(
         parse(["--content", str(source), "--output", str(tmp_path / "out.pdf"), "--dry-run"])
     )
     stream = io.BytesIO()
@@ -150,7 +150,7 @@ def test_pair_comparison_ignores_sharing_and_storage() -> None:
 
 def test_markers_cannot_alias(tmp_path: Path) -> None:
     source = labels(tmp_path / "in.pdf", 2)
-    expected = plan(
+    expected = operate(
         parse(["--content", str(source), "1,1", "--output", str(tmp_path / "out.pdf"), "--dry-run"])
     )
     stream = io.BytesIO()

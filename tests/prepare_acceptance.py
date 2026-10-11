@@ -153,6 +153,17 @@ def cases(
     rich = rich_pdf(artifacts / "Nested Form and static appearance.pdf")
     defaults = rich_pdf(artifacts / "Nested default boxes.pdf", defaults=True, annotated=False)
     blank = raw_pdf(artifacts / "Empty encoded stream.pdf", stream_dict=b"/Filter /FlateDecode")
+    reversed_boxes = labels(artifacts / "Reversed rectangle corners.pdf", 3)
+    with pikepdf.Pdf.open(reversed_boxes, allow_overwriting_input=True) as pdf:
+        for page, corners in zip(
+            pdf.pages,
+            ([240, 320, 0, 0], [240, 0, 0, 320], [0, 320, 240, 0]),
+            strict=True,
+        ):
+            page.obj["/MediaBox"] = pikepdf.Array(corners)
+            page.obj["/CropBox"] = pikepdf.Array(corners)
+            page.obj["/TrimBox"] = pikepdf.Array(corners)
+        pdf.save(reversed_boxes)
     synthetic = [
         (
             "interleaved",
@@ -205,6 +216,11 @@ def cases(
         ("nested-static", ["--content", str(rich)], [(rich, 1, "content")]),
         ("nested-defaults", ["--content", str(defaults)], [(defaults, 1, "content")]),
         ("encoded-empty", ["--content", str(blank)], [(blank, 1, "content")]),
+        (
+            "reversed-boxes",
+            ["--content", str(reversed_boxes)],
+            [(reversed_boxes, n, "content") for n in (1, 2, 3)],
+        ),
     ]
     real: list[tuple[str, list[str], list[tuple[Path, int, str]]]] = []
     if mode != "synthetic":
@@ -314,7 +330,44 @@ def main() -> None:
         cast(dict[str, Json], json.loads(p.read_text()))
         for p in sorted((artifacts / "fault-checks").rglob("evidence.json"))
     ]
-    assert len(evidence) == 18
+    signal_windows = [
+        (hook, False, 1)
+        for hook in (
+            "writing",
+            "pre-region",
+            "pending",
+            "after-block",
+            "blocked",
+            "after-link",
+            "committed",
+            "cleanup",
+            "validation",
+            "recheck",
+            "finish",
+            "after-open",
+            "error-emit",
+            "cleanup-error",
+        )
+    ] + [
+        ("recheck", True, 1),
+        ("dry-traversal", True, 1),
+        ("plan-emit", True, 1),
+        ("cleanup-interrupted", False, 2),
+    ]
+    expected_evidence = {
+        json.dumps([hook, dry, signum, count])
+        for hook, dry, count in signal_windows
+        for signum in (2, 15)
+    } | {json.dumps([hook, False, 9, 1]) for hook in ("writing", "after-link")}
+    observed_evidence = [
+        json.dumps(
+            [item["hook"], item.get("dry_run", False), item["signal"], item.get("signals_sent", 1)]
+        )
+        for item in evidence
+        if isinstance(item, dict)
+    ]
+    assert len(observed_evidence) == len(set(observed_evidence))
+    assert set(observed_evidence) == expected_evidence
     records: list[Json] = []
     for name, selection_args, expected in requests:
         output = artifacts / (name + "-prepared.pdf")

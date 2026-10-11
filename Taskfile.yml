@@ -29,6 +29,7 @@ tasks:
     cmds:
       - uv sync --locked
       - command -v pdftoppm
+      - command -v pdftotext
 
   prepare:run:
     desc: Assemble explicitly selected whole PDF pages

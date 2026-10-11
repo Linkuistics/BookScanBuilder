@@ -34,10 +34,16 @@ Pages are one-based PDF pages: all, N, inclusive A-B (ascending/descending).
 Comma-separated, no whitespace. !N and !A-B exclude their union from this
 selection only. Exclusions alone start with all. Repetitions are retained.
 Single-quote ! expressions in interactive zsh/bash, e.g. 'all,!3'.
+Negative numeric PAGES after a path are invalid selections, with grammar guidance.
 Errors never clamp ranges or overwrite sources. No automatic retry; after an
 interruption inspect the destination and choose a new path if it exists.
 Supported: static PDF 1.0–1.7, bounded ADBE 1.7 levels 1–3, static appearances;
 no encryption, recovery, interactive forms/media, external/optional rendering.
+Both dry-run and write retain selected encoded bytes in memory. Resources shared
+across source pages are copied per output page; memory and output size may grow
+well beyond source size. No memory or file-size ceiling is promised.
+Cancellation waits for the current operation; cleanup is uninterrupted. Once an
+error or serialized plan is fixed for delivery, later signals keep that result.
 
 Examples (quoted paths, explicit roles):
   --content 'Assembled Book.pdf' --output 'Prepared.pdf' --dry-run
@@ -92,6 +98,7 @@ def run(
                 except OSError:
                     pass
                 return 5
+        control.check()
         # Resolve an available output even when parsing later fails.
         if "--output" in args:
             i = args.index("--output") + 1
@@ -104,10 +111,15 @@ def run(
             record["status"] = "written"
             record.pop("pages")
         record["warnings"] = control.warnings
+        text = emit(record, json_mode)  # Serialize completely before the first output byte.
+        control.check()
     except PreparationError as exc:
         record = exc.record(output)
+        record["warnings"] = control.warnings
         exit_code = exc.exit_code
-    text = emit(record, json_mode)  # Serialize completely before the first output byte.
+        text = emit(record, json_mode)
+    # The result is now fixed. Signals during delivery/return only record state;
+    # they cannot replace an existing result, emit a second JSON object or escape.
     try:
         target = stdout if json_mode or exit_code == 0 else stderr
         target.write(text)

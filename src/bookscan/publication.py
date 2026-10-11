@@ -20,6 +20,7 @@ def failure(code: str, message: str, exit_code: int = 5) -> PreparationError:
 @dataclass
 class Control:
     committed: bool = False
+    interrupted: int | None = None
     warnings: list[Json] = field(default_factory=lambda: list[Json]())
 
     def warn(self, code: str, message: str) -> None:
@@ -35,8 +36,17 @@ class Control:
         if self.committed:
             self.warn("POST_COMMIT_SIGNAL", f"Caught signal {signum} after publication.")
         else:
+            # Never throw from an arbitrary bytecode: resource ownership, cleanup,
+            # exception unwinding and result delivery must remain uninterrupted.
+            if self.interrupted is None:
+                self.interrupted = signum
+
+    def check(self) -> None:
+        if self.interrupted is not None and not self.committed:
             raise failure(
-                "INTERRUPTED", f"Caught signal {signum} before publication.", 128 + signum
+                "INTERRUPTED",
+                f"Caught signal {self.interrupted} before publication.",
+                128 + self.interrupted,
             )
 
 
@@ -93,6 +103,7 @@ class Staged:
         pending = signal.sigpending() & blocked
         old = signal.pthread_sigmask(signal.SIG_BLOCK, blocked)
         try:
+            self.control.check()
             if pending:
                 signum = min(int(sig) for sig in pending)
                 raise failure(

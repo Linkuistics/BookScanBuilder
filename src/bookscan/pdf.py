@@ -176,7 +176,7 @@ def number(value: object, feature: str) -> Decimal:
 
 def box(value: object, feature: str) -> tuple[Decimal, ...]:
     nums = tuple(number(v, feature) for v in array(value))
-    if len(nums) != 4 or nums[2] <= nums[0] or nums[3] <= nums[1]:
+    if len(nums) != 4 or nums[2] == nums[0] or nums[3] == nums[1]:
         raise unsupported(feature + " requires four numbers and positive extent")
     return nums
 
@@ -247,6 +247,7 @@ def project_page(page: pikepdf.Object) -> Projection:
         raise unsupported("page /Type")
     media_value = inherited(page, "/MediaBox")
     crop_value = inherited(page, "/CropBox")
+    crop_origin = "CropBox" if crop_value is not None else "MediaBox"
     if crop_value is None:
         crop_value = media_value
     geometry_values: dict[str, object] = {
@@ -274,7 +275,14 @@ def project_page(page: pikepdf.Object) -> Projection:
         if key == "/Annots":
             annotated, retained_annots = annotations(page)
         elif key in {"/ArtBox", "/BleedBox", "/CropBox", "/MediaBox", "/TrimBox"}:
-            validated_boxes[key] = box(geometry_values[key], name)
+            origin = (
+                "MediaBox"
+                if key == "/MediaBox"
+                else crop_origin
+                if key == "/CropBox" or key not in page
+                else name
+            )
+            validated_boxes[key] = box(geometry_values[key], origin)
         elif key in {"/Group", "/BoxColorInfo", "/Parent"}:
             dictionary(get(page, key), key)
         elif key == "/Contents":

@@ -47,6 +47,10 @@ Each repeatable `--content`, `--front` or `--back` argument takes a path and
 optionally a page expression. One or two values belong to that argument until
 the next option; more values are an error. Paths with spaces must be quoted.
 Use an absolute path or a `./` prefix for a filename beginning with `-`.
+In the PAGES slot after a role's path, a value beginning with `-` followed by
+a digit is a page expression, so negative page numbers receive
+`INVALID_SELECTION` and grammar guidance. Other leading `-` values end the
+argument's values and are parsed as options.
 There are no positional inputs. `--output PATH` is required and names a new
 PDF in an existing directory. Standard input/output PDF streams are deferred:
 a seekable output file makes complete validation and safe publication possible.
@@ -172,6 +176,19 @@ trial. `planned` means those checks passed for the observed sources/destination;
 it is no reservation or promise that a subsequent write will succeed. With
 stable sources, write adds only copy/save/validation/publication and filesystem
 I/O failures. Explain both its cost and that limit in help.
+
+This bounded implementation retains selected pages' encoded stream bytes in
+memory during both dry-run and write. Reconstruction creates independent
+resource objects per output occurrence; resources shared across source pages
+are consequently duplicated in the prepared PDF. These are accepted costs on
+the current Mac, with no promised memory or output-size ceiling. Large sources
+or selections with large shared resources may consume substantially more memory
+and disk than the source. The review's synthetic measurements were 523 MB peak
+RSS for dry-run and 690 MB for writing 160 MB of distinct image streams; a
+different 20-page fixture sharing a 1 MB stream produced a 20 MB output from a
+1 MB input. These describe those fixtures, not universal multipliers. A
+digest/lazy-byte projection or cross-page sharing would be a separately reviewed
+adapter redesign. No content is pruned to offset these costs.
 
 For an invalid selection, name the input, expression and invalid token.
 Token-syntax errors precede opening sources, so describe the expected grammar
@@ -362,6 +379,16 @@ temporary-name cleanup failure or stdout write/flush failure is respectively
 cancellation. A failed stdout cannot deliver its own warning in JSON; keep exit
 0 and try stderr rather than claim `INTERRUPTED` or `WRITE_FAILED`. Fully serialize
 the result before emitting it; a broken pipe can still truncate delivery.
+Signal handlers only record cancellation; source/page boundaries and completed
+copy, validation, recheck and fsync operations check it before publication.
+Cancellation can wait for the current operation to return. Stage acquisition
+establishes stream/name ownership before checking cancellation, and cleanup
+runs without signal exceptions. An already selected error retains its code/exit
+through cleanup and reporting, including later signals. A successful dry-run
+checks cancellation after complete serialization; that check fixes the result
+for delivery. Signals arriving during subsequent delivery/return cannot replace
+that result or emit a second object. Published writes remain `written`/0 with
+post-commit warnings as above; diagnostics remain best-effort after delivery.
 SIGKILL can prevent all reporting on either side of the commit point. No partially
 written
 destination is permitted. A filesystem unable to provide the required link
@@ -397,6 +424,11 @@ UserUnit** directly, with only the inheritance/default rules in the table.
 Require finite four-number boxes of positive extent, rotation an integer
 multiple of 90, and finite positive UserUnit; source violations are
 `SOURCE_UNSUPPORTED`. Do not infer this geometry from render dimensions.
+Either diagonal-corner orientation is accepted: width and height must be
+nonzero, and the original four coordinates are preserved without normalization.
+When an absent optional/CropBox inherits its invalid value from MediaBox or
+CropBox, the diagnostic names that originating key. Sorted gate precedence
+remains unchanged.
 
 A mismatch, unsupported output construct, marker alias between occurrences,
 or output parser warning is `OUTPUT_INVALID`. This verifies copying/storage

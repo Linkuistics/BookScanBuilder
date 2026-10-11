@@ -175,13 +175,41 @@ def test_malformed_before_source(expression: str, tmp_path: Path) -> None:
         "--dry-run",
         "--json",
     )
-    # A value starting with '-' is an option/arity error, still before any source access.
     record = json.loads(result.stdout)
-    assert record["code"] in ("INVALID_SELECTION", "INVALID_ARGUMENT")
+    assert record["code"] == "INVALID_SELECTION"
     assert result.returncode == 2
-    if record["code"] == "INVALID_SELECTION":
-        assert record["page_count"] is None
-        assert record["selection"] == expression
+    assert record["page_count"] is None
+    assert record["selection"] == expression
+
+
+@pytest.mark.parametrize("corners", [[240, 320, 0, 0], [240, 0, 0, 320], [0, 320, 240, 0]])
+@pytest.mark.parametrize("key", ["MediaBox", "CropBox", "TrimBox"])
+def test_reversed_rectangle_corners_are_preserved(
+    tmp_path: Path, corners: list[int], key: str
+) -> None:
+    path = labels(tmp_path / "in.pdf", 1)
+    with pikepdf.Pdf.open(path, allow_overwriting_input=True) as pdf:
+        pdf.pages[0].obj["/" + key] = pikepdf.Array(corners)
+        pdf.save(path)
+    output = tmp_path / "out.pdf"
+    result = invoke("--content", str(path), "--output", str(output), "--json")
+    assert result.returncode == 0, result.stdout + result.stderr
+    with pikepdf.Pdf.open(output) as pdf:
+        assert list(pdf.pages[0].obj["/" + key]) == corners
+
+
+@pytest.mark.parametrize("key", ["MediaBox", "CropBox", "TrimBox"])
+def test_degenerate_rectangle_names_its_origin(tmp_path: Path, key: str) -> None:
+    path = labels(tmp_path / "in.pdf", 1)
+    with pikepdf.Pdf.open(path, allow_overwriting_input=True) as pdf:
+        pdf.pages[0].obj["/" + key] = pikepdf.Array([0, 0, 0, 320])
+        pdf.save(path)
+    result = invoke(
+        "--content", str(path), "--output", str(tmp_path / "out.pdf"), "--json", "--dry-run"
+    )
+    record = json.loads(result.stdout)
+    assert result.returncode == 3 and record["code"] == "SOURCE_UNSUPPORTED"
+    assert record["feature"].startswith(key + " ")
 
 
 @pytest.mark.parametrize(
@@ -273,7 +301,7 @@ def test_nested_resource_gates(tmp_path: Path, key: str) -> None:
     [
         ("/MediaBox", [0, 0, 0, 3]),
         ("/CropBox", [0, 0, 3]),
-        ("/BleedBox", [2, 2, 1, 1]),
+        ("/BleedBox", [2, 2, 2, 1]),
         ("/TrimBox", [0, 0, 3]),
         ("/ArtBox", [0, 0, 1, 0]),
         ("/Rotate", 45),
@@ -484,7 +512,7 @@ def test_versions_and_extensions(tmp_path: Path, mode: str) -> None:
 def test_projection_inherited_geometry_cycle_and_nested_globals(tmp_path: Path) -> None:
     from decimal import Decimal
 
-    from bookscan.prepare import plan
+    from bookscan.prepare import operate
     from bookscan.selections import parse
 
     path = tmp_path / "in.pdf"
@@ -509,7 +537,7 @@ def test_projection_inherited_geometry_cycle_and_nested_globals(tmp_path: Path) 
         pdf.Root["/Version"] = pikepdf.Name("/1.7")
         pdf.save(path, compress_streams=False)
     before = path.read_bytes()
-    result = plan(
+    result = operate(
         parse(["--content", str(path), "--output", str(tmp_path / "out.pdf"), "--dry-run"])
     )
     projection = result.projections[0]

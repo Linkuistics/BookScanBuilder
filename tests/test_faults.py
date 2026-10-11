@@ -10,7 +10,7 @@ from pdf_fixtures import raw_pdf
 from test_preview import labels
 
 from bookscan.cli import run
-from bookscan.prepare import operate, plan
+from bookscan.prepare import Source, operate
 from bookscan.results import PreparationError
 from bookscan.selections import parse
 
@@ -21,7 +21,9 @@ def arguments(path: Path) -> list[str]:
 
 @pytest.mark.parametrize("dry_run", [True, False])
 @pytest.mark.parametrize("change", ["bytes", "mtime", "replace", "remove"])
-def test_source_recheck_detects_changes(tmp_path: Path, change: str, dry_run: bool) -> None:
+def test_source_recheck_detects_changes(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, change: str, dry_run: bool
+) -> None:
     path = labels(tmp_path / "in.pdf")
     request = parse(
         arguments(path) if dry_run else [a for a in arguments(path) if a != "--dry-run"]
@@ -42,8 +44,15 @@ def test_source_recheck_detects_changes(tmp_path: Path, change: str, dry_run: bo
             path.write_bytes(contents.replace(b"PDF", b"PDE", 1))
             os.utime(path, ns=(original_stat.st_atime_ns, original_stat.st_mtime_ns))
 
+    original_recheck = Source.recheck
+
+    def recheck(source: Source) -> None:
+        mutate()
+        original_recheck(source)
+
+    monkeypatch.setattr(Source, "recheck", recheck)
     with pytest.raises(PreparationError) as exc:
-        operate(request, before_recheck=mutate)
+        operate(request)
     assert exc.value.code == "SOURCE_CHANGED"
     assert not (tmp_path / "out.pdf").exists()
 
@@ -77,7 +86,7 @@ def test_no_output_or_temporary_creation_copy_or_save(
     monkeypatch.setattr(pikepdf.Pdf, "new", forbidden)
     monkeypatch.setattr(pikepdf.Pdf, "copy_foreign", forbidden)
     monkeypatch.setattr(os, "link", forbidden)
-    result = plan(parse(arguments(path)))
+    result = operate(parse(arguments(path)))
     assert len(result.pages) == 6
     assert sorted(tmp_path.iterdir()) == before
 
@@ -100,7 +109,7 @@ def test_read_failures_are_source_unreadable(
     else:
         monkeypatch.setattr(preparation, "project_page", fail)
     with pytest.raises(PreparationError) as exc:
-        plan(parse(arguments(path)))
+        operate(parse(arguments(path)))
     assert exc.value.code == "SOURCE_UNREADABLE"
 
 
@@ -162,13 +171,15 @@ def test_actual_prepublication_signals(tmp_path: Path, signum: int) -> None:
     host = """
 import sys
 import bookscan.cli as cli
-from bookscan.prepare import operate
+from bookscan.prepare import Source
 
-def ready():
+original_recheck = Source.recheck
+def recheck(source):
     print('READY', file=sys.stderr, flush=True)
     sys.stdin.readline()
+    original_recheck(source)
 
-cli.operate = lambda request, **kwargs: operate(request, before_recheck=ready, **kwargs)
+Source.recheck = recheck
 sys.exit(cli.main())
 """
     process = subprocess.Popen(
@@ -219,7 +230,7 @@ def test_no_write_streams_or_output_reopen(tmp_path: Path, monkeypatch: pytest.M
     monkeypatch.setattr(tempfile, "TemporaryFile", forbidden)
     monkeypatch.setattr(tempfile, "mkdtemp", forbidden)
     monkeypatch.setattr(pikepdf.Pdf, "open", source_only)
-    result = plan(parse(arguments(path)))
+    result = operate(parse(arguments(path)))
     assert len(result.pages) == 6
 
 
@@ -273,5 +284,5 @@ def test_direct_annotation_projection_omits_owner(tmp_path: Path) -> None:
         pdf.save(path)
     with pikepdf.Pdf.open(path) as observed:
         assert not observed.pages[0].obj["/Annots"][0].is_indirect
-    result = plan(parse(arguments(path)))
+    result = operate(parse(arguments(path)))
     assert all(key != "/P" for node in result.projections[0].nodes for key, _ in node.entries)

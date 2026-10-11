@@ -240,3 +240,18 @@ preparation visual approval remains pending, explicitly owned by
 `corrected-book-k5`. Preparation completion closes neither the geometry trial,
 the default processor, optional appearance cleanup nor this root's full
 collection-isolated end-to-end acceptance. Those obligations stay live.
+
+Integration `prepared-pdf-k19` repairs caught-signal validation codes, resource
+acquisition/cleanup ownership and result serialization, accepts reversed
+rectangle corners while preserving their original coordinates, pins negative
+numeric PAGES to `INVALID_SELECTION`, checks both Poppler tools and removes the
+retired preview API/test callbacks. Signals are recorded and checked at safe
+operation boundaries; cancellation can wait for the current operation, and an
+already chosen error/finalized plan keeps its result during delivery. The spec,
+help and README also record the accepted retained-byte memory cost and resource
+duplication per output page. Latest frozen synthetic/real/all evidence and
+comparison paths are in `docs/acceptance/prepared-pdf.md`, using
+`/private/tmp/bookscan-prepared-k19-all` for current human comparisons. The
+producer reports remain historical and unchanged; preparation visual approval
+still belongs separately to `page-geometry-k4` and is checked by
+`corrected-book-k5`.

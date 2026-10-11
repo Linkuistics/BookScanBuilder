@@ -1,9 +1,8 @@
-"""Preparation lifetime owner. Preview completes every pre-write check."""
+"""Preparation lifetime owner shared by dry-run and writing."""
 
 import hashlib
 import os
 import stat
-from collections.abc import Callable
 from contextlib import ExitStack
 from dataclasses import dataclass
 from pathlib import Path
@@ -199,17 +198,11 @@ def destination_check(output: Path, sources: list[Source]) -> None:
         ) from exc
 
 
-def plan(request: Request, *, before_recheck: Callable[[], None] | None = None) -> Plan:
-    return operate(request, preview=True, before_recheck=before_recheck)
-
-
 def operate(
     request: Request,
     *,
-    preview: bool = False,
     control: Control | None = None,
     mode: int | None = None,
-    before_recheck: Callable[[], None] | None = None,
 ) -> Plan:
     control = control if control is not None else Control()
     mode = startup_mode() if mode is None else mode
@@ -218,6 +211,7 @@ def operate(
     with ExitStack() as stack:
         sources: dict[Path, Source] = {}
         for selection in selections:
+            control.check()
             if selection.source not in sources:
                 sources[selection.source] = open_source(selection.source, stack)
         resolved = [(s, resolve(s, len(sources[s.source].pdf.pages))) for s in selections]
@@ -231,6 +225,7 @@ def operate(
         projected: list[Projection] = []
         cache: dict[tuple[int, int, int], Projection] = {}
         for occurrence in pages:
+            control.check()
             source = sources[occurrence.source]
             key = source.identity.device, source.identity.inode, occurrence.source_page
             try:
@@ -269,19 +264,23 @@ def operate(
         )
         staged: Staged | None = None
         try:
-            if not (preview or request.dry_run):
+            control.check()
+            if not request.dry_run:
                 staged = Staged.create(request.output, mode, control)
+                control.check()
                 copying.save(result, staged.stream)
+                control.check()
                 for source in sources.values():
                     copying.warnings(source.pdf, "COPY_FAILED")
                 copying.validate(result, staged.stream)
-            if before_recheck is not None:
-                before_recheck()
+                control.check()
             for source in sources.values():
                 source.recheck()
+                control.check()
                 warnings(source.pdf)
             if staged is not None:
                 staged.finish()
+                control.check()
                 staged.commit()
         except PreparationError as exc:
             exc.context["warnings"] = control.warnings

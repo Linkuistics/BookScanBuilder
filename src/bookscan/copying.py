@@ -263,7 +263,7 @@ def validate(plan: "Plan", stream: BinaryIO) -> None:
                 warnings(pdf, "OUTPUT_INVALID")
             warnings(pdf, "OUTPUT_INVALID")
     except PreparationError as exc:
-        if exc.code == "OUTPUT_INVALID":
+        if exc.code != "SOURCE_UNSUPPORTED":
             raise
         raise failure("OUTPUT_INVALID", "Unsupported staged output: " + exc.message) from exc
     except (pikepdf.PdfError, ValueError, TypeError, OSError, RecursionError) as exc:

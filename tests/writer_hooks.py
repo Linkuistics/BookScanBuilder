@@ -77,3 +77,97 @@ def install(hook: str, channel: Path) -> None:
             original_cleanup(self)
 
         Staged.cleanup = cleanup
+    elif hook in {"validation", "cleanup-interrupted"}:
+        import bookscan.copying as copying
+
+        original_project = copying.project_page
+        first = True
+
+        def project(page: pikepdf.Object):
+            nonlocal first
+            if first:
+                first = False
+                ready(hook)
+            return original_project(page)
+
+        copying.project_page = project
+        if hook == "cleanup-interrupted":
+            original_unlink = Path.unlink
+
+            def unlink(self: Path, missing_ok: bool = False) -> None:
+                if self.name.startswith(".bookscan-prepare-"):
+                    ready("cleanup-second-signal")
+                original_unlink(self, missing_ok=missing_ok)
+
+            Path.unlink = unlink
+    elif hook == "recheck":
+        from bookscan.prepare import Source
+
+        original_recheck = Source.recheck
+
+        def recheck(self: Source) -> None:
+            ready(hook)
+            original_recheck(self)
+
+        Source.recheck = recheck
+    elif hook == "finish":
+        original_fsync = os.fsync
+
+        def fsync(descriptor: int) -> None:
+            ready(hook)
+            original_fsync(descriptor)
+
+        os.fsync = fsync
+    elif hook == "dry-traversal":
+        import bookscan.prepare as preparation
+
+        original_project = preparation.project_page
+
+        def project_source(page: pikepdf.Object):
+            ready(hook)
+            return original_project(page)
+
+        preparation.project_page = project_source
+    elif hook == "after-open":
+        original_open = os.open
+
+        def opened(
+            path: str | bytes | os.PathLike[str] | os.PathLike[bytes],
+            flags: int,
+            mode: int = 0o777,
+            *,
+            dir_fd: int | None = None,
+        ) -> int:
+            descriptor = original_open(path, flags, mode, dir_fd=dir_fd)
+            if flags & os.O_CREAT:
+                ready(hook)
+            return descriptor
+
+        os.open = opened
+    elif hook in {"plan-emit", "error-emit"}:
+        import bookscan.cli as cli
+        from bookscan.results import Json
+
+        original_emit = cli.emit
+
+        def emit(record: dict[str, Json], json_mode: bool) -> str:
+            ready(hook)
+            return original_emit(record, json_mode)
+
+        cli.emit = emit
+    elif hook == "cleanup-error":
+        import bookscan.copying as copying
+        from bookscan.publication import failure
+
+        def invalid(*_args: object) -> None:
+            raise failure("OUTPUT_INVALID", "Controlled original validation error.")
+
+        copying.validate = invalid
+        original_unlink = Path.unlink
+
+        def unlink_error(self: Path, missing_ok: bool = False) -> None:
+            if self.name.startswith(".bookscan-prepare-"):
+                ready(hook)
+            original_unlink(self, missing_ok=missing_ok)
+
+        Path.unlink = unlink_error

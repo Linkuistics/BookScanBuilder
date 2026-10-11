@@ -15,7 +15,8 @@ task prepare:acceptance MODE=real ARTIFACTS=/tmp/NEW-REAL-DIRECTORY 'COLLECTION=
 task prepare:acceptance MODE=all ARTIFACTS=/tmp/NEW-ALL-DIRECTORY 'COLLECTION=/Volumes/Glass/Book Conversion'
 ```
 
-`prepare:check` passed 199 tests, Ruff formatting/lint and strict pyright.
+After integration `prepared-pdf-k19`, `prepare:check` passed 231 tests, Ruff
+formatting/lint and strict pyright. The producer's original run passed 199 tests.
 It requires neither Poppler nor collection access. Tests exercise the installed
 locked public command for parsing/order/roles, copying, aliases, occupation,
 retry and actual spaced-path/exclusion forwarding through `prepare:run`.
@@ -35,7 +36,13 @@ The signal/kill checks directly launch `.venv/bin/bookscan`, record its PID and
 acknowledge private barriers through a test-owned channel. They exercise actual
 SIGINT/SIGTERM during writing, pre-region/pending cancellation, immediately after
 blocking, before link, after link, committed-before-unblock and cleanup.
-Pre-commit signals yield `INTERRUPTED`/130 or 143; in-region/post-link signals
+The repaired checks additionally observe validation, write/dry-run source
+rechecking, final fsync, dry-run traversal, the interval after `os.open`, plan
+serialization, chosen-error serialization/cleanup and repeated cancellation
+during cleanup. Pre-commit cancellation checks yield `INTERRUPTED`/130 or 143;
+an already chosen error keeps its original exit through later signals, and
+signals after plan finalization keep that delivered result. Cancellation waits
+for the current operation to return. In-region/post-link signals
 retain `written`/0 and `POST_COMMIT_SIGNAL`. Kill observations prove absent
 destination during writing, or two names for the same complete file after link,
 both before SIGKILL and after the writer is reaped. Test cleanup follows those
@@ -95,14 +102,23 @@ PNG crops retain native pixels without resampling. The inspected provisional
 music detail pair retains the source's thin stencil drawing, faint paper marks
 and staff-line distortion; preservation is not geometry correction.
 
-Final retained reports: [synthetic](prepared-pdf-synthetic-report.json),
+Historical producer reports: [synthetic](prepared-pdf-synthetic-report.json),
 [real](prepared-pdf-real-report.json), and [all](prepared-pdf-all-report.json).
 All three runs completed with matching before/after subject digests, rechecked
-against the current files before retention. The synthetic and real runs were
+against the producer's files before retention. The synthetic and real runs were
 compared with the all run **item by item** (geometry, raw resources, roles/order,
 render dimensions and RGB hashes); every item agreed. The all run covers 13
 cases/31 corresponding pages. Each run retains 18 observed signal/kill cases and
 its per-test fault/validation JUnit outcomes.
+
+Those producer reports remain unchanged. Their 18 signal/kill observations
+establish the listed barriers, not a general guarantee for every pre-commit
+bytecode. Review `prepared-pdf-k18` reproduced misreported validation signals,
+tracebacks during serialization and private-file leaks at acquisition/repeated
+cleanup; the original broad signal claim is superseded by the repair and its
+new observations. Historical render comparisons remain evidence for their
+unchanged page content; their subject digests describe producer `750cc07b`,
+not the current repair.
 
 Actual tools: Python 3.12.15, pikepdf 10.16.0/qpdf 12.4.2, uv 0.13.0,
 Task 3.54.0 and Poppler 26.10.0. uv and Task executables are observed versions,
@@ -110,6 +126,30 @@ not pinned by this project's setup. Actual `prepare:run` spaced-path and
 single-quoted exclusion forwarding passed against direct JSON invocation after
 the recipe changes. Setup synced the locked package and found the acceptance
 renderer; no historical experiment/diagram recipe changed.
+
+## Integration verification
+
+Integration `prepared-pdf-k19` retained new frozen reports:
+[synthetic](prepared-pdf-k19-synthetic-report.json),
+[real](prepared-pdf-k19-real-report.json), and
+[all](prepared-pdf-k19-all-report.json). Synthetic ran with a nonexistent
+collection setting and no collection argument. The runs cover 9 cases/24 pages,
+5 cases/10 pages and their union of 14 cases/34 pages respectively. Each retains
+38 individually observed signal/kill records and 90 passing fault/validation
+test outcomes. Every run's before/after subject digests match and were rehashed
+against the files before retention. Corresponding geometry, encoded streams,
+roles/order, extracted labels, render dimensions/RGB and all 38 signal/kill
+outcomes agree **item by item** across modes. No instrument edits occurred during
+measurement. The original four producer/preview reports are byte-identical to
+review commit `ddb2595c`.
+
+Current full-page/native-detail comparisons live under
+`/private/tmp/bookscan-prepared-k19-all`; use the same case/view filenames listed
+above. `reversed-boxes-page-1-cropbox` through `reversed-boxes-page-3-cropbox`
+add all three reversed diagonal-corner orientations, preserving original box
+coordinates and exact 300-dpi RGB. Current setup also verifies `pdftotext`.
+The spec/help/README explicitly accept retained-byte memory costs and
+cross-page resource duplication; these costs do not alter visual fidelity.
 
 ## Human response and review
 
@@ -120,11 +160,11 @@ and in its running log. `corrected-book-k5` checks that disposition and retains
 precise repair/missing-comparison work before processor acceptance. Pixel
 equality and code review cannot substitute for the user's response.
 
-The preparation subsystem earns an external `review-impl` before geometry. Its
-special scrutiny includes immutable graph reconstruction, the encoded-empty
+The preparation subsystem's external review `prepared-pdf-k18` completed before
+geometry; integration `prepared-pdf-k19` resolves its findings. Its scrutiny
+included immutable graph reconstruction, the encoded-empty
 stream incremental revision, pair/cycle equality, annotation ownership,
-source-lifetime rechecks and atomic signal/commit semantics. Review creates an
-integration step lazily when actionable findings exist.
+source-lifetime rechecks and atomic signal/commit semantics.
 
 The historical dependency experiment/report are frozen. Their earlier Taskfile
 digest describes that recipe's historical run. The retained

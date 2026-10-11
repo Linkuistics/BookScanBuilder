@@ -41,7 +41,11 @@ searches collection files, or splits a spread. Interior covers and covers in
 an assembled PDF selected as content have the advisory `content` role.
 
 `--dry-run` hashes each source twice and traverses its retained graph, including
-nested encoded streams, so large PDFs have an I/O/memory cost. It checks all
+nested encoded streams, and retains selected encoded bytes in memory in both
+dry-run and write. Resources shared across source pages are copied per output
+page; memory and output size may grow well beyond source size. This bounded
+implementation promises no memory or file-size ceiling; measured fixture costs
+and the accepted trade-off are in [the spec](docs/specs/prepared-pdf.md). It checks all
 source gates, geometry, selections, destination preconditions and stability,
 and reports the complete order. It creates no PDF or temporary file, tries no
 write permissions and reserves no destination. A later write can still fail.
@@ -68,7 +72,10 @@ Human success prints the absolute destination only; dry-run prints the numbered
 plan. `--json` emits one version-1 result, including parser errors, and `--help`
 wins over other arguments without opening inputs. Diagnostics use stderr.
 After ambiguous interruption, inspect the destination before retrying. Caught
-SIGINT/SIGTERM before publication yield `INTERRUPTED`/130 or 143; after the link,
+SIGINT/SIGTERM detected before publication yield `INTERRUPTED`/130 or 143;
+cancellation waits for the current operation to return. Cleanup cannot be
+interrupted by another caught signal. A chosen error or a completely serialized
+plan fixed for delivery keeps its result through later signals. After the link,
 success remains `written`/0 with reportable warnings. SIGKILL can leave a private
 remnant and prevent reporting, while the destination is absent or complete.
 Later runs never sweep other runs' private files. Source files remain read-only.
