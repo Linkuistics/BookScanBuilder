@@ -2,7 +2,8 @@
   "pikepdf": "10.16.0",
   "qpdf": "12.4.2",
   "poppler": "pdftoppm version 26.10.0\nCopyright 2005-2026 The Poppler Developers - http://poppler.freedesktop.org\nCopyright 1996-2011, 2022 Glyph & Cog, LLC",
-  "script_sha256": "223b6adf281167ea200025acb6361c1447ec984710dabdf9e2ca3d9f093139ed",
+  "script_sha256": "ec2302e23775927709ee71dd73aaa7142ae1be6d9869a046ee641611921806ff",
+  "taskfile_sha256": "6c7f9a588c5b2341b77222e68ffdfc5487293ab02e65d03f865ea5e3b450cffd",
   "sources_before": {
     "Covers/SchoenbergComposition.pdf": "55fef6822d156d48985e55570de77201687de81b84a11f4a2b76a125c1d8873f",
     "Raw Scans/Fundamentals of Musical Composition.pdf": "3235a842d619a18b11e2fbdb3b5b6666adeb223959cafd4b1d67f27f0dbfe780",
@@ -37,6 +38,24 @@
           "595.000000",
           "841.000000"
         ],
+        "bleed": [
+          "0.000000",
+          "0.000000",
+          "595.000000",
+          "841.000000"
+        ],
+        "trim": [
+          "0.000000",
+          "0.000000",
+          "595.000000",
+          "841.000000"
+        ],
+        "art": [
+          "0.000000",
+          "0.000000",
+          "595.000000",
+          "841.000000"
+        ],
         "rotate": 0,
         "unit": 1,
         "contents": [
@@ -51,7 +70,72 @@
             "mask": false
           }
         },
-        "annotations": 0
+        "annotations": 0,
+        "resource_graph": {
+          "dictionary": {
+            "/ProcSet": [
+              {
+                "name": "/PDF"
+              },
+              {
+                "name": "/Text"
+              },
+              {
+                "name": "/ImageB"
+              },
+              {
+                "name": "/ImageC"
+              },
+              {
+                "name": "/ImageI"
+              }
+            ],
+            "/XObject": {
+              "dictionary": {
+                "/XOb7": {
+                  "dictionary": {
+                    "/BBox": [
+                      "0.000000",
+                      "0.000000",
+                      "2480.000000",
+                      "3508.000000"
+                    ],
+                    "/BitsPerComponent": 8,
+                    "/ColorSpace": [
+                      {
+                        "name": "/ICCBased"
+                      },
+                      {
+                        "dictionary": {
+                          "/Alternate": {
+                            "name": "/DeviceRGB"
+                          },
+                          "/Filter": {
+                            "name": "/FlateDecode"
+                          },
+                          "/N": 3
+                        },
+                        "raw_sha256": "b27830d6c5077cfd9d68e561489582b61f36b83d06e2263526851838153043bd"
+                      }
+                    ],
+                    "/Filter": {
+                      "name": "/DCTDecode"
+                    },
+                    "/Height": 3508,
+                    "/Subtype": {
+                      "name": "/Image"
+                    },
+                    "/Type": {
+                      "name": "/XObject"
+                    },
+                    "/Width": 2480
+                  },
+                  "raw_sha256": "01d0dfb71cfbab6792d2ab4d4e6ca9defcded6fc4dfa1da0f620b5902134a443"
+                }
+              }
+            }
+          }
+        }
       },
       "render_size": [
         2480,
@@ -72,6 +156,24 @@
           "586.32"
         ],
         "crop": [
+          0,
+          0,
+          "406.08",
+          "586.32"
+        ],
+        "bleed": [
+          0,
+          0,
+          "406.08",
+          "586.32"
+        ],
+        "trim": [
+          0,
+          0,
+          "406.08",
+          "586.32"
+        ],
+        "art": [
           0,
           0,
           "406.08",
@@ -99,7 +201,82 @@
             "mask": true
           }
         },
-        "annotations": 0
+        "annotations": 0,
+        "resource_graph": {
+          "dictionary": {
+            "/ProcSet": [
+              {
+                "name": "/PDF"
+              },
+              {
+                "name": "/Text"
+              },
+              {
+                "name": "/ImageB"
+              },
+              {
+                "name": "/ImageC"
+              },
+              {
+                "name": "/ImageI"
+              }
+            ],
+            "/XObject": {
+              "dictionary": {
+                "/Obj201": {
+                  "dictionary": {
+                    "/BitsPerComponent": 8,
+                    "/ColorSpace": {
+                      "name": "/DeviceRGB"
+                    },
+                    "/Filter": {
+                      "name": "/DCTDecode"
+                    },
+                    "/Height": 1221,
+                    "/Name": {
+                      "name": "/Obj201"
+                    },
+                    "/Subtype": {
+                      "name": "/Image"
+                    },
+                    "/Type": {
+                      "name": "/XObject"
+                    },
+                    "/Width": 846
+                  },
+                  "raw_sha256": "1f40ab702e942c262049f5281a412fe0a8b6e86049ed86572c2075161ff56723"
+                },
+                "/Obj202": {
+                  "dictionary": {
+                    "/BitsPerComponent": 1,
+                    "/DecodeParms": {
+                      "dictionary": {
+                        "/Columns": 1416,
+                        "/K": -1
+                      }
+                    },
+                    "/Filter": {
+                      "name": "/CCITTFaxDecode"
+                    },
+                    "/Height": 1944,
+                    "/ImageMask": true,
+                    "/Name": {
+                      "name": "/Obj202"
+                    },
+                    "/Subtype": {
+                      "name": "/Image"
+                    },
+                    "/Type": {
+                      "name": "/XObject"
+                    },
+                    "/Width": 1416
+                  },
+                  "raw_sha256": "042a0e0942435ed521b83afba3beb91181334cf2325d98c80917a0b1f1b2342c"
+                }
+              }
+            }
+          }
+        }
       },
       "render_size": [
         1692,
@@ -120,6 +297,24 @@
           "590.16"
         ],
         "crop": [
+          0,
+          0,
+          "412.80",
+          "590.16"
+        ],
+        "bleed": [
+          0,
+          0,
+          "412.80",
+          "590.16"
+        ],
+        "trim": [
+          0,
+          0,
+          "412.80",
+          "590.16"
+        ],
+        "art": [
           0,
           0,
           "412.80",
@@ -154,7 +349,109 @@
             "mask": true
           }
         },
-        "annotations": 0
+        "annotations": 0,
+        "resource_graph": {
+          "dictionary": {
+            "/ProcSet": [
+              {
+                "name": "/PDF"
+              },
+              {
+                "name": "/Text"
+              },
+              {
+                "name": "/ImageB"
+              },
+              {
+                "name": "/ImageC"
+              },
+              {
+                "name": "/ImageI"
+              }
+            ],
+            "/XObject": {
+              "dictionary": {
+                "/Obj724": {
+                  "dictionary": {
+                    "/BitsPerComponent": 8,
+                    "/ColorSpace": {
+                      "name": "/DeviceRGB"
+                    },
+                    "/Filter": {
+                      "name": "/DCTDecode"
+                    },
+                    "/Height": 1229,
+                    "/Name": {
+                      "name": "/Obj724"
+                    },
+                    "/Subtype": {
+                      "name": "/Image"
+                    },
+                    "/Type": {
+                      "name": "/XObject"
+                    },
+                    "/Width": 860
+                  },
+                  "raw_sha256": "acc670da2e281dcbe2edf89dab792f9d210b86ba5d21decc3ad05a3e369a068a"
+                },
+                "/Obj725": {
+                  "dictionary": {
+                    "/BitsPerComponent": 1,
+                    "/DecodeParms": {
+                      "dictionary": {
+                        "/Columns": 1408,
+                        "/K": -1
+                      }
+                    },
+                    "/Filter": {
+                      "name": "/CCITTFaxDecode"
+                    },
+                    "/Height": 1880,
+                    "/ImageMask": true,
+                    "/Name": {
+                      "name": "/Obj725"
+                    },
+                    "/Subtype": {
+                      "name": "/Image"
+                    },
+                    "/Type": {
+                      "name": "/XObject"
+                    },
+                    "/Width": 1408
+                  },
+                  "raw_sha256": "34c5c56ae58521e8674bfb4ef65b443e53a47b55901a9be2a620a048840f82a4"
+                },
+                "/Obj726": {
+                  "dictionary": {
+                    "/BitsPerComponent": 1,
+                    "/DecodeParms": {
+                      "dictionary": {
+                        "/Columns": 80,
+                        "/K": -1
+                      }
+                    },
+                    "/Filter": {
+                      "name": "/CCITTFaxDecode"
+                    },
+                    "/Height": 12,
+                    "/ImageMask": true,
+                    "/Name": {
+                      "name": "/Obj726"
+                    },
+                    "/Subtype": {
+                      "name": "/Image"
+                    },
+                    "/Type": {
+                      "name": "/XObject"
+                    },
+                    "/Width": 80
+                  },
+                  "raw_sha256": "1932ed0c6c937a9b9e2457ad8263eec5cb5dc62a68bb2153a75f103124061939"
+                }
+              }
+            }
+          }
+        }
       },
       "render_size": [
         1720,
@@ -180,6 +477,24 @@
           "861.71",
           "646.69"
         ],
+        "bleed": [
+          "0.0",
+          "0.0",
+          "861.71",
+          "646.69"
+        ],
+        "trim": [
+          "0.0",
+          "0.0",
+          "861.71",
+          "646.69"
+        ],
+        "art": [
+          "0.0",
+          "0.0",
+          "861.71",
+          "646.69"
+        ],
         "rotate": 0,
         "unit": 1,
         "contents": [
@@ -194,7 +509,57 @@
             "mask": false
           }
         },
-        "annotations": 0
+        "annotations": 0,
+        "resource_graph": {
+          "dictionary": {
+            "/ProcSet": [
+              {
+                "name": "/PDF"
+              },
+              {
+                "name": "/ImageB"
+              }
+            ],
+            "/XObject": {
+              "dictionary": {
+                "/Im0": {
+                  "dictionary": {
+                    "/BitsPerComponent": 8,
+                    "/ColorSpace": {
+                      "name": "/DeviceGray"
+                    },
+                    "/Filter": {
+                      "name": "/DCTDecode"
+                    },
+                    "/Height": 1976,
+                    "/Metadata": {
+                      "dictionary": {
+                        "/Subtype": {
+                          "name": "/XML"
+                        },
+                        "/Type": {
+                          "name": "/Metadata"
+                        }
+                      },
+                      "raw_sha256": "5e8e7fb65617c2f546b5460c727ffe2e4788c6972136be524d45e4b6d7f38563"
+                    },
+                    "/Name": {
+                      "name": "/X"
+                    },
+                    "/Subtype": {
+                      "name": "/Image"
+                    },
+                    "/Type": {
+                      "name": "/XObject"
+                    },
+                    "/Width": 2633
+                  },
+                  "raw_sha256": "6699993000bdc73f866b226b38ddb5c9a1f31bf32214c37d2cb848307f86f2b0"
+                }
+              }
+            }
+          }
+        }
       },
       "render_size": [
         3591,
@@ -220,6 +585,24 @@
           842,
           595
         ],
+        "bleed": [
+          0,
+          0,
+          842,
+          595
+        ],
+        "trim": [
+          0,
+          0,
+          842,
+          595
+        ],
+        "art": [
+          0,
+          0,
+          842,
+          595
+        ],
         "rotate": 0,
         "unit": 1,
         "contents": [
@@ -234,7 +617,43 @@
             "mask": false
           }
         },
-        "annotations": 0
+        "annotations": 0,
+        "resource_graph": {
+          "dictionary": {
+            "/ProcSet": [
+              {
+                "name": "/PDF"
+              },
+              {
+                "name": "/ImageC"
+              }
+            ],
+            "/XObject": {
+              "dictionary": {
+                "/Im101": {
+                  "dictionary": {
+                    "/BitsPerComponent": 8,
+                    "/ColorSpace": {
+                      "name": "/DeviceRGB"
+                    },
+                    "/Filter": {
+                      "name": "/DCTDecode"
+                    },
+                    "/Height": 1395,
+                    "/Subtype": {
+                      "name": "/Image"
+                    },
+                    "/Type": {
+                      "name": "/XObject"
+                    },
+                    "/Width": 1975
+                  },
+                  "raw_sha256": "ff0b503dd17883ba8fca9304b66a1d1cc32f0cb1eeffd15d901535ed45add601"
+                }
+              }
+            }
+          }
+        }
       },
       "render_size": [
         3509,
@@ -260,6 +679,24 @@
           "564.0",
           "653.0"
         ],
+        "bleed": [
+          "0.0",
+          "0.0",
+          "564.0",
+          "653.0"
+        ],
+        "trim": [
+          "0.0",
+          "0.0",
+          "564.0",
+          "653.0"
+        ],
+        "art": [
+          "0.0",
+          "0.0",
+          "564.0",
+          "653.0"
+        ],
         "rotate": 0,
         "unit": 1,
         "contents": [
@@ -274,7 +711,48 @@
             "mask": false
           }
         },
-        "annotations": 0
+        "annotations": 0,
+        "resource_graph": {
+          "dictionary": {
+            "/ProcSet": [
+              {
+                "name": "/PDF"
+              },
+              {
+                "name": "/ImageB"
+              }
+            ],
+            "/XObject": {
+              "dictionary": {
+                "/Im0": {
+                  "dictionary": {
+                    "/BitsPerComponent": 1,
+                    "/ColorSpace": {
+                      "name": "/DeviceGray"
+                    },
+                    "/DecodeParms": {
+                      "dictionary": {
+                        "/JBIG2Globals": {
+                          "dictionary": {},
+                          "raw_sha256": "08f2b37bbe2955b4da89a78bcb50a0121e4cd7e4c1e4146764ead8523c78c4b4"
+                        }
+                      }
+                    },
+                    "/Filter": {
+                      "name": "/JBIG2Decode"
+                    },
+                    "/Height": 2448,
+                    "/Subtype": {
+                      "name": "/Image"
+                    },
+                    "/Width": 2159
+                  },
+                  "raw_sha256": "94668dc3347775c12dbebf63fa2e1bbd1a58d33d6bc04069e6ae643a319a7f95"
+                }
+              }
+            }
+          }
+        }
       },
       "render_size": [
         2350,
@@ -300,6 +778,24 @@
           "595.000000",
           "841.000000"
         ],
+        "bleed": [
+          "0.000000",
+          "0.000000",
+          "595.000000",
+          "841.000000"
+        ],
+        "trim": [
+          "0.000000",
+          "0.000000",
+          "595.000000",
+          "841.000000"
+        ],
+        "art": [
+          "0.000000",
+          "0.000000",
+          "595.000000",
+          "841.000000"
+        ],
         "rotate": 0,
         "unit": 1,
         "contents": [
@@ -314,7 +810,72 @@
             "mask": false
           }
         },
-        "annotations": 0
+        "annotations": 0,
+        "resource_graph": {
+          "dictionary": {
+            "/ProcSet": [
+              {
+                "name": "/PDF"
+              },
+              {
+                "name": "/Text"
+              },
+              {
+                "name": "/ImageB"
+              },
+              {
+                "name": "/ImageC"
+              },
+              {
+                "name": "/ImageI"
+              }
+            ],
+            "/XObject": {
+              "dictionary": {
+                "/XOb7": {
+                  "dictionary": {
+                    "/BBox": [
+                      "0.000000",
+                      "0.000000",
+                      "2062.000000",
+                      "3088.000000"
+                    ],
+                    "/BitsPerComponent": 8,
+                    "/ColorSpace": [
+                      {
+                        "name": "/ICCBased"
+                      },
+                      {
+                        "dictionary": {
+                          "/Alternate": {
+                            "name": "/DeviceRGB"
+                          },
+                          "/Filter": {
+                            "name": "/FlateDecode"
+                          },
+                          "/N": 3
+                        },
+                        "raw_sha256": "b27830d6c5077cfd9d68e561489582b61f36b83d06e2263526851838153043bd"
+                      }
+                    ],
+                    "/Filter": {
+                      "name": "/DCTDecode"
+                    },
+                    "/Height": 3088,
+                    "/Subtype": {
+                      "name": "/Image"
+                    },
+                    "/Type": {
+                      "name": "/XObject"
+                    },
+                    "/Width": 2062
+                  },
+                  "raw_sha256": "872afe5118d76b36cee2e6e7c51b29aa14488b68741808a91c67c54677fdefdc"
+                }
+              }
+            }
+          }
+        }
       },
       "render_size": [
         2480,
@@ -340,6 +901,24 @@
           "595.000000",
           "841.000000"
         ],
+        "bleed": [
+          "0.000000",
+          "0.000000",
+          "595.000000",
+          "841.000000"
+        ],
+        "trim": [
+          "0.000000",
+          "0.000000",
+          "595.000000",
+          "841.000000"
+        ],
+        "art": [
+          "0.000000",
+          "0.000000",
+          "595.000000",
+          "841.000000"
+        ],
         "rotate": 0,
         "unit": 1,
         "contents": [
@@ -354,7 +933,72 @@
             "mask": false
           }
         },
-        "annotations": 0
+        "annotations": 0,
+        "resource_graph": {
+          "dictionary": {
+            "/ProcSet": [
+              {
+                "name": "/PDF"
+              },
+              {
+                "name": "/Text"
+              },
+              {
+                "name": "/ImageB"
+              },
+              {
+                "name": "/ImageC"
+              },
+              {
+                "name": "/ImageI"
+              }
+            ],
+            "/XObject": {
+              "dictionary": {
+                "/XOb7": {
+                  "dictionary": {
+                    "/BBox": [
+                      "0.000000",
+                      "0.000000",
+                      "2160.000000",
+                      "3084.000000"
+                    ],
+                    "/BitsPerComponent": 8,
+                    "/ColorSpace": [
+                      {
+                        "name": "/ICCBased"
+                      },
+                      {
+                        "dictionary": {
+                          "/Alternate": {
+                            "name": "/DeviceRGB"
+                          },
+                          "/Filter": {
+                            "name": "/FlateDecode"
+                          },
+                          "/N": 3
+                        },
+                        "raw_sha256": "b27830d6c5077cfd9d68e561489582b61f36b83d06e2263526851838153043bd"
+                      }
+                    ],
+                    "/Filter": {
+                      "name": "/DCTDecode"
+                    },
+                    "/Height": 3084,
+                    "/Subtype": {
+                      "name": "/Image"
+                    },
+                    "/Type": {
+                      "name": "/XObject"
+                    },
+                    "/Width": 2160
+                  },
+                  "raw_sha256": "4bfd43c29d69c6773e3b3404ddb355efb95f21b4473630b397ce682a52abc8d6"
+                }
+              }
+            }
+          }
+        }
       },
       "render_size": [
         2480,
@@ -364,6 +1008,167 @@
       "exact_render_match": true
     }
   ],
+  "source_inventory": {
+    "Covers/SchoenbergComposition.pdf": {
+      "header_version": "1.3",
+      "catalog_version": "",
+      "page_count": 1,
+      "catalog_keys": [
+        "/Pages",
+        "/Type"
+      ],
+      "page_key_counts": {
+        "/Resources": 1,
+        "/MediaBox": 1,
+        "/Contents": 1,
+        "/Parent": 1,
+        "/Type": 1
+      },
+      "annotation_pages": 0,
+      "encrypted": false,
+      "form_field_count": 0,
+      "xfa": false,
+      "optional_content": false,
+      "output_intents": false,
+      "warnings": []
+    },
+    "Raw Scans/Fundamentals of Musical Composition.pdf": {
+      "header_version": "1.3",
+      "catalog_version": "",
+      "page_count": 238,
+      "catalog_keys": [
+        "/Pages",
+        "/Type"
+      ],
+      "page_key_counts": {
+        "/Resources": 238,
+        "/MediaBox": 238,
+        "/Contents": 238,
+        "/Parent": 238,
+        "/Type": 238
+      },
+      "annotation_pages": 0,
+      "encrypted": false,
+      "form_field_count": 0,
+      "xfa": false,
+      "optional_content": false,
+      "output_intents": false,
+      "warnings": []
+    },
+    "Processed Books/Norwegian - An Essential Grammar (Routledge)/Norwegian - An Essential Grammar (Routledge).pdf": {
+      "header_version": "1.6",
+      "catalog_version": "",
+      "page_count": 104,
+      "catalog_keys": [
+        "/Metadata",
+        "/Outlines",
+        "/Pages",
+        "/StructTreeRoot",
+        "/Type"
+      ],
+      "page_key_counts": {
+        "/CropBox": 104,
+        "/Resources": 104,
+        "/Rotate": 104,
+        "/MediaBox": 104,
+        "/StructParents": 104,
+        "/Contents": 104,
+        "/Parent": 104,
+        "/Type": 104
+      },
+      "annotation_pages": 0,
+      "encrypted": false,
+      "form_field_count": 0,
+      "xfa": false,
+      "optional_content": false,
+      "output_intents": false,
+      "warnings": []
+    },
+    "Needing Cleanup/Counterpoint in Composition.pdf": {
+      "header_version": "1.4",
+      "catalog_version": "",
+      "page_count": 493,
+      "catalog_keys": [
+        "/Pages",
+        "/Type"
+      ],
+      "page_key_counts": {
+        "/Resources": 493,
+        "/Rotate": 493,
+        "/MediaBox": 493,
+        "/Contents": 493,
+        "/Parent": 493,
+        "/Type": 493
+      },
+      "annotation_pages": 0,
+      "encrypted": false,
+      "form_field_count": 0,
+      "xfa": false,
+      "optional_content": false,
+      "output_intents": false,
+      "warnings": []
+    },
+    "Processed Books/Algorithm Design/Algorithm Design.pdf": {
+      "header_version": "1.7",
+      "catalog_version": "",
+      "page_count": 863,
+      "catalog_keys": [
+        "/AcroForm",
+        "/Extensions",
+        "/Metadata",
+        "/Outlines",
+        "/Pages",
+        "/StructTreeRoot",
+        "/Type"
+      ],
+      "page_key_counts": {
+        "/CropBox": 863,
+        "/Resources": 863,
+        "/Rotate": 863,
+        "/MediaBox": 863,
+        "/Contents": 863,
+        "/Parent": 863,
+        "/Type": 863
+      },
+      "annotation_pages": 0,
+      "encrypted": false,
+      "form_field_count": 0,
+      "xfa": false,
+      "optional_content": false,
+      "output_intents": false,
+      "warnings": []
+    },
+    "Covers/Algorithms on Strings, Trees, and Sequence.pdf": {
+      "header_version": "1.3",
+      "catalog_version": "",
+      "page_count": 2,
+      "catalog_keys": [
+        "/Outlines",
+        "/Pages",
+        "/Type"
+      ],
+      "page_key_counts": {
+        "/Resources": 2,
+        "/MediaBox": 2,
+        "/Contents": 2,
+        "/Parent": 2,
+        "/Type": 2
+      },
+      "annotation_pages": 0,
+      "encrypted": false,
+      "form_field_count": 0,
+      "xfa": false,
+      "optional_content": false,
+      "output_intents": false,
+      "warnings": []
+    }
+  },
+  "output_extensions": {
+    "/ADBE": {
+      "base_version": "1.7",
+      "extension_level": 3
+    }
+  },
   "label_order": [
     "K1",
     "C2",
@@ -372,5 +1177,417 @@
     "K4",
     "K1"
   ],
+  "label_records": [
+    {
+      "output_page": 1,
+      "source": "cover-labels.pdf",
+      "source_page": 1,
+      "role": "front",
+      "fingerprint": {
+        "media": [
+          0,
+          0,
+          240,
+          320
+        ],
+        "crop": [
+          10,
+          10,
+          230,
+          310
+        ],
+        "bleed": [
+          12,
+          12,
+          228,
+          308
+        ],
+        "trim": [
+          15,
+          15,
+          225,
+          305
+        ],
+        "art": [
+          20,
+          20,
+          220,
+          300
+        ],
+        "rotate": 90,
+        "unit": "1.25",
+        "contents": [
+          "0f72637241ddfe7c6267476b3fcf41b11c47b382694905b5ffb4f0a7be95e21e"
+        ],
+        "images": {},
+        "annotations": 0,
+        "resource_graph": {
+          "dictionary": {
+            "/Font": {
+              "dictionary": {
+                "/F1": {
+                  "dictionary": {
+                    "/BaseFont": {
+                      "name": "/Helvetica"
+                    },
+                    "/Subtype": {
+                      "name": "/Type1"
+                    },
+                    "/Type": {
+                      "name": "/Font"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "exact_render_match": true
+    },
+    {
+      "output_page": 2,
+      "source": "content-labels.pdf",
+      "source_page": 2,
+      "role": "content",
+      "fingerprint": {
+        "media": [
+          0,
+          0,
+          240,
+          320
+        ],
+        "crop": [
+          10,
+          10,
+          230,
+          310
+        ],
+        "bleed": [
+          12,
+          12,
+          228,
+          308
+        ],
+        "trim": [
+          15,
+          15,
+          225,
+          305
+        ],
+        "art": [
+          20,
+          20,
+          220,
+          300
+        ],
+        "rotate": 90,
+        "unit": "1.25",
+        "contents": [
+          "ecd92353e4d922db306ded5b29003ac28c7c7850a69ec163965deab4df2a275c"
+        ],
+        "images": {},
+        "annotations": 0,
+        "resource_graph": {
+          "dictionary": {
+            "/Font": {
+              "dictionary": {
+                "/F1": {
+                  "dictionary": {
+                    "/BaseFont": {
+                      "name": "/Helvetica"
+                    },
+                    "/Subtype": {
+                      "name": "/Type1"
+                    },
+                    "/Type": {
+                      "name": "/Font"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "exact_render_match": true
+    },
+    {
+      "output_page": 3,
+      "source": "cover-labels.pdf",
+      "source_page": 3,
+      "role": "content",
+      "fingerprint": {
+        "media": [
+          0,
+          0,
+          240,
+          320
+        ],
+        "crop": [
+          10,
+          10,
+          230,
+          310
+        ],
+        "bleed": [
+          12,
+          12,
+          228,
+          308
+        ],
+        "trim": [
+          15,
+          15,
+          225,
+          305
+        ],
+        "art": [
+          20,
+          20,
+          220,
+          300
+        ],
+        "rotate": 90,
+        "unit": "1.25",
+        "contents": [
+          "f1e3d050716a4032158c15067b316cf89798ad1ae5c5a48078a437b4d874c430"
+        ],
+        "images": {},
+        "annotations": 0,
+        "resource_graph": {
+          "dictionary": {
+            "/Font": {
+              "dictionary": {
+                "/F1": {
+                  "dictionary": {
+                    "/BaseFont": {
+                      "name": "/Helvetica"
+                    },
+                    "/Subtype": {
+                      "name": "/Type1"
+                    },
+                    "/Type": {
+                      "name": "/Font"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "exact_render_match": true
+    },
+    {
+      "output_page": 4,
+      "source": "content-labels.pdf",
+      "source_page": 1,
+      "role": "content",
+      "fingerprint": {
+        "media": [
+          0,
+          0,
+          240,
+          320
+        ],
+        "crop": [
+          10,
+          10,
+          230,
+          310
+        ],
+        "bleed": [
+          12,
+          12,
+          228,
+          308
+        ],
+        "trim": [
+          15,
+          15,
+          225,
+          305
+        ],
+        "art": [
+          20,
+          20,
+          220,
+          300
+        ],
+        "rotate": 90,
+        "unit": "1.25",
+        "contents": [
+          "11c6e5cff49a52da4670542fc4d25a9f11ee810498dc1d4cbdb7abdae12e73d1"
+        ],
+        "images": {},
+        "annotations": 0,
+        "resource_graph": {
+          "dictionary": {
+            "/Font": {
+              "dictionary": {
+                "/F1": {
+                  "dictionary": {
+                    "/BaseFont": {
+                      "name": "/Helvetica"
+                    },
+                    "/Subtype": {
+                      "name": "/Type1"
+                    },
+                    "/Type": {
+                      "name": "/Font"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "exact_render_match": true
+    },
+    {
+      "output_page": 5,
+      "source": "cover-labels.pdf",
+      "source_page": 4,
+      "role": "back",
+      "fingerprint": {
+        "media": [
+          0,
+          0,
+          240,
+          320
+        ],
+        "crop": [
+          10,
+          10,
+          230,
+          310
+        ],
+        "bleed": [
+          12,
+          12,
+          228,
+          308
+        ],
+        "trim": [
+          15,
+          15,
+          225,
+          305
+        ],
+        "art": [
+          20,
+          20,
+          220,
+          300
+        ],
+        "rotate": 90,
+        "unit": "1.25",
+        "contents": [
+          "ab51eb534c56110457c4dc2472384cd2b29d3e600876edd901c69ee3779fe1a7"
+        ],
+        "images": {},
+        "annotations": 0,
+        "resource_graph": {
+          "dictionary": {
+            "/Font": {
+              "dictionary": {
+                "/F1": {
+                  "dictionary": {
+                    "/BaseFont": {
+                      "name": "/Helvetica"
+                    },
+                    "/Subtype": {
+                      "name": "/Type1"
+                    },
+                    "/Type": {
+                      "name": "/Font"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "exact_render_match": true
+    },
+    {
+      "output_page": 6,
+      "source": "cover-labels.pdf",
+      "source_page": 1,
+      "role": "back",
+      "fingerprint": {
+        "media": [
+          0,
+          0,
+          240,
+          320
+        ],
+        "crop": [
+          10,
+          10,
+          230,
+          310
+        ],
+        "bleed": [
+          12,
+          12,
+          228,
+          308
+        ],
+        "trim": [
+          15,
+          15,
+          225,
+          305
+        ],
+        "art": [
+          20,
+          20,
+          220,
+          300
+        ],
+        "rotate": 90,
+        "unit": "1.25",
+        "contents": [
+          "0f72637241ddfe7c6267476b3fcf41b11c47b382694905b5ffb4f0a7be95e21e"
+        ],
+        "images": {},
+        "annotations": 0,
+        "resource_graph": {
+          "dictionary": {
+            "/Font": {
+              "dictionary": {
+                "/F1": {
+                  "dictionary": {
+                    "/BaseFont": {
+                      "name": "/Helvetica"
+                    },
+                    "/Subtype": {
+                      "name": "/Type1"
+                    },
+                    "/Type": {
+                      "name": "/Font"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "exact_render_match": true
+    }
+  ],
+  "label_sources_before": {
+    "cover-labels.pdf": "d1b8de0c08087e5f99d34600a35f89951f614371e787dc8256f7ccef05638273",
+    "content-labels.pdf": "6f5f0ee297a65d21496c2d4581e711a2c50ee27e90c109d07397b1cda4e70f76"
+  },
+  "label_sources_after": {
+    "cover-labels.pdf": "d1b8de0c08087e5f99d34600a35f89951f614371e787dc8256f7ccef05638273",
+    "content-labels.pdf": "6f5f0ee297a65d21496c2d4581e711a2c50ee27e90c109d07397b1cda4e70f76"
+  },
   "source_digests_unchanged": true
 }

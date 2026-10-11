@@ -12,6 +12,11 @@ Read the design delivered by `prepared-pdf-k9`, including
 `docs/specs/prepared-pdf.md` and its cited ADRs. The root brief supplies the
 fixed acceptance fixtures and public-command seam.
 This leaf was migrated from preparation's `prepared-pdf-k5` at `1ada47bd`.
+`prepared-pdf-k12` repairs the reviewed gate, error, dry-run, validation and
+publication contracts. The user confirmed the spec's page-expression grammar
+(single-quoted `!` exclusions and ascending/descending ranges) during that
+integration. Use the
+integrated spec and `prepared-page-hints` ADR as current design inputs.
 
 ## Done when
 

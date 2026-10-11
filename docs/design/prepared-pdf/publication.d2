@@ -1,19 +1,26 @@
 direction: down
-start: Start here\nResolve sources and destination {
+start: Start here\nParse and validate source gates {
   style: {fill: "#19354D"; font-color: white; bold: true}
 }
 valid: Inputs and destination valid? {shape: diamond}
-temp: Write unique private temporary PDF\nIn destination directory
-check: Reopen and validate\nFlush and fsync complete file
-publish: Atomic no-clobber publication\nHard link to destination
-success: Complete prepared PDF\nRemove temporary name
+planned: Planned — exit 0\nComplete order without temporary file
+temp: Stage private .bookscan-prepare-*.tmp\nExclusive 0600 file saved through stream
+check: Copy adapter reopens and compares graphs\nAll geometry, markers and declarations
+ready: Recheck sources and set final mode\nFlush and fsync complete file
+publish: Defer INT / TERM across no-clobber link\nRecord committed before restoring signals
+success: Written — exit 0\nComplete PDF with temporary name removed
+warning: Written — exit 0 with warnings\nSignal, cleanup or stdout failure
 failure: Report actionable error\nNo new destination before commit
-start -> valid: 1. Check selections and aliases
-valid -> temp: 2. Yes and not dry-run
-valid -> failure: No
+start -> valid: 1. Resolve order and destination aliases
+valid -> planned: 2a. Dry-run after source recheck
+valid -> temp: 2b. Write
+valid -> failure: Invalid input or source recheck fails
 temp -> check: 3. Copy succeeds
 temp -> failure: Write error or cancellation
-check -> publish: 4. Validation succeeds
+check -> ready: 4. Validation succeeds
 check -> failure: Validation error or cancellation
-publish -> success: 5. Link succeeds = commit point
+ready -> publish: 5. Ready to commit
+ready -> failure: Source change, I/O or cancellation
+publish -> success: 6. Link succeeds = commit point
 publish -> failure: Destination exists or link fails
+success -> warning: 7. Post-commit reporting / cleanup

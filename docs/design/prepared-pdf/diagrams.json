@@ -8,23 +8,23 @@
   "discussion": {
     "title": "Whole-page preservation and safe publication",
     "status": "Design for review",
-    "summary": "Choose a small Python/pikepdf command: front → content → back, whole-page copying, embedded role hints, and no overwrite. The dependency experiment checks copying; implementation still must verify the public command and failure contract.",
+    "summary": "Define front → content → back, whole-page copying with explicit source gates, advisory versioned hints, staged graph validation and no overwrite. Dry-run runs all source checks. Link success fixes written/exit 0; later signals and reporting failures are warnings. The user confirmed single-quoted exclusions and ascending/descending ranges.",
     "diagramIds": ["assembly", "publication"],
     "updatedDiagrams": [
-      {"id": "assembly", "summary": "Defined role grouping, full-page copying and the sole-PDF successor handoff."},
-      {"id": "publication", "summary": "Defined validation, private writing and an atomic no-clobber publication point."}
+      {"id": "assembly", "summary": "Source gates apply to dry-run and write; content is an assembly selection, not a page classification."},
+      {"id": "publication", "summary": "Show planned success, stream staging, copy-adapter validation and written success with post-commit warnings."}
     ]
   },
   "diagrams": [
     {
       "id": "assembly", "group": "assembly", "title": "Explicit roles become one prepared PDF",
       "renderer": "svg", "source": "assembly.d2", "rendered": "assembly.svg",
-      "caption": "Design decision: selections retain argument order within roles, then front precedes content and back follows. Interior cover pages are selected as content. No filename, page count, blank detector or spread classifier determines selection. The processor receives one PDF, and optional embedded roles provide no geometry exemption."
+      "caption": "Design decision: selections retain argument order within roles, then front precedes content and back follows. Source preservation gates run in both dry-run and write. Content includes interior covers and conveys no book-page classification. The processor receives one PDF; optional role hints provide no geometry exemption."
     },
     {
       "id": "publication", "group": "publication", "title": "Publish a complete PDF without overwriting",
       "renderer": "svg", "source": "publication.d2", "rendered": "publication.svg",
-      "caption": "Design decision: dry-run returns after validation without writing. Any pre-commit failure leaves the destination absent or its prior occupant unchanged. A successful link is the commit point; cancellation after it may leave a complete valid output. SIGKILL can leave a private temporary file. Filesystems that cannot perform no-clobber publication fail explicitly. Sources are read-only throughout."
+      "caption": "Design decision: dry-run performs all source gates and stability checks, then reports planned without writing. The copy adapter validates the staged stream before publication. Defer SIGINT/SIGTERM across link and commit-state recording. A successful link fixes written/exit 0; caught later signals, cleanup and stdout failures are warnings, with stderr best effort if stdout is broken. SIGKILL can prevent reporting and leave a private .tmp name. Pre-commit failures preserve any prior destination. Sources are read-only throughout."
     }
   ]
 }

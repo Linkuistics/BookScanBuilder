@@ -16,22 +16,29 @@ and Poppler 26.10.0 on this Mac. `COLLECTION` defaults to
 The wrapper is [prepared_pdf_copy.py](../../experiments/prepared_pdf_copy.py).
 
 The completed run's artifacts are at
-`/private/tmp/bookscan-prepared-pdf-k9-stencils`: `copied.pdf`, the labelled
+`/private/tmp/bookscan-prepared-pdf-k12-verified`: `copied.pdf`, the labelled
 source/output PDFs, matched source/copy PNGs and `report.json`. Temporary images
 are disposable; no source PDF or derived page image is committed here.
-The retained report includes the final script digest and each source's before
-and after digest. The script asserts its own digest is unchanged during the
-run and checks each item, rather than trusting matching totals.
+The retained report includes the final script/Taskfile digests and each real
+and generated labelled source's before/after digests. The script asserts that
+both code and recipe stayed unchanged during the run and checks each real and
+labelled item, rather than trusting matching totals.
 
 ## Method and results
 
 Open each source read-only without recovery, append its complete selected pages
 to a new pikepdf document, and write fresh destination-page role dictionaries.
 Save with stream decode level `none`, compression/recompression and normalization
-disabled, and a numerically chosen minimum PDF version. Reopen without recovery.
-Compare decoded content-stream hashes, effective MediaBox/CropBox/rotation/
-UserUnit, direct Image XObject raw bytes/filter/dimensions/stencil flags and
-annotation counts. Check each copied role and source PDF-page number.
+disabled, and a numerically chosen minimum PDF version including catalog
+`/Version` overrides. Carry the observed ADBE declaration using pikepdf's
+`min_version=("1.7", 3)` control and assert it after reopening without recovery.
+Compare decoded content-stream hashes, effective MediaBox/CropBox/BleedBox/
+TrimBox/ArtBox/rotation/UserUnit, direct Image XObject raw bytes/filter/dimensions/
+stencil flags and annotation counts. A recursive resource snapshot also compares
+dictionary values and raw stream hashes through nested resources and decoder
+globals; it uses deterministic traversal references to terminate cycles. Check
+each copied role and source PDF-page number. This remains a bounded fingerprint,
+not the command's complete projected-page runtime comparator.
 
 Render both complete corresponding PDF pages with `pdftoppm` using 300 dpi,
 CropBox, PNG and otherwise identical settings. Compare decoded RGB pixels and
@@ -66,11 +73,25 @@ repeats the first page under a different role. First/last K1 retain separate
 front/back dictionaries and distinct destination-page object identities.
 Inherited page resources, MediaBox, CropBox and 90° rotation survive copying;
 UserUnit 1.25 survives as well. All six labelled render pairs match exactly.
+Distinct page-local BleedBox `[12,12,228,308]`, TrimBox `[15,15,225,305]` and
+ArtBox `[20,20,220,300]` survive direct comparison. The labelled sources have
+a catalog version override; the copy chooses at least 1.7 from header/catalog
+values. Each labelled item's geometry/resources are retained in `label_records`.
+Real pages with absent optional boxes separately check CropBox defaults.
 
 All six distinct real-source PDF digests matched before and after the final
 run. For the five overlapping sources, they also match the earlier geometry
 survey's recorded digests. The report records the additional two-page cover's
 digest. Originals were only read.
+
+The six-source inventory records actual catalog keys, per-page key counts,
+annotation presence, form-field count, encryption, XFA, optional-content/output
+intent presence and parser warnings. These sources have no encryption,
+annotations, XFA, optional-content configuration or output intents, and opening
+plus selected-resource raw traversal emits no qpdf warnings. Algorithm Design
+has an empty form field array and an ADBE base-1.7/level-3 declaration; that
+declaration now also appears in the output. This inventory is **not** a survey
+of the whole collection or evidence that every source meets the future gate.
 
 ## What the experiment caught
 
@@ -88,6 +109,15 @@ the page's complete visible composition. The music page-140 inventory includes
 even the small 80 × 12 stencil. Pixel comparisons already included these masks;
 the stronger stream inventory now checks them explicitly as well.
 
+The design-review integration exposed two fingerprint blind spots with deliberate
+mutations: changing TrimBox and changing a decoder-global stream both left the
+old fingerprint unchanged. Those same controls now detect the altered values.
+The extension assertion also first failed: setting a fresh catalog's
+`/Extensions` and saving with a string `min_version="1.7"` loses the ADBE entry.
+A two-case in-memory reproduction retained it with the tuple control. The
+complete final recipe was rerun after these corrections; assertions alone in a
+patched script were not treated as a measurement.
+
 ## Publication check and limits
 
 A separate bounded standard-library smoke check in a fresh local temporary
@@ -103,14 +133,36 @@ The copying probe covers static real pages and one labelled inherited-geometry
 fixture. It does not test the CLI grammar, role grouping, exclusion parsing,
 already-assembled public invocation, output alias checks, source-change races,
 signals, write/validation failures, unsupported document features, annotation
-appearances, nested image resource inventories or arbitrary PDFs. The first
-implementation owns these cases through the agreed public-command seam.
-Direct XObject fingerprints are deliberately bounded; full-page renders include
+appearances or arbitrary PDFs. The first implementation owns these cases through
+the agreed public-command seam.
+The recursive resource snapshot now covers nested storage, but the probe has no
+dedicated nested-Form visible fixture or annotation-appearance fixture. Direct
+XObject inventories and resource snapshots are deliberately bounded; full-page
+renders include
 all drawing visible under the tested settings but prove no untested viewer mode.
 
 The dependency run establishes copying fidelity on these fixtures, not human
 acceptance of a working preparation product or any correction method. The
 implementation's visual comparisons and the user's judgment remain required.
+
+## Design-review library checks
+
+Installed pikepdf 10.16.0 `Pdf.save` routes a path through
+`_io.atomic_overwrite`; an existing target path uses another temporary file and
+a replacing rename. A supplied seekable binary stream bypasses that wrapper.
+The [save API](https://pikepdf.readthedocs.io/en/stable/api/main.html#pikepdf.Pdf.save)
+documents stream ownership and tuple extension controls. A fresh-document probe
+with catalog `/Version /1.7` still reports header 1.3 through `pdf_version`,
+so effective version must explicitly include the catalog value.
+
+A separate in-memory pikepdf/qpdf probe of a repeated annotated page gives two
+page objects but one shared indirect annotation dictionary. The supported
+[ISO 32000-1, §12.5.2](https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/PDF32000_2008.pdf)
+requires one owning page per annotation dictionary; the same source's §14.5
+defines the `/PieceInfo`/modification-date convention. The command therefore
+rejects repeated annotated pages in this increment, while accepting bounded
+one-stream static appearances on unrepeated pages. This probe is a library
+characterization, not public-command annotation acceptance.
 
 ## Primary implementation references
 
@@ -124,5 +176,6 @@ The [qpdf page-selection documentation](https://qpdf.readthedocs.io/en/stable/cl
 also distinguishes page copying from complete document metadata migration.
 
 These findings are adopted in the spec's preservation, ownership and publication
-contracts. They do not choose the processor's renderer, correction algorithm,
-OCR engine or review interface.
+contracts and the [prepared-page-hints](../adr/prepared-page-hints.md) ADR's
+optional persisted-hint decision. They do not choose the processor's renderer,
+correction algorithm, OCR engine or review interface.
