@@ -1,7 +1,9 @@
-# Norwegian gutter trial: source prerequisite slice
+# Norwegian gutter trial: inconclusive independent measurement
 
-The full-canvas, unmasked extraction diagnostic is complete; the correction
-trial remains **incomplete at independent acquisition** on both halves.
+The full-canvas, unmasked extraction diagnostic is complete. k33's fresh source
+observers leave each half **inconclusive at independent measurement** with the
+available image viewer. This is the bounded instrument/measurement outcome,
+not a masked extraction rejection or evidence against the vertical candidate.
 No rigid image, model, field, candidate, corrected-output measurement or human
 comparison has been produced. The diagnostic's line counts cannot accept or
 reject the held-out automatic candidate.
@@ -134,9 +136,75 @@ used for the actual API claim. Coverage metadata generation
 the newly formatted Python file had changed metadata and was read directly.
 This is bounded evidence, not a whole-repository completeness claim.
 
-## Remaining complete trial and consumer
+## k33 source observation and instrument outcome
 
-`norwegian-gutter-k31` stays open. Its remaining prototype must acquire genuine
+Two fresh coordinate-free contexts independently inspected their assigned
+unchanged half and three native gutter crops with `view_image(detail=original)`.
+The packets included dimensions/origins and the observation contract, excluding
+automatic traces/overlays, previous marks and conclusions. Each observer was
+isolated from the other half's observations. These were source observers, not
+artifact reviewers or numerical repeat passes.
+
+| Half | Physical source observations | First applicable outcome |
+| --- | --- | --- |
+| Left / printed 36 | Upper endings “new” and “fired”; middle heading ending “compound verbs can”; lower “Can you give me”, “He translated the” and concluding paragraph. Section d contains separate text columns, not a continuous baseline across the whitespace. | Inconclusive acquisition/measurement: no independently verified numerical baseline trace or measured uncertainty. |
+| Right / printed 37 | Upper “Examples:” and “et innbetalt”; middle “FUNCTION:” and “et sovende”; lower “Example:”, “skinnende” and “Examples:”. Gutter margin contains blank paper before the text. | Inconclusive acquisition/measurement: no independently verified numerical baseline trace or measured uncertainty. |
+
+Each attempted to follow non-descending glyph bottoms in an upper native crop.
+Neither admitted a coordinate: the displayed bitmap has no pixel cursor/readout
+or recorded point selection, and the full-page presentation is reduced in size.
+Existing gutter crops show short beginnings/endings and blank margin, with some
+lines clipped by the display crop; they do not expose centre/outer ink at equal
+detail. This is crop-packet coverage, **not clipping of the frozen half canvas**.
+Blurred edges, rounded glyph overshoot, descenders and italics add ambiguity to
+what constitutes a baseline. Positional, slope and curvature uncertainty and
+shared systematic error remain unquantified; repeat viewing cannot certify them.
+Blank gutter columns supply no physical text point. No whole numerical trace,
+blind numerical repeat, per-point verifier or evaluation rectangle was frozen.
+
+This finding is limited to the actual `view_image` observation and packets. It
+does not establish that native marking is impossible through a pixel-addressed
+patch display or human annotation tool, nor that all useful instruments are
+unavailable. Both halves reach k31's first acquisition/instrument/measurement
+outcome before masked extraction. No gate or model was relaxed, and no automatic
+centre was relabelled as an evaluation mark. No rigid/candidate/control output,
+field, application, fallback copy or output-quality claim was generated in k33.
+
+The [source-observer record](norwegian-source-observers.md) retains the exact
+observations, trace attempts, instrument limitations and digest provenance.
+First observer hashes were after initial viewing and are labelled that way;
+they cannot retroactively freeze the first view. A subsequent upper-crop view
+on each half was bracketed by matching hashes. All eight image hashes match
+k32's frozen outputs. The separate [integrity check](norwegian-k33-integrity.json)
+rechecks 23 subjects before/after, including both original PDFs, unchanged
+spread/halves/control, six gutter crops, source spec, retained instruments,
+Taskfile, pinned renderer/library/native source and k4 control/freeze. Split
+pixels, every crop's native pixel contents and historical control pixels match.
+That check proves source identity, not measurement calibration or source flatness.
+
+The source/instrument result was presented for a human reaction at
+`/private/tmp/bookscan-norwegian-k32-final/left.png` and `right.png`, explicitly
+separate from correction-quality approval. The per-half beyond-rigid questions
+and control/forced-sampler detail question cannot yet be answered because the
+matched trial comparisons were not generated. Historical geometry/preparation
+responses stay separate. Human response disposition is recorded below.
+
+No human reply arrived during this session's source/instrument response window.
+For both halves that response is unavailable, not “Not inspected yet” (which
+would require that actual reply), assent or a reported source defect. Left and
+right beyond-rigid improvement responses and the control/forced-sampler detail
+response are **unperformed: no matched trial view exists**. No inspected path
+has been claimed on the human's behalf. Their absence is a later observation;
+each half's first outcome remains the acquisition/measurement gap above.
+
+Fresh `geometry:staff-check` passed format/lint and four native boundary tests;
+`prepare:check` passed format/lint, strict pyright and 231 tests. No reusable
+recipe or instrument changed; existing geometry wrappers/tasks remain intact.
+
+## Unperformed complete comparison and fresh consumer
+
+The bounded k31 instrument outcome supplies no corrected comparison. Any newly
+commissioned measurement completion must acquire genuine
 source baselines across upper/middle/lower and gutter/centre/outer ink regions,
 record omitted/ambiguous columns, freeze whole-line/region holdouts before fitting,
 and obtain fresh coordinate-free representative whole-trace repeats plus
@@ -153,9 +221,19 @@ k4's nonidentity fractional native-sampler diagnostic. Obtain distinct human
 responses for left, right and control/sampler at exact inspected paths. Each
 half is classified independently using k31's ordered outcomes.
 
-The fresh planner before `staff-acquisition-k27` must consume this committed
-partial slice and the remaining child's actual result, including decisive
-prerequisite failure or missing measurement/reaction. It preserves k27 → k28,
+The already-live `norwegian-gutter-k34` planner before `staff-acquisition-k27`
+consumes k32 and k33's committed inconclusive instrument result. The precise
+changed observation is whether pixel-addressed native patches with recorded
+non-descending glyph anchors can support fresh whole-line repeats and independent
+per-point source verification with positional/slope/curvature and systematic
+uncertainty across real gutter/centre/outer ink. Rejection includes ambiguous
+anchors, unverified points, insufficient spatial coverage or systematic limits
+that obscure the source nonrigidity; repeatability alone is insufficient. k34
+decides this question, rather than commissioning the same viewer trial again.
+Any instrument completion must include inspectable real-source acquisition and
+its measured validity, not an adapter-only slice. A numerical acquisition pass
+still needs all conditional masked-fit/output/control/sampler/measurement and
+separate per-half visual responses above. It preserves k27 → k28,
 all unresolved music/page-140 and historical preparation/geometry responses,
 the fixed representative cases, processor design and working accepted-image/
 review/post-split assembly/aligned English OCR/export with earlier OCR and

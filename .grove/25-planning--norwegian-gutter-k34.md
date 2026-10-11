@@ -85,3 +85,37 @@ child and before k27 on every supported/rejected/inconclusive outcome. k31 stays
 open until its actual trial result or decisive prerequisite boundary exists;
 k32's source-only completion is not enough. Retain precise unperformed obligations
 instead of falling through to appearance or treating preparation as accepted.
+
+## Committed handoff from k33
+
+k31's bounded result is inconclusive acquisition/instrument/measurement for each
+half. Read `docs/experiments/norwegian-gutter.md`, its coordinate-free observer
+record and 23-subject integrity record. Both fresh observers identify actual
+words and attempt local glyph-bottom traces but admit no numerical baseline;
+view_image has no recorded pixel addressing and source systematic uncertainty
+is unquantified. Existing crop packets expose short gutter line fragments rather
+than all centre/outer ink at the same detail. Blank margin and left section d's
+column gaps are not baseline positions. First observer hashes were post-view;
+later upper-crop viewing was bracketed, and all source/crop hashes match k32.
+This is a bounded viewer/packet result, not universal instrument impossibility.
+
+The changed, falsifiable next observation to assess is whether pixel-addressed
+native patches with explicit non-descending glyph anchors yield independent
+per-point verified positions, fresh whole-line repeats and measured positional/
+slope/curvature and shared systematic limits across actual gutter/centre/outer
+ink. Reject ambiguous anchors, unverifiable points, inadequate spatial coverage
+or bias that obscures source nonrigidity; repeat agreement alone cannot warrant
+correction. Commission only a complete inspectable acquisition/measurement slice
+if justified, with its fresh planner on every outcome. No automatic retry,
+viewer-only repetition, adapter-only work, relaxed gate or forced model follows.
+
+No holdouts/masked gate/rigid/candidate/model/field/application/output measurement
+or new control/sampler verification was produced. k32's unmasked counts cannot
+decide masked prerequisites. Carry all of those conditional obligations and
+the actual left/right beyond-rigid and control/sampler human-view questions.
+Source/instrument human response is unavailable; output questions are unperformed
+because no matched trial comparison exists. No defect, approval or “Not inspected
+yet” is invented. k31 closes only its admitted bounded inconclusive branch;
+its complete trial has not demonstrated correction. Preserve every criterion
+above and k27 → k28 → k22 → k23; k28 must consume this result and your exact
+completion decision, without silently recommissioning the old Norwegian trial.

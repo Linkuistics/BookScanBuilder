@@ -87,3 +87,61 @@ remaining output/control/sampler/reaction work inside k31 before k34 and k27;
 finish only the first child. No adapter/setup-only cut. A decisive prerequisite
 failure can close the bounded trial with all later unperformed work explicitly
 handed to k34; unmasked counts alone are not that failure.
+
+## Decisions (running log)
+
+Retain k31's per-half hypothesis and ordered outcomes. Rechecked the exact source
+PDF/render hashes, full-height x=1785 split, every native gutter crop and k4
+control pixels against k32. All 23 integrity-check subjects stayed unchanged.
+No output or fit is commissioned before independently verified measurement.
+
+Dispatched two fresh, coordinate-free source observers, one per half. Each was
+given only unchanged page/native gutter paths, dimensions/origins and the
+measurement contract; neither read automatic lists, overlays, prior coordinates
+or the other observer's findings. They identified actual printed words and
+attempted local traces. Neither could produce a defensible native-pixel trace
+or quantify positional/slope/curvature and shared systematic uncertainty through
+view_image. No evaluation point is admitted. These were observation contexts,
+not artifact reviewers; no in-session review allowance was spent.
+
+The first applicable result for each half is inconclusive independent acquisition/
+measurement with this observation instrument. It is not a failed masked gate,
+model-family rejection or measured lack of improvement. The instrument result
+is bounded to the inspected viewer/packet; it does not establish impossibility
+with pixel-addressed patches or a human annotation tool. Blank gutter columns
+cannot become baseline points, and left section d's separate columns cannot
+be joined into a physical line across whitespace.
+
+No whole-trace numerical repeat/per-point verifier, holdout freeze, masked native
+preflight, rigid/candidate/control output or output measurement follows an
+unverified trace. Preserve all unperformed comparison/control/sampler/reaction
+work for k34's changed-question decision. The exact possible next observation
+is whether pixel-addressed native patches and explicit glyph anchors permit
+blind whole-line repeats and per-point source verification with measurable
+systematic uncertainty, across actual gutter/centre/outer ink at unchanged
+canvases. A repeatable coordinate alone cannot pass that test.
+
+Asked the human for a separately labelled source/instrument reaction at the
+unchanged left/right PNG paths, recommending inconclusive measurement and a
+fresh k34 instrument question. No nonexistent rigid/candidate view was presented
+as a comparison, and no source reaction can approve correction, control/sampler,
+historical geometry or preparation.
+
+No reply arrived in the source/instrument response window. Record unavailable,
+not a fabricated “Not inspected yet”, acceptance or defect. The beyond-rigid
+left/right and control/sampler questions remain unperformed because no matched
+comparison exists. Source/instrument response absence is secondary to the
+unverified measurement outcome. Fresh staff-check passes four tests; prepare:
+check passes 231 tests plus format/lint/strict pyright. No recipe or instrument
+changed. Durable observer and 23-subject integrity records are linked from
+`docs/experiments/norwegian-gutter.md`.
+
+Close only the bounded instrument/measurement branch expressly admitted by
+k31, preserving its complete unperformed comparison contract in k34. No
+production decision or review-worthy method is established, so no ADR or
+prototype review chain is added. k34's changed observation is source acquisition
+through pixel-addressed native patches with explicit glyph anchors, independent
+verification and measured systematic limits; it must decide whether to commission
+that complete evidence slice, not assume it works. Promote the actual result to
+the root brief and update the already-live k34 handoff as the last work act;
+retirement/sealing then include the k31 closure and leave k27 → k28 live.

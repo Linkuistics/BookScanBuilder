@@ -141,3 +141,28 @@ root planning handoff is `norwegian-gutter-k34`, already placed immediately
 before k27. k32 retires without closing this node. k33 owns every missing
 independent-observation/masked-gate/output/control/sampler/reaction obligation;
 k34 consumes its actual result and preserves k27 then k28.
+
+## Bounded result
+
+k33 closes the expressly admitted inconclusive instrument/measurement branch
+for each half. Fresh coordinate-free source observers identified actual text
+and attempted local baseline tracing but admitted no numerical point through
+view_image; positional/slope/curvature uncertainty and independent per-point
+verification remain unavailable. Source/canvas/native crop identities match
+k32. This is not decisive masked extraction failure or vertical-family rejection;
+unmasked left15/right10 remains diagnostic. No rigid/candidate/model/field/output
+measurement or control/sampler revalidation was generated. Source/instrument
+human response is unavailable; actual correction/detail questions were not
+presented without comparisons. Historical responses remain separate.
+
+The complete bounded result and exact scope are in
+`docs/experiments/norwegian-gutter.md`, linked observer/integrity records and k33's
+running log. k34 receives the precise changed instrument observation: whether
+pixel-addressed native patches with explicit physical glyph anchors can support
+blind whole-trace repeats and independent per-point verification with measured
+systematic uncertainty across actual gutter/centre/outer ink. It decides any
+complete acquisition completion, retaining every masked-preflight/conditional
+output/control/sampler/measurement and per-half human response obligation.
+Neither repeat agreement nor this source result licenses correction. This
+terminal bounded branch closes k31 on retirement of k33, with k34 already live
+ahead of k27 → k28 and all original product/representative obligations intact.

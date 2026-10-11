@@ -253,6 +253,22 @@ music/preparation/representative/product/appearance/root-acceptance obligation.
 k28 consumes the independent result without automatically commissioning it again.
 This sequencing approval changes no method, validity rule or visual disposition.
 
+`norwegian-gutter-k31` closes with k33's bounded inconclusive instrument/
+measurement outcome on each half, recorded in `docs/experiments/norwegian-gutter.md`.
+The source/canvas/crop freeze holds; fresh coordinate-free observers identify
+text but admit no verified native baseline coordinates or quantified systematic
+uncertainty through view_image. Unmasked counts remain diagnostics; no masked
+gate, model, rigid/candidate comparison, output measurement or control/sampler
+revalidation exists. The source/instrument human reply is unavailable, and
+correction/detail reaction questions remain unperformed without matched views.
+k34 consumes this precise result before k27 → k28. Its changed observation is
+whether pixel-addressed native patches with explicit glyph anchors can furnish
+blind repeats and per-point verification with measured systematic limits;
+it must decide that complete evidence question rather than repeat the same
+viewer trial. All unperformed k31 comparison/control/sampler/reaction obligations
+and every unresolved music/preparation/fixed-case/default-product/appearance/
+root-acceptance obligation remain with k34 and the ordered consumers.
+
 ## On the horizon
 
 The production correction field, automatic confidence policy and manual
