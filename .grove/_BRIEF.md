@@ -309,9 +309,10 @@ decision, source approval, historical response or corrected result is inferred.
 k37 put two policy recommendations to the human: separate numerical source
 admissibility from an unavailable source reaction, and allow consideration of a
 rigid-plus-flagged intermediate processor while nonrigid evidence continues.
-Absent an explicit reply, source-reaction ranking and demonstrated-geometry
-prerequisites remain unchanged. k35's fresh planner and k28 carry the precise
-unanswered choices; another measurement trial cannot supply a human reply.
+k39 has since settled both choices with explicit “yes” and “agreed”; see Geometry
+policy and source-response completion below for the current disposition. The
+current consuming chain carries those replies and their limits; another
+measurement trial cannot supply a human reply.
 No policy option waives processor design, useful default acceptance, within-page
 geometry, representative cases or final integrated root acceptance.
 
@@ -480,15 +481,23 @@ music/preparation/fixed-case/default-product/appearance/root obligation stay liv
 
 `norwegian-measurement-k38` consumes all nine failed k35 readbacks without
 extending their scope. It chooses `geometry-policy-k39`, a focused human
-requirements completion, before k27. The two k37 policy questions were
-re-presented during k38; absent an actual reply, their current reaction ranking
-and demonstrated-geometry prerequisites remain in force. k39 checks for later
-answers before re-asking and records explicit choices or an explicit deferral;
-silence alone leaves its policy work live rather than spawning another
-unavailable-response/planning loop. It separately obtains or records unavailable
-left/right reactions to the existing unchanged source/control views. Real-anchor
-and correction reactions remain unperformed. Historical geometry/preparation
-responses remain with k27 then k28, separately “Not inspected yet”.
+requirements completion, before k27. In k39 the human replied “yes” to recording
+numerical evidence separately from pending visual review. Numerical source
+evidence admissibility and source-view reaction now have independent dispositions:
+missing review does not veto otherwise verified numerical evidence, and no
+numerical result implies visual approval. k35's failed controls and all physical/
+systematic evidence requirements remain unchanged. The human also replied
+“agreed” to considering a rigid-plus-flagged intermediate working processor
+while nonrigid evidence continues. The fresh planner may consider its design
+before demonstrated nonrigid correction, with design agreement and the complete
+useful review/adjustment/post-split assembly/aligned-OCR/export handoff and its
+own acceptance still required. No method or technology is selected, and all
+within-page/fixed-case/final root obligations remain live. k39 re-presented the
+existing unchanged left/right source and A/B/C control views at their verified
+identities. Both source replies are unavailable separately, with no human
+inspected path, defect or approval; neither is an actual “Not inspected yet”.
+Real-anchor and correction reactions remain unperformed. Historical geometry/
+preparation responses remain with k27 then k28, separately “Not inspected yet”.
 
 No new Norwegian instrument study, retry or production method is commissioned.
 A genuinely changed selected-cell/readout observation still needs a separately
@@ -497,10 +506,11 @@ the complete physical/source-systematic/masked-native evidence contract; known-
 centre success cannot bound real shared baseline bias. A reply to a source view
 cannot erase k35's failed numerical controls or grant correction approval.
 
-On every actual completed response handoff, k39 cuts a fresh planning consumer
-before k27. It consumes the actual answers and full k38/k31/k21/k28 obligations,
+This completed response handoff inserts `geometry-policy-k40`, a fresh planning
+consumer before k27. It consumes the actual answers and full k38/k31/k21/k28
+obligations,
 without automatically repeating a trial or the same missing-response question.
-The relative order remains k39 → its fresh planner → k27 → k28 → k22 → k23.
+The handoff order is k39 → k40 → k27 → k28 → k22 → k23.
 Every unresolved conditional Norwegian comparison/control/nonidentity sampler,
 independent measurement/reaction, music20/music140/fixture-pool, preparation,
 fixed-case, processor-design/default-product/OCR/appearance and root acceptance

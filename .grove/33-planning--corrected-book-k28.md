@@ -34,12 +34,22 @@ Preparation's working contract/evidence are `docs/specs/prepared-pdf.md` and
 ## Done when
 
 - Consume `norwegian-measurement-k38`'s actual human-completion plan,
-  `geometry-policy-k39` and its lazily cut fresh planner before using k27's
-  result. k38 commissions no new Norwegian study or production method; k39
+  `geometry-policy-k39` and its fresh planning consumer `geometry-policy-k40`
+  before using k27's result. k38 commissions no new Norwegian study or production method; k39
   obtains the exact two k37 policy choices and separate existing left/right
-  source/control reactions. Only actual explicit answers/deferral change the
-  disposition, never another elapsed response window. If unanswered, retain
-  existing reaction ranking and demonstrated-geometry prerequisites. Policy
+  source/control reactions. k39's first policy reply is “yes”: numerical source
+  evidence admissibility and human source-view reaction have independent
+  dispositions. Missing review does not veto otherwise verified numerical
+  evidence, and numerical evidence grants no visual approval. The human replied
+  “agreed” to considering an intermediate working processor that straightens
+  rotation and flags unresolved distortion while nonrigid evidence continues.
+  The fresh planner may consider that complete useful processor's design before
+  demonstrated nonrigid correction; design agreement and its own acceptance
+  still bind, and all within-page/fixed-case/root obligations remain live. k39
+  re-presented the existing source/control questions independently; both replies
+  remain unavailable, with no human inspected path/defect/approval or invented
+  “Not inspected yet”. Preserve later actual replies explicitly and keep
+  historical geometry/preparation's actual “Not inspected yet” separate. Policy
   approval supplies neither numerical source admissibility nor representative
   visual acceptance; a source reaction cannot erase the failed fixed-grid
   controls. Another instrument study needs its separately justified human choice
@@ -52,7 +62,8 @@ Preparation's working contract/evidence are `docs/specs/prepared-pdf.md` and
   diagnostics, the declared T/B/D/I fit and A/E/H evaluation roster, genuine
   endpoint preflight, fresh-context provenance, per-point/per-rule independent
   source verification, exact prerequisite coverage/separation, repeatability,
-  systematic uncertainty, per-rule rise/curvature and source-view reaction.
+  systematic uncertainty and per-rule rise/curvature; record the source-view
+  reaction independently from numerical admissibility under k39's first choice.
   Automatic coordinate prerequisite success stops manual marking and earns a
   changed automatic-trial question; it does not establish default model validity.
   Admissible manual source evidence is only acquisition for a possible model
@@ -126,14 +137,16 @@ Preparation's working contract/evidence are `docs/specs/prepared-pdf.md` and
   changes have no blanket permission from that music-only rule. Put any proposed
   contract change to the human with its evidence, while retaining the failed
   attempt and the independent half's obligations.
-- Read k37's human policy disposition before changing either dependency:
-  (a) should measurement admissibility be separate from an unavailable source
-  reaction, with no implied visual approval; (b) may a rigid-plus-flagged
-  intermediate working processor be designed while nonrigid evidence continues?
-  Both were recommended and put to the human. An unavailable reply leaves the
-  existing source-reaction ranking and demonstrated-geometry prerequisite in
-  force. Retain the precise response-completion question rather than substituting
-  another trial. Any later approval still requires processor design before
+- Read k37 and k39's actual human policy dispositions before changing either
+  dependency. The human answered “yes” to (a): measurement admissibility is
+  separate from an unavailable source reaction, with no implied visual approval.
+  All independent physical-source/calibration/systematic evidence requirements
+  still bind, and k35's failed controls remain failed. The human answered
+  “agreed” to (b): a rigid-plus-flagged intermediate processor may be considered
+  while nonrigid evidence continues, before demonstrated nonrigid correction.
+  This permits a design question, not a chosen method or production acceptance.
+  Do not re-ask either settled policy or replace a missing visual response with
+  another trial. Both choices still require processor design before
   implementation planning, the complete useful default handoff and its own
   evidence/reactions, with all within-page and fixed-case root criteria live.
 - Obtain or retain precise response-completion work for the historical
@@ -202,10 +215,15 @@ Read `docs/experiments/norwegian-measurement.md`, every retained readback/error,
 packet and its fresh planner. Do not reinterpret this as a native gate/model
 failure, admit real coordinates, or repeat the same format by default. Both
 source/instrument reactions are unavailable; real-anchor and correction views
-were not generated, so those reactions are unperformed. k37's two human policy
-choices still have no reply and retain their existing constraints. The new
-planner before k27 consumes this exact result and carries every inherited
-comparison/product obligation, rather than automatically cutting another trial.
+were not generated, so those reactions are unperformed. k39 records the human's
+“yes” to separate numerical evidence from visual source review and “agreed” to
+consider a rigid-plus-flagged intermediate processor while nonrigid evidence
+continues. k39 re-presented both existing source/control views at verified
+identities; their replies remain unavailable separately, with no inspected
+path/defect/approval inferred. No method, representative acceptance or root
+completion follows. `geometry-policy-k40` before k27 consumes this exact result
+and carries every inherited comparison/product obligation, rather than
+automatically cutting another trial.
 
 
 The current next evidence is source acquisition only. The field/confidence/

@@ -55,14 +55,26 @@ Generate no fitted model, rigid image or corrected image in this session.
 
 ## Done when
 
-- Read `norwegian-measurement-k38`, `geometry-policy-k39` and the fresh planner
-  cut by its actual response handoff. Carry exact per-half source dispositions
-  and policy choices; silence still changes neither source-reaction ranking nor
-  demonstrated-geometry prerequisites. k38 commissions human completion, no
-  new Norwegian study. Do not treat a source-view reply as calibrated addressing
-  or real staff uncertainty. The fixed 16× grid remains failed; any genuinely
-  changed music format/method still needs its own blind known-centre controls
-  for actual observer classes before manual endpoints or dense marks. Automatic
+- Read `norwegian-measurement-k38`, `geometry-policy-k39` and its actual fresh
+  planning consumer `geometry-policy-k40`. Carry exact per-half source
+  dispositions
+  and policy choices. k39's first policy reply is “yes”: record numerical source
+  evidence admissibility separately from the human source-view reaction.
+  Unavailable review does not veto otherwise verified numerical evidence;
+  numerical evidence supplies no visual approval or missing physical/systematic
+  proof. The human replied “agreed” to considering an intermediate processor
+  that straightens rotation and flags unresolved distortion while nonrigid
+  evidence continues. Its design, complete useful handoff and own acceptance
+  still bind, with within-page/fixed-case/root obligations live. This repair
+  chooses no processor or correction method. k39 re-presented both source/control
+  questions; replies remain unavailable separately, with no human inspected
+  path/defect/approval or actual “Not inspected yet”. Retain future actual
+  replies explicitly, keeping historical geometry/preparation responses separate.
+  k38 commissions human completion, no new Norwegian study. Do not treat a
+  source-view reply as calibrated addressing or real staff uncertainty. The fixed
+  16× grid remains failed; any genuinely changed music format/method still needs
+  its own blind known-centre controls for actual observer classes before manual
+  endpoints or dense marks. Automatic
   extraction-only diagnostics retain their existing independent scope/order.
   Historical geometry/preparation responses remain owned here separately.
 - Consume k31/k34 and k35 plus its fresh planner's actual dispositions before
@@ -190,10 +202,12 @@ Generate no fitted model, rigid image or corrected image in this session.
   source-verified automatic prerequisite success changes the question and stops
   manual marking; otherwise invalid manual acquisition, insufficient genuine
   extent/separation/coverage, unresolved measurement/independent verification,
-  repeatable but too coarse to resolve source nonrigidity, missing/ambiguous
-  source-view reaction, then admissible manual source evidence for considering
-  the next trial. A repeat that retains k26-scale disagreements or whose
-  calibrated limits overlap the observed nonrigid variation does not reach
+  repeatable but too coarse to resolve source nonrigidity, then admissible manual
+  source evidence for considering the next trial. Record the human source-view
+  reaction separately as received, missing or ambiguous; it does not change
+  numerical admissibility or supply visual acceptance. A repeat that retains
+  k26-scale disagreements or whose calibrated limits overlap the observed
+  nonrigid variation does not reach
   admissible-for-trial evidence merely because its centres lie on rules.
   A gate pass alone proves neither physical admissibility nor vertical model
   support. On every outcome, hand k28 the exact remaining observation;
