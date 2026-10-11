@@ -1,0 +1,1686 @@
+{
+  "schema_version": 1,
+  "scope": "preview only; no PDF/render acceptance",
+  "artifacts": "/private/tmp/bookscan-prepared-preview-k16-v2",
+  "versions": {
+    "uv": "uv 0.13.0 (Homebrew 2026-10-09 aarch64-apple-darwin)",
+    "task": "3.54.0",
+    "runtime": "3.12.15 (main, Oct  9 2026, 15:10:57) [Clang 22.1.3 ]\n10.16.0\n12.4.2"
+  },
+  "digests_before": {
+    "/Users/antony/Development/BookScanBuilder/Taskfile.yml": "f1cc04581f59aa29f7e7f9c37fd1a55ede1c03f51c187c4874dffef965565280",
+    "/Users/antony/Development/BookScanBuilder/docs/adr/prepared-page-hints.md": "f8d157b196366708d4d1a4e3b7a73ed5be0f2e8a2d7f78d6f94d4ea520a9cf00",
+    "/Users/antony/Development/BookScanBuilder/docs/specs/prepared-pdf.md": "260a0e932d6dcbf21f4d2ee0a2c91ff405cfd3b51ec93fa44f56dbef2b89080c",
+    "/Users/antony/Development/BookScanBuilder/pyproject.toml": "7333cac280601472afbfc859b571f85a9e02c102a0829f71798269446b8e27b2",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/__init__.py": "85c5b0a575baf76d88f82cf846975c55cb04e1d12bdc897dc2373c107b2d4bf0",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/pdf.py": "fd4186857cd294c519239ee6fa38b6780aaac12fb8d7806031cac3da9c3dcd87",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/prepare.py": "5f016fd3e3e433f3003e3cb40b667227683d41cadeb58a7d2980b2b337cacaa2",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/preview.py": "f5e0104faf0f2d90b04ab45193a10a45b267ae0b308b5f19e41bc28cfab78d9f",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/results.py": "60a3efe06d70b4cd3a46e90fb8de043c788b3d8c322387f6a0c9579afb23d474",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/selections.py": "37a0302485659441395bdf388db2a20f809c0a843c91dae274f5f6efeef21f26",
+    "/Users/antony/Development/BookScanBuilder/tests/pdf_fixtures.py": "e5158bfd45b8c02abcdabebe4fad5378a51be7476f583624463a7f380f8de020",
+    "/Users/antony/Development/BookScanBuilder/tests/preview_acceptance.py": "7677efbce976a63e61947d7c6a98d48395dafbbcf0efb74396349def1e0d7edf",
+    "/Users/antony/Development/BookScanBuilder/tests/test_faults.py": "fca799791ec707027634c9d617257798e6ba623a842f331874c01ee30c659d56",
+    "/Users/antony/Development/BookScanBuilder/tests/test_preview.py": "69c9e390f8fc60e757359c1a570e2f49499578857aa077453464cef82b1277a9",
+    "/Users/antony/Development/BookScanBuilder/uv.lock": "74ee6641f735a4f3048e4ff50a650dc4b10a3f6d1a5c589f11fb836babfc8724",
+    "/Volumes/Glass/Book Conversion/Covers/Algorithms on Strings, Trees, and Sequence.pdf": "36d9882db0e2093b1c4ddab960a8bcdf1b3f1688a4432fcc61ca536f99ac4efc",
+    "/Volumes/Glass/Book Conversion/Covers/SchoenbergComposition.pdf": "55fef6822d156d48985e55570de77201687de81b84a11f4a2b76a125c1d8873f",
+    "/Volumes/Glass/Book Conversion/Needing Cleanup/Counterpoint in Composition.pdf": "ae16ae84cfa7e8d610c76fb80cf33a0bab0c8615a2b6a0fc7226a5da1c317224",
+    "/Volumes/Glass/Book Conversion/Processed Books/Algorithm Design/Algorithm Design.pdf": "b9d6f1fd08560f06ec8653375a5866dbe1ba971d780dfecd1a0211fb2f66deab",
+    "/Volumes/Glass/Book Conversion/Processed Books/Norwegian - An Essential Grammar (Routledge)/Norwegian - An Essential Grammar (Routledge).pdf": "a21736ada0c088ab9e4f89a264c303788ccf22c4ee647b5dfb5f076ea1b750d3",
+    "/Volumes/Glass/Book Conversion/Raw Scans/Fundamentals of Musical Composition.pdf": "3235a842d619a18b11e2fbdb3b5b6666adeb223959cafd4b1d67f27f0dbfe780",
+    "/private/tmp/bookscan-prepared-preview-k16-v2/Labelled content.pdf": "898ed65ef6c95b85bf8c5ef14c324a20b83d04ee6d4c3fd4688ab7167dc76609",
+    "/private/tmp/bookscan-prepared-preview-k16-v2/Labelled covers.pdf": "34f2a67b5399d628b79ab994c72e01cf26d27b9db12d3eec6eee5a7ff9c816e9",
+    "/private/tmp/bookscan-prepared-preview-k16-v2/Six pages.pdf": "571584662f95f048a849b316ccee75dd49499108cec27c497f552fb139257213"
+  },
+  "digests_after": {
+    "/Users/antony/Development/BookScanBuilder/Taskfile.yml": "f1cc04581f59aa29f7e7f9c37fd1a55ede1c03f51c187c4874dffef965565280",
+    "/Users/antony/Development/BookScanBuilder/docs/adr/prepared-page-hints.md": "f8d157b196366708d4d1a4e3b7a73ed5be0f2e8a2d7f78d6f94d4ea520a9cf00",
+    "/Users/antony/Development/BookScanBuilder/docs/specs/prepared-pdf.md": "260a0e932d6dcbf21f4d2ee0a2c91ff405cfd3b51ec93fa44f56dbef2b89080c",
+    "/Users/antony/Development/BookScanBuilder/pyproject.toml": "7333cac280601472afbfc859b571f85a9e02c102a0829f71798269446b8e27b2",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/__init__.py": "85c5b0a575baf76d88f82cf846975c55cb04e1d12bdc897dc2373c107b2d4bf0",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/pdf.py": "fd4186857cd294c519239ee6fa38b6780aaac12fb8d7806031cac3da9c3dcd87",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/prepare.py": "5f016fd3e3e433f3003e3cb40b667227683d41cadeb58a7d2980b2b337cacaa2",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/preview.py": "f5e0104faf0f2d90b04ab45193a10a45b267ae0b308b5f19e41bc28cfab78d9f",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/results.py": "60a3efe06d70b4cd3a46e90fb8de043c788b3d8c322387f6a0c9579afb23d474",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/selections.py": "37a0302485659441395bdf388db2a20f809c0a843c91dae274f5f6efeef21f26",
+    "/Users/antony/Development/BookScanBuilder/tests/pdf_fixtures.py": "e5158bfd45b8c02abcdabebe4fad5378a51be7476f583624463a7f380f8de020",
+    "/Users/antony/Development/BookScanBuilder/tests/preview_acceptance.py": "7677efbce976a63e61947d7c6a98d48395dafbbcf0efb74396349def1e0d7edf",
+    "/Users/antony/Development/BookScanBuilder/tests/test_faults.py": "fca799791ec707027634c9d617257798e6ba623a842f331874c01ee30c659d56",
+    "/Users/antony/Development/BookScanBuilder/tests/test_preview.py": "69c9e390f8fc60e757359c1a570e2f49499578857aa077453464cef82b1277a9",
+    "/Users/antony/Development/BookScanBuilder/uv.lock": "74ee6641f735a4f3048e4ff50a650dc4b10a3f6d1a5c589f11fb836babfc8724",
+    "/Volumes/Glass/Book Conversion/Covers/Algorithms on Strings, Trees, and Sequence.pdf": "36d9882db0e2093b1c4ddab960a8bcdf1b3f1688a4432fcc61ca536f99ac4efc",
+    "/Volumes/Glass/Book Conversion/Covers/SchoenbergComposition.pdf": "55fef6822d156d48985e55570de77201687de81b84a11f4a2b76a125c1d8873f",
+    "/Volumes/Glass/Book Conversion/Needing Cleanup/Counterpoint in Composition.pdf": "ae16ae84cfa7e8d610c76fb80cf33a0bab0c8615a2b6a0fc7226a5da1c317224",
+    "/Volumes/Glass/Book Conversion/Processed Books/Algorithm Design/Algorithm Design.pdf": "b9d6f1fd08560f06ec8653375a5866dbe1ba971d780dfecd1a0211fb2f66deab",
+    "/Volumes/Glass/Book Conversion/Processed Books/Norwegian - An Essential Grammar (Routledge)/Norwegian - An Essential Grammar (Routledge).pdf": "a21736ada0c088ab9e4f89a264c303788ccf22c4ee647b5dfb5f076ea1b750d3",
+    "/Volumes/Glass/Book Conversion/Raw Scans/Fundamentals of Musical Composition.pdf": "3235a842d619a18b11e2fbdb3b5b6666adeb223959cafd4b1d67f27f0dbfe780",
+    "/private/tmp/bookscan-prepared-preview-k16-v2/Labelled content.pdf": "898ed65ef6c95b85bf8c5ef14c324a20b83d04ee6d4c3fd4688ab7167dc76609",
+    "/private/tmp/bookscan-prepared-preview-k16-v2/Labelled covers.pdf": "34f2a67b5399d628b79ab994c72e01cf26d27b9db12d3eec6eee5a7ff9c816e9",
+    "/private/tmp/bookscan-prepared-preview-k16-v2/Six pages.pdf": "571584662f95f048a849b316ccee75dd49499108cec27c497f552fb139257213"
+  },
+  "cases": [
+    {
+      "case": "interleaved",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "python",
+        "-m",
+        "bookscan.preview",
+        "--back",
+        "/private/tmp/bookscan-prepared-preview-k16-v2/Labelled covers.pdf",
+        "4",
+        "--content",
+        "/private/tmp/bookscan-prepared-preview-k16-v2/Labelled content.pdf",
+        "2",
+        "--front",
+        "/private/tmp/bookscan-prepared-preview-k16-v2/Labelled covers.pdf",
+        "1",
+        "--content",
+        "/private/tmp/bookscan-prepared-preview-k16-v2/Labelled covers.pdf",
+        "3",
+        "--content",
+        "/private/tmp/bookscan-prepared-preview-k16-v2/Labelled content.pdf",
+        "1",
+        "--output",
+        "/private/tmp/bookscan-prepared-preview-k16-v2/interleaved-planned.pdf",
+        "--dry-run",
+        "--json"
+      ],
+      "result": {
+        "schema_version": 1,
+        "status": "planned",
+        "output": "/private/tmp/bookscan-prepared-preview-k16-v2/interleaved-planned.pdf",
+        "page_count": 5,
+        "pages": [
+          {
+            "output_page": 1,
+            "source": "/private/tmp/bookscan-prepared-preview-k16-v2/Labelled covers.pdf",
+            "source_page": 1,
+            "role": "front"
+          },
+          {
+            "output_page": 2,
+            "source": "/private/tmp/bookscan-prepared-preview-k16-v2/Labelled content.pdf",
+            "source_page": 2,
+            "role": "content"
+          },
+          {
+            "output_page": 3,
+            "source": "/private/tmp/bookscan-prepared-preview-k16-v2/Labelled covers.pdf",
+            "source_page": 3,
+            "role": "content"
+          },
+          {
+            "output_page": 4,
+            "source": "/private/tmp/bookscan-prepared-preview-k16-v2/Labelled content.pdf",
+            "source_page": 1,
+            "role": "content"
+          },
+          {
+            "output_page": 5,
+            "source": "/private/tmp/bookscan-prepared-preview-k16-v2/Labelled covers.pdf",
+            "source_page": 4,
+            "role": "back"
+          }
+        ],
+        "warnings": []
+      },
+      "directory_unchanged": true,
+      "geometry": [
+        {
+          "boxes": [
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ]
+          ],
+          "rotate": 0,
+          "user_unit": "1",
+          "raw_stream_sha256": [
+            "67c57f3d4c498fa84b30186c1ab08c75f0d845d86dd6792fa72782554c07f36d"
+          ]
+        },
+        {
+          "boxes": [
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ]
+          ],
+          "rotate": 0,
+          "user_unit": "1",
+          "raw_stream_sha256": [
+            "3c1eb1d4062ebcdc51f730791a1027b8a06bf1934b5f95018307cf8203cca4f8"
+          ]
+        },
+        {
+          "boxes": [
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ]
+          ],
+          "rotate": 0,
+          "user_unit": "1",
+          "raw_stream_sha256": [
+            "22bc02f996250c596a6c168f82a6c009c2e101c5ae6fd3fa9209e7dc2ae78876"
+          ]
+        },
+        {
+          "boxes": [
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ]
+          ],
+          "rotate": 0,
+          "user_unit": "1",
+          "raw_stream_sha256": [
+            "8614ad570dc4d38cf604f8f3e44e0c23d4c22f542494acebe111c077804c34c4"
+          ]
+        },
+        {
+          "boxes": [
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ]
+          ],
+          "rotate": 0,
+          "user_unit": "1",
+          "raw_stream_sha256": [
+            "e15251c195dd57b9d7b3481744b5bb8c02a643face8ab0f5d57248f200504f78"
+          ]
+        }
+      ],
+      "effective_version": "1.3",
+      "adbe_extension_level": 0
+    },
+    {
+      "case": "repeat-roles",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "python",
+        "-m",
+        "bookscan.preview",
+        "--back",
+        "/private/tmp/bookscan-prepared-preview-k16-v2/Labelled covers.pdf",
+        "1",
+        "--content",
+        "/private/tmp/bookscan-prepared-preview-k16-v2/Labelled content.pdf",
+        "--front",
+        "/private/tmp/bookscan-prepared-preview-k16-v2/Labelled covers.pdf",
+        "1",
+        "--output",
+        "/private/tmp/bookscan-prepared-preview-k16-v2/repeat-roles-planned.pdf",
+        "--dry-run",
+        "--json"
+      ],
+      "result": {
+        "schema_version": 1,
+        "status": "planned",
+        "output": "/private/tmp/bookscan-prepared-preview-k16-v2/repeat-roles-planned.pdf",
+        "page_count": 4,
+        "pages": [
+          {
+            "output_page": 1,
+            "source": "/private/tmp/bookscan-prepared-preview-k16-v2/Labelled covers.pdf",
+            "source_page": 1,
+            "role": "front"
+          },
+          {
+            "output_page": 2,
+            "source": "/private/tmp/bookscan-prepared-preview-k16-v2/Labelled content.pdf",
+            "source_page": 1,
+            "role": "content"
+          },
+          {
+            "output_page": 3,
+            "source": "/private/tmp/bookscan-prepared-preview-k16-v2/Labelled content.pdf",
+            "source_page": 2,
+            "role": "content"
+          },
+          {
+            "output_page": 4,
+            "source": "/private/tmp/bookscan-prepared-preview-k16-v2/Labelled covers.pdf",
+            "source_page": 1,
+            "role": "back"
+          }
+        ],
+        "warnings": []
+      },
+      "directory_unchanged": true,
+      "geometry": [
+        {
+          "boxes": [
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ]
+          ],
+          "rotate": 0,
+          "user_unit": "1",
+          "raw_stream_sha256": [
+            "67c57f3d4c498fa84b30186c1ab08c75f0d845d86dd6792fa72782554c07f36d"
+          ]
+        },
+        {
+          "boxes": [
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ]
+          ],
+          "rotate": 0,
+          "user_unit": "1",
+          "raw_stream_sha256": [
+            "8614ad570dc4d38cf604f8f3e44e0c23d4c22f542494acebe111c077804c34c4"
+          ]
+        },
+        {
+          "boxes": [
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ]
+          ],
+          "rotate": 0,
+          "user_unit": "1",
+          "raw_stream_sha256": [
+            "3c1eb1d4062ebcdc51f730791a1027b8a06bf1934b5f95018307cf8203cca4f8"
+          ]
+        },
+        {
+          "boxes": [
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ]
+          ],
+          "rotate": 0,
+          "user_unit": "1",
+          "raw_stream_sha256": [
+            "67c57f3d4c498fa84b30186c1ab08c75f0d845d86dd6792fa72782554c07f36d"
+          ]
+        }
+      ],
+      "effective_version": "1.3",
+      "adbe_extension_level": 0
+    },
+    {
+      "case": "descending",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "python",
+        "-m",
+        "bookscan.preview",
+        "--content",
+        "/private/tmp/bookscan-prepared-preview-k16-v2/Six pages.pdf",
+        "6-4,1,4,!5",
+        "--output",
+        "/private/tmp/bookscan-prepared-preview-k16-v2/descending-planned.pdf",
+        "--dry-run",
+        "--json"
+      ],
+      "result": {
+        "schema_version": 1,
+        "status": "planned",
+        "output": "/private/tmp/bookscan-prepared-preview-k16-v2/descending-planned.pdf",
+        "page_count": 4,
+        "pages": [
+          {
+            "output_page": 1,
+            "source": "/private/tmp/bookscan-prepared-preview-k16-v2/Six pages.pdf",
+            "source_page": 6,
+            "role": "content"
+          },
+          {
+            "output_page": 2,
+            "source": "/private/tmp/bookscan-prepared-preview-k16-v2/Six pages.pdf",
+            "source_page": 4,
+            "role": "content"
+          },
+          {
+            "output_page": 3,
+            "source": "/private/tmp/bookscan-prepared-preview-k16-v2/Six pages.pdf",
+            "source_page": 1,
+            "role": "content"
+          },
+          {
+            "output_page": 4,
+            "source": "/private/tmp/bookscan-prepared-preview-k16-v2/Six pages.pdf",
+            "source_page": 4,
+            "role": "content"
+          }
+        ],
+        "warnings": []
+      },
+      "directory_unchanged": true,
+      "geometry": [
+        {
+          "boxes": [
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ]
+          ],
+          "rotate": 0,
+          "user_unit": "1",
+          "raw_stream_sha256": [
+            "d4885ae918059b5f21b0af973518eaedeabc978c3d4ed5ed204a476872265527"
+          ]
+        },
+        {
+          "boxes": [
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ]
+          ],
+          "rotate": 0,
+          "user_unit": "1",
+          "raw_stream_sha256": [
+            "f0d204e058e7dcd4661a770b1329f7943aaeb074d8a848239b850c1b5842c163"
+          ]
+        },
+        {
+          "boxes": [
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ]
+          ],
+          "rotate": 0,
+          "user_unit": "1",
+          "raw_stream_sha256": [
+            "d855ebc73ec96f4945d461d5f656fe6bd547653a2ff92ec88ac9cef2b7b728ea"
+          ]
+        },
+        {
+          "boxes": [
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ]
+          ],
+          "rotate": 0,
+          "user_unit": "1",
+          "raw_stream_sha256": [
+            "f0d204e058e7dcd4661a770b1329f7943aaeb074d8a848239b850c1b5842c163"
+          ]
+        }
+      ],
+      "effective_version": "1.3",
+      "adbe_extension_level": 0
+    },
+    {
+      "case": "exclusions",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "python",
+        "-m",
+        "bookscan.preview",
+        "--content",
+        "/private/tmp/bookscan-prepared-preview-k16-v2/Six pages.pdf",
+        "!2,!5-6",
+        "--output",
+        "/private/tmp/bookscan-prepared-preview-k16-v2/exclusions-planned.pdf",
+        "--dry-run",
+        "--json"
+      ],
+      "result": {
+        "schema_version": 1,
+        "status": "planned",
+        "output": "/private/tmp/bookscan-prepared-preview-k16-v2/exclusions-planned.pdf",
+        "page_count": 3,
+        "pages": [
+          {
+            "output_page": 1,
+            "source": "/private/tmp/bookscan-prepared-preview-k16-v2/Six pages.pdf",
+            "source_page": 1,
+            "role": "content"
+          },
+          {
+            "output_page": 2,
+            "source": "/private/tmp/bookscan-prepared-preview-k16-v2/Six pages.pdf",
+            "source_page": 3,
+            "role": "content"
+          },
+          {
+            "output_page": 3,
+            "source": "/private/tmp/bookscan-prepared-preview-k16-v2/Six pages.pdf",
+            "source_page": 4,
+            "role": "content"
+          }
+        ],
+        "warnings": []
+      },
+      "directory_unchanged": true,
+      "geometry": [
+        {
+          "boxes": [
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ]
+          ],
+          "rotate": 0,
+          "user_unit": "1",
+          "raw_stream_sha256": [
+            "d855ebc73ec96f4945d461d5f656fe6bd547653a2ff92ec88ac9cef2b7b728ea"
+          ]
+        },
+        {
+          "boxes": [
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ]
+          ],
+          "rotate": 0,
+          "user_unit": "1",
+          "raw_stream_sha256": [
+            "97d8d8e74fc5a6d1cc406eeebdc8f66ba77e006a03a25a93febf72fda5c8c4c7"
+          ]
+        },
+        {
+          "boxes": [
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ]
+          ],
+          "rotate": 0,
+          "user_unit": "1",
+          "raw_stream_sha256": [
+            "f0d204e058e7dcd4661a770b1329f7943aaeb074d8a848239b850c1b5842c163"
+          ]
+        }
+      ],
+      "effective_version": "1.3",
+      "adbe_extension_level": 0
+    },
+    {
+      "case": "assembled",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "python",
+        "-m",
+        "bookscan.preview",
+        "--content",
+        "/private/tmp/bookscan-prepared-preview-k16-v2/Labelled content.pdf",
+        "--output",
+        "/private/tmp/bookscan-prepared-preview-k16-v2/assembled-planned.pdf",
+        "--dry-run",
+        "--json"
+      ],
+      "result": {
+        "schema_version": 1,
+        "status": "planned",
+        "output": "/private/tmp/bookscan-prepared-preview-k16-v2/assembled-planned.pdf",
+        "page_count": 2,
+        "pages": [
+          {
+            "output_page": 1,
+            "source": "/private/tmp/bookscan-prepared-preview-k16-v2/Labelled content.pdf",
+            "source_page": 1,
+            "role": "content"
+          },
+          {
+            "output_page": 2,
+            "source": "/private/tmp/bookscan-prepared-preview-k16-v2/Labelled content.pdf",
+            "source_page": 2,
+            "role": "content"
+          }
+        ],
+        "warnings": []
+      },
+      "directory_unchanged": true,
+      "geometry": [
+        {
+          "boxes": [
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ]
+          ],
+          "rotate": 0,
+          "user_unit": "1",
+          "raw_stream_sha256": [
+            "8614ad570dc4d38cf604f8f3e44e0c23d4c22f542494acebe111c077804c34c4"
+          ]
+        },
+        {
+          "boxes": [
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ]
+          ],
+          "rotate": 0,
+          "user_unit": "1",
+          "raw_stream_sha256": [
+            "3c1eb1d4062ebcdc51f730791a1027b8a06bf1934b5f95018307cf8203cca4f8"
+          ]
+        }
+      ],
+      "effective_version": "1.3",
+      "adbe_extension_level": 0
+    },
+    {
+      "case": "music",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "python",
+        "-m",
+        "bookscan.preview",
+        "--front",
+        "/Volumes/Glass/Book Conversion/Covers/SchoenbergComposition.pdf",
+        "1",
+        "--content",
+        "/Volumes/Glass/Book Conversion/Raw Scans/Fundamentals of Musical Composition.pdf",
+        "40,140",
+        "--output",
+        "/private/tmp/bookscan-prepared-preview-k16-v2/music-planned.pdf",
+        "--dry-run",
+        "--json"
+      ],
+      "result": {
+        "schema_version": 1,
+        "status": "planned",
+        "output": "/private/tmp/bookscan-prepared-preview-k16-v2/music-planned.pdf",
+        "page_count": 3,
+        "pages": [
+          {
+            "output_page": 1,
+            "source": "/Volumes/Glass/Book Conversion/Covers/SchoenbergComposition.pdf",
+            "source_page": 1,
+            "role": "front"
+          },
+          {
+            "output_page": 2,
+            "source": "/Volumes/Glass/Book Conversion/Raw Scans/Fundamentals of Musical Composition.pdf",
+            "source_page": 40,
+            "role": "content"
+          },
+          {
+            "output_page": 3,
+            "source": "/Volumes/Glass/Book Conversion/Raw Scans/Fundamentals of Musical Composition.pdf",
+            "source_page": 140,
+            "role": "content"
+          }
+        ],
+        "warnings": []
+      },
+      "directory_unchanged": true,
+      "geometry": [
+        {
+          "boxes": [
+            [
+              "0.000000",
+              "0.000000",
+              "595.000000",
+              "841.000000"
+            ],
+            [
+              "0.000000",
+              "0.000000",
+              "595.000000",
+              "841.000000"
+            ],
+            [
+              "0.000000",
+              "0.000000",
+              "595.000000",
+              "841.000000"
+            ],
+            [
+              "0.000000",
+              "0.000000",
+              "595.000000",
+              "841.000000"
+            ],
+            [
+              "0.000000",
+              "0.000000",
+              "595.000000",
+              "841.000000"
+            ]
+          ],
+          "rotate": 0,
+          "user_unit": "1",
+          "raw_stream_sha256": [
+            "4d06a236b0be95a383ce0c0a6109b4ef4c56aa229e2bb318e8d0f650a50bd078",
+            "01d0dfb71cfbab6792d2ab4d4e6ca9defcded6fc4dfa1da0f620b5902134a443",
+            "b27830d6c5077cfd9d68e561489582b61f36b83d06e2263526851838153043bd"
+          ]
+        },
+        {
+          "boxes": [
+            [
+              "0",
+              "0",
+              "406.08",
+              "586.32"
+            ],
+            [
+              "0",
+              "0",
+              "406.08",
+              "586.32"
+            ],
+            [
+              "0",
+              "0",
+              "406.08",
+              "586.32"
+            ],
+            [
+              "0",
+              "0",
+              "406.08",
+              "586.32"
+            ],
+            [
+              "0",
+              "0",
+              "406.08",
+              "586.32"
+            ]
+          ],
+          "rotate": 0,
+          "user_unit": "1",
+          "raw_stream_sha256": [
+            "2c89166aa51a66f2ce5ce24d26b3fb1109879a147d7941ad050709c4ff693430",
+            "c30912c2d3c5fbec09387f824643061be8550c87f7fbde9c9edaab1e7de86340",
+            "1f40ab702e942c262049f5281a412fe0a8b6e86049ed86572c2075161ff56723",
+            "042a0e0942435ed521b83afba3beb91181334cf2325d98c80917a0b1f1b2342c"
+          ]
+        },
+        {
+          "boxes": [
+            [
+              "0",
+              "0",
+              "412.80",
+              "590.16"
+            ],
+            [
+              "0",
+              "0",
+              "412.80",
+              "590.16"
+            ],
+            [
+              "0",
+              "0",
+              "412.80",
+              "590.16"
+            ],
+            [
+              "0",
+              "0",
+              "412.80",
+              "590.16"
+            ],
+            [
+              "0",
+              "0",
+              "412.80",
+              "590.16"
+            ]
+          ],
+          "rotate": 0,
+          "user_unit": "1",
+          "raw_stream_sha256": [
+            "2c89166aa51a66f2ce5ce24d26b3fb1109879a147d7941ad050709c4ff693430",
+            "4cf53f1eb2883a7a5ef5c3faa44bd973a61e4f410229d14ecdf4418b0dc798df",
+            "acc670da2e281dcbe2edf89dab792f9d210b86ba5d21decc3ad05a3e369a068a",
+            "34c5c56ae58521e8674bfb4ef65b443e53a47b55901a9be2a620a048840f82a4",
+            "1932ed0c6c937a9b9e2457ad8263eec5cb5dc62a68bb2153a75f103124061939"
+          ]
+        }
+      ],
+      "effective_version": "1.3",
+      "adbe_extension_level": 0
+    },
+    {
+      "case": "norwegian",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "python",
+        "-m",
+        "bookscan.preview",
+        "--content",
+        "/Volumes/Glass/Book Conversion/Processed Books/Norwegian - An Essential Grammar (Routledge)/Norwegian - An Essential Grammar (Routledge).pdf",
+        "20",
+        "--output",
+        "/private/tmp/bookscan-prepared-preview-k16-v2/norwegian-planned.pdf",
+        "--dry-run",
+        "--json"
+      ],
+      "result": {
+        "schema_version": 1,
+        "status": "planned",
+        "output": "/private/tmp/bookscan-prepared-preview-k16-v2/norwegian-planned.pdf",
+        "page_count": 1,
+        "pages": [
+          {
+            "output_page": 1,
+            "source": "/Volumes/Glass/Book Conversion/Processed Books/Norwegian - An Essential Grammar (Routledge)/Norwegian - An Essential Grammar (Routledge).pdf",
+            "source_page": 20,
+            "role": "content"
+          }
+        ],
+        "warnings": []
+      },
+      "directory_unchanged": true,
+      "geometry": [
+        {
+          "boxes": [
+            [
+              "0.0",
+              "0.0",
+              "861.71",
+              "646.69"
+            ],
+            [
+              "0.0",
+              "0.0",
+              "861.71",
+              "646.69"
+            ],
+            [
+              "0.0",
+              "0.0",
+              "861.71",
+              "646.69"
+            ],
+            [
+              "0.0",
+              "0.0",
+              "861.71",
+              "646.69"
+            ],
+            [
+              "0.0",
+              "0.0",
+              "861.71",
+              "646.69"
+            ]
+          ],
+          "rotate": 0,
+          "user_unit": "1",
+          "raw_stream_sha256": [
+            "5fe7dfb0a40fd931877495e48135269919ef9c3d834daa5831a5aee1e92a52c8",
+            "6699993000bdc73f866b226b38ddb5c9a1f31bf32214c37d2cb848307f86f2b0",
+            "5e8e7fb65617c2f546b5460c727ffe2e4788c6972136be524d45e4b6d7f38563"
+          ]
+        }
+      ],
+      "effective_version": "1.6",
+      "adbe_extension_level": 0
+    },
+    {
+      "case": "counterpoint",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "python",
+        "-m",
+        "bookscan.preview",
+        "--content",
+        "/Volumes/Glass/Book Conversion/Needing Cleanup/Counterpoint in Composition.pdf",
+        "20",
+        "--output",
+        "/private/tmp/bookscan-prepared-preview-k16-v2/counterpoint-planned.pdf",
+        "--dry-run",
+        "--json"
+      ],
+      "result": {
+        "schema_version": 1,
+        "status": "planned",
+        "output": "/private/tmp/bookscan-prepared-preview-k16-v2/counterpoint-planned.pdf",
+        "page_count": 1,
+        "pages": [
+          {
+            "output_page": 1,
+            "source": "/Volumes/Glass/Book Conversion/Needing Cleanup/Counterpoint in Composition.pdf",
+            "source_page": 20,
+            "role": "content"
+          }
+        ],
+        "warnings": []
+      },
+      "directory_unchanged": true,
+      "geometry": [
+        {
+          "boxes": [
+            [
+              "0",
+              "0",
+              "842",
+              "595"
+            ],
+            [
+              "0",
+              "0",
+              "842",
+              "595"
+            ],
+            [
+              "0",
+              "0",
+              "842",
+              "595"
+            ],
+            [
+              "0",
+              "0",
+              "842",
+              "595"
+            ],
+            [
+              "0",
+              "0",
+              "842",
+              "595"
+            ]
+          ],
+          "rotate": 0,
+          "user_unit": "1",
+          "raw_stream_sha256": [
+            "5d555fbf207de78e2eb98f931744ac9f7f513109e96ab18e146f97db49811527",
+            "ff0b503dd17883ba8fca9304b66a1d1cc32f0cb1eeffd15d901535ed45add601"
+          ]
+        }
+      ],
+      "effective_version": "1.4",
+      "adbe_extension_level": 0
+    },
+    {
+      "case": "algorithm",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "python",
+        "-m",
+        "bookscan.preview",
+        "--content",
+        "/Volumes/Glass/Book Conversion/Processed Books/Algorithm Design/Algorithm Design.pdf",
+        "20",
+        "--output",
+        "/private/tmp/bookscan-prepared-preview-k16-v2/algorithm-planned.pdf",
+        "--dry-run",
+        "--json"
+      ],
+      "result": {
+        "schema_version": 1,
+        "status": "planned",
+        "output": "/private/tmp/bookscan-prepared-preview-k16-v2/algorithm-planned.pdf",
+        "page_count": 1,
+        "pages": [
+          {
+            "output_page": 1,
+            "source": "/Volumes/Glass/Book Conversion/Processed Books/Algorithm Design/Algorithm Design.pdf",
+            "source_page": 20,
+            "role": "content"
+          }
+        ],
+        "warnings": []
+      },
+      "directory_unchanged": true,
+      "geometry": [
+        {
+          "boxes": [
+            [
+              "0.0",
+              "0.0",
+              "564.0",
+              "653.0"
+            ],
+            [
+              "0.0",
+              "0.0",
+              "564.0",
+              "653.0"
+            ],
+            [
+              "0.0",
+              "0.0",
+              "564.0",
+              "653.0"
+            ],
+            [
+              "0.0",
+              "0.0",
+              "564.0",
+              "653.0"
+            ],
+            [
+              "0.0",
+              "0.0",
+              "564.0",
+              "653.0"
+            ]
+          ],
+          "rotate": 0,
+          "user_unit": "1",
+          "raw_stream_sha256": [
+            "2b8d6f9bda3a5a86a61e5a79fd21c0846239db290fc6e910d60ac34d47e1c3cd",
+            "94668dc3347775c12dbebf63fa2e1bbd1a58d33d6bc04069e6ae643a319a7f95",
+            "08f2b37bbe2955b4da89a78bcb50a0121e4cd7e4c1e4146764ead8523c78c4b4"
+          ]
+        }
+      ],
+      "effective_version": "1.7",
+      "adbe_extension_level": 3
+    },
+    {
+      "case": "strings",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "python",
+        "-m",
+        "bookscan.preview",
+        "--front",
+        "/Volumes/Glass/Book Conversion/Covers/Algorithms on Strings, Trees, and Sequence.pdf",
+        "1",
+        "--content",
+        "/private/tmp/bookscan-prepared-preview-k16-v2/Labelled content.pdf",
+        "--back",
+        "/Volumes/Glass/Book Conversion/Covers/Algorithms on Strings, Trees, and Sequence.pdf",
+        "2",
+        "--output",
+        "/private/tmp/bookscan-prepared-preview-k16-v2/strings-planned.pdf",
+        "--dry-run",
+        "--json"
+      ],
+      "result": {
+        "schema_version": 1,
+        "status": "planned",
+        "output": "/private/tmp/bookscan-prepared-preview-k16-v2/strings-planned.pdf",
+        "page_count": 4,
+        "pages": [
+          {
+            "output_page": 1,
+            "source": "/Volumes/Glass/Book Conversion/Covers/Algorithms on Strings, Trees, and Sequence.pdf",
+            "source_page": 1,
+            "role": "front"
+          },
+          {
+            "output_page": 2,
+            "source": "/private/tmp/bookscan-prepared-preview-k16-v2/Labelled content.pdf",
+            "source_page": 1,
+            "role": "content"
+          },
+          {
+            "output_page": 3,
+            "source": "/private/tmp/bookscan-prepared-preview-k16-v2/Labelled content.pdf",
+            "source_page": 2,
+            "role": "content"
+          },
+          {
+            "output_page": 4,
+            "source": "/Volumes/Glass/Book Conversion/Covers/Algorithms on Strings, Trees, and Sequence.pdf",
+            "source_page": 2,
+            "role": "back"
+          }
+        ],
+        "warnings": []
+      },
+      "directory_unchanged": true,
+      "geometry": [
+        {
+          "boxes": [
+            [
+              "0.000000",
+              "0.000000",
+              "595.000000",
+              "841.000000"
+            ],
+            [
+              "0.000000",
+              "0.000000",
+              "595.000000",
+              "841.000000"
+            ],
+            [
+              "0.000000",
+              "0.000000",
+              "595.000000",
+              "841.000000"
+            ],
+            [
+              "0.000000",
+              "0.000000",
+              "595.000000",
+              "841.000000"
+            ],
+            [
+              "0.000000",
+              "0.000000",
+              "595.000000",
+              "841.000000"
+            ]
+          ],
+          "rotate": 0,
+          "user_unit": "1",
+          "raw_stream_sha256": [
+            "c82957a105f516ce89450fa0ff662f13de5094c51192d1b81da455fba8f3562c",
+            "872afe5118d76b36cee2e6e7c51b29aa14488b68741808a91c67c54677fdefdc",
+            "b27830d6c5077cfd9d68e561489582b61f36b83d06e2263526851838153043bd"
+          ]
+        },
+        {
+          "boxes": [
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ]
+          ],
+          "rotate": 0,
+          "user_unit": "1",
+          "raw_stream_sha256": [
+            "8614ad570dc4d38cf604f8f3e44e0c23d4c22f542494acebe111c077804c34c4"
+          ]
+        },
+        {
+          "boxes": [
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            [
+              "0",
+              "0",
+              "240",
+              "320"
+            ]
+          ],
+          "rotate": 0,
+          "user_unit": "1",
+          "raw_stream_sha256": [
+            "3c1eb1d4062ebcdc51f730791a1027b8a06bf1934b5f95018307cf8203cca4f8"
+          ]
+        },
+        {
+          "boxes": [
+            [
+              "0.000000",
+              "0.000000",
+              "595.000000",
+              "841.000000"
+            ],
+            [
+              "0.000000",
+              "0.000000",
+              "595.000000",
+              "841.000000"
+            ],
+            [
+              "0.000000",
+              "0.000000",
+              "595.000000",
+              "841.000000"
+            ],
+            [
+              "0.000000",
+              "0.000000",
+              "595.000000",
+              "841.000000"
+            ],
+            [
+              "0.000000",
+              "0.000000",
+              "595.000000",
+              "841.000000"
+            ]
+          ],
+          "rotate": 0,
+          "user_unit": "1",
+          "raw_stream_sha256": [
+            "5b5cb0d33ad3d6762359a53e30345ee627f2a4f8b9e1b4eb58e09209785573b2",
+            "4bfd43c29d69c6773e3b3404ddb355efb95f21b4473630b397ce682a52abc8d6",
+            "b27830d6c5077cfd9d68e561489582b61f36b83d06e2263526851838153043bd"
+          ]
+        }
+      ],
+      "effective_version": "1.3",
+      "adbe_extension_level": 0
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-# prepared-pdf-k13
+# prepared-pdf-k13 — brief
 
 ## Goal
 
@@ -260,3 +260,14 @@ The output works in ordinary readers now and as the processor's sole required
 input later. `corrected-book-k5` retains final collection-isolated end-to-end
 acceptance and optional-cleanup handoff. Preparation does not close the root.
 No driver is launched.
+
+## Decisions (running log)
+
+The complete command's recursive retained-graph comparator, signal/kill windows
+and full render acceptance exceed one focused session in a repository with no
+product package yet. Activate the explicitly reviewed preview→writing fallback:
+this session finishes the complete phase-1–5 preview and stability recheck; the
+writing child owns the full PDF-producing path and acceptance before geometry.
+The node retains this entire charter. No public console command or writing stub
+is installed in the preview increment. Existing design and reviewed planning
+settle the public behaviour; no replacement design or human approval is needed.

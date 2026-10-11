@@ -220,3 +220,12 @@ There was no project Taskfile at bootstrap. Adding a root `Taskfile.yml` was
 suggested; introduce it when deterministic development commands are concrete,
 wrap existing tools where appropriate, and verify its tasks before relying on
 them.
+
+## Preparation fallback activated
+
+`prepared-pdf-k13` is now the preparation implementation node.
+`prepared-preview-k16` supplies the complete explicitly dry-run preview and its
+frozen synthetic/real selection evidence; `prepared-pdf-k17` remains live under
+that node to deliver the full writing command and all copy/publication/render
+acceptance. Preview is useful for planning but creates no prepared PDF. Geometry
+stays after this node and cannot consume its preview as the PDF handoff.

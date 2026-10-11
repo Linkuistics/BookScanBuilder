@@ -22,3 +22,30 @@ tasks:
     desc: Serve only the preparation design directory on localhost
     cmds:
       - python3 -m http.server '{{.DESIGN_PORT}}' --bind 127.0.0.1 --directory docs/design/prepared-pdf
+
+  prepare:setup:
+    desc: Sync locked Python/pikepdf environment and check acceptance renderer
+    cmds:
+      - uv sync --locked
+      - command -v pdftoppm
+
+  prepare:plan:
+    desc: Validate explicit preparation selections (temporary preview; requires --dry-run)
+    cmds:
+      # https://taskfile.dev/docs/reference/templating#cli documents shellQuote.
+      - uv run --locked python -m bookscan.preview {{range .CLI_ARGS_LIST}}{{. | shellQuote}} {{end}}
+
+  prepare:check:
+    desc: Check preparation without Poppler or the source collection
+    cmds:
+      - uv run --locked ruff format --check src tests
+      - uv run --locked ruff check src tests
+      - uv run --locked pyright
+      - uv run --locked pytest -q
+
+  prepare:preview-acceptance:
+    desc: Record dry-run selections/digests for synthetic and explicit real fixtures
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/preview_acceptance.py --collection '{{.COLLECTION}}' --artifacts '{{.ARTIFACTS}}'
