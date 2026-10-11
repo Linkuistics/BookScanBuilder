@@ -33,6 +33,20 @@ Preparation's working contract/evidence are `docs/specs/prepared-pdf.md` and
 
 ## Done when
 
+- Consume `norwegian-measurement-k38`'s actual human-completion plan,
+  `geometry-policy-k39` and its lazily cut fresh planner before using k27's
+  result. k38 commissions no new Norwegian study or production method; k39
+  obtains the exact two k37 policy choices and separate existing left/right
+  source/control reactions. Only actual explicit answers/deferral change the
+  disposition, never another elapsed response window. If unanswered, retain
+  existing reaction ranking and demonstrated-geometry prerequisites. Policy
+  approval supplies neither numerical source admissibility nor representative
+  visual acceptance; a source reaction cannot erase the failed fixed-grid
+  controls. Another instrument study needs its separately justified human choice
+  of a genuinely changed selected-cell/readout observation and fresh blind
+  exact-format controls before real marks, with all shared-baseline uncertainty
+  and conditional comparison work retained. Do not recommission a same-grid
+  trial or repeatedly cut the identical unanswered response completion.
 - Classify k27 by its ordered source-only outcomes and retain automatic and
   manual acquisition separately. Check complete extraction-only automatic
   diagnostics, the declared T/B/D/I fit and A/E/H evaluation roster, genuine

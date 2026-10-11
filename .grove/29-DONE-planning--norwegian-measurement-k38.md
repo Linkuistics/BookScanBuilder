@@ -132,3 +132,102 @@ This is the mandatory fresh decision boundary after a precise early instrument
 failure, not another trial or an assumed design. All current outcomes and scope
 limits must be reconciled against committed evidence. Any human policy answer
 received later supersedes an unavailable reply explicitly, never by inference.
+
+## Decisions (running log)
+
+Consume k35 as unreliable instrument addressing independently for left and
+right. Each initial observer and the shared verifier misses all three known
+cells; every joint singleton interval excludes truth. Agreement on A's wrong
+cell is evidence against using agreement as calibration. The retained controls,
+packet, private key, raw reports and canonical JSON distinguish exact generated
+pixels from failed readback. No real roster/holdout, masked native gate, genuine
+baseline uncertainty, model, field or corrected result exists. Later work is
+unperformed, not another failure, and the result rejects only this fixed-format
+method. Existing source/instrument reactions are unavailable independently;
+real-anchor/output reactions are unperformed without views.
+
+Choose precise human policy/source-response completion as the next useful work.
+No genuinely changed selected-cell/readout method has been demonstrated or
+separately chosen by the human. Therefore commission no further Norwegian
+instrument study, same-grid retry, answer-reveal/re-mark, manual retry, larger
+family or production method. Re-present k37's two exact policy choices with
+their recommendations; no reply authorizes a policy change. A focused
+requirements leaf can collect those choices and separate left/right reactions
+to the existing source/control views without new measurement. Historical
+geometry/preparation responses remain with k27 and k28, avoiding duplicate
+response work. A completed response handoff cuts a fresh planner before k27 on
+every outcome; that planner consumes actual answers before choosing work.
+
+The useful working increments remain explicit preparation, the complete default
+corrected/searchable processor, then optional appearance cleanup in this one
+tree/workspace. Policy/source completion is evidence inside the default
+increment, not another product increment. k27 then k28 remain live and ordered;
+source success cannot substitute for k31's conditional complete comparisons,
+fixed-case acceptance or processor design. Accepted-image representation and
+its working reader/export stay together. No new node, implementation technology,
+Taskfile recipe or ADR is justified by this response-only question.
+
+Tier 2 graph verification uses project
+`Users-antony-Development-BookScanBuilder`, generation 2026-10-11T10:33:03Z.
+Relevant symbol search and both-direction one-hop pages are complete; exact
+centres/preflight/grid/run snippets establish the source-only and display APIs.
+The file-regex search initially returned no rows; the broader symbol and exact
+file searches found the required functions, so no absence claim rests on that
+empty query. The addressing run's inferred graph edges include unrelated PDF
+helpers/tests; they are not trusted as dependencies. Exact source supplies its
+actual calls. Coverage records no gap in text/code paths; PNGs are intentionally
+excluded and the gzip archive has untracked freshness metadata. Read/viewed
+those ordinary images and decompressed/verified the full archive directly.
+Coverage remains best-effort, not a completeness guarantee.
+
+Fresh canonical integrity verification rechecks every k35 subject, all nine
+readback errors/intervals, unique native minima and all displayed cell centres,
+full-height split/recombination, lossless native archive and every case/point in
+its retained rerun. Source/canvas/native/control identities hold. The 106 named
+subjects in `/private/tmp/bookscan-k38-integrity.json` stay identical before and
+after: k35/k33/k32/staff/k4 reports and their complete read-subject unions,
+controls/packet/key, native archive and final/rerun JSON, historical review PDFs,
+current verification script and Pillow module. The compact sorted map digest is
+`bda211ae14a57f2f85626d5ebb4311675278a7b707ba4c970bb1b2db3f6bef5f`.
+Historical maps differ only in Taskfile versions predating retained recipes;
+k35's current map matches entirely. No report or instrument was edited during
+this check, no source observation or correction was generated and no subject moved.
+Retained `geometry:staff-check` passes Ruff and all four native tests;
+`prepare:check` passes Ruff, strict pyright with zero errors and all 231 tests.
+
+Inserted `geometry-policy-k39` before k27. Its human requirements charter owns
+only the two exact policy choices and independent existing source/control-view
+replies; it leaves unanswered policy work live rather than retiring on silence.
+Every completed handoff, including explicit deferral or partial visual replies,
+cuts a fresh planner before k27 on every outcome. No future planner/review or
+evidence trial is pre-created. Updated the root increment/current-chain summary
+and k27/k28's own Done when, retaining their complete inherited criteria.
+Historical geometry/preparation response completion remains with k27/k28.
+
+No reply to either re-presented policy question has arrived at this planning
+boundary. Carry unavailable replies to k39; do not infer the preselected
+recommendations were submitted. Existing policies remain binding. The narrow
+response-only cut changes no source-admissibility method or product boundary
+and warrants no external review chain or in-session reviewer; its ordering and
+preserved contracts are checked directly. No hard-to-reverse decision earns an
+ADR. Root work stays live, so retiring this leaf closes no ancestor.
+
+Final coverage generation 2026-10-11T10:39:29Z checks the additional local
+verification subjects and all current leaf paths. The new response leaf's
+metadata changed after its final wording edit; its complete current body is
+read directly. PNG exclusion and archive/uv.lock untracked metadata are handled
+by direct viewing/byte reads/digests, not graph completeness claims.
+
+Enumerated both full jj manifests and compared every file outside `.grove/`
+byte for byte with the parent: all 77 paths are identical, with no additions or
+deletions there. The comparator detects the deliberately changed root body;
+its Done when section is unchanged and a deliberate section mutation is
+detected. k22/k23 bodies are byte-identical through renumbering. k27/k28 retain
+their complete original contracts with only the explicit new consumption
+criteria added. All live leaf headers match stable handles; order is k38 →
+k39 → k27 → k28 → k22 → k23, and k39 owns the lazy fresh planner before k27.
+Checked this leaf's full Done when against those contracts: every independent
+half, uncertainty/prerequisite/comparison/reaction and fixed-case/default-
+product/design/OCR/appearance/root obligation remains owned. No existing review
+names k38, so creator naming is not due. Retire k38 and seal this focused tree
+change together, then send harness-dispatch exit as the final action.

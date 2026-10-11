@@ -61,7 +61,7 @@ the trial, not to promise an algorithm's success.
 | Increment | Useful handoff | Dependency and ownership |
 | --- | --- | --- |
 | Explicit PDF preparation | One prepared PDF, with selected content order and explicit front/back covers, usable by ordinary PDF tools | First independently useful increment in this tree. `prepared-pdf-k9` and `prepared-pdf-k12` supply the integrated design; `prepared-pdf-k10` cuts `prepared-pdf-k13`, the complete command and its verification, ahead of geometry. No correction service is needed. |
-| Corrected searchable book | One prepared PDF processed through accepted geometry, border removal, post-split assembly decisions, review adjustments and aligned English OCR into an exported PDF | Depends on working preparation's public contract and demonstrated geometry. `norwegian-measurement-k35` delivers a bounded per-half blind-addressing control failure; `norwegian-measurement-k38` consumes that actual result before source-only `staff-acquisition-k27`, preserving `corrected-book-k28` after music acquisition. k28 consumes the actual evidence before cutting further evidence/design/working processor slices ahead of appearance. The corrected-image schema and its working reader/export path belong to this same increment. |
+| Corrected searchable book | One prepared PDF processed through accepted geometry, border removal, post-split assembly decisions, review adjustments and aligned English OCR into an exported PDF | Depends on working preparation's public contract and demonstrated geometry. `norwegian-measurement-k35` delivers a bounded per-half blind-addressing control failure; `norwegian-measurement-k38` consumes it and commissions human policy/source-response completion `geometry-policy-k39` before source-only `staff-acquisition-k27`, preserving `corrected-book-k28` after music acquisition. k39 cuts a fresh planner from actual responses before k27; k28 consumes that chain before cutting justified evidence/design/working processor slices ahead of appearance. The corrected-image schema and its working reader/export path belong to this same increment. |
 | Optional appearance cleanup | Preview and selectively apply whitening or noise removal while keeping the working default processor and its accepted-image/OCR alignment | `appearance-cleanup-k22` owns the precise successor design question after the default processor works, then cuts its planning consumer before `workflow-acceptance-k23`. Compare faint print, music, illustration and colour before choosing a cleanup method. |
 
 The user chose one workspace and one Grove tree for all three increments.
@@ -475,3 +475,34 @@ human policy/response completion; another instrument study needs a separately
 justified human choice. No same-grid retry, baseline bias bound, model or
 production acceptance follows. k27 → k28 → k22 → k23 and every inherited
 music/preparation/fixed-case/default-product/appearance/root obligation stay live.
+
+## Geometry policy and source-response completion
+
+`norwegian-measurement-k38` consumes all nine failed k35 readbacks without
+extending their scope. It chooses `geometry-policy-k39`, a focused human
+requirements completion, before k27. The two k37 policy questions were
+re-presented during k38; absent an actual reply, their current reaction ranking
+and demonstrated-geometry prerequisites remain in force. k39 checks for later
+answers before re-asking and records explicit choices or an explicit deferral;
+silence alone leaves its policy work live rather than spawning another
+unavailable-response/planning loop. It separately obtains or records unavailable
+left/right reactions to the existing unchanged source/control views. Real-anchor
+and correction reactions remain unperformed. Historical geometry/preparation
+responses remain with k27 then k28, separately “Not inspected yet”.
+
+No new Norwegian instrument study, retry or production method is commissioned.
+A genuinely changed selected-cell/readout observation still needs a separately
+justified human choice, then fresh exact-format blind addressing controls and
+the complete physical/source-systematic/masked-native evidence contract; known-
+centre success cannot bound real shared baseline bias. A reply to a source view
+cannot erase k35's failed numerical controls or grant correction approval.
+
+On every actual completed response handoff, k39 cuts a fresh planning consumer
+before k27. It consumes the actual answers and full k38/k31/k21/k28 obligations,
+without automatically repeating a trial or the same missing-response question.
+The relative order remains k39 → its fresh planner → k27 → k28 → k22 → k23.
+Every unresolved conditional Norwegian comparison/control/nonidentity sampler,
+independent measurement/reaction, music20/music140/fixture-pool, preparation,
+fixed-case, processor-design/default-product/OCR/appearance and root acceptance
+criterion remains live. Neither policy option supplies representative evidence,
+chooses production technology or closes within-page geometry/root acceptance.

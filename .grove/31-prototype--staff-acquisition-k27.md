@@ -55,6 +55,16 @@ Generate no fitted model, rigid image or corrected image in this session.
 
 ## Done when
 
+- Read `norwegian-measurement-k38`, `geometry-policy-k39` and the fresh planner
+  cut by its actual response handoff. Carry exact per-half source dispositions
+  and policy choices; silence still changes neither source-reaction ranking nor
+  demonstrated-geometry prerequisites. k38 commissions human completion, no
+  new Norwegian study. Do not treat a source-view reply as calibrated addressing
+  or real staff uncertainty. The fixed 16× grid remains failed; any genuinely
+  changed music format/method still needs its own blind known-centre controls
+  for actual observer classes before manual endpoints or dense marks. Automatic
+  extraction-only diagnostics retain their existing independent scope/order.
+  Historical geometry/preparation responses remain owned here separately.
 - Consume k31/k34 and k35 plus its fresh planner's actual dispositions before
   this repair. Carry any source-instrument limitations into the music protocol
   without treating text-baseline success/failure as music-rule evidence. Keep
