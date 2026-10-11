@@ -3,6 +3,7 @@ version: '3'
 vars:
   COLLECTION: /Volumes/Glass/Book Conversion
   DESIGN_PORT: '8769'
+  MODE: all
 
 tasks:
   prepare:copy-experiment:
@@ -29,11 +30,10 @@ tasks:
       - uv sync --locked
       - command -v pdftoppm
 
-  prepare:plan:
-    desc: Validate explicit preparation selections (temporary preview; requires --dry-run)
+  prepare:run:
+    desc: Assemble explicitly selected whole PDF pages
     cmds:
-      # https://taskfile.dev/docs/reference/templating#cli documents shellQuote.
-      - uv run --locked python -m bookscan.preview {{range .CLI_ARGS_LIST}}{{. | shellQuote}} {{end}}
+      - uv run --locked bookscan prepare {{range .CLI_ARGS_LIST}}{{. | shellQuote}} {{end}}
 
   prepare:check:
     desc: Check preparation without Poppler or the source collection
@@ -43,9 +43,9 @@ tasks:
       - uv run --locked pyright
       - uv run --locked pytest -q
 
-  prepare:preview-acceptance:
-    desc: Record dry-run selections/digests for synthetic and explicit real fixtures
+  prepare:acceptance:
+    desc: Matched 300-dpi synthetic/real copying acceptance (MODE=synthetic|real|all)
     requires:
       vars: [ARTIFACTS]
     cmds:
-      - uv run --locked python tests/preview_acceptance.py --collection '{{.COLLECTION}}' --artifacts '{{.ARTIFACTS}}'
+      - uv run --locked python tests/prepare_acceptance.py --mode '{{.MODE}}' --artifacts '{{.ARTIFACTS}}' {{if ne .MODE "synthetic"}}--collection '{{.COLLECTION}}'{{end}}

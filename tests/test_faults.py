@@ -9,8 +9,8 @@ import pytest
 from pdf_fixtures import raw_pdf
 from test_preview import labels
 
-from bookscan.prepare import plan
-from bookscan.preview import run
+from bookscan.cli import run
+from bookscan.prepare import operate, plan
 from bookscan.results import PreparationError
 from bookscan.selections import parse
 
@@ -19,10 +19,13 @@ def arguments(path: Path) -> list[str]:
     return ["--content", str(path), "--output", str(path.parent / "out.pdf"), "--dry-run"]
 
 
+@pytest.mark.parametrize("dry_run", [True, False])
 @pytest.mark.parametrize("change", ["bytes", "mtime", "replace", "remove"])
-def test_source_recheck_detects_changes(tmp_path: Path, change: str) -> None:
+def test_source_recheck_detects_changes(tmp_path: Path, change: str, dry_run: bool) -> None:
     path = labels(tmp_path / "in.pdf")
-    request = parse(arguments(path))
+    request = parse(
+        arguments(path) if dry_run else [a for a in arguments(path) if a != "--dry-run"]
+    )
     original_stat = path.stat()
 
     def mutate() -> None:
@@ -40,7 +43,7 @@ def test_source_recheck_detects_changes(tmp_path: Path, change: str) -> None:
             os.utime(path, ns=(original_stat.st_atime_ns, original_stat.st_mtime_ns))
 
     with pytest.raises(PreparationError) as exc:
-        plan(request, before_recheck=mutate)
+        operate(request, before_recheck=mutate)
     assert exc.value.code == "SOURCE_CHANGED"
     assert not (tmp_path / "out.pdf").exists()
 
@@ -158,18 +161,18 @@ def test_actual_prepublication_signals(tmp_path: Path, signum: int) -> None:
     path = labels(tmp_path / "in.pdf")
     host = """
 import sys
-import bookscan.preview as preview
-from bookscan.prepare import plan
+import bookscan.cli as cli
+from bookscan.prepare import operate
 
 def ready():
     print('READY', file=sys.stderr, flush=True)
     sys.stdin.readline()
 
-preview.plan = lambda request: plan(request, before_recheck=ready)
-sys.exit(preview.main())
+cli.operate = lambda request, **kwargs: operate(request, before_recheck=ready, **kwargs)
+sys.exit(cli.main())
 """
     process = subprocess.Popen(
-        [sys.executable, "-c", host, *arguments(path), "--json"],
+        [sys.executable, "-c", host, "prepare", *arguments(path), "--json"],
         stdin=subprocess.PIPE,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,

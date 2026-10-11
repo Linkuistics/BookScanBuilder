@@ -61,7 +61,7 @@ a seekable output file makes complete validation and safe publication possible.
 | `--json` | Emit one versioned JSON result on stdout, including structured errors. |
 | `--help` | Explain role grouping, page grammar, failure/retry behaviour and common examples; exit 0 without opening inputs. |
 
-Examples of the public interface (specified here; not yet implemented):
+Examples of the installed public interface:
 
 ```sh
 bookscan prepare --content 'Book.pdf' --output 'Prepared.pdf'
@@ -511,8 +511,8 @@ requires an unused output directory outside the collection; `COLLECTION` can
 override the explicit fixture root. The diagram build requires D2 0.9.0; neither
 D2 nor the viewer belongs to the preparation runtime.
 
-The first working implementation adds these concrete responsibilities together
-with the command and usage instructions:
+The working implementation provides these responsibilities together with the
+command and usage instructions:
 
 | Recipe | Required reusable work |
 | --- | --- |
@@ -536,3 +536,25 @@ later work. This design supplies their sole required PDF input and optional
 role hints. Native packaging, a GUI, a multi-book queue, collection discovery,
 appearance cleanup and general interactive-PDF editing are unnecessary for this
 increment. Shell loops may call the single-book command repeatedly.
+
+## Implementation and evidence
+
+The installed locked command is `uv run --locked bookscan prepare`; use
+`task prepare:run -- …` for individually shell-quoted Task forwarding.
+The temporary preview module/recipes have been retired. `prepare:check` runs
+format/lint/strict types and collection/Poppler-independent public and private
+fault tests. `prepare:acceptance MODE=synthetic|real|all ARTIFACTS=…` records
+per-page 300-dpi RGB, geometry, encoded-resource and source-digest comparisons;
+real/all use an explicit `COLLECTION`, while synthetic never opens it.
+Reproduction and pending human visual acceptance are recorded in
+[the acceptance note](../acceptance/prepared-pdf.md).
+
+The adapter reconstructs the gated immutable graph inside the live-source
+operation. For zero-byte filtered streams, qpdf 12.4.2 elides their encoding
+dictionaries on save; a standard incremental revision inside the same private
+stream restores those dictionaries before independent runtime validation.
+A fresh qpdf document has a PDF 1.3 floor, so source versions 1.0–1.2 produce
+1.3 outputs; all other versions and accepted ADBE levels use the chosen numeric
+maximum. Both behaviours are tested without relaxing graph equality or source
+gates. The historical dependency experiment/report and preview report remain
+separate evidence from the complete public command.

@@ -221,11 +221,22 @@ suggested; introduce it when deterministic development commands are concrete,
 wrap existing tools where appropriate, and verify its tasks before relying on
 them.
 
-## Preparation fallback activated
+## Preparation implementation and visual handoff
 
-`prepared-pdf-k13` is now the preparation implementation node.
-`prepared-preview-k16` supplies the complete explicitly dry-run preview and its
-frozen synthetic/real selection evidence; `prepared-pdf-k17` remains live under
-that node to deliver the full writing command and all copy/publication/render
-acceptance. Preview is useful for planning but creates no prepared PDF. Geometry
-stays after this node and cannot consume its preview as the PDF handoff.
+`prepared-pdf-k13` delivers the complete installed `bookscan prepare` command:
+`prepared-preview-k16` established the shared read-only planning/gate operation,
+and `prepared-pdf-k17` completed writing, runtime comparison, safe publication,
+packaging, Task integration and synthetic/real/all acceptance. The temporary
+preview module/recipes are retired; use the public command for dry-run and writes.
+The complete contract remains `docs/specs/prepared-pdf.md`; retained per-item
+reports and full-page/native-zoom comparison paths are in
+`docs/acceptance/prepared-pdf.md` (all-v2 artifacts at
+`/private/tmp/bookscan-prepared-k17-all-v2`).
+
+The completed subsystem earns an external `review-impl` before geometry; any
+required integration is cut lazily by that review before consumers. Human
+preparation visual approval remains pending, explicitly owned by
+`page-geometry-k4` separately from its geometry response and checked by
+`corrected-book-k5`. Preparation completion closes neither the geometry trial,
+the default processor, optional appearance cleanup nor this root's full
+collection-isolated end-to-end acceptance. Those obligations stay live.

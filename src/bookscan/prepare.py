@@ -11,7 +11,9 @@ from typing import BinaryIO, cast
 
 import pikepdf
 
+from bookscan import copying
 from bookscan.pdf import DocumentInfo, Projection, document_info, project_page, unsupported
+from bookscan.publication import Control, Staged, startup_mode
 from bookscan.results import Json, PreparationError
 from bookscan.selections import Occurrence, Request, resolve, tokenize
 
@@ -198,6 +200,19 @@ def destination_check(output: Path, sources: list[Source]) -> None:
 
 
 def plan(request: Request, *, before_recheck: Callable[[], None] | None = None) -> Plan:
+    return operate(request, preview=True, before_recheck=before_recheck)
+
+
+def operate(
+    request: Request,
+    *,
+    preview: bool = False,
+    control: Control | None = None,
+    mode: int | None = None,
+    before_recheck: Callable[[], None] | None = None,
+) -> Plan:
+    control = control if control is not None else Control()
+    mode = startup_mode() if mode is None else mode
     # Phase 2 completes across *all* selections before opening any source.
     selections = tuple(tokenize(s) for s in request.selections)
     with ExitStack() as stack:
@@ -242,16 +257,36 @@ def plan(request: Request, *, before_recheck: Callable[[], None] | None = None) 
                 raise
             projected.append(projection)
         destination_check(request.output, list(sources.values()))
-        if before_recheck is not None:
-            before_recheck()
-        for source in sources.values():
-            source.recheck()
-            warnings(source.pdf)
-        return Plan(
+        result = Plan(
             request.output,
             pages,
             tuple(projected),
             tuple((s.path, s.sha256) for s in sources.values()),
-            max(s.info.version for s in sources.values()),
+            # QPDF's fresh document floor is 1.3; the spec permits writer-required upgrades.
+            # https://github.com/qpdf/qpdf/blob/v12.4.2/libqpdf/QPDF.cc
+            max((1, 3), *(s.info.version for s in sources.values())),
             max(s.info.extension_level for s in sources.values()),
         )
+        staged: Staged | None = None
+        try:
+            if not (preview or request.dry_run):
+                staged = Staged.create(request.output, mode, control)
+                copying.save(result, staged.stream)
+                for source in sources.values():
+                    copying.warnings(source.pdf, "COPY_FAILED")
+                copying.validate(result, staged.stream)
+            if before_recheck is not None:
+                before_recheck()
+            for source in sources.values():
+                source.recheck()
+                warnings(source.pdf)
+            if staged is not None:
+                staged.finish()
+                staged.commit()
+        except PreparationError as exc:
+            exc.context["warnings"] = control.warnings
+            raise
+        finally:
+            if staged is not None:
+                staged.cleanup()
+        return result

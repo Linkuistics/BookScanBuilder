@@ -29,12 +29,32 @@ def labels(path: Path, count: int = 6, prefix: str = "P") -> Path:
 
 
 def invoke(*args: str) -> subprocess.CompletedProcess[str]:
-    return subprocess.run(
-        ["uv", "run", "--locked", "python", "-m", "bookscan.preview", *args],
+    folder = Path.cwd()
+    if "--output" in args:
+        index = args.index("--output") + 1
+        if index < len(args) and Path(args[index]).parent.is_dir():
+            folder = Path(args[index]).parent
+    listing = sorted(p.name for p in folder.iterdir())
+    result = subprocess.run(
+        ["uv", "run", "--locked", "bookscan", "prepare", *args],
         capture_output=True,
         text=True,
         check=False,
     )
+    if "--dry-run" in args:
+        assert sorted(p.name for p in folder.iterdir()) == listing
+    if result.returncode and args.count("--dry-run") == 1:
+        write_args = tuple(a for a in args if a != "--dry-run")
+        written = subprocess.run(
+            ["uv", "run", "--locked", "bookscan", "prepare", *write_args],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        assert written.returncode == result.returncode, written.stderr + written.stdout
+        if "--json" in args:
+            assert json.loads(written.stdout) == json.loads(result.stdout)
+    return result
 
 
 @pytest.mark.parametrize(
@@ -110,7 +130,7 @@ def test_grouping_interleaved_and_selection_local_exclusion(tmp_path: Path) -> N
         (["--content", "missing", "--output", "x", "--dry-run"], "SOURCE_NOT_FOUND"),
         (["--content", "missing", "--output", "x", "--dry-run", "--dry-run"], "INVALID_ARGUMENT"),
         (["--content", "missing", "--output", "x", "--dry-run", "--wat"], "INVALID_ARGUMENT"),
-        (["--content", "missing", "--output", "x"], "INVALID_ARGUMENT"),
+        (["--content", "missing", "--output", "x"], "SOURCE_NOT_FOUND"),
     ],
 )
 def test_early_json_precedence(args: list[str], code: str) -> None:
@@ -204,6 +224,14 @@ def check_gate(path: Path, want: str = "SOURCE_UNSUPPORTED", expression: str = "
     record = json.loads(result.stdout)
     assert (record["status"] if want == "planned" else record["code"]) == want
     assert sorted(path.parent.iterdir()) == listing
+    if want == "planned":
+        written = invoke(
+            "--content", str(path), expression, "--output", str(path.parent / "out.pdf"), "--json"
+        )
+        assert written.returncode == 0, written.stdout + written.stderr
+        assert json.loads(written.stdout)["status"] == "written"
+        (path.parent / "out.pdf").unlink()
+        assert sorted(path.parent.iterdir()) == listing
     assert path.read_bytes() == before
 
 
@@ -576,7 +604,7 @@ def test_actual_task_forwarding(tmp_path: Path) -> None:
     ]
     direct = invoke(*args)
     recipe = subprocess.run(
-        ["task", "prepare:plan", "--", *args], capture_output=True, text=True, check=False
+        ["task", "prepare:run", "--", *args], capture_output=True, text=True, check=False
     )
     assert direct.returncode == recipe.returncode == 0, recipe.stderr
     assert json.loads(direct.stdout) == json.loads(recipe.stdout)

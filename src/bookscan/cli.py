@@ -1,4 +1,4 @@
-"""Temporary explicitly dry-run module, deliberately no installed write entry."""
+"""Public preparation entry, parsing/reporting and signal-handler lifetime."""
 
 import json
 import os
@@ -9,18 +9,19 @@ from pathlib import Path
 from types import FrameType
 from typing import TextIO
 
-from bookscan.prepare import plan
+from bookscan.prepare import operate
+from bookscan.publication import Control, startup_mode
 from bookscan.results import Json, PreparationError
 from bookscan.selections import parse
 
-HELP = """PDF preparation preview (temporary; produces no PDF)
-Usage: uv run --locked python -m bookscan.preview [OPTIONS] --dry-run
+HELP = """PDF preparation: assemble explicitly selected whole PDF pages
+Usage: uv run --locked bookscan prepare [OPTIONS]
 
 --front PDF [PAGES]    Repeatable explicit front pages.
 --content PDF [PAGES]  Repeatable content (required); interior covers are content.
 --back PDF [PAGES]     Repeatable explicit back pages.
 --output PDF          New destination in an existing directory; no overwrite.
---dry-run             Required in this preview. Hash every source and run all
+--dry-run             Hash every source and run all
                       preservation gates and stability checks. No output or
                       temporary file, copying, save, or permission trial occurs.
                       A plan is no reservation or promise that writing succeeds.
@@ -47,20 +48,13 @@ Examples (quoted paths, explicit roles):
 """
 
 
-def interrupt(signum: int, _frame: FrameType | None) -> None:
-    raise PreparationError(
-        "INTERRUPTED",
-        f"Caught signal {signum} before publication.",
-        "Inspect the destination before retrying; keep sources stable.",
-        128 + signum,
-    )
-
-
 def emit(record: dict[str, Json], json_mode: bool) -> str:
     if json_mode:
         return json.dumps(record, ensure_ascii=True, allow_nan=False) + "\n"
     if record["status"] == "error":
         return f"{record['code']}: {record['message']}\n{record['remediation']}\n"
+    if record["status"] == "written":
+        return str(record["output"]) + "\n"
     lines: list[str] = []
     pages = record["pages"]
     assert isinstance(pages, list)
@@ -73,7 +67,15 @@ def emit(record: dict[str, Json], json_mode: bool) -> str:
     return "\n".join(lines) + "\n"
 
 
-def run(args: list[str], stdout: TextIO, stderr: TextIO) -> int:
+def run(
+    args: list[str],
+    stdout: TextIO,
+    stderr: TextIO,
+    *,
+    control: Control | None = None,
+    mode: int | None = None,
+) -> int:
+    control = control if control is not None else Control()
     json_mode = "--json" in args
     output: str | None = None
     exit_code = 0
@@ -95,9 +97,13 @@ def run(args: list[str], stdout: TextIO, stderr: TextIO) -> int:
             i = args.index("--output") + 1
             if i < len(args) and not args[i].startswith("-"):
                 output = str(Path(args[i]).absolute())
-        request = parse(args, preview=True)
+        request = parse(args)
         output = str(request.output)
-        record = plan(request).record()
+        record = operate(request, control=control, mode=mode).record()
+        if control.committed:
+            record["status"] = "written"
+            record.pop("pages")
+        record["warnings"] = control.warnings
     except PreparationError as exc:
         record = exc.record(output)
         exit_code = exc.exit_code
@@ -110,22 +116,43 @@ def run(args: list[str], stdout: TextIO, stderr: TextIO) -> int:
         try:
             stderr.write(
                 "RESULT_DELIVERY_FAILED: Cannot deliver/flush result. "
-                "Check stdout/stderr and rerun the preview.\n"
+                "Check stdout/stderr and inspect the destination before retrying.\n"
             )
             stderr.flush()
         except OSError:
             pass
+        control.warn("RESULT_DELIVERY_FAILED", "Cannot deliver/flush result.")
+        if control.committed:
+            return 0
         return exit_code or 5
+    for warning in control.warnings:
+        try:
+            stderr.write(str(warning) + "\n")
+            stderr.flush()
+        except OSError:
+            pass
     return exit_code
 
 
 def main() -> int:
+    control = Control()
+    mode = startup_mode()
     handlers: dict[signal.Signals, int | Callable[[int, FrameType | None], None] | None] = {}
     for sig in (signal.SIGINT, signal.SIGTERM):
-        handlers[sig] = signal.signal(sig, interrupt)
+        handlers[sig] = signal.signal(sig, control.interrupt)
     try:
-        result = run(sys.argv[1:], sys.stdout, sys.stderr)
-        if result == 5:
+        args = sys.argv[1:]
+        if args and args[0] == "prepare":
+            args = args[1:]
+        elif "--help" not in args:
+            args = ["<expected prepare subcommand>", *args]
+        result = run(args, sys.stdout, sys.stderr, control=control, mode=mode)
+        if result == 5 or (
+            any(
+                isinstance(w, dict) and w.get("code") == "RESULT_DELIVERY_FAILED"
+                for w in control.warnings
+            )
+        ):
             # Avoid Python's shutdown reflush turning EPIPE's defined exit 5 into exit 120.
             sys.stdout = open(os.devnull, "w")
         return result

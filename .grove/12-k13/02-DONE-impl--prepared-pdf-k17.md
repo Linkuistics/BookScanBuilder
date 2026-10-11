@@ -81,3 +81,80 @@ own checks/docs/real acceptance. No adapter-only or real-acceptance-only child
 satisfies it. Do not weaken gates to make the samples pass. No geometry, OCR,
 cleanup or GUI belongs here. Human visual acceptance remains explicitly pending
 until the assigned consumer records it. No driver is launched.
+
+## Decisions (running log)
+
+The integrated design and reviewed parent charter already settle the public
+behaviour and ownership; implement them inline without another design approval
+or a competing reviewer. Tier 2 graph generation `2026-10-11T04:41:50Z` has no
+recorded gaps on existing evidence paths; missing proposed paths are new files.
+
+Implementation sequence: first failing public write/order tests; then reconstruct
+retained page snapshots into a fresh PDF while sources remain open, compare
+source/output node pairs independently of sharing, and validate markers,
+annotation owners, geometry and versions. Add the private staged stream and
+signal-protected no-clobber publication; exercise faults and observed OS-signal
+windows. Finally run frozen synthetic/real 300-dpi acceptance, reconcile usage
+and consumer handoffs, and assess an external product review before retirement.
+
+Reconstruction uses the already gated immutable encoded graph rather than
+mutating copied source dictionaries: this excludes discarded keys by
+construction and preserves nested raw stream bytes/cycles. Every write creates
+its snapshot inside the source-lifetime operation, never from a closed preview
+plan. Official pikepdf 10.16.0 save source and API were fetched; preserve decode
+level none, disable compression/recompression/normalization, and supply tuple
+min_version when an accepted ADBE level is present.
+
+The pinned writer elides `/Filter` on zero-byte encoded streams despite decode
+level none and disabled compression. Reproduced both reconstructed and foreign
+stream copying; do not relax source gates or the comparator. Preserve the full
+encoded dictionary through a temporary randomly named reachable dictionary,
+then restore the affected zero-byte objects in a standard ISO 32000-1 §7.5.6
+incremental revision inside the same private stream. Validation independently
+reopens the final bytes and checks the exact graph. Empty-form, static-appearance
+and discarded-key acceptance now write successfully. This extra serialization
+path earns particular scrutiny in the external product review.
+
+Real signal instrumentation showed that checking sigpending after blocking
+misclassifies a signal arriving inside the region. Snapshot pending cancellation
+before blocking; then protect link and the committed-state assignment. Tests
+observe pending/pre-region, immediately-after-block, before-link, committed and
+cleanup windows against the installed writer PID. No public fault flags are added.
+
+Numeric source-version tests found qpdf's fresh-document PDF 1.3 floor; verified
+it in the pinned QPDF.cc source. Choose max(1.3, all effective source versions),
+which satisfies the spec's at-least rule and validates the chosen exact output.
+Real EPIPE checks also caught interpreter shutdown replacing an existing source
+error exit with 120; track delivery failure for every result and redirect broken
+stdout before shutdown, preserving original errors, dry-run exit 5 and written
+exit 0. Private mode checks cover startup umasks 027/077/777, and real flush faults
+exercise the completed stream's flush method rather than bypassing publication.
+
+The initial real render exercise matched every required page, but an instrument
+edit during that run invalidated its digest measurement. Discard it as evidence;
+finish edits, then rerun all modes with frozen inputs and retain only matched
+before/after subject digests. No source fixture or historical report was edited.
+
+
+Final verification: `task prepare:check` passed 199 tests plus Ruff format/lint
+and strict pyright. Locked setup and actual public help/Task forwarding passed.
+Frozen synthetic, real and all acceptance modes passed separately; before/after
+subjects still matched at retention, and every per-item observation agreed
+between separate modes and the combined run. All covers/music/spread/landscape/
+JBIG2 fixtures matched exact 300-dpi pixels, seven geometry values and encoded
+resources. Reports are retained in `docs/acceptance/prepared-pdf-*-report.json`;
+full-page/native-detail paths and pending user response are in the acceptance
+note and `page-geometry-k4`. Historical experiment/report and preview report
+remain byte-unchanged; the lock also stays unchanged because scripts add no
+new dependency.
+
+The finished preparation subsystem is a load-bearing handoff with irreversible
+publication and an additional encoded-empty stream serialization seam, so it
+earns an external `review-impl` at the root before `page-geometry-k4`, reviewing
+`prepared-pdf-k13` with this child's diff. No in-session reviewer was spent.
+The complete parent Done when is delivered by its two children; source gates,
+full writes, runtime/fault verification, all acceptance modes, reusable tasks,
+usage/spec wording and explicit visual-response ownership are reconciled.
+Promote the completed command/evidence/review handoff to the root brief. Close
+`prepared-pdf-k13`; root geometry/processor/optional-cleanup obligations remain
+live. No ADR convention changed and no driver is launched.

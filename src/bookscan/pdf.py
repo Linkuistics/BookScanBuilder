@@ -48,6 +48,7 @@ class Projection:
     root: Ref
     nodes: tuple[Node, ...]
     annotated: bool
+    annotation_owners: tuple[bool, ...] = ()
 
 
 @dataclass(frozen=True)
@@ -374,4 +375,10 @@ def project_page(page: pikepdf.Object) -> Projection:
 
     root = visit(page, root=True)
     assert isinstance(root, Ref)
-    return Projection(Geometry(boxes, rotation, unit), root, tuple(nodes), annotated)
+    return Projection(
+        Geometry(boxes, rotation, unit),
+        root,
+        tuple(nodes),
+        annotated,
+        tuple("/P" in a for a in retained_annots),
+    )

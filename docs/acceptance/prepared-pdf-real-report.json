@@ -1,0 +1,2686 @@
+{
+  "schema_version": 1,
+  "mode": "real",
+  "artifacts": "/private/tmp/bookscan-prepared-k17-real-v2",
+  "versions": {
+    "python": "3.12.15 (main, Oct  9 2026, 15:10:57) [Clang 22.1.3 ]",
+    "pikepdf": "10.16.0",
+    "qpdf": "12.4.2",
+    "uv": "uv 0.13.0 (Homebrew 2026-10-09 aarch64-apple-darwin)",
+    "task": "3.54.0",
+    "poppler": "pdftoppm version 26.10.0\nCopyright 2005-2026 The Poppler Developers - http://poppler.freedesktop.org\nCopyright 1996-2011, 2022 Glyph & Cog, LLC"
+  },
+  "digests_before": {
+    "/Users/antony/Development/BookScanBuilder/Taskfile.yml": "b8e2acdb5abb896252f83387a88e53ba7eb8de21e500381e264b07d24f66a5c4",
+    "/Users/antony/Development/BookScanBuilder/docs/adr/prepared-page-hints.md": "f8d157b196366708d4d1a4e3b7a73ed5be0f2e8a2d7f78d6f94d4ea520a9cf00",
+    "/Users/antony/Development/BookScanBuilder/docs/specs/prepared-pdf.md": "70c4346f317b007f79f591bc44304aa79f97654affabaf5afaa0bb054ca16363",
+    "/Users/antony/Development/BookScanBuilder/pyproject.toml": "68ac9672f31f87498ca1181023c21633bd5a65c71ae2c52c1509c3590f0878fb",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/__init__.py": "85c5b0a575baf76d88f82cf846975c55cb04e1d12bdc897dc2373c107b2d4bf0",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/cli.py": "c8ca9ce542ae0e32f56dae72dd39e1bdb9015e6b586b393a22591da71e6c5ad6",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/copying.py": "9dbf71c8f0b7a569e51cfcb5ddefcc1604ceb2e524f8a7466ca596450a8f1993",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/pdf.py": "e30a0701a174ae103e76bc62726c4b6167accc131b25256d0f134b7141f1c0cc",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/prepare.py": "4fa820260e923a7ffbbe96855509c4709493a8cc6a69de6a740d6e1a6cbb6f54",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/publication.py": "9993d18a3cb0aabc6167a179a9a34ec20578503d86c1fb1ecef9a23f4beebe35",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/results.py": "60a3efe06d70b4cd3a46e90fb8de043c788b3d8c322387f6a0c9579afb23d474",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/selections.py": "37a0302485659441395bdf388db2a20f809c0a843c91dae274f5f6efeef21f26",
+    "/Users/antony/Development/BookScanBuilder/tests/pdf_fixtures.py": "c3ba3e489748f0422d24a45c0c6ce2fbcd90ddd5476a2ed04011da8041c22dbf",
+    "/Users/antony/Development/BookScanBuilder/tests/prepare_acceptance.py": "b6ab080130dfe6e5f91b4c18d593fbb471111b8cce5b7af7769ba55d05b3ef1c",
+    "/Users/antony/Development/BookScanBuilder/tests/test_faults.py": "a7ea71bf7e8505a90d67d02044785f32ff810acb436efa6aec1417a69edeeceb",
+    "/Users/antony/Development/BookScanBuilder/tests/test_preview.py": "7b705271f7460da376977c0f8e939498fc4c9b12bff9b6bf1876954c66273baf",
+    "/Users/antony/Development/BookScanBuilder/tests/test_publication.py": "34549b0f8c7cab0da8e18f4391311c264e80e56dd7b5532fe85aea5e6227caf0",
+    "/Users/antony/Development/BookScanBuilder/tests/test_validation.py": "69d7e6cf7b10e3bd2d53455ca3a7c35c1cdfcebe0a14aac2e5d78d41f76ad006",
+    "/Users/antony/Development/BookScanBuilder/tests/test_writes.py": "99568cf403c5ee6c50f26ce443ff86e77c77c26e68ccbc3a92900816bd01bb94",
+    "/Users/antony/Development/BookScanBuilder/tests/writer_hooks.py": "4443d43068e35bd860abce23d760a80898fd69a064a6447696dca55a2866e1ec",
+    "/Users/antony/Development/BookScanBuilder/uv.lock": "74ee6641f735a4f3048e4ff50a650dc4b10a3f6d1a5c589f11fb836babfc8724",
+    "/Volumes/Glass/Book Conversion/Covers/Algorithms on Strings, Trees, and Sequence.pdf": "36d9882db0e2093b1c4ddab960a8bcdf1b3f1688a4432fcc61ca536f99ac4efc",
+    "/Volumes/Glass/Book Conversion/Covers/SchoenbergComposition.pdf": "55fef6822d156d48985e55570de77201687de81b84a11f4a2b76a125c1d8873f",
+    "/Volumes/Glass/Book Conversion/Needing Cleanup/Counterpoint in Composition.pdf": "ae16ae84cfa7e8d610c76fb80cf33a0bab0c8615a2b6a0fc7226a5da1c317224",
+    "/Volumes/Glass/Book Conversion/Processed Books/Algorithm Design/Algorithm Design.pdf": "b9d6f1fd08560f06ec8653375a5866dbe1ba971d780dfecd1a0211fb2f66deab",
+    "/Volumes/Glass/Book Conversion/Processed Books/Norwegian - An Essential Grammar (Routledge)/Norwegian - An Essential Grammar (Routledge).pdf": "a21736ada0c088ab9e4f89a264c303788ccf22c4ee647b5dfb5f076ea1b750d3",
+    "/Volumes/Glass/Book Conversion/Raw Scans/Fundamentals of Musical Composition.pdf": "3235a842d619a18b11e2fbdb3b5b6666adeb223959cafd4b1d67f27f0dbfe780",
+    "/private/tmp/bookscan-prepared-k17-real-v2/Labelled content.pdf": "f8e653952ea493e4632b4e93cbfc4ff93984004c850c1caf729c744d6c38b1ca"
+  },
+  "digests_after": {
+    "/Users/antony/Development/BookScanBuilder/Taskfile.yml": "b8e2acdb5abb896252f83387a88e53ba7eb8de21e500381e264b07d24f66a5c4",
+    "/Users/antony/Development/BookScanBuilder/docs/adr/prepared-page-hints.md": "f8d157b196366708d4d1a4e3b7a73ed5be0f2e8a2d7f78d6f94d4ea520a9cf00",
+    "/Users/antony/Development/BookScanBuilder/docs/specs/prepared-pdf.md": "70c4346f317b007f79f591bc44304aa79f97654affabaf5afaa0bb054ca16363",
+    "/Users/antony/Development/BookScanBuilder/pyproject.toml": "68ac9672f31f87498ca1181023c21633bd5a65c71ae2c52c1509c3590f0878fb",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/__init__.py": "85c5b0a575baf76d88f82cf846975c55cb04e1d12bdc897dc2373c107b2d4bf0",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/cli.py": "c8ca9ce542ae0e32f56dae72dd39e1bdb9015e6b586b393a22591da71e6c5ad6",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/copying.py": "9dbf71c8f0b7a569e51cfcb5ddefcc1604ceb2e524f8a7466ca596450a8f1993",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/pdf.py": "e30a0701a174ae103e76bc62726c4b6167accc131b25256d0f134b7141f1c0cc",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/prepare.py": "4fa820260e923a7ffbbe96855509c4709493a8cc6a69de6a740d6e1a6cbb6f54",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/publication.py": "9993d18a3cb0aabc6167a179a9a34ec20578503d86c1fb1ecef9a23f4beebe35",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/results.py": "60a3efe06d70b4cd3a46e90fb8de043c788b3d8c322387f6a0c9579afb23d474",
+    "/Users/antony/Development/BookScanBuilder/src/bookscan/selections.py": "37a0302485659441395bdf388db2a20f809c0a843c91dae274f5f6efeef21f26",
+    "/Users/antony/Development/BookScanBuilder/tests/pdf_fixtures.py": "c3ba3e489748f0422d24a45c0c6ce2fbcd90ddd5476a2ed04011da8041c22dbf",
+    "/Users/antony/Development/BookScanBuilder/tests/prepare_acceptance.py": "b6ab080130dfe6e5f91b4c18d593fbb471111b8cce5b7af7769ba55d05b3ef1c",
+    "/Users/antony/Development/BookScanBuilder/tests/test_faults.py": "a7ea71bf7e8505a90d67d02044785f32ff810acb436efa6aec1417a69edeeceb",
+    "/Users/antony/Development/BookScanBuilder/tests/test_preview.py": "7b705271f7460da376977c0f8e939498fc4c9b12bff9b6bf1876954c66273baf",
+    "/Users/antony/Development/BookScanBuilder/tests/test_publication.py": "34549b0f8c7cab0da8e18f4391311c264e80e56dd7b5532fe85aea5e6227caf0",
+    "/Users/antony/Development/BookScanBuilder/tests/test_validation.py": "69d7e6cf7b10e3bd2d53455ca3a7c35c1cdfcebe0a14aac2e5d78d41f76ad006",
+    "/Users/antony/Development/BookScanBuilder/tests/test_writes.py": "99568cf403c5ee6c50f26ce443ff86e77c77c26e68ccbc3a92900816bd01bb94",
+    "/Users/antony/Development/BookScanBuilder/tests/writer_hooks.py": "4443d43068e35bd860abce23d760a80898fd69a064a6447696dca55a2866e1ec",
+    "/Users/antony/Development/BookScanBuilder/uv.lock": "74ee6641f735a4f3048e4ff50a650dc4b10a3f6d1a5c589f11fb836babfc8724",
+    "/Volumes/Glass/Book Conversion/Covers/Algorithms on Strings, Trees, and Sequence.pdf": "36d9882db0e2093b1c4ddab960a8bcdf1b3f1688a4432fcc61ca536f99ac4efc",
+    "/Volumes/Glass/Book Conversion/Covers/SchoenbergComposition.pdf": "55fef6822d156d48985e55570de77201687de81b84a11f4a2b76a125c1d8873f",
+    "/Volumes/Glass/Book Conversion/Needing Cleanup/Counterpoint in Composition.pdf": "ae16ae84cfa7e8d610c76fb80cf33a0bab0c8615a2b6a0fc7226a5da1c317224",
+    "/Volumes/Glass/Book Conversion/Processed Books/Algorithm Design/Algorithm Design.pdf": "b9d6f1fd08560f06ec8653375a5866dbe1ba971d780dfecd1a0211fb2f66deab",
+    "/Volumes/Glass/Book Conversion/Processed Books/Norwegian - An Essential Grammar (Routledge)/Norwegian - An Essential Grammar (Routledge).pdf": "a21736ada0c088ab9e4f89a264c303788ccf22c4ee647b5dfb5f076ea1b750d3",
+    "/Volumes/Glass/Book Conversion/Raw Scans/Fundamentals of Musical Composition.pdf": "3235a842d619a18b11e2fbdb3b5b6666adeb223959cafd4b1d67f27f0dbfe780",
+    "/private/tmp/bookscan-prepared-k17-real-v2/Labelled content.pdf": "f8e653952ea493e4632b4e93cbfc4ff93984004c850c1caf729c744d6c38b1ca"
+  },
+  "cases": [
+    {
+      "case": "music",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "bookscan",
+        "prepare",
+        "--front",
+        "/Volumes/Glass/Book Conversion/Covers/SchoenbergComposition.pdf",
+        "1",
+        "--content",
+        "/Volumes/Glass/Book Conversion/Raw Scans/Fundamentals of Musical Composition.pdf",
+        "40,140",
+        "--output",
+        "/private/tmp/bookscan-prepared-k17-real-v2/music-prepared.pdf",
+        "--json"
+      ],
+      "planned": {
+        "schema_version": 1,
+        "status": "planned",
+        "output": "/private/tmp/bookscan-prepared-k17-real-v2/music-prepared.pdf",
+        "page_count": 3,
+        "pages": [
+          {
+            "output_page": 1,
+            "source": "/Volumes/Glass/Book Conversion/Covers/SchoenbergComposition.pdf",
+            "source_page": 1,
+            "role": "front"
+          },
+          {
+            "output_page": 2,
+            "source": "/Volumes/Glass/Book Conversion/Raw Scans/Fundamentals of Musical Composition.pdf",
+            "source_page": 40,
+            "role": "content"
+          },
+          {
+            "output_page": 3,
+            "source": "/Volumes/Glass/Book Conversion/Raw Scans/Fundamentals of Musical Composition.pdf",
+            "source_page": 140,
+            "role": "content"
+          }
+        ],
+        "warnings": []
+      },
+      "written": {
+        "schema_version": 1,
+        "status": "written",
+        "output": "/private/tmp/bookscan-prepared-k17-real-v2/music-prepared.pdf",
+        "page_count": 3,
+        "warnings": []
+      },
+      "pages": [
+        {
+          "output_page": 1,
+          "source": "/Volumes/Glass/Book Conversion/Covers/SchoenbergComposition.pdf",
+          "source_page": 1,
+          "role": "front",
+          "geometry": {
+            "MediaBox": [
+              "0.000000",
+              "0.000000",
+              "595.000000",
+              "841.000000"
+            ],
+            "CropBox": [
+              "0.000000",
+              "0.000000",
+              "595.000000",
+              "841.000000"
+            ],
+            "BleedBox": [
+              "0.000000",
+              "0.000000",
+              "595.000000",
+              "841.000000"
+            ],
+            "TrimBox": [
+              "0.000000",
+              "0.000000",
+              "595.000000",
+              "841.000000"
+            ],
+            "ArtBox": [
+              "0.000000",
+              "0.000000",
+              "595.000000",
+              "841.000000"
+            ],
+            "Rotate": "0",
+            "UserUnit": "1"
+          },
+          "raw_streams": [
+            {
+              "path": "/Resources/XObject/XOb7",
+              "raw_sha256": "01d0dfb71cfbab6792d2ab4d4e6ca9defcded6fc4dfa1da0f620b5902134a443",
+              "filter": "/DCTDecode",
+              "subtype": "/Image",
+              "width": "2480",
+              "height": "3508"
+            },
+            {
+              "path": "/Resources/XObject/XOb7/ColorSpace[1]",
+              "raw_sha256": "b27830d6c5077cfd9d68e561489582b61f36b83d06e2263526851838153043bd",
+              "filter": "/FlateDecode",
+              "subtype": "none",
+              "width": "none",
+              "height": "none"
+            },
+            {
+              "path": "/Contents",
+              "raw_sha256": "4d06a236b0be95a383ce0c0a6109b4ef4c56aa229e2bb318e8d0f650a50bd078",
+              "filter": "/FlateDecode",
+              "subtype": "none",
+              "width": "none",
+              "height": "none"
+            }
+          ],
+          "renders": [
+            {
+              "view": "cropbox",
+              "before": {
+                "path": "/private/tmp/bookscan-prepared-k17-real-v2/music-page-1-cropbox/before.png",
+                "dimensions": [
+                  2480,
+                  3505
+                ],
+                "rgb_sha256": "5b9cc604240a23cbc0bfaf80d31d591d674ddf7e75b90d4d2fd6936fcda9958f",
+                "diagnostics": "",
+                "crops": {
+                  "centre": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/music-page-1-cropbox/before-centre.png",
+                    "box": [
+                      826,
+                      1168,
+                      1726,
+                      2068
+                    ],
+                    "rgb_sha256": "b86ecbaea37de8cc6ae623603a6b640c3db9386279f714d7ff391d2e92a5dbc0"
+                  },
+                  "margin": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/music-page-1-cropbox/before-margin.png",
+                    "box": [
+                      0,
+                      0,
+                      600,
+                      1000
+                    ],
+                    "rgb_sha256": "8554dbbc4bc73f16f7629f04f936c6b79bebdb550a2091f5588a876bbc0f83db"
+                  },
+                  "detail": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/music-page-1-cropbox/before-detail.png",
+                    "box": [
+                      620,
+                      1752,
+                      1820,
+                      2652
+                    ],
+                    "rgb_sha256": "bd1358c03f3f4663992848c5acd9c23cbd2accf5729cb39248ddda9ea4fce2c4"
+                  }
+                }
+              },
+              "after": {
+                "path": "/private/tmp/bookscan-prepared-k17-real-v2/music-page-1-cropbox/after.png",
+                "dimensions": [
+                  2480,
+                  3505
+                ],
+                "rgb_sha256": "5b9cc604240a23cbc0bfaf80d31d591d674ddf7e75b90d4d2fd6936fcda9958f",
+                "diagnostics": "",
+                "crops": {
+                  "centre": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/music-page-1-cropbox/after-centre.png",
+                    "box": [
+                      826,
+                      1168,
+                      1726,
+                      2068
+                    ],
+                    "rgb_sha256": "b86ecbaea37de8cc6ae623603a6b640c3db9386279f714d7ff391d2e92a5dbc0"
+                  },
+                  "margin": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/music-page-1-cropbox/after-margin.png",
+                    "box": [
+                      0,
+                      0,
+                      600,
+                      1000
+                    ],
+                    "rgb_sha256": "8554dbbc4bc73f16f7629f04f936c6b79bebdb550a2091f5588a876bbc0f83db"
+                  },
+                  "detail": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/music-page-1-cropbox/after-detail.png",
+                    "box": [
+                      620,
+                      1752,
+                      1820,
+                      2652
+                    ],
+                    "rgb_sha256": "bd1358c03f3f4663992848c5acd9c23cbd2accf5729cb39248ddda9ea4fce2c4"
+                  }
+                }
+              },
+              "commands": [
+                [
+                  "pdftoppm",
+                  "-f",
+                  "1",
+                  "-l",
+                  "1",
+                  "-r",
+                  "300",
+                  "-singlefile",
+                  "-png",
+                  "-cropbox",
+                  "/Volumes/Glass/Book Conversion/Covers/SchoenbergComposition.pdf",
+                  "/private/tmp/bookscan-prepared-k17-real-v2/music-page-1-cropbox/before"
+                ],
+                [
+                  "pdftoppm",
+                  "-f",
+                  "1",
+                  "-l",
+                  "1",
+                  "-r",
+                  "300",
+                  "-singlefile",
+                  "-png",
+                  "-cropbox",
+                  "/private/tmp/bookscan-prepared-k17-real-v2/music-prepared.pdf",
+                  "/private/tmp/bookscan-prepared-k17-real-v2/music-page-1-cropbox/after"
+                ]
+              ],
+              "exact_rgb_equal": true
+            }
+          ]
+        },
+        {
+          "output_page": 2,
+          "source": "/Volumes/Glass/Book Conversion/Raw Scans/Fundamentals of Musical Composition.pdf",
+          "source_page": 40,
+          "role": "content",
+          "geometry": {
+            "MediaBox": [
+              "0",
+              "0",
+              "406.08",
+              "586.32"
+            ],
+            "CropBox": [
+              "0",
+              "0",
+              "406.08",
+              "586.32"
+            ],
+            "BleedBox": [
+              "0",
+              "0",
+              "406.08",
+              "586.32"
+            ],
+            "TrimBox": [
+              "0",
+              "0",
+              "406.08",
+              "586.32"
+            ],
+            "ArtBox": [
+              "0",
+              "0",
+              "406.08",
+              "586.32"
+            ],
+            "Rotate": "0",
+            "UserUnit": "1"
+          },
+          "raw_streams": [
+            {
+              "path": "/Resources/XObject/Obj201",
+              "raw_sha256": "1f40ab702e942c262049f5281a412fe0a8b6e86049ed86572c2075161ff56723",
+              "filter": "/DCTDecode",
+              "subtype": "/Image",
+              "width": "846",
+              "height": "1221"
+            },
+            {
+              "path": "/Resources/XObject/Obj202",
+              "raw_sha256": "042a0e0942435ed521b83afba3beb91181334cf2325d98c80917a0b1f1b2342c",
+              "filter": "/CCITTFaxDecode",
+              "subtype": "/Image",
+              "width": "1416",
+              "height": "1944"
+            },
+            {
+              "path": "/Contents[0]",
+              "raw_sha256": "2c89166aa51a66f2ce5ce24d26b3fb1109879a147d7941ad050709c4ff693430",
+              "filter": "none",
+              "subtype": "none",
+              "width": "none",
+              "height": "none"
+            },
+            {
+              "path": "/Contents[1]",
+              "raw_sha256": "c30912c2d3c5fbec09387f824643061be8550c87f7fbde9c9edaab1e7de86340",
+              "filter": "none",
+              "subtype": "none",
+              "width": "none",
+              "height": "none"
+            }
+          ],
+          "renders": [
+            {
+              "view": "cropbox",
+              "before": {
+                "path": "/private/tmp/bookscan-prepared-k17-real-v2/music-page-2-cropbox/before.png",
+                "dimensions": [
+                  1692,
+                  2443
+                ],
+                "rgb_sha256": "76574da2e809a2044f4a221deaa7907fd3c4fac5239cdfddf4a5f092513b9df1",
+                "diagnostics": "",
+                "crops": {
+                  "centre": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/music-page-2-cropbox/before-centre.png",
+                    "box": [
+                      564,
+                      814,
+                      1464,
+                      1714
+                    ],
+                    "rgb_sha256": "5df6c2476def0222ab80fe7aaec319d737d5f114055367e06764f0098be1075b"
+                  },
+                  "margin": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/music-page-2-cropbox/before-margin.png",
+                    "box": [
+                      0,
+                      0,
+                      600,
+                      1000
+                    ],
+                    "rgb_sha256": "598a4c4d17ac050a6a57a0791a15cf0eb96b423e7dc0cee4eb67d50a1fcd4c59"
+                  },
+                  "detail": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/music-page-2-cropbox/before-detail.png",
+                    "box": [
+                      423,
+                      1221,
+                      1623,
+                      2121
+                    ],
+                    "rgb_sha256": "4e260620f3825066677ed48ac94fe0064abeb4030affa458188ef87db356dbd6"
+                  }
+                }
+              },
+              "after": {
+                "path": "/private/tmp/bookscan-prepared-k17-real-v2/music-page-2-cropbox/after.png",
+                "dimensions": [
+                  1692,
+                  2443
+                ],
+                "rgb_sha256": "76574da2e809a2044f4a221deaa7907fd3c4fac5239cdfddf4a5f092513b9df1",
+                "diagnostics": "",
+                "crops": {
+                  "centre": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/music-page-2-cropbox/after-centre.png",
+                    "box": [
+                      564,
+                      814,
+                      1464,
+                      1714
+                    ],
+                    "rgb_sha256": "5df6c2476def0222ab80fe7aaec319d737d5f114055367e06764f0098be1075b"
+                  },
+                  "margin": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/music-page-2-cropbox/after-margin.png",
+                    "box": [
+                      0,
+                      0,
+                      600,
+                      1000
+                    ],
+                    "rgb_sha256": "598a4c4d17ac050a6a57a0791a15cf0eb96b423e7dc0cee4eb67d50a1fcd4c59"
+                  },
+                  "detail": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/music-page-2-cropbox/after-detail.png",
+                    "box": [
+                      423,
+                      1221,
+                      1623,
+                      2121
+                    ],
+                    "rgb_sha256": "4e260620f3825066677ed48ac94fe0064abeb4030affa458188ef87db356dbd6"
+                  }
+                }
+              },
+              "commands": [
+                [
+                  "pdftoppm",
+                  "-f",
+                  "40",
+                  "-l",
+                  "40",
+                  "-r",
+                  "300",
+                  "-singlefile",
+                  "-png",
+                  "-cropbox",
+                  "/Volumes/Glass/Book Conversion/Raw Scans/Fundamentals of Musical Composition.pdf",
+                  "/private/tmp/bookscan-prepared-k17-real-v2/music-page-2-cropbox/before"
+                ],
+                [
+                  "pdftoppm",
+                  "-f",
+                  "2",
+                  "-l",
+                  "2",
+                  "-r",
+                  "300",
+                  "-singlefile",
+                  "-png",
+                  "-cropbox",
+                  "/private/tmp/bookscan-prepared-k17-real-v2/music-prepared.pdf",
+                  "/private/tmp/bookscan-prepared-k17-real-v2/music-page-2-cropbox/after"
+                ]
+              ],
+              "exact_rgb_equal": true
+            }
+          ]
+        },
+        {
+          "output_page": 3,
+          "source": "/Volumes/Glass/Book Conversion/Raw Scans/Fundamentals of Musical Composition.pdf",
+          "source_page": 140,
+          "role": "content",
+          "geometry": {
+            "MediaBox": [
+              "0",
+              "0",
+              "412.80",
+              "590.16"
+            ],
+            "CropBox": [
+              "0",
+              "0",
+              "412.80",
+              "590.16"
+            ],
+            "BleedBox": [
+              "0",
+              "0",
+              "412.80",
+              "590.16"
+            ],
+            "TrimBox": [
+              "0",
+              "0",
+              "412.80",
+              "590.16"
+            ],
+            "ArtBox": [
+              "0",
+              "0",
+              "412.80",
+              "590.16"
+            ],
+            "Rotate": "0",
+            "UserUnit": "1"
+          },
+          "raw_streams": [
+            {
+              "path": "/Resources/XObject/Obj724",
+              "raw_sha256": "acc670da2e281dcbe2edf89dab792f9d210b86ba5d21decc3ad05a3e369a068a",
+              "filter": "/DCTDecode",
+              "subtype": "/Image",
+              "width": "860",
+              "height": "1229"
+            },
+            {
+              "path": "/Resources/XObject/Obj725",
+              "raw_sha256": "34c5c56ae58521e8674bfb4ef65b443e53a47b55901a9be2a620a048840f82a4",
+              "filter": "/CCITTFaxDecode",
+              "subtype": "/Image",
+              "width": "1408",
+              "height": "1880"
+            },
+            {
+              "path": "/Resources/XObject/Obj726",
+              "raw_sha256": "1932ed0c6c937a9b9e2457ad8263eec5cb5dc62a68bb2153a75f103124061939",
+              "filter": "/CCITTFaxDecode",
+              "subtype": "/Image",
+              "width": "80",
+              "height": "12"
+            },
+            {
+              "path": "/Contents[0]",
+              "raw_sha256": "2c89166aa51a66f2ce5ce24d26b3fb1109879a147d7941ad050709c4ff693430",
+              "filter": "none",
+              "subtype": "none",
+              "width": "none",
+              "height": "none"
+            },
+            {
+              "path": "/Contents[1]",
+              "raw_sha256": "4cf53f1eb2883a7a5ef5c3faa44bd973a61e4f410229d14ecdf4418b0dc798df",
+              "filter": "none",
+              "subtype": "none",
+              "width": "none",
+              "height": "none"
+            }
+          ],
+          "renders": [
+            {
+              "view": "cropbox",
+              "before": {
+                "path": "/private/tmp/bookscan-prepared-k17-real-v2/music-page-3-cropbox/before.png",
+                "dimensions": [
+                  1720,
+                  2459
+                ],
+                "rgb_sha256": "babcc0e49808c85b7f16ff74c9a2a2d04ba52075bc145e6a6e2e0231a06bd831",
+                "diagnostics": "",
+                "crops": {
+                  "centre": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/music-page-3-cropbox/before-centre.png",
+                    "box": [
+                      573,
+                      819,
+                      1473,
+                      1719
+                    ],
+                    "rgb_sha256": "0905cff1076bd49fac572ce91475f77751a07a51277e9f7c32fffe22530c8f05"
+                  },
+                  "margin": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/music-page-3-cropbox/before-margin.png",
+                    "box": [
+                      0,
+                      0,
+                      600,
+                      1000
+                    ],
+                    "rgb_sha256": "3cebc58b1d9cde16805d8544b7ef0262cef09de51a1f0635e1b6e4b38b374a90"
+                  },
+                  "detail": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/music-page-3-cropbox/before-detail.png",
+                    "box": [
+                      430,
+                      1229,
+                      1630,
+                      2129
+                    ],
+                    "rgb_sha256": "3d8a653676fc0a96a65bc7b8f298fde49977f5a44c5eb968fccb789d48406d1d"
+                  }
+                }
+              },
+              "after": {
+                "path": "/private/tmp/bookscan-prepared-k17-real-v2/music-page-3-cropbox/after.png",
+                "dimensions": [
+                  1720,
+                  2459
+                ],
+                "rgb_sha256": "babcc0e49808c85b7f16ff74c9a2a2d04ba52075bc145e6a6e2e0231a06bd831",
+                "diagnostics": "",
+                "crops": {
+                  "centre": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/music-page-3-cropbox/after-centre.png",
+                    "box": [
+                      573,
+                      819,
+                      1473,
+                      1719
+                    ],
+                    "rgb_sha256": "0905cff1076bd49fac572ce91475f77751a07a51277e9f7c32fffe22530c8f05"
+                  },
+                  "margin": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/music-page-3-cropbox/after-margin.png",
+                    "box": [
+                      0,
+                      0,
+                      600,
+                      1000
+                    ],
+                    "rgb_sha256": "3cebc58b1d9cde16805d8544b7ef0262cef09de51a1f0635e1b6e4b38b374a90"
+                  },
+                  "detail": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/music-page-3-cropbox/after-detail.png",
+                    "box": [
+                      430,
+                      1229,
+                      1630,
+                      2129
+                    ],
+                    "rgb_sha256": "3d8a653676fc0a96a65bc7b8f298fde49977f5a44c5eb968fccb789d48406d1d"
+                  }
+                }
+              },
+              "commands": [
+                [
+                  "pdftoppm",
+                  "-f",
+                  "140",
+                  "-l",
+                  "140",
+                  "-r",
+                  "300",
+                  "-singlefile",
+                  "-png",
+                  "-cropbox",
+                  "/Volumes/Glass/Book Conversion/Raw Scans/Fundamentals of Musical Composition.pdf",
+                  "/private/tmp/bookscan-prepared-k17-real-v2/music-page-3-cropbox/before"
+                ],
+                [
+                  "pdftoppm",
+                  "-f",
+                  "3",
+                  "-l",
+                  "3",
+                  "-r",
+                  "300",
+                  "-singlefile",
+                  "-png",
+                  "-cropbox",
+                  "/private/tmp/bookscan-prepared-k17-real-v2/music-prepared.pdf",
+                  "/private/tmp/bookscan-prepared-k17-real-v2/music-page-3-cropbox/after"
+                ]
+              ],
+              "exact_rgb_equal": true
+            }
+          ]
+        }
+      ],
+      "text_command": [
+        "pdftotext",
+        "/private/tmp/bookscan-prepared-k17-real-v2/music-prepared.pdf",
+        "-"
+      ],
+      "extracted_text": "\f\f\f"
+    },
+    {
+      "case": "norwegian",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "bookscan",
+        "prepare",
+        "--content",
+        "/Volumes/Glass/Book Conversion/Processed Books/Norwegian - An Essential Grammar (Routledge)/Norwegian - An Essential Grammar (Routledge).pdf",
+        "20",
+        "--output",
+        "/private/tmp/bookscan-prepared-k17-real-v2/norwegian-prepared.pdf",
+        "--json"
+      ],
+      "planned": {
+        "schema_version": 1,
+        "status": "planned",
+        "output": "/private/tmp/bookscan-prepared-k17-real-v2/norwegian-prepared.pdf",
+        "page_count": 1,
+        "pages": [
+          {
+            "output_page": 1,
+            "source": "/Volumes/Glass/Book Conversion/Processed Books/Norwegian - An Essential Grammar (Routledge)/Norwegian - An Essential Grammar (Routledge).pdf",
+            "source_page": 20,
+            "role": "content"
+          }
+        ],
+        "warnings": []
+      },
+      "written": {
+        "schema_version": 1,
+        "status": "written",
+        "output": "/private/tmp/bookscan-prepared-k17-real-v2/norwegian-prepared.pdf",
+        "page_count": 1,
+        "warnings": []
+      },
+      "pages": [
+        {
+          "output_page": 1,
+          "source": "/Volumes/Glass/Book Conversion/Processed Books/Norwegian - An Essential Grammar (Routledge)/Norwegian - An Essential Grammar (Routledge).pdf",
+          "source_page": 20,
+          "role": "content",
+          "geometry": {
+            "MediaBox": [
+              "0.0",
+              "0.0",
+              "861.71",
+              "646.69"
+            ],
+            "CropBox": [
+              "0.0",
+              "0.0",
+              "861.71",
+              "646.69"
+            ],
+            "BleedBox": [
+              "0.0",
+              "0.0",
+              "861.71",
+              "646.69"
+            ],
+            "TrimBox": [
+              "0.0",
+              "0.0",
+              "861.71",
+              "646.69"
+            ],
+            "ArtBox": [
+              "0.0",
+              "0.0",
+              "861.71",
+              "646.69"
+            ],
+            "Rotate": "0",
+            "UserUnit": "1"
+          },
+          "raw_streams": [
+            {
+              "path": "/Resources/XObject/Im0",
+              "raw_sha256": "6699993000bdc73f866b226b38ddb5c9a1f31bf32214c37d2cb848307f86f2b0",
+              "filter": "/DCTDecode",
+              "subtype": "/Image",
+              "width": "2633",
+              "height": "1976"
+            },
+            {
+              "path": "/Resources/XObject/Im0/Metadata",
+              "raw_sha256": "5e8e7fb65617c2f546b5460c727ffe2e4788c6972136be524d45e4b6d7f38563",
+              "filter": "none",
+              "subtype": "/XML",
+              "width": "none",
+              "height": "none"
+            },
+            {
+              "path": "/Contents",
+              "raw_sha256": "5fe7dfb0a40fd931877495e48135269919ef9c3d834daa5831a5aee1e92a52c8",
+              "filter": "/FlateDecode",
+              "subtype": "none",
+              "width": "none",
+              "height": "none"
+            }
+          ],
+          "renders": [
+            {
+              "view": "cropbox",
+              "before": {
+                "path": "/private/tmp/bookscan-prepared-k17-real-v2/norwegian-page-1-cropbox/before.png",
+                "dimensions": [
+                  3591,
+                  2695
+                ],
+                "rgb_sha256": "97f7c2c0836e578b11c66d796ffd8d767f24ce73273efc85bab5ef7bd451e6ac",
+                "diagnostics": "",
+                "crops": {
+                  "centre": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/norwegian-page-1-cropbox/before-centre.png",
+                    "box": [
+                      1197,
+                      898,
+                      2097,
+                      1798
+                    ],
+                    "rgb_sha256": "d862c2d2bf716224de31584a38e878ef8a0f302fb9c3d02c27c6a2e504a32565"
+                  },
+                  "margin": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/norwegian-page-1-cropbox/before-margin.png",
+                    "box": [
+                      0,
+                      0,
+                      600,
+                      1000
+                    ],
+                    "rgb_sha256": "ddff54c0bd65fc70a5098406c53b3a18183d456b28d022c84cb5ac6786bb6b48"
+                  },
+                  "detail": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/norwegian-page-1-cropbox/before-detail.png",
+                    "box": [
+                      897,
+                      1347,
+                      2097,
+                      2247
+                    ],
+                    "rgb_sha256": "181faaae0f049e4c668a4fa77a1f48e69adbcdf6505c87e2601575a428ab4548"
+                  }
+                }
+              },
+              "after": {
+                "path": "/private/tmp/bookscan-prepared-k17-real-v2/norwegian-page-1-cropbox/after.png",
+                "dimensions": [
+                  3591,
+                  2695
+                ],
+                "rgb_sha256": "97f7c2c0836e578b11c66d796ffd8d767f24ce73273efc85bab5ef7bd451e6ac",
+                "diagnostics": "",
+                "crops": {
+                  "centre": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/norwegian-page-1-cropbox/after-centre.png",
+                    "box": [
+                      1197,
+                      898,
+                      2097,
+                      1798
+                    ],
+                    "rgb_sha256": "d862c2d2bf716224de31584a38e878ef8a0f302fb9c3d02c27c6a2e504a32565"
+                  },
+                  "margin": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/norwegian-page-1-cropbox/after-margin.png",
+                    "box": [
+                      0,
+                      0,
+                      600,
+                      1000
+                    ],
+                    "rgb_sha256": "ddff54c0bd65fc70a5098406c53b3a18183d456b28d022c84cb5ac6786bb6b48"
+                  },
+                  "detail": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/norwegian-page-1-cropbox/after-detail.png",
+                    "box": [
+                      897,
+                      1347,
+                      2097,
+                      2247
+                    ],
+                    "rgb_sha256": "181faaae0f049e4c668a4fa77a1f48e69adbcdf6505c87e2601575a428ab4548"
+                  }
+                }
+              },
+              "commands": [
+                [
+                  "pdftoppm",
+                  "-f",
+                  "20",
+                  "-l",
+                  "20",
+                  "-r",
+                  "300",
+                  "-singlefile",
+                  "-png",
+                  "-cropbox",
+                  "/Volumes/Glass/Book Conversion/Processed Books/Norwegian - An Essential Grammar (Routledge)/Norwegian - An Essential Grammar (Routledge).pdf",
+                  "/private/tmp/bookscan-prepared-k17-real-v2/norwegian-page-1-cropbox/before"
+                ],
+                [
+                  "pdftoppm",
+                  "-f",
+                  "1",
+                  "-l",
+                  "1",
+                  "-r",
+                  "300",
+                  "-singlefile",
+                  "-png",
+                  "-cropbox",
+                  "/private/tmp/bookscan-prepared-k17-real-v2/norwegian-prepared.pdf",
+                  "/private/tmp/bookscan-prepared-k17-real-v2/norwegian-page-1-cropbox/after"
+                ]
+              ],
+              "exact_rgb_equal": true
+            }
+          ]
+        }
+      ],
+      "text_command": [
+        "pdftotext",
+        "/private/tmp/bookscan-prepared-k17-real-v2/norwegian-prepared.pdf",
+        "-"
+      ],
+      "extracted_text": "\f"
+    },
+    {
+      "case": "counterpoint",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "bookscan",
+        "prepare",
+        "--content",
+        "/Volumes/Glass/Book Conversion/Needing Cleanup/Counterpoint in Composition.pdf",
+        "20",
+        "--output",
+        "/private/tmp/bookscan-prepared-k17-real-v2/counterpoint-prepared.pdf",
+        "--json"
+      ],
+      "planned": {
+        "schema_version": 1,
+        "status": "planned",
+        "output": "/private/tmp/bookscan-prepared-k17-real-v2/counterpoint-prepared.pdf",
+        "page_count": 1,
+        "pages": [
+          {
+            "output_page": 1,
+            "source": "/Volumes/Glass/Book Conversion/Needing Cleanup/Counterpoint in Composition.pdf",
+            "source_page": 20,
+            "role": "content"
+          }
+        ],
+        "warnings": []
+      },
+      "written": {
+        "schema_version": 1,
+        "status": "written",
+        "output": "/private/tmp/bookscan-prepared-k17-real-v2/counterpoint-prepared.pdf",
+        "page_count": 1,
+        "warnings": []
+      },
+      "pages": [
+        {
+          "output_page": 1,
+          "source": "/Volumes/Glass/Book Conversion/Needing Cleanup/Counterpoint in Composition.pdf",
+          "source_page": 20,
+          "role": "content",
+          "geometry": {
+            "MediaBox": [
+              "0",
+              "0",
+              "842",
+              "595"
+            ],
+            "CropBox": [
+              "0",
+              "0",
+              "842",
+              "595"
+            ],
+            "BleedBox": [
+              "0",
+              "0",
+              "842",
+              "595"
+            ],
+            "TrimBox": [
+              "0",
+              "0",
+              "842",
+              "595"
+            ],
+            "ArtBox": [
+              "0",
+              "0",
+              "842",
+              "595"
+            ],
+            "Rotate": "0",
+            "UserUnit": "1"
+          },
+          "raw_streams": [
+            {
+              "path": "/Resources/XObject/Im101",
+              "raw_sha256": "ff0b503dd17883ba8fca9304b66a1d1cc32f0cb1eeffd15d901535ed45add601",
+              "filter": "/DCTDecode",
+              "subtype": "/Image",
+              "width": "1975",
+              "height": "1395"
+            },
+            {
+              "path": "/Contents",
+              "raw_sha256": "5d555fbf207de78e2eb98f931744ac9f7f513109e96ab18e146f97db49811527",
+              "filter": "none",
+              "subtype": "none",
+              "width": "none",
+              "height": "none"
+            }
+          ],
+          "renders": [
+            {
+              "view": "cropbox",
+              "before": {
+                "path": "/private/tmp/bookscan-prepared-k17-real-v2/counterpoint-page-1-cropbox/before.png",
+                "dimensions": [
+                  3509,
+                  2480
+                ],
+                "rgb_sha256": "45021ac90764a0e51b592fdfeea76123aa17354a3335027ae7a85aaa3d25559c",
+                "diagnostics": "",
+                "crops": {
+                  "centre": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/counterpoint-page-1-cropbox/before-centre.png",
+                    "box": [
+                      1169,
+                      826,
+                      2069,
+                      1726
+                    ],
+                    "rgb_sha256": "28db351682fb3e673620db9fe1bd7a23c03d97ebe4c6ef8f4a1ea2932092b880"
+                  },
+                  "margin": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/counterpoint-page-1-cropbox/before-margin.png",
+                    "box": [
+                      0,
+                      0,
+                      600,
+                      1000
+                    ],
+                    "rgb_sha256": "6a6c767d75b85bc656dcc9a1d81b163c42f838cbf52541f5e50045b64b4d5c48"
+                  },
+                  "detail": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/counterpoint-page-1-cropbox/before-detail.png",
+                    "box": [
+                      877,
+                      1240,
+                      2077,
+                      2140
+                    ],
+                    "rgb_sha256": "f3792a495dcb56bd8a613103e893565291885c02cbac29897ae946fb39fa66ca"
+                  }
+                }
+              },
+              "after": {
+                "path": "/private/tmp/bookscan-prepared-k17-real-v2/counterpoint-page-1-cropbox/after.png",
+                "dimensions": [
+                  3509,
+                  2480
+                ],
+                "rgb_sha256": "45021ac90764a0e51b592fdfeea76123aa17354a3335027ae7a85aaa3d25559c",
+                "diagnostics": "",
+                "crops": {
+                  "centre": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/counterpoint-page-1-cropbox/after-centre.png",
+                    "box": [
+                      1169,
+                      826,
+                      2069,
+                      1726
+                    ],
+                    "rgb_sha256": "28db351682fb3e673620db9fe1bd7a23c03d97ebe4c6ef8f4a1ea2932092b880"
+                  },
+                  "margin": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/counterpoint-page-1-cropbox/after-margin.png",
+                    "box": [
+                      0,
+                      0,
+                      600,
+                      1000
+                    ],
+                    "rgb_sha256": "6a6c767d75b85bc656dcc9a1d81b163c42f838cbf52541f5e50045b64b4d5c48"
+                  },
+                  "detail": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/counterpoint-page-1-cropbox/after-detail.png",
+                    "box": [
+                      877,
+                      1240,
+                      2077,
+                      2140
+                    ],
+                    "rgb_sha256": "f3792a495dcb56bd8a613103e893565291885c02cbac29897ae946fb39fa66ca"
+                  }
+                }
+              },
+              "commands": [
+                [
+                  "pdftoppm",
+                  "-f",
+                  "20",
+                  "-l",
+                  "20",
+                  "-r",
+                  "300",
+                  "-singlefile",
+                  "-png",
+                  "-cropbox",
+                  "/Volumes/Glass/Book Conversion/Needing Cleanup/Counterpoint in Composition.pdf",
+                  "/private/tmp/bookscan-prepared-k17-real-v2/counterpoint-page-1-cropbox/before"
+                ],
+                [
+                  "pdftoppm",
+                  "-f",
+                  "1",
+                  "-l",
+                  "1",
+                  "-r",
+                  "300",
+                  "-singlefile",
+                  "-png",
+                  "-cropbox",
+                  "/private/tmp/bookscan-prepared-k17-real-v2/counterpoint-prepared.pdf",
+                  "/private/tmp/bookscan-prepared-k17-real-v2/counterpoint-page-1-cropbox/after"
+                ]
+              ],
+              "exact_rgb_equal": true
+            }
+          ]
+        }
+      ],
+      "text_command": [
+        "pdftotext",
+        "/private/tmp/bookscan-prepared-k17-real-v2/counterpoint-prepared.pdf",
+        "-"
+      ],
+      "extracted_text": "\f"
+    },
+    {
+      "case": "algorithm",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "bookscan",
+        "prepare",
+        "--content",
+        "/Volumes/Glass/Book Conversion/Processed Books/Algorithm Design/Algorithm Design.pdf",
+        "20",
+        "--output",
+        "/private/tmp/bookscan-prepared-k17-real-v2/algorithm-prepared.pdf",
+        "--json"
+      ],
+      "planned": {
+        "schema_version": 1,
+        "status": "planned",
+        "output": "/private/tmp/bookscan-prepared-k17-real-v2/algorithm-prepared.pdf",
+        "page_count": 1,
+        "pages": [
+          {
+            "output_page": 1,
+            "source": "/Volumes/Glass/Book Conversion/Processed Books/Algorithm Design/Algorithm Design.pdf",
+            "source_page": 20,
+            "role": "content"
+          }
+        ],
+        "warnings": []
+      },
+      "written": {
+        "schema_version": 1,
+        "status": "written",
+        "output": "/private/tmp/bookscan-prepared-k17-real-v2/algorithm-prepared.pdf",
+        "page_count": 1,
+        "warnings": []
+      },
+      "pages": [
+        {
+          "output_page": 1,
+          "source": "/Volumes/Glass/Book Conversion/Processed Books/Algorithm Design/Algorithm Design.pdf",
+          "source_page": 20,
+          "role": "content",
+          "geometry": {
+            "MediaBox": [
+              "0.0",
+              "0.0",
+              "564.0",
+              "653.0"
+            ],
+            "CropBox": [
+              "0.0",
+              "0.0",
+              "564.0",
+              "653.0"
+            ],
+            "BleedBox": [
+              "0.0",
+              "0.0",
+              "564.0",
+              "653.0"
+            ],
+            "TrimBox": [
+              "0.0",
+              "0.0",
+              "564.0",
+              "653.0"
+            ],
+            "ArtBox": [
+              "0.0",
+              "0.0",
+              "564.0",
+              "653.0"
+            ],
+            "Rotate": "0",
+            "UserUnit": "1"
+          },
+          "raw_streams": [
+            {
+              "path": "/Resources/XObject/Im0",
+              "raw_sha256": "94668dc3347775c12dbebf63fa2e1bbd1a58d33d6bc04069e6ae643a319a7f95",
+              "filter": "/JBIG2Decode",
+              "subtype": "/Image",
+              "width": "2159",
+              "height": "2448"
+            },
+            {
+              "path": "/Resources/XObject/Im0/DecodeParms/JBIG2Globals",
+              "raw_sha256": "08f2b37bbe2955b4da89a78bcb50a0121e4cd7e4c1e4146764ead8523c78c4b4",
+              "filter": "none",
+              "subtype": "none",
+              "width": "none",
+              "height": "none"
+            },
+            {
+              "path": "/Contents",
+              "raw_sha256": "2b8d6f9bda3a5a86a61e5a79fd21c0846239db290fc6e910d60ac34d47e1c3cd",
+              "filter": "/FlateDecode",
+              "subtype": "none",
+              "width": "none",
+              "height": "none"
+            }
+          ],
+          "renders": [
+            {
+              "view": "cropbox",
+              "before": {
+                "path": "/private/tmp/bookscan-prepared-k17-real-v2/algorithm-page-1-cropbox/before.png",
+                "dimensions": [
+                  2350,
+                  2721
+                ],
+                "rgb_sha256": "ec4c55c4d8be26bfe0eb341de9029bbe169fb6b714cf94f224d197b443a92ae6",
+                "diagnostics": "",
+                "crops": {
+                  "centre": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/algorithm-page-1-cropbox/before-centre.png",
+                    "box": [
+                      783,
+                      907,
+                      1683,
+                      1807
+                    ],
+                    "rgb_sha256": "5bff89da62177452338d2d8efc3e2e6ce7417b05f8f30e75ab427131644e87f1"
+                  },
+                  "margin": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/algorithm-page-1-cropbox/before-margin.png",
+                    "box": [
+                      0,
+                      0,
+                      600,
+                      1000
+                    ],
+                    "rgb_sha256": "cee79aef5568fbe03d05ac6a34272dd8128c81add6e6e898b337edba9a57ade1"
+                  },
+                  "detail": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/algorithm-page-1-cropbox/before-detail.png",
+                    "box": [
+                      587,
+                      1360,
+                      1787,
+                      2260
+                    ],
+                    "rgb_sha256": "845357f58e969ee8c44c5d74ed9717a0bae9ffdf909f23a186fd81cf4803b660"
+                  }
+                }
+              },
+              "after": {
+                "path": "/private/tmp/bookscan-prepared-k17-real-v2/algorithm-page-1-cropbox/after.png",
+                "dimensions": [
+                  2350,
+                  2721
+                ],
+                "rgb_sha256": "ec4c55c4d8be26bfe0eb341de9029bbe169fb6b714cf94f224d197b443a92ae6",
+                "diagnostics": "",
+                "crops": {
+                  "centre": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/algorithm-page-1-cropbox/after-centre.png",
+                    "box": [
+                      783,
+                      907,
+                      1683,
+                      1807
+                    ],
+                    "rgb_sha256": "5bff89da62177452338d2d8efc3e2e6ce7417b05f8f30e75ab427131644e87f1"
+                  },
+                  "margin": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/algorithm-page-1-cropbox/after-margin.png",
+                    "box": [
+                      0,
+                      0,
+                      600,
+                      1000
+                    ],
+                    "rgb_sha256": "cee79aef5568fbe03d05ac6a34272dd8128c81add6e6e898b337edba9a57ade1"
+                  },
+                  "detail": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/algorithm-page-1-cropbox/after-detail.png",
+                    "box": [
+                      587,
+                      1360,
+                      1787,
+                      2260
+                    ],
+                    "rgb_sha256": "845357f58e969ee8c44c5d74ed9717a0bae9ffdf909f23a186fd81cf4803b660"
+                  }
+                }
+              },
+              "commands": [
+                [
+                  "pdftoppm",
+                  "-f",
+                  "20",
+                  "-l",
+                  "20",
+                  "-r",
+                  "300",
+                  "-singlefile",
+                  "-png",
+                  "-cropbox",
+                  "/Volumes/Glass/Book Conversion/Processed Books/Algorithm Design/Algorithm Design.pdf",
+                  "/private/tmp/bookscan-prepared-k17-real-v2/algorithm-page-1-cropbox/before"
+                ],
+                [
+                  "pdftoppm",
+                  "-f",
+                  "1",
+                  "-l",
+                  "1",
+                  "-r",
+                  "300",
+                  "-singlefile",
+                  "-png",
+                  "-cropbox",
+                  "/private/tmp/bookscan-prepared-k17-real-v2/algorithm-prepared.pdf",
+                  "/private/tmp/bookscan-prepared-k17-real-v2/algorithm-page-1-cropbox/after"
+                ]
+              ],
+              "exact_rgb_equal": true
+            }
+          ]
+        }
+      ],
+      "text_command": [
+        "pdftotext",
+        "/private/tmp/bookscan-prepared-k17-real-v2/algorithm-prepared.pdf",
+        "-"
+      ],
+      "extracted_text": "\f"
+    },
+    {
+      "case": "strings",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "bookscan",
+        "prepare",
+        "--front",
+        "/Volumes/Glass/Book Conversion/Covers/Algorithms on Strings, Trees, and Sequence.pdf",
+        "1",
+        "--content",
+        "/private/tmp/bookscan-prepared-k17-real-v2/Labelled content.pdf",
+        "--back",
+        "/Volumes/Glass/Book Conversion/Covers/Algorithms on Strings, Trees, and Sequence.pdf",
+        "2",
+        "--output",
+        "/private/tmp/bookscan-prepared-k17-real-v2/strings-prepared.pdf",
+        "--json"
+      ],
+      "planned": {
+        "schema_version": 1,
+        "status": "planned",
+        "output": "/private/tmp/bookscan-prepared-k17-real-v2/strings-prepared.pdf",
+        "page_count": 4,
+        "pages": [
+          {
+            "output_page": 1,
+            "source": "/Volumes/Glass/Book Conversion/Covers/Algorithms on Strings, Trees, and Sequence.pdf",
+            "source_page": 1,
+            "role": "front"
+          },
+          {
+            "output_page": 2,
+            "source": "/private/tmp/bookscan-prepared-k17-real-v2/Labelled content.pdf",
+            "source_page": 1,
+            "role": "content"
+          },
+          {
+            "output_page": 3,
+            "source": "/private/tmp/bookscan-prepared-k17-real-v2/Labelled content.pdf",
+            "source_page": 2,
+            "role": "content"
+          },
+          {
+            "output_page": 4,
+            "source": "/Volumes/Glass/Book Conversion/Covers/Algorithms on Strings, Trees, and Sequence.pdf",
+            "source_page": 2,
+            "role": "back"
+          }
+        ],
+        "warnings": []
+      },
+      "written": {
+        "schema_version": 1,
+        "status": "written",
+        "output": "/private/tmp/bookscan-prepared-k17-real-v2/strings-prepared.pdf",
+        "page_count": 4,
+        "warnings": []
+      },
+      "pages": [
+        {
+          "output_page": 1,
+          "source": "/Volumes/Glass/Book Conversion/Covers/Algorithms on Strings, Trees, and Sequence.pdf",
+          "source_page": 1,
+          "role": "front",
+          "geometry": {
+            "MediaBox": [
+              "0.000000",
+              "0.000000",
+              "595.000000",
+              "841.000000"
+            ],
+            "CropBox": [
+              "0.000000",
+              "0.000000",
+              "595.000000",
+              "841.000000"
+            ],
+            "BleedBox": [
+              "0.000000",
+              "0.000000",
+              "595.000000",
+              "841.000000"
+            ],
+            "TrimBox": [
+              "0.000000",
+              "0.000000",
+              "595.000000",
+              "841.000000"
+            ],
+            "ArtBox": [
+              "0.000000",
+              "0.000000",
+              "595.000000",
+              "841.000000"
+            ],
+            "Rotate": "0",
+            "UserUnit": "1"
+          },
+          "raw_streams": [
+            {
+              "path": "/Resources/XObject/XOb7",
+              "raw_sha256": "872afe5118d76b36cee2e6e7c51b29aa14488b68741808a91c67c54677fdefdc",
+              "filter": "/DCTDecode",
+              "subtype": "/Image",
+              "width": "2062",
+              "height": "3088"
+            },
+            {
+              "path": "/Resources/XObject/XOb7/ColorSpace[1]",
+              "raw_sha256": "b27830d6c5077cfd9d68e561489582b61f36b83d06e2263526851838153043bd",
+              "filter": "/FlateDecode",
+              "subtype": "none",
+              "width": "none",
+              "height": "none"
+            },
+            {
+              "path": "/Contents",
+              "raw_sha256": "c82957a105f516ce89450fa0ff662f13de5094c51192d1b81da455fba8f3562c",
+              "filter": "/FlateDecode",
+              "subtype": "none",
+              "width": "none",
+              "height": "none"
+            }
+          ],
+          "renders": [
+            {
+              "view": "cropbox",
+              "before": {
+                "path": "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-1-cropbox/before.png",
+                "dimensions": [
+                  2480,
+                  3505
+                ],
+                "rgb_sha256": "fb481a0c293b6f36f9595d0238b9d3ea1b66d364312203e54b43a709170ace1c",
+                "diagnostics": "",
+                "crops": {
+                  "centre": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-1-cropbox/before-centre.png",
+                    "box": [
+                      826,
+                      1168,
+                      1726,
+                      2068
+                    ],
+                    "rgb_sha256": "b36b050af1ef96d35bd0ecd33449f10636dfe0242159a471248b706b06217f2d"
+                  },
+                  "margin": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-1-cropbox/before-margin.png",
+                    "box": [
+                      0,
+                      0,
+                      600,
+                      1000
+                    ],
+                    "rgb_sha256": "b52d89c19bca47cd2932df1115703bc18b920d11fb69735a39733291e015e23d"
+                  },
+                  "detail": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-1-cropbox/before-detail.png",
+                    "box": [
+                      620,
+                      1752,
+                      1820,
+                      2652
+                    ],
+                    "rgb_sha256": "5cdea4f7f8154d039d97cd55498ce62c5e60885c105b6902d2501136115d4c9d"
+                  }
+                }
+              },
+              "after": {
+                "path": "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-1-cropbox/after.png",
+                "dimensions": [
+                  2480,
+                  3505
+                ],
+                "rgb_sha256": "fb481a0c293b6f36f9595d0238b9d3ea1b66d364312203e54b43a709170ace1c",
+                "diagnostics": "",
+                "crops": {
+                  "centre": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-1-cropbox/after-centre.png",
+                    "box": [
+                      826,
+                      1168,
+                      1726,
+                      2068
+                    ],
+                    "rgb_sha256": "b36b050af1ef96d35bd0ecd33449f10636dfe0242159a471248b706b06217f2d"
+                  },
+                  "margin": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-1-cropbox/after-margin.png",
+                    "box": [
+                      0,
+                      0,
+                      600,
+                      1000
+                    ],
+                    "rgb_sha256": "b52d89c19bca47cd2932df1115703bc18b920d11fb69735a39733291e015e23d"
+                  },
+                  "detail": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-1-cropbox/after-detail.png",
+                    "box": [
+                      620,
+                      1752,
+                      1820,
+                      2652
+                    ],
+                    "rgb_sha256": "5cdea4f7f8154d039d97cd55498ce62c5e60885c105b6902d2501136115d4c9d"
+                  }
+                }
+              },
+              "commands": [
+                [
+                  "pdftoppm",
+                  "-f",
+                  "1",
+                  "-l",
+                  "1",
+                  "-r",
+                  "300",
+                  "-singlefile",
+                  "-png",
+                  "-cropbox",
+                  "/Volumes/Glass/Book Conversion/Covers/Algorithms on Strings, Trees, and Sequence.pdf",
+                  "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-1-cropbox/before"
+                ],
+                [
+                  "pdftoppm",
+                  "-f",
+                  "1",
+                  "-l",
+                  "1",
+                  "-r",
+                  "300",
+                  "-singlefile",
+                  "-png",
+                  "-cropbox",
+                  "/private/tmp/bookscan-prepared-k17-real-v2/strings-prepared.pdf",
+                  "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-1-cropbox/after"
+                ]
+              ],
+              "exact_rgb_equal": true
+            }
+          ]
+        },
+        {
+          "output_page": 2,
+          "source": "/private/tmp/bookscan-prepared-k17-real-v2/Labelled content.pdf",
+          "source_page": 1,
+          "role": "content",
+          "geometry": {
+            "MediaBox": [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            "CropBox": [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            "BleedBox": [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            "TrimBox": [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            "ArtBox": [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            "Rotate": "0",
+            "UserUnit": "1"
+          },
+          "raw_streams": [
+            {
+              "path": "/Contents",
+              "raw_sha256": "8614ad570dc4d38cf604f8f3e44e0c23d4c22f542494acebe111c077804c34c4",
+              "filter": "/FlateDecode",
+              "subtype": "none",
+              "width": "none",
+              "height": "none"
+            }
+          ],
+          "renders": [
+            {
+              "view": "cropbox",
+              "before": {
+                "path": "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-2-cropbox/before.png",
+                "dimensions": [
+                  1000,
+                  1334
+                ],
+                "rgb_sha256": "2463f21329bb56086b4ef14b3de39f3f377e2beb8c827d47478ac0dc45e9ad70",
+                "diagnostics": "",
+                "crops": {
+                  "centre": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-2-cropbox/before-centre.png",
+                    "box": [
+                      333,
+                      444,
+                      1000,
+                      1334
+                    ],
+                    "rgb_sha256": "461e7013d360a243c2d2cff85ca75070f62320b036078bffd42176642c0f736b"
+                  },
+                  "margin": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-2-cropbox/before-margin.png",
+                    "box": [
+                      0,
+                      0,
+                      600,
+                      1000
+                    ],
+                    "rgb_sha256": "e0ad4c6deecf2a2f4133fe15a46e8af2b03c3adc2c01b061be7212985fdcda36"
+                  },
+                  "detail": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-2-cropbox/before-detail.png",
+                    "box": [
+                      250,
+                      667,
+                      1000,
+                      1334
+                    ],
+                    "rgb_sha256": "266a16895002f680528d1807eb63f0700897d34c5808c2cb3fd058a5bd6385d2"
+                  }
+                }
+              },
+              "after": {
+                "path": "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-2-cropbox/after.png",
+                "dimensions": [
+                  1000,
+                  1334
+                ],
+                "rgb_sha256": "2463f21329bb56086b4ef14b3de39f3f377e2beb8c827d47478ac0dc45e9ad70",
+                "diagnostics": "",
+                "crops": {
+                  "centre": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-2-cropbox/after-centre.png",
+                    "box": [
+                      333,
+                      444,
+                      1000,
+                      1334
+                    ],
+                    "rgb_sha256": "461e7013d360a243c2d2cff85ca75070f62320b036078bffd42176642c0f736b"
+                  },
+                  "margin": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-2-cropbox/after-margin.png",
+                    "box": [
+                      0,
+                      0,
+                      600,
+                      1000
+                    ],
+                    "rgb_sha256": "e0ad4c6deecf2a2f4133fe15a46e8af2b03c3adc2c01b061be7212985fdcda36"
+                  },
+                  "detail": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-2-cropbox/after-detail.png",
+                    "box": [
+                      250,
+                      667,
+                      1000,
+                      1334
+                    ],
+                    "rgb_sha256": "266a16895002f680528d1807eb63f0700897d34c5808c2cb3fd058a5bd6385d2"
+                  }
+                }
+              },
+              "commands": [
+                [
+                  "pdftoppm",
+                  "-f",
+                  "1",
+                  "-l",
+                  "1",
+                  "-r",
+                  "300",
+                  "-singlefile",
+                  "-png",
+                  "-cropbox",
+                  "/private/tmp/bookscan-prepared-k17-real-v2/Labelled content.pdf",
+                  "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-2-cropbox/before"
+                ],
+                [
+                  "pdftoppm",
+                  "-f",
+                  "2",
+                  "-l",
+                  "2",
+                  "-r",
+                  "300",
+                  "-singlefile",
+                  "-png",
+                  "-cropbox",
+                  "/private/tmp/bookscan-prepared-k17-real-v2/strings-prepared.pdf",
+                  "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-2-cropbox/after"
+                ]
+              ],
+              "exact_rgb_equal": true
+            }
+          ]
+        },
+        {
+          "output_page": 3,
+          "source": "/private/tmp/bookscan-prepared-k17-real-v2/Labelled content.pdf",
+          "source_page": 2,
+          "role": "content",
+          "geometry": {
+            "MediaBox": [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            "CropBox": [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            "BleedBox": [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            "TrimBox": [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            "ArtBox": [
+              "0",
+              "0",
+              "240",
+              "320"
+            ],
+            "Rotate": "0",
+            "UserUnit": "1"
+          },
+          "raw_streams": [
+            {
+              "path": "/Contents",
+              "raw_sha256": "3c1eb1d4062ebcdc51f730791a1027b8a06bf1934b5f95018307cf8203cca4f8",
+              "filter": "/FlateDecode",
+              "subtype": "none",
+              "width": "none",
+              "height": "none"
+            }
+          ],
+          "renders": [
+            {
+              "view": "cropbox",
+              "before": {
+                "path": "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-3-cropbox/before.png",
+                "dimensions": [
+                  1000,
+                  1334
+                ],
+                "rgb_sha256": "0e92efb05aebf6b3917887d481868d89199ea54a275cfdc65ae727a24e38b0f0",
+                "diagnostics": "",
+                "crops": {
+                  "centre": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-3-cropbox/before-centre.png",
+                    "box": [
+                      333,
+                      444,
+                      1000,
+                      1334
+                    ],
+                    "rgb_sha256": "461e7013d360a243c2d2cff85ca75070f62320b036078bffd42176642c0f736b"
+                  },
+                  "margin": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-3-cropbox/before-margin.png",
+                    "box": [
+                      0,
+                      0,
+                      600,
+                      1000
+                    ],
+                    "rgb_sha256": "e0ad4c6deecf2a2f4133fe15a46e8af2b03c3adc2c01b061be7212985fdcda36"
+                  },
+                  "detail": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-3-cropbox/before-detail.png",
+                    "box": [
+                      250,
+                      667,
+                      1000,
+                      1334
+                    ],
+                    "rgb_sha256": "266a16895002f680528d1807eb63f0700897d34c5808c2cb3fd058a5bd6385d2"
+                  }
+                }
+              },
+              "after": {
+                "path": "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-3-cropbox/after.png",
+                "dimensions": [
+                  1000,
+                  1334
+                ],
+                "rgb_sha256": "0e92efb05aebf6b3917887d481868d89199ea54a275cfdc65ae727a24e38b0f0",
+                "diagnostics": "",
+                "crops": {
+                  "centre": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-3-cropbox/after-centre.png",
+                    "box": [
+                      333,
+                      444,
+                      1000,
+                      1334
+                    ],
+                    "rgb_sha256": "461e7013d360a243c2d2cff85ca75070f62320b036078bffd42176642c0f736b"
+                  },
+                  "margin": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-3-cropbox/after-margin.png",
+                    "box": [
+                      0,
+                      0,
+                      600,
+                      1000
+                    ],
+                    "rgb_sha256": "e0ad4c6deecf2a2f4133fe15a46e8af2b03c3adc2c01b061be7212985fdcda36"
+                  },
+                  "detail": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-3-cropbox/after-detail.png",
+                    "box": [
+                      250,
+                      667,
+                      1000,
+                      1334
+                    ],
+                    "rgb_sha256": "266a16895002f680528d1807eb63f0700897d34c5808c2cb3fd058a5bd6385d2"
+                  }
+                }
+              },
+              "commands": [
+                [
+                  "pdftoppm",
+                  "-f",
+                  "2",
+                  "-l",
+                  "2",
+                  "-r",
+                  "300",
+                  "-singlefile",
+                  "-png",
+                  "-cropbox",
+                  "/private/tmp/bookscan-prepared-k17-real-v2/Labelled content.pdf",
+                  "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-3-cropbox/before"
+                ],
+                [
+                  "pdftoppm",
+                  "-f",
+                  "3",
+                  "-l",
+                  "3",
+                  "-r",
+                  "300",
+                  "-singlefile",
+                  "-png",
+                  "-cropbox",
+                  "/private/tmp/bookscan-prepared-k17-real-v2/strings-prepared.pdf",
+                  "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-3-cropbox/after"
+                ]
+              ],
+              "exact_rgb_equal": true
+            }
+          ]
+        },
+        {
+          "output_page": 4,
+          "source": "/Volumes/Glass/Book Conversion/Covers/Algorithms on Strings, Trees, and Sequence.pdf",
+          "source_page": 2,
+          "role": "back",
+          "geometry": {
+            "MediaBox": [
+              "0.000000",
+              "0.000000",
+              "595.000000",
+              "841.000000"
+            ],
+            "CropBox": [
+              "0.000000",
+              "0.000000",
+              "595.000000",
+              "841.000000"
+            ],
+            "BleedBox": [
+              "0.000000",
+              "0.000000",
+              "595.000000",
+              "841.000000"
+            ],
+            "TrimBox": [
+              "0.000000",
+              "0.000000",
+              "595.000000",
+              "841.000000"
+            ],
+            "ArtBox": [
+              "0.000000",
+              "0.000000",
+              "595.000000",
+              "841.000000"
+            ],
+            "Rotate": "0",
+            "UserUnit": "1"
+          },
+          "raw_streams": [
+            {
+              "path": "/Resources/XObject/XOb7",
+              "raw_sha256": "4bfd43c29d69c6773e3b3404ddb355efb95f21b4473630b397ce682a52abc8d6",
+              "filter": "/DCTDecode",
+              "subtype": "/Image",
+              "width": "2160",
+              "height": "3084"
+            },
+            {
+              "path": "/Resources/XObject/XOb7/ColorSpace[1]",
+              "raw_sha256": "b27830d6c5077cfd9d68e561489582b61f36b83d06e2263526851838153043bd",
+              "filter": "/FlateDecode",
+              "subtype": "none",
+              "width": "none",
+              "height": "none"
+            },
+            {
+              "path": "/Contents",
+              "raw_sha256": "5b5cb0d33ad3d6762359a53e30345ee627f2a4f8b9e1b4eb58e09209785573b2",
+              "filter": "/FlateDecode",
+              "subtype": "none",
+              "width": "none",
+              "height": "none"
+            }
+          ],
+          "renders": [
+            {
+              "view": "cropbox",
+              "before": {
+                "path": "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-4-cropbox/before.png",
+                "dimensions": [
+                  2480,
+                  3505
+                ],
+                "rgb_sha256": "a33da943da3a77c9a7a54874d1dec4e6551d9c7ae651ef558f53f72f42d3a37f",
+                "diagnostics": "",
+                "crops": {
+                  "centre": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-4-cropbox/before-centre.png",
+                    "box": [
+                      826,
+                      1168,
+                      1726,
+                      2068
+                    ],
+                    "rgb_sha256": "8e0fd86dff37bed94b523b19696c967ee7a6f6a3415c923a12f1ef218b24b2ed"
+                  },
+                  "margin": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-4-cropbox/before-margin.png",
+                    "box": [
+                      0,
+                      0,
+                      600,
+                      1000
+                    ],
+                    "rgb_sha256": "8ecf82a9bf26f6a425e2f427e9688ed8f937438665dbda8fa65f71f96b5fc1ba"
+                  },
+                  "detail": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-4-cropbox/before-detail.png",
+                    "box": [
+                      620,
+                      1752,
+                      1820,
+                      2652
+                    ],
+                    "rgb_sha256": "3b24bae03144f589cf9f3c27eca6273ea493e3476b6accb923770118b842d19d"
+                  }
+                }
+              },
+              "after": {
+                "path": "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-4-cropbox/after.png",
+                "dimensions": [
+                  2480,
+                  3505
+                ],
+                "rgb_sha256": "a33da943da3a77c9a7a54874d1dec4e6551d9c7ae651ef558f53f72f42d3a37f",
+                "diagnostics": "",
+                "crops": {
+                  "centre": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-4-cropbox/after-centre.png",
+                    "box": [
+                      826,
+                      1168,
+                      1726,
+                      2068
+                    ],
+                    "rgb_sha256": "8e0fd86dff37bed94b523b19696c967ee7a6f6a3415c923a12f1ef218b24b2ed"
+                  },
+                  "margin": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-4-cropbox/after-margin.png",
+                    "box": [
+                      0,
+                      0,
+                      600,
+                      1000
+                    ],
+                    "rgb_sha256": "8ecf82a9bf26f6a425e2f427e9688ed8f937438665dbda8fa65f71f96b5fc1ba"
+                  },
+                  "detail": {
+                    "path": "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-4-cropbox/after-detail.png",
+                    "box": [
+                      620,
+                      1752,
+                      1820,
+                      2652
+                    ],
+                    "rgb_sha256": "3b24bae03144f589cf9f3c27eca6273ea493e3476b6accb923770118b842d19d"
+                  }
+                }
+              },
+              "commands": [
+                [
+                  "pdftoppm",
+                  "-f",
+                  "2",
+                  "-l",
+                  "2",
+                  "-r",
+                  "300",
+                  "-singlefile",
+                  "-png",
+                  "-cropbox",
+                  "/Volumes/Glass/Book Conversion/Covers/Algorithms on Strings, Trees, and Sequence.pdf",
+                  "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-4-cropbox/before"
+                ],
+                [
+                  "pdftoppm",
+                  "-f",
+                  "4",
+                  "-l",
+                  "4",
+                  "-r",
+                  "300",
+                  "-singlefile",
+                  "-png",
+                  "-cropbox",
+                  "/private/tmp/bookscan-prepared-k17-real-v2/strings-prepared.pdf",
+                  "/private/tmp/bookscan-prepared-k17-real-v2/strings-page-4-cropbox/after"
+                ]
+              ],
+              "exact_rgb_equal": true
+            }
+          ]
+        }
+      ],
+      "text_command": [
+        "pdftotext",
+        "/private/tmp/bookscan-prepared-k17-real-v2/strings-prepared.pdf",
+        "-"
+      ],
+      "extracted_text": "\fC1\n\n\fC2\n\n\f\f"
+    }
+  ],
+  "fault_checks": {
+    "command": [
+      "uv",
+      "run",
+      "--locked",
+      "pytest",
+      "-q",
+      "tests/test_publication.py",
+      "tests/test_validation.py",
+      "--basetemp",
+      "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks",
+      "--junitxml",
+      "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks.xml"
+    ],
+    "stdout": "......................................................................   [100%]\n- generated xml file: /private/tmp/bookscan-prepared-k17-real-v2/fault-checks.xml -\n70 passed in 1.70s\n",
+    "stderr": "",
+    "junit": "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks.xml",
+    "observed_signal_and_kill_cases": [
+      {
+        "pid": 87457,
+        "hook": "writing",
+        "signal": 2,
+        "exit": 130,
+        "result": {
+          "schema_version": 1,
+          "status": "error",
+          "code": "INTERRUPTED",
+          "message": "Caught signal 2 before publication.",
+          "remediation": "Inspect the destination and choose a new path to retry.",
+          "warnings": [],
+          "output": "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_real_signals_at_observed_0/out.pdf"
+        },
+        "complete_destination": false,
+        "private_removed": true,
+        "source_unchanged": true,
+        "writer_reaped": true,
+        "observed_barrier": {
+          "pid": 87457,
+          "hook": "writing",
+          "private": [
+            "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_real_signals_at_observed_0/.bookscan-prepare-03ef019b9f61d4fee693cf2d8b7ce416.tmp"
+          ]
+        }
+      },
+      {
+        "pid": 87458,
+        "hook": "pre-region",
+        "signal": 2,
+        "exit": 130,
+        "result": {
+          "schema_version": 1,
+          "status": "error",
+          "code": "INTERRUPTED",
+          "message": "Caught signal 2 before publication.",
+          "remediation": "Inspect the destination and choose a new path to retry.",
+          "warnings": [],
+          "output": "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_real_signals_at_observed_1/out.pdf"
+        },
+        "complete_destination": false,
+        "private_removed": true,
+        "source_unchanged": true,
+        "writer_reaped": true,
+        "observed_barrier": {
+          "pid": 87458,
+          "hook": "pre-region",
+          "private": [
+            "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_real_signals_at_observed_1/.bookscan-prepare-21cec24dc020152023a6bdacd65ce05a.tmp"
+          ]
+        }
+      },
+      {
+        "pid": 87474,
+        "hook": "pending",
+        "signal": 15,
+        "exit": 143,
+        "result": {
+          "schema_version": 1,
+          "status": "error",
+          "code": "INTERRUPTED",
+          "message": "Signal 15 pending before publication.",
+          "remediation": "Inspect the destination and choose a new path to retry.",
+          "warnings": [],
+          "output": "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_real_signals_at_observed_10/out.pdf"
+        },
+        "complete_destination": false,
+        "private_removed": true,
+        "source_unchanged": true,
+        "writer_reaped": true,
+        "observed_barrier": {
+          "pid": 87474,
+          "hook": "pending",
+          "private": [
+            "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_real_signals_at_observed_10/.bookscan-prepare-d4b1808ddfa7f34a417563e24be667c0.tmp"
+          ]
+        }
+      },
+      {
+        "pid": 87475,
+        "hook": "after-block",
+        "signal": 15,
+        "exit": 0,
+        "result": {
+          "schema_version": 1,
+          "status": "written",
+          "output": "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_real_signals_at_observed_11/out.pdf",
+          "page_count": 2,
+          "warnings": [
+            {
+              "code": "POST_COMMIT_SIGNAL",
+              "message": "Caught signal 15 after publication.",
+              "remediation": "Inspect the destination and any named private file."
+            }
+          ]
+        },
+        "complete_destination": true,
+        "private_removed": true,
+        "source_unchanged": true,
+        "writer_reaped": true,
+        "observed_barrier": {
+          "pid": 87475,
+          "hook": "after-block",
+          "private": [
+            "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_real_signals_at_observed_11/.bookscan-prepare-36a22bba9f2bc7bfa4f6658571037326.tmp"
+          ]
+        }
+      },
+      {
+        "pid": 87485,
+        "hook": "blocked",
+        "signal": 15,
+        "exit": 0,
+        "result": {
+          "schema_version": 1,
+          "status": "written",
+          "output": "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_real_signals_at_observed_12/out.pdf",
+          "page_count": 2,
+          "warnings": [
+            {
+              "code": "POST_COMMIT_SIGNAL",
+              "message": "Caught signal 15 after publication.",
+              "remediation": "Inspect the destination and any named private file."
+            }
+          ]
+        },
+        "complete_destination": true,
+        "private_removed": true,
+        "source_unchanged": true,
+        "writer_reaped": true,
+        "observed_barrier": {
+          "pid": 87485,
+          "hook": "blocked",
+          "private": [
+            "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_real_signals_at_observed_12/.bookscan-prepare-7e9e0278573078cdafbdc52383706583.tmp"
+          ]
+        }
+      },
+      {
+        "pid": 87495,
+        "hook": "after-link",
+        "signal": 15,
+        "exit": 0,
+        "result": {
+          "schema_version": 1,
+          "status": "written",
+          "output": "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_real_signals_at_observed_13/out.pdf",
+          "page_count": 2,
+          "warnings": [
+            {
+              "code": "POST_COMMIT_SIGNAL",
+              "message": "Caught signal 15 after publication.",
+              "remediation": "Inspect the destination and any named private file."
+            }
+          ]
+        },
+        "complete_destination": true,
+        "private_removed": true,
+        "source_unchanged": true,
+        "writer_reaped": true,
+        "observed_barrier": {
+          "pid": 87495,
+          "hook": "after-link",
+          "private": [
+            "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_real_signals_at_observed_13/.bookscan-prepare-88df2f42ebaae55ad5c05f8f8b8f24b8.tmp"
+          ]
+        }
+      },
+      {
+        "pid": 87503,
+        "hook": "committed",
+        "signal": 15,
+        "exit": 0,
+        "result": {
+          "schema_version": 1,
+          "status": "written",
+          "output": "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_real_signals_at_observed_14/out.pdf",
+          "page_count": 2,
+          "warnings": [
+            {
+              "code": "POST_COMMIT_SIGNAL",
+              "message": "Caught signal 15 after publication.",
+              "remediation": "Inspect the destination and any named private file."
+            }
+          ]
+        },
+        "complete_destination": true,
+        "private_removed": true,
+        "source_unchanged": true,
+        "writer_reaped": true,
+        "observed_barrier": {
+          "pid": 87503,
+          "hook": "committed",
+          "private": [
+            "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_real_signals_at_observed_14/.bookscan-prepare-147836a12b92ccbb264c54f37f470d19.tmp"
+          ]
+        }
+      },
+      {
+        "pid": 87504,
+        "hook": "cleanup",
+        "signal": 15,
+        "exit": 0,
+        "result": {
+          "schema_version": 1,
+          "status": "written",
+          "output": "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_real_signals_at_observed_15/out.pdf",
+          "page_count": 2,
+          "warnings": [
+            {
+              "code": "POST_COMMIT_SIGNAL",
+              "message": "Caught signal 15 after publication.",
+              "remediation": "Inspect the destination and any named private file."
+            }
+          ]
+        },
+        "complete_destination": true,
+        "private_removed": true,
+        "source_unchanged": true,
+        "writer_reaped": true,
+        "observed_barrier": {
+          "pid": 87504,
+          "hook": "cleanup",
+          "private": [
+            "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_real_signals_at_observed_15/.bookscan-prepare-3116bd9a79c3801a2167ec491c659d14.tmp"
+          ]
+        }
+      },
+      {
+        "pid": 87459,
+        "hook": "pending",
+        "signal": 2,
+        "exit": 130,
+        "result": {
+          "schema_version": 1,
+          "status": "error",
+          "code": "INTERRUPTED",
+          "message": "Signal 2 pending before publication.",
+          "remediation": "Inspect the destination and choose a new path to retry.",
+          "warnings": [],
+          "output": "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_real_signals_at_observed_2/out.pdf"
+        },
+        "complete_destination": false,
+        "private_removed": true,
+        "source_unchanged": true,
+        "writer_reaped": true,
+        "observed_barrier": {
+          "pid": 87459,
+          "hook": "pending",
+          "private": [
+            "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_real_signals_at_observed_2/.bookscan-prepare-ab6978e2bc97a74b9861fd33f33662c4.tmp"
+          ]
+        }
+      },
+      {
+        "pid": 87460,
+        "hook": "after-block",
+        "signal": 2,
+        "exit": 0,
+        "result": {
+          "schema_version": 1,
+          "status": "written",
+          "output": "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_real_signals_at_observed_3/out.pdf",
+          "page_count": 2,
+          "warnings": [
+            {
+              "code": "POST_COMMIT_SIGNAL",
+              "message": "Caught signal 2 after publication.",
+              "remediation": "Inspect the destination and any named private file."
+            }
+          ]
+        },
+        "complete_destination": true,
+        "private_removed": true,
+        "source_unchanged": true,
+        "writer_reaped": true,
+        "observed_barrier": {
+          "pid": 87460,
+          "hook": "after-block",
+          "private": [
+            "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_real_signals_at_observed_3/.bookscan-prepare-d967e23c3398c5e21957bb5579f53261.tmp"
+          ]
+        }
+      },
+      {
+        "pid": 87461,
+        "hook": "blocked",
+        "signal": 2,
+        "exit": 0,
+        "result": {
+          "schema_version": 1,
+          "status": "written",
+          "output": "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_real_signals_at_observed_4/out.pdf",
+          "page_count": 2,
+          "warnings": [
+            {
+              "code": "POST_COMMIT_SIGNAL",
+              "message": "Caught signal 2 after publication.",
+              "remediation": "Inspect the destination and any named private file."
+            }
+          ]
+        },
+        "complete_destination": true,
+        "private_removed": true,
+        "source_unchanged": true,
+        "writer_reaped": true,
+        "observed_barrier": {
+          "pid": 87461,
+          "hook": "blocked",
+          "private": [
+            "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_real_signals_at_observed_4/.bookscan-prepare-960b450d42537ec554a9660f563474df.tmp"
+          ]
+        }
+      },
+      {
+        "pid": 87462,
+        "hook": "after-link",
+        "signal": 2,
+        "exit": 0,
+        "result": {
+          "schema_version": 1,
+          "status": "written",
+          "output": "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_real_signals_at_observed_5/out.pdf",
+          "page_count": 2,
+          "warnings": [
+            {
+              "code": "POST_COMMIT_SIGNAL",
+              "message": "Caught signal 2 after publication.",
+              "remediation": "Inspect the destination and any named private file."
+            }
+          ]
+        },
+        "complete_destination": true,
+        "private_removed": true,
+        "source_unchanged": true,
+        "writer_reaped": true,
+        "observed_barrier": {
+          "pid": 87462,
+          "hook": "after-link",
+          "private": [
+            "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_real_signals_at_observed_5/.bookscan-prepare-2370f31b3946b4a2a60ae532f6641934.tmp"
+          ]
+        }
+      },
+      {
+        "pid": 87470,
+        "hook": "committed",
+        "signal": 2,
+        "exit": 0,
+        "result": {
+          "schema_version": 1,
+          "status": "written",
+          "output": "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_real_signals_at_observed_6/out.pdf",
+          "page_count": 2,
+          "warnings": [
+            {
+              "code": "POST_COMMIT_SIGNAL",
+              "message": "Caught signal 2 after publication.",
+              "remediation": "Inspect the destination and any named private file."
+            }
+          ]
+        },
+        "complete_destination": true,
+        "private_removed": true,
+        "source_unchanged": true,
+        "writer_reaped": true,
+        "observed_barrier": {
+          "pid": 87470,
+          "hook": "committed",
+          "private": [
+            "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_real_signals_at_observed_6/.bookscan-prepare-46566ad18ffcc567ae409e7b72e24167.tmp"
+          ]
+        }
+      },
+      {
+        "pid": 87471,
+        "hook": "cleanup",
+        "signal": 2,
+        "exit": 0,
+        "result": {
+          "schema_version": 1,
+          "status": "written",
+          "output": "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_real_signals_at_observed_7/out.pdf",
+          "page_count": 2,
+          "warnings": [
+            {
+              "code": "POST_COMMIT_SIGNAL",
+              "message": "Caught signal 2 after publication.",
+              "remediation": "Inspect the destination and any named private file."
+            }
+          ]
+        },
+        "complete_destination": true,
+        "private_removed": true,
+        "source_unchanged": true,
+        "writer_reaped": true,
+        "observed_barrier": {
+          "pid": 87471,
+          "hook": "cleanup",
+          "private": [
+            "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_real_signals_at_observed_7/.bookscan-prepare-227bfd755f5dcfa27fdfb4ff809a225a.tmp"
+          ]
+        }
+      },
+      {
+        "pid": 87472,
+        "hook": "writing",
+        "signal": 15,
+        "exit": 143,
+        "result": {
+          "schema_version": 1,
+          "status": "error",
+          "code": "INTERRUPTED",
+          "message": "Caught signal 15 before publication.",
+          "remediation": "Inspect the destination and choose a new path to retry.",
+          "warnings": [],
+          "output": "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_real_signals_at_observed_8/out.pdf"
+        },
+        "complete_destination": false,
+        "private_removed": true,
+        "source_unchanged": true,
+        "writer_reaped": true,
+        "observed_barrier": {
+          "pid": 87472,
+          "hook": "writing",
+          "private": [
+            "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_real_signals_at_observed_8/.bookscan-prepare-d7ef994493b82beb6bd17363e22f8171.tmp"
+          ]
+        }
+      },
+      {
+        "pid": 87473,
+        "hook": "pre-region",
+        "signal": 15,
+        "exit": 143,
+        "result": {
+          "schema_version": 1,
+          "status": "error",
+          "code": "INTERRUPTED",
+          "message": "Caught signal 15 before publication.",
+          "remediation": "Inspect the destination and choose a new path to retry.",
+          "warnings": [],
+          "output": "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_real_signals_at_observed_9/out.pdf"
+        },
+        "complete_destination": false,
+        "private_removed": true,
+        "source_unchanged": true,
+        "writer_reaped": true,
+        "observed_barrier": {
+          "pid": 87473,
+          "hook": "pre-region",
+          "private": [
+            "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_real_signals_at_observed_9/.bookscan-prepare-7b8782f7a015e8290bc71de334aa469e.tmp"
+          ]
+        }
+      },
+      {
+        "pid": 87512,
+        "hook": "writing",
+        "signal": 9,
+        "exit": -9,
+        "destination_before_kill": false,
+        "destination_after_exit": false,
+        "private_before_kill": true,
+        "private_after_exit": true,
+        "same_file_before_and_after": false,
+        "complete_destination": false,
+        "source_unchanged": true,
+        "writer_reaped": true,
+        "observed_barrier": {
+          "pid": 87512,
+          "hook": "writing",
+          "private": [
+            "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_sigkill_observes_state_an0/.bookscan-prepare-4390ca5526404b60b1d8d5486caf8ed3.tmp"
+          ]
+        }
+      },
+      {
+        "pid": 87513,
+        "hook": "after-link",
+        "signal": 9,
+        "exit": -9,
+        "destination_before_kill": true,
+        "destination_after_exit": true,
+        "private_before_kill": true,
+        "private_after_exit": true,
+        "same_file_before_and_after": true,
+        "complete_destination": true,
+        "source_unchanged": true,
+        "writer_reaped": true,
+        "observed_barrier": {
+          "pid": 87513,
+          "hook": "after-link",
+          "private": [
+            "/private/tmp/bookscan-prepared-k17-real-v2/fault-checks/test_sigkill_observes_state_an1/.bookscan-prepare-2926072bcd9dbc45762956c342eda702.tmp"
+          ]
+        }
+      }
+    ]
+  },
+  "human_visual_approval": "pending: page-geometry-k4 owns the separate preparation response"
+}

@@ -121,3 +121,15 @@ Preserve originals and usable unchanged outputs on unsupported geometry.
 automatic guide extraction, geometry-family and sampling failures. If this trial
 cannot fit one focused session, decompose at a reviewable experiment boundary
 rather than quietly adding algorithms or the whole expanded fixture set.
+
+## Completed preparation comparisons
+
+`prepared-pdf-k13`/`prepared-pdf-k17` supply the complete command's frozen
+synthetic/real/all reports in `docs/acceptance/prepared-pdf.md`. Use the all-v2
+full-page and native 300-dpi zoom pairs under
+`/private/tmp/bookscan-prepared-k17-all-v2`, especially music pages 2/3,
+Norwegian's complete spread, Counterpoint's landscape canvas, and Strings
+cover pages 1/4. Exact pixel equality is automated evidence; obtain and record
+the separate preparation-specific visual response as already chartered above.
+An external implementation review precedes this trial and creates integration
+lazily if needed. Keep any rejection/inconclusive response for `corrected-book-k5`.

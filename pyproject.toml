@@ -5,6 +5,9 @@ description = "Explicit PDF book preparation"
 requires-python = ">=3.12,<3.13"
 dependencies = ["pikepdf==10.16.0"]
 
+[project.scripts]
+bookscan = "bookscan.cli:main"
+
 [build-system]
 requires = ["hatchling==1.27.0"]
 build-backend = "hatchling.build"
