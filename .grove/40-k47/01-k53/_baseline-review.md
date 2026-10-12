@@ -131,6 +131,88 @@ remain. Finite retirement or design/planning closes neither k53 nor k47; origina
 Goal/Done when and downstream order stay intact. No product/fidelity/native-view
 result, geometry or preparation visual approval is supplied by the reply.
 
+## Working increments and browser size assessment
+
+baseline-delivery-k61 consumes k59's scoped yes and k62's separately approved Q1–Q3
+repairs. Complete finite review F is baseline-finite-k63; complete co-located
+browser review B is baseline-browser-k64. They are ordered siblings here before
+page-orientation-k54 in the existing workspace/tree. Each leaves the product
+working and verifies its own complete public handoff. No new increment needs
+another workspace/grove: the human's one-tree choice remains settled.
+
+F is ordinary static multi-page PDF -> complete RGB import/advisory assessment ->
+any-page matched packets/finite recorded review -> source-loss resume -> acknowledged
+image-only export. Its first-time renderer/analyzer/helper/store/receipts/export
+and independent/native/public/fault/six-case acceptance stay together. The explicit
+F-only cadence exception permits internal unfinished milestones across focused
+sessions, with one live owner and its task-owned jj change until complete retirement
+and sealing. Those milestones earn no product/leaf/partial commit. Use the same
+handle/brief/decision log at continuation; no phase/status/session-summary artifact.
+
+B consumes that completed actual core and adds browser inspection/actions, a
+foreground HTTP/event loop and authenticated live export/Stop. Its concrete
+remaining inventory is:
+
+| B responsibility | F handoff consumed | Work and acceptance still owned by B |
+| --- | --- | --- |
+| Any-page co-located presentation/action adapter | Verified roster/matched full/native/source-native assets and geometry/region labels; saved disposition/inspection/ack operations | Real browser navigation on flagged/unflagged IDs, exact displayed identity, measured framebuffer 1:1/region coverage, action envelope/replay/staleness and complete acknowledgement. |
+| Foreground server and public protocol | Installed package/routing/result/help/preflight and finite contracts | process/review readiness after import/resume, versioned ready/action/export/terminal stream, loopback token/exact Host/Origin/allowed-file security and lifetime writer ownership. |
+| Live export and successful Stop | Verified acknowledged exact exporter/no-clobber outcomes and checkpoint/lock/private fault seams | Explicit exact destination confirmation, freeze/rejected commits/busy shell writer, queued authenticated Stop versus tab/signals, child-alive kill/reap/resume, separate publication/terminal outcomes. |
+| Complete browser acceptance and compatibility | Independent analytic/native fixtures/controls, actual writer barrier runner, six-case reproduction and frozen complete finite project | Served wrong-image/region/scale controls, real installed browser/denied-read workflow, all six browser/resource packets, predecessor read/upgrade and permanent finite/preparation/public-schema regression. |
+
+This is a prospective bounded single-session extension of completed F, not a
+measurement or evidence that those reusable mechanisms are implemented today.
+The current preparation source supplies only static gates/finite routing/one-file
+publication; it cannot substantiate browser reuse by itself. The dependency on F
+removes the first-time representation/analyzer/helper/checkpoint/export work from
+B's implementation charter, while retaining its browser feature and acceptance
+together. No presently substantiated separate residual size conflict warrants
+reopening the answered F question. B must inspect the actual completed F/seams/
+fixtures before implementation and test this assessment against the remaining
+inventory. If oversized then, it remains live with a new precise scoped trade-off
+and evidence: recommend a B-only complete-owner cadence exception over unagreed
+scope/check deferral, or demonstrate a narrower useful extension. F's yes supplies
+no such permission; silence is no reply and an unanswered choice stays on B,
+without an identical requirements/planning loop or horizontal/acceptance-only cut.
+
+The complete concrete plan earns baseline-delivery review-planning before F;
+integration and actual product reviews remain lazy. F judges its actual artifact
+for review before B; B does so before k54 and checks this node's entire original
+closure, naming its run on any review of the closed node. F alone closes neither
+this node nor k47; k47 still requires exact orientation. Original Goal/Done when
+above remain the closure, and k54 -> k48 -> k49 -> k50 -> k27 -> k28 -> k22 -> k23
+remain ordered. No product/fidelity/visual approval is supplied by this plan.
+
+## Working ownership map
+
+Numbering is the original twelve Done when bullets above. These are concrete
+working owners with their own acceptance, not replacement or shortened criteria.
+
+| Original criterion | baseline-finite-k63 (F) | baseline-browser-k64 (B) |
+| --- | --- | --- |
+| 1 — Ordinary import/baselines/identity | Full static composition/300-dpi MediaBox RGB/boxes/Rotate/UserUnit/hints/occurrences/blanks/duplicates/order/source snapshot and source-loss resume | Same actual import and verified resume through process/review; frozen F pixels/IDs/order/scale retained. |
+| 2 — Every-page assessment/honest limits | Packaged advisory helper, settings/version/status/angle/ratio/all invalid outcomes; orientation/local unverified; no edits or applied estimate | Display/action parity without regenerated assets or silent reassessment; unsupported edits explicit. |
+| 3 — Any-page views/dispositions | Complete roster/full/native/source-native packets/CropBox guides; actual ordinary-viewer native scale/global refresh; Q1–Q3 receipt actions/inspection/scoped ack | Co-located any-page views/revision actions and actual browser native scale/region coverage; same limitations/coverage. |
+| 4 — Transactions/locks/actions/lifecycle | Complete assets/checkpoints/replay/kernel lock/canonical identity/finite signals/child-alive kill/reap/resume/packet and exact export commits | Token/exact Host/Origin/confirmed destination, lifetime ownership/live freeze/busy writers, Stop/tab/signals and separate publication/server outcomes. |
+| 5 — Commands/help/events | Permanent finite commands, exact CommandResult operation/status/exit/help grammar/stderr, reserved process/review unavailable | Foreground ReviewEvent/action envelope/ready/action/export/terminal meanings, helper-independent help and permanent finite/prepare regression. |
+| 6 — Export/report/reimport | Exact acknowledged RGB/physical scale/count/order/no earlier text; Subject/report/null fields/unknown sides/hint omission/fresh report-independent reimport | Same operation through confirmed browser destination and finite export, separately reported publication result; no state inferred from report. |
+| 7 — Analyzer/helper/dependency preflight | Complete placement/ppi accounting or explicit unavailable reason; independently known CTMs; packaged version-aware helper/direct Pillow pin/build and native preflight | Reuse actual working setup/preflight before ready/resume, accepted assets frozen across tool changes. |
+| 8 — Independent fidelity/controls | Pre-output native/analytic truth/grid/colour/feature limits; mixed compositions/boxes/units and isolating wrong-image/placement/order/colour/erased-feature controls | Rerun relevant independent fixtures at served/export boundary plus wrong-served image/region/display scale; display/export equality never truth. |
+| 9 — Installed faults/aliases/corruption | Actual writer barriers/asset/checkpoint/packet/export pre/post commit/signals/kill/reap/EPIPE/cleanup/alias/occupation/dangling/concurrency/no-link/no-replace/receipt/lock/migration | Actual installed server/security/live action/export/Stop/child/kill faults, reusing/rerunning F's finite/native/public fault contract. |
+| 10 — Installed isolation/workflow | prepare -> create -> actual ordinary-viewer navigation/review actions/ack -> source-loss resume -> export with observed denied collection-read control, unmarked input too | prepare -> process -> actual browser inspection/disposition/inspection/ack/confirmed export/Stop -> review -> finite export, same observed denied-read boundary. |
+| 11 — Six real cases/resources/reactions | Every actual source/full/native/resource packet, independent truth or missing oracle, commands/digests/dimensions/stored bytes/export/peak memory, separate numerical/human outcomes | All six assessed again at co-located browser/view/navigation/export boundary with separate scoped paths/replies/resources; earlier missing outcomes retained. |
+| 12 — Private compatibility/tasks/review | Verified format/capabilities/resume/unknown-format fail-without-mutation/additive upgrade; frozen complete F project/fixtures/runners/working Taskfile checks and review before B | Actual F predecessor compatibility/interruption, permanent finite/result/event/prepare transition tests, frozen B project/working browser recipes and review before k54. |
+
+Both owners inherit the entire root independent acceptance/retirement policy.
+Required public/synthetic/native/browser failures are unfinished work, never
+pending human reactions. Missing complex real numerical truth is named unavailable
+beside separate actual/pending visual paths/replies. Actual real signed-resolution
+failure requires policy immediately before image-edit dependents; discovering F/B
+places it before k54 and affected later owners, and no synthetic-only control earns
+speculative policy. k28 retains every missing real truth/reaction/preservation
+remedy and full-default/nonrigid work before k22/k23. k27's complete source-only
+protocol and historical geometry/preparation questions remain unchanged.
+
 ## Decisions (running log)
 
 The mandated impl skill was loaded first, followed by the Grove spine. Bootstrap

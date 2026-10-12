@@ -123,3 +123,121 @@ This is the fresh implementation planner earned by an actual agreed design,
 not another baseline-size/staging requirements loop or implementation session.
 Keep one-tree ownership and the exact scope of F's explicit session exception.
 B's completion and all original product/acceptance obligations remain mandatory.
+
+## Decisions (running log)
+
+Loaded grove-planning first, then the Grove spine. Bootstrap resolved the mandated
+live leaf and read CONTEXT, the three ADRs, the complete root -> k47 -> k53 brief
+chain, canonical spec, k59's actual yes/proposal digest, k60's findings and k62's
+committed triage/actual Q1–Q3 reply. Read k55/k57/k58/k56 and the unchanged live
+consumers. The stated jj workspace started empty at parent 998b7a51. The existing
+Taskfile remains the deterministic entry point; this tree-only planner adds no
+product recipe, dependency, source study or runtime acceptance claim. Original
+tracked bytes/digests are frozen at /private/tmp/bookscan-k61-_tnzejif/before.
+
+Tier 2 discovery confirmed Users-antony-Development-BookScanBuilder. The initial
+file-filtered query returned zero and was not credited as absence; unfiltered
+exact-name discovery returned 24 rows with has_more=false. One-hop cli.run,
+prepare.operate and pdf.document_info traces reported complete pages; heuristic
+test edges and the class-only Staged empty trace were not caller evidence. Exact
+cli.main/run, prepare.operate, pdf.document_info/project_page and publication.
+Control/Staged source establish finite preparation routing/static gates/one-file
+link publication only. Preparation's Control converts post-PDF-commit signals
+to success; it cannot be reused unchanged for checkpoint/packet signals or a
+server's terminal exit. The manifest directly pins pikepdf alone. Coverage at
+generation 2026-10-12T10:12:44Z has metadata_match/no_recorded_issue on relied-on
+code/Markdown/configuration, best-effort rather than completeness. The three D2
+sources have not_tracked freshness and were read completely. No selected renderer,
+lock, directory-publication or helper API has been established by this planning.
+
+The smallest agreed independently useful increments are complete finite review
+F, then complete browser review B. Keep both as ordered live implementation
+owners inside k53 before k54 in this existing tree/workspace. F retains all eight
+agreed inventory responsibilities and their acceptance as internal unfinished
+milestones. Its actual explicit session exception permits continuation with the
+same live task, not milestone retirement or horizontal/test-only leaves. All
+milestone edits remain in its task-owned jj change until complete retirement and
+sealing; a continuation bootstraps that same handle and reads its running log.
+No extra milestone/status artifact or assertion of measured one-session fit.
+
+B is assessed separately as an extension of a completed F, not today's unbuilt
+browser-first baseline. Its remaining inventory is co-located views/actions,
+foreground HTTP/event lifecycle and authenticated live export/Stop, with their
+browser/isolation/compatibility acceptance. F must first deliver the actual
+verified import/store/view/action/export operations, private substitution seams,
+independent fixtures and reproducible six-case runner that B consumes. This is a
+bounded single-session implementation candidate, not a measured size guarantee
+or evidence those F components exist now. B begins by verifying that concrete
+reuse; it introduces no new renderer, analyzer, helper, checkpoint format or
+image-edit mechanism. No currently substantiated distinct residual size conflict
+requires another human decision here. If that prerequisite check or work reveals
+one, B remains live and presents the actual remaining inventory and a new precise
+trade-off: recommend a B-only complete-owner cadence exception over an input/
+acceptance restriction, or demonstrate a genuinely useful narrower extension.
+It cannot borrow F's yes, retire partially, cut horizontal leaves or create an
+identical unanswered requirements/planning loop. Unanswered permission stays
+pending on that same owner, without speculative downstream work.
+
+Consume k62's exact integrated public rules: eight stable reason kinds and their
+decision domains; standalone help/JSON parsing and exact CommandResult operations;
+fresh opaque single-use issuance, durable normalized replay before currency and
+external integrity. Global refresh remains the signed cost, with actual native
+and refresh usability required in F. Selection union and whole acknowledgement
+remain separate from inspection, and snapshot identity excludes its own ack/retry
+bookkeeping. No new protocol, signature, image result or preservation approval.
+
+This load-bearing decomposition earns review-planning before F. Its specific
+doubts are full twelve-criterion ownership, the F-only continuation/commit
+boundary, B's prerequisite-based size assessment and the integrated retry/native/
+failure seams. Invoke no competing in-session reviewer; integration and product
+reviews are earned lazily from actual findings/artifacts. Cut that review only
+after concrete F/B charters exist, as final work before retirement bookkeeping.
+
+Concrete owners baseline-finite-k63 and baseline-browser-k64 now carry their
+complete working operations and acceptance inside k53. F's five internal
+milestones include all eight agreed inventory responsibilities and the same-live-
+task/jj continuation rule; B's four-responsibility inventory names actual F reuse
+as a prerequisite and forbids inferred cadence permission. The node's twelve-row
+Working ownership map names both charters, while root/k47 gain only a short
+handoff paragraph. Original Goal/Done when and every downstream task remain
+unchanged. The canonical protocol/spec/ADRs/visuals/Taskfile/product are untouched;
+no design duplication or new architecture/ADR decision earns a record here.
+
+Fresh tree-only verification passed in /private/tmp/bookscan-k61-_tnzejif/verify.py:
+every original tracked path is compared itemwise, all three brief changes are
+insertions only with exact original Goal/Done when, the complete k61 charter is
+an unchanged prefix, all other original bytes match, the ownership map contains
+the twelve original criterion rows and both complete owners resolve under k53.
+The root -> k47 -> k53 chain and k54 -> k48 -> k49 -> k50 -> k27 -> k28 -> k22 ->
+k23 order hold. Deliberately wrong closure/product bytes/order/criterion-map
+controls were rejected, and all verifier/original/current contract/tool read
+subjects stayed unchanged during the measurement. Evidence is verification-live.
+json beside that verifier; this is no product/native/browser test result.
+
+Final pre-review coverage enumerated all tracked paths in two bounded batches
+and the complete .grove scope at generation 2026-10-12T10:17:48Z, with metadata
+recorded 2026-10-12T10:25:12Z. Material current source/Markdown/configuration has
+metadata_match/no_recorded_issue and the scope page has has_more=false, a best-
+effort signal only. D2/lock/archive metadata is untracked, SVG/PNG excluded and
+two generated HTML files have missed line 1. The verifier directly reads all
+their complete bytes for unchanged-artifact identity, not graph/native/render
+claims. No Taskfile recipe changed; runtime suites/builds add no evidence to
+this tree-only task. The actual plan now earns its final review cut before F.
+
+As final work, cut and fully chartered baseline-delivery-k65 review-planning
+immediately before baseline-finite-k63. Its adversarial read names this actual
+plan, full closure/exception/reuse/acceptance doubts and minimal counterexamples;
+it pre-creates no integration or product review. The verified live order inside
+k53 is k65 -> k63 -> k64; all original downstream consumers remain unchanged.
+The fresh itemwise verifier passed again with exactly those three new leaves,
+all original protected bytes/closures and read-subject digests intact. The
+current charters are tree deliverables only; their native/browser/product/fidelity
+and scoped human evidence is concrete live work, not a result of this retirement.
+
+Retire only k61, name this session's own HARNESS_DISPATCH_RUN_ID on k65, verify
+the retired tree and seal its one focused jj change. k53 retains live review/F/B,
+k47 retains live k54 and the root retains its downstream work, so no node closes,
+promotion cascade or teardown is due. No settled design/ADR meaning changed.
+The final verifier runs after all repository edits with one writer and observed
+completion; then describe/new seals the change and read-only boundary checks
+precede harness-dispatch exit as the last action. No driver is run here.

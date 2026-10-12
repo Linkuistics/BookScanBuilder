@@ -710,6 +710,19 @@ missing real truth/reaction/defect remedy and complete-default/nonrigid obligati
 An actual real signed-resolution loss still earns immediate policy work before
 image-edit dependents. The design reply accepts none of those missing outcomes.
 
+baseline-delivery-k61's concrete plan assigns F to baseline-finite-k63 and B to
+baseline-browser-k64, both inside k53 before k54 with an earned planning review
+before F. k53's Working increments/ownership map and their complete charters
+bind every original criterion. F alone has the explicit same-live-owner/session
+continuation exception, with internal unfinished milestones and task-owned jj
+retirement/sealing only on full delivery. B consumes F's actual completed core,
+verifies that reuse/its own size and owns real browser/server/live export/Stop,
+compatibility/native/isolation/six-case acceptance. It receives no cadence waiver.
+No milestone/horizontal/acceptance-only child, new tree/workspace, source study
+or repeated answered F question follows. k53 closes only on complete F+B, k47
+still requires k54 and the full later product/response/default obligations remain.
+Original Goal/Done when and all downstream contracts/order are unchanged.
+
 The k47 node is earned by k51's concrete session-size finding, not speculative
 infrastructure work. No integration is pre-created. A stage that truly outgrows its
 session decomposes lazily at a complete narrower public handoff, keeping the

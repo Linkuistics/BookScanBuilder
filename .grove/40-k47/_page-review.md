@@ -137,6 +137,19 @@ result, geometry or preparation visual approval is supplied by the reply.
 
 ## Notes
 
+baseline-delivery-k61 now assigns the agreed finite handoff to baseline-finite-k63
+and its complete compatible browser extension to baseline-browser-k64, ordered
+inside k53 before k54. Read k53's Working increments/ownership map and the actual
+planning review/integration before those owners. F alone may continue the same
+live task/jj change across sessions; B verifies F's actual reuse and its own
+single-session boundary without borrowing that exception. Each owns complete
+public/native/fault/independent/six-case acceptance. Finite completion closes
+neither k53 nor this node; B closes k53 only against all original criteria, then
+k54 still completes orientation. Actual missing truth/reactions/remedies remain
+k28's, actual signed loss policy precedes image edits, and downstream order is
+unchanged. The planning artifact earns review before F; actual product reviews
+are cut lazily before each next consumer. No runtime or visual result is inferred.
+
 Introduce no unused future group or split state. All later feature boundaries
 and missing-acceptance ownership remain explicit in public documentation and
 durable acceptance notes. Original CropBox guides/extent reasons are inspection/
