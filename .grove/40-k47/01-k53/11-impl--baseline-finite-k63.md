@@ -38,8 +38,11 @@ retire only after the entire handoff and every required check are delivered.
   stable occurrence -> every-page advisory assessment -> complete all-page roster/
   matched full/native/source-native packets -> finite dispositions/scoped inspection/
   exact acknowledgement -> source-loss resume -> exact acknowledged export.
-  Blanks/duplicates/order stay intact; hints are optional advisory only. Current
-  remains baseline; orientation/fractional/crop/split/group edits are visibly
+  Blanks/duplicates/order stay intact; record optional advisory hints and their
+  immediate-source provenance without granting any exemption. Assess a disposable
+  analysis copy, retaining angle/status/ratio/settings/version/regions in the saved
+  assessment record; check the record and that analysis leaves baseline RGB intact.
+  Current remains baseline; orientation/fractional/crop/split/group edits are visibly
   unsupported, no estimate is applied and initial retention is uninspected.
 - Complete and verify the entire finite inventory below, with actual readers,
   actions, resume and exporter in this same owner. Preserve all boxes/Rotate/
@@ -180,6 +183,21 @@ retire only after the entire handoff and every required check are delivered.
   one writer/no mid-run edits and compare reruns itemwise. Retire this complete F
   only; k53/k47 stay open for B/k54. Judge actual artifact for earned review-impl
   inserted before B as final work; integration is lazy from actual findings.
+- Make B's five reuse prerequisites checkable within F, without HTTP: (1) invoke
+  the shared operations with caller-held verified writer ownership, without
+  reacquisition, while a second in-process acquisition returns busy; (2) privately
+  drive the same state boundary with request ID/displayed project/review/image
+  identity and normalized action data, verifying durable identical replay before
+  currency, conflicting reuse and stale new requests. Finite receipt authenticity
+  stays in its adapter; B owns HTTP authentication. (3) Use one presentation-neutral
+  view manifest for packet panels/tiles/labels/regions and verify their identities
+  against it. (4) Let fault and six-case runners take the front end as a parameter;
+  construction-check delegation through a private adapter while retaining actual
+  installed finite acceptance. (5) Record a reusable pixel-ruler/framebuffer
+  measurement procedure with viewer/display/scale/region identity and an observed
+  wrong-scale control. B consumes it and measures its real browser independently.
+  Deliver these seams/fixtures as part of F; introduce no plugin framework, public
+  test mode or browser feature and infer no completed browser acceptance.
 
 ## Notes
 The internal inventory below is part of this complete owner. It records finite
@@ -195,7 +213,7 @@ destinations. Do not add a phase/status/session-summary file.
 
 | Milestone | Coupled work and exit evidence within F |
 | --- | --- |
-| 1 — Import/dependencies/representation | Verify chosen APIs; package/build helper and direct Pillow pin; static gate/snapshot/full-page render/every-page assessment/complete analyzer; predeclared native/analytic truth and observed wrong-subject controls. |
+| 1 — Import/dependencies/representation | Start with a bounded renderer-independent synthetic ruler PNG probe at the proposed density in the actual ordinary viewer: record display/backing scale and measured framebuffer 1:1, or the exact missing mechanism and scoped question before further milestone work. Then verify chosen APIs; package/build helper and direct Pillow pin; static gate/snapshot/full-page render/every-page assessment/complete analyzer; predeclared native/analytic truth and observed wrong-subject controls. |
 | 2 — Saved project and finite reader | Complete assets/lock/checkpoints/verification/source-loss resume; stable IDs/physical mapping; create/status/help/results/error paths, actual pre/post checkpoint and child-lock faults. No partial import accepted. |
 | 3 — Matched viewing and recorded review | Complete packets/directory publication/receipts; observed ordinary-viewer full/native/source-native identity/scale/refresh usability; Q1–Q3 actions/replay/scoped inspection/selection union/ack and packet/checkpoint faults. |
 | 4 — Exact useful export | Complete acknowledged image-only rebuild/report/validation/no-clobber, installed public paths and source-loss export; actual pre/post link/cleanup/delivery/alias/isolation faults. |
@@ -212,3 +230,17 @@ earned grow verbs, DONE rename and any settled cascade; describe then jj new
 seals it only after complete retirement. Context continuation may be signalled
 while F stays live, explicitly without claiming delivery or sealing a partial
 milestone. This is the scoped user exception to one-task/one-session, not B's.
+
+Signal continuation only after adding new implementation diff, evidence or a
+settled decision that advances this owner; record the task-owned jj change ID and
+precise remaining work in its running log. A session adding none records its
+blocker and stops without harness-dispatch exit, or asks within that session;
+merely repeating a blocker or retrying an unchanged failed mechanism is no
+progress. Externalized follow-ups use leaf-add after F, not before its unfinished
+work. If a human inserts a leaf ahead, that leaf must run jj new over F's open
+change before any edit, keeping F's partial work out of its describe/new boundary.
+On return, verify the recorded F change and the interleaved completed artifact
+before editing; preserve separate task boundaries and both artifacts. If that
+reconciliation is unclear, keep F live and stop without a signal with the precise
+commit-boundary question. Never describe/seal F's partial work as another task,
+absorb another task into F or reset/discard either task's work.

@@ -22,6 +22,12 @@ image-only export. Complete this working handoff inside k53 before k54.
   is in k53's Working increments and browser size assessment. Reverify the actual
   reusable import/store/view/action/export operations and acceptance harness before
   relying on it. No today's unbuilt F mechanism is evidence of working reuse.
+- Verify F's five concrete reuse checks: caller-held writer ownership, normalized
+  request/displayed-identity replay, the shared view manifest, parameterized fault/
+  six-case runners and the recorded framebuffer procedure. Use those actual seams;
+  B still supplies HTTP authentication and independently verifies real browser
+  scale/coverage/actions and installed server acceptance. A missing seam is named
+  in the actual residual inventory before relying on the prospective size boundary.
 - Preserve finite command names/termination/Q1–Q3 and prepare unchanged. Use/extend
   the existing Taskfile with working process/review/browser acceptance recipes.
   k54 adds exact orientation; k48/k49/k50 and k27 -> k28 -> k22 -> k23 remain ordered
