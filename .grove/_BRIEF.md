@@ -65,8 +65,9 @@ the trial, not to promise an algorithm's success.
 | Corrected searchable book | The working review/export seam extended through demonstrated within-page correction and independent acceptance of the full representative set | Depends on preparation and the intermediate seam, with its own evidence/design agreement before nonrigid implementation. k35's failed fixed-grid addressing attempt remains bounded; k39/k40 commission no new Norwegian study. `staff-acquisition-k27` then `corrected-book-k28` stay live in their relative order. k28 consumes the intermediate design/actual working successors and music result before cutting only justified geometry/completion/design/working slices ahead of appearance. All unresolved comparisons/reactions and root geometry criteria remain owned; flags cannot satisfy them. |
 | Optional appearance cleanup | Preview and selectively apply whitening or noise removal while keeping the working default processor and its accepted-image/OCR alignment | `appearance-cleanup-k22` owns the precise successor design question after the default processor works, then cuts its planning consumer before `workflow-acceptance-k23`. Compare faint print, music, illustration and colour before choosing a cleanup method. |
 
-The user chose one workspace and one Grove tree for the working increments,
-including the intermediate stage now considered under k39's permission.
+The user chose one workspace and one Grove tree for the earlier working
+increments. This plan carries that choice forward to the intermediate stage
+considered under k39's permission; k39 records no separate workspace/tree answer.
 Preparation design/planning run first, and insert their implementation and
 required reviews before geometry; preparation is useful without correction.
 `page-geometry-k4` is a throwaway two-page comparison with a user reaction,
@@ -378,6 +379,7 @@ The implementation exercises the working command with these cases.
 | Input case | Acceptance |
 | --- | --- |
 | `Raw Scans/Fundamentals of Musical Composition.pdf`, pages 40 and 140, with `Covers/SchoenbergComposition.pdf`, page 1 explicitly assigned front | Front then selected content order; mixed visible PDF objects and music marks remain intact, with no geometry/appearance change. |
+| `Raw Scans/Garbage Collection - Algortihms for Automatic Dynamic Memory Management.pdf`, page 30 | Preserve the complete page, code indentation, glyph widths and boxes/arrows for the processor's independent fixed-case geometry/detail acceptance. |
 | `Processed Books/Norwegian - An Essential Grammar (Routledge)/Norwegian - An Essential Grammar (Routledge).pdf`, page 20 | Preserve the complete spread PDF page for later processor classification/splitting. |
 | `Needing Cleanup/Counterpoint in Composition.pdf`, page 20 | Preserve the single printed page and landscape canvas as one PDF page. |
 | `Processed Books/Algorithm Design/Algorithm Design.pdf`, page 20 | Preserve complete existing content; folder membership grants no correction exemption later. |
@@ -535,8 +537,26 @@ accepted-image representation and working review/reader/export stay together.
 All fixed cases are assessed independently for its actual rotation/preservation
 claims while their unresolved nonrigid acceptance remains with k28.
 
+`geometry-policy-k43` clarifies the design charter: distinguish the universal
+unverified within-page limitation from recorded per-page triage and the limited
+meaning of unflagged. The design answers review-state persistence/resume/re-run
+invalidation and what review/export convey without changing the ordinary
+sole-PDF input boundary. Numerical rotation/sampling claims need independent
+known-by-construction controls, including upright/small-angle and local-variation
+cases and wrong-subject failures; a correcting estimator is no truth oracle.
+Real-page numerical claims need a validated independent instrument or remain
+numerically unavailable beside separate visual evidence. No new study or
+threshold is chosen here. Garbage Collection30 remains an explicit preparation
+and final-acceptance companion alongside every inherited fixed case.
+
 k41 cuts its fresh implementation planner lazily before k27 from the actual
-agreed design, assessing any design review before that consumer. The planner
+agreed design, assessing any design review before that consumer. Agreement
+requires an actual verbatim human reply scoped to the spec/version, shape and
+test seams; k39's policy permission is no signature. A drafted but unsigned k41
+stays live for the human, cutting no implementation planner and retiring no
+unagreed design. A genuinely different missing evidence question may earn its
+own completion/fresh-planning handoff on every outcome; an unavailable signature
+alone earns no identical response/planning loop. The agreed-design planner
 chooses complete working slices, preserves k27 → k28, and keeps the full default
 correction increment before k22/k23. k27's music source protocol is unchanged;
 k28 consumes the intermediate agreement and actual working successors rather
@@ -544,6 +564,13 @@ than duplicating its initial design. It still owns the exact within-page
 evidence/completion and later geometry-design agreement. The root Done when
 is unchanged. Appearance requires accepted complete default correction, not
 the intermediate export alone; final k23 still verifies all root criteria.
+Working-slice charters must state reaction-pending retirement boundaries and
+precise missing-acceptance ownership. Numerical pass/fail/unavailable and human
+visual accepted/pending/rejected stay separate, with actual inspected paths and
+scoped replies. A retired technical slice or numerical pass supplies no missing
+visual acceptance; k28 retains it before k22/k23. k28's locally scoped inherited
+production bullets govern full nonrigid acceptance/design extension, while k41
+owns the initial intermediate design.
 
 This planning cut earns an external `review-planning` of k40 before k41, focused
 on the completeness of the useful intermediate boundary, honest unknown/flagged

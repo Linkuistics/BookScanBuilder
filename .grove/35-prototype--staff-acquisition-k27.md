@@ -55,6 +55,12 @@ Generate no fitted model, rigid image or corrected image in this session.
 
 ## Done when
 
+- Consume k43's charter clarification with k41's actual handoff: its design
+  needs a recorded scoped human signature; universal unverified nonrigidity is
+  distinct from per-page triage. Carry numerical and visual product dispositions
+  separately to k28, including any reaction-pending scope. This changes none of
+  this repair's source-only acquisition, gates or historical-response criteria.
+
 - Consume k40's `rotation-processor-k41` design and actual lazy planning/working
   handoff before this source repair. Its complete intermediate rotation/review/
   assembly/aligned-OCR/export increment is distinct from music or within-page

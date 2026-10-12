@@ -56,6 +56,12 @@ does not satisfy the root's within-page correction criterion.
   synthesising settled requirements and recording only genuinely new choices.
   Choose methods/technology from verified local or primary-source evidence,
   including exact installed APIs where material, rather than library memory.
+- Record the actual human design reply verbatim, with the specific spec/version,
+  product shape and public/visual test seams it covers. k39's “agreed” permits
+  considering this increment; it does not sign this design. A coherent draft,
+  internal review, elapsed response window, silence or an ambiguous/unavailable
+  reply is no agreement or rejection. A drafted but unsigned design stays live
+  for the human; cut no implementation planner and do not retire it as agreed.
 - Specify complete full-page rendering, assessment of covers and previously
   processed pages, genuine spread detection/splitting and safe scanner-border
   removal/crop/rotation with content retained. Counterpoint20 is one landscape
@@ -73,6 +79,15 @@ does not satisfy the root's within-page correction criterion.
   The accepted-image seam must admit later evidence-supported nonrigid edits
   without changing review/assembly/OCR semantics. Flags alone grant no correction
   or representative acceptance.
+- Separate the universal limitation of unverified within-page geometry from
+  per-page triage reasons and their recorded signals/observations. Explain what
+  an unflagged page may claim: absence of a recorded triage trigger is no
+  geometric certification. State which signals exist and their limitations;
+  any ranking/threshold needs evidence, and triage ranking is no verification.
+  Specify how the universal limitation and per-page dispositions remain
+  inspectable through review and final handoff, including what the exported PDF
+  and any review record convey. Do not assume either a whole-book review queue
+  or verified nonrigidity merely from the word “flagged”.
 - Design flagged-page review and adjustment of ANY page, including one that was
   not flagged, with matched original/current full-page and native-detail views,
   explicit acceptance/reversion and final export reflecting accepted edits.
@@ -81,6 +96,14 @@ does not satisfy the root's within-page correction criterion.
   identity/versioning and invalidation at the behaviour level. Its representation,
   working reader, review controls and export belong to the same useful handoff;
   no schema-only, OCR-engine-only, display-adapter-only or test-only stage.
+- Answer the review-state lifecycle: where accepted/reverted edits, triage,
+  split provenance and assembly decisions live; whether/how partial review
+  persists and resumes; and what interruption, reprocessing the same PDF or
+  changed source/image versions invalidates. Distinguish processor-owned state
+  from the sole-PDF input boundary: an ordinary PDF needs no supplied sidecar
+  or source rediscovery. Decide what state, if any, is embedded in exported PDFs
+  and its compatibility/loss behaviour against the prepared-page-hints ADR.
+  Choose only earned durable records for the resulting design decisions.
 - Preserve default input order and post-split half provenance; let the user
   explicitly move/exclude any created book page, including blank/duplicate halves,
   before final OCR/export. Flags never delete pages. Require a genuine spread
@@ -117,6 +140,29 @@ does not satisfy the root's within-page correction criterion.
   fidelity. Separate human inspected-path/reply/defect records from numerical
   evidence, with missing approval retained honestly. Intermediate preservation
   or rotation acceptance does not accept a case's unresolved nonrigid geometry.
+- Define the independent basis of each numerical rotation/preservation claim.
+  Use known-by-construction rotation and sampling fixtures with an independent
+  oracle, including upright/zero-angle, small-angle/noise and deliberately
+  curved-line/local-angle-variation controls. The correcting estimator or its
+  rerun cannot be its own ground truth. Verify controls reject deliberately
+  wrong angle/image/region subjects before crediting their clean results.
+  Check that estimator noise does not cause unsupported rotation/resampling of
+  already-correct pages, and that a global angle's aggregate improvement cannot
+  conceal a worsened region; state fallback/review and evidence limits. Retain
+  full-page/native detail and nonidentity sampler checks. Real-page numerical
+  improvement needs an independently validated instrument and justified limits;
+  otherwise record numerical truth unavailable and obtain the separate visual
+  judgment. k35's failed viewer neither calibrates angle nor rules out every
+  independent instrument. This charter commissions no new real-page study.
+- Define independent product dispositions for each stated claim/case: numerical
+  acceptance passed/failed/unavailable and human visual accepted/pending/rejected,
+  recording actual inspected views and verbatim scoped replies. Numerical success
+  grants no visual acceptance. Require the later planner to state whether a
+  working slice may retire at a technically complete but reaction-pending
+  boundary, and, if allowed, precisely who owns missing acceptance before product
+  consumers. A pending/rejected reaction never becomes accepted intermediate or
+  full-default work by retirement, export or flagging. Retain the missing scope
+  with k28 and successors before k22/k23; no identical response/planning loop.
 - Preserve k31's complete conditional per-half unchanged/rigid/actual automatic
   vertical comparison, default validity/field/application/copy, independent
   source/output measurement beyond rigid with defensible positional/slope/
@@ -172,10 +218,12 @@ does not satisfy the root's within-page correction criterion.
   That planner decides only complete working slices and preserves k27 → k28
   before k22/k23. Assess an earned design review lazily before its planning
   consumer; actionable integration precedes that consumer. If a precisely
-  missing evidence/response question prevents agreement, externalise only that
-  question with a fresh planner on EVERY outcome before product consumers;
-  do not retire an unagreed design as an implementation-ready handoff or repeat
-  identical unanswered questions on an automatic response/planning loop.
+  different missing evidence question prevents agreement, externalise only that
+  question with a fresh planner on EVERY outcome before product consumers.
+  An unavailable/ambiguous signature alone leaves this design live for the human,
+  with no new planner or repeated identical response question. Do not retire an
+  unagreed design as an implementation-ready handoff. A changed evidence result
+  returns to design agreement before implementation planning, never around it.
 
 ## Notes
 

@@ -27,6 +27,12 @@ using the root's representative real fixtures. Read the final workflow consumer
 
 ## Done when
 
+- Read the actual scoped design signatures and separate numerical/visual
+  product dispositions carried through k43/k41/k28. Numerical acceptance with
+  reaction pending, an unsigned draft or a retired technical slice is no
+  accepted complete default increment. Keep its precise missing acceptance
+  before this leaf; appearance judgment remains a separate human decision.
+
 - Consume k40/k41's actual intermediate design/working handoff through k28 and
   its successors. A usable rigid-plus-flagged searchable export supplies a
   reusable seam but does not satisfy the complete default within-page geometry

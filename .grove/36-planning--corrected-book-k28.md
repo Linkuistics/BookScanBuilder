@@ -33,6 +33,15 @@ Preparation's working contract/evidence are `docs/specs/prepared-pdf.md` and
 
 ## Done when
 
+The local applicability clauses below govern the two inherited production
+bullets where they appear. Their original criteria remain intact: they bind
+complete nonrigid commitment and its extension of k41, not another initial
+intermediate design. Consume k43's clarification and k41's recorded human
+signature, independent numerical/visual dispositions and review-state lifecycle.
+An unsigned design is live work, and a numerical pass with reaction pending is
+missing acceptance, not an accepted intermediate/full-default handoff. Retain
+precise missing work before k22/k23; do not infer agreement from a retired leaf.
+
 - Consume k40's commissioned `rotation-processor-k41` agreement and its ACTUAL
   planning/working successors, plus the planning review/integration, alongside
   k27's complete source result. The intermediate increment includes full-page
@@ -191,6 +200,12 @@ Preparation's working contract/evidence are `docs/specs/prepared-pdf.md` and
   Alternative interpolation requires demonstrated native detail damage;
   two-axis correction requires observed width/barline failure after a valid
   applied vertical result. Otherwise commission the specific evidence gap.
+
+**Applicability of the following representative-production criterion:** it
+governs complete nonrigid production commitment. k41 and its actual successors
+own the initial intermediate increment's separate rotation/preservation
+acceptance. Its acceptance does not satisfy this representative geometry work.
+
 - Before production commitment, independently assess and obtain reactions for
   all fixed k21 cases: Norwegian spread 20 (both gutters), Garbage Collection
   30 (indentation/glyphs/boxes/arrows), Counterpoint 20 (single landscape page,
@@ -200,6 +215,13 @@ Preparation's working contract/evidence are `docs/specs/prepared-pdf.md` and
   music 140's unresolved diagnostic/acceptance work. A selected music fixture
   does not replace any representative case; automatic extraction and manually
   supplied-guide success are different claims. No unknown threshold is invented.
+
+**Applicability of the following processor-design criterion:** the initial
+intermediate design is k41's. This later agreement extends/revises that coherent
+design for evidence-supported within-page correction and complete default
+acceptance, retaining every product criterion below; do not commission the same
+initial design again. Agreement precedes that extension's implementation planner.
+
 - Once correction/adjustment needs and representative acceptance support it,
   cut a processor design agreement and then its implementation-planning
   consumer before production. Preserve one useful default product increment:

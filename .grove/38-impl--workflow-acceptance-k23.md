@@ -25,6 +25,13 @@ do not substitute the historical two-page experiment for a processor.
 
 ## Done when
 
+- Verify k43/k41's scoped actual design signatures and independent numerical
+  and human visual dispositions through the delivered default/appearance work.
+  Pending/ambiguous/unavailable replies are no approval or rejection, and a
+  retired technical slice is no accepted product. Retain precise missing
+  agreement/response/repair work before final acceptance without an identical
+  unanswered response/planning loop.
+
 - Trace the k40/k41 intermediate design and actual working handoff through k28
   and its complete-default successors. Intermediate rotation/review/searchable
   export and its own acceptance do not satisfy the root's within-page correction
@@ -51,6 +58,14 @@ do not substitute the historical two-page experiment for a processor.
   source/prepared/final digests and before/after run subjects. Human preparation
   approval must have a separate inspected-view response; if still pending or
   rejected, obtain/repair it rather than marking workflow accepted.
+- The real-fixture recipe roster above also MUST include `Raw Scans/Garbage
+  Collection - Algortihms for Automatic Dynamic Memory Management.pdf`, PDF
+  page 30, as required by k21/k28. Check preparation's complete-page fidelity
+  and final geometry/native-detail retention of indentation, glyph widths,
+  boxes/arrows; intentionally curved diagram marks are not straight-line
+  guides. Retain its independent numerical/visual dispositions and comparisons.
+  It supplements every enumerated case above, including music40/140 and cover
+  roles; it replaces none of them.
 - Demonstrate within-page geometry and border removal with preserved colour,
   faint text, music and illustrations; already-correct pages are not degraded.
   Inspect both Norwegian halves and retain Counterpoint as one book page.
