@@ -47,6 +47,19 @@ book-geometry acceptance here. No identical missing-response loop, initial-desig
 re-agreement, OCR/reordering subtree or Norwegian study is commissioned by k44.
 This clause adds ownership; every current scope/protocol/criterion below remains.
 
+**k52's repaired handoff:** k47 is now a node whose actual sequence is
+`baseline-review-k53` -> `page-orientation-k54` before k48/k49/k50. Read both
+complete handoffs, their earned reviews/packets and the unchanged node closure
+criteria. Neither baseline export nor technical orientation retirement supplies
+full geometry or source-native acceptance. Consume cross-stage project fixtures
+and separate per-case fidelity outcomes. Real signed >300-ppi resolution loss
+earns an actual policy consumer before image-edit dependents, not only here;
+read that scoped answer/repair chain if it exists. No such loss or new signature
+is inferred by the plan. This leaf still owns every unresolved real comparator/
+reaction and full-default preservation remedy; colour/decoder/placement/<=300-ppi
+detail defects are implementation repairs, never signed limitations. Preserve
+all criteria and music/Norwegian/appearance/root ownership below.
+
 **Latest human scope, before the inherited applicability clauses:** the tool
 focuses on page and book geometry, including page alignment/matching and explicit
 odd/even or left/right treatment. Processor reordering and OCR are external and

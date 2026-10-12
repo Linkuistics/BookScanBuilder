@@ -17,6 +17,12 @@ or its independent quality evidence. Reverify actual pinned APIs and angle signs
 
 ## Done when
 
+- Consume completed k47 (k53 baseline review then k54 orientation) and any actual
+  fixed-case representation-policy resolution before sampling. Open k54's frozen
+  earlier-stage project under the root private-format compatibility rule, preserving
+  accepted assets/IDs/mappings/dispositions/acknowledgement and testing interrupted
+  additive upgrade/unknown-version rejection. Retain this stage's project fixture
+  for k49. Extend command/readiness/JSON event meanings compatibly and rerun them.
 - Existing import/orientation/review/resume/export remain working. Nonzero skew
   and manual angle changes preview on any page, requiring explicit acceptance
   of displayed revision/scope; unavailable geometry remains usable/unresolved.
@@ -31,6 +37,15 @@ or its independent quality evidence. Reverify actual pinned APIs and angle signs
   remain exact permutations; no warp or scale normalization is introduced.
 - Scanner-edge candidates/discarded bands and all four crop edges show complete
   original/native detail, faint edge ink, artwork, toned paper and CropBox guides.
+  Own the explicit original-CropBox crop action: map its effective rectangle through
+  orientation/fractional lineage, preview retained/discarded original bands and
+  require reviewed acceptance, with restore/revert/resume/export. When rotation
+  makes it oblique to the crop frame, show a four-edge enclosing proposal and its
+  difference from the original guide; exact CropBox-equivalent cropping requires
+  a representable axis-aligned frame. Retain-unresolved/reject unsupported geometry
+  rather than silently clip to a bounding rectangle. Box/Rotate/UserUnit and
+  nonidentity-angle known constructions verify extent/restoration. No oblique crop
+  or new destructive mask is authorized by this ownership clarification.
   Darkness alone accepts nothing. Accept/adjust/reject/retain-unresolved/restore
   work on flagged/unflagged pages. Crops live in the rotated frame with mapped
   original discarded bands; changing angle invalidates old crop preview. Source
@@ -53,7 +68,10 @@ or its independent quality evidence. Reverify actual pinned APIs and angle signs
   accepted export plus actual writer/alias/no-clobber faults. Re-run the denied-
   collection handoff and every fixed source/full/native case, with Algorithm
   Design20 unchanged preservation and separate nonidentity fractional companion.
-  Source-resolution/colour loss stays failed preservation, not baseline pass;
+  Source-relative loss stays failed preservation, not baseline pass. Apply the
+  root's per-case signed >300-ppi resolution versus defect/unavailable distinction;
+  conversion/decoder/placement/<=300-ppi detail defects block retirement, while an
+  actual fixed-case signed ceiling failure earns policy work before dependents;
   real numerical geometry stays unavailable without validated independent truth.
 - Extend/run new/affected process/preparation/native recipes under frozen-subject/
   one-writer/itemwise discipline. Deliver ordinary packets, numerical outcomes

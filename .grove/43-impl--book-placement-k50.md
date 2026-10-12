@@ -17,6 +17,13 @@ scale-policy question; this implements the reviewed agreement.
 
 ## Done when
 
+- Open k49's retained frozen project under the root private-format compatibility
+  rule before enabling run/group state. Preserve accepted local images/IDs/order/
+  mappings/dispositions/acknowledgement; test interrupted additive upgrade and
+  unknown-version rejection without modifying the old project. Retain a final
+  intermediate project fixture; extend/rerun command/readiness/JSON meanings
+  compatibly. Consume actual prior fidelity/policy outcomes under the root
+  signed-resolution/defect rule; no tool/stage upgrade changes accepted pixels.
 - Each active occurrence/half has at most one body-run position and geometry
   group plus explicit left/right/unknown side, including outside-run assignment.
   Runs/groups are independent; groups may span runs. Review logical anchors/start

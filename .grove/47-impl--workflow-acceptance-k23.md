@@ -12,6 +12,11 @@ evidence and retain any missing scope before root closure.
 
 ## Context
 
+Read k52's integrated plan: k47 now contains k53 baseline review then k54 exact
+orientation, both complete before k48/k49/k50. Trace actual command/event and
+earlier-stage project compatibility acceptance plus independent source-native
+fidelity/signed-limit/defect outcomes through k28; every final criterion below holds.
+
 Consume the actual k44 working stages k47/k48/k49/k50 through k28 and their
 earned reviews/packets. Each stage's accepted pixels and technical retirement
 can coexist with pending representative reactions; require k28's concrete

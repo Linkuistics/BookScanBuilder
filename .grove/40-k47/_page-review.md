@@ -1,4 +1,4 @@
-# page-review-k47
+# page-review-k47 — brief
 
 ## Goal
 
@@ -78,11 +78,38 @@ handoff; k28 owns pending product reactions and full-default gaps after k27.
   visual review. Judge this actual subsystem for lazy review-impl before k48 as
   final work act; integration is earned from real findings only. Run no driver.
 
+## Decomposition
+
+k52 integrates k51's first-slice size finding by splitting this actual oversized
+charter at two complete public handoffs, retaining all original Done when above.
+`baseline-review-k53` imports/assesses, serves full/native any-page inspection,
+resumes, stops and exports acknowledged unchanged baselines. Its immutable
+baseline is initial accepted state; edited-image previews/transitions are visibly
+unsupported. `page-orientation-k54` adds exact right-angle preview/accept/discard/
+revert together with saved revisions, resume and accepted-image export. Both
+children own their public fault/independent/fixed-case acceptance under the root;
+this node cannot close after baseline export alone. k54 precedes k48, whose
+fractional/crop handoff remains unchanged except the explicit CropBox ownership.
+
+The first child owns the direct Pillow pin, renderer, placement/ppi analyzer,
+packaged Leptonica bridge, every-page advisory assessment and dependency preflight.
+Moving assessment to k48 would weaken the signed import contract. No nonzero angle
+is applied in k53. k54 adds only exact pixel permutations, never fractional sampling.
+Each child judges its actual artifact for review before its next live consumer;
+insert an earned child review before k54, not after it at this node's end.
+
+Read the root's k52 command-event, fidelity, version-compatibility and dependency
+clarifications. F1's narrowed first handoff still owns a real server/store/export
+and its tests; it is not a renderer, importer, schema or test-only child. If it
+truly grows beyond a session, retain this complete handoff as the node's closure
+condition and use a fresh planning leaf to name a further useful cut before its
+consumer; do not silently drop public safety or representative packets.
+
 ## Notes
 
-The saved images, browser reader/any-page controls and export are one handoff.
-If this outgrows a session, decompose at a complete narrower orientation/review/
-resume/export handoff and retain the concrete extension before k48; no importer,
-schema, library, display or test-only child. Introduce no unused future group or
-split state. All later feature boundaries and missing-acceptance ownership remain
-explicit in public documentation and the durable acceptance note.
+Introduce no unused future group or split state. All later feature boundaries
+and missing-acceptance ownership remain explicit in public documentation and
+durable acceptance notes. Original CropBox guides/extent reasons are inspection/
+unresolved acknowledgement only here; k48 owns the reviewed/restorable crop.
+Missing real fixed-case fidelity policy is ordered before image-edit dependents
+as the root specifies, while k28 still owns complete-default acceptance.

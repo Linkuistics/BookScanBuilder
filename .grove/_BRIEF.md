@@ -655,8 +655,10 @@ is inferred; full within-page/default acceptance remains k28's before k22/k23.
 
 ## Reviewed-design working slices from k44
 
-The agreed v2 design and k46 clarifications are planned as four useful
-stages in this existing workspace/tree. This carries forward the human's earlier
+The agreed v2 design and k46 clarifications retain four stage owners in this
+existing workspace/tree. k52 decomposes the oversized first owner into two
+complete useful handoffs, so five implementation leaves are now ordered. This
+carries forward the human's earlier
 one-tree choice; it attributes no new workspace answer to k39 or k41. Each
 stage must stay green and demonstrable without its successor. The dependency is
 behaviour, not module location. The shell commands remain `bookscan process PDF
@@ -665,12 +667,13 @@ behaviour, not module location. The shell commands remain `bookscan process PDF
 
 | Stage / owner | Independent useful handoff | Scope deliberately left to successor |
 | --- | --- | --- |
-| `page-review-k47` | Full-page RGB import/assessment, source/full/native inspection, any-page exact right-angle orientation, saved accept/discard/revert and acknowledged image-only export | Fractional rotations, crops, splitting and book placement are visibly unsupported; every occurrence remains whole. Skew suggestions are assessment records, never applied edits. |
+| `page-review-k47`: `baseline-review-k53` then `page-orientation-k54` | k53 delivers full-page RGB import/assessment, source/full/native any-page inspection, durable dispositions/acknowledgement, resume/Stop and unchanged-baseline image-only export. k54 adds exact right-angle preview/accept/discard/revert, saved revisions and their resume/export. k47 closes only after both. | Orientation edits are visibly unsupported until k54. Fractional rotations, crops, splitting and book placement remain unsupported until their owners; every occurrence stays whole. Skew suggestions are assessment records, never applied edits. |
 | `rigid-pages-k48` | Accept/adjust/reject fractional rigid proposals and restorable four-edge crops through the same resume/export reader | No spread expansion or group placement yet. Ambiguous/curved geometry remains retained/unresolved. |
 | `spread-pages-k49` | Confirm genuine spreads, edit each complete half independently and export expanded order/provenance | Book-side matching follows; single landscape pages remain single. |
 | `book-placement-k50` | Explicit side/body-run/group review, integer placement and common canvas with full/native/pair/group acceptance/resume/export | Full within-page correction and full-default representative acceptance remain k28's. |
 
-No speculative node or integration is created. A stage that truly outgrows its
+The k47 node is earned by k51's concrete session-size finding, not speculative
+infrastructure work. No integration is pre-created. A stage that truly outgrows its
 session decomposes lazily at a complete narrower public handoff, keeping the
 remaining concrete work before its consumer. It cannot split storage, rendering,
 UI or verification into dead horizontal children. A new state is usable in its
@@ -758,6 +761,75 @@ cut through its root brief, with feature-specific checks added by the leaf.
   before/after with one writer, then compare reruns per item. Keep derived
   artifacts outside the read-only collection and retain ordinary durable evidence.
 
+### k52 clarifications inherited by every implementation
+
+The first complete public handoff is k53, then k54 introduces edited-image state.
+Both share k47's original closure criteria. Baseline retention is accepted state
+without human inspection; k53 supports durable unresolved dispositions and export
+acknowledgement but no edited-image revision/accept/revert controls. Those enter
+with k54's reader/resume/export. Every-page advisory skew assessment and the
+estimator bridge stay in k53; deferring them would alter the signed import scope.
+
+k53 owns the explicit installed command-contract acceptance: help/examples/errors/
+saved-state/stage limitations without opening an input, human diagnostics on
+stderr, versioned --json JSON Lines on process/review, ready only after completed
+import/assessment, terminal events distinct from export publication, and one
+finite-export result. Record/test the concrete vocabulary/schema for shell loops,
+normal authenticated Stop (0), signals (130/143), rejected actions and separate
+publication/stop outcomes. k54/k48/k49/k50 extend that vocabulary compatibly and
+rerun it; preparation's existing finite result stays compatible.
+
+k53 owns effective-resolution analysis through pinned pikepdf content parsing:
+track graphics-state q/Q/cm and image placement through nested form matrices/
+resources, inline images, stencils/masks and supported static annotation appearances;
+combine placement with effective page rotation/UserUnit and intrinsic sample sizes
+for horizontal/vertical physical ppi. Independently constructed CTMs/extents/ppi
+and wrong-placement controls verify this analyzer, not its own calculations.
+Verify exact pinned parsing/decoding APIs before use. Every contributing placement
+must be accounted for or the affected resolution assessment is explicitly
+unavailable with an import-fidelity reason; no partial scan grants a <=300-ppi
+pass. pdfimages output may aid diagnostics but is no unverified sole oracle.
+
+k53 also owns a product-packaged C helper/Leptonica bridge and direct Pillow pin.
+Package its source with the product, independently of experiments; process:setup
+builds it into a named product cache with compiler/pkg-config/library identity and
+source/build digests. The installed command preflights helper protocol, linked
+Leptonica version/status/angle/ratio and known input/sign/sentinel controls before
+serving. Record/check supported Poppler/Leptonica versions explicitly: Homebrew
+packages are not pinned by uv sync --locked. Missing/incompatible/unbuilt tools
+return DEPENDENCY_UNAVAILABLE (5) with the actual setup/install remedy; never
+compile silently during import or depend on an experiment executable/fit path.
+Verify exact installed ABI/API and renderer/sampler semantics before relying on
+the mechanism. Tool changes freeze accepted assets as the spec requires.
+
+Before comparison outputs, k53 declares a source-native comparator independent of
+Poppler: decoded contributing image samples/masks/colour metadata and independently
+checked physical placements, with analytic known-channel/edge/feature construction
+truth for controlled compositions. A second Poppler render is no fidelity oracle.
+For <=300-ppi one-bit/grayscale/RGB cases, justify pixel-phase/grid/interpolation
+and colour bounds independently before outputs, test aligned and misaligned source
+grids, and require erased-fine-feature, wrong-image/placement/colour controls to
+fail. Exact unfiltered grid-aligned constructions allow exact comparisons;
+nonaligned grids require prejustified feature/coverage bounds, never a tolerance
+chosen to fit the baseline. Complex colour/mask/vector/composite regions without
+validated independent truth remain unavailable with the specific missing oracle,
+not passed by image-object extraction or unchanged export bytes. Synthetic required
+mechanisms must pass; real numerical truth may remain unavailable beside separate
+actual/pending visual evidence. Assess source-relative detail/colour at every
+resolution, even when no >300-ppi reason triggers automatically.
+
+Persist private project format/capability versions distinct from the public report.
+k54/k48/k49/k50 own preceding-stage frozen-project resume and interruption tests:
+accepted/baseline digests, IDs/order, physical scale, mappings, dispositions and
+scoped acknowledgement retain their meanings; newly supported operations are
+inactive until explicit use. Transactional additive upgrades preserve the original
+recoverable state and never regenerate accepted pixels. Unknown/unsupported private
+formats fail INVALID_PROJECT (3) with a named compatible-reader/verified-recovery
+or explicit new-import remedy, without modifying that project. Retain a frozen
+project per completed handoff as the next stage's fixture. Public version-1 JSON
+report meanings and optional unsupported fields remain as agreed, and reimport
+never resumes from a report.
+
 ### Independent acceptance and retirement ownership
 
 Each stage supplies a current durable acceptance note and ordinary full-page/
@@ -780,8 +852,9 @@ The estimator/detector or its rerun supplies no real ground truth; real numerica
 improvement stays unavailable without an independently validated instrument.
 
 For offered numerical mechanisms use known-by-construction truth with controls
-seen to fail first on a deliberately wrong subject. k47 covers import geometry,
-exact orientation and retained export; k48 adds known upright/tiny/noisy/rigid
+seen to fail first on a deliberately wrong subject. k53 covers import geometry,
+native-source fidelity and retained export; k54 adds exact orientation, together
+closing k47. k48 adds known upright/tiny/noisy/rigid
 angles, curved/local variation and fractional RGB mapping; k49 adds source-region/
 split/crop retention; k50 adds independently known side/anchor/offset/canvas and
 parity. Aggregate geometry cannot hide regional worsening. Numeric tolerances
@@ -794,10 +867,26 @@ packets and separate dispositions are delivered. Failed safety/preservation or
 an unavailable required public/synthetic verification is incomplete implementation
 work, requiring precise repair/decomposition before that consumer; do not relabel
 it pending visual review. A real unsupported geometry outcome may be usable and
-unresolved without falsely passing correction. Verified >300-ppi losses remain
-failed preservation for that fixture, even when visibly flagged; retain the
-signed limitation and hand a precise remedy/representation-policy question to
-k28 rather than silently changing resolution or scope here.
+unresolved without falsely passing correction. Verified source-relative losses
+remain failed preservation for that fixture, even when visibly flagged. Each
+fixed case records fidelity as passed, failed (signed >300-ppi resolution
+limitation), failed (defect), or unavailable (named missing independent truth),
+independently of its human visual disposition. Only the signed resolution ceiling
+may supply that limitation classification; colour-conversion, decoder, incorrect
+placement or <=300-ppi erased-feature defects block technical retirement and
+require repair before the next consumer. A real fixed-case signed resolution
+failure requires a precise human policy question immediately before image-edit
+dependents: the discovering slice inserts a requirements leaf before its next
+live dependent (k54 after k53; k48 after k54), not merely a note for k28. Recommend
+retaining the signed 300-dpi representation for this inspectable intermediate
+only with explicit limitation, failed fixture preservation and full-default remedy
+still live; offer evidence of whether a representation change is required instead.
+Any agreed change earns its own design/review/planning chain before k48 and
+remaining affected dependents. Pending/unanswered policy cannot be consumed as
+authorization. Synthetic intentional >300-ppi loss alone tests the signed limit
+and commissions no speculative policy leaf. No actual fixed-case loss is inferred
+by this plan. k28 consumes the actual policy outcome and owns remaining
+preservation/real-truth/visual/default work; an export acknowledgement never waives it.
 
 The next stage consumes prior missing reactions/defects and adds its own; k28 is
 the live owner of ALL missing intermediate import/rigid/split/book/preservation

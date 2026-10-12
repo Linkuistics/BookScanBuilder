@@ -12,6 +12,11 @@ independently useful with appearance cleanup disabled.
 
 ## Context
 
+Read k52's integrated plan: k47 now contains k53 baseline review then k54 exact
+orientation, both complete before k48/k49/k50. Consume their actual separate
+fidelity/reaction dispositions, cross-stage project compatibility and any earned
+pre-dependent policy outcome through k28; this changes no prerequisite below.
+
 The actual intermediate stage owners are k47/k48/k49/k50 from k44, with earned
 reviews and separate numerical/visual packets. k28 must resolve every missing
 intermediate/fixed-case preservation or visual judgment and full within-page/

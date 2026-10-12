@@ -16,6 +16,12 @@ music gates stay unchanged and k28 owns missing full-default evidence/reactions.
 
 ## Done when
 
+- Open k48's retained frozen project under the root private-format compatibility
+  rule before enabling half state. Preserve accepted pixels/IDs/order/mappings/
+  dispositions/acknowledgement; test interrupted additive upgrade and unknown-version
+  rejection without modifying the old project. Retain this stage's fixture for
+  k50; extend/rerun command/readiness/JSON meanings compatibly. Consume actual prior
+  fidelity/policy outcomes under the root signed-resolution/defect rule.
 - Potential-spread evidence and explicit one-page/spread/boundary review work on
   any occurrence. Separate printed-page furniture/boundaries and gutter/content
   evidence from aspect ratio/two columns/role/filename; none alone classifies.
