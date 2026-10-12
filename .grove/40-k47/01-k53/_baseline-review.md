@@ -114,8 +114,15 @@ dispositions/resume/acknowledged export before the browser, or retain browser-fi
 and resolve a different explicit session boundary. Its recommended interim keeps
 the ordinary static-PDF/300-dpi RGB/every-page-assessment contract. This is a
 proposal requiring an actual reply, not authorization to build headless import.
-On permission, k56 commissions the changed-boundary design here; only the actual
-agreed design cuts its planner and complete working charters. No identical planner
+Integration k58 repairs k56's question with twelve-criterion staging accounting,
+the original browser rationale and interim-to-final command/event consequences.
+Its browser-first alternatives disclose an explicit multi-session work exception
+or a designed flat-raster domain restriction; neither is authorized or proved
+session-sized here. On actual permission, k56 commissions the corresponding
+boundary design/work plan here. A changed-interface design must demonstrate
+complete useful cuts or return its specific residual trade-off with an inventory;
+only the actual agreed design earns its planner and complete working charters,
+including concrete full browser completion here before k54. No identical planner
 or implementation is pre-created. Original Goal/Done when above remain intact;
 k53 cannot close on this decision, planning or a finite-only interim. All full
 browser completion remains ahead of k54. See k55 for criterion-by-criterion

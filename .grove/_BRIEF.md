@@ -658,8 +658,9 @@ is inferred; full within-page/default acceptance remains k28's before k22/k23.
 The agreed v2 design and k46 clarifications retain four stage owners in this
 existing workspace/tree. k52 decomposes the oversized first owner into two
 complete useful handoffs. k53 now retains its whole baseline handoff as a node,
-with fresh baseline-review-k55 planning its further useful cuts before k54. This
-carries forward the human's earlier
+with baseline-delivery-k56 awaiting the scoped boundary decision identified by
+retired baseline-review-k55 and repaired through k57/k58 before k54. This carries
+forward the human's earlier
 one-tree choice; it attributes no new workspace answer to k39 or k41. Each
 stage must stay green and demonstrable without its successor. The dependency is
 behaviour, not module location. The shell commands remain `bookscan process PDF
@@ -673,6 +674,23 @@ behaviour, not module location. The shell commands remain `bookscan process PDF
 | `spread-pages-k49` | Confirm genuine spreads, edit each complete half independently and export expanded order/provenance | Book-side matching follows; single landscape pages remain single. |
 | `book-placement-k50` | Explicit side/body-run/group review, integer placement and common canvas with full/native/pair/group acceptance/resume/export | Full within-page correction and full-default representative acceptance remain k28's. |
 
+baseline-review-k55 found no substantiated smaller browser-first baseline handoff
+among its examined cuts. Its explicit fallback commissions baseline-delivery-k56
+inside k53 to settle a temporary finite command-driven inspection/disposition/
+resume/acknowledged-export boundary before the browser, or a different agreed
+browser-first session boundary. k58 repairs the question's twelve-criterion
+accounting, original browser rationale and interim-to-final command/event policy.
+If browser-first is required, k56 names a scoped multi-session delivery exception
+or an explicitly designed flat-raster domain restriction, disclosing each waiver
+and the lack of demonstrated size reduction for the latter. All are proposals:
+an actual verbatim scoped reply is required. Only the actual agreed boundary
+earns its design/work plan and working cuts, including full browser completion
+inside k53 before k54; a still-oversized design returns its specific residual
+trade-off rather than creating an identical unanswered planning loop. k53's
+complete original baseline/browser closure, k47's orientation closure and all
+later ownership stay live. No signed interface, session-rule exception, product
+acceptance, representation change or missing visual approval is inferred here.
+
 The k47 node is earned by k51's concrete session-size finding, not speculative
 infrastructure work. No integration is pre-created. A stage that truly outgrows its
 session decomposes lazily at a complete narrower public handoff, keeping the
@@ -684,17 +702,6 @@ cut only from the actual completed artifact. k44's earned planning review runs
 before k47. No in-session review competes with that scheduled review.
 
 ### Contract inherited by all four working charters
-
-baseline-review-k55 found no substantiated smaller browser-first baseline handoff
-among its examined cuts. Its explicit fallback commissions baseline-delivery-k56
-inside k53 to settle a temporary finite command-driven inspection/disposition/
-resume/acknowledged-export boundary before the browser, or a different agreed
-browser-first session boundary. This recommendation changes no signed interface:
-an actual scoped human reply is required before its changed-boundary design,
-and only an actual agreed design earns working cuts. k53's complete original
-baseline/browser closure, k47's orientation closure and all later consumer
-ownership stay live. No duplicate unresolved planner, implementation, source
-study, representation change or missing visual approval is inferred.
 
 Read the complete current `docs/specs/rotation-processor.md`, both cited ADRs,
 k41/k45/k46 and k44, and the actual preceding stage's artifact/acceptance rather

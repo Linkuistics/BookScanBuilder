@@ -113,9 +113,13 @@ k53 and this node stay open. All baseline completion remains ahead of k54.
 
 k55 takes its explicit requirements fallback after examining narrower inputs and
 controls: baseline-delivery-k56 resolves a temporary finite review/export boundary
-before the browser, or a different agreed browser-first session boundary. No
-changed interface is authorized by that proposal. Its actual reply earns design
-and working cuts inside k53; k53's full baseline/browser closure and this node's
+before the browser, or a different agreed browser-first session boundary. k58
+repairs that question with per-criterion staging costs, v2's browser rationale,
+command/event transition ownership and concrete browser-first alternatives with
+their exact waivers. A still-oversized design must name the residual trade-off;
+no changed interface or session exception is authorized by the proposal. Its
+actual scoped reply earns design/work planning and complete working cuts inside
+k53, including browser completion before k54; k53's full closure and this node's
 orientation closure are preserved before k48. Planning or finite-only review
 cannot satisfy either node. No new source study or product acceptance is inferred.
 
