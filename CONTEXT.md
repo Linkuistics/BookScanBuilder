@@ -74,6 +74,10 @@ revision or export snapshot it names.
 A generated reference to an immutable packet's project, occurrence, displayed
 image/review revision and view-region coverage. A recorded action validates it
 against the saved descriptor/current state; possession alone implies no inspection.
+One receipt permits one normalized request plus identical durable retries;
+conflicting reuse is distinct from staleness. New actions check external packet
+integrity after durable replay lookup. Each new packet has a distinct opaque
+issuance/receipt identity, even when its displayed snapshot is unchanged.
 
 **Body run**:
 An ordered selection declaring logical side progression. An active identity has
@@ -117,6 +121,12 @@ baseline-retained/unresolved records no human inspection or proposal acceptance.
 An explicit choice to export an exact saved snapshot with its limitations /
 the optional versioned JSON attachment describing that snapshot. Neither grants
 geometry certification or restores review state on reimport.
+
+**Export snapshot digest**:
+Identity of the ordered current image/mapping/review/limitation snapshot, excluding
+acknowledgement and retry/checkpoint bookkeeping. Summary receipt, effective
+acknowledgement, report `snapshot_id` and export result name this same digest;
+it is neither the review revision nor the checkpoint revision.
 
 ## Example dialogue
 

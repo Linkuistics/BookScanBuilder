@@ -6,8 +6,12 @@ and the universal limitation of unverified within-page geometry. A fresh import
 starts new review state; it never restores acceptance, page-side assignments or
 alignment from exported metadata. The version-1 UTF-8 JSON report uses the
 document-level embedded-file attachment `BookScanBuilder-geometry-review.json`;
-unknown/malformed/lost reports remain optional unavailable information. Geometry
-exports omit preparation page hints, avoiding stale immediate-source provenance.
+unknown/malformed/lost reports remain optional unavailable information. The
+report `snapshot_id` and its acknowledgement name the same exact export-snapshot
+digest as the summary receipt/export result, excluding acknowledgement and retry/
+checkpoint bookkeeping; neither image nor review/checkpoint revision replaces it.
+Geometry export omits preparation page hints, avoiding stale immediate-source
+provenance.
 Import still accepts those hints under their separate
 [advisory meaning](prepared-page-hints.md). The public lifecycle is specified in
 [Page and book geometry](../specs/rotation-processor.md#geometry-pdf-export).

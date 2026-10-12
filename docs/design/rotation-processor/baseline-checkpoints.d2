@@ -3,17 +3,17 @@ classes: {
   start: {style: {fill: "#17334b"; font-color: white; bold: true}}
   error: {style: {fill: "#fff5dd"; stroke-dash: 4}}
 }
-lock: Start here\nKernel writer ownership\nNonblocking conflict -> 4 {class: start}
+lock: Start here\nStable kernel lock / no child inheritance\nCanonical aliases share ownership; conflict -> 4 {class: start}
 assets: Publish complete immutable assets\nPrivate partials never saved
 checkpoint: Atomic checkpoint commit\nImage identity + review revision
-receipt: Replay committed identical request OR\nVerify current receipt / project descriptor
+receipt: Authenticate receipt + saved descriptor\nReplay durable identical request first\nNew action: currency then complete packet integrity
 changed: Record disposition / inspection\nNew review facts invalidate acknowledgement
 ack: Acknowledge export-snapshot digest\nAcknowledgement excludes itself from digest
 freeze: Freeze exact roster under lock\nNo concurrent finite writer
 stage: Validate private complete image-only PDF
 publish_link: Atomic no-clobber link\nOutput publication commit
 published: Complete occupied output\nWritten / 0, even if delivery fails
-recovery: Kill -> reap -> verify resume\nLast committed checkpoint only\nNo permanent freeze / orphan promotion {class: error}
+recovery: Kill -> reap -> compatible-reader resume\nComplete verified checkpoint + assets only\nCorrupt/missing state: new import loses review facts {class: error}
 lock -> assets: "1. initial create"
 assets -> checkpoint: "2. assets before checkpoint"
 checkpoint -> receipt: "3. action validates current display"

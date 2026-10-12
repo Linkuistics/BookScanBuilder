@@ -39,9 +39,9 @@
     }
   ],
   "discussion": {
-    "title": "Finite interface agreed; complete browser delivery remains required",
-    "status": "Agreed — actual reply yes; working-product acceptance outstanding",
-    "summary": "Permanent finite baseline commands use exact receipt-bound views and separate inspection, reason dispositions and scoped acknowledgement. Browser process/review remain foreground from their first release. The human explicitly permitted one complete finite owner across sessions with every check retained and no partial retirement. Browser completion still precedes orientation and assesses its own size. The canonical spec now contains the contract; no separate unsigned proposal remains.",
+    "title": "Finite interface and Q1–Q3 public repairs agreed",
+    "status": "Scoped reply: Approve Q1–Q3 as written — product acceptance outstanding",
+    "summary": "The canonical spec clarifies durable replay before currency/packet integrity, single-use receipts, snapshot identity, executable resume/new-import remedies and kernel ownership. Global review changes require a packet refresh before every subsequent action: 20 native tiles need 19 refreshes and inspection of the refreshed covered views. The human separately approved Q1 reason domains, Q2 result/help grammar and Q3 distinct issuance as written. Permanent finite names and the finite-only session exception remain agreed; complete browser B still precedes orientation and assesses its own size.",
     "diagramIds": [
       "baseline-flow",
       "baseline-checkpoints",
@@ -51,8 +51,16 @@
     ],
     "updatedDiagrams": [
       {
+        "id": "baseline-flow",
+        "summary": "Exposed the signed global refresh cost and single-use receipt workflow, with distinct issuance separately approved; native scale remains an observed requirement."
+      },
+      {
+        "id": "baseline-checkpoints",
+        "summary": "Clarified receipt authenticity then durable replay, new-action currency/integrity, non-inherited lock ownership and executable resume/new-import remedies."
+      },
+      {
         "id": "baseline-delivery",
-        "summary": "Recorded the actual yes and scoped finite-owner exception before the complete finite handoff; browser ownership and its independent size assessment remain."
+        "summary": "Recorded separate scoped Q1–Q3 approval alongside the original yes and finite-only cadence permission; complete F/B ownership and browser size assessment remain."
       }
     ]
   },

@@ -26,6 +26,15 @@ without weakening product scope or repeating its answered boundary question.
   horizontal/acceptance-only child, partial milestone retirement, measured size
   claim or multi-session exception for browser B. No geometry/fidelity/native-view
   or preparation visual acceptance follows.
+- Consume baseline-delivery-k62's committed triage and the canonical spec's
+  Integrated public protocol repairs: Q1 reason domains, Q2 top-level result/help
+  grammar, Q3 distinct single-use receipt issuance. The human's verbatim
+  "Approve Q1–Q3 as written (Recommended)" applies to proposal digest
+  445778df14127d9c7ae7fcc1834c12047ddec9d7cb96d803cde30d1345d86da2, not approval
+  inferred from k59's yes. Consume those exact integrated public rules rather
+  than inventing missing reason/identity/retry/parsing details. Do not create
+  another response-only requirements/planning loop
+  or ask again about the settled finite staging/cadence exception.
 
 ## Done when
 - Cut F as a complete useful installed baseline path: ordinary/unmarked multi-page

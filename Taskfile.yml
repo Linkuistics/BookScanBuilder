@@ -157,6 +157,6 @@ tasks:
         python3 -c
         'from pathlib import Path;
         source = Path("docs/design/rotation-processor/contract.html").read_text();
-        panel = "<section id=current-decision><h2>Finite baseline interface agreed</h2><p>The human replied yes to the concrete command, lifecycle, compatibility and test seams, with a finite-owner-only session exception. Browser completion remains required. No product or image result is accepted.</p><p><a href=\"#finite-baseline-review\">Read the agreed baseline contract</a> · <a href=\"#finite-baseline-interface-and-test-seams\">Actual reply and scope</a></p></section>";
+        panel = "<section id=current-decision><h2>Finite interface and Q1–Q3 public repairs agreed</h2><p>The human replied yes to the original interface/test seams and finite-owner-only session exception, then separately replied Approve Q1–Q3 as written (Recommended) to the exact public repair proposal. Reason domains, result/help grammar and distinct issuance are integrated. Browser completion remains required. No product or image result is accepted.</p><p><a href=\"#integrated-public-protocol-repairs\">Integrated Q1–Q3 rules</a> · <a href=\"#finite-baseline-review\">Baseline contract</a> · <a href=\"#finite-baseline-interface-and-test-seams\">Replies and their scopes</a></p></section>";
         page = source.replace("<main>", "<main>" + panel, 1);
         Path("docs/design/rotation-processor/baseline-delivery.html").write_text(page)'

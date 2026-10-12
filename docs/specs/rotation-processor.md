@@ -75,6 +75,11 @@ unchanged-baseline images. It introduces no orientation/crop/split/group edit st
 applies no estimate and implies no geometry or source-fidelity acceptance. Browser
 completion retains the same project meanings and public export contract. The
 following command, lifecycle, compatibility and test seams are agreed.
+Review integration clarifies their existing meanings below. The human also
+approved the three concrete public repairs under
+[Integrated public protocol repairs](#integrated-public-protocol-repairs), with
+that separate reply recorded under Agreement. They bind reason domains,
+top-level result/help grammar and distinct single-use receipt issuance.
 
 ### Commands and user workflow
 
@@ -93,9 +98,12 @@ help, finite schema version 1 and publication semantics unchanged.
 | `bookscan baseline acknowledge PROJECT --receipt FILE --all\|--page ID --note TEXT` | A summary receipt displays the complete current export snapshot and all unresolved IDs/reasons, with inspection scope separately displayed. Explicitly acknowledge all identities or a named selection against that exact snapshot. Repeat `--page` for a selection. |
 | `bookscan export PROJECT --output PDF` | Lock, verify, require a current acknowledgement, freeze the complete roster, rebuild/validate and publish one exact image-only PDF without overwrite. |
 
-`--json` is available on all operations. `--help` at any level has precedence
-over other arguments, reads no input/project/dependency/cache and exits 0; an
-unknown subcommand without help exits 2 with nearest valid examples. Paths with
+`--json` is available on all operations. On new top-level/baseline/export routes,
+standalone `--help` before `--`, not consumed as an option value, has precedence
+over other arguments, reads no input/project/dependency/cache and exits 0;
+`--help --json` prints human help as the explicit JSON-result exception. Preparation
+keeps its existing all-token help behaviour. An unknown subcommand without help
+exits 2 with nearest valid examples. Paths with
 spaces are quoted. Stable IDs returned by status/packets are accepted unchanged;
 ordinal-only actions and manual hash assembly are unavailable. `--page`/`--all`
 are mutually exclusive and one is required. A packet destination is an unused
@@ -131,6 +139,28 @@ using review facts that changed since display. The packet index offers a complet
 native-view roster, not a selection of convenient crops. Inspecting one tile never
 attributes inspection to its neighbours.
 
+The refresh cost is per recorded action, across the whole project. For the
+3591x2695 Norwegian baseline, 768-pixel tiling makes 20 regions. Recording them
+separately needs 19 new page packets after the first; each contains the complete
+roster, full comparison and 60 source/baseline/current native panels. After each
+refresh, inspect the covered view actually named by the new receipt before
+recording it. Prior viewing does not attest an unseen refreshed packet. An
+`--all` packet similarly becomes stale after the first review-fact action on any
+page. This is the signed conservative global-revision trade-off, with its cost
+now explicit; no batching or per-page currency is approved. Actual navigation,
+refresh cost and native usability still require F's demonstration. A failed
+demonstration earns a scoped boundary question, not assumed usability.
+
+Each receipt permits one normalized action request. An identical durable retry
+is allowed; different operation/values on a used receipt return
+`INVALID_RECEIPT`/6 with context `receipt-used`, without mutation. The remedy is
+a newly issued view/summary receipt, not a claim that the snapshot changed.
+For selection union, publish summary A and acknowledge the first selection;
+publish summary B for the same unchanged snapshot and acknowledge the remaining
+selection with B's receipt. Their saved scopes coexist. Every packet issuance,
+including an unchanged summary, creates distinct opaque packet/receipt IDs as
+specified under Integrated public protocol repairs.
+
 ### Matched packets and revision identity
 
 Every packet has a version-1 manifest, all-page roster, PDF bookmarks/internal
@@ -162,6 +192,19 @@ display. Also supply lossless PNG tiles and a pixel ruler for a viewer's actual
 until the implementation demonstrates true 1:1 presentation on this Mac, native
 usability is unfinished acceptance, not asserted from the PDF's construction.
 
+F's initial implementation hypothesis is lossless PNG tiles in Preview's
+actual-size display, with PNG density derived from the measured display backing
+scale rather than an assumed 72/96-dpi tag. This is a hypothesis to test, not a
+verified Preview API/setting or a guarantee that metadata controls device pixels.
+Use the supplied pixel ruler and an observed framebuffer measurement to verify
+one device pixel per project pixel, on the actual display/viewer configuration;
+record that configuration and the exact covered regions. If this mechanism fails,
+record its measured scale and the specific missing viewer mechanism, then present
+a scoped boundary question with a demonstrable ordinary-viewer alternative or
+an explicit interface-change recommendation. Keep F live at that named blocker;
+do not repeat unchanged trials indefinitely, weaken native meaning, retire it or
+classify missing required native usability as pending human reaction.
+
 Source-native panels preserve decoded contributing samples/masks with their own
 effective horizontal/vertical ppi, placement, sample dimensions, colour metadata
 and labelled source region. Show above-300-ppi detail separately without shrinking
@@ -178,12 +221,27 @@ addressed packet descriptor, including receipt/header identities and file digest
 before external packet publication. Descriptors are presentation records outside
 the review checkpoint: issuing them does not change review facts or invalidate
 acknowledgement. A descriptor without a completely published matching packet is
-unusable. The owning command verifies the receipt and referenced packet files
-against that project-owned descriptor and the current revision;
+unusable. Each issuance has a fresh opaque packet ID, including identical
+views/summaries at one unchanged snapshot; receipt IDs bind that issuance and
+coverage, and issuance identity is included in the content-addressed descriptor.
+No request-key option or manual ID construction is exposed.
+The owning command verifies the receipt and referenced packet files
+against that project-owned descriptor and the current revision for a new action;
 missing, tampered, foreign or stale receipts cannot mutate state. Receipts are
 local identity evidence, not proof that a human inspected the view. The complete
 unresolved export scope is always shown, even when a user records a narrower
 inspection or a note about a named selection.
+
+Receipt authenticity means the receipt JSON itself matches its immutable saved
+descriptor and the owning project/source/receipt identity. After that check,
+look up durable replay before checking current revision or external view files.
+For a new action, verify every file digest listed in the packet descriptor,
+including manifest, roster, receipts, PDFs and PNGs; a missing/changed file
+returns `INVALID_RECEIPT`/6. Work from the immutable packet: Preview markup or
+another viewer's autosave invalidates new actions; annotate a separate copy.
+An authentic identical committed retry still returns its original result when
+external views were edited/deleted or review facts advanced. Replay never records
+new inspection or makes an old acknowledgement current.
 
 ### Saved states and transactional ownership
 
@@ -199,7 +257,8 @@ digest without changing either. Dispositions/inspection/analysis/roster/image
 changes invalidate acknowledgement;
 packet creation, status reads and exports do not. An identical repeated action
 with the same receipt/values returns the original committed result; a conflicting
-or stale replay returns 6. No new IDs or history are inferred from the public report.
+receipt reuse or stale uncommitted request returns 6. No new IDs or history are
+inferred from the public report.
 
 Acknowledgement requires exactly one scope form: --all or one/more --page IDs.
 Each saved record names the exact same snapshot, selected IDs and their complete
@@ -217,15 +276,24 @@ values) and its committed outcome are stored atomically with the resulting
 checkpoint. Under the writer lock, check that durable retry record **before**
 current-revision validation: an identical committed replay returns its original
 result without mutation, even after restart or later review changes. Reuse of its
-receipt with conflicting values, or an uncommitted request against a stale
-revision, returns 6. A kill before checkpoint commit leaves no successful retry
+receipt with conflicting values returns INVALID_RECEIPT/6 (`receipt-used`);
+an uncommitted request against a stale revision returns STALE_ACTION/6.
+A kill before checkpoint commit leaves no successful retry
 record. This ordering is part of the stale-action/retry acceptance seam.
 
 Every command opening a project takes the same nonblocking kernel writer lock,
 including verified reads/packet generation, to keep one snapshot coherent. A
 busy project returns 4; ownership is the OS-held lock, never a PID/marker alone.
 The lock pathname/inode is retained rather than deleted/recreated on Stop/death;
-canonical project identity rejects aliased paths and replaced lock/store entries.
+project arguments resolve to one canonical project identity, including a symlinked
+parent such as `/tmp` and filesystem case aliases. They acquire the same lock;
+output aliases and replaced internal lock/store entries are rejected. Require
+open-file-description ownership: opening/closing another descriptor during an
+identity check cannot release the owning lock. The owning descriptor is not
+inherited by any renderer/helper child; caught signals terminate/reap owned
+children before exit. A killed/reaped writer releases ownership even with an
+orphan child still alive. The implementation must verify the actual native
+mechanism on this Mac; no syscall is established by this design text.
 After death and reap, another command can take ownership and verify the last
 committed checkpoint. There is no permanent export freeze on disk.
 
@@ -236,7 +304,8 @@ initial checkpoint through one atomic current-checkpoint pointer change. Before
 that commit, no baseline is saved. A caught failure removes only this run's owned
 reservation/private names where safe; a kill may leave an identifiable incomplete
 directory. Retrying create at an occupied directory returns 4; review/status says
-`INVALID_PROJECT`/3 and recommends a new unused directory or verified recovery,
+`INVALID_PROJECT`/3 and recommends `bookscan baseline create PDF --workdir NEW`
+with an intact supported input and a new unused directory,
 without treating partially imported pages as saved or offering silent continuation.
 
 Subsequent actions publish an immutable checkpoint only after its assets are
@@ -283,10 +352,11 @@ The processor does not discover the collection to police it.
 
 ### Protocol, errors and help
 
-Finite JSON stdout is exactly one object: `schema` =
+Except for the explicit human-help exception, finite JSON stdout is exactly one
+object: `schema` =
 `BookScanBuilderCommandResult`, `schema_version` = 1, `operation`, `status`
 (`created`, `verified`, `views-written`, `recorded`, `acknowledged`, `written`,
-`error`), nullable `project_id`, `review_revision`, `snapshot_id`, `output`,
+`error`), `exit_code`, nullable `project_id`, `review_revision`, `snapshot_id`, `output`,
 `committed`, and `warnings`. Successful status includes the complete ordered
 `pages` roster; other results return affected IDs/receipt paths rather than
 repeating it. Errors add `code`, `message`, `remediation`, affected IDs and context.
@@ -303,14 +373,17 @@ still current; export independently validates current complete coverage.
 | Exit | Codes and concrete remedy |
 | --- | --- |
 | 2 | `INVALID_ARGUMENT`, `COMMAND_UNAVAILABLE`: show valid syntax; process/review are unavailable until the browser extension, with baseline examples. |
-| 3 | `SOURCE_NOT_FOUND`, `SOURCE_UNREADABLE`, `SOURCE_EMPTY`, `SOURCE_UNSUPPORTED`, `SOURCE_CHANGED`: identify path/feature/page and supply a stable supported static PDF. `INVALID_PROJECT`: missing/corrupt assets/checkpoint/unsupported private format; use named compatible reader/verified recovery, or explicit fresh import to a new directory. |
+| 3 | `SOURCE_NOT_FOUND`, `SOURCE_UNREADABLE`, `SOURCE_EMPTY`, `SOURCE_UNSUPPORTED`, `SOURCE_CHANGED`: identify path/feature/page and supply a stable supported static PDF. `INVALID_PROJECT`: name the missing/corrupt asset/checkpoint or unsupported format/capability. For reader incompatibility, name the installed compatible reader/version and `bookscan baseline status PROJECT` (or its advertised review command for edited state). For unverifiable saved content or incomplete create, use `bookscan baseline create PDF --workdir NEW` with an intact supported input; fresh import loses the old review facts. If neither an intact input nor a complete verifiable saved state exists, state that no recovery is available. Never recommend an unexposed command or hand-edited pointer. |
 | 4 | `SOURCE_OUTPUT_COLLISION`, `PROJECT_OUTPUT_COLLISION`, `OUTPUT_EXISTS`, `OUTPUT_DIRECTORY_INVALID`, `PROJECT_EXISTS`, `PROJECT_BUSY`: choose an unused valid destination; inspect existing output; finish current finite operation or Stop the live browser and retry. |
 | 5 | `DEPENDENCY_UNAVAILABLE`, `RENDER_FAILED`, `ASSESSMENT_FAILED`, `WRITE_FAILED`, `OUTPUT_INVALID`, `PUBLISH_FAILED`, `RESULT_DELIVERY_FAILED`: identify component/version/phase and actual setup or I/O remedy. Individual invalid estimator results are saved unavailable assessment, not ASSESSMENT_FAILED. |
 | 6 | `INVALID_RECEIPT`, `STALE_ACTION`, `ACKNOWLEDGEMENT_REQUIRED`, `BASELINE_ONLY`, `REVIEW_REQUIRED`, `EXPORT_IN_PROGRESS`: refresh a packet/summary, acknowledge exact current state, or use browser review for an edited project; wait for live export. |
 | 130/143 | `INTERRUPTED`: committed flag/phase and verify saved status or destination before retry. |
 
 First-error order: invocation/help; input/private-format readability; lock; full
-snapshot/assets/receipt validation; source/dependency preflight when needed;
+saved snapshot/assets and receipt/descriptor authenticity; durable retry lookup
+(return identical committed outcome, reject conflicting receipt reuse); for a
+new action, displayed-revision currency then complete external packet-file
+integrity; source/dependency preflight when needed;
 state/acknowledgement checks; destination aliases then occupation; processing,
 checkpoint/publication; result delivery. Input PDF support precedes dependency
 preflight; dependencies must pass before accepted import. Resume preflights
@@ -320,6 +393,8 @@ compile at runtime. Version-aware packaged helper self-test includes sign,
 status-zero/confidence-zero, nonfinite and known sentinel controls. Direct Pillow
 pin and exact installed Poppler/Leptonica/Pillow/pikepdf checks remain implementation
 work. API availability is verified against the actual selected versions then.
+The exact top-level operation values, help exception and CommandResult evolution
+rules are part of Integrated public protocol repairs below.
 
 Help gives two ordinary/space-containing examples per operation, finite/blocking
 semantics, exact exits/remedies, no input reads, unchanged-baseline/stage limits,
@@ -342,7 +417,13 @@ The browser extension reads the frozen finite-project fixture unchanged. Merely
 opening it adds no required capability and changes no image/ID/order/scale/review/
 acknowledgement meaning. An additive upgrade publishes a new validated checkpoint,
 retains the recoverable predecessor and never regenerates pixels; interrupted
-upgrade resumes either complete version. Before a new semantic feature is used,
+upgrade resumes either complete version through a compatible reader's normal
+verified status/review operation. A predecessor includes its full referenced
+verified assets, not checkpoint metadata alone. Retention supports transactional
+resume; it exposes no manual rollback/recover command or older-reader bypass of
+capability checks. If the current state cannot verify, use the explicit compatible-
+reader/new-import remedies above without modifying the damaged project.
+Before a new semantic feature is used,
 record its capability atomically with the new state; old readers fail actionably
 rather than omit it. A baseline command encountering edited/split/group state
 returns BASELINE_ONLY/6 before mutation; generic export handles supported current
@@ -451,6 +532,20 @@ busy actions and additive upgrade interruption. Genuine EPIPE and cleanup failur
 are distinct outcomes. Internal deterministic fault seams are not substitutes for
 these actual installed-process observations.
 
+The existing retry/lock/remedy seams include these counterexamples: an identical
+committed action after later review changes and after external packet edits/deletion
+replays, while a new action against altered views fails 6; conflicting receipt reuse
+fails 6 without a checkpoint; two independently issued summaries cover one unchanged
+snapshot by selection union with distinct issuance; summary/acknowledgement/
+report/export results agree on snapshot identity; killed incomplete create and corrupt
+shared assets give an executable new-import remedy with review-fact loss explicit.
+Kill/reap the installed writer with a renderer/helper child alive and verify immediate
+lock reacquisition; another lock-file descriptor's close cannot release ownership.
+Open through a symlinked parent/case alias, then attempt internal entry replacement:
+the first reaches the same project, the second is rejected. These exercise the
+promised replay, exclusion, canonical identity and resume behaviours; they supply
+no native API or product result here.
+
 Installed preparation -> finite create -> actual packet inspection/navigation ->
 disposition -> scoped inspection -> current acknowledgement -> saved resume after
 original deletion/unavailability -> export is verified with collection reads
@@ -473,6 +568,88 @@ loss requires an immediate scoped human policy decision before dependent image e
 Complete-default correction still owns missing real truth/reactions/defect remedies
 and nonrigid acceptance before appearance and final acceptance. No export or design
 agreement supplies a missing geometry, preparation or fine-detail result.
+
+### Integrated public protocol repairs
+
+**The human approved Q1–Q3 as written in the presented repair section.** Their
+separate scoped reply and proposal digest are recorded under Agreement. These
+bounded repairs retain permanent finite names, global review currency and the
+finite-owner delivery exception, with no new workflow or recovery operation.
+
+**Q1 — reason domains.** Use the following version-1 emitted reason IDs.
+Reasons are scoped by occurrence; table entries are stable kinds, with recorded
+measurement/warning/concern details and dispositions retained in status/packets/
+report. No threshold or ranking is introduced.
+
+| Reason ID | Meaning / emission | Finite decisions |
+| --- | --- | --- |
+| `skew-nonzero` | Valid advisory estimator result with exactly nonzero angle | `reject`, `retain-unresolved` |
+| `assessment-unavailable` | Nonzero estimator status, zero confidence or nonfinite numeric output | `retain-unresolved` |
+| `orientation-unverified` | Every occurrence; no finite operation here can clear it | `retain-unresolved` |
+| `import-fidelity` | Above-300-ppi contributing detail, unavailable complete resolution analysis or recorded source-detail/colour concern | `retain-unresolved` |
+| `extent-change` | Effective MediaBox and CropBox display regions differ | `retain-unresolved` |
+| `skew-range-edge` | Recorded estimator sweep-edge warning; keep the configured sweep/settings | `retain-unresolved` |
+| `decoder-warning` | A supported import's recorded PDF/decoder warning | `retain-unresolved` |
+| `canvas-warning` | A recorded unexpected-canvas warning; no new size threshold | `retain-unresolved` |
+
+Reject dismisses only the `skew-nonzero` suggestion. It removes that suggestion
+from retained-unresolved coverage but never removes universal/orientation/fidelity/
+extent/other limitation coverage or implies corrected pixels. `retain-unresolved`
+keeps the reason and note in export coverage. A decision outside the named reason's
+domain, or an unknown/absent reason, returns `INVALID_ARGUMENT`/2 with the reason,
+allowed decisions and exact valid command, before any checkpoint. Record new
+observations in retained-unresolved notes on a named current limitation; this
+finite grammar adds no arbitrary reason-creation operation. Check: attempts to
+reject extent/orientation/import-fidelity/assessment-unavailable fail without
+state change; the next summary/acknowledgement/report still includes them.
+Allowing reject labels on limitations while keeping their unresolved export
+coverage was rejected because the label would obscure what remains unverified.
+
+**Q2 — top-level result/help grammar.** Use CommandResult version 1 for
+top-level/unknown-command and pre-browser COMMAND_UNAVAILABLE errors under
+`--json`; `operation` is null there. Recognised finite operations use exactly
+`baseline.create`, `baseline.status`, `baseline.views`, `baseline.disposition`,
+`baseline.inspected`, `baseline.acknowledge` and `export`, including their own
+argument errors. Those records include `exit_code`; unavailable identity/output
+fields are null, `committed` and `replayed` are false for invocation errors,
+`current_review_revision` is null, and `warnings` is an array. Successful operations
+retain the existing result/status fields and errors retain code/message/remediation.
+Preparation keeps its unchanged version-1 record without `schema` and is routed
+to its unchanged parser/help only after explicit `prepare` selection.
+
+For the new top-level/baseline/export grammar, recognise help only as a standalone
+`--help` token not consumed as an option value and before `--`; a note/viewer/scale
+value equal to `--help` is data. Help reads nothing and exits 0. `--help --json`
+prints human help to stdout as an explicit exception to the one-JSON-result rule;
+no new help schema/status. Preparation keeps its existing all-token help behaviour.
+Recognise `--json` by the same standalone-option rule on new routes. Version-1
+CommandResult statuses remain the seven listed values; new error codes may be
+added only inside the existing exit classes, and readers use `exit_code` when an
+error code is unknown, never infer success from an unknown status. Optional fields
+may be ignored; changed required meanings/statuses require a new explicit schema
+version. The alternative is to retain all-token help and define a separate JSON
+help record, but that makes literal note values surprising and adds another schema.
+The approved rule is standalone-token help with human output, including under
+`--help --json`, on the new routes.
+
+Check the installed new routes for `bookscan --json bseline status P`, unavailable
+`bookscan --json process X --workdir Y`, `--help --json` with denied input/tool reads,
+and a valid receipt action with `--note '--help'`; the last records that note rather
+than showing help. Rerun preparation's existing help/result cases unchanged.
+
+**Q3 — distinct issuance with single-use receipts.** Issue a fresh opaque
+packet issuance ID at each views/status-with-output publication, even for identical
+project/review/snapshot content. Each immutable receipt ID binds that issuance
+and its view/summary coverage. The content-addressed descriptor includes issuance
+identity, so independently issued unchanged summaries do not collide. No manual
+ID construction, new request-key option, batch action or currency exception.
+Reusing receipt A with a different selection is INVALID_RECEIPT/6 (`receipt-used`);
+publish summary B and use its new receipt. Identical replay with A returns its
+old result before currency/external-file checks. Check two commands covering one
+snapshot with independently issued receipts and reject a conflicting reuse without
+a checkpoint. The alternative is to make reuse legal for different normalized
+requests, changing the conflicting-receipt rule. The approved repair preserves
+single-use with explicit distinct issuance.
 
 ## Complete-page import and assessment
 
@@ -517,8 +694,13 @@ means no accepted geometric change after import, not input-byte preservation,
 human inspection or certified geometry. “Native detail” of a project image means
 one displayed pixel per baseline/accepted pixel; source-native comparisons are
 labelled separately with their own resolution. An import-fidelity or extent
-concern remains unresolved unless explicitly disposed of, and an export
-acknowledgement cannot turn a degraded import into a preservation-test pass.
+concern remains unresolved in the finite baseline handoff: rejecting an estimator
+suggestion or recording inspection/acknowledgement does not dispose of it. Only
+the later supported reviewed/restorable crop addresses extent, and independent
+source-fidelity evidence/remedy addresses import fidelity; neither grants a
+preservation-test pass by disposition. The approved finite reason-domain grammar
+is specified in Q1 above. An export acknowledgement cannot turn a degraded
+import into a preservation-test pass.
 Preserve colour, faint print, music and illustrations; RGB conversion is explicit
 and matched source/render/native comparisons must check its fidelity. No default
 whitening, denoising or lossy image recompression is added.
@@ -793,7 +975,7 @@ export return `EXPORT_IN_PROGRESS` (6), and completion/failure clears that freez
 | Browser/server interruption | Resume committed choices/assets, including partly reviewed groups; never promote a private partial image to accepted. |
 | Same PDF, new project | Fresh assessment with no implicit migrated acceptance. Existing project paths require explicit resume, never reset. |
 | Source changes/disappears after snapshot | Resume the verified snapshot. Changed bytes require a new import; filenames/ordinals do not migrate choices. |
-| Asset/snapshot mismatch | Stop the affected operation and offer verified recovery/start-new guidance, rather than claim accepted state. |
+| Asset/snapshot mismatch | Stop the affected operation. Name the missing/corrupt item and the compatible-reader or explicit new-import command/remedy above; fresh import loses review facts. No command restores missing bytes from checkpoint metadata. |
 | Accepted local crop/rotation/nonrigid edit | Invalidate replaced-image anchors/dispositions and its placement. A reference edit invalidates every dependent placement; member overflow invalidates the target. Re-mark/regenerate/review; unrelated groups remain unchanged. |
 | Shared target/reference or side sequence changes | Invalidate affected member alignment proposals; require scoped review/acceptance again. No page order mutation. |
 | Undo/change split | Confirm superseded parent/child choices, replace affected topology and side/alignment dependencies; preserve other source occurrences. |
@@ -846,10 +1028,15 @@ supports this ordinary viewer-readable container. Required version-1 fields:
 | Field | Meaning |
 | --- | --- |
 | `format`, `version` | `BookScanBuilderGeometryReview` and integer `1`. |
-| `source_sha256`, `snapshot_id` | Input snapshot digest and the exact acknowledged accepted project revision. No collection path is required. |
+| `source_sha256`, `snapshot_id` | Input source snapshot digest and the exact acknowledged export-snapshot digest, excluding acknowledgement/retry/checkpoint metadata. The latter is identical in the summary receipt, effective acknowledgement, report and export result; it is neither image, review nor checkpoint revision. No collection path is required. |
 | `limitation`, `toolchain` | Universal limitation text; renderer/estimator/sampler/library versions and render/analysis settings. |
 | `pages` | Array in exported order; every entry has stable `id`, one-based `source_pdf_page`, nullable `half`, baseline `source_region`, `image_revision`, decoded `image_sha256`, pixel/physical canvas dimensions, page-edit mappings, nullable geometry-group/run IDs, side/repeat/anchors/reference/target/placement records, triage reasons and their dispositions. No acceptance is inferred from absent fields. |
-| `acknowledgement` | Exact snapshot ID, affected unresolved IDs/reasons and explicit acknowledgement, with inspection scope recorded separately. |
+| `acknowledgement` | The same export-snapshot digest as report `snapshot_id`, affected unresolved IDs/reasons and explicit acknowledgement, with inspection scope recorded separately. |
+
+`review_revision` is not a required version-1 report field. If included as an
+optional audit field, it names review facts separately and never substitutes for
+the export-snapshot digest. Saved checkpoint advances on acknowledgement/retry
+bookkeeping cannot change that digest or invalidate another same-snapshot scope.
 
 A report-only reader ignores unknown additional fields; unknown version, malformed
 or absent reports are unavailable optional information. Processor import does not
@@ -980,6 +1167,20 @@ retaining every required check and retiring only on complete delivery; that
 cadence permission supplies no corresponding browser-owner exception or scope
 waiver. Delivery ownership remains in the task briefs. This reply grants no
 product, native-view fidelity, geometry or preparation visual acceptance.
+
+Review integration exposes the signed global refresh cost and clarifies replay/
+receipt reuse, executable resume/new-import remedies, report identity and kernel
+ownership/native-display obligations. The human separately replied verbatim
+**"Approve Q1–Q3 as written (Recommended)"** to the concrete public repairs:
+Q1 reason IDs and finite decision domains with disallowed choices exiting 2;
+Q2 top-level CommandResult/standalone help parsing/human help under `--help --json`
+with unchanged preparation; Q3 distinct single-use packet/receipt issuance for
+same-snapshot selection acknowledgement union. The exact presented section was
+SHA-256 `445778df14127d9c7ae7fcc1834c12047ddec9d7cb96d803cde30d1345d86da2`,
+at `http://127.0.0.1:8773/contract.html#open-integration-questions`, now incorporated
+under Integrated public protocol repairs. This reply approves those public
+details, not a product/native-view/fidelity/geometry/preparation result or a change
+to the already agreed global refresh rule and finite-only cadence exception.
 
 ### Geometry Design v2
 
