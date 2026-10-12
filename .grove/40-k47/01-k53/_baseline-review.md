@@ -1,4 +1,4 @@
-# baseline-review-k53
+# baseline-review-k53 — brief
 
 
 ## Goal
@@ -94,3 +94,69 @@ This child introduces the baseline store with its working reader/resume/export,
 not unused edited-image, split or group state. k54 owns orientation transitions,
 k48 fractional/crop, k49 halves, k50 placement. k47 closes only on both children's
 complete original contract. Accepted baseline state means retained/uninspected.
+
+## Decomposition
+
+baseline-review-k55 is the fresh planner required by k47's oversized-handoff
+fallback. It consumes the concrete size finding below and names smaller complete
+working increments, or the precise agreed-boundary question that prevents a useful
+cut. This node retains the entire original baseline Goal and Done when above;
+planning completion alone cannot close it. The new public handoff must introduce
+its state together with a working reader/resume/export and its own required
+acceptance. No horizontal infrastructure or acceptance-only child is authorized.
+All resulting baseline work precedes page-orientation-k54; no geometry ownership,
+signed representation or missing-acceptance policy changes by this decomposition.
+
+## Decisions (running log)
+
+The mandated impl skill was loaded first, followed by the Grove spine. Bootstrap
+resolved baseline-review-k53, read the glossary, both cited ADRs and the complete
+root -> page-review-k47 brief chain. The initial jj change was empty. The existing
+Taskfile remains the reusable entry point; no setup or product task is added
+without a working implementation.
+
+The baseline handoff still exceeds one focused, low-context implementation
+session. Exact cli.main/run source routes the installed command through
+preparation's finite operate/result path. Exact publication.Staged implements
+one staged PDF/link publication with preparation-specific names/errors, not a
+project checkpoint or server/export lifecycle. Exact pdf.document_info supplies
+static-document support gates, not rendering or placement/ppi analysis. The
+manifest pins pikepdf 10.16.0 but supplies no direct Pillow pin. These reusable
+pieces do not eliminate the first-time complete import/assessment/store/server/
+resume/export path or its independent native-fidelity, browser, isolation and
+interruption acceptance. The k52 split removed orientation transitions, but all
+of those coupled baseline responsibilities remain here.
+
+Apply k47's explicit oversized-handoff fallback: preserve this leaf's complete
+Goal and Done when as node closure, then commission a fresh planning child to
+name a genuinely smaller independently useful public handoff and all remaining
+completion work before page-orientation-k54. This impl session will not invent a
+new signed input/representation policy or choose a renderer/store/UI/test-only
+child. No implementation, accepted project, fidelity result or visual approval
+is delivered by this decomposition. k53 and k47 remain open; their full contracts
+and k54 -> k48 -> k49 -> k50 -> k27 -> k28 -> k22 -> k23 ordering remain binding.
+
+Tier 2 discovery used graph project Users-antony-Development-BookScanBuilder.
+The exact-symbol search returned 13 rows with has_more=false. cli.run's inbound
+and outbound traces and prepare.operate's outbound trace were complete on their
+reported pages; heuristic test edges were not treated as source evidence. Exact
+snippets for cli.main/run, pdf.document_info and publication.Staged support the
+claims above. Coverage generation 2026-10-12T07:13:47Z reported metadata_match
+and no recorded issue for the relied-on code/config/contract paths, a best-effort
+signal rather than proof of completeness. Markdown and configuration were read
+directly. The original Grove tree was copied before edits to
+/private/tmp/bookscan-k53-decomposition.QHB3LT/before-grove for exact contract
+and ordering verification. No framework API decision or runtime test is claimed.
+
+Fresh verification compared the pre-edit tree item by item: root and k47 Goal/
+Done when, and k53's original Goal/Context/Done when/Notes are unchanged; every
+other original Grove file is byte-identical. All ten affected owner/consumer
+handles resolve, k53 resolves to its preserved-key node, and k55's brief chain is
+root -> k47 -> k53. k55 is the sole live child there, ahead of unchanged k54 and
+the remaining consumers in their original relative order. jj's complete changed-
+path list contains only the new planner, k53's node rename and the two ancestor
+brief edits. No product/runtime test is needed or reported for this tree-only
+change. No review is cut for an unbuilt subsystem; the fresh planner judges its
+actual plan for review before implementation. No leaf is falsely retired and no
+parent closes: this commit seals the decomposition with k53/k47 still open for
+the next dispatched planning session.

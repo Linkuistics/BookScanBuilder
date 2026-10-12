@@ -105,6 +105,12 @@ truly grows beyond a session, retain this complete handoff as the node's closure
 condition and use a fresh planning leaf to name a further useful cut before its
 consumer; do not silently drop public safety or representative packets.
 
+k53 has now taken that fallback, retaining its complete original Goal/Done when
+as the baseline node's closure contract. Its first child, baseline-review-k55,
+plans the smaller useful working cuts from the actual implementation size finding.
+No baseline product or acceptance result was delivered by the decomposition;
+k53 and this node stay open. All baseline completion remains ahead of k54.
+
 ## Notes
 
 Introduce no unused future group or split state. All later feature boundaries

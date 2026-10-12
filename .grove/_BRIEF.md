@@ -657,7 +657,8 @@ is inferred; full within-page/default acceptance remains k28's before k22/k23.
 
 The agreed v2 design and k46 clarifications retain four stage owners in this
 existing workspace/tree. k52 decomposes the oversized first owner into two
-complete useful handoffs, so five implementation leaves are now ordered. This
+complete useful handoffs. k53 now retains its whole baseline handoff as a node,
+with fresh baseline-review-k55 planning its further useful cuts before k54. This
 carries forward the human's earlier
 one-tree choice; it attributes no new workspace answer to k39 or k41. Each
 stage must stay green and demonstrable without its successor. The dependency is
