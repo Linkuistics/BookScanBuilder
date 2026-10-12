@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "input_subjects": 12443,
+  "frozen_subjects_preserved": 11445,
+  "repair_raw_files": 1015,
+  "repair_raw_chunks": 460,
+  "exact_reconstruction": true,
+  "prior_archives_preserved": true,
+  "units": 1024,
+  "synthetic_preparation_cases": 9,
+  "actual_writer_cases": 38,
+  "itemwise_outcomes_equal": true,
+  "f_change_id": "ryouonnvvlkzyyxmxrpqxnuqrysrqtvy",
+  "parent": "03eb30abe1ae485696e5deec25bfb229a42ecf69",
+  "leaf_live_unsealed": true,
+  "product_handoff_complete": false,
+  "graph_coverage": "Best effort; current code/contracts match metadata; full-byte/range fallback is retained.",
+  "boundary_instrument_sha256": "6f504c8e428216dde798d88b6d1e8679deced4e678002cd6e281acdb69225c1e",
+  "input_map": {
+    "file": "audit-repair-boundary-inputs.json.gz",
+    "sha256": "76db1badc3af2e5c1eb7893e72f6b60790f7e22b63a939b4babb2db75c8c7be8",
+    "bytes": 3801442,
+    "compressed_sha256": "d53d937d55981456d1eff2774d492165ec52de8d70f0e10f472a8642ec1cd8b2",
+    "compressed_bytes": 574436
+  }
+}

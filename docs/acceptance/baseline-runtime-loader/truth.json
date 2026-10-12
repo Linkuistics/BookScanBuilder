@@ -1,0 +1,62 @@
+{
+  "commands": [
+    [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-MD",
+      "-MF",
+      "/private/tmp/bookscan-k63-runtime-work/evidence/fixtures/probe.d",
+      "/Users/antony/Development/BookScanBuilder/tests/native/loader_probe.c",
+      "-o",
+      "/private/tmp/bookscan-k63-runtime-work/evidence/fixtures/probe"
+    ],
+    [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-MD",
+      "-MF",
+      "/private/tmp/bookscan-k63-runtime-work/evidence/fixtures/leaf73.dylib.d",
+      "-dynamiclib",
+      "-DLEAF_VALUE=73",
+      "/Users/antony/Development/BookScanBuilder/tests/native/loader_leaf.c",
+      "-o",
+      "/private/tmp/bookscan-k63-runtime-work/evidence/fixtures/leaf73.dylib"
+    ],
+    [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-MD",
+      "-MF",
+      "/private/tmp/bookscan-k63-runtime-work/evidence/fixtures/leaf74.dylib.d",
+      "-dynamiclib",
+      "-DLEAF_VALUE=74",
+      "/Users/antony/Development/BookScanBuilder/tests/native/loader_leaf.c",
+      "-o",
+      "/private/tmp/bookscan-k63-runtime-work/evidence/fixtures/leaf74.dylib"
+    ]
+  ],
+  "render_size": [
+    300,
+    150
+  ],
+  "expected_rgb_sha256": "98094b0542558a9d03388edc858a33394fd6fe75165f830280abdaa1a7ab053b",
+  "expected_leaf_stdout": "73\n",
+  "wrong_leaf_stdout": "74\n",
+  "runtime_resources_verified": false,
+  "files": {
+    "expected.rgb": "98094b0542558a9d03388edc858a33394fd6fe75165f830280abdaa1a7ab053b",
+    "leaf73.dylib": "55701a20561d14b503c659be6d51b6051931c83ea0fbed764e87b46e8c135d13",
+    "leaf73.dylib.d": "a181778d6257a690989dfd3dd043c068a8738e3bf90ee640bc46af91fe0d891c",
+    "leaf74.dylib": "c8a625551a79cab0598ac606a269d19bea7923fa535aef2526f29350c091c90f",
+    "leaf74.dylib.d": "e99e1a6e6240dbcb6a9ed69f835b779d6ba7c0cdc4f9c68e564c5c133fa8e447",
+    "probe": "8773cc6ca026033b3a561bdb49a92a46642bd0149ad6da59200f39cea54afc35",
+    "probe.d": "06ce12c7a56663d45c5d73e1a03903169f663d57c8ef4d169ea169a99d9d5bfe",
+    "source.pdf": "a2776b2b98966c966e0e15a91297786bb0e083408c48c58cd18437ca4967bb4c"
+  }
+}

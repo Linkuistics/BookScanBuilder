@@ -1,0 +1,382 @@
+{
+  "pages": [
+    [
+      {
+        "kind": "image",
+        "samples": [
+          300,
+          150
+        ],
+        "ppi": [
+          600,
+          600
+        ],
+        "matrix": [
+          "150",
+          "0",
+          "0",
+          "-75",
+          "0",
+          "75"
+        ]
+      }
+    ],
+    [
+      {
+        "kind": "image",
+        "samples": [
+          300,
+          150
+        ],
+        "ppi": [
+          600,
+          600
+        ],
+        "matrix": [
+          "0",
+          "150",
+          "75",
+          "0",
+          "0",
+          "0"
+        ]
+      }
+    ],
+    [
+      {
+        "kind": "image",
+        "samples": [
+          300,
+          150
+        ],
+        "ppi": [
+          600,
+          600
+        ],
+        "matrix": [
+          "-150",
+          "0",
+          "0",
+          "75",
+          "150",
+          "0"
+        ]
+      }
+    ],
+    [
+      {
+        "kind": "image",
+        "samples": [
+          300,
+          150
+        ],
+        "ppi": [
+          600,
+          600
+        ],
+        "matrix": [
+          "0",
+          "-150",
+          "-75",
+          "0",
+          "75",
+          "150"
+        ]
+      }
+    ],
+    [
+      {
+        "kind": "image",
+        "samples": [
+          600,
+          300
+        ],
+        "ppi": [
+          300,
+          300
+        ],
+        "matrix": [
+          "600",
+          "0",
+          "0",
+          "-300",
+          "0",
+          "300"
+        ]
+      },
+      {
+        "kind": "image",
+        "samples": [
+          600,
+          300
+        ],
+        "ppi": [
+          600,
+          600
+        ],
+        "matrix": [
+          "300",
+          "0",
+          "0",
+          "-150",
+          "150",
+          "225"
+        ]
+      },
+      {
+        "kind": "image",
+        "samples": [
+          600,
+          300
+        ],
+        "ppi": [
+          300,
+          300
+        ],
+        "matrix": [
+          "600",
+          "0",
+          "0",
+          "-300",
+          "0",
+          "300"
+        ]
+      }
+    ],
+    [
+      {
+        "kind": "image",
+        "samples": [
+          300,
+          300
+        ],
+        "ppi": [
+          300,
+          300
+        ],
+        "matrix": [
+          "300",
+          "0",
+          "0",
+          "-300",
+          "0",
+          "300"
+        ]
+      },
+      {
+        "kind": "soft-mask",
+        "samples": [
+          900,
+          600
+        ],
+        "ppi": [
+          900,
+          600
+        ],
+        "matrix": [
+          "300",
+          "0",
+          "0",
+          "-300",
+          "0",
+          "300"
+        ]
+      },
+      {
+        "kind": "stencil",
+        "samples": [
+          600,
+          600
+        ],
+        "ppi": [
+          600,
+          600
+        ],
+        "matrix": [
+          "300",
+          "0",
+          "0",
+          "-300",
+          "0",
+          "300"
+        ]
+      },
+      {
+        "kind": "inline",
+        "samples": [
+          2,
+          1
+        ],
+        "ppi": [
+          2,
+          1
+        ],
+        "matrix": [
+          "300",
+          "0",
+          "0",
+          "-300",
+          "0",
+          "300"
+        ]
+      }
+    ],
+    [
+      {
+        "kind": "image",
+        "samples": [
+          600,
+          300
+        ],
+        "ppi": [
+          300,
+          300
+        ],
+        "matrix": [
+          "600",
+          "0",
+          "0",
+          "-300",
+          "900",
+          "-900"
+        ]
+      },
+      {
+        "kind": "image",
+        "samples": [
+          1,
+          1
+        ],
+        "ppi": [
+          72,
+          72
+        ],
+        "matrix": [
+          "25/6",
+          "0",
+          "0",
+          "-25/6",
+          "0",
+          "300"
+        ]
+      }
+    ],
+    [
+      {
+        "kind": "image",
+        "samples": [
+          300,
+          600
+        ],
+        "ppi": [
+          600,
+          600
+        ],
+        "matrix": [
+          "0",
+          "-150",
+          "-300",
+          "0",
+          "600",
+          "300"
+        ]
+      }
+    ],
+    [
+      {
+        "kind": "image",
+        "samples": [
+          300,
+          300
+        ],
+        "ppi": [
+          300,
+          300
+        ],
+        "matrix": [
+          "300",
+          "0",
+          "0",
+          "-300",
+          "0",
+          "300"
+        ]
+      }
+    ],
+    [
+      {
+        "kind": "image",
+        "samples": [
+          300,
+          300
+        ],
+        "ppi": [
+          300,
+          300
+        ],
+        "matrix": [
+          "300",
+          "0",
+          "0",
+          "-300",
+          "0",
+          "300"
+        ]
+      }
+    ],
+    [],
+    [
+      {
+        "kind": "image",
+        "samples": [
+          300,
+          300
+        ],
+        "ppi": [
+          300,
+          300
+        ],
+        "matrix": [
+          "300",
+          "0",
+          "0",
+          "-300",
+          "0",
+          "300"
+        ]
+      }
+    ],
+    [],
+    [],
+    [
+      {
+        "kind": "image",
+        "samples": [
+          300,
+          150
+        ],
+        "ppi": [
+          600,
+          600
+        ],
+        "matrix": [
+          "150",
+          "0",
+          "0",
+          "-75",
+          "0",
+          "75"
+        ]
+      }
+    ]
+  ],
+  "scope": "Predeclared analytic placements and actual Cairo annotation-visibility controls.\n\nThis is an internal analyzer check, not independent composition fidelity, a\nsaved-project/public workflow or source-native sample decoding acceptance.\n",
+  "annotation_visibility_pixels": {
+    "0": 128,
+    "1": 128,
+    "2": 255,
+    "4": 128,
+    "32": 255
+  },
+  "bound": "exact matrix/sample inventory; exact aligned constant-gray visibility; no composition-fidelity claim"
+}

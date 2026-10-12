@@ -1,0 +1,41 @@
+{
+  "native-a/report.json": {
+    "file": "memory-a.json.gz",
+    "keys": [],
+    "sha256": "e87a016f3c2bdc2210a33085b00dcb925d30166187a0261a36c5e5f9d246372e"
+  },
+  "native-a/legacy/report.json": {
+    "file": "memory-a.json.gz",
+    "keys": [
+      "legacy"
+    ],
+    "sha256": "bb79badd0994c658fc274b2ac4cfce445aa871e6c1f8825be9c4d913192053d3"
+  },
+  "native-b/report.json": {
+    "file": "memory-b.json.gz",
+    "keys": [],
+    "sha256": "648eaee4c1b8baeca2a944fa501dd9ec606f4985daa8c331795ff2b9d10d6c8c"
+  },
+  "native-b/legacy/report.json": {
+    "file": "memory-b.json.gz",
+    "keys": [
+      "legacy"
+    ],
+    "sha256": "f5a7cacc517d08d997b6066267fe1db0376b6c48a701e97793e3c1df555b9077"
+  },
+  "installed/measured/report.json": {
+    "file": "installed-verification.json.gz",
+    "keys": [
+      "report"
+    ],
+    "sha256": "d719466fe34f6db021e44012db70e1683689b03e4a35c6ef6d365550d180272c"
+  },
+  "installed/measured/legacy/report.json": {
+    "file": "installed-verification.json.gz",
+    "keys": [
+      "report",
+      "legacy"
+    ],
+    "sha256": "7c56a4a472ca79d0252ac88af4571f2b729f73f59441f6a2e9977077a67483f7"
+  }
+}

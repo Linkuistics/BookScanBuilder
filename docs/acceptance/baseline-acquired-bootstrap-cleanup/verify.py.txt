@@ -1,0 +1,46 @@
+import copy,hashlib,io,json,pathlib,zipfile
+root=pathlib.Path.cwd();folder=root/'docs/acceptance/baseline-acquired-bootstrap-cleanup';index=json.loads((folder/'index.json').read_text());archive=index['archive']
+parts=[]
+for name,record in sorted(archive['parts'].items()):
+ raw=(folder/name).read_bytes();assert len(raw)==record['bytes'] and hashlib.sha256(raw).hexdigest()==record['sha256'];parts.append(raw)
+raw=b''.join(parts);assert len(raw)==archive['bytes'] and hashlib.sha256(raw).hexdigest()==archive['sha256']
+with zipfile.ZipFile(io.BytesIO(raw)) as z:
+ assert len(z.namelist())==len(set(z.namelist())) and set(z.namelist())==set(archive['members'])
+ data={name:z.read(name) for name in z.namelist()}
+ for name,record in archive['members'].items():assert len(data[name])==record['bytes'] and hashlib.sha256(data[name]).hexdigest()==record['sha256']
+def meaning(values):
+ def obj(name):return json.loads(values['reading/'+name])
+ runs=obj('measurement/runs.json');assert all(r['exit']==0 for r in runs)
+ for name in {r['name'] for r in runs}:
+  pair=[r for r in runs if r['name']==name];assert len(pair)==2 and pair[0].get('cases')==pair[1].get('cases')
+ for r in runs:
+  if 'cases' in r:assert all(c[2]=='passed' for c in r['cases'])
+ checks=[r['cases'] for r in runs if r['name']=='check'];assert len(checks[0])==2702
+ assert obj('measurement/before.json')==obj('measurement/after.json')
+ assert len(obj('measurement/before.json'))==9553
+ comparison=obj('comparison.json');assert len(comparison['preserved_predecessor_cases'])==2678 and len(comparison['added_cases'])==24
+ assert len(comparison['preparation']['cases'])==9 and len(comparison['preparation_fault_cases'])==90
+ assert len(comparison['ownership']['records'])==6 and len(comparison['reservation']['observations'])==7
+ mutations=obj('mutations/results.json');assert [(m['name'],m['failed'],m['passed']) for m in mutations]==[('predecessor',20,52),('omitted-cleanup',18,54),('ignored-captured-metadata',2,70),('early-owner-close',7,65),('ignored-commit',4,68),('lost-selected-close-error',2,70)]
+ for m in mutations:assert m['exit']==1 and sum(c[2]=='failed' for c in m['cases'])==m['failed'] and all(c[2] in {'passed','failed'} for c in m['cases'])
+ native=obj('native/comparison.json');assert native['named_subjects']==9599
+ assert len(native['per_case']['baseline_sha256'])==7 and len(native['per_case']['controls'])==7
+ for k in ['source_loss_resume','resource_loss_resume','native_resume_launch_denied']:assert native['per_case'][k] is True
+ for k in ['public_finite_delivery','composition_fidelity_verified']:assert native['per_case'][k] is False
+ assert obj('native/before.json')==obj('native/after.json')
+ for name in ['src/bookscan/initial_import.py','src/bookscan/ownership.py','tests/test_initial_import.py','tests/test_ownership.py']:
+  assert values['measured/'+name]==(root/name).read_bytes()
+meaning(data);controls=[]
+for fault in ['missing-record','removed-disproof','invented-delivery','wrong-current-source']:
+ wrong=data.copy()
+ if fault=='missing-record':del wrong['reading/native/comparison.json']
+ elif fault=='removed-disproof':wrong['reading/mutations/results.json']=json.dumps([]).encode()
+ elif fault=='invented-delivery':
+  x=json.loads(wrong['reading/native/comparison.json']);x['per_case']['public_finite_delivery']=True;wrong['reading/native/comparison.json']=json.dumps(x).encode()
+ else:wrong['measured/src/bookscan/initial_import.py']=b'wrong source'
+ try:meaning(wrong)
+ except (AssertionError,KeyError):controls.append(fault)
+ else:raise AssertionError('semantic control did not fail '+fault)
+record={'archive_bytes':len(raw),'members':len(data),'controls':controls,'index_sha256':hashlib.sha256((folder/'index.json').read_bytes()).hexdigest(),'unavailable_generated_outputs':index['unavailable_generated_outputs'],'meaning':'Integrity/consistency only; no execution attestation, real source fidelity, public-create or full finite completion.','result':'passed'}
+(folder/'verification.json').write_text(json.dumps(record,sort_keys=True,indent=2)+'\n')
+print(json.dumps({'archive_members':len(data),'controls':controls,'result':'passed'}))

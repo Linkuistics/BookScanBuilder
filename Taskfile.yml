@@ -160,3 +160,822 @@ tasks:
         panel = "<section id=current-decision><h2>Finite interface and Q1–Q3 public repairs agreed</h2><p>The human replied yes to the original interface/test seams and finite-owner-only session exception, then separately replied Approve Q1–Q3 as written (Recommended) to the exact public repair proposal. Reason domains, result/help grammar and distinct issuance are integrated. Browser completion remains required. No product or image result is accepted.</p><p><a href=\"#integrated-public-protocol-repairs\">Integrated Q1–Q3 rules</a> · <a href=\"#finite-baseline-review\">Baseline contract</a> · <a href=\"#finite-baseline-interface-and-test-seams\">Replies and their scopes</a></p></section>";
         page = source.replace("<main>", "<main>" + panel, 1);
         Path("docs/design/rotation-processor/baseline-delivery.html").write_text(page)'
+
+  process:native-ruler:
+    desc: Construct an unused renderer-independent PNG; BACKING_SCALE must be measured
+    requires:
+      vars: [ARTIFACTS, BACKING_SCALE]
+    cmds:
+      - uv run --locked python tests/native_view_scale.py generate --output '{{.ARTIFACTS}}/ruler.png' --backing-scale '{{.BACKING_SCALE}}'
+
+  process:native-measure:
+    desc: Measure original viewer capture bytes; independent window dimensions are required
+    requires:
+      vars: [CAPTURE, LEFT, TOP, RIGHT, BOTTOM, FRAMEBUFFER_WIDTH, FRAMEBUFFER_HEIGHT]
+    cmds:
+      - uv run --locked python tests/native_view_scale.py measure '{{.CAPTURE}}' --region '{{.LEFT}}' '{{.TOP}}' '{{.RIGHT}}' '{{.BOTTOM}}' --framebuffer-size '{{.FRAMEBUFFER_WIDTH}}' '{{.FRAMEBUFFER_HEIGHT}}'
+
+  process:setup:
+    desc: Sync locked Python dependencies and explicitly build/check the packaged advisory helper
+    cmds:
+      - uv sync --locked
+      - uv run --locked python -m bookscan.native_setup {{if .NATIVE_CACHE}}--cache {{.NATIVE_CACHE | shellQuote}}{{end}}
+
+  process:preflight:
+    desc: Verify supported native versions/cache and controls without building or importing a PDF
+    cmds:
+      - uv run --locked python -m bookscan.native_setup --check {{if .NATIVE_CACHE}}--cache {{.NATIVE_CACHE | shellQuote}}{{end}}
+
+  process:check:
+    desc: Check current product Python code and unit contracts without native tools or collection reads
+    cmds:
+      - task: prepare:check
+
+  process:asset-acceptance:
+    desc: Check actual RGB asset writer publication/signals/death/reopen; no checkpoint or public-create claim
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/asset_acceptance.py --artifacts {{.ARTIFACTS | shellQuote}} {{if .PYTHON}}--python {{.PYTHON | shellQuote}}{{end}}
+
+  process:checkpoint-acceptance:
+    desc: Check actual installed checkpoint writer barriers/signals/death/reopen; no public-create claim
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/checkpoint_acceptance.py --artifacts {{.ARTIFACTS | shellQuote}} {{if .PYTHON}}--python {{.PYTHON | shellQuote}}{{end}}
+
+  process:header-acceptance:
+    desc: Verify saved native header identities and complete checkpoint history on actual writer restart
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/checkpoint_acceptance.py --header --artifacts {{.ARTIFACTS | shellQuote}} {{if .PYTHON}}--python {{.PYTHON | shellQuote}}{{end}}
+
+  process:source-acceptance:
+    desc: Verify saved sole-PDF meaning and source-loss restart at actual checkpoint writer barriers
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/checkpoint_acceptance.py --source --artifacts {{.ARTIFACTS | shellQuote}} {{if .PYTHON}}--python {{.PYTHON | shellQuote}}{{end}}
+
+  process:analysis-record-check:
+    desc: Verify saved advisory meaning, dependency-free reads and checkpoint history; no complete-project claim
+    cmds:
+      - uv run --locked pytest -q tests/test_analysis_record.py tests/test_assessment.py
+
+  process:occurrence-core-check:
+    desc: Bind all saved occurrence identities, geometry, RGB and analysis; native/review semantics remain separate
+    cmds:
+      - uv run --locked pytest -q tests/test_occurrence_record.py tests/test_source_record.py tests/test_analysis_record.py tests/test_asset_records.py
+
+  process:triage-record-check:
+    desc: Verify initial saved reason details/domains and predecessor semantics; no complete-project claim
+    cmds:
+      - uv run --locked pytest -q tests/test_triage_record.py tests/test_assessment.py tests/test_analysis_record.py
+
+  process:render-record-check:
+    desc: Verify saved MediaBox render policy and predecessor records without launching native tools
+    cmds:
+      - uv run --locked pytest -q tests/test_render_record.py tests/test_render.py
+
+  process:named-resource-record-check:
+    desc: Verify saved named inventory consistency and source-loss history; runtime-use truth remains separate
+    cmds:
+      - uv run --locked pytest -q tests/test_resource_record.py tests/test_resources.py tests/test_resource_directories.py
+
+  process:fontconfig-record-check:
+    desc: Verify saved configuration-only guards and source-loss history without native launches
+    cmds:
+      - uv run --locked pytest -q tests/test_fontconfig_record.py tests/test_resource_record.py tests/test_fontconfig.py
+
+  process:fontconfig-cache-record-check:
+    desc: Verify saved cache construction against completed named subjects without historical native I/O
+    cmds:
+      - uv run --locked pytest -q tests/test_fontconfig_cache_record.py tests/test_fontconfig_record.py tests/test_fontconfig_cache.py
+
+  process:linked-record-check:
+    desc: Verify saved static native graph closure and named digests without historical file or native reads
+    cmds:
+      - uv run --locked pytest -q tests/test_linked_record.py tests/test_dependencies.py tests/test_resource_record.py
+
+  process:fontconfig-discovery-record-check:
+    desc: Bind saved discovery/copy scope, native graph and completed cache without historical I/O
+    cmds:
+      - uv run --locked pytest -q tests/test_fontconfig_discovery_record.py tests/test_fontconfig_record.py tests/test_fontconfig_cache_record.py tests/test_linked_record.py
+
+  process:native-sample-record-check:
+    desc: Verify retained native channels, resolved profile/palette references and saved history without conversion
+    cmds:
+      - uv run --locked pytest -q tests/test_native_sample_record.py tests/test_samples.py tests/test_profiles.py tests/test_assessment.py
+
+  process:native-sample-record-acceptance:
+    desc: Restore actual constructed native channels/profile/palette bytes after PDF loss; no composition claim
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/native_sample_record_acceptance.py --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:native-acceptance:
+    desc: Build the actual packaged helper and check native signs/sentinels/cache/RGB retention
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/native_skew_acceptance.py --artifacts '{{.ARTIFACTS}}'
+
+  process:native-cancel-acceptance:
+    desc: Exercise private owner cancellation with actual native preflight children; no project/writer claim
+    requires:
+      vars: [NATIVE_CACHE, REPORT]
+    cmds:
+      - uv run --locked python tests/native_cancel_acceptance.py --cache {{.NATIVE_CACHE | shellQuote}} --output {{.REPORT | shellQuote}}
+
+  process:import-acceptance:
+    desc: Check exact private sole-PDF snapshot and independent physical mapping; no renderer/project claim
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/static_import_acceptance.py --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:render-acceptance:
+    desc: Check complete MediaBox Cairo RGB against independent aligned pixel truth; no project/public claim
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/render_acceptance.py --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:dependency-preflight:
+    desc: Read-only helper/Cairo/static codec identities; runtime resources remain unverified
+    cmds:
+      - uv run --locked python -m bookscan.dependencies {{if .NATIVE_CACHE}}--cache {{.NATIVE_CACHE | shellQuote}}{{end}}
+
+  process:dependency-acceptance:
+    desc: Check actual static native identities and owner callback/reaping; no project/writer claim
+    requires:
+      vars: [NATIVE_CACHE, REPORT]
+    cmds:
+      - uv run --locked python tests/dependency_acceptance.py --cache {{.NATIVE_CACHE | shellQuote}} --output {{.REPORT | shellQuote}}
+
+  process:placement-acceptance:
+    desc: Check analytic image placements/ppi and actual Cairo annotation visibility; no composition-fidelity claim
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/placement_acceptance.py --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:sample-acceptance:
+    desc: Check independent packed source channels/metadata; no RGB conversion/composition-fidelity claim
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/sample_acceptance.py --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:codec-acceptance:
+    desc: Check independent DCT/CCITT native channels and polarity; no complete-page fidelity claim
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/codec_acceptance.py --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:colour-acceptance:
+    desc: Check independent native Decode/palette/colour-key display; no complete-page colour-fidelity claim
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/colour_acceptance.py --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:composition-acceptance:
+    desc: Check independent grey/inline/stencil/mask/half-pixel compositions with actual Cairo; fonts/ICC/real truth remain unverified
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/composition_acceptance.py --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:assessment-acceptance:
+    desc: Check every-occurrence snapshot/render/native analysis records and unchanged RGB; no saved project/public claim
+    requires:
+      vars: [ARTIFACTS, NATIVE_CACHE]
+    cmds:
+      - uv run --locked python tests/assessment_acceptance.py --artifacts {{.ARTIFACTS | shellQuote}} --cache {{.NATIVE_CACHE | shellQuote}}
+
+  process:advanced-composition-acceptance:
+    desc: Check independent embedded text/Matte/Screen/600-ppi constructions; ICC/runtime/real truth remain unverified
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/advanced_composition_acceptance.py --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:runtime-fixtures:
+    desc: Declare/build test-owned Mac dlopen and analytic RGB fixtures into an unused directory
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/runtime_acceptance.py build --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:runtime-acceptance:
+    desc: Observe actual PID-bound renderer/Python/dlopen UUID events; complete runtime resources remain unverified
+    requires:
+      vars: [FIXTURES, ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/runtime_acceptance.py check --fixtures {{.FIXTURES | shellQuote}} --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:profile-acceptance:
+    desc: Check constructed ICC power/matrix/Decode/palette/native RGB and actual Cairo; no real calibration claim
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/profile_acceptance.py --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:matrix-acceptance:
+    desc: Read exact constructed ICC matrices/powers and native deviations; conversion precision remains unavailable
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/matrix_acceptance.py --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:target-fixtures:
+    desc: Build test-owned Mac arm64 ICC target observer and ordinary source into an unused directory
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/target_acceptance.py build --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:target-acceptance:
+    desc: Observe actual Cairo target handles and serialized matrices; CMM precision/fidelity remain unverified
+    requires:
+      vars: [FIXTURES, ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/target_acceptance.py check --fixtures {{.FIXTURES | shellQuote}} --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:memory-fixtures:
+    desc: Build test-owned Mac arm64 profile-memory observer and fixed source into an unused directory
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/memory_acceptance.py build --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:memory-acceptance:
+    desc: Bind actual ICC profile-memory values and tables; CMM pipeline/precision/fidelity remain unverified
+    requires:
+      vars: [FIXTURES, ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/memory_acceptance.py check --fixtures {{.FIXTURES | shellQuote}} --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:formatter-fixtures:
+    desc: Build test-owned Mac arm64 actual-transform formatter observer into an unused directory
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/formatter_acceptance.py build --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:formatter-acceptance:
+    desc: Verify actual RGB formatter codes; intermediate CMM pipeline and fidelity remain unverified
+    requires:
+      vars: [FIXTURES, ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/formatter_acceptance.py check --fixtures {{.FIXTURES | shellQuote}} --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:pipeline-fixtures:
+    desc: Build a test-only exact-ABI final-transform observer and wrong-offset control into an unused directory
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/pipeline_acceptance.py build --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:pipeline-acceptance:
+    desc: Bind actual final stages to profile-memory algebra and transform probes; complete CMM precision remains unverified
+    requires:
+      vars: [FIXTURES, ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/pipeline_acceptance.py check --fixtures {{.FIXTURES | shellQuote}} --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:gamma-fixtures:
+    desc: Build a test-owned actual-source-curve evaluator observer into an unused directory
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/gamma_acceptance.py build --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:gamma-acceptance:
+    desc: Check all source gamma-2 word inputs against exact rounding truth; complete CMM precision remains unverified
+    requires:
+      vars: [FIXTURES, ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/gamma_acceptance.py check --fixtures {{.FIXTURES | shellQuote}} --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:stage-fixtures:
+    desc: Build a test-owned actual-stage evaluator observer and wrong-offset child into an unused directory
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/stage_acceptance.py build --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:stage-acceptance:
+    desc: Bind actual source/matrix stage pointers and finite rational arithmetic; complete CMM precision remains unverified
+    requires:
+      vars: [FIXTURES, ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/stage_acceptance.py check --fixtures {{.FIXTURES | shellQuote}} --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:traversal-fixtures:
+    desc: Build a test-owned full-LUT observer and actual wrong-ABI/bypassed-stage controls
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/traversal_acceptance.py build --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:traversal-acceptance:
+    desc: Observe ordered full-LUT transform probes; reversed-target/saturation/full ICC fidelity remain unverified
+    requires:
+      vars: [FIXTURES, ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/traversal_acceptance.py check --fixtures {{.FIXTURES | shellQuote}} --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:saturation-acceptance:
+    desc: Check bound native float-to-word arithmetic on fresh traversal probes twice; target/full ICC fidelity remain unverified
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    requires:
+      vars: [FIXTURES, ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/saturation_acceptance.py --fixtures {{.FIXTURES | shellQuote}} --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:reversed-acceptance:
+    desc: Check fixed reversed-sRGB finite accuracy on fresh native probes twice; complete ICC fidelity remains unverified
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    requires:
+      vars: [FIXTURES, ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/reversed_acceptance.py --fixtures {{.FIXTURES | shellQuote}} --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:composed-acceptance:
+    desc: Check conditional source-to-byte envelopes on fresh native probes twice; arbitrary ICC/page fidelity remain unverified
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    requires:
+      vars: [FIXTURES, ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/composed_acceptance.py --fixtures {{.FIXTURES | shellQuote}} --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:pixel-fixtures:
+    desc: Build test-only repeated-source and actual CMM-call observers from unchanged traversal fixtures
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    requires:
+      vars: [FIXTURES, ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/pixel_acceptance.py build --fixtures {{.FIXTURES | shellQuote}} --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:pixel-acceptance:
+    desc: Check actual controlled CMM conversion calls and cache reuse twice; general composition remains unverified
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    requires:
+      vars: [FIXTURES, ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/pixel_acceptance.py check --fixtures {{.FIXTURES | shellQuote}} --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:ownership-acceptance:
+    desc: Verify actual local writer contention, case aliases, native-child signals and death/reap
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/ownership_processes.py --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:resource-fixtures:
+    desc: Build controlled native-font/config candidates; no general glyph-fidelity truth
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/resource_acceptance.py build --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:resource-acceptance:
+    desc: Verify named resource guards and captured environment on actual native renders
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    requires:
+      vars: [FIXTURES, ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/resource_acceptance.py check --fixtures {{.FIXTURES | shellQuote}} --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:directory-resource-acceptance:
+    desc: Verify candidate-directory growth blocks native rendering; runtime discovery remains unverified
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    requires:
+      vars: [FIXTURES, ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/directory_resource_acceptance.py --fixtures {{.FIXTURES | shellQuote}} --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:directory-evidence-check:
+    desc: Audit the retained directory measurement against this Mac's original host subjects
+    cmds:
+      - uv run --locked python docs/acceptance/baseline-resource-directories/audit-preserving.py
+
+  process:fontconfig-acceptance:
+    desc: Verify Fontconfig roots, optional includes and scan-only templates; actual-use/fidelity remain unverified
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    requires:
+      vars: [FIXTURES, ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/fontconfig_acceptance.py --fixtures {{.FIXTURES | shellQuote}} --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:fontconfig-sysroot-acceptance:
+    desc: Verify effective native font/cache roots and cold-cache guard rejection in test-owned sysroots
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    requires:
+      vars: [FIXTURES, ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/fontconfig_sysroot_acceptance.py --fixtures {{.FIXTURES | shellQuote}} --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:font-loading-fixtures:
+    desc: Build a test-only native face/open observer with private controlled font copies
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    requires:
+      vars: [FIXTURES, ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/font_loading_acceptance.py build --fixtures {{.FIXTURES | shellQuote}} --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:font-loading-acceptance:
+    desc: Verify private cold-cache construction and named renderer face/open use; full resources/glyph truth remain unverified
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    requires:
+      vars: [FIXTURES, ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/font_loading_acceptance.py check --fixtures {{.FIXTURES | shellQuote}} --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:cache-construction-acceptance:
+    desc: Verify owned private Fontconfig cache construction, immutable render use and foreign-root refusal
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    requires:
+      vars: [FIXTURES, ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/cache_construction_acceptance.py --fixtures {{.FIXTURES | shellQuote}} --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:font-snapshot-acceptance:
+    desc: Verify copied explicit configuration/font/cache lifetime and host-loss render; no glyph oracle
+    requires:
+      vars: [FIXTURES, ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/font_snapshot_acceptance.py --fixtures {{.FIXTURES | shellQuote}} --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:font-selection-acceptance:
+    desc: Verify native default or FILE/PATH selection, copied font lifetime and host-loss rendering
+    vars:
+      SELECTION: '{{.SELECTION | default "default"}}'
+    requires:
+      vars: [FIXTURES, ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/font_snapshot_acceptance.py --selection {{.SELECTION | shellQuote}} --fixtures {{.FIXTURES | shellQuote}} --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:font-paths-acceptance:
+    desc: Verify font/include paths, remap keys, private absent targets, native scope and host-loss rendering
+    vars:
+      SELECTION: '{{.SELECTION | default "explicit"}}'
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    requires:
+      vars: [FIXTURES, ARTIFACTS, PATH_FORM]
+    cmds:
+      - uv run --locked python tests/font_snapshot_acceptance.py --selection {{.SELECTION | shellQuote}} --path-form {{.PATH_FORM | shellQuote}} --fixtures {{.FIXTURES | shellQuote}} --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:font-default-acceptance:
+    desc: Verify this Mac's default font/config copy, absent targets and private cache/render lifetime
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    requires:
+      vars: [SOURCE, ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/font_default_acceptance.py --source {{.SOURCE | shellQuote}} --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:native-blob-check:
+    desc: Verify opaque native bytes, no-clobber publication, saved identity and predecessor references
+    cmds:
+      - uv run --locked pytest -q tests/test_native_blobs.py tests/test_native_sample_record.py
+
+  process:native-blob-acceptance:
+    desc: Check actual native-blob writer signals/kill/reap/reopen; a blob alone is not saved review state
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/native_blob_acceptance.py --artifacts {{.ARTIFACTS | shellQuote}} {{if .PYTHON}}--python {{.PYTHON | shellQuote}}{{end}}
+
+  process:native-blob-sample-acceptance:
+    desc: Restore transactionally retained packed/profile/palette bytes after PDF loss and writer reopen
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/native_blob_sample_acceptance.py --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:native-inventory-check:
+    desc: Check saved complete resolution, ordered samples, retained blobs and unavailable truth
+    cmds:
+      - uv run --locked pytest -q tests/test_native_inventory_record.py tests/test_native_sample_record.py tests/test_assessment.py tests/test_triage_record.py
+
+  process:native-inventory-acceptance:
+    desc: Restore actual native inventories after PDF loss and blob-store reopen; no composition verdict
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/native_inventory_acceptance.py --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:native-header-check:
+    desc: Bind native byte-store identity to bootstrap and verify referenced predecessor inventories on restart
+    cmds:
+      - uv run --locked pytest -q tests/test_native_header.py tests/test_project_header.py tests/test_native_blobs.py tests/test_native_inventory_record.py
+
+  process:assessed-record-check:
+    desc: Check complete initial occurrence payloads/source placements/native closure; not full checkpoint acceptance
+    cmds:
+      - uv run --locked pytest -q tests/test_assessed_record.py
+
+  process:assessed-record-acceptance:
+    desc: Check actual native assessment/storage/source-loss restart; no public-project claim
+    requires:
+      vars: [ARTIFACTS, NATIVE_CACHE]
+    cmds:
+      - uv run --locked python tests/assessed_record_acceptance.py --artifacts {{.ARTIFACTS | shellQuote}} --cache {{.NATIVE_CACHE | shellQuote}}
+
+  process:dependency-record-check:
+    desc: Verify frozen historical native preflight metadata; no complete checkpoint claim
+    cmds:
+      - uv run --locked pytest -q tests/test_dependency_record.py
+
+  process:dependency-record-acceptance:
+    desc: Bind actual pinned preflight graphs to named-file identities without a public-project claim
+    requires:
+      vars: [ARTIFACTS, NATIVE_CACHE]
+    cmds:
+      - uv run --locked python tests/dependency_record_acceptance.py --artifacts {{.ARTIFACTS | shellQuote}} --cache {{.NATIVE_CACHE | shellQuote}}
+
+  process:initial-state-check:
+    desc: Verify initial checkpoint import/resource/review/snapshot meanings and source-loss history
+    cmds:
+      - uv run --locked pytest -q tests/test_baseline_state.py
+
+  process:initial-state-acceptance:
+    desc: Bind actual native import and copied resources to initial checkpoint/source-loss resume
+    requires:
+      vars: [ARTIFACTS, NATIVE_CACHE]
+    cmds:
+      - uv run --locked python tests/baseline_state_acceptance.py --artifacts {{.ARTIFACTS | shellQuote}} --cache {{.NATIVE_CACHE | shellQuote}}
+
+
+  process:finite-protocol-check:
+    desc: Check installed finite invocation/help/denied-I/O/EPIPE grammar and availability
+    cmds:
+      - uv run --locked pytest -q tests/test_finite_protocol.py
+
+  process:finite-protocol-acceptance:
+    desc: Exercise actual installed Q2 entry under Mac read denial and closed pipes; no finite handoff claim
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/finite_protocol_acceptance.py --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:create:
+    desc: Import one static PDF into a new baseline project (packets, review actions and export unavailable)
+    cmds:
+      - uv run --locked bookscan baseline create {{range .CLI_ARGS_LIST}}{{. | shellQuote}} {{end}}
+
+  process:create-check:
+    desc: Check public create result/error/signal/delivery contracts on constructed native context
+    cmds:
+      - uv run --locked pytest -q tests/test_finite_create.py tests/test_finite_protocol.py tests/test_initial_import.py
+
+  process:create-acceptance:
+    desc: Actual installed create on constructed native pages, source-loss status and writer signal/kill/child barriers
+    requires:
+      vars: [ARTIFACTS, NATIVE_CACHE]
+    cmds:
+      - uv run --locked python tests/finite_create_acceptance.py --artifacts {{.ARTIFACTS | shellQuote}} --cache {{.NATIVE_CACHE | shellQuote}} {{if .BOOKSCAN}}--bookscan {{.BOOKSCAN | shellQuote}}{{end}}
+
+  process:status:
+    desc: Verify an initial saved baseline and print its complete uninspected roster (summary packets unavailable)
+    cmds:
+      - uv run --locked bookscan baseline status {{range .CLI_ARGS_LIST}}{{. | shellQuote}} {{end}}
+
+  process:status-check:
+    desc: Verify installed initial-status/source-loss/corruption/ownership/signal/result contracts
+    cmds:
+      - uv run --locked pytest -q tests/test_finite_status.py tests/test_finite_protocol.py
+
+  process:status-acceptance:
+    desc: Actual native initial checkpoint, installed source-loss status, writer signals/reap and read denial
+    requires:
+      vars: [ARTIFACTS, NATIVE_CACHE]
+    cmds:
+      - uv run --locked python tests/finite_status_acceptance.py --artifacts {{.ARTIFACTS | shellQuote}} --cache {{.NATIVE_CACHE | shellQuote}} {{if .BOOKSCAN}}--bookscan {{.BOOKSCAN | shellQuote}}{{end}}
+
+  process:import-assembly-check:
+    desc: Verify complete all-occurrence asset assembly under caller-held ownership, without a checkpoint commit
+    cmds:
+      - uv run --locked pytest -q tests/test_import_assembly.py tests/test_baseline_state.py
+
+  process:import-assembly-acceptance:
+    desc: Assemble actual native assessed assets, then commit and verify initial source-loss resume
+    requires:
+      vars: [ARTIFACTS, NATIVE_CACHE]
+    cmds:
+      - uv run --locked python tests/baseline_state_acceptance.py --artifacts {{.ARTIFACTS | shellQuote}} --cache {{.NATIVE_CACHE | shellQuote}}
+
+  process:reservation-check:
+    desc: Check exclusive project reservations, identity-bound empty cleanup and selected errors
+    cmds:
+      - uv run --locked pytest -q tests/test_project_reservation.py
+
+  process:reservation-acceptance:
+    desc: Observe real private reservation competition/signals/kill/reap and incomplete status refusal
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/reservation_acceptance.py --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:initial-import-check:
+    desc: Check source-first initial import ownership, complete checkpoint and post-commit outcome
+    cmds:
+      - uv run --locked pytest -q tests/test_initial_import.py tests/test_import_assembly.py tests/test_baseline_state.py
+
+  process:initial-import-acceptance:
+    desc: Exercise product initial import on native constructions and verified source/resource-loss resume
+    requires:
+      vars: [ARTIFACTS, NATIVE_CACHE]
+    cmds:
+      - uv run --locked python tests/baseline_state_acceptance.py --artifacts {{.ARTIFACTS | shellQuote}} --cache {{.NATIVE_CACHE | shellQuote}}
+
+  process:initial-import-evidence-check:
+    desc: Reconstruct initial-import evidence and contest decoded semantic relationships
+    cmds:
+      - uv run --locked ruff format --check docs/acceptance/baseline-initial-import/*.py
+      - uv run --locked ruff check docs/acceptance/baseline-initial-import/*.py
+      - uv run --locked pyright --project docs/acceptance/baseline-initial-import/pyrightconfig.json
+      - uv run --locked python docs/acceptance/baseline-initial-import/verify.py
+      - uv run --locked python docs/acceptance/baseline-initial-import/controls.py
+
+  process:source-cleanup-check:
+    desc: Check exact owned-source cleanup, replacement preservation and checkpoint boundaries
+    cmds:
+      - uv run --locked pytest -q tests/test_project_reservation.py tests/test_initial_import.py
+
+  process:source-cleanup-evidence-check:
+    desc: Reconstruct paired owned-source cleanup evidence and contest decoded corpus claims
+    cmds:
+      - uv run --locked ruff format --check docs/acceptance/baseline-source-cleanup/*.py
+      - uv run --locked ruff check docs/acceptance/baseline-source-cleanup/*.py
+      - uv run --locked pyright --project docs/acceptance/baseline-source-cleanup/pyrightconfig.json
+      - uv run --locked python docs/acceptance/baseline-source-cleanup/verify.py
+      - uv run --locked python docs/acceptance/baseline-source-cleanup/controls.py
+
+  process:empty-store-cleanup-check:
+    desc: Check exact owned-empty-directory removal and preservation of unknown or replaced entries
+    cmds:
+      - uv run --locked pytest -q tests/test_project_reservation.py
+
+  process:bootstrap-cleanup-check:
+    desc: Check exact failed-lock bootstrap cleanup, source/root cleanup and preserved writer ownership
+    cmds:
+      - uv run --locked pytest -q tests/test_lock_cleanup.py tests/test_ownership.py tests/test_project_reservation.py tests/test_initial_import.py
+
+  process:acquired-bootstrap-cleanup-check:
+    desc: Check captured acquired-lock cleanup, preserved unknown entries and selected close errors
+    cmds:
+      - uv run --locked pytest -q tests/test_initial_import.py tests/test_ownership.py tests/test_lock_cleanup.py tests/test_project_reservation.py
+
+  process:private-header-cleanup-check:
+    desc: Check exact failed private-header cleanup, changed-entry retention and original saved-header/import contracts
+    cmds:
+      - uv run --locked pytest -q tests/test_project_header.py tests/test_native_header.py tests/test_initial_import.py
+
+  process:empty-provision-cleanup-check:
+    desc: Check exact empty-store rollback before header publication and preservation of unknown entries
+    cmds:
+      - uv run --locked pytest -q tests/test_project_header.py tests/test_native_header.py tests/test_project_reservation.py tests/test_initial_import.py
+
+  process:store-provision-cleanup-check:
+    desc: Check captured individual-store failure cleanup and complete bootstrap ownership boundaries
+    cmds:
+      - uv run --locked pytest -q tests/test_store_provision.py tests/test_assets.py tests/test_checkpoints.py tests/test_native_blobs.py tests/test_project_header.py tests/test_native_header.py tests/test_project_reservation.py tests/test_initial_import.py
+
+  process:published-header-cleanup-check:
+    desc: Check exact failed published-bootstrap rollback and retained changed or checkpoint-bearing entries
+    cmds:
+      - uv run --locked pytest -q tests/test_header_rollback.py tests/test_project_header.py tests/test_native_header.py tests/test_initial_import.py tests/test_store_provision.py tests/test_project_reservation.py
+
+  process:bootstrap-close-check:
+    desc: Check close-only bootstrap rollback, descriptor reuse and preservation of changed or checkpoint-bearing entries
+    cmds:
+      - uv run --locked pytest -q tests/test_bootstrap_close.py tests/test_header_rollback.py tests/test_project_header.py tests/test_native_header.py tests/test_initial_import.py tests/test_store_provision.py tests/test_project_reservation.py
+
+  process:store-close-check:
+    desc: Check close-only individual-store rollback, descriptor reuse and preservation of changed or checkpoint-bearing entries
+    cmds:
+      - uv run --locked pytest -q tests/test_store_close.py tests/test_bootstrap_close.py tests/test_header_rollback.py tests/test_store_provision.py tests/test_assets.py tests/test_checkpoints.py tests/test_native_blobs.py tests/test_project_header.py tests/test_native_header.py tests/test_project_reservation.py tests/test_initial_import.py
+
+  process:import-bootstrap-rollback-check:
+    desc: Check failed import rollback of captured untouched empty bootstraps and retention after store activity
+    cmds:
+      - uv run --locked pytest -q tests/test_import_bootstrap_rollback.py tests/test_store_close.py tests/test_bootstrap_close.py tests/test_header_rollback.py tests/test_store_provision.py tests/test_assets.py tests/test_checkpoints.py tests/test_native_blobs.py tests/test_project_header.py tests/test_native_header.py tests/test_project_reservation.py tests/test_initial_import.py
+
+  process:rgb-close-check:
+    desc: Check RGB descriptor release, chosen-error preservation and import/store cleanup boundaries
+    cmds:
+      - uv run --locked pytest -q tests/test_rgb_close.py tests/test_assets.py tests/test_store_provision.py tests/test_store_close.py tests/test_import_bootstrap_rollback.py tests/test_initial_import.py
+
+  process:import-asset-rollback-check:
+    desc: Check captured import asset rollback and preservation of changed files or checkpoints
+    cmds:
+      - uv run --locked pytest -q tests/test_import_asset_rollback.py tests/test_import_bootstrap_rollback.py tests/test_initial_import.py tests/test_import_assembly.py tests/test_assets.py tests/test_native_blobs.py tests/test_rgb_close.py
+
+  process:aborted-publication-check:
+    desc: Check failed private-write cleanup permits exact import rollback while changed stores stay intact
+    cmds:
+      - uv run --locked pytest -q tests/test_aborted_publication.py tests/test_import_asset_rollback.py tests/test_import_bootstrap_rollback.py tests/test_initial_import.py tests/test_import_assembly.py tests/test_assets.py tests/test_native_blobs.py tests/test_rgb_close.py
+
+  process:private-import-rollback-check:
+    desc: Check exact owned private-file retry after refused cleanup and preserve changed or committed imports
+    cmds:
+      - uv run --locked pytest -q tests/test_private_import_rollback.py tests/test_aborted_publication.py tests/test_import_asset_rollback.py tests/test_import_bootstrap_rollback.py tests/test_initial_import.py tests/test_import_assembly.py tests/test_assets.py tests/test_native_blobs.py tests/test_rgb_close.py
+
+  process:linked-import-rollback-check:
+    desc: Check exact returned-link and dedup private cleanup, surviving aliases and preserved changed imports
+    cmds:
+      - uv run --locked pytest -q tests/test_linked_import_rollback.py tests/test_private_import_rollback.py tests/test_aborted_publication.py tests/test_import_asset_rollback.py tests/test_import_bootstrap_rollback.py tests/test_initial_import.py tests/test_import_assembly.py tests/test_assets.py tests/test_native_blobs.py tests/test_rgb_close.py
+
+  process:analysis-cleanup-check:
+    desc: Check exact advisory input cleanup, changed-name preservation and actual native child cancellation/reap
+    cmds:
+      - uv run --locked pytest -q tests/test_analysis_cleanup.py tests/test_native_cancel.py tests/test_skew.py tests/test_native_cache.py tests/test_assessment.py
+
+  process:render-cleanup-check:
+    desc: Check exact renderer output ownership, changed-name retention and actual child cancellation/reap
+    cmds:
+      - uv run --locked pytest -q tests/test_render_cleanup.py tests/test_render.py tests/test_resources.py tests/test_resource_directories.py tests/test_assessment.py
+
+  process:render-cleanup-acceptance:
+    desc: Observe actual pinned Poppler output identity and exact cleanup with independent construction controls
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python tests/render_cleanup_acceptance.py --artifacts {{.ARTIFACTS | shellQuote}}
+
+  process:fontconfig-cleanup-check:
+    desc: Check exact Fontconfig cache/snapshot ownership, changed-name retention and native cache replacement
+    cmds:
+      - uv run --locked pytest -q tests/test_fontconfig_cleanup.py tests/test_fontconfig_cache.py tests/test_fontconfig_snapshot.py
+
+  process:packet-publication-check:
+    desc: Check exclusive no-replace packet directory publication, occupied/dangling/concurrent refusal and exact stage cleanup
+    cmds:
+      - uv run --locked pytest -q tests/test_packet_publication.py
+
+  process:view-manifest-check:
+    desc: Check the presentation-neutral matched-view manifest, gap-free <=768 native partition and exact page mapping
+    cmds:
+      - uv run --locked pytest -q tests/test_view_manifest.py
+
+  process:native-tiles-check:
+    desc: Check exact lossless native PNG tiles, measured-backing-scale density and the packet pixel ruler
+    cmds:
+      - uv run --locked pytest -q tests/test_native_tiles.py
+
+  process:packet-receipts-check:
+    desc: Check fresh packet issuance, single-use receipt identity, content-addressed descriptor, authenticity and external file integrity
+    cmds:
+      - uv run --locked pytest -q tests/test_packet_receipts.py
+
+  process:packet-descriptors-check:
+    desc: Check the project-owned immutable packet descriptor store, its saved-header identity and replacement refusal
+    cmds:
+      - uv run --locked pytest -q tests/test_packet_descriptors.py tests/test_store_provision.py tests/test_store_close.py
+
+  process:review-facts-check:
+    desc: Check Q1 dispositions, scoped inspection, snapshot acknowledgement, durable replay and replay verification of saved review facts
+    cmds:
+      - uv run --locked pytest -q tests/test_review_facts.py
+
+  process:review-state-check:
+    desc: Check replay-verified restore of saved review facts, the action transition and status reporting of recorded review
+    cmds:
+      - uv run --locked pytest -q tests/test_baseline_state.py tests/test_finite_status.py
+
+  process:finite-action-check:
+    desc: Check the receipt actions (disposition, inspected, acknowledge) - replay, currency order, failure mapping, installed second-process replay
+    cmds:
+      - uv run --locked pytest -q tests/test_finite_action.py tests/test_finite_protocol.py tests/test_finite_status.py
+
+  process:fontconfig-cleanup-diagnostic:
+    desc: Paired actual-native cleanup preservation diagnostic (exit 1 while required ownership repairs remain)
+    requires:
+      vars: [ARTIFACTS]
+    cmds:
+      - uv run --locked python docs/acceptance/baseline-fontconfig-cleanup-probe/measure.py --artifacts {{.ARTIFACTS | shellQuote}}

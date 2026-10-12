@@ -1,0 +1,47 @@
+{
+  "verified": true,
+  "change": "ryouonnvvlkzyyxmxrpqxnuqrysrqtvy",
+  "commit": "0b2c16638bbdc1a3bd2b6b7b724b1ea4b5d1ba1f",
+  "parent": "03eb30abe1ae485696e5deec25bfb229a42ecf69",
+  "from_commit": "becda7d74e4038ad341ecfd7739487ec29037351",
+  "changed_paths": [
+    ".grove/40-k47/01-k53/11-impl--baseline-finite-k63.md",
+    "Taskfile.yml",
+    "docs/acceptance/baseline-analysis-record/boundary-result.json",
+    "docs/acceptance/baseline-analysis-record/boundary.py.gz",
+    "docs/acceptance/baseline-analysis-record/controls-result.json",
+    "docs/acceptance/baseline-analysis-record/controls.py",
+    "docs/acceptance/baseline-analysis-record/index.json.gz",
+    "docs/acceptance/baseline-analysis-record/raw-000.zippart",
+    "docs/acceptance/baseline-analysis-record/raw-001.zippart",
+    "docs/acceptance/baseline-analysis-record/raw-002.zippart",
+    "docs/acceptance/baseline-analysis-record/raw-003.zippart",
+    "docs/acceptance/baseline-analysis-record/raw-004.zippart",
+    "docs/acceptance/baseline-analysis-record/raw-005.zippart",
+    "docs/acceptance/baseline-analysis-record/verify.py",
+    "docs/acceptance/baseline-finite.md",
+    "src/bookscan/analysis_record.py",
+    "src/bookscan/assessment.py",
+    "tests/test_analysis_record.py",
+    "tests/test_assessment.py"
+  ],
+  "preserved_frozen_subjects": 17225,
+  "append_only_notes": [
+    "/Users/antony/Development/BookScanBuilder/.grove/40-k47/01-k53/11-impl--baseline-finite-k63.md",
+    "/Users/antony/Development/BookScanBuilder/docs/acceptance/baseline-finite.md"
+  ],
+  "predicate_controls_refused": [
+    "change",
+    "parent",
+    "description",
+    "conflicts",
+    "live",
+    "paths",
+    "index"
+  ],
+  "boundary_sha256": "807c50b8bbf96ba075807ac83dcc279ee1c657db7b3f2d0fc8281f4420c8777a",
+  "live_leaf": ".grove/40-k47/01-k53/11-impl--baseline-finite-k63.md",
+  "retired": false,
+  "sealed": false,
+  "current_subjects_unchanged": true
+}

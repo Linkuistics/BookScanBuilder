@@ -1,0 +1,472 @@
+{
+  "pages": [
+    {
+      "id": "occ-000001",
+      "source_pdf_page": 1,
+      "pixels": [
+        1200,
+        900
+      ],
+      "advisory_hint": {
+        "role": "front",
+        "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "source_page": 18
+      },
+      "geometry": {
+        "boxes": [
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ],
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ],
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ],
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ],
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ]
+        ],
+        "rotate": 0,
+        "user_unit": "1",
+        "physical_points": [
+          "288",
+          "216"
+        ],
+        "pixels": [
+          1200,
+          900
+        ],
+        "matrix": [
+          "25/6",
+          "0",
+          "0",
+          "-25/6",
+          "0",
+          "900"
+        ],
+        "extent_changed": false
+      },
+      "rgb_sha256": "dd391eeda91d30051f40d91f5c7cbb1d1c6c1ea1ca9bf812f1b440e93c335561",
+      "angle_target": 0.0
+    },
+    {
+      "id": "occ-000002",
+      "source_pdf_page": 2,
+      "pixels": [
+        1200,
+        900
+      ],
+      "advisory_hint": {
+        "role": "content",
+        "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "source_page": 19
+      },
+      "geometry": {
+        "boxes": [
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ],
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ],
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ],
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ],
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ]
+        ],
+        "rotate": 0,
+        "user_unit": "1",
+        "physical_points": [
+          "288",
+          "216"
+        ],
+        "pixels": [
+          1200,
+          900
+        ],
+        "matrix": [
+          "25/6",
+          "0",
+          "0",
+          "-25/6",
+          "0",
+          "900"
+        ],
+        "extent_changed": false
+      },
+      "rgb_sha256": "2f963fe6a540a6277cbd93e699c45aa5b007caf325d66660a2ccf472da538732",
+      "angle_target": -2.0
+    },
+    {
+      "id": "occ-000003",
+      "source_pdf_page": 3,
+      "pixels": [
+        1200,
+        900
+      ],
+      "advisory_hint": {
+        "role": "back",
+        "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "source_page": 20
+      },
+      "geometry": {
+        "boxes": [
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ],
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ],
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ],
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ],
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ]
+        ],
+        "rotate": 0,
+        "user_unit": "1",
+        "physical_points": [
+          "288",
+          "216"
+        ],
+        "pixels": [
+          1200,
+          900
+        ],
+        "matrix": [
+          "25/6",
+          "0",
+          "0",
+          "-25/6",
+          "0",
+          "900"
+        ],
+        "extent_changed": false
+      },
+      "rgb_sha256": "dcd5069552f910f286604cf0e7628c90404d0b87dcab928ec32a2650ce8744c5",
+      "angle_target": 2.0
+    },
+    {
+      "id": "occ-000004",
+      "source_pdf_page": 4,
+      "pixels": [
+        1200,
+        900
+      ],
+      "advisory_hint": null,
+      "geometry": {
+        "boxes": [
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ],
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ],
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ],
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ],
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ]
+        ],
+        "rotate": 0,
+        "user_unit": "1",
+        "physical_points": [
+          "288",
+          "216"
+        ],
+        "pixels": [
+          1200,
+          900
+        ],
+        "matrix": [
+          "25/6",
+          "0",
+          "0",
+          "-25/6",
+          "0",
+          "900"
+        ],
+        "extent_changed": false
+      },
+      "rgb_sha256": "cb29b999660b106a2951fed2f49823c51153471beca2804c5207330cdddd5600",
+      "range_edge": true
+    },
+    {
+      "id": "occ-000005",
+      "source_pdf_page": 5,
+      "pixels": [
+        1200,
+        900
+      ],
+      "advisory_hint": null,
+      "geometry": {
+        "boxes": [
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ],
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ],
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ],
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ],
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ]
+        ],
+        "rotate": 0,
+        "user_unit": "1",
+        "physical_points": [
+          "288",
+          "216"
+        ],
+        "pixels": [
+          1200,
+          900
+        ],
+        "matrix": [
+          "25/6",
+          "0",
+          "0",
+          "-25/6",
+          "0",
+          "900"
+        ],
+        "extent_changed": false
+      },
+      "rgb_sha256": "b535bff2f596e50c384a155d2503b1170b360dca5e88537c6548b6717756b71b",
+      "blank": true
+    },
+    {
+      "id": "occ-000006",
+      "source_pdf_page": 6,
+      "pixels": [
+        1200,
+        900
+      ],
+      "advisory_hint": null,
+      "geometry": {
+        "boxes": [
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ],
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ],
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ],
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ],
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ]
+        ],
+        "rotate": 0,
+        "user_unit": "1",
+        "physical_points": [
+          "288",
+          "216"
+        ],
+        "pixels": [
+          1200,
+          900
+        ],
+        "matrix": [
+          "25/6",
+          "0",
+          "0",
+          "-25/6",
+          "0",
+          "900"
+        ],
+        "extent_changed": false
+      },
+      "high_ppi": true,
+      "packed_sha256": "d9e2667cfa54c0cdfc73f75ad7fcc57c14e1fcb35800272375a328baf7e91a73"
+    },
+    {
+      "id": "occ-000007",
+      "source_pdf_page": 7,
+      "pixels": [
+        1200,
+        900
+      ],
+      "advisory_hint": {
+        "role": "front",
+        "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "source_page": 18
+      },
+      "geometry": {
+        "boxes": [
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ],
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ],
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ],
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ],
+          [
+            "0",
+            "0",
+            "288",
+            "216"
+          ]
+        ],
+        "rotate": 0,
+        "user_unit": "1",
+        "physical_points": [
+          "288",
+          "216"
+        ],
+        "pixels": [
+          1200,
+          900
+        ],
+        "matrix": [
+          "25/6",
+          "0",
+          "0",
+          "-25/6",
+          "0",
+          "900"
+        ],
+        "extent_changed": false
+      },
+      "rgb_sha256": "dd391eeda91d30051f40d91f5c7cbb1d1c6c1ea1ca9bf812f1b440e93c335561",
+      "angle_target": 0.0
+    }
+  ],
+  "angle_bound": "0.125 degrees: 2px/1000px phase (~0.115deg) plus 0.01deg search step",
+  "pixel_bound": "Exact black/white aligned 300-ppi every-channel construction, no tolerance",
+  "high_ppi_bound": "600-ppi source channels/placement only; no baseline preservation oracle",
+  "unavailable": "Complete composition/font/profile/real truth and accepted project/public workflow"
+}

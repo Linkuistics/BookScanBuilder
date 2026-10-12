@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "compression": "gzip",
+  "source": "/private/tmp/bookscan-k63-reversed-work/regression.json",
+  "sha256": "185c129a236c20987b5bd4f88645f9806125c216bfd96f673e1f2111d5ae512a",
+  "bytes": 3736352,
+  "compressed_sha256": "3099b25ab27aec68208411430b0e5a53217f4f698fa5a038cb6dbe0a3f98ef7c",
+  "parts": [
+    {
+      "file": "regression-000.gzpart",
+      "sha256": "13c4fd2872fb71cc504b8208f45b924f3a75b5b8cea6dd61b43ef117bcd63ad5",
+      "bytes": 750000
+    },
+    {
+      "file": "regression-001.gzpart",
+      "sha256": "955ec85c9b3ad1897018c9458a316ea481815be9d81d2c55f088741b4a917966",
+      "bytes": 57365
+    }
+  ]
+}

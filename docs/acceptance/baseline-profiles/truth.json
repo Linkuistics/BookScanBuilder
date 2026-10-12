@@ -1,0 +1,38 @@
+{
+  "format": "BookScanBuilderProfileTruth",
+  "version": 1,
+  "source": "https://www.color.org/specification/ICC1v43_2010-12.pdf",
+  "transfer": "https://registry.color.org/rgb-registry/srgb",
+  "size": [
+    300,
+    150
+  ],
+  "native_size": [
+    5,
+    1
+  ],
+  "points": [
+    72,
+    36
+  ],
+  "native_bound": "1 code: identical matrices cancel; exact x**2 followed by nearest 8-bit",
+  "cairo_bound": "Provisional two-code diagnostic envelope; independent target-profile matrix/precision proof unavailable; no Cairo fidelity pass",
+  "mechanisms": [
+    "power-ramp",
+    "reverse-decode",
+    "indexed",
+    "swapped-primaries",
+    "default-rgb",
+    "invalid-profile"
+  ],
+  "native_expected": [
+    "000000101010404040919191ffffff",
+    "8f3f108f3f108f3f108f3f108f3f10",
+    "104091104091104091104091104091",
+    "914010914010914010914010914010",
+    "104091104091104091104091104091"
+  ],
+  "input_profile_sha256": "dab31e014c31af444946e2f8dd8dd27753be90aca23857a7727f6695fec4d8ea",
+  "target_profile_sha256": "7b4f37347e961aac6afd2e3664bf26bc5c1c1e0e58793be49b326d86a5ae76fd",
+  "limitations": "Constructed RGB profiles only; no real/device calibration, masks, arbitrary fonts or complete resource provenance"
+}

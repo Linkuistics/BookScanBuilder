@@ -1,0 +1,12 @@
+{
+  "baseline": {
+    "entries": 1751,
+    "new_units": 42,
+    "public_delivery": false,
+    "subjects": 16711,
+    "units": 1760,
+    "verified": true
+  },
+  "missing-domain-disproof": "isolated mutation failures",
+  "missing-orientation": "Missing native limitations"
+}

@@ -1,0 +1,14 @@
+import json,os,pathlib,shutil,subprocess,xml.etree.ElementTree as ET
+root=pathlib.Path.cwd();base=pathlib.Path('/private/tmp/bookscan-k63-lock-cleanup');out=base/'predecessor';package=out/'package'
+package.mkdir(parents=True)
+shutil.copytree(root/'src/bookscan',package/'bookscan',ignore=shutil.ignore_patterns('__pycache__'))
+(package/'bookscan/ownership.py').write_bytes((base/'before/src/bookscan/ownership.py').read_bytes())
+env=os.environ.copy();env['PYTHONPATH']=str(package);env.pop('PYTEST_ADDOPTS',None)
+command=[str(root/'.venv/bin/python'),'-m','pytest','-q',str(root/'tests/test_lock_cleanup.py'),str(root/'tests/test_initial_import.py'),str(root/'tests/test_ownership.py'),'--junitxml='+str(out/'cases.xml')]
+with (out/'output.log').open('wb') as log:run=subprocess.run(command,env=env,stdout=log,stderr=subprocess.STDOUT)
+cases=[(c.attrib['classname'],c.attrib['name'],'failed' if c.find('failure') is not None else 'error' if c.find('error') is not None else 'skipped' if c.find('skipped') is not None else 'passed') for c in ET.parse(out/'cases.xml').iter('testcase')]
+failed=[c for c in cases if c[2]=='failed']
+assert run.returncode==1 and failed and all(c[2] in {'passed','failed'} for c in cases)
+assert all(c[0].endswith('test_lock_cleanup') or 'bootstrap_io_failure' in c[1] for c in failed)
+(out/'result.json').write_text(json.dumps({'command':command,'exit':run.returncode,'cases':cases},indent=2)+'\n')
+print(json.dumps({'failed':len(failed),'passed':sum(c[2]=='passed' for c in cases)}))

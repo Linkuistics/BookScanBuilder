@@ -1,0 +1,28 @@
+{
+  "boundary_controls_refused": [
+    "foreign-path",
+    "missing-file",
+    "unexpected-new-path",
+    "lost-prefix",
+    "wrong-change",
+    "wrong-parent",
+    "partial-description",
+    "conflict",
+    "altered-existing-recipe"
+  ],
+  "complete_finite_handoff": false,
+  "frozen_subjects": 19959,
+  "new_paths": 16,
+  "protected_prefixes": {
+    ".grove/40-k47/01-k53/11-impl--baseline-finite-k63.md": {
+      "sha256": "785a010d36732c6c16224ed40a7ea4cfacc8370e7a580823dcb5b564fcb361e4",
+      "size": 613786
+    },
+    "docs/acceptance/baseline-finite.md": {
+      "sha256": "ba6620c1968cba03160dce2668bec63b843651835de7ee6cb7389f7ccea5712c",
+      "size": 329777
+    }
+  },
+  "same_live_undescribed_change": true,
+  "starting_tracked": 1690
+}

@@ -1,0 +1,104 @@
+{
+  "tier": 2,
+  "coverage": {
+    "project": "Users-antony-Development-BookScanBuilder",
+    "signal": "best_effort",
+    "indexed_at": "2026-10-14T15:58:33Z",
+    "metadata": {
+      "generation": "2026-10-14T15:58:33Z",
+      "index_mode": "full",
+      "recorded_at": "2026-10-14T15:58:33Z",
+      "recording_status": "complete",
+      "ignored_files_stored": 20,
+      "ignored_files_total": 20,
+      "hash_records_complete": true,
+      "coverage_version": 3,
+      "generation_matches": true
+    },
+    "paths": [
+      {
+        "requested_path": "src/bookscan/baseline_state.py",
+        "path": "src/bookscan/baseline_state.py",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "tests/test_baseline_state.py",
+        "path": "tests/test_baseline_state.py",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "tests/baseline_state_acceptance.py",
+        "path": "tests/baseline_state_acceptance.py",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "docs/acceptance/baseline-initial-state/verify.py",
+        "path": "docs/acceptance/baseline-initial-state/verify.py",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "docs/acceptance/baseline-initial-state/controls.py",
+        "path": "docs/acceptance/baseline-initial-state/controls.py",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "docs/acceptance/baseline-initial-state/README.md",
+        "path": "docs/acceptance/baseline-initial-state/README.md",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "docs/acceptance/baseline-initial-state/index.json",
+        "path": "docs/acceptance/baseline-initial-state/index.json",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "Taskfile.yml",
+        "path": "Taskfile.yml",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": ".grove/40-k47/01-k53/11-impl--baseline-finite-k63.md",
+        "path": ".grove/40-k47/01-k53/11-impl--baseline-finite-k63.md",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "docs/acceptance/baseline-finite.md",
+        "path": "docs/acceptance/baseline-finite.md",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      }
+    ],
+    "scopes": [],
+    "caveat": "Best-effort signal only. No recorded issue does not prove graph or source completeness; read flagged source and qualify claims when metadata is changed or unavailable."
+  },
+  "caveat": "Best-effort coverage is not completeness. Exact source and executable checks supply material evidence. uv.lock has no tracked graph metadata and was read/hashed directly."
+}

@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/private/tmp/bookscan-header.LyKiUU/wrong-header/verify.py", line 286, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/private/tmp/bookscan-header.LyKiUU/wrong-header/verify.py", line 177, in main
+    equal(header, event["header"])
+  File "/private/tmp/bookscan-header.LyKiUU/wrong-header/verify.py", line 24, in equal
+    raise ValueError("Retained saved-header evidence disagreement")
+ValueError: Retained saved-header evidence disagreement

@@ -1,0 +1,62 @@
+import copy,gzip,hashlib,json,pathlib,re,xml.etree.ElementTree as ET
+base=pathlib.Path('/private/tmp/bookscan-k63-lock-cleanup')
+measurement=base/'measurement'
+inputs=[measurement/r/n/'artifacts/report.json' for r in ['a','b'] for n in ['preparation','ownership','reservation']]
+inputs += [measurement/r/'preparation/artifacts/fault-checks.xml' for r in ['a','b']]
+inputs += [measurement/'runs.json',pathlib.Path('docs/acceptance/baseline-empty-store-cleanup/runs.json.gz'),pathlib.Path(__file__)]
+def freeze():return {str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in inputs}
+def cases(p):return sorted((c.attrib['classname'],c.attrib['name'],'failed' if c.find('failure') is not None else 'error' if c.find('error') is not None else 'skipped' if c.find('skipped') is not None else 'passed') for c in ET.parse(p).iter('testcase'))
+before=freeze();result={}
+reports={n:[json.loads((measurement/r/n/'artifacts/report.json').read_text()) for r in ['a','b']] for n in ['preparation','ownership','reservation']}
+for name,pair in reports.items():
+ normalized=[]
+ for run,raw in zip(['a','b'],pair,strict=True):
+  value=json.loads(json.dumps(raw).replace(str(measurement/run/name/'artifacts'),'<ARTIFACTS>'))
+  if name=='preparation':
+   assert value['digests_before']==value['digests_after']
+   # Synthetic PDF fixture IDs differ between independent constructions. Verify
+   # each run's subjects unchanged, then compare every full semantic case below.
+   value.pop('digests_before');value.pop('digests_after')
+   for item in value['fault_checks']['observed_signal_and_kill_cases']:
+    assert item['pid']==item['observed_barrier']['pid']
+    item['pid']=item['observed_barrier']['pid']='<WRITER>'
+    paths=item['observed_barrier'].get('private',[])
+    assert all(re.fullmatch(r'.*/\.bookscan-prepare-[0-9a-f]{32}\.tmp',p) for p in paths)
+    item['observed_barrier']['private']=[re.sub(r'prepare-[0-9a-f]{32}\.tmp$', 'prepare-<NONCE>.tmp',p) for p in paths]
+  elif name=='ownership':
+   value.pop('identity');value.pop('filesystem')
+   for item in value['records']:
+    assert 0<=item.pop('contention_seconds')<2
+    barrier=item['barrier'];writer=barrier['writer'];child=barrier['child']
+    assert isinstance(writer,int) and writer>0
+    if child is not None:
+     assert item['native_before_signal'].split()==[str(child),str(writer),'/bin/sleep']
+     item['native_before_signal']='<CHILD> <WRITER> /bin/sleep'
+    barrier['writer']='<WRITER>'
+    if child is not None:barrier['child']='<CHILD>'
+  elif name=='reservation':
+   for item in value['observations']:
+    assert item['pid']==item['barrier']['pid'] and item['barrier']['ready'] is True
+    item['pid']=item['barrier']['pid']='<WRITER>'
+  normalized.append(value)
+ assert normalized[0]==normalized[1],name
+ wrong=copy.deepcopy(normalized[1]);wrong['wrong-subject-control']=True
+ assert normalized[0]!=wrong,name+' broken equality control' 
+ # Every item is retained here, not a totals-only comparison.
+ result[name]=normalized[0]
+faults=[cases(measurement/r/'preparation/artifacts/fault-checks.xml') for r in ['a','b']]
+assert faults[0]==faults[1] and all(x[2]=='passed' for x in faults[0])
+result['preparation_fault_cases']=faults[0]
+current=json.loads((measurement/'runs.json').read_text())
+prior=json.loads(gzip.decompress(pathlib.Path('docs/acceptance/baseline-empty-store-cleanup/runs.json.gz').read_bytes()))
+previous=next(r['cases'] for r in prior if r['name']=='check' and r['run']=='a')
+latest=next(r['cases'] for r in current if r['name']=='check' and r['run']=='a')
+old={(c,n):o for c,n,o in previous};new={(c,n):o for c,n,o in latest}
+assert len(old)==len(previous) and len(new)==len(latest)
+assert all(new.get(k)==v for k,v in old.items())
+result['preserved_predecessor_cases']=previous
+result['added_cases']=[(c,n,o) for (c,n),o in new.items() if (c,n) not in old]
+assert before==freeze()
+result['inputs_sha256']=before
+(base/'comparison.json').write_text(json.dumps(result,sort_keys=True,indent=2)+'\n')
+print(json.dumps({'preparation':len(result['preparation']['cases']),'preparation_faults':len(faults[0]),'ownership':len(result['ownership']['records']),'reservation':len(result['reservation']['observations']),'preserved_tests':len(previous),'added_tests':len(result['added_cases']),'pairwise_equal':True,'frozen':True}))

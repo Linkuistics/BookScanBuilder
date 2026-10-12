@@ -1,0 +1,22 @@
+[
+  {
+    "control": "invent-delivery",
+    "refused": "No finite delivery"
+  },
+  {
+    "control": "remove-cancellation-disproof",
+    "refused": "Isolated omission disproof"
+  },
+  {
+    "control": "native-length",
+    "refused": "Exact retained native blob"
+  },
+  {
+    "control": "missing-oracle",
+    "refused": "Missing independent composition oracle limitation"
+  },
+  {
+    "control": "wrong-maximum",
+    "refused": "Resolution maximum"
+  }
+]

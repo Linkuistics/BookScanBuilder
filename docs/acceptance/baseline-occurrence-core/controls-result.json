@@ -1,0 +1,23 @@
+{
+  "verified": true,
+  "controls": [
+    {
+      "case": "wrong-unit",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/antony/Development/BookScanBuilder/docs/acceptance/baseline-occurrence-core/verify.py\", line 306, in <module>\n    print(json.dumps(run(parser.parse_args().directory), indent=2))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/antony/Development/BookScanBuilder/docs/acceptance/baseline-occurrence-core/verify.py\", line 300, in run\n    return verify(read)\n           ^^^^^^^^^^^^\n  File \"/Users/antony/Development/BookScanBuilder/docs/acceptance/baseline-occurrence-core/verify.py\", line 68, in verify\n    raise ValueError(\"Failed unit construction\")\nValueError: Failed unit construction\n"
+    },
+    {
+      "case": "wrong-physical-mapping",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/antony/Development/BookScanBuilder/docs/acceptance/baseline-occurrence-core/verify.py\", line 306, in <module>\n    print(json.dumps(run(parser.parse_args().directory), indent=2))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/antony/Development/BookScanBuilder/docs/acceptance/baseline-occurrence-core/verify.py\", line 300, in run\n    return verify(read)\n           ^^^^^^^^^^^^\n  File \"/Users/antony/Development/BookScanBuilder/docs/acceptance/baseline-occurrence-core/verify.py\", line 248, in verify\n    equal(geometry[\"physical_points\"], [\"2.4\", \"4.8\"])\n  File \"/Users/antony/Development/BookScanBuilder/docs/acceptance/baseline-occurrence-core/verify.py\", line 23, in equal\n    raise ValueError(\"Occurrence-core evidence disagreement\")\nValueError: Occurrence-core evidence disagreement\n"
+    },
+    {
+      "case": "missing-bad-predecessor",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/antony/Development/BookScanBuilder/docs/acceptance/baseline-occurrence-core/verify.py\", line 306, in <module>\n    print(json.dumps(run(parser.parse_args().directory), indent=2))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/antony/Development/BookScanBuilder/docs/acceptance/baseline-occurrence-core/verify.py\", line 300, in run\n    return verify(read)\n           ^^^^^^^^^^^^\n  File \"/Users/antony/Development/BookScanBuilder/docs/acceptance/baseline-occurrence-core/verify.py\", line 239, in verify\n    equal(old_pages[0][\"source_sha256\"], \"0\" * 64)\n  File \"/Users/antony/Development/BookScanBuilder/docs/acceptance/baseline-occurrence-core/verify.py\", line 23, in equal\n    raise ValueError(\"Occurrence-core evidence disagreement\")\nValueError: Occurrence-core evidence disagreement\n"
+    }
+  ]
+}

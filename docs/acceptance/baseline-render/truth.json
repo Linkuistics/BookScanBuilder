@@ -1,0 +1,181 @@
+{
+  "cases": [
+    [
+      0,
+      1,
+      false
+    ],
+    [
+      90,
+      1,
+      false
+    ],
+    [
+      180,
+      1,
+      false
+    ],
+    [
+      270,
+      1,
+      false
+    ],
+    [
+      0,
+      2,
+      false
+    ],
+    [
+      90,
+      2,
+      false
+    ],
+    [
+      0,
+      1,
+      true
+    ],
+    [
+      90,
+      1,
+      true
+    ],
+    [
+      180,
+      1,
+      true
+    ],
+    [
+      270,
+      1,
+      true
+    ],
+    [
+      0,
+      2,
+      true
+    ],
+    [
+      90,
+      2,
+      true
+    ]
+  ],
+  "media_boxes": [
+    [
+      82,
+      56,
+      10,
+      20
+    ],
+    [
+      24.4,
+      29.6,
+      10,
+      20
+    ]
+  ],
+  "crop_boxes": [
+    [
+      70,
+      44,
+      22,
+      32
+    ],
+    [
+      20.8,
+      27.2,
+      13.6,
+      22.4
+    ]
+  ],
+  "exact_truth": [
+    {
+      "size": [
+        300,
+        150
+      ],
+      "rgb_sha256": "d58a97da758ccbe2bb8e94c9d300548410e2e8be50b8932cd0210cdb88418b03"
+    },
+    {
+      "size": [
+        150,
+        300
+      ],
+      "rgb_sha256": "cf2452eb43c08212fe0d5f20e25d01487c9e31599fae23e310ee0fa317e0ea75"
+    },
+    {
+      "size": [
+        300,
+        150
+      ],
+      "rgb_sha256": "66dd12c7420ca43e18149f13d736797ca3b95bec486554203a3f036c02fe9e3a"
+    },
+    {
+      "size": [
+        150,
+        300
+      ],
+      "rgb_sha256": "1482024d414e36fe38fd8efe3a58623ee2da666bfe1cb013e5b11497ab9e0a02"
+    },
+    {
+      "size": [
+        600,
+        300
+      ],
+      "rgb_sha256": "c28385af442b3ba1f5862ea5e61df06b7b8b06052f13649cbb4cf21a9639f194"
+    },
+    {
+      "size": [
+        300,
+        600
+      ],
+      "rgb_sha256": "3f939de5a064b273bdc3a286be1de489fd68fd1b9a391cd67f3e1b5e8cc0f6ae"
+    },
+    {
+      "size": [
+        60,
+        40
+      ],
+      "rgb_sha256": "2dc7184fca03811a7be95291bf93470f6db64f470d24b0b1f20df9f06cc7eec0"
+    },
+    {
+      "size": [
+        40,
+        60
+      ],
+      "rgb_sha256": "ba07e7e1795c9dacb8c6cce5afc7d7eb8032ddc03970ba9f423a24fb111ecded"
+    },
+    {
+      "size": [
+        60,
+        40
+      ],
+      "rgb_sha256": "162bebed1578425a806bc4c7b6e3ad70a3b542c53dc7bffa3e26cb34218790ed"
+    },
+    {
+      "size": [
+        40,
+        60
+      ],
+      "rgb_sha256": "10fd7c655825340ffdae88be330b8bd10eeeb5dce2d124c5b14b056518c6efa7"
+    },
+    {
+      "size": [
+        120,
+        80
+      ],
+      "rgb_sha256": "a90e10bd1c52e5ff43f2c1471a20fd4f9647b26dfeb257f78933ee5c6c13bb09"
+    },
+    {
+      "size": [
+        80,
+        120
+      ],
+      "rgb_sha256": "56804889a606550407f406f41ae59046a3318fd2598f4f86a5fe2acb72f6096b"
+    }
+  ],
+  "bound": "Exact full RGB, grid-aligned unfiltered DeviceRGB; analytic integer permutation",
+  "scope": "nested Forms/RGB/vector/static stamp; boxes/Rotate/UserUnit/blank/duplicate",
+  "unverified": "font/masks/stencils/grayscale/unaligned/ICC/real composition; full analyzer; accepted project"
+}

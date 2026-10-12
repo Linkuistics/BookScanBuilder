@@ -1,0 +1,104 @@
+{
+  "target-b.stdout": {
+    "file": "command-target-b.stdout.json.gz",
+    "keys": [],
+    "sha256": "1e92a22541d3a55df4bcd00fd2b3bb89bdd8c9e914e4dc0760c91761f0f8c90b"
+  },
+  "target-a.stdout": {
+    "file": "command-target-a.stdout.json.gz",
+    "keys": [],
+    "sha256": "a2ff141c52a5a744fac0f5a8e7cef35cc0b46911d7f723a940745d0722e22554"
+  },
+  "native-a/report.json": {
+    "file": "pipeline-a.json.gz",
+    "keys": [],
+    "sha256": "a2ff141c52a5a744fac0f5a8e7cef35cc0b46911d7f723a940745d0722e22554"
+  },
+  "native-a/legacy/report.json": {
+    "file": "pipeline-a.json.gz",
+    "keys": [
+      "legacy"
+    ],
+    "sha256": "e96fdd01f7de410f3d4fbd5e5adc14fa11ef67d03727b8a533997e44e970ad32"
+  },
+  "native-a/legacy/legacy/report.json": {
+    "file": "pipeline-a.json.gz",
+    "keys": [
+      "legacy",
+      "legacy"
+    ],
+    "sha256": "8625a18d4825401904865d9ab4bcfe5a809699f5ce8af6f0e92b3d461e30ac01"
+  },
+  "native-a/legacy/legacy/legacy/report.json": {
+    "file": "pipeline-a.json.gz",
+    "keys": [
+      "legacy",
+      "legacy",
+      "legacy"
+    ],
+    "sha256": "8b533d412b22672b45927a37d79b5956c7eb7786464700bed667cf0e3d4d9bcd"
+  },
+  "native-b/report.json": {
+    "file": "pipeline-b.json.gz",
+    "keys": [],
+    "sha256": "1e92a22541d3a55df4bcd00fd2b3bb89bdd8c9e914e4dc0760c91761f0f8c90b"
+  },
+  "native-b/legacy/report.json": {
+    "file": "pipeline-b.json.gz",
+    "keys": [
+      "legacy"
+    ],
+    "sha256": "81d1cc5f6f4ca8901fd3098c8aa3c7523b898ac9e9f13a9add2bde91b89dc1ff"
+  },
+  "native-b/legacy/legacy/report.json": {
+    "file": "pipeline-b.json.gz",
+    "keys": [
+      "legacy",
+      "legacy"
+    ],
+    "sha256": "04af93afe30de5249e4d0e1561ccf45605ead0b431f5344b8525b15cb523d51e"
+  },
+  "native-b/legacy/legacy/legacy/report.json": {
+    "file": "pipeline-b.json.gz",
+    "keys": [
+      "legacy",
+      "legacy",
+      "legacy"
+    ],
+    "sha256": "add09adc8020689d6a6f945d40053a5ae12966b185419aa854ef2df46694ed46"
+  },
+  "installed/measured/report.json": {
+    "file": "installed-verification.json.gz",
+    "keys": [
+      "report"
+    ],
+    "sha256": "43fd573fa771d55615386147c25556d0c85d6b67e4df20fe4f2f45cac675dd3b"
+  },
+  "installed/measured/legacy/report.json": {
+    "file": "installed-verification.json.gz",
+    "keys": [
+      "report",
+      "legacy"
+    ],
+    "sha256": "dae6bd28f38a6cd8ffa15cb0f86212a5928fe3d48d092810e47a2a56bb61fc38"
+  },
+  "installed/measured/legacy/legacy/report.json": {
+    "file": "installed-verification.json.gz",
+    "keys": [
+      "report",
+      "legacy",
+      "legacy"
+    ],
+    "sha256": "7e64506e76e50276363462640beaef4ac156f82314c6d7646d9ff5288dabaa8d"
+  },
+  "installed/measured/legacy/legacy/legacy/report.json": {
+    "file": "installed-verification.json.gz",
+    "keys": [
+      "report",
+      "legacy",
+      "legacy",
+      "legacy"
+    ],
+    "sha256": "fbb8c599835e825b8f33760c8a7ec34470dcb8b778697a60676f108dc9a84ac9"
+  }
+}

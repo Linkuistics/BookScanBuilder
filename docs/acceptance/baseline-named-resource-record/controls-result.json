@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "controls": {
+    "runtime-use-upgrade": "no resource-use claim",
+    "missing-cycle-disproof": "isolated named-resource mutation failures"
+  }
+}

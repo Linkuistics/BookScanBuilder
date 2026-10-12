@@ -1,0 +1,204 @@
+{
+  "cases": [
+    {
+      "name": "gray2",
+      "size": [
+        3,
+        2
+      ],
+      "bits": 2,
+      "packed": "18e4",
+      "channels": [
+        [
+          "0"
+        ],
+        [
+          "1/3"
+        ],
+        [
+          "2/3"
+        ],
+        [
+          "1"
+        ],
+        [
+          "2/3"
+        ],
+        [
+          "1/3"
+        ]
+      ],
+      "rgb": "000000555555aaaaaaffffffaaaaaa555555",
+      "alpha": null,
+      "unavailable": false
+    },
+    {
+      "name": "inverse-gray",
+      "size": [
+        3,
+        1
+      ],
+      "bits": 8,
+      "packed": "0080ff",
+      "channels": [
+        [
+          "1"
+        ],
+        [
+          "127/255"
+        ],
+        [
+          "0"
+        ]
+      ],
+      "rgb": "ffffff7f7f7f000000",
+      "alpha": null,
+      "unavailable": false
+    },
+    {
+      "name": "rgb-key",
+      "size": [
+        2,
+        1
+      ],
+      "bits": 8,
+      "packed": "010203010204",
+      "channels": [
+        [
+          "254/255",
+          "253/255",
+          "84/85"
+        ],
+        [
+          "254/255",
+          "253/255",
+          "251/255"
+        ]
+      ],
+      "rgb": "fefdfcfefdfb",
+      "alpha": "00ff",
+      "unavailable": false
+    },
+    {
+      "name": "indexed-rgb",
+      "size": [
+        4,
+        1
+      ],
+      "bits": 2,
+      "packed": "1b",
+      "channels": [
+        [
+          "0",
+          "128/255",
+          "1"
+        ],
+        [
+          "1",
+          "128/255",
+          "0"
+        ],
+        [
+          "1",
+          "128/255",
+          "0"
+        ],
+        [
+          "1",
+          "128/255",
+          "0"
+        ]
+      ],
+      "rgb": "0080ffff8000ff8000ff8000",
+      "alpha": null,
+      "unavailable": false
+    },
+    {
+      "name": "stencil",
+      "size": [
+        2,
+        1
+      ],
+      "bits": 1,
+      "packed": "40",
+      "channels": [
+        [
+          "1"
+        ],
+        [
+          "0"
+        ]
+      ],
+      "rgb": "ffffff000000",
+      "alpha": null,
+      "unavailable": false
+    },
+    {
+      "name": "icc",
+      "size": [
+        1,
+        1
+      ],
+      "bits": 8,
+      "packed": "0080ff",
+      "channels": [
+        [
+          "-1",
+          "128/255",
+          "4"
+        ]
+      ],
+      "rgb": null,
+      "alpha": null,
+      "unavailable": true
+    },
+    {
+      "name": "cmyk",
+      "size": [
+        1,
+        1
+      ],
+      "bits": 8,
+      "packed": "001122ff",
+      "channels": [
+        [
+          "0",
+          "1/15",
+          "2/15",
+          "1"
+        ]
+      ],
+      "rgb": null,
+      "alpha": null,
+      "unavailable": true
+    },
+    {
+      "name": "gray16",
+      "size": [
+        2,
+        1
+      ],
+      "bits": 16,
+      "packed": "0001fffe",
+      "channels": [
+        [
+          "1/65535"
+        ],
+        [
+          "65534/65535"
+        ]
+      ],
+      "rgb": "000000ffffff",
+      "alpha": null,
+      "unavailable": false
+    }
+  ],
+  "source": "https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/PDF32000_2008.pdf",
+  "sections": [
+    "8.9.5.2",
+    "8.6.6.3",
+    "8.9.6.4"
+  ],
+  "bounds": "Exact rational channels; device RGB nearest-8-bit/half-up display. No sampling.",
+  "limitations": "No validated ICC/CMYK conversion, mask painting/composition, interpolation or complete-page fidelity."
+}

@@ -1,0 +1,22 @@
+{
+  "starting_paths_preserved": 1855,
+  "changed_paths": [
+    ".grove/40-k47/01-k53/11-impl--baseline-finite-k63.md",
+    "Taskfile.yml",
+    "src/bookscan/project_header.py",
+    "tests/test_project_header.py"
+  ],
+  "original_functions_changed": [
+    "Stores.provision"
+  ],
+  "original_prefixes_preserved": true,
+  "new_paths_confined": true,
+  "archive_members_verified": 46,
+  "negative_controls_rejected": [
+    "missing-path",
+    "unrelated-edit",
+    "old-test-edit",
+    "protected-method-edit",
+    "module-constant-edit"
+  ]
+}

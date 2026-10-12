@@ -1,0 +1,97 @@
+{
+  "changed_starting_paths": [
+    ".grove/40-k47/01-k53/11-impl--baseline-finite-k63.md",
+    "Taskfile.yml",
+    "docs/acceptance/baseline-finite.md",
+    "src/bookscan/ownership.py",
+    "tests/test_initial_import.py"
+  ],
+  "identity": [
+    "ryouonnvvlkzyyxmxrpqxnuqrysrqtvy",
+    "",
+    "03eb30abe1ae485696e5deec25bfb229a42ecf69",
+    "false"
+  ],
+  "new_paths": [
+    "docs/acceptance/baseline-bootstrap-cleanup/README.md",
+    "docs/acceptance/baseline-bootstrap-cleanup/boundary-result.json",
+    "docs/acceptance/baseline-bootstrap-cleanup/boundary.py.txt",
+    "docs/acceptance/baseline-bootstrap-cleanup/capture.py.txt",
+    "docs/acceptance/baseline-bootstrap-cleanup/compare-preliminary.py.txt",
+    "docs/acceptance/baseline-bootstrap-cleanup/compare.py.txt",
+    "docs/acceptance/baseline-bootstrap-cleanup/comparison.json.gz",
+    "docs/acceptance/baseline-bootstrap-cleanup/coverage-final.json.gz",
+    "docs/acceptance/baseline-bootstrap-cleanup/coverage-ranges.json.gz",
+    "docs/acceptance/baseline-bootstrap-cleanup/coverage.json.gz",
+    "docs/acceptance/baseline-bootstrap-cleanup/final-direct-fallback.json.gz",
+    "docs/acceptance/baseline-bootstrap-cleanup/graph.json.gz",
+    "docs/acceptance/baseline-bootstrap-cleanup/index.json",
+    "docs/acceptance/baseline-bootstrap-cleanup/junit.json.gz",
+    "docs/acceptance/baseline-bootstrap-cleanup/logs.json.gz",
+    "docs/acceptance/baseline-bootstrap-cleanup/measure.py.txt",
+    "docs/acceptance/baseline-bootstrap-cleanup/measured-after.json.gz",
+    "docs/acceptance/baseline-bootstrap-cleanup/measured-before.json.gz",
+    "docs/acceptance/baseline-bootstrap-cleanup/mutations.json.gz",
+    "docs/acceptance/baseline-bootstrap-cleanup/mutations.py.txt",
+    "docs/acceptance/baseline-bootstrap-cleanup/predecessor.json.gz",
+    "docs/acceptance/baseline-bootstrap-cleanup/predecessor.py.txt",
+    "docs/acceptance/baseline-bootstrap-cleanup/reports.json.gz",
+    "docs/acceptance/baseline-bootstrap-cleanup/runs.json.gz",
+    "docs/acceptance/baseline-bootstrap-cleanup/starting.json.gz",
+    "docs/acceptance/baseline-bootstrap-cleanup/subjects.json.gz",
+    "tests/test_lock_cleanup.py"
+  ],
+  "prefixes": {
+    ".grove/40-k47/01-k53/11-impl--baseline-finite-k63.md": {
+      "bytes": 664651,
+      "sha256": "8cd0c7a1d500cea9da2d411dad7d4e24b310313af00be801b4f8e0f446b491b3"
+    },
+    "Taskfile.yml": {
+      "bytes": 40355,
+      "sha256": "4e34fb6ae2f8e065da98d011a9f6b29f3c98efd980383d981ded400618404565"
+    },
+    "docs/acceptance/baseline-finite.md": {
+      "bytes": 345486,
+      "sha256": "dab818107bf6ceacb411c71efc7aabc175c4fbc5e40500aa3c201de80bc6b83f"
+    },
+    "tests/test_initial_import.py": {
+      "bytes": 16038,
+      "sha256": "4f5492dedbd4158553a97eceeac42d409cb43c9e0f9a129aac02498f153c8045"
+    }
+  },
+  "preserved_ownership_segments": [
+    "Import(names=[alias(name='errno')])",
+    "Import(names=[alias(name='fcntl')])",
+    "Import(names=[alias(name='os')])",
+    "Import(names=[alias(name='platform')])",
+    "Import(names=[alias(name='re')])",
+    "Import(names=[alias(name='stat')])",
+    "Import(names=[alias(name='uuid')])",
+    "ImportFrom(module='dataclasses', names=[alias(name='dataclass')], level=0)",
+    "ImportFrom(module='pathlib', names=[alias(name='Path')], level=0)",
+    "ImportFrom(module='types', names=[alias(name='TracebackType')], level=0)",
+    "ImportFrom(module='typing', names=[alias(name='Self')], level=0)",
+    "OwnershipError.remediation",
+    "OwnershipError.__str__",
+    "LockIdentity.content",
+    "_directory",
+    "Writer.__init__",
+    "Writer.acquire",
+    "Writer.verify",
+    "Writer.close",
+    "Writer.__enter__",
+    "Writer.__exit__"
+  ],
+  "refusing_controls": [
+    "missing",
+    "unrelated",
+    "foreign",
+    "change",
+    "parent",
+    "description",
+    "conflict",
+    "prefix"
+  ],
+  "result": "passed",
+  "starting_paths": 1795
+}

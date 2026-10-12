@@ -9,7 +9,8 @@ from pathlib import Path
 from types import FrameType
 from typing import TextIO
 
-from bookscan.prepare import operate
+from bookscan.finite_protocol import Delivery
+from bookscan.finite_protocol import run as run_finite
 from bookscan.publication import Control, startup_mode
 from bookscan.results import Json, PreparationError
 from bookscan.selections import parse
@@ -99,6 +100,10 @@ def run(
                     pass
                 return 5
         control.check()
+        # PDF dependencies belong to an actual preparation operation, not help
+        # or finite invocation routing (which must remain dependency-free).
+        from bookscan.prepare import operate
+
         # Resolve an available output even when parsing later fails.
         if "--output" in args:
             i = args.index("--output") + 1
@@ -147,18 +152,21 @@ def run(
 
 
 def main() -> int:
+    args = sys.argv[1:]
+    if not args or args[0] != "prepare":
+        delivery = Delivery()
+        result = run_finite(args, sys.stdout, sys.stderr, delivery=delivery)
+        if delivery.failed:
+            # Keep the selected exit; shutdown must not reflush EPIPE into 120.
+            sys.stdout = open(os.devnull, "w")
+        return result
     control = Control()
     mode = startup_mode()
     handlers: dict[signal.Signals, int | Callable[[int, FrameType | None], None] | None] = {}
     for sig in (signal.SIGINT, signal.SIGTERM):
         handlers[sig] = signal.signal(sig, control.interrupt)
     try:
-        args = sys.argv[1:]
-        if args and args[0] == "prepare":
-            args = args[1:]
-        elif "--help" not in args:
-            args = ["<expected prepare subcommand>", *args]
-        result = run(args, sys.stdout, sys.stderr, control=control, mode=mode)
+        result = run(args[1:], sys.stdout, sys.stderr, control=control, mode=mode)
         if result == 5 or (
             any(
                 isinstance(w, dict) and w.get("code") == "RESULT_DELIVERY_FAILED"

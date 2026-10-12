@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "controls": {
+    "scope-use-upgrade": "no scope-use claim",
+    "missing-consistency-disproof": "mutation failures"
+  }
+}

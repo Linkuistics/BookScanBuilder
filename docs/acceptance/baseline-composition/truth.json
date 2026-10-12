@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "size": [
+    64,
+    32
+  ],
+  "points": [
+    "15.36",
+    "7.68"
+  ],
+  "bounds": {
+    "gray-8": {
+      "low_sha256": "8eb5b702763bcac1a5457d1e694caf5394cb1a88628f1ebb165ba3213a6670bb",
+      "high_sha256": "8eb5b702763bcac1a5457d1e694caf5394cb1a88628f1ebb165ba3213a6670bb",
+      "grey": false
+    },
+    "gray-1-fine": {
+      "low_sha256": "3eb3de7aa1b2afa65bb0985960a23db40c9928be1201835dffd175375c57fa23",
+      "high_sha256": "3eb3de7aa1b2afa65bb0985960a23db40c9928be1201835dffd175375c57fa23",
+      "grey": false
+    },
+    "inline-gray": {
+      "low_sha256": "8eb5b702763bcac1a5457d1e694caf5394cb1a88628f1ebb165ba3213a6670bb",
+      "high_sha256": "8eb5b702763bcac1a5457d1e694caf5394cb1a88628f1ebb165ba3213a6670bb",
+      "grey": false
+    },
+    "stencil": {
+      "low_sha256": "91e010b20980ee76de96714e39c131c4661f11ef74766d6edbcacecf4845dc4d",
+      "high_sha256": "91e010b20980ee76de96714e39c131c4661f11ef74766d6edbcacecf4845dc4d",
+      "grey": false
+    },
+    "stencil-reversed": {
+      "low_sha256": "afa61f04b97b83d620de3eeae0b52eba1f9ecb08f09b7c1004bce830ff745621",
+      "high_sha256": "afa61f04b97b83d620de3eeae0b52eba1f9ecb08f09b7c1004bce830ff745621",
+      "grey": false
+    },
+    "explicit-mask": {
+      "low_sha256": "d285391d621da370d1ab24eb3c0902c881c5267a48873d595ea1143c983b5260",
+      "high_sha256": "d285391d621da370d1ab24eb3c0902c881c5267a48873d595ea1143c983b5260",
+      "grey": false
+    },
+    "colour-key-reversed": {
+      "low_sha256": "6676b7364ec33f30ba43b2d3f6c311554308ed2853b5f9689bea65f7b3b5e853",
+      "high_sha256": "6676b7364ec33f30ba43b2d3f6c311554308ed2853b5f9689bea65f7b3b5e853",
+      "grey": false
+    },
+    "soft-mask": {
+      "low_sha256": "d8dc9628c5b021f49f8ee44ce93af488370232ccc12cbb41bfe5d9dc9d0d0710",
+      "high_sha256": "d8dc9628c5b021f49f8ee44ce93af488370232ccc12cbb41bfe5d9dc9d0d0710",
+      "grey": false
+    },
+    "half-pixel-gray": {
+      "low_sha256": "b230e33cbab81f5b6c8bba6f2c6f6bbfd3930ea2fff51addea4f1f6e3999fb70",
+      "high_sha256": "11e99efe842509727b07dd9e127fa6a9ef68150284c932160f7a87fd807c6278",
+      "grey": true
+    }
+  },
+  "bound_policy": "Exact every channel, except half-pixel local convex bounds/neutral grey",
+  "phase": "150-ppi samples translated +0.5 baseline pixel, independent cell intersections",
+  "unavailable": "ICC/device calibration/fonts/Matte/general blending/complex real truth"
+}

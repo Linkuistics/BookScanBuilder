@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "change_id": "ryouonnvvlkzyyxmxrpqxnuqrysrqtvy",
+  "parent": "03eb30abe1ae485696e5deec25bfb229a42ecf69",
+  "changed_paths": [
+    ".grove/40-k47/01-k53/11-impl--baseline-finite-k63.md",
+    "Taskfile.yml",
+    "docs/acceptance/baseline-finite.md",
+    "docs/acceptance/baseline-native-sample-record/README.md",
+    "docs/acceptance/baseline-native-sample-record/boundary-result.json",
+    "docs/acceptance/baseline-native-sample-record/coverage.json",
+    "docs/acceptance/baseline-native-sample-record/evidence-controls.json",
+    "docs/acceptance/baseline-native-sample-record/index.json.gz",
+    "docs/acceptance/baseline-native-sample-record/raw-000.zippart",
+    "docs/acceptance/baseline-native-sample-record/raw-001.zippart",
+    "docs/acceptance/baseline-native-sample-record/raw-002.zippart",
+    "docs/acceptance/baseline-native-sample-record/raw-003.zippart",
+    "docs/acceptance/baseline-native-sample-record/raw-004.zippart",
+    "docs/acceptance/baseline-native-sample-record/raw-005.zippart",
+    "docs/acceptance/baseline-native-sample-record/raw-006.zippart",
+    "docs/acceptance/baseline-native-sample-record/verify.py",
+    "src/bookscan/assessment.py",
+    "src/bookscan/native_sample_record.py",
+    "tests/native_sample_record_acceptance.py",
+    "tests/test_native_sample_record.py"
+  ],
+  "frozen_subjects": 16743,
+  "note_prefixes_preserved": true,
+  "controls": {
+    "change": "wrong change",
+    "parent": "wrong parent",
+    "description": "partial description/seal",
+    "conflict": "conflicts",
+    "foreign-path": "foreign added path"
+  }
+}

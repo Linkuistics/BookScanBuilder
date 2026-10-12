@@ -1,0 +1,54 @@
+import ast,copy,gzip,hashlib,json,pathlib,subprocess
+root=pathlib.Path.cwd()
+base=pathlib.Path('/private/tmp/bookscan-k63-empty-store-cleanup')
+starting=json.loads((base/'before.json').read_text())
+current={p:hashlib.sha256((root/p).read_bytes()).hexdigest() for p in subprocess.check_output(['jj','file','list','--no-pager'],text=True).splitlines() if (root/p).is_file()}
+changed={'src/bookscan/project_reservation.py','tests/test_project_reservation.py','Taskfile.yml','.grove/40-k47/01-k53/11-impl--baseline-finite-k63.md','docs/acceptance/baseline-finite.md'}
+identity=subprocess.check_output(['jj','log','--no-graph','-r','@','-T','change_id ++ "\\n" ++ description ++ "\\n" ++ parents.map(|c| c.commit_id()).join("\\n") ++ "\\n" ++ conflict ++ "\\n"','--no-pager'],text=True).splitlines()
+prefixes={p:((base/'before'/p).read_bytes(),(root/p).read_bytes()) for p in changed if p.endswith('.md') or p=='Taskfile.yml'}
+def validate(actual,ident,pref):
+ assert set(starting)<=set(actual),'missing starting path'
+ assert all(actual[p]==h for p,h in starting.items() if p not in changed),'unrelated changed bytes'
+ assert all(p.startswith('docs/acceptance/baseline-empty-store-cleanup/') for p in set(actual)-set(starting)),'foreign new path'
+ assert ident==['ryouonnvvlkzyyxmxrpqxnuqrysrqtvy','','03eb30abe1ae485696e5deec25bfb229a42ecf69','false'],'change boundary'
+ assert all(after.startswith(before) for before,after in pref.values()),'nonappend note/recipe edit'
+validate(current,identity,prefixes)
+controls=[]
+for fault in ['missing','unrelated','foreign','change','parent','description','conflict','prefix']:
+ actual=current.copy(); ident=identity.copy(); pref=copy.deepcopy(prefixes)
+ if fault=='missing': del actual['src/bookscan/pdf.py']
+ elif fault=='unrelated': actual['src/bookscan/pdf.py']='wrong'
+ elif fault=='foreign': actual['foreign.txt']='wrong'
+ elif fault=='change': ident[0]='wrong'
+ elif fault=='parent': ident[2]='wrong'
+ elif fault=='description': ident[1]='partial milestone'
+ elif fault=='conflict': ident[3]='true'
+ else:
+  key='Taskfile.yml'; prior,after=pref[key]; pref[key]=(prior,b'wrong'+after)
+ try: validate(actual,ident,pref)
+ except AssertionError: controls.append(fault)
+ else: raise AssertionError('boundary failed to reject '+fault)
+# Compare every pre-existing test/function/method, not an anticipated pattern list.
+def segments(raw):
+ tree=ast.parse(raw)
+ lines=raw.splitlines(keepends=True)
+ result={}
+ for node in tree.body:
+  if isinstance(node,ast.ClassDef):
+   for method in node.body:
+    if isinstance(method,(ast.FunctionDef,ast.AsyncFunctionDef)):
+     begin=min([method.lineno]+[d.lineno for d in method.decorator_list])-1
+     result[node.name+'.'+method.name]=''.join(lines[begin:method.end_lineno])
+  elif isinstance(node,(ast.FunctionDef,ast.AsyncFunctionDef,ast.Import,ast.ImportFrom)):
+   begin=min([node.lineno]+[d.lineno for d in getattr(node,'decorator_list',[])])-1
+   key=getattr(node,'name',ast.dump(node,include_attributes=False))
+   result[key]=''.join(lines[begin:node.end_lineno])
+ return result
+preserved={}
+for p in ['src/bookscan/project_reservation.py','tests/test_project_reservation.py']:
+ before=segments((base/'before'/p).read_text()); after=segments((root/p).read_text())
+ assert all(after.get(k)==v for k,v in before.items()),p
+ preserved[p]={'preserved':list(before),'added':sorted(set(after)-set(before))}
+record={'starting_paths':len(starting),'new_paths':sorted(set(current)-set(starting)),'changed_starting_paths':sorted(p for p in starting if starting[p]!=current[p]),'identity':identity,'refusing_controls':controls,'syntax_segments':preserved,'result':'passed'}
+(base/'boundary-result.json').write_text(json.dumps(record,sort_keys=True,indent=2)+'\n')
+print(len(starting),'starting paths preserved; exact five changed paths; eight refusing controls;',len(record['new_paths']),'new evidence paths')

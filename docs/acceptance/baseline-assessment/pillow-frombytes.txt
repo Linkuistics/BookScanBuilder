@@ -1,0 +1,88 @@
+Pillow 12.3.0; https://pillow.readthedocs.io/en/stable/reference/Image.html#PIL.Image.frombytes
+def frombytes(
+    mode: str,
+    size: tuple[int, int],
+    data: DecoderInput,
+    decoder_name: str = "raw",
+    *args: Any,
+) -> Image:
+    """
+    Creates a copy of an image memory from pixel data in a buffer.
+
+    In its simplest form, this function takes three arguments
+    (mode, size, and unpacked pixel data).
+
+    You can also use any pixel decoder supported by PIL. For more
+    information on available decoders, see the section
+    :ref:`Writing Your Own File Codec <file-codecs>`.
+
+    Note that this function decodes pixel data only, not entire images.
+    If you have an entire image in a string, wrap it in a
+    :py:class:`~io.BytesIO` object, and use :py:func:`~PIL.Image.open` to load
+    it.
+
+    :param mode: The image mode. See: :ref:`concept-modes`.
+    :param size: The image size.
+    :param data: A byte buffer containing raw data for the given mode.
+    :param decoder_name: What decoder to use.
+    :param args: Additional parameters for the given decoder.
+    :returns: An :py:class:`~PIL.Image.Image` object.
+    """
+
+    _check_size(size)
+
+    im = new(mode, size)
+    if im.width != 0 and im.height != 0:
+        decoder_args: Any = args
+        if len(decoder_args) == 1 and isinstance(decoder_args[0], tuple):
+            # may pass tuple instead of argument list
+            decoder_args = decoder_args[0]
+
+        if decoder_name == "raw" and decoder_args == ():
+            decoder_args = mode
+
+        im.frombytes(data, decoder_name, decoder_args)
+    return im
+
+    def frombytes(
+        self,
+        data: DecoderInput,
+        decoder_name: str = "raw",
+        *args: Any,
+    ) -> None:
+        """
+        Loads this image with pixel data from a bytes object.
+
+        This method is similar to the :py:func:`~PIL.Image.frombytes` function,
+        but loads data into this image instead of creating a new image object.
+        """
+
+        if self.width == 0 or self.height == 0:
+            return
+
+        decoder_args: Any = args
+        if len(decoder_args) == 1 and isinstance(decoder_args[0], tuple):
+            # may pass tuple instead of argument list
+            decoder_args = decoder_args[0]
+
+        if decoder_args and decoder_args[0] in {"P;2L", "P;4L"}:
+            multiple = 4 if decoder_args[0] == "P;2L" else 8
+            if len(data) % multiple:
+                msg = "not enough image data"
+                raise ValueError(msg)
+
+        # default format
+        if decoder_name == "raw" and decoder_args == ():
+            decoder_args = self.mode
+
+        # unpack data
+        d = _getdecoder(self.mode, decoder_name, decoder_args)
+        d.setimage(self.im, (0, 0) + self.size)
+        s = d.decode(data)
+
+        if s[0] >= 0:
+            msg = "not enough image data"
+            raise ValueError(msg)
+        if s[1] != 0:
+            msg = "cannot decode image data"
+            raise ValueError(msg)

@@ -1,0 +1,92 @@
+{
+  "cases": [
+    {
+      "name": "jpeg-gray",
+      "size": [
+        16,
+        8
+      ],
+      "bits": 8,
+      "channels": [
+        128
+      ],
+      "bound": 0
+    },
+    {
+      "name": "jpeg-rgb",
+      "size": [
+        16,
+        8
+      ],
+      "bits": 8,
+      "channels": [
+        128,
+        128,
+        128
+      ],
+      "bound": 0
+    },
+    {
+      "name": "jpeg-colour",
+      "size": [
+        16,
+        8
+      ],
+      "bits": 8,
+      "channels": [
+        18,
+        52,
+        86
+      ],
+      "bound": 2
+    },
+    {
+      "name": "ccitt-hand-white",
+      "size": [
+        9,
+        2
+      ],
+      "bits": 1,
+      "packed": "ff800000"
+    },
+    {
+      "name": "ccitt-hand-black",
+      "size": [
+        9,
+        2
+      ],
+      "bits": 1,
+      "packed": "0000ff80"
+    },
+    {
+      "name": "ccitt-g4",
+      "size": [
+        9,
+        2
+      ],
+      "bits": 1,
+      "packed": "5500aa80"
+    },
+    {
+      "name": "ccitt-g4-black",
+      "size": [
+        9,
+        2
+      ],
+      "bits": 1,
+      "packed": "aa805500"
+    },
+    {
+      "name": "ccitt-inline",
+      "size": [
+        9,
+        2
+      ],
+      "bits": 1,
+      "packed": "5500aa80"
+    }
+  ],
+  "bounds": "Exact neutral DCT DC channels; constant colour Q100/no subsampling inverse-colour rounding <=2 per channel; exact hand T4 bits and G4 runs. No nonconstant/real JPEG or composition oracle.",
+  "ccitt_source": "https://www.itu.int/itudoc/itu-t/com16/tiff-fx/docs/tiff6.pdf",
+  "limitations": "No Decode, mask, ICC conversion, page rendering, JPX/JBIG2 or CMYK interpretation."
+}

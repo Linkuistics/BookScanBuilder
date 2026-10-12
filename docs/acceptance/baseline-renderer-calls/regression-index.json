@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "compression": "gzip",
+  "source": "/private/tmp/bookscan-k63-pixels-work/regression.json",
+  "sha256": "faa33a7c03183be484ef584eeb13a1e81aa93519006e678d20e77d6b48f76729",
+  "bytes": 3778640,
+  "compressed_sha256": "f941f762d5e23606489180f03beebd5220f237556a54b7b84483d318dcdf6940",
+  "parts": [
+    {
+      "file": "regression-000.gzpart",
+      "sha256": "508003c4517fcddc85828eca0d97a788473620b5ab42c8b594ae6be44377e066",
+      "bytes": 750000
+    },
+    {
+      "file": "regression-001.gzpart",
+      "sha256": "8bf23d699149f4e97a628737b6f12d1cacb1f2124bfd43247f2b3ffce6908324",
+      "bytes": 47999
+    }
+  ]
+}

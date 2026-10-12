@@ -1,0 +1,43 @@
+import copy,hashlib,io,json,pathlib,zipfile
+root=pathlib.Path.cwd();folder=root/'docs/acceptance/baseline-private-header-cleanup';index=json.loads((folder/'index.json').read_text());archive=index['archive'];parts=[]
+for name,record in sorted(archive['parts'].items()):
+ raw=(folder/name).read_bytes();assert len(raw)==record['bytes'] and hashlib.sha256(raw).hexdigest()==record['sha256'];parts.append(raw)
+raw=b''.join(parts);assert len(raw)==archive['bytes'] and hashlib.sha256(raw).hexdigest()==archive['sha256']
+with zipfile.ZipFile(io.BytesIO(raw)) as z:
+ assert len(z.namelist())==len(set(z.namelist())) and set(z.namelist())==set(archive['members']);data={name:z.read(name) for name in z.namelist()}
+ for name,record in archive['members'].items():assert len(data[name])==record['bytes'] and hashlib.sha256(data[name]).hexdigest()==record['sha256']
+def meaning(values):
+ def obj(name):return json.loads(values['reading/'+name])
+ runs=obj('measurement/runs.json');assert all(r['exit']==0 for r in runs)
+ for name in {r['name'] for r in runs}:
+  pair=[r for r in runs if r['name']==name];assert len(pair)==2 and pair[0].get('cases')==pair[1].get('cases')
+ for r in runs:
+  if 'cases' in r:assert all(c[2]=='passed' for c in r['cases'])
+ assert obj('measurement/before.json')==obj('measurement/after.json') and len(obj('measurement/before.json'))==9573
+ checks=[r['cases'] for r in runs if r['name']=='check'];assert len(checks[0])==2719
+ comparison=obj('comparison.json');assert len(comparison['preserved_predecessor_cases'])==2702 and len(comparison['added_cases'])==17
+ assert len(comparison['preparation']['cases'])==9 and len(comparison['preparation_fault_cases'])==90
+ assert len(comparison['ownership']['records'])==6 and len(comparison['reservation']['observations'])==7
+ header=obj('header-comparison.json');assert len(header['cases'])==40 and header['result']=='passed' and header['truth']['public_project'] is False
+ mutations=obj('mutations/results.json');assert [(m['name'],m['failed'],m['passed']) for m in mutations]==[('predecessor',10,64),('inode-only-cleanup',9,65),('omitted-ancestry',2,72),('omitted-parent',1,73),('omitted-mutation-capture',4,70),('unknown-capture-silent',1,73)]
+ for m in mutations:assert m['exit']==1 and sum(c[2]=='failed' for c in m['cases'])==m['failed'] and all(c[2] in {'passed','failed'} for c in m['cases'])
+ for name in ['src/bookscan/project_header.py','tests/test_project_header.py','Taskfile.yml']:
+  assert values['measured/'+name]==(root/name).read_bytes()
+  assert hashlib.sha256(values['measured/'+name]).hexdigest()==obj('measurement/before.json')[name]['sha256']
+meaning(data);controls=[]
+for fault in ['missing-record','removed-disproof','invented-public-delivery','wrong-current-source']:
+ wrong=data.copy()
+ if fault=='missing-record':del wrong['reading/header-comparison.json']
+ elif fault=='removed-disproof':wrong['reading/mutations/results.json']=json.dumps([]).encode()
+ elif fault=='invented-public-delivery':
+  x=json.loads(wrong['reading/header-comparison.json']);x['truth']['public_project']=True;wrong['reading/header-comparison.json']=json.dumps(x).encode()
+ else:wrong['measured/src/bookscan/project_header.py']=b'wrong source'
+ try:meaning(wrong)
+ except (AssertionError,KeyError):controls.append(fault)
+ else:raise AssertionError('semantic control accepted '+fault)
+supplement=folder/'supplemental-index.json'
+if supplement.exists():
+ for name,record in json.loads(supplement.read_text()).items():
+  content=(folder/name).read_bytes();assert len(content)==record['bytes'] and hashlib.sha256(content).hexdigest()==record['sha256'],name
+record={'archive_bytes':len(raw),'members':len(data),'controls':controls,'index_sha256':hashlib.sha256((folder/'index.json').read_bytes()).hexdigest(),'unavailable_generated_outputs':index['unavailable_generated_outputs'],'meaning':'Content integrity/consistency, not execution attestation, source fidelity, public create or full finite delivery.','result':'passed'}
+(folder/'verification.json').write_text(json.dumps(record,sort_keys=True,indent=2)+'\n');print(json.dumps({'members':len(data),'controls':controls,'result':'passed'}))

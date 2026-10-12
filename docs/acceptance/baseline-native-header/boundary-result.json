@@ -1,0 +1,76 @@
+{
+  "starting_paths": 1620,
+  "current_paths": 1634,
+  "frozen_subjects": 19482,
+  "observed": {
+    "change": "ryouonnvvlkzyyxmxrpqxnuqrysrqtvy",
+    "parent": "03eb30abe1ae485696e5deec25bfb229a42ecf69",
+    "description": "",
+    "conflicts": "",
+    "changed": [
+      ".grove/40-k47/01-k53/11-impl--baseline-finite-k63.md",
+      "Taskfile.yml",
+      "docs/acceptance/baseline-finite.md",
+      "src/bookscan/project_header.py",
+      "tests/checkpoint_acceptance.py",
+      "tests/checkpoint_worker.py",
+      "tests/native_inventory_acceptance.py",
+      "tests/test_analysis_record.py",
+      "tests/test_fontconfig_cache_record.py",
+      "tests/test_fontconfig_discovery_record.py",
+      "tests/test_fontconfig_record.py",
+      "tests/test_linked_record.py",
+      "tests/test_native_sample_record.py",
+      "tests/test_occurrence_record.py",
+      "tests/test_project_header.py",
+      "tests/test_render_record.py",
+      "tests/test_resource_record.py",
+      "tests/test_source_record.py",
+      "tests/test_triage_record.py"
+    ],
+    "new": [
+      "docs/acceptance/baseline-native-header/README.md",
+      "docs/acceptance/baseline-native-header/boundary-result.json",
+      "docs/acceptance/baseline-native-header/boundary.py.gz",
+      "docs/acceptance/baseline-native-header/controls-result.json",
+      "docs/acceptance/baseline-native-header/controls.py",
+      "docs/acceptance/baseline-native-header/coverage.json",
+      "docs/acceptance/baseline-native-header/index.json.gz",
+      "docs/acceptance/baseline-native-header/raw-000.zippart",
+      "docs/acceptance/baseline-native-header/raw-001.zippart",
+      "docs/acceptance/baseline-native-header/raw-002.zippart",
+      "docs/acceptance/baseline-native-header/raw-003.zippart",
+      "docs/acceptance/baseline-native-header/raw-004.zippart",
+      "docs/acceptance/baseline-native-header/verify.py",
+      "tests/test_native_header.py"
+    ],
+    "prefixes": true
+  },
+  "controls": [
+    {
+      "control": "wrong-change",
+      "refused": "Task-owned change"
+    },
+    {
+      "control": "wrong-parent",
+      "refused": "Task parent"
+    },
+    {
+      "control": "partial-description",
+      "refused": "No partial description"
+    },
+    {
+      "control": "conflict",
+      "refused": "No conflicts"
+    },
+    {
+      "control": "foreign-path",
+      "refused": "Foreign path"
+    },
+    {
+      "control": "lost-prefix",
+      "refused": "Append-only notes and Taskfile"
+    }
+  ],
+  "public_finite_delivery": false
+}

@@ -1,0 +1,1 @@
+{"counts": {"focused": 336, "frozen_subjects": 9583, "full": 2846, "header_worker_cases": 40, "inode-only_failures": 21, "predecessor_failures": 36, "predecessor_outcomes": 2786, "preparation_cases": 9, "preparation_faults": 90, "preparation_signals": 38, "staff": 4, "wrong_report_controls": 3}, "members": 3221, "verified": true, "wrong_controls": 4}

@@ -1,0 +1,132 @@
+{
+  "project": "Users-antony-Development-BookScanBuilder",
+  "signal": "best_effort",
+  "indexed_at": "2026-10-14T20:05:10Z",
+  "metadata": {
+    "generation": "2026-10-14T20:05:10Z",
+    "index_mode": "full",
+    "recorded_at": "2026-10-14T20:05:10Z",
+    "recording_status": "complete",
+    "ignored_files_stored": 20,
+    "ignored_files_total": 20,
+    "hash_records_complete": true,
+    "coverage_version": 3,
+    "generation_matches": true
+  },
+  "paths": [
+    {
+      "requested_path": "src/bookscan/project_header.py",
+      "path": "src/bookscan/project_header.py",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "src/bookscan/project_reservation.py",
+      "path": "src/bookscan/project_reservation.py",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "tests/test_project_header.py",
+      "path": "tests/test_project_header.py",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "tests/test_native_header.py",
+      "path": "tests/test_native_header.py",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "tests/test_project_reservation.py",
+      "path": "tests/test_project_reservation.py",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "tests/test_initial_import.py",
+      "path": "tests/test_initial_import.py",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "tests/test_import_assembly.py",
+      "path": "tests/test_import_assembly.py",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "tests/test_baseline_state.py",
+      "path": "tests/test_baseline_state.py",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "tests/prepare_acceptance.py",
+      "path": "tests/prepare_acceptance.py",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "experiments/test_staff_coordinates.py",
+      "path": "experiments/test_staff_coordinates.py",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "Taskfile.yml",
+      "path": "Taskfile.yml",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "pyproject.toml",
+      "path": "pyproject.toml",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": ".grove/40-k47/01-k53/11-impl--baseline-finite-k63.md",
+      "path": ".grove/40-k47/01-k53/11-impl--baseline-finite-k63.md",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "docs/acceptance/baseline-empty-provision-cleanup/README.md",
+      "path": "docs/acceptance/baseline-empty-provision-cleanup/README.md",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    }
+  ],
+  "scopes": [],
+  "caveat": "Best-effort signal only. No recorded issue does not prove graph or source completeness; read flagged source and qualify claims when metadata is changed or unavailable."
+}

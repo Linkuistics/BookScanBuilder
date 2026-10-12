@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "compression": "gzip",
+  "source": "/private/tmp/bookscan-k63-directory-work/measurement.json",
+  "sha256": "43e636e95e35d548dcaa7c60400a3477e492a654c3b06acc629ea4e1e4688d19",
+  "bytes": 5422719,
+  "compressed_sha256": "a31fb908871be5b9ccae6ad3db83a8435d95eb03aa07e3f06e3553fa41c8b878",
+  "parts": [
+    {
+      "file": "measurement-000.gzpart",
+      "sha256": "df8d06affbab40e8adc027df18d45663453a5b1ea1df3b3257a41829f0ca1a91",
+      "bytes": 750000
+    },
+    {
+      "file": "measurement-001.gzpart",
+      "sha256": "fdb4af975fc8cc04b559d034b9dab16ee73aeb34953b472ac7aa6629ad81f83f",
+      "bytes": 311873
+    }
+  ]
+}

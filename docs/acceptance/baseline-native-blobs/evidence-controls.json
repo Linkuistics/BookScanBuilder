@@ -1,0 +1,17 @@
+[
+  {
+    "control": "false-delivery",
+    "refused": "No finite delivery",
+    "coherent_archive": true
+  },
+  {
+    "control": "removed-disproof",
+    "refused": "Required independent disproof",
+    "coherent_archive": true
+  },
+  {
+    "control": "wrong-blob-length",
+    "refused": "Native retained length",
+    "coherent_archive": true
+  }
+]

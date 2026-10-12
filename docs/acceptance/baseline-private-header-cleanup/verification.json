@@ -1,0 +1,35 @@
+{
+  "archive_bytes": 4089532,
+  "controls": [
+    "missing-record",
+    "removed-disproof",
+    "invented-public-delivery",
+    "wrong-current-source"
+  ],
+  "index_sha256": "bad867502b974a7ea1f8b6d87418e333292aa00f0931c69d85ec8dc8fb3b7650",
+  "meaning": "Content integrity/consistency, not execution attestation, source fidelity, public create or full finite delivery.",
+  "members": 1867,
+  "result": "passed",
+  "unavailable_generated_outputs": [
+    {
+      "bytes": 6238,
+      "ctime_ns": 1792007091880043903,
+      "device": 16777234,
+      "inode": 412138866,
+      "mode": 32768,
+      "mtime_ns": 1792007091877743329,
+      "path": "/private/tmp/bookscan-k63-header-private-cleanup/measurement/a/preparation/artifacts/fault-checks/test_private_and_startup_umask2/out.pdf",
+      "reason": "Deliberately unreadable generated preparation fault output; no permission changed."
+    },
+    {
+      "bytes": 6238,
+      "ctime_ns": 1792007166529975441,
+      "device": 16777234,
+      "inode": 412172901,
+      "mode": 32768,
+      "mtime_ns": 1792007166527693950,
+      "path": "/private/tmp/bookscan-k63-header-private-cleanup/measurement/b/preparation/artifacts/fault-checks/test_private_and_startup_umask2/out.pdf",
+      "reason": "Deliberately unreadable generated preparation fault output; no permission changed."
+    }
+  ]
+}

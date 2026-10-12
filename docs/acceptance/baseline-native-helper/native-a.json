@@ -1,0 +1,473 @@
+{
+  "schema": "BookScanBuilderNativeAcceptance",
+  "version": 1,
+  "preflight": {
+    "inputs": {
+      "source_sha256": "239faded1d206d8639c12499dd87552d0fe29a7bc845b31737c1c704e343cab7",
+      "platform": "macOS-27.0.1-arm64-arm-64bit",
+      "machine": "arm64",
+      "python_libraries": {
+        "Pillow": "12.3.0",
+        "pikepdf": "10.16.0"
+      },
+      "compiler": {
+        "path": "/usr/bin/clang",
+        "sha256": "34129c71a01a74f7f3b2443521519b2e5447553fa187f5fcafaaf8c42cc192e2",
+        "driver_path": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang",
+        "driver_sha256": "1590ac950a3d627817d09ade5cb60b2115f17a72182a3141e010b4bcc482a0c9",
+        "version": "Apple clang version 21.0.0 (clang-2100.3.34.2)\nTarget: arm64-apple-darwin27.0.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin"
+      },
+      "pkg_config": {
+        "path": "/opt/homebrew/Cellar/pkgconf/3.0.8/bin/pkgconf",
+        "sha256": "fe5de8e613f113140045400f1d02346df3ccda0a19ddb306c1b1693113ca016a",
+        "version": "3.0.8"
+      },
+      "poppler": {
+        "path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm",
+        "sha256": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
+        "version": "26.10.0"
+      },
+      "leptonica": {
+        "version": "1.87.0",
+        "path": "/opt/homebrew/Cellar/leptonica/1.87.0/lib/libleptonica.6.dylib",
+        "sha256": "f9e973f4a61ba251ccb7a0d4545ce7e00e6d2c90ee4a55313012e68da7a7ebfa"
+      },
+      "headers": {
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/allheaders.h": "9d7d7ab379a9c88d6d37d440a83f72b2f5dfa53097de3630e2c0288e067f3ef1",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/alltypes.h": "fdbf66ffef386c429c04b6118865d8509ff63d5c0e52949918fe95e64db4ee55",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/array.h": "f1375e05bc50f0c3fbbd7b84a16fa9cc0247b9066d84af2a691797b86ef8731d",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/array_internal.h": "6503883af8155c4e57daad609f8efdccc67d1c64b8ed6f8501cf0adc580d8fb7",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/arrayaccess.h": "3d0c332e2e98ed2d8472a8f45a221a6bf9e75ed0c25f471d8afaf15a5a94017f",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/bbuffer.h": "3d3143760c038f84c4dd2f486148fd0d0e7b47159ad048451bc59ebb76bb0e98",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/bilateral.h": "a99361ea678f429414f7f6dde4f81079a358f4377f0afa8f58f17aca0253ca30",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/bmf.h": "89331ab053e879e2db260180ee2375d30d3efeddc712d06ae2e4167e4a5e9707",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/bmfdata.h": "5bc51786e285943ed8220a90cf56dc9e44344054cf18a7e95dcf3d9fc9ea8042",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/bmp.h": "afa2e367d71c29ed83d15bd608fff53bfcdb7e3490f44a3ee2c2c1093e99c087",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/ccbord.h": "45015ff3b2e92d8afcc0124da062a351ba2563f5bfbd410adc9cb5dcef158f55",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/ccbord_internal.h": "b98b8eb2b2d79f3aa5b7c94d932e3b0a09a99823c974e278871efffc58b9e5ad",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/colorfill.h": "119b952a9a8c5304aec73214378641b5953147d1c1689e3e4d1453a6fb8acd01",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/dewarp.h": "44fb09a07a1347d635625277eec6969bdc530e51686f5f5fff9b4ef1cc2d9804",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/endianness.h": "cbd73be01dcf316ed72d664d0f5307ca0d07daf2f6f21ef3eab72a56fb89c5e3",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/environ.h": "c68c894a79701a54b84d294dff944014680faa828ddfaa2a18352d1e8b220b62",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/gplot.h": "b39294d84d6a199d5d2d551f51008ef4be3b1b7afd5275666f2e0ee04b7297d5",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/hashmap.h": "709f971fba7781f4008168c9c637a331d91343b599780986c0d3fe647531d342",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/heap.h": "1cbe49878267244a073eb78ac0d9fb6245ec8f106355ce652eb1bfba19de99e0",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/imageio.h": "ef4eb553c800eddc04a767a38b5366427b4573553e37762da0b0e37283545215",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/jbclass.h": "afb8e526bc414980bd7f7cccfdcb349190d1ec1a5543282faaf8319889d24d7d",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/leptwin.h": "f2b5c3c5ea4d1df590f62476b3cbf421b8a619cd7d2e3d4dd45ee28e1b35dd3b",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/list.h": "87ba4e86977664f429477d71b139a14ff7b6d343f101f8d16e8c0772d2b07173",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/morph.h": "64058f10dde70c89ce6065c9f6845b5732760e20790034bd95af79d2d913c38b",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/pix.h": "43d56aec9f4186654375506f653e6056620dbc31e1caeeb3e3cb204e8008a31e",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/pix_internal.h": "234b7243957940bffc594d5bc47abceee9a67253f455dae61659a71d36226dc8",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/ptra.h": "375e63b855fde88eb3b89be56cfa6bdeab0f110b2d9f13858ba3a40cc7e8a714",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/queue.h": "7a0aafe30e528e148f335c8b319e6f38982c521a0ff3a7c365e3fb93b3886914",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/rbtree.h": "b1fa73a1ff5a769c3ac1ba254e282b8c2ac0b0bf31e623ab91dce38fd256fa8c",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/readbarcode.h": "6934b5c2e7d11639909e8a68eb1bd876613762c11ebf506cf9b765f194ef00cc",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/recog.h": "18568150c46d0a4b471bca3b26f7744bdd895ac456c85b1b5cb0fc243437af2f",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/regutils.h": "5ca36792608691a68dddfb784b4072c3f570b3a35e096b70a2cc46f98d94cbb1",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/stack.h": "e58360890164679417191a50cce97de53d8402d9b804bea136a173fa420ccd52",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/stringcode.h": "a125a55b46bb2b3c4b1fafdb7c1074ce71a25cd54f7487a5380f0f8ae48c0005",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/sudoku.h": "7e79053c5298f19ffafe40995f8838872e639a0a6677c6af0c6825d364efabc2",
+        "/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica/watershed.h": "3428bcacbd361395195203944e16ec5dcd419d38b5438f4a80354101c875229c"
+      },
+      "pkg_flags": [
+        "-I/opt/homebrew/Cellar/leptonica/1.87.0/include/leptonica",
+        "-L/opt/homebrew/Cellar/leptonica/1.87.0/lib",
+        "-lleptonica"
+      ],
+      "flags": [
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-O2"
+      ],
+      "settings": {
+        "analysis": "Pillow RGB to L; whole image; no resize",
+        "threshold": 160,
+        "sweep_range_degrees": 7.0,
+        "sweep_delta_degrees": 1.0,
+        "sweep_reduction": 4,
+        "search_reduction": 2,
+        "search_delta_degrees": 0.01,
+        "angle_convention": "deskew degrees, clockwise positive; advisory only"
+      }
+    },
+    "build_identity": "22fcef91bd4e1890e981e3d0c8bbb69689b8b2e981b29393d806823d0d7e608c",
+    "binary_sha256": "b424a6d54e54c40af28a0a4f931f2d0a8499cfbd258048550f7284c0df36b077",
+    "controls": {
+      "clockwise": {
+        "leptonica": "leptonica-1.87.0",
+        "settings": {
+          "analysis": "Pillow RGB to L; whole image; no resize",
+          "threshold": 160,
+          "sweep_range_degrees": 7.0,
+          "sweep_delta_degrees": 1.0,
+          "sweep_reduction": 4,
+          "search_reduction": 2,
+          "search_delta_degrees": 0.01,
+          "angle_convention": "deskew degrees, clockwise positive; advisory only"
+        },
+        "native_status": 0,
+        "angle_degrees": -2.03125,
+        "score_ratio": 17.9036694,
+        "invalid_numeric": [],
+        "regions": [
+          [
+            0,
+            0,
+            1200,
+            900
+          ]
+        ],
+        "diagnostics": "",
+        "available": true,
+        "reasons": [
+          "skew-nonzero"
+        ]
+      },
+      "counterclockwise": {
+        "leptonica": "leptonica-1.87.0",
+        "settings": {
+          "analysis": "Pillow RGB to L; whole image; no resize",
+          "threshold": 160,
+          "sweep_range_degrees": 7.0,
+          "sweep_delta_degrees": 1.0,
+          "sweep_reduction": 4,
+          "search_reduction": 2,
+          "search_delta_degrees": 0.01,
+          "angle_convention": "deskew degrees, clockwise positive; advisory only"
+        },
+        "native_status": 0,
+        "angle_degrees": 1.96875,
+        "score_ratio": 18.2940426,
+        "invalid_numeric": [],
+        "regions": [
+          [
+            0,
+            0,
+            1200,
+            900
+          ]
+        ],
+        "diagnostics": "",
+        "available": true,
+        "reasons": [
+          "skew-nonzero"
+        ]
+      },
+      "upright": {
+        "leptonica": "leptonica-1.87.0",
+        "settings": {
+          "analysis": "Pillow RGB to L; whole image; no resize",
+          "threshold": 160,
+          "sweep_range_degrees": 7.0,
+          "sweep_delta_degrees": 1.0,
+          "sweep_reduction": 4,
+          "search_reduction": 2,
+          "search_delta_degrees": 0.01,
+          "angle_convention": "deskew degrees, clockwise positive; advisory only"
+        },
+        "native_status": 0,
+        "angle_degrees": -0.046875,
+        "score_ratio": 21.349287,
+        "invalid_numeric": [],
+        "regions": [
+          [
+            0,
+            0,
+            1200,
+            900
+          ]
+        ],
+        "diagnostics": "",
+        "available": true,
+        "reasons": [
+          "skew-nonzero"
+        ]
+      },
+      "blank": {
+        "leptonica": "leptonica-1.87.0",
+        "settings": {
+          "analysis": "Pillow RGB to L; whole image; no resize",
+          "threshold": 160,
+          "sweep_range_degrees": 7.0,
+          "sweep_delta_degrees": 1.0,
+          "sweep_reduction": 4,
+          "search_reduction": 2,
+          "search_delta_degrees": 0.01,
+          "angle_convention": "deskew degrees, clockwise positive; advisory only"
+        },
+        "native_status": 1,
+        "angle_degrees": 0.0,
+        "score_ratio": 0.0,
+        "invalid_numeric": [],
+        "regions": [
+          [
+            0,
+            0,
+            1200,
+            900
+          ]
+        ],
+        "diagnostics": "",
+        "available": false,
+        "reasons": [
+          "assessment-unavailable"
+        ]
+      },
+      "near-edge": {
+        "leptonica": "leptonica-1.87.0",
+        "settings": {
+          "analysis": "Pillow RGB to L; whole image; no resize",
+          "threshold": 160,
+          "sweep_range_degrees": 7.0,
+          "sweep_delta_degrees": 1.0,
+          "sweep_reduction": 4,
+          "search_reduction": 2,
+          "search_delta_degrees": 0.01,
+          "angle_convention": "deskew degrees, clockwise positive; advisory only"
+        },
+        "native_status": 0,
+        "angle_degrees": 0.0,
+        "score_ratio": 0.0,
+        "invalid_numeric": [],
+        "regions": [
+          [
+            0,
+            0,
+            1200,
+            900
+          ]
+        ],
+        "diagnostics": "Warning in pixFindSkewSweepAndSearchScorePivot: max found at sweep edge\n",
+        "available": false,
+        "reasons": [
+          "assessment-unavailable",
+          "skew-range-edge"
+        ]
+      },
+      "beyond-edge": {
+        "leptonica": "leptonica-1.87.0",
+        "settings": {
+          "analysis": "Pillow RGB to L; whole image; no resize",
+          "threshold": 160,
+          "sweep_range_degrees": 7.0,
+          "sweep_delta_degrees": 1.0,
+          "sweep_reduction": 4,
+          "search_reduction": 2,
+          "search_delta_degrees": 0.01,
+          "angle_convention": "deskew degrees, clockwise positive; advisory only"
+        },
+        "native_status": 0,
+        "angle_degrees": 0.0,
+        "score_ratio": 0.0,
+        "invalid_numeric": [],
+        "regions": [
+          [
+            0,
+            0,
+            1200,
+            900
+          ]
+        ],
+        "diagnostics": "Warning in pixFindSkewSweepAndSearchScorePivot: max found at sweep edge\n",
+        "available": false,
+        "reasons": [
+          "assessment-unavailable",
+          "skew-range-edge"
+        ]
+      },
+      "private-protocol-controls": {
+        "valid-zero": {
+          "leptonica": "leptonica-1.87.0",
+          "settings": {
+            "analysis": "Pillow RGB to L; whole image; no resize",
+            "threshold": 160,
+            "sweep_range_degrees": 7.0,
+            "sweep_delta_degrees": 1.0,
+            "sweep_reduction": 4,
+            "search_reduction": 2,
+            "search_delta_degrees": 0.01,
+            "angle_convention": "deskew degrees, clockwise positive; advisory only"
+          },
+          "native_status": 0,
+          "angle_degrees": 0.0,
+          "score_ratio": 10.0,
+          "invalid_numeric": [],
+          "regions": [
+            [
+              0,
+              0,
+              1200,
+              900
+            ]
+          ],
+          "diagnostics": "private protocol control",
+          "available": true,
+          "reasons": []
+        },
+        "zero-confidence": {
+          "leptonica": "leptonica-1.87.0",
+          "settings": {
+            "analysis": "Pillow RGB to L; whole image; no resize",
+            "threshold": 160,
+            "sweep_range_degrees": 7.0,
+            "sweep_delta_degrees": 1.0,
+            "sweep_reduction": 4,
+            "search_reduction": 2,
+            "search_delta_degrees": 0.01,
+            "angle_convention": "deskew degrees, clockwise positive; advisory only"
+          },
+          "native_status": 0,
+          "angle_degrees": 0.0,
+          "score_ratio": 0.0,
+          "invalid_numeric": [],
+          "regions": [
+            [
+              0,
+              0,
+              1200,
+              900
+            ]
+          ],
+          "diagnostics": "private protocol control",
+          "available": false,
+          "reasons": [
+            "assessment-unavailable"
+          ]
+        },
+        "nonzero-status": {
+          "leptonica": "leptonica-1.87.0",
+          "settings": {
+            "analysis": "Pillow RGB to L; whole image; no resize",
+            "threshold": 160,
+            "sweep_range_degrees": 7.0,
+            "sweep_delta_degrees": 1.0,
+            "sweep_reduction": 4,
+            "search_reduction": 2,
+            "search_delta_degrees": 0.01,
+            "angle_convention": "deskew degrees, clockwise positive; advisory only"
+          },
+          "native_status": 1,
+          "angle_degrees": 0.0,
+          "score_ratio": 10.0,
+          "invalid_numeric": [],
+          "regions": [
+            [
+              0,
+              0,
+              1200,
+              900
+            ]
+          ],
+          "diagnostics": "private protocol control",
+          "available": false,
+          "reasons": [
+            "assessment-unavailable"
+          ]
+        },
+        "nonfinite-angle": {
+          "leptonica": "leptonica-1.87.0",
+          "settings": {
+            "analysis": "Pillow RGB to L; whole image; no resize",
+            "threshold": 160,
+            "sweep_range_degrees": 7.0,
+            "sweep_delta_degrees": 1.0,
+            "sweep_reduction": 4,
+            "search_reduction": 2,
+            "search_delta_degrees": 0.01,
+            "angle_convention": "deskew degrees, clockwise positive; advisory only"
+          },
+          "native_status": 0,
+          "angle_degrees": null,
+          "score_ratio": 10.0,
+          "invalid_numeric": [
+            "angle_degrees:nonfinite"
+          ],
+          "regions": [
+            [
+              0,
+              0,
+              1200,
+              900
+            ]
+          ],
+          "diagnostics": "private protocol control",
+          "available": false,
+          "reasons": [
+            "assessment-unavailable"
+          ]
+        },
+        "nonfinite-ratio": {
+          "leptonica": "leptonica-1.87.0",
+          "settings": {
+            "analysis": "Pillow RGB to L; whole image; no resize",
+            "threshold": 160,
+            "sweep_range_degrees": 7.0,
+            "sweep_delta_degrees": 1.0,
+            "sweep_reduction": 4,
+            "search_reduction": 2,
+            "search_delta_degrees": 0.01,
+            "angle_convention": "deskew degrees, clockwise positive; advisory only"
+          },
+          "native_status": 0,
+          "angle_degrees": 0.0,
+          "score_ratio": null,
+          "invalid_numeric": [
+            "score_ratio:nonfinite"
+          ],
+          "regions": [
+            [
+              0,
+              0,
+              1200,
+              900
+            ]
+          ],
+          "diagnostics": "private protocol control",
+          "available": false,
+          "reasons": [
+            "assessment-unavailable"
+          ]
+        }
+      }
+    }
+  },
+  "wrong_sign_control": "Native sign/input control failed: clockwise; {'leptonica': 'leptonica-1.87.0', 'settings': {'analysis': 'Pillow RGB to L; whole image; no resize', 'threshold': 160, 'sweep_range_degrees': 7.0, 'sweep_delta_degrees': 1.0, 'sweep_reduction': 4, 'search_reduction': 2, 'search_delta_degrees': 0.01, 'angle_convention': 'deskew degrees, clockwise positive; advisory only'}, 'native_status': 0, 'angle_degrees': 2.0, 'score_ratio': 10.0, 'invalid_numeric': [], 'regions': [[0, 0, 1200, 900]], 'diagnostics': '', 'available': True, 'reasons': ['skew-nonzero']}.",
+  "corrupt_cache_control": "Incomplete/changed native helper build: /private/tmp/bookscan-k63-helper-final/evidence-v2/native-a/corrupt cache/native-22fcef91bd4e1890e981e3d0c8bbb69689b8b2e981b29393d806823d0d7e608c-13cbbb28413e436589dacae8def694ce.",
+  "rgb_unchanged": {
+    "png_sha256": "8f41666da7658ee46193bddb1817018763f3af9439e71ce4229258b98f4452c3",
+    "rgb_sha256": "23c5c18b96cd90880183bee987cab1a02774b3eddb9a0cc2c5101f11495e4b23"
+  },
+  "blank_assessment": {
+    "leptonica": "leptonica-1.87.0",
+    "settings": {
+      "analysis": "Pillow RGB to L; whole image; no resize",
+      "threshold": 160,
+      "sweep_range_degrees": 7.0,
+      "sweep_delta_degrees": 1.0,
+      "sweep_reduction": 4,
+      "search_reduction": 2,
+      "search_delta_degrees": 0.01,
+      "angle_convention": "deskew degrees, clockwise positive; advisory only"
+    },
+    "native_status": 1,
+    "angle_degrees": 0.0,
+    "score_ratio": 0.0,
+    "invalid_numeric": [],
+    "regions": [
+      [
+        0,
+        0,
+        640,
+        480
+      ]
+    ],
+    "diagnostics": "",
+    "available": false,
+    "reasons": [
+      "assessment-unavailable"
+    ]
+  }
+}

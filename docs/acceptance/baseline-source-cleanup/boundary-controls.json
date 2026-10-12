@@ -1,0 +1,12 @@
+{
+  "rejected": [
+    "missing-tracked-path",
+    "foreign-path",
+    "changed-unrelated-source",
+    "wrong-change",
+    "wrong-parent",
+    "partial-description",
+    "conflict",
+    "wrong-prefix"
+  ]
+}

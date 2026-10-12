@@ -1,0 +1,64 @@
+"""Check ordinary archived evidence and its exact current measured source."""
+import copy
+import hashlib
+import json
+from pathlib import Path
+import xml.etree.ElementTree as ET
+import zipfile
+
+folder = Path(__file__).resolve().parent
+repo = folder.parents[2]
+
+def verify(index):
+    archive = folder / 'evidence.zip'
+    assert hashlib.sha256(archive.read_bytes()).hexdigest() == index['archive_sha256']
+    with zipfile.ZipFile(archive) as saved:
+        assert sorted(saved.namelist()) == sorted(index['members'])
+        for name, expected in index['members'].items():
+            raw = saved.read(name)
+            assert len(raw) == expected['size']
+            assert hashlib.sha256(raw).hexdigest() == expected['sha256']
+        boundary = json.loads(saved.read('boundary.json'))
+        for path, expected in boundary['current_measured_source_sha256'].items():
+            assert hashlib.sha256((repo / path).read_bytes()).hexdigest() == expected
+        for suite in ['focused', 'product', 'staff']:
+            readings = []
+            for run in ['final-a', 'final-b']:
+                rows = {}
+                for case in ET.fromstring(saved.read(run + '/' + suite + '.xml')).iter('testcase'):
+                    key = case.get('classname') + '::' + case.get('name')
+                    assert key not in rows
+                    assert not any(v.tag in {'failure', 'error', 'skipped'} for v in case)
+                    rows[key] = 'passed'
+                assert rows
+                readings.append(rows)
+            assert readings[0] == readings[1]
+        manifests = [json.loads(saved.read(run + '/subjects-' + when + '.json'))
+                     for run in ['final-a', 'final-b'] for when in ['before', 'after']]
+        assert all(v == manifests[0] for v in manifests)
+        original = hashlib.sha256(saved.read('compare-as-measured.py')).hexdigest()
+        key = index['measurement_root'] + '/compare.py'
+        assert manifests[0][key]['sha256'] == original
+        summary = json.loads(saved.read('comparison.json'))
+        assert summary['passed'] is True
+        return summary
+
+index = json.loads((folder / 'index.json').read_text())
+summary = verify(index)
+wrong = copy.deepcopy(index)
+wrong['archive_sha256'] = '0' * 64
+try:
+    verify(wrong)
+except AssertionError:
+    pass
+else:
+    raise AssertionError('Incorrect archive digest accepted')
+wrong = copy.deepcopy(index)
+wrong['members']['boundary.json']['sha256'] = '0' * 64
+try:
+    verify(wrong)
+except AssertionError:
+    pass
+else:
+    raise AssertionError('Incorrect member digest accepted')
+print(json.dumps({'verified': summary, 'wrong_digest_controls_rejected': 2}, indent=2))

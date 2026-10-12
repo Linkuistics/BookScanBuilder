@@ -1,0 +1,189 @@
+{
+  "version": 1,
+  "grids": [
+    {
+      "name": "gray1",
+      "size": [
+        3,
+        2
+      ],
+      "bits": 1,
+      "data": "a040",
+      "color": "/DeviceGray",
+      "pixels": [
+        [
+          1
+        ],
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          0
+        ]
+      ],
+      "decode": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "gray2",
+      "size": [
+        3,
+        2
+      ],
+      "bits": 2,
+      "data": "18e4",
+      "color": "/DeviceGray",
+      "pixels": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          2
+        ],
+        [
+          1
+        ]
+      ],
+      "decode": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "gray4",
+      "size": [
+        3,
+        1
+      ],
+      "bits": 4,
+      "data": "1f70",
+      "color": "/DeviceGray",
+      "pixels": [
+        [
+          1
+        ],
+        [
+          15
+        ],
+        [
+          7
+        ]
+      ],
+      "decode": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "gray16",
+      "size": [
+        2,
+        1
+      ],
+      "bits": 16,
+      "data": "0102fffe",
+      "color": "/DeviceGray",
+      "pixels": [
+        [
+          258
+        ],
+        [
+          65534
+        ]
+      ],
+      "decode": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "rgb",
+      "size": [
+        2,
+        1
+      ],
+      "bits": 8,
+      "data": "0080ff123456",
+      "color": "/DeviceRGB",
+      "pixels": [
+        [
+          0,
+          128,
+          255
+        ],
+        [
+          18,
+          52,
+          86
+        ]
+      ],
+      "decode": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "cmyk",
+      "size": [
+        1,
+        1
+      ],
+      "bits": 8,
+      "data": "01234567",
+      "color": "/DeviceCMYK",
+      "pixels": [
+        [
+          1,
+          35,
+          69,
+          103
+        ]
+      ],
+      "decode": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ]
+    }
+  ],
+  "bounds": "Exact packed bytes/integer channels; no RGB conversion or rendered-page oracle.",
+  "mapping": "Each image unit square covers 72x72 PDF points = 300x300 baseline pixels; x-right/y-down.",
+  "controls": [
+    "wrong-image",
+    "wrong-row-padding",
+    "wrong-colour",
+    "wrong-decode",
+    "wrong-ppi",
+    "wrong-placement",
+    "wrong-order"
+  ]
+}

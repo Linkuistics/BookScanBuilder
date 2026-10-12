@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "controls": {
+    "cache-method-upgrade": "cache method",
+    "missing-fixed-subject-disproof": "isolated mutation failures"
+  }
+}

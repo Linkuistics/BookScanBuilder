@@ -1,0 +1,38 @@
+{
+  "format": "BookScanBuilderExactMatrixTruth",
+  "version": 1,
+  "source": "https://www.color.org/specification/ICC1v43_2010-12.pdf",
+  "input": [
+    51,
+    153,
+    204
+  ],
+  "native_size": [
+    1,
+    1
+  ],
+  "points": [
+    72,
+    36
+  ],
+  "cases": {
+    "matched": [
+      "1/25",
+      "9/25",
+      "16/25"
+    ],
+    "swapped": [
+      "16/25",
+      "9/25",
+      "1/25"
+    ],
+    "coupled": [
+      "3/25",
+      "7/25",
+      "16/25"
+    ]
+  },
+  "meaning": "Exact unquantized ICC F.3 matrix/power values for declared same-white linear targets",
+  "native_precision_status": "unavailable: CMM interpolation/optimization/quantization proof",
+  "cairo_status": "unavailable: actual output-profile identity/matrix and conversion precision"
+}

@@ -1,0 +1,234 @@
+{
+  "format": "BookScanBuilderProfileConstruction",
+  "version": 1,
+  "cases": [
+    {
+      "view": {
+        "size": [
+          5,
+          1
+        ],
+        "colour_space": "/ICCBased",
+        "rgb": "000000101010404040919191ffffff",
+        "colour_key_alpha": null,
+        "label": "Explicit-profile uncombined native samples",
+        "unavailable": null,
+        "limitations": [
+          "Explicit target-profile RGB; no calibrated monitor or complete-page fidelity claim.",
+          "Uncombined samples: no page clipping, blending, interpolation or mask composition.",
+          "Soft-mask Matte unpremultiplication and stencil paint colour are not applied.",
+          "PDF decoded channels are quantized to 8 bits before ICC conversion; originals retained."
+        ]
+      },
+      "input_profile_sha256": "dab31e014c31af444946e2f8dd8dd27753be90aca23857a7727f6695fec4d8ea",
+      "output_profile_sha256": "7b4f37347e961aac6afd2e3664bf26bc5c1c1e0e58793be49b326d86a5ae76fd",
+      "pillow": "12.3.0",
+      "littlecms": "2.19",
+      "intent": 1,
+      "flags": 256,
+      "name": "power-ramp",
+      "source_page": 1,
+      "raw_sha256": "89ee4b1c29984bd8e1d47a58de798b536b6b9881c72b5f1e78ad6486fd445c5c",
+      "cairo": {
+        "exact_pixels": 0,
+        "bounded_pixels": 45000,
+        "rgb_sha256": "7aa1bbed9ff68d430f6e77d768d6d97c9f1c4049dac7cf999607c23e2ed2419e",
+        "fidelity_status": "unavailable: independent target-profile matrix/precision proof",
+        "diagnostics": ""
+      }
+    },
+    {
+      "view": {
+        "size": [
+          5,
+          1
+        ],
+        "colour_space": "/ICCBased",
+        "rgb": "8f3f108f3f108f3f108f3f108f3f10",
+        "colour_key_alpha": null,
+        "label": "Explicit-profile uncombined native samples",
+        "unavailable": null,
+        "limitations": [
+          "Explicit target-profile RGB; no calibrated monitor or complete-page fidelity claim.",
+          "Uncombined samples: no page clipping, blending, interpolation or mask composition.",
+          "Soft-mask Matte unpremultiplication and stencil paint colour are not applied.",
+          "PDF decoded channels are quantized to 8 bits before ICC conversion; originals retained."
+        ]
+      },
+      "input_profile_sha256": "dab31e014c31af444946e2f8dd8dd27753be90aca23857a7727f6695fec4d8ea",
+      "output_profile_sha256": "7b4f37347e961aac6afd2e3664bf26bc5c1c1e0e58793be49b326d86a5ae76fd",
+      "pillow": "12.3.0",
+      "littlecms": "2.19",
+      "intent": 1,
+      "flags": 256,
+      "name": "reverse-decode",
+      "source_page": 2,
+      "raw_sha256": "bc661814ecd2b10c1afbfe32c95770126424d38b3d373fa352a57d35e7c22b63",
+      "cairo": {
+        "exact_pixels": 0,
+        "bounded_pixels": 45000,
+        "rgb_sha256": "73108c737375e8c9e0b8695ed0fd236b513f750e1d0fed50b0a90665d37004d3",
+        "fidelity_status": "unavailable: independent target-profile matrix/precision proof",
+        "diagnostics": ""
+      }
+    },
+    {
+      "view": {
+        "size": [
+          5,
+          1
+        ],
+        "colour_space": "/ICCBased",
+        "rgb": "104091104091104091104091104091",
+        "colour_key_alpha": null,
+        "label": "Explicit-profile uncombined native samples",
+        "unavailable": null,
+        "limitations": [
+          "Explicit target-profile RGB; no calibrated monitor or complete-page fidelity claim.",
+          "Uncombined samples: no page clipping, blending, interpolation or mask composition.",
+          "Soft-mask Matte unpremultiplication and stencil paint colour are not applied.",
+          "PDF decoded channels are quantized to 8 bits before ICC conversion; originals retained."
+        ]
+      },
+      "input_profile_sha256": "dab31e014c31af444946e2f8dd8dd27753be90aca23857a7727f6695fec4d8ea",
+      "output_profile_sha256": "7b4f37347e961aac6afd2e3664bf26bc5c1c1e0e58793be49b326d86a5ae76fd",
+      "pillow": "12.3.0",
+      "littlecms": "2.19",
+      "intent": 1,
+      "flags": 256,
+      "name": "indexed",
+      "source_page": 3,
+      "raw_sha256": "8ca55c151eee2551d64f76d5f2d86a8f5ebaf9ac01324f0dca5d7c57d4ee0a1e",
+      "cairo": {
+        "exact_pixels": 0,
+        "bounded_pixels": 45000,
+        "rgb_sha256": "d831499e6566615e32c1aac5151b13669d4c39692ac0f7dc42e318b0838310c4",
+        "fidelity_status": "unavailable: independent target-profile matrix/precision proof",
+        "diagnostics": ""
+      }
+    },
+    {
+      "view": {
+        "size": [
+          5,
+          1
+        ],
+        "colour_space": "/ICCBased",
+        "rgb": "914010914010914010914010914010",
+        "colour_key_alpha": null,
+        "label": "Explicit-profile uncombined native samples",
+        "unavailable": null,
+        "limitations": [
+          "Explicit target-profile RGB; no calibrated monitor or complete-page fidelity claim.",
+          "Uncombined samples: no page clipping, blending, interpolation or mask composition.",
+          "Soft-mask Matte unpremultiplication and stencil paint colour are not applied.",
+          "PDF decoded channels are quantized to 8 bits before ICC conversion; originals retained."
+        ]
+      },
+      "input_profile_sha256": "da625fc49e8b66443c18fb9569cb9bf04194038260ca8b4a14fccb17c5eea376",
+      "output_profile_sha256": "7b4f37347e961aac6afd2e3664bf26bc5c1c1e0e58793be49b326d86a5ae76fd",
+      "pillow": "12.3.0",
+      "littlecms": "2.19",
+      "intent": 1,
+      "flags": 256,
+      "name": "swapped-primaries",
+      "source_page": 4,
+      "raw_sha256": "bc661814ecd2b10c1afbfe32c95770126424d38b3d373fa352a57d35e7c22b63",
+      "cairo": {
+        "exact_pixels": 0,
+        "bounded_pixels": 45000,
+        "rgb_sha256": "dd91b73e18b272d6cdb20e06d8bea182fe0e33f2a67bffb1b7d9547707a1bf9c",
+        "fidelity_status": "unavailable: independent target-profile matrix/precision proof",
+        "diagnostics": ""
+      }
+    },
+    {
+      "view": {
+        "size": [
+          5,
+          1
+        ],
+        "colour_space": "/ICCBased",
+        "rgb": "104091104091104091104091104091",
+        "colour_key_alpha": null,
+        "label": "Explicit-profile uncombined native samples",
+        "unavailable": null,
+        "limitations": [
+          "Explicit target-profile RGB; no calibrated monitor or complete-page fidelity claim.",
+          "Uncombined samples: no page clipping, blending, interpolation or mask composition.",
+          "Soft-mask Matte unpremultiplication and stencil paint colour are not applied.",
+          "PDF decoded channels are quantized to 8 bits before ICC conversion; originals retained."
+        ]
+      },
+      "input_profile_sha256": "dab31e014c31af444946e2f8dd8dd27753be90aca23857a7727f6695fec4d8ea",
+      "output_profile_sha256": "7b4f37347e961aac6afd2e3664bf26bc5c1c1e0e58793be49b326d86a5ae76fd",
+      "pillow": "12.3.0",
+      "littlecms": "2.19",
+      "intent": 1,
+      "flags": 256,
+      "name": "default-rgb",
+      "source_page": 5,
+      "raw_sha256": "bc661814ecd2b10c1afbfe32c95770126424d38b3d373fa352a57d35e7c22b63",
+      "cairo": {
+        "exact_pixels": 0,
+        "bounded_pixels": 45000,
+        "rgb_sha256": "d831499e6566615e32c1aac5151b13669d4c39692ac0f7dc42e318b0838310c4",
+        "fidelity_status": "unavailable: independent target-profile matrix/precision proof",
+        "diagnostics": ""
+      }
+    },
+    {
+      "view": {
+        "size": [
+          5,
+          1
+        ],
+        "colour_space": "/ICCBased",
+        "rgb": null,
+        "colour_key_alpha": null,
+        "label": "Explicit-profile uncombined native samples",
+        "unavailable": "Missing, malformed or incompatible input RGB ICC profile",
+        "limitations": [
+          "Explicit target-profile RGB; no calibrated monitor or complete-page fidelity claim.",
+          "Uncombined samples: no page clipping, blending, interpolation or mask composition.",
+          "Soft-mask Matte unpremultiplication and stencil paint colour are not applied.",
+          "PDF decoded channels are quantized to 8 bits before ICC conversion; originals retained."
+        ]
+      },
+      "input_profile_sha256": "c26b46034d7ab13dc1e42363ec2784ff87b3a74550755001c095a757741eb877",
+      "output_profile_sha256": "7b4f37347e961aac6afd2e3664bf26bc5c1c1e0e58793be49b326d86a5ae76fd",
+      "pillow": "12.3.0",
+      "littlecms": "2.19",
+      "intent": 1,
+      "flags": 256,
+      "name": "invalid-profile",
+      "source_page": 6,
+      "raw_sha256": "bc661814ecd2b10c1afbfe32c95770126424d38b3d373fa352a57d35e7c22b63"
+    }
+  ],
+  "controls": {
+    "ignored-input-curve": "pixel 0 channel 0: 137 outside [69, 73]",
+    "wrong-primary-matrix": "pixel 0 channel 0: 198 outside [69, 73]",
+    "ignored-decode": "pixel 0 channel 0: 71 outside [195, 199]",
+    "wrong-indexed-palette": "pixel 0 channel 0: 0 outside [69, 73]",
+    "dropped-default-profile": "pixel 0 channel 0: 64 outside [69, 73]",
+    "erased-source-colour": "pixel 0 channel 0: 0 outside [196, 200]"
+  },
+  "source_sha256": "c4c1f594d8f3e5f8132254d94a9c4f8cac2f246cd7dd24eebdc6ba500d4298dc",
+  "truth_sha256": "8f16436d69881269994a0cffd9811e43243fb1c1f82440ab47b8f336fea5274c",
+  "source_positions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "source_loss_verified": true,
+  "source_bytes_unchanged": true,
+  "cairo_fidelity_verified": false,
+  "runtime_resources_verified": false,
+  "accepted_project_delivered": false
+}

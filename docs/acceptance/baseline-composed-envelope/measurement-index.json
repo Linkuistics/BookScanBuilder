@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "compression": "gzip",
+  "source": "/private/tmp/bookscan-k63-envelope-work/credited/report.json",
+  "sha256": "859fc5cf053d8057aefb1ab70a6a37bcdb9de15dec429280c3a57627c392bbd7",
+  "bytes": 15283025,
+  "compressed_sha256": "318bf2e575ab03706027e141b53aec42b37008dac809f194431585c318fdf7e4",
+  "parts": [
+    {
+      "file": "measurement-000.gzpart",
+      "sha256": "65e784706e06ae697c784df6ef84dbc33a3dce439d9a6c8fd26799f11ac6f996",
+      "bytes": 750000
+    },
+    {
+      "file": "measurement-001.gzpart",
+      "sha256": "c39e363717557028a9dadc52b26bff65bd9ef7eb926093af8f3da83eed061516",
+      "bytes": 750000
+    },
+    {
+      "file": "measurement-002.gzpart",
+      "sha256": "113d4345d2d4b35ab26d18ec1689a05ca4b2e0b145eb763d1e1ffc692d13ccd8",
+      "bytes": 750000
+    },
+    {
+      "file": "measurement-003.gzpart",
+      "sha256": "0db7463a52aa9856a979c6c429718fd72efe90cbcd1e9249084079afa5002604",
+      "bytes": 664639
+    }
+  ]
+}

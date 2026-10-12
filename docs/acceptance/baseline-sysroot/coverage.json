@@ -1,0 +1,101 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"project\":\"Users-antony-Development-BookScanBuilder\",\"signal\":\"best_effort\",\"indexed_at\":\"2026-10-14T01:50:42Z\",\"metadata\":{\"generation\":\"2026-10-14T01:50:42Z\",\"index_mode\":\"full\",\"recorded_at\":\"2026-10-14T01:50:42Z\",\"recording_status\":\"complete\",\"ignored_files_stored\":20,\"ignored_files_total\":20,\"hash_records_complete\":true,\"coverage_version\":3,\"generation_matches\":true},\"paths\":[{\"requested_path\":\"docs/acceptance/baseline-sysroot/verify.py\",\"path\":\"docs/acceptance/baseline-sysroot/verify.py\",\"status\":\"no_recorded_issue\",\"freshness\":\"metadata_match\",\"recommended_action\":\"use_graph_with_best_effort_caveat\",\"coverage\":[]},{\"requested_path\":\"docs/acceptance/baseline-sysroot/index.json\",\"path\":\"docs/acceptance/baseline-sysroot/index.json\",\"status\":\"no_recorded_issue\",\"freshness\":\"metadata_match\",\"recommended_action\":\"use_graph_with_best_effort_caveat\",\"coverage\":[]},{\"requested_path\":\"tests/fontconfig_sysroot_acceptance.py\",\"path\":\"tests/fontconfig_sysroot_acceptance.py\",\"status\":\"no_recorded_issue\",\"freshness\":\"metadata_match\",\"recommended_action\":\"use_graph_with_best_effort_caveat\",\"coverage\":[]},{\"requested_path\":\"tests/test_fontconfig.py\",\"path\":\"tests/test_fontconfig.py\",\"status\":\"no_recorded_issue\",\"freshness\":\"metadata_match\",\"recommended_action\":\"use_graph_with_best_effort_caveat\",\"coverage\":[]},{\"requested_path\":\"src/bookscan/fontconfig.py\",\"path\":\"src/bookscan/fontconfig.py\",\"status\":\"no_recorded_issue\",\"freshness\":\"metadata_match\",\"recommended_action\":\"use_graph_with_best_effort_caveat\",\"coverage\":[]},{\"requested_path\":\"src/bookscan/fontconfig_probe.py\",\"path\":\"src/bookscan/fontconfig_probe.py\",\"status\":\"no_recorded_issue\",\"freshness\":\"metadata_match\",\"recommended_action\":\"use_graph_with_best_effort_caveat\",\"coverage\":[]},{\"requested_path\":\"Taskfile.yml\",\"path\":\"Taskfile.yml\",\"status\":\"no_recorded_issue\",\"freshness\":\"metadata_match\",\"recommended_action\":\"use_graph_with_best_effort_caveat\",\"coverage\":[]},{\"requested_path\":\".grove/40-k47/01-k53/11-impl--baseline-finite-k63.md\",\"path\":\".grove/40-k47/01-k53/11-impl--baseline-finite-k63.md\",\"status\":\"no_recorded_issue\",\"freshness\":\"metadata_match\",\"recommended_action\":\"use_graph_with_best_effort_caveat\",\"coverage\":[]},{\"requested_path\":\"docs/acceptance/baseline-finite.md\",\"path\":\"docs/acceptance/baseline-finite.md\",\"status\":\"no_recorded_issue\",\"freshness\":\"metadata_match\",\"recommended_action\":\"use_graph_with_best_effort_caveat\",\"coverage\":[]}],\"scopes\":[],\"caveat\":\"Best-effort signal only. No recorded issue does not prove graph or source completeness; read flagged source and qualify claims when metadata is changed or unavailable.\"}"
+    }
+  ],
+  "structuredContent": {
+    "project": "Users-antony-Development-BookScanBuilder",
+    "signal": "best_effort",
+    "indexed_at": "2026-10-14T01:50:42Z",
+    "metadata": {
+      "generation": "2026-10-14T01:50:42Z",
+      "index_mode": "full",
+      "recorded_at": "2026-10-14T01:50:42Z",
+      "recording_status": "complete",
+      "ignored_files_stored": 20,
+      "ignored_files_total": 20,
+      "hash_records_complete": true,
+      "coverage_version": 3,
+      "generation_matches": true
+    },
+    "paths": [
+      {
+        "requested_path": "docs/acceptance/baseline-sysroot/verify.py",
+        "path": "docs/acceptance/baseline-sysroot/verify.py",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "docs/acceptance/baseline-sysroot/index.json",
+        "path": "docs/acceptance/baseline-sysroot/index.json",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "tests/fontconfig_sysroot_acceptance.py",
+        "path": "tests/fontconfig_sysroot_acceptance.py",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "tests/test_fontconfig.py",
+        "path": "tests/test_fontconfig.py",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "src/bookscan/fontconfig.py",
+        "path": "src/bookscan/fontconfig.py",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "src/bookscan/fontconfig_probe.py",
+        "path": "src/bookscan/fontconfig_probe.py",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "Taskfile.yml",
+        "path": "Taskfile.yml",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": ".grove/40-k47/01-k53/11-impl--baseline-finite-k63.md",
+        "path": ".grove/40-k47/01-k53/11-impl--baseline-finite-k63.md",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "docs/acceptance/baseline-finite.md",
+        "path": "docs/acceptance/baseline-finite.md",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      }
+    ],
+    "scopes": [],
+    "caveat": "Best-effort signal only. No recorded issue does not prove graph or source completeness; read flagged source and qualify claims when metadata is changed or unavailable."
+  },
+  "isError": false
+}

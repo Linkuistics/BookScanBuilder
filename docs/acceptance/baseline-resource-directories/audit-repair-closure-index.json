@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "reading": {
+    "parts": [
+      {
+        "file": "audit-repair-closure-000.gzpart",
+        "bytes": 900000,
+        "sha256": "6ca40066ea518e84ac2986f459b0b4476d340b861038a891988759ccd4928875"
+      },
+      {
+        "file": "audit-repair-closure-001.gzpart",
+        "bytes": 292680,
+        "sha256": "1a9faa99920abf12921818e91cfda33a28bde1ac6159a808b87508f367ad953d"
+      }
+    ],
+    "sha256": "16b2d5bed970de940a2d7cfebb5f3672a7f23f1cf04bdc2de887c73bf221046a",
+    "bytes": 7955624,
+    "compressed_sha256": "b97efe10775bd6a521d41cbe569e0eee667dc8b07b7288b60e02d9f06a660171",
+    "compressed_bytes": 1192680
+  },
+  "raw": {
+    "file": "audit-repair-closure-raw.zip",
+    "sha256": "b34ccfadee1c3fca14b867d7129f789d47de59acbe670b9d17d725bde0ac45cf",
+    "files": {
+      "verification.json": {
+        "sha256": "6abe0f33eada9ad4859b2925aa2e2738338ed70feeb61d2352a7ae27762c7d57",
+        "bytes": 3016
+      },
+      "tests.xml": {
+        "sha256": "51343873652ca42b674b36e987b25d8d0d27223f1109614c7c2a944dc66725e9",
+        "bytes": 2081
+      },
+      "graph.json": {
+        "sha256": "474f5f2809885577948b801449da89708cba751f8a4f0c19c957e10fc618bcfa",
+        "bytes": 414568
+      },
+      "direct-fallback.json": {
+        "sha256": "97d2283cc3544a57455acd7a542b2f5ba250ffcef704468136dbd06ea2cb3781",
+        "bytes": 107450
+      },
+      "historical-retry.json": {
+        "sha256": "c48dcd661b43c4149d266b5b528fa4442280a025d89d14bb6c06f010c4a28368",
+        "bytes": 642
+      },
+      "bookscan-k63-closure-run.py": {
+        "sha256": "1fcb8ba9413bcb552c2eaf3eb0fe7456a3f13e50994a546566fe5bcecf177e72",
+        "bytes": 2270
+      }
+    }
+  },
+  "current_subjects": 12448,
+  "historical_subjects": 12443,
+  "itemwise_equal": true,
+  "checks": [
+    {
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "python",
+        "docs/acceptance/baseline-resource-directories/audit-repair-closure.py",
+        "--output",
+        "/private/tmp/bookscan-k63-closure-final/a.json"
+      ],
+      "exit": 0
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "ruff",
+        "check",
+        "docs/acceptance/baseline-resource-directories/audit-repair-closure.py",
+        "docs/acceptance/baseline-resource-directories/audit-repair-closure-tests.py"
+      ],
+      "exit": 0
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "ruff",
+        "format",
+        "--check",
+        "docs/acceptance/baseline-resource-directories/audit-repair-closure.py",
+        "docs/acceptance/baseline-resource-directories/audit-repair-closure-tests.py"
+      ],
+      "exit": 0
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "pyright",
+        "docs/acceptance/baseline-resource-directories/audit-repair-closure.py",
+        "docs/acceptance/baseline-resource-directories/audit-repair-closure-tests.py"
+      ],
+      "exit": 0
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "pytest",
+        "-q",
+        "docs/acceptance/baseline-resource-directories/audit-repair-closure-tests.py",
+        "--junitxml=/private/tmp/bookscan-k63-closure-final/tests.xml"
+      ],
+      "exit": 0
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "python",
+        "docs/acceptance/baseline-resource-directories/audit-repair-closure.py",
+        "--output",
+        "/private/tmp/bookscan-k63-closure-final/b.json"
+      ],
+      "exit": 0
+    }
+  ],
+  "f_change_id": "ryouonnvvlkzyyxmxrpqxnuqrysrqtvy",
+  "parent": "03eb30abe1ae485696e5deec25bfb229a42ecf69",
+  "product_handoff_complete": false,
+  "scope": "Evidence closure only. Historical inputs preserved; two exact archived bookkeeping prefixes allow later appends. Outputs do not include their own digests."
+}

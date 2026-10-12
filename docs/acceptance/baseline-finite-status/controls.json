@@ -1,0 +1,25 @@
+{
+  "original_subjects_unchanged": true,
+  "controls": [
+    {
+      "fault": "invented-handoff",
+      "coherently_rehashed": true,
+      "refused": true
+    },
+    {
+      "fault": "removed-disproof",
+      "coherently_rehashed": true,
+      "refused": true
+    },
+    {
+      "fault": "wrong-source",
+      "coherently_rehashed": true,
+      "refused": true
+    },
+    {
+      "fault": "erased-fidelity-limit",
+      "coherently_rehashed": true,
+      "refused": true
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "format": "BookScanBuilderExactMatrixReading",
+  "version": 1,
+  "cases": {
+    "matched": {
+      "ideal_linear": [
+        "1/25",
+        "9/25",
+        "16/25"
+      ],
+      "actual_native": [
+        10,
+        92,
+        163
+      ],
+      "error_in_8bit_codes": [
+        "-1/5",
+        "1/5",
+        "-1/5"
+      ],
+      "input_profile_sha256": "dab31e014c31af444946e2f8dd8dd27753be90aca23857a7727f6695fec4d8ea",
+      "target_profile_sha256": "7b4f37347e961aac6afd2e3664bf26bc5c1c1e0e58793be49b326d86a5ae76fd",
+      "raw_sha256": "47252dcb2d2d9da93add88ec7b5c7e3d492d50b4f7fd2f66793c29fc01c80daa",
+      "intent": 1,
+      "flags": 256,
+      "pillow": "12.3.0",
+      "littlecms": "2.19",
+      "status": "exact analytic truth passed; native precision unavailable"
+    },
+    "swapped": {
+      "ideal_linear": [
+        "16/25",
+        "9/25",
+        "1/25"
+      ],
+      "actual_native": [
+        163,
+        92,
+        10
+      ],
+      "error_in_8bit_codes": [
+        "-1/5",
+        "1/5",
+        "-1/5"
+      ],
+      "input_profile_sha256": "da625fc49e8b66443c18fb9569cb9bf04194038260ca8b4a14fccb17c5eea376",
+      "target_profile_sha256": "7b4f37347e961aac6afd2e3664bf26bc5c1c1e0e58793be49b326d86a5ae76fd",
+      "raw_sha256": "47252dcb2d2d9da93add88ec7b5c7e3d492d50b4f7fd2f66793c29fc01c80daa",
+      "intent": 1,
+      "flags": 256,
+      "pillow": "12.3.0",
+      "littlecms": "2.19",
+      "status": "exact analytic truth passed; native precision unavailable"
+    },
+    "coupled": {
+      "ideal_linear": [
+        "3/25",
+        "7/25",
+        "16/25"
+      ],
+      "actual_native": [
+        31,
+        71,
+        163
+      ],
+      "error_in_8bit_codes": [
+        "2/5",
+        "-2/5",
+        "-1/5"
+      ],
+      "input_profile_sha256": "de0856a9eaf35ed05e4f658607fb7f3d1547ff0aae6a266cc77c23466bb2e40c",
+      "target_profile_sha256": "5db804a1fad7c77e7b08cdb82c9b459e603295c4815b1fd1962dbf5dcc3aee45",
+      "raw_sha256": "47252dcb2d2d9da93add88ec7b5c7e3d492d50b4f7fd2f66793c29fc01c80daa",
+      "intent": 1,
+      "flags": 256,
+      "pillow": "12.3.0",
+      "littlecms": "2.19",
+      "status": "exact analytic truth passed; native precision unavailable"
+    }
+  },
+  "controls": {
+    "missing-mixing": {
+      "oracle": {
+        "rejected": true,
+        "exact_values": [
+          "1/25",
+          "9/25",
+          "16/25"
+        ]
+      },
+      "actual_native": [
+        10,
+        92,
+        163
+      ],
+      "native_sample_grid_unchanged": true,
+      "raw_sha256": "47252dcb2d2d9da93add88ec7b5c7e3d492d50b4f7fd2f66793c29fc01c80daa",
+      "input_profile_sha256": "e4f324dc07048616f27e9749920bf9e03e375b8f9b2392d3db83e41ec10eb63d",
+      "target_profile_sha256": "5db804a1fad7c77e7b08cdb82c9b459e603295c4815b1fd1962dbf5dcc3aee45",
+      "native_precision_status": "diagnostic; no justified CMM precision bound"
+    },
+    "missing-power": {
+      "oracle": {
+        "rejected": true,
+        "exact_values": [
+          "3/10",
+          "1/2",
+          "4/5"
+        ]
+      },
+      "actual_native": [
+        77,
+        128,
+        204
+      ],
+      "native_sample_grid_unchanged": true,
+      "raw_sha256": "47252dcb2d2d9da93add88ec7b5c7e3d492d50b4f7fd2f66793c29fc01c80daa",
+      "input_profile_sha256": "f7174278832d8574b81c39a7dc5e235d80648553e9b9f3c9ceed80728ca715bc",
+      "target_profile_sha256": "5db804a1fad7c77e7b08cdb82c9b459e603295c4815b1fd1962dbf5dcc3aee45",
+      "native_precision_status": "diagnostic; no justified CMM precision bound"
+    }
+  },
+  "source_sha256": "532d287062b384405ead13d4b95af52a59a735117dcba22b5f28228f5e26fdf8",
+  "truth_sha256": "8454780e5841cdf6c88d70b8603acecab174a74ef414fa1ad7e48a8e002cffa7",
+  "target_inverse": [
+    [
+      "1112856911872/355145893709",
+      "-574196162560/355145893709",
+      "-174154825728/355145893709"
+    ],
+    [
+      "-347533418496/355145893709",
+      "680502992896/355145893709",
+      "11810816000/355145893709"
+    ],
+    [
+      "25569976320/355145893709",
+      "-81340358656/355145893709",
+      "499070730240/355145893709"
+    ]
+  ],
+  "target_inverse_infinity_norm": "1861207900160/355145893709",
+  "source_loss_verified": true,
+  "profile_subjects_unchanged": true,
+  "native_precision_verified": false,
+  "cairo_fidelity_verified": false,
+  "runtime_resources_verified": false,
+  "accepted_project_delivered": false
+}

@@ -1,0 +1,53 @@
+import hashlib,json,os,pathlib,shutil,subprocess,sys,time,xml.etree.ElementTree as ET
+root=pathlib.Path.cwd()
+out=pathlib.Path('/private/tmp/bookscan-k63-empty-store-cleanup')
+paths=set(subprocess.check_output(['jj','file','list','--no-pager'],text=True).splitlines())
+for base in [root/'.venv', pathlib.Path(sys.base_prefix)]:
+    for p in base.rglob('*'):
+        if p.is_file() and '__pycache__' not in p.parts and p.suffix != '.pyc':
+            paths.add(str(p))
+for name in ['uv','task','pdftoppm','pdftotext','clang','pkg-config']:
+    p=shutil.which(name)
+    if p:
+        paths.add(p)
+        paths.add(str(pathlib.Path(p).resolve()))
+def freeze():
+    result={}
+    for name in sorted(paths):
+        p=pathlib.Path(name)
+        if not p.is_absolute(): p=root/p
+        if p.is_file():
+            s=p.stat()
+            result[name]={'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'bytes':s.st_size,'device':s.st_dev,'inode':s.st_ino,'mtime_ns':s.st_mtime_ns,'ctime_ns':s.st_ctime_ns}
+        else: result[name]={'missing':True}
+    return result
+def cases(path):
+    return sorted((c.attrib['classname'],c.attrib['name'],'failed' if c.find('failure') is not None else 'error' if c.find('error') is not None else 'skipped' if c.find('skipped') is not None else 'passed') for c in ET.parse(path).iter('testcase'))
+before=freeze()
+(out/'measured-before.json').write_text(json.dumps(before,sort_keys=True,indent=2)+'\n')
+commands=[('check',['task','process:check']),('empty',['task','process:empty-store-cleanup-check']),('source',['task','process:source-cleanup-check']),('import',['task','process:initial-import-check']),('staff',['task','geometry:staff-check']),('preparation',['task','prepare:acceptance','MODE=synthetic'])]
+results=[]
+for run in ['a','b']:
+    for name,command in commands:
+        directory=out/run/name
+        directory.mkdir(parents=True)
+        actual=command.copy()
+        if name=='preparation': actual.append('ARTIFACTS='+str(directory/'artifacts'))
+        env=os.environ.copy()
+        env['PYTEST_ADDOPTS']='--junitxml='+str(directory/'cases.xml')
+        started=time.time()
+        with (directory/'output.log').open('wb') as log:
+            result=subprocess.run(actual,env=env,stdout=log,stderr=subprocess.STDOUT)
+        record={'run':run,'name':name,'command':actual,'exit':result.returncode,'seconds':time.time()-started}
+        if (directory/'cases.xml').exists(): record['cases']=cases(directory/'cases.xml')
+        results.append(record)
+        print(run,name,result.returncode, len(record.get('cases',[])),flush=True)
+        (out/'runs.json').write_text(json.dumps(results,sort_keys=True,indent=2)+'\n')
+        if result.returncode: sys.exit(result.returncode)
+after=freeze()
+(out/'measured-after.json').write_text(json.dumps(after,sort_keys=True,indent=2)+'\n')
+assert before==after, [p for p in paths if before.get(p)!=after.get(p)]
+for name,_ in commands:
+    pair=[r for r in results if r['name']==name]
+    assert pair[0].get('cases')==pair[1].get('cases'),name
+print('Frozen named subjects:',len(before),'paired case ledgers agree',flush=True)

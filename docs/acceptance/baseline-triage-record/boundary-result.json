@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "change_id": "ryouonnvvlkzyyxmxrpqxnuqrysrqtvy",
+  "parent": "03eb30abe1ae485696e5deec25bfb229a42ecf69",
+  "starting_paths": 1396,
+  "changed_paths": [
+    ".grove/40-k47/01-k53/11-impl--baseline-finite-k63.md",
+    "Taskfile.yml",
+    "docs/acceptance/baseline-finite.md",
+    "docs/acceptance/baseline-triage-record/boundary-result.json",
+    "docs/acceptance/baseline-triage-record/boundary.py.gz",
+    "docs/acceptance/baseline-triage-record/controls-result.json",
+    "docs/acceptance/baseline-triage-record/controls.py",
+    "docs/acceptance/baseline-triage-record/index.json.gz",
+    "docs/acceptance/baseline-triage-record/raw-000.zippart",
+    "docs/acceptance/baseline-triage-record/raw-001.zippart",
+    "docs/acceptance/baseline-triage-record/raw-002.zippart",
+    "docs/acceptance/baseline-triage-record/raw-003.zippart",
+    "docs/acceptance/baseline-triage-record/raw-004.zippart",
+    "docs/acceptance/baseline-triage-record/raw-005.zippart",
+    "docs/acceptance/baseline-triage-record/raw-006.zippart",
+    "docs/acceptance/baseline-triage-record/verify.py",
+    "src/bookscan/assessment.py",
+    "src/bookscan/triage_record.py",
+    "tests/test_triage_record.py"
+  ],
+  "frozen_subjects": 16711,
+  "notes_preserve_starting_and_measured_prefixes": true,
+  "controls": {
+    "change": "wrong change",
+    "parent": "wrong parent",
+    "description": "partial sealing/description",
+    "conflict": "conflict",
+    "foreign-path": "foreign new path"
+  }
+}

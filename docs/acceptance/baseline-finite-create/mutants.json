@@ -1,0 +1,55 @@
+{
+  "source_sha256": "de191a0d3ac8f901795e0805372205dab5d87513ebe9ad523a2a65b32df9636c",
+  "mutants": {
+    "committed-fact-dropped": {
+      "returncode": 1,
+      "failed": [
+        "test_signal_after_commit_returns_130_143_with_committed_fact[2-130]",
+        "test_signal_after_commit_returns_130_143_with_committed_fact[15-143]",
+        "test_post_commit_cleanup_failure_keeps_selected_error_and_committed_fact",
+        "test_signal_between_commit_and_serialization_keeps_committed_fact[2-130]",
+        "test_signal_between_commit_and_serialization_keeps_committed_fact[15-143]"
+      ]
+    },
+    "post-serialize-check-dropped": {
+      "returncode": 1,
+      "failed": [
+        "test_signal_between_commit_and_serialization_keeps_committed_fact[2-130]",
+        "test_signal_between_commit_and_serialization_keeps_committed_fact[15-143]"
+      ]
+    },
+    "verify-remedy-dropped": {
+      "returncode": 1,
+      "failed": [
+        "test_post_commit_cleanup_failure_keeps_selected_error_and_committed_fact"
+      ]
+    },
+    "interrupt-exit-collapsed": {
+      "returncode": 1,
+      "failed": [
+        "test_signal_before_commit_saves_nothing[15-143]",
+        "test_signal_after_commit_returns_130_143_with_committed_fact[15-143]",
+        "test_signal_between_commit_and_serialization_keeps_committed_fact[15-143]"
+      ]
+    },
+    "delivery-failure-unrecorded": {
+      "returncode": 1,
+      "failed": [
+        "test_delivery_failure_never_rolls_back_or_emits_a_second_record"
+      ]
+    },
+    "uncommitted-success-accepted": {
+      "returncode": 1,
+      "failed": [
+        "test_create_returning_without_a_commit_is_never_reported_as_created"
+      ]
+    },
+    "warnings-not-carried": {
+      "returncode": 1,
+      "failed": [
+        "test_committed_success_carries_checkpoint_warnings_as_structured_data"
+      ]
+    }
+  },
+  "original": "16 passed in 1.11s"
+}

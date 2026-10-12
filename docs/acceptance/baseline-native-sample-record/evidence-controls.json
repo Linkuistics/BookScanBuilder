@@ -1,0 +1,10 @@
+{
+  "invented-delivery": {
+    "refused": "No finite delivery",
+    "digest_valid_repack": true
+  },
+  "removed-disproof": {
+    "refused": "Complete omission disproof",
+    "digest_valid_repack": true
+  }
+}

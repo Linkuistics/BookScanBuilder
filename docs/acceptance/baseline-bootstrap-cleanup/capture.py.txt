@@ -1,0 +1,15 @@
+import hashlib, json, pathlib, subprocess
+root = pathlib.Path.cwd()
+output = pathlib.Path('/private/tmp/bookscan-k63-lock-cleanup')
+paths = subprocess.check_output(['jj','file','list','--no-pager'], text=True).splitlines()
+records = {}
+for name in paths:
+    path = root / name
+    if path.is_file():
+        records[name] = hashlib.sha256(path.read_bytes()).hexdigest()
+(output/'starting.json').write_text(json.dumps(records, indent=2)+'\n')
+for name in ('src/bookscan/ownership.py','tests/test_ownership.py','tests/test_initial_import.py','Taskfile.yml','.grove/40-k47/01-k53/11-impl--baseline-finite-k63.md','docs/acceptance/baseline-finite.md'):
+    destination = output/'before'/name
+    destination.parent.mkdir(parents=True,exist_ok=True)
+    destination.write_bytes((root/name).read_bytes())
+print(json.dumps({'starting_paths':len(records),'captured':str(output)}))

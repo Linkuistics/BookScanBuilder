@@ -1,0 +1,66 @@
+{
+  "native-a/report.json": {
+    "file": "formatter-a.json.gz",
+    "keys": [],
+    "sha256": "3de16176808fcc1ee5469b57fbe06134ff720ed340f12201980188c1e61586bc"
+  },
+  "native-a/legacy/report.json": {
+    "file": "formatter-a.json.gz",
+    "keys": [
+      "legacy"
+    ],
+    "sha256": "3e376ae923c0460017b08964b965cbae273aaeefc97e62ba5baf865e2120e40c"
+  },
+  "native-a/legacy/legacy/report.json": {
+    "file": "formatter-a.json.gz",
+    "keys": [
+      "legacy",
+      "legacy"
+    ],
+    "sha256": "00e9e07b3114837056d72e2a6e42e71a909dcc84622910ec32f31df131a9c072"
+  },
+  "native-b/report.json": {
+    "file": "formatter-b.json.gz",
+    "keys": [],
+    "sha256": "5aad2ba75d5679d1248d12efb36d5d0145c725d1b4629dcb7086631a9b5f596f"
+  },
+  "native-b/legacy/report.json": {
+    "file": "formatter-b.json.gz",
+    "keys": [
+      "legacy"
+    ],
+    "sha256": "db57721d88ae93ea57a755b40c537ae8fd9a6bbef16a26344de7a371193478f6"
+  },
+  "native-b/legacy/legacy/report.json": {
+    "file": "formatter-b.json.gz",
+    "keys": [
+      "legacy",
+      "legacy"
+    ],
+    "sha256": "63b295fdccb9cc69044a8df87506c9767d701ae8e3bbaf75bfafd12e7ea761b7"
+  },
+  "installed/measured/report.json": {
+    "file": "installed-verification.json.gz",
+    "keys": [
+      "report"
+    ],
+    "sha256": "11838e11deb8519c7d4649d4fcbdde95b653c66c10e97f612a391c9f6013ab8a"
+  },
+  "installed/measured/legacy/report.json": {
+    "file": "installed-verification.json.gz",
+    "keys": [
+      "report",
+      "legacy"
+    ],
+    "sha256": "fff68e2d2185ed35eb47b6797566c39c5e7d1fe77303e93cac7d0cc2bf7f6520"
+  },
+  "installed/measured/legacy/legacy/report.json": {
+    "file": "installed-verification.json.gz",
+    "keys": [
+      "report",
+      "legacy",
+      "legacy"
+    ],
+    "sha256": "4740d33e77bf94a6fcf096f94df6c5d6cce235c2e99405002fd7f2b50b0b9b8f"
+  }
+}

@@ -1,0 +1,648 @@
+{
+  "format": "BookScanBuilderPlacementAcceptance",
+  "version": 1,
+  "source_sha256": "ea4925e2354358706b22e46fa0833e0fbe673a74025a9af81a47d17390c10a8c",
+  "truth_sha256": "2f70136a537ae50a5172bc679f449e63372571846bd3c76b850e1f15b43697df",
+  "pages": [
+    {
+      "source_page": 1,
+      "placements": [
+        {
+          "kind": "image",
+          "samples": [
+            300,
+            150
+          ],
+          "ppi": [
+            600.0,
+            600.0
+          ],
+          "matrix": [
+            "150",
+            "0",
+            "0",
+            "-75",
+            "0",
+            "75"
+          ]
+        }
+      ],
+      "paths": [
+        [
+          "page",
+          "1",
+          "1",
+          "/I"
+        ]
+      ],
+      "maximum_ppi": 600.0,
+      "import_fidelity": true
+    },
+    {
+      "source_page": 2,
+      "placements": [
+        {
+          "kind": "image",
+          "samples": [
+            300,
+            150
+          ],
+          "ppi": [
+            600.0,
+            600.0
+          ],
+          "matrix": [
+            "0",
+            "150",
+            "75",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      ],
+      "paths": [
+        [
+          "page",
+          "2",
+          "1",
+          "/I"
+        ]
+      ],
+      "maximum_ppi": 600.0,
+      "import_fidelity": true
+    },
+    {
+      "source_page": 3,
+      "placements": [
+        {
+          "kind": "image",
+          "samples": [
+            300,
+            150
+          ],
+          "ppi": [
+            600.0,
+            600.0
+          ],
+          "matrix": [
+            "-150",
+            "0",
+            "0",
+            "75",
+            "150",
+            "0"
+          ]
+        }
+      ],
+      "paths": [
+        [
+          "page",
+          "3",
+          "1",
+          "/I"
+        ]
+      ],
+      "maximum_ppi": 600.0,
+      "import_fidelity": true
+    },
+    {
+      "source_page": 4,
+      "placements": [
+        {
+          "kind": "image",
+          "samples": [
+            300,
+            150
+          ],
+          "ppi": [
+            600.0,
+            600.0
+          ],
+          "matrix": [
+            "0",
+            "-150",
+            "-75",
+            "0",
+            "75",
+            "150"
+          ]
+        }
+      ],
+      "paths": [
+        [
+          "page",
+          "4",
+          "1",
+          "/I"
+        ]
+      ],
+      "maximum_ppi": 600.0,
+      "import_fidelity": true
+    },
+    {
+      "source_page": 5,
+      "placements": [
+        {
+          "kind": "image",
+          "samples": [
+            600,
+            300
+          ],
+          "ppi": [
+            300.0,
+            300.0
+          ],
+          "matrix": [
+            "600",
+            "0",
+            "0",
+            "-300",
+            "0",
+            "300"
+          ]
+        },
+        {
+          "kind": "image",
+          "samples": [
+            600,
+            300
+          ],
+          "ppi": [
+            600.0,
+            600.0
+          ],
+          "matrix": [
+            "300",
+            "0",
+            "0",
+            "-150",
+            "150",
+            "225"
+          ]
+        },
+        {
+          "kind": "image",
+          "samples": [
+            600,
+            300
+          ],
+          "ppi": [
+            300.0,
+            300.0
+          ],
+          "matrix": [
+            "600",
+            "0",
+            "0",
+            "-300",
+            "0",
+            "300"
+          ]
+        }
+      ],
+      "paths": [
+        [
+          "page",
+          "5",
+          "1",
+          "/I"
+        ],
+        [
+          "page",
+          "5",
+          "4",
+          "/I"
+        ],
+        [
+          "page",
+          "5",
+          "6",
+          "/I"
+        ]
+      ],
+      "maximum_ppi": 600.0,
+      "import_fidelity": true
+    },
+    {
+      "source_page": 6,
+      "placements": [
+        {
+          "kind": "image",
+          "samples": [
+            300,
+            300
+          ],
+          "ppi": [
+            300.0,
+            300.0
+          ],
+          "matrix": [
+            "300",
+            "0",
+            "0",
+            "-300",
+            "0",
+            "300"
+          ]
+        },
+        {
+          "kind": "soft-mask",
+          "samples": [
+            900,
+            600
+          ],
+          "ppi": [
+            900.0,
+            600.0
+          ],
+          "matrix": [
+            "300",
+            "0",
+            "0",
+            "-300",
+            "0",
+            "300"
+          ]
+        },
+        {
+          "kind": "stencil",
+          "samples": [
+            600,
+            600
+          ],
+          "ppi": [
+            600.0,
+            600.0
+          ],
+          "matrix": [
+            "300",
+            "0",
+            "0",
+            "-300",
+            "0",
+            "300"
+          ]
+        },
+        {
+          "kind": "inline",
+          "samples": [
+            2,
+            1
+          ],
+          "ppi": [
+            2.0,
+            1.0
+          ],
+          "matrix": [
+            "300",
+            "0",
+            "0",
+            "-300",
+            "0",
+            "300"
+          ]
+        }
+      ],
+      "paths": [
+        [
+          "page",
+          "6",
+          "1",
+          "/I"
+        ],
+        [
+          "page",
+          "6",
+          "1",
+          "/I",
+          "/SMask"
+        ],
+        [
+          "page",
+          "6",
+          "2",
+          "/M"
+        ],
+        [
+          "page",
+          "6",
+          "3"
+        ]
+      ],
+      "maximum_ppi": 900.0,
+      "import_fidelity": true
+    },
+    {
+      "source_page": 7,
+      "placements": [
+        {
+          "kind": "image",
+          "samples": [
+            600,
+            300
+          ],
+          "ppi": [
+            300.0,
+            300.0
+          ],
+          "matrix": [
+            "600",
+            "0",
+            "0",
+            "-300",
+            "900",
+            "-900"
+          ]
+        },
+        {
+          "kind": "image",
+          "samples": [
+            1,
+            1
+          ],
+          "ppi": [
+            72.0,
+            72.0
+          ],
+          "matrix": [
+            "25/6",
+            "0",
+            "0",
+            "-25/6",
+            "0",
+            "300"
+          ]
+        }
+      ],
+      "paths": [
+        [
+          "page",
+          "7",
+          "0",
+          "/F",
+          "2",
+          "/F",
+          "0",
+          "/I"
+        ],
+        [
+          "page",
+          "7",
+          "0",
+          "/F",
+          "4",
+          "/I"
+        ]
+      ],
+      "maximum_ppi": 300.0,
+      "import_fidelity": false
+    },
+    {
+      "source_page": 8,
+      "placements": [
+        {
+          "kind": "image",
+          "samples": [
+            300,
+            600
+          ],
+          "ppi": [
+            600.0,
+            600.0
+          ],
+          "matrix": [
+            "0",
+            "-150",
+            "-300",
+            "0",
+            "600",
+            "300"
+          ]
+        }
+      ],
+      "paths": [
+        [
+          "annotation",
+          "0",
+          "1",
+          "/I"
+        ]
+      ],
+      "maximum_ppi": 600.0,
+      "import_fidelity": true
+    },
+    {
+      "source_page": 9,
+      "placements": [
+        {
+          "kind": "image",
+          "samples": [
+            300,
+            300
+          ],
+          "ppi": [
+            300.0,
+            300.0
+          ],
+          "matrix": [
+            "300",
+            "0",
+            "0",
+            "-300",
+            "0",
+            "300"
+          ]
+        }
+      ],
+      "paths": [
+        [
+          "annotation",
+          "0",
+          "0",
+          "/I"
+        ]
+      ],
+      "maximum_ppi": 300.0,
+      "import_fidelity": false
+    },
+    {
+      "source_page": 10,
+      "placements": [
+        {
+          "kind": "image",
+          "samples": [
+            300,
+            300
+          ],
+          "ppi": [
+            300.0,
+            300.0
+          ],
+          "matrix": [
+            "300",
+            "0",
+            "0",
+            "-300",
+            "0",
+            "300"
+          ]
+        }
+      ],
+      "paths": [
+        [
+          "annotation",
+          "0",
+          "0",
+          "/I"
+        ]
+      ],
+      "maximum_ppi": 300.0,
+      "import_fidelity": false
+    },
+    {
+      "source_page": 11,
+      "placements": [],
+      "paths": [],
+      "maximum_ppi": null,
+      "import_fidelity": false
+    },
+    {
+      "source_page": 12,
+      "placements": [
+        {
+          "kind": "image",
+          "samples": [
+            300,
+            300
+          ],
+          "ppi": [
+            300.0,
+            300.0
+          ],
+          "matrix": [
+            "300",
+            "0",
+            "0",
+            "-300",
+            "0",
+            "300"
+          ]
+        }
+      ],
+      "paths": [
+        [
+          "annotation",
+          "0",
+          "0",
+          "/I"
+        ]
+      ],
+      "maximum_ppi": 300.0,
+      "import_fidelity": false
+    },
+    {
+      "source_page": 13,
+      "placements": [],
+      "paths": [],
+      "maximum_ppi": null,
+      "import_fidelity": false
+    },
+    {
+      "source_page": 14,
+      "placements": [],
+      "paths": [],
+      "maximum_ppi": null,
+      "import_fidelity": false
+    },
+    {
+      "source_page": 15,
+      "placements": [
+        {
+          "kind": "image",
+          "samples": [
+            300,
+            150
+          ],
+          "ppi": [
+            600.0,
+            600.0
+          ],
+          "matrix": [
+            "150",
+            "0",
+            "0",
+            "-75",
+            "0",
+            "75"
+          ]
+        }
+      ],
+      "paths": [
+        [
+          "page",
+          "15",
+          "1",
+          "/I"
+        ]
+      ],
+      "maximum_ppi": 600.0,
+      "import_fidelity": true
+    }
+  ],
+  "controls": {
+    "wrong-ctm": "matrix",
+    "wrong-unit-resolution": "ppi",
+    "wrong-resource": "samples",
+    "wrong-order": "ppi",
+    "missing-mask": "placement count",
+    "partial-complete-claim": "complete inventory"
+  },
+  "actual_cairo_annotation_visibility": {
+    "0": {
+      "size": [
+        300,
+        300
+      ],
+      "rgb_sha256": "86c8122f096b1f25ee1911f58db2b980e23f22f4f81f975bc7e6129a9781b572",
+      "diagnostics": ""
+    },
+    "1": {
+      "size": [
+        300,
+        300
+      ],
+      "rgb_sha256": "86c8122f096b1f25ee1911f58db2b980e23f22f4f81f975bc7e6129a9781b572",
+      "diagnostics": ""
+    },
+    "2": {
+      "size": [
+        300,
+        300
+      ],
+      "rgb_sha256": "e94568313653c63319a95a1f07da62a089ecd7082cd518017855518af712f621",
+      "diagnostics": ""
+    },
+    "4": {
+      "size": [
+        300,
+        300
+      ],
+      "rgb_sha256": "86c8122f096b1f25ee1911f58db2b980e23f22f4f81f975bc7e6129a9781b572",
+      "diagnostics": ""
+    },
+    "32": {
+      "size": [
+        300,
+        300
+      ],
+      "rgb_sha256": "e94568313653c63319a95a1f07da62a089ecd7082cd518017855518af712f621",
+      "diagnostics": ""
+    }
+  },
+  "source_loss_verified": true,
+  "snapshot_bytes_unchanged": true,
+  "composition_fidelity_verified": false,
+  "source_native_decoding_verified": false,
+  "accepted_project_delivered": false
+}

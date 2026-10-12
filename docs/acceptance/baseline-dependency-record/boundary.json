@@ -1,0 +1,39 @@
+{
+  "change_id": "ryouonnvvlkzyyxmxrpqxnuqrysrqtvy",
+  "changed_existing": [
+    ".grove/40-k47/01-k53/11-impl--baseline-finite-k63.md",
+    "Taskfile.yml",
+    "docs/acceptance/baseline-finite.md"
+  ],
+  "control_refusals": [
+    "change",
+    "parent",
+    "description",
+    "foreign-path",
+    "lost-prefix"
+  ],
+  "description": "",
+  "measured_prefixes_retained": true,
+  "new_paths": [
+    "docs/acceptance/baseline-dependency-record/README.md",
+    "docs/acceptance/baseline-dependency-record/boundary.json",
+    "docs/acceptance/baseline-dependency-record/controls.py",
+    "docs/acceptance/baseline-dependency-record/corpus-01.part",
+    "docs/acceptance/baseline-dependency-record/corpus-02.part",
+    "docs/acceptance/baseline-dependency-record/corpus-03.part",
+    "docs/acceptance/baseline-dependency-record/corpus-04.part",
+    "docs/acceptance/baseline-dependency-record/corpus-05.part",
+    "docs/acceptance/baseline-dependency-record/coverage.json",
+    "docs/acceptance/baseline-dependency-record/index.json",
+    "docs/acceptance/baseline-dependency-record/verify.py",
+    "src/bookscan/dependency_record.py",
+    "tests/dependency_record_acceptance.py",
+    "tests/test_dependency_record.py"
+  ],
+  "other_frozen_subjects_unchanged": true,
+  "parent": "03eb30abe1ae485696e5deec25bfb229a42ecf69",
+  "partial_seal": false,
+  "prefixes_retained": true,
+  "retired": false,
+  "starting_files": 1650
+}

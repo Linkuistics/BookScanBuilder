@@ -1,0 +1,68 @@
+{
+  "project": "Users-antony-Development-BookScanBuilder",
+  "signal": "best_effort",
+  "indexed_at": "2026-10-14T00:50:00Z",
+  "metadata": {
+    "generation": "2026-10-14T00:50:00Z",
+    "index_mode": "full",
+    "recorded_at": "2026-10-14T00:50:38Z",
+    "recording_status": "complete",
+    "ignored_files_stored": 20,
+    "ignored_files_total": 20,
+    "hash_records_complete": true,
+    "coverage_version": 3,
+    "generation_matches": true
+  },
+  "paths": [
+    {
+      "requested_path": "src/bookscan/resources.py",
+      "path": "src/bookscan/resources.py",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "tests/test_resource_directories.py",
+      "path": "tests/test_resource_directories.py",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "tests/fontconfig_acceptance.py",
+      "path": "tests/fontconfig_acceptance.py",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "docs/acceptance/baseline-dangling-entries/verify.py",
+      "path": "docs/acceptance/baseline-dangling-entries/verify.py",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "docs/acceptance/baseline-dangling-entries/index.json",
+      "path": "docs/acceptance/baseline-dangling-entries/index.json",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "Taskfile.yml",
+      "path": "Taskfile.yml",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    }
+  ],
+  "scopes": [],
+  "caveat": "Best-effort signal only. No recorded issue does not prove graph or source completeness; read flagged source and qualify claims when metadata is changed or unavailable."
+}

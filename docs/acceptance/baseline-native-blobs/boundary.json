@@ -1,0 +1,32 @@
+{
+  "starting_paths": 1587,
+  "changed_paths": [
+    ".grove/40-k47/01-k53/11-impl--baseline-finite-k63.md",
+    "Taskfile.yml",
+    "docs/acceptance/baseline-finite.md",
+    "docs/acceptance/baseline-native-blobs/README.md",
+    "docs/acceptance/baseline-native-blobs/boundary-controls.json",
+    "docs/acceptance/baseline-native-blobs/boundary.json",
+    "docs/acceptance/baseline-native-blobs/boundary.py",
+    "docs/acceptance/baseline-native-blobs/controls.py",
+    "docs/acceptance/baseline-native-blobs/coverage.json",
+    "docs/acceptance/baseline-native-blobs/evidence-controls.json",
+    "docs/acceptance/baseline-native-blobs/index.json.gz",
+    "docs/acceptance/baseline-native-blobs/raw-000.zippart",
+    "docs/acceptance/baseline-native-blobs/raw-001.zippart",
+    "docs/acceptance/baseline-native-blobs/raw-002.zippart",
+    "docs/acceptance/baseline-native-blobs/verify.py",
+    "src/bookscan/native_blobs.py",
+    "tests/native_blob_acceptance.py",
+    "tests/native_blob_sample_acceptance.py",
+    "tests/native_blob_worker.py",
+    "tests/test_native_blobs.py"
+  ],
+  "frozen_subjects": 16749,
+  "change": "ryouonnvvlkzyyxmxrpqxnuqrysrqtvy",
+  "parent": "03eb30abe1ae485696e5deec25bfb229a42ecf69",
+  "description_empty": true,
+  "conflicts": false,
+  "prefixes_preserved": true,
+  "finite_delivery": false
+}

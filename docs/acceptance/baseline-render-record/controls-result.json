@@ -1,0 +1,12 @@
+{
+  "baseline": {
+    "entries": 1584,
+    "new_units": 38,
+    "public_delivery": false,
+    "subjects": 16714,
+    "units": 1798,
+    "verified": true
+  },
+  "coherent-wrong-density": "native MediaBox policy",
+  "missing-density-control": "native policy controls"
+}

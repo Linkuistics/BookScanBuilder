@@ -1,0 +1,84 @@
+{
+  "project": "Users-antony-Development-BookScanBuilder",
+  "signal": "best_effort",
+  "indexed_at": "2026-10-14T00:03:37Z",
+  "metadata": {
+    "generation": "2026-10-14T00:03:37Z",
+    "index_mode": "full",
+    "recorded_at": "2026-10-14T00:03:37Z",
+    "recording_status": "complete",
+    "ignored_files_stored": 20,
+    "ignored_files_total": 20,
+    "hash_records_complete": true,
+    "coverage_version": 3,
+    "generation_matches": true
+  },
+  "paths": [
+    {
+      "requested_path": "docs/acceptance/baseline-resource-directories/audit-preserving.py",
+      "path": "docs/acceptance/baseline-resource-directories/audit-preserving.py",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "docs/acceptance/baseline-resource-directories/audit-repair-boundary.py",
+      "path": "docs/acceptance/baseline-resource-directories/audit-repair-boundary.py",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "docs/acceptance/baseline-resource-directories/audit-repair-index.json",
+      "path": "docs/acceptance/baseline-resource-directories/audit-repair-index.json",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "docs/acceptance/baseline-resource-directories/audit-repair-000.zip",
+      "path": "docs/acceptance/baseline-resource-directories/audit-repair-000.zip",
+      "status": "no_recorded_issue",
+      "freshness": "not_tracked",
+      "recommended_action": "read_source_and_reindex",
+      "coverage": []
+    },
+    {
+      "requested_path": "docs/acceptance/baseline-resource-directories/audit-repair-001.zip",
+      "path": "docs/acceptance/baseline-resource-directories/audit-repair-001.zip",
+      "status": "no_recorded_issue",
+      "freshness": "not_tracked",
+      "recommended_action": "read_source_and_reindex",
+      "coverage": []
+    },
+    {
+      "requested_path": "docs/acceptance/baseline-resource-directories/audit-repair-002.zip",
+      "path": "docs/acceptance/baseline-resource-directories/audit-repair-002.zip",
+      "status": "no_recorded_issue",
+      "freshness": "not_tracked",
+      "recommended_action": "read_source_and_reindex",
+      "coverage": []
+    },
+    {
+      "requested_path": "docs/acceptance/baseline-resource-directories/audit-repair-boundary.json",
+      "path": "docs/acceptance/baseline-resource-directories/audit-repair-boundary.json",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "docs/acceptance/baseline-resource-directories/audit-repair-boundary-inputs.json.gz",
+      "path": "docs/acceptance/baseline-resource-directories/audit-repair-boundary-inputs.json.gz",
+      "status": "no_recorded_issue",
+      "freshness": "not_tracked",
+      "recommended_action": "read_source_and_reindex",
+      "coverage": []
+    }
+  ],
+  "scopes": [],
+  "caveat": "Best-effort signal only. No recorded issue does not prove graph or source completeness; read flagged source and qualify claims when metadata is changed or unavailable."
+}

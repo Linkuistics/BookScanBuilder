@@ -1,0 +1,22 @@
+{
+  ".grove/40-k47/01-k53/11-impl--baseline-finite-k63.md": {
+    "bytes": 657698,
+    "sha256": "80e9e816549b1a248d7b20f9389085d84617a48ae90180c1fa48a6fde0b07617"
+  },
+  "Taskfile.yml": {
+    "bytes": 40139,
+    "sha256": "112d3b038bf35c505b6f07a5d2bac880e95e39257f43f8309ed33579c1ed4a31"
+  },
+  "docs/acceptance/baseline-finite.md": {
+    "bytes": 344796,
+    "sha256": "330657ab2e4918d4b3ed6027ad30169fbeedb0149519ac0cc422b2a9c8bd521c"
+  },
+  "src/bookscan/project_reservation.py": {
+    "bytes": 11225,
+    "sha256": "40cc37e844dffaa2f867801940f61a2a7a444b05b928ab55bf964ca4e3780316"
+  },
+  "tests/test_project_reservation.py": {
+    "bytes": 13518,
+    "sha256": "a5febb3540e9519fb565ff0006ab0b18347e3e16e169171781229274255fa17a"
+  }
+}

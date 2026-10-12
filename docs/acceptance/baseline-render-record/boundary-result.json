@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "change_id": "ryouonnvvlkzyyxmxrpqxnuqrysrqtvy",
+  "parent": "03eb30abe1ae485696e5deec25bfb229a42ecf69",
+  "starting_paths": 1411,
+  "changed_paths": [
+    ".grove/40-k47/01-k53/11-impl--baseline-finite-k63.md",
+    "Taskfile.yml",
+    "docs/acceptance/baseline-finite.md",
+    "docs/acceptance/baseline-render-record/boundary-result.json",
+    "docs/acceptance/baseline-render-record/boundary.py.gz",
+    "docs/acceptance/baseline-render-record/controls-result.json",
+    "docs/acceptance/baseline-render-record/controls.py",
+    "docs/acceptance/baseline-render-record/index.json.gz",
+    "docs/acceptance/baseline-render-record/raw-000.zippart",
+    "docs/acceptance/baseline-render-record/raw-001.zippart",
+    "docs/acceptance/baseline-render-record/raw-002.zippart",
+    "docs/acceptance/baseline-render-record/raw-003.zippart",
+    "docs/acceptance/baseline-render-record/raw-004.zippart",
+    "docs/acceptance/baseline-render-record/raw-005.zippart",
+    "docs/acceptance/baseline-render-record/raw-006.zippart",
+    "docs/acceptance/baseline-render-record/verify.py",
+    "src/bookscan/render_record.py",
+    "tests/assessment_acceptance.py",
+    "tests/test_render_record.py"
+  ],
+  "frozen_subjects": 16714,
+  "notes_preserve_starting_and_measured_prefixes": true,
+  "controls": {
+    "change": "wrong change",
+    "parent": "wrong parent",
+    "description": "partial sealing/description",
+    "conflict": "conflict",
+    "foreign-path": "foreign new path"
+  }
+}

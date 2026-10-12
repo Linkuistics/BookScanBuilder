@@ -1,0 +1,83 @@
+{
+  "files": {
+    "README.md": {
+      "bytes": 4022,
+      "sha256": "35c43bfdea5b11406d1746f0f1c2638bc9087cfa1296ca1e7104c63ac294a7aa"
+    },
+    "boundary-result.json": {
+      "bytes": 5061,
+      "sha256": "6daf0ed808cd8218d0e7a71a0ca71be6f62a932d0f5087b65011a25bf1dd8711"
+    },
+    "boundary.py.txt": {
+      "bytes": 4078,
+      "sha256": "b027dcff30a988bea899f024553618af8f581afd9d92c3ffa06a62390baa5825"
+    },
+    "coverage-fallback.json.gz": {
+      "bytes": 62008,
+      "sha256": "65a3e99c0b2e936c19119ce1908ce809e5ad9201e828480303b489a00e29c5aa"
+    },
+    "coverage-fallback.py.txt": {
+      "bytes": 1750,
+      "sha256": "b65070338b5c54fcc4c7f7a7de3e0f4795a9e351b5d383e1f368184aa24d6982"
+    },
+    "coverage.json.gz": {
+      "bytes": 17523,
+      "sha256": "10b9af7aae49e7a214499ac9d34c4d19e6bee41fce196f05be35d5fd19bf597c"
+    },
+    "graph.json.gz": {
+      "bytes": 2591,
+      "sha256": "78267b0f78908c4f10c0d1fe8e9f49ddb7188883cda61c7084cb174b86c9c87f"
+    },
+    "index.json": {
+      "bytes": 287018,
+      "sha256": "53192cd2e009d524096752173e526ff1418ddea7145393293f88d4ca5123f4c2"
+    },
+    "raw-000.zippart": {
+      "bytes": 900000,
+      "sha256": "deac1748ba8d61535c82d2de23e5850ab0df9b407f2f0f4f9b8e36723e83f508"
+    },
+    "raw-001.zippart": {
+      "bytes": 900000,
+      "sha256": "9169e26a8bdeb7b5cd0db54807a1a9f99bb38dc9a4112d2f950c2fe54ec7af63"
+    },
+    "raw-002.zippart": {
+      "bytes": 900000,
+      "sha256": "2b9580addb14f4696d603fca3e7991a57cb9c9d2d9a5f20b0ac5f533f560d683"
+    },
+    "raw-003.zippart": {
+      "bytes": 900000,
+      "sha256": "3e146207f079de24ff7e1e681ac6dee78b7e521aa99651cd0a03fe5394bfc43e"
+    },
+    "raw-004.zippart": {
+      "bytes": 900000,
+      "sha256": "644658eb73efa6a2b23acdcde41156421ccfc10c4ec9de38320de8e3a38139f7"
+    },
+    "raw-005.zippart": {
+      "bytes": 900000,
+      "sha256": "82f08f5899f14ee1d5d31688c21302e0db2ef0ed33203244cfd8449cdf62acfc"
+    },
+    "raw-006.zippart": {
+      "bytes": 900000,
+      "sha256": "4003ff4b7b5b20490e6f6db46218447cab391bc1c76dbcfeed06f53e4cb90a23"
+    },
+    "raw-007.zippart": {
+      "bytes": 216303,
+      "sha256": "bca554a54a595a7b02940c287edb3eb71a4598648357316f340bb6a8efc68ce0"
+    },
+    "supplement.py.txt": {
+      "bytes": 585,
+      "sha256": "f85f57c611e1c5c05c70431c469d527d7bf0223242baaa2e04da43d4315f6e02"
+    },
+    "verification.json": {
+      "bytes": 1023,
+      "sha256": "7fbccba56d9c51e2a2e183a25761b377f51b80fcbfb3de0bfd0866fdb6a641cd"
+    },
+    "verify.py.txt": {
+      "bytes": 4145,
+      "sha256": "a7d43cb5daa7c4828c4efe25f9cd8712e8da5d29f4d5082fe619abcecd10c379"
+    }
+  },
+  "format": "OrdinaryEvidenceSupplementHashes",
+  "limitation": "Content integrity only; supplementary records were added after measurement.",
+  "version": 1
+}

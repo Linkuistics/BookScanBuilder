@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "compression": "gzip",
+  "source": "/private/tmp/bookscan-k63-ownership-work/measurement.json",
+  "sha256": "ab2f2a62bbf1fa6a59ad160458c074fb36c9802b34070263b4ba334763d3befb",
+  "bytes": 4211712,
+  "compressed_sha256": "fc4dcadcd0077b53879eb7cae0b5ef68385ea55c340a4bd9636de02f8125c931",
+  "parts": [
+    {
+      "file": "measurement-000.gzpart",
+      "sha256": "eb4df7b13f8f656e58d0235232e66e5ca7d947aaa995473f73a786a3515aed95",
+      "bytes": 750000
+    },
+    {
+      "file": "measurement-001.gzpart",
+      "sha256": "4189273914cc0992d2f4b7d774c2a70c4803769d91cd4a1696b31dccf5d468ba",
+      "bytes": 112384
+    }
+  ]
+}

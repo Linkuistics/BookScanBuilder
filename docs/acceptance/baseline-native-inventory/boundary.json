@@ -1,0 +1,42 @@
+{
+  "boundary": {
+    "starting_paths": 1604,
+    "changed_paths": [
+      ".grove/40-k47/01-k53/11-impl--baseline-finite-k63.md",
+      "Taskfile.yml",
+      "docs/acceptance/baseline-finite.md",
+      "docs/acceptance/baseline-native-inventory/README.md",
+      "docs/acceptance/baseline-native-inventory/boundary.json",
+      "docs/acceptance/baseline-native-inventory/boundary.py",
+      "docs/acceptance/baseline-native-inventory/controls.py",
+      "docs/acceptance/baseline-native-inventory/coverage.json",
+      "docs/acceptance/baseline-native-inventory/evidence-controls.json",
+      "docs/acceptance/baseline-native-inventory/index.json.gz",
+      "docs/acceptance/baseline-native-inventory/raw-000.zippart",
+      "docs/acceptance/baseline-native-inventory/raw-001.zippart",
+      "docs/acceptance/baseline-native-inventory/raw-002.zippart",
+      "docs/acceptance/baseline-native-inventory/raw-003.zippart",
+      "docs/acceptance/baseline-native-inventory/raw-004.zippart",
+      "docs/acceptance/baseline-native-inventory/verify.py",
+      "src/bookscan/assessment.py",
+      "src/bookscan/native_inventory_record.py",
+      "tests/native_inventory_acceptance.py",
+      "tests/test_native_inventory_record.py"
+    ],
+    "frozen_subjects": 16753,
+    "change": "ryouonnvvlkzyyxmxrpqxnuqrysrqtvy",
+    "parent": "03eb30abe1ae485696e5deec25bfb229a42ecf69",
+    "description_empty": true,
+    "conflicts": false,
+    "prefixes_preserved": true,
+    "public_finite_delivery": false
+  },
+  "controls": [
+    "wrong-change",
+    "wrong-parent",
+    "partial-description",
+    "conflict",
+    "foreign-path",
+    "lost-prefix"
+  ]
+}

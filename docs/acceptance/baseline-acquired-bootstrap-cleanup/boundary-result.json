@@ -1,0 +1,113 @@
+{
+  "changed_starting_paths": [
+    ".grove/40-k47/01-k53/11-impl--baseline-finite-k63.md",
+    "Taskfile.yml",
+    "docs/acceptance/baseline-finite.md",
+    "src/bookscan/initial_import.py",
+    "src/bookscan/ownership.py",
+    "tests/test_initial_import.py",
+    "tests/test_ownership.py"
+  ],
+  "identity": [
+    "ryouonnvvlkzyyxmxrpqxnuqrysrqtvy",
+    "",
+    "03eb30abe1ae485696e5deec25bfb229a42ecf69",
+    "false"
+  ],
+  "new_paths": [
+    "docs/acceptance/baseline-acquired-bootstrap-cleanup/README.md",
+    "docs/acceptance/baseline-acquired-bootstrap-cleanup/boundary-result.json",
+    "docs/acceptance/baseline-acquired-bootstrap-cleanup/boundary.py.txt",
+    "docs/acceptance/baseline-acquired-bootstrap-cleanup/coverage-fallback.json.gz",
+    "docs/acceptance/baseline-acquired-bootstrap-cleanup/coverage-fallback.py.txt",
+    "docs/acceptance/baseline-acquired-bootstrap-cleanup/coverage.json.gz",
+    "docs/acceptance/baseline-acquired-bootstrap-cleanup/graph.json.gz",
+    "docs/acceptance/baseline-acquired-bootstrap-cleanup/index.json",
+    "docs/acceptance/baseline-acquired-bootstrap-cleanup/raw-000.zippart",
+    "docs/acceptance/baseline-acquired-bootstrap-cleanup/raw-001.zippart",
+    "docs/acceptance/baseline-acquired-bootstrap-cleanup/raw-002.zippart",
+    "docs/acceptance/baseline-acquired-bootstrap-cleanup/raw-003.zippart",
+    "docs/acceptance/baseline-acquired-bootstrap-cleanup/raw-004.zippart",
+    "docs/acceptance/baseline-acquired-bootstrap-cleanup/raw-005.zippart",
+    "docs/acceptance/baseline-acquired-bootstrap-cleanup/raw-006.zippart",
+    "docs/acceptance/baseline-acquired-bootstrap-cleanup/raw-007.zippart",
+    "docs/acceptance/baseline-acquired-bootstrap-cleanup/supplement.py.txt",
+    "docs/acceptance/baseline-acquired-bootstrap-cleanup/supplemental-index.json",
+    "docs/acceptance/baseline-acquired-bootstrap-cleanup/verification.json",
+    "docs/acceptance/baseline-acquired-bootstrap-cleanup/verify.py.txt"
+  ],
+  "prefixes": {
+    ".grove/40-k47/01-k53/11-impl--baseline-finite-k63.md": {
+      "bytes": 671914,
+      "sha256": "bb656cf70970499ce9ca53a05a96f8435cf096b0bef7b17d3de109e33dd6f17f"
+    },
+    "Taskfile.yml": {
+      "bytes": 40653,
+      "sha256": "b2fce0d266a3a5a027478d0202c92e13f221f2e2540008dbcf72d0ad97adcb77"
+    },
+    "docs/acceptance/baseline-finite.md": {
+      "bytes": 346013,
+      "sha256": "3c10a7029b27f5e09ca9204bf61e574045aef57c78f91652a32fb581f84fca2f"
+    },
+    "tests/test_initial_import.py": {
+      "bytes": 17121,
+      "sha256": "fe2828c0c7d7788158f95d9c96b4b19c6d765e4a16a1d59ceacce052494f1bf5"
+    },
+    "tests/test_ownership.py": {
+      "bytes": 7699,
+      "sha256": "304f65e0ff6b23c9e5379896cc14f3dc97a92dc2ba21a648ace57c0c6a4a763d"
+    }
+  },
+  "protected_segments": {
+    "src/bookscan/initial_import.py": [
+      "ImportFrom(module='collections.abc', names=[alias(name='Callable'), alias(name='Iterator')], level=0)",
+      "ImportFrom(module='contextlib', names=[alias(name='contextmanager')], level=0)",
+      "ImportFrom(module='dataclasses', names=[alias(name='dataclass')], level=0)",
+      "ImportFrom(module='pathlib', names=[alias(name='Path')], level=0)",
+      "ImportFrom(module='typing', names=[alias(name='cast')], level=0)",
+      "ImportFrom(module='bookscan', names=[alias(name='assessment'), alias(name='baseline_state'), alias(name='checkpoints'), alias(name='dependencies'), alias(name='fontconfig'), alias(name='import_assembly'), alias(name='intake'), alias(name='native_setup'), alias(name='ownership'), alias(name='project_header'), alias(name='project_reservation')], level=0)",
+      "ImportFrom(module='bookscan.resources', names=[alias(name='ResourceBinding')], level=0)",
+      "ImportFrom(module='bookscan.skew', names=[alias(name='NativeError')], level=0)",
+      "_native"
+    ],
+    "src/bookscan/ownership.py": [
+      "Import(names=[alias(name='errno')])",
+      "Import(names=[alias(name='fcntl')])",
+      "Import(names=[alias(name='os')])",
+      "Import(names=[alias(name='platform')])",
+      "Import(names=[alias(name='re')])",
+      "Import(names=[alias(name='stat')])",
+      "Import(names=[alias(name='sys')])",
+      "Import(names=[alias(name='uuid')])",
+      "ImportFrom(module='dataclasses', names=[alias(name='dataclass')], level=0)",
+      "ImportFrom(module='pathlib', names=[alias(name='Path')], level=0)",
+      "ImportFrom(module='types', names=[alias(name='TracebackType')], level=0)",
+      "ImportFrom(module='typing', names=[alias(name='Self')], level=0)",
+      "OwnershipError.remediation",
+      "OwnershipError.__str__",
+      "LockIdentity.content",
+      "_directory",
+      "_stamp",
+      "_remove_failed_lock",
+      "_close_bootstrap",
+      "provision",
+      "Writer.__init__",
+      "Writer.acquire",
+      "Writer.verify",
+      "Writer.close",
+      "Writer.__enter__"
+    ]
+  },
+  "refusing_controls": [
+    "missing",
+    "unrelated",
+    "foreign",
+    "change",
+    "parent",
+    "description",
+    "conflict",
+    "prefix"
+  ],
+  "result": "passed",
+  "starting_paths": 1822
+}

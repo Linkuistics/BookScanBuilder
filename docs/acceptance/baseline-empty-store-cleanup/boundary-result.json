@@ -1,0 +1,121 @@
+{
+  "changed_starting_paths": [
+    ".grove/40-k47/01-k53/11-impl--baseline-finite-k63.md",
+    "Taskfile.yml",
+    "docs/acceptance/baseline-finite.md",
+    "src/bookscan/project_reservation.py",
+    "tests/test_project_reservation.py"
+  ],
+  "identity": [
+    "ryouonnvvlkzyyxmxrpqxnuqrysrqtvy",
+    "",
+    "03eb30abe1ae485696e5deec25bfb229a42ecf69",
+    "false"
+  ],
+  "new_paths": [
+    "docs/acceptance/baseline-empty-store-cleanup/README.md",
+    "docs/acceptance/baseline-empty-store-cleanup/before.json.gz",
+    "docs/acceptance/baseline-empty-store-cleanup/boundary-result.json",
+    "docs/acceptance/baseline-empty-store-cleanup/boundary.py.txt",
+    "docs/acceptance/baseline-empty-store-cleanup/coverage-fallback.json.gz",
+    "docs/acceptance/baseline-empty-store-cleanup/coverage.json.gz",
+    "docs/acceptance/baseline-empty-store-cleanup/index.json",
+    "docs/acceptance/baseline-empty-store-cleanup/logs.json.gz",
+    "docs/acceptance/baseline-empty-store-cleanup/measure.py.txt",
+    "docs/acceptance/baseline-empty-store-cleanup/measured-after.json.gz",
+    "docs/acceptance/baseline-empty-store-cleanup/measured-before.json.gz",
+    "docs/acceptance/baseline-empty-store-cleanup/mutations-results.json.gz",
+    "docs/acceptance/baseline-empty-store-cleanup/mutations.py.txt",
+    "docs/acceptance/baseline-empty-store-cleanup/prefixes.json",
+    "docs/acceptance/baseline-empty-store-cleanup/preparation-comparison.json.gz",
+    "docs/acceptance/baseline-empty-store-cleanup/preparation-reports.json.gz",
+    "docs/acceptance/baseline-empty-store-cleanup/runs.json.gz",
+    "docs/acceptance/baseline-empty-store-cleanup/subjects.json.gz"
+  ],
+  "refusing_controls": [
+    "missing",
+    "unrelated",
+    "foreign",
+    "change",
+    "parent",
+    "description",
+    "conflict",
+    "prefix"
+  ],
+  "result": "passed",
+  "starting_paths": 1777,
+  "syntax_segments": {
+    "src/bookscan/project_reservation.py": {
+      "added": [
+        "Reservation.remove_directory"
+      ],
+      "preserved": [
+        "Import(names=[alias(name='fcntl')])",
+        "Import(names=[alias(name='os')])",
+        "Import(names=[alias(name='platform')])",
+        "Import(names=[alias(name='stat')])",
+        "Import(names=[alias(name='sys')])",
+        "ImportFrom(module='collections.abc', names=[alias(name='Callable')], level=0)",
+        "ImportFrom(module='pathlib', names=[alias(name='Path')], level=0)",
+        "ImportFrom(module='types', names=[alias(name='TracebackType')], level=0)",
+        "ImportFrom(module='typing', names=[alias(name='Self')], level=0)",
+        "ImportFrom(module='bookscan.project_header', names=[alias(name='HeaderError')], level=0)",
+        "ReservationError.remediation",
+        "_identity",
+        "_file_stamp",
+        "_canonical",
+        "_close",
+        "Reservation.__init__",
+        "Reservation.verify",
+        "Reservation.remove_empty",
+        "Reservation.remove_file",
+        "Reservation.close",
+        "Reservation.__enter__",
+        "Reservation.__exit__",
+        "reserve"
+      ]
+    },
+    "tests/test_project_reservation.py": {
+      "added": [
+        "test_remove_directory_never_accepts_a_path",
+        "test_remove_directory_preserves_every_unknown_child",
+        "test_remove_directory_preserves_selected_failure_on_syscall_error",
+        "test_remove_directory_rechecks_after_identity_predicate",
+        "test_remove_directory_refuses_links_and_other_types",
+        "test_remove_directory_requires_captured_identity",
+        "test_remove_directory_requires_live_unchanged_reservation",
+        "test_remove_owned_directory_keeps_unknown_names_and_is_idempotent"
+      ],
+      "preserved": [
+        "Import(names=[alias(name='os')])",
+        "ImportFrom(module='pathlib', names=[alias(name='Path')], level=0)",
+        "Import(names=[alias(name='pytest')])",
+        "ImportFrom(module='bookscan', names=[alias(name='project_header')], level=0)",
+        "ImportFrom(module='bookscan.project_reservation', names=[alias(name='reserve')], level=0)",
+        "_stamp",
+        "test_remove_owned_file_keeps_unknown_names_and_is_idempotent",
+        "test_remove_file_rejects_links_and_nonregular_entries",
+        "test_remove_file_never_accepts_a_path",
+        "test_remove_file_refuses_changed_identity",
+        "test_remove_file_requires_live_unchanged_reservation",
+        "test_remove_file_rechecks_after_identity_predicate",
+        "test_remove_file_preserves_nanosecond_identity_change",
+        "test_remove_file_rechecks_root_after_identity_predicate",
+        "test_reserves_private_canonical_directory_and_normal_release_retains_it",
+        "test_existing_name_is_untouched_and_returns_conflict",
+        "test_missing_parent_is_not_created",
+        "test_failure_removes_only_owned_empty_reservation",
+        "test_failure_with_unknown_content_keeps_it_and_selected_error",
+        "test_replaced_root_is_rejected_and_neither_tree_is_deleted",
+        "test_replaced_parent_is_rejected_without_deleting_old_or_new_tree",
+        "test_cancellation_never_leaves_an_empty_reservation",
+        "test_owned_descriptors_are_noninheritable_and_close_is_idempotent",
+        "_directory_fd",
+        "test_callback_io_error_preserves_chosen_error_and_owned_cleanup",
+        "test_root_destination_is_conflict",
+        "test_descriptor_cleanup_failure_cannot_replace_selected_error",
+        "test_permission_finalization_failure_cleans_captured_empty_root"
+      ]
+    }
+  }
+}

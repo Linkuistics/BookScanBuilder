@@ -1,0 +1,23 @@
+{
+  "refused": {
+    "wrong-unit": {
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/var/folders/z1/nw_wk3gj3hqchs4_73xrf2dw0000gn/T/bookscan-analysis-controls-q0wspa6y/wrong-unit/verify.py\", line 230, in <module>\n    print(json.dumps(run(parser.parse_args().directory), indent=2))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/z1/nw_wk3gj3hqchs4_73xrf2dw0000gn/T/bookscan-analysis-controls-q0wspa6y/wrong-unit/verify.py\", line 224, in run\n    return verify(read)\n           ^^^^^^^^^^^^\n  File \"/var/folders/z1/nw_wk3gj3hqchs4_73xrf2dw0000gn/T/bookscan-analysis-controls-q0wspa6y/wrong-unit/verify.py\", line 66, in verify\n    raise ValueError(\"Failed unit construction\")\nValueError: Failed unit construction\n",
+      "archive_sha256": "0734712850dc210648472f73b0125e22a44fde9c562dcf45896fc0e148200cbb"
+    },
+    "wrong-region": {
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/var/folders/z1/nw_wk3gj3hqchs4_73xrf2dw0000gn/T/bookscan-analysis-controls-q0wspa6y/wrong-region/verify.py\", line 230, in <module>\n    print(json.dumps(run(parser.parse_args().directory), indent=2))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/z1/nw_wk3gj3hqchs4_73xrf2dw0000gn/T/bookscan-analysis-controls-q0wspa6y/wrong-region/verify.py\", line 224, in run\n    return verify(read)\n           ^^^^^^^^^^^^\n  File \"/var/folders/z1/nw_wk3gj3hqchs4_73xrf2dw0000gn/T/bookscan-analysis-controls-q0wspa6y/wrong-region/verify.py\", line 125, in verify\n    equal(analysis[\"regions\"], [[0, 0, 1200, 900]])\n  File \"/var/folders/z1/nw_wk3gj3hqchs4_73xrf2dw0000gn/T/bookscan-analysis-controls-q0wspa6y/wrong-region/verify.py\", line 21, in equal\n    raise ValueError(\"Saved-analysis evidence disagreement\")\nValueError: Saved-analysis evidence disagreement\n",
+      "archive_sha256": "55a0081af6c3f4f75c60fcae47ef8b365575412234b29f97bedb05930737e5f5"
+    },
+    "wrong-availability": {
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/var/folders/z1/nw_wk3gj3hqchs4_73xrf2dw0000gn/T/bookscan-analysis-controls-q0wspa6y/wrong-availability/verify.py\", line 230, in <module>\n    print(json.dumps(run(parser.parse_args().directory), indent=2))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/folders/z1/nw_wk3gj3hqchs4_73xrf2dw0000gn/T/bookscan-analysis-controls-q0wspa6y/wrong-availability/verify.py\", line 224, in run\n    return verify(read)\n           ^^^^^^^^^^^^\n  File \"/var/folders/z1/nw_wk3gj3hqchs4_73xrf2dw0000gn/T/bookscan-analysis-controls-q0wspa6y/wrong-availability/verify.py\", line 130, in verify\n    equal(analysis[\"available\"], available)\n  File \"/var/folders/z1/nw_wk3gj3hqchs4_73xrf2dw0000gn/T/bookscan-analysis-controls-q0wspa6y/wrong-availability/verify.py\", line 21, in equal\n    raise ValueError(\"Saved-analysis evidence disagreement\")\nValueError: Saved-analysis evidence disagreement\n",
+      "archive_sha256": "ffe687a11fcc2e556241d90fb6de88fd643fc1417d4ce21c160a010acf462b45"
+    }
+  },
+  "subjects_unchanged": true
+}

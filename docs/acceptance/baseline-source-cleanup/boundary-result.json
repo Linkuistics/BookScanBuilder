@@ -1,0 +1,43 @@
+{
+  "added": [
+    "docs/acceptance/baseline-source-cleanup/README.md",
+    "docs/acceptance/baseline-source-cleanup/boundary-controls.json",
+    "docs/acceptance/baseline-source-cleanup/boundary-result.json",
+    "docs/acceptance/baseline-source-cleanup/boundary.py.gz",
+    "docs/acceptance/baseline-source-cleanup/controls.py",
+    "docs/acceptance/baseline-source-cleanup/coverage.json.gz",
+    "docs/acceptance/baseline-source-cleanup/index.json",
+    "docs/acceptance/baseline-source-cleanup/measurement.json.gz",
+    "docs/acceptance/baseline-source-cleanup/prefixes.json.gz",
+    "docs/acceptance/baseline-source-cleanup/pyrightconfig.json",
+    "docs/acceptance/baseline-source-cleanup/raw-000.zippart",
+    "docs/acceptance/baseline-source-cleanup/raw-001.zippart",
+    "docs/acceptance/baseline-source-cleanup/raw-002.zippart",
+    "docs/acceptance/baseline-source-cleanup/raw-003.zippart",
+    "docs/acceptance/baseline-source-cleanup/raw-004.zippart",
+    "docs/acceptance/baseline-source-cleanup/raw-005.zippart",
+    "docs/acceptance/baseline-source-cleanup/raw-006.zippart",
+    "docs/acceptance/baseline-source-cleanup/raw-007.zippart",
+    "docs/acceptance/baseline-source-cleanup/raw-008.zippart",
+    "docs/acceptance/baseline-source-cleanup/raw-009.zippart",
+    "docs/acceptance/baseline-source-cleanup/raw-010.zippart",
+    "docs/acceptance/baseline-source-cleanup/starting.json.gz",
+    "docs/acceptance/baseline-source-cleanup/verify.py"
+  ],
+  "changed": [
+    ".grove/40-k47/01-k53/11-impl--baseline-finite-k63.md",
+    "Taskfile.yml",
+    "docs/acceptance/baseline-finite.md",
+    "src/bookscan/initial_import.py",
+    "src/bookscan/project_reservation.py",
+    "tests/test_initial_import.py",
+    "tests/test_project_reservation.py"
+  ],
+  "conflicts": false,
+  "current_paths": 1777,
+  "measured_prefixes_preserved": true,
+  "open_change": "ryouonnvvlkzyyxmxrpqxnuqrysrqtvy",
+  "parent": "03eb30abe1ae485696e5deec25bfb229a42ecf69",
+  "retirement": false,
+  "starting_paths": 1754
+}

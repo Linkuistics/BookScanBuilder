@@ -1,0 +1,25 @@
+{
+  "archive_bytes": 6516303,
+  "controls": [
+    "missing-record",
+    "removed-disproof",
+    "invented-delivery",
+    "wrong-current-source"
+  ],
+  "index_sha256": "53192cd2e009d524096752173e526ff1418ddea7145393293f88d4ca5123f4c2",
+  "meaning": "Integrity/consistency only; no execution attestation, real source fidelity, public-create or full finite completion.",
+  "members": 1339,
+  "result": "passed",
+  "unavailable_generated_outputs": {
+    "reading/measurement/a/preparation/artifacts/fault-checks/test_private_and_startup_umask2/out.pdf": {
+      "bytes": 6238,
+      "mode": 32768,
+      "reason": "Intentionally unreadable generated preparation-fault output; not a measured input. Its report/JUnit is retained."
+    },
+    "reading/measurement/b/preparation/artifacts/fault-checks/test_private_and_startup_umask2/out.pdf": {
+      "bytes": 6238,
+      "mode": 32768,
+      "reason": "Intentionally unreadable generated preparation-fault output; not a measured input. Its report/JUnit is retained."
+    }
+  }
+}

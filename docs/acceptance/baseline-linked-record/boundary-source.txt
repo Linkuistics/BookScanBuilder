@@ -1,0 +1,68 @@
+"""Verify continuation scope, same live change, saved prefixes and frozen read subjects."""
+import gzip
+import hashlib
+import json
+import os
+import subprocess
+import sys
+from pathlib import Path
+
+ROOT=Path('/Users/antony/Development/BookScanBuilder')
+HERE=Path('/private/tmp/bookscan-k63-linked-record')
+DEST=ROOT/'docs/acceptance/baseline-linked-record'
+TASK='.grove/40-k47/01-k53/11-impl--baseline-finite-k63.md'
+NOTES={TASK,'docs/acceptance/baseline-finite.md'}
+ALLOWED=NOTES|{'Taskfile.yml','src/bookscan/dependencies.py'}
+NEW={'src/bookscan/linked_record.py','tests/test_linked_record.py'}
+
+def sha(raw):return hashlib.sha256(raw).hexdigest()
+def require(value,message):
+ if not value:raise ValueError(message)
+def command(*args):return subprocess.check_output(args,cwd=ROOT,text=True).strip()
+
+def check(start,subjects,current,change,parent,description,conflicts):
+ require(change=='ryouonnvvlkzyyxmxrpqxnuqrysrqtvy','wrong change')
+ require(parent=='03eb30abe1ae485696e5deec25bfb229a42ecf69','wrong parent')
+ require(description=='','partial description/sealing')
+ require(conflicts=='','conflicts')
+ require((ROOT/TASK).is_file(),'terminal or missing leaf')
+ require(set(start)<=set(current),'missing starting path')
+ changed={name for name,digest in start.items() if sha((ROOT/name).read_bytes())!=digest}
+ require(changed==ALLOWED,'foreign or missing changed path')
+ added=set(current)-set(start)
+ require(NEW<=added,'missing reader/test paths')
+ require(all(name in NEW or name.startswith('docs/acceptance/baseline-linked-record/') for name in added),'foreign new path')
+ for name,label in [(TASK,'task-before.md'),('docs/acceptance/baseline-finite.md','acceptance-before.md')]:
+  require((ROOT/name).read_bytes().startswith((HERE/label).read_bytes()),'lost starting note prefix')
+ for name,info in subjects.items():
+  path=Path(name);native=path.lstat()
+  raw=os.readlink(path).encode() if path.is_symlink() else path.read_bytes()
+  if path.is_relative_to(ROOT) and path.relative_to(ROOT).as_posix() in NOTES:
+   require(sha(raw[:info['size']])==info['sha256'],'lost measured note prefix')
+  else:
+   actual={'sha256':sha(raw),'size':len(raw),'device':native.st_dev,'inode':native.st_ino,'mode':native.st_mode,'mtime_ns':native.st_mtime_ns,'ctime_ns':native.st_ctime_ns,'symlink':path.is_symlink()}
+   require(actual==info,'frozen subject changed: '+name)
+ return sorted(changed|added)
+
+start=json.loads((HERE/'starting-files.json').read_bytes())
+subjects=json.loads(gzip.decompress((HERE/'frozen/subjects-before.json.gz').read_bytes()))
+current=command('jj','file','list','--no-pager').splitlines()
+change=command('jj','log','-r','@','--no-graph','--no-pager','-T','change_id')
+parent=command('jj','log','-r','@-','--no-graph','--no-pager','-T','commit_id')
+description=command('jj','log','-r','@','--no-graph','--no-pager','-T','description')
+conflicts=command('jj','log','-r','conflicts() & @','--no-graph','--no-pager','-T','commit_id')
+paths=check(start,subjects,current,change,parent,description,conflicts)
+controls={}
+for name,c,p,d,f in [('change','wrong',parent,description,conflicts),('parent',change,'wrong',description,conflicts),('description',change,parent,'partial',conflicts),('conflict',change,parent,description,'conflict')]:
+ try:check(start,subjects,current,c,p,d,f)
+ except ValueError as error:controls[name]=str(error)
+ else:raise AssertionError(name)
+try:check(start,subjects,current+['foreign.txt'],change,parent,description,conflicts)
+except ValueError as error:controls['foreign-path']=str(error)
+else:raise AssertionError('foreign-path')
+result={'passed':True,'change_id':change,'parent':parent,'changed_paths':paths,'frozen_subjects':len(subjects),'note_prefixes_preserved':True,'controls':controls}
+if '--readonly' in sys.argv:
+ require(json.loads((DEST/'boundary-result.json').read_bytes())==result,'boundary record changed')
+else:
+ (DEST/'boundary-result.json').write_text(json.dumps(result,indent=2)+'\n')
+print(json.dumps({'passed':True,'changed_paths':len(paths),'frozen_subjects':len(subjects),'change_id':change}))

@@ -1,0 +1,951 @@
+{
+  "format": "BookScanBuilderFaultOutcomeComparison",
+  "version": 1,
+  "ignored_nonsemantic_fields": [
+    "per-run pid values (owner/barrier equality checked)"
+  ],
+  "normalized_paths": "per-run root and unpredictable owned private filename; list lengths retained",
+  "read_subjects_before": {
+    "/private/tmp/bookscan-k63-native-probe/verification-v2/prepare-synthetic/report.json": "c717beb90c08a6129a873c4a860c28babc7bde7a6ba33b86e4d015dd767dc883",
+    "/private/tmp/bookscan-k63-native-probe/verification-v2/prepare-real/report.json": "920c011157df35fac558de8ffb0c4803fc799605fef7ae5d02244ba3b7b6ea9f",
+    "/private/tmp/bookscan-k63-native-probe/verification-v2/prepare-all/report.json": "38256df7edc3c84e2591420ee9ba454177215d90708858a2a3d44e419e959323",
+    "/private/tmp/bookscan-k63-native-probe/compare-fault-results.py": "c5a4705b7442be6a317a31aa8ca8fe114ca34a9b38e35890d68e3a51a1c33340"
+  },
+  "read_subjects_after": {
+    "/private/tmp/bookscan-k63-native-probe/verification-v2/prepare-synthetic/report.json": "c717beb90c08a6129a873c4a860c28babc7bde7a6ba33b86e4d015dd767dc883",
+    "/private/tmp/bookscan-k63-native-probe/verification-v2/prepare-real/report.json": "920c011157df35fac558de8ffb0c4803fc799605fef7ae5d02244ba3b7b6ea9f",
+    "/private/tmp/bookscan-k63-native-probe/verification-v2/prepare-all/report.json": "38256df7edc3c84e2591420ee9ba454177215d90708858a2a3d44e419e959323",
+    "/private/tmp/bookscan-k63-native-probe/compare-fault-results.py": "c5a4705b7442be6a317a31aa8ca8fe114ca34a9b38e35890d68e3a51a1c33340"
+  },
+  "outcomes": {
+    "[\"writing\", false, 2, 1]": {
+      "hook": "writing",
+      "signal": 2,
+      "exit": 130,
+      "result": {
+        "schema_version": 1,
+        "status": "error",
+        "code": "INTERRUPTED",
+        "message": "Caught signal 2 before publication.",
+        "remediation": "Inspect the destination and choose a new path to retry.",
+        "warnings": [],
+        "output": "<RUN>/fault-checks/test_real_signals_at_observed_0/out.pdf"
+      },
+      "complete_destination": false,
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "writing",
+        "private": [
+          "<RUN>/fault-checks/test_real_signals_at_observed_0/<OWNED_PRIVATE_NAME>"
+        ]
+      }
+    },
+    "[\"pre-region\", false, 2, 1]": {
+      "hook": "pre-region",
+      "signal": 2,
+      "exit": 130,
+      "result": {
+        "schema_version": 1,
+        "status": "error",
+        "code": "INTERRUPTED",
+        "message": "Caught signal 2 before publication.",
+        "remediation": "Inspect the destination and choose a new path to retry.",
+        "warnings": [],
+        "output": "<RUN>/fault-checks/test_real_signals_at_observed_1/out.pdf"
+      },
+      "complete_destination": false,
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "pre-region",
+        "private": [
+          "<RUN>/fault-checks/test_real_signals_at_observed_1/<OWNED_PRIVATE_NAME>"
+        ]
+      }
+    },
+    "[\"pending\", false, 15, 1]": {
+      "hook": "pending",
+      "signal": 15,
+      "exit": 143,
+      "result": {
+        "schema_version": 1,
+        "status": "error",
+        "code": "INTERRUPTED",
+        "message": "Signal 15 pending before publication.",
+        "remediation": "Inspect the destination and choose a new path to retry.",
+        "warnings": [],
+        "output": "<RUN>/fault-checks/test_real_signals_at_observed_10/out.pdf"
+      },
+      "complete_destination": false,
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "pending",
+        "private": [
+          "<RUN>/fault-checks/test_real_signals_at_observed_10/<OWNED_PRIVATE_NAME>"
+        ]
+      }
+    },
+    "[\"after-block\", false, 15, 1]": {
+      "hook": "after-block",
+      "signal": 15,
+      "exit": 0,
+      "result": {
+        "schema_version": 1,
+        "status": "written",
+        "output": "<RUN>/fault-checks/test_real_signals_at_observed_11/out.pdf",
+        "page_count": 2,
+        "warnings": [
+          {
+            "code": "POST_COMMIT_SIGNAL",
+            "message": "Caught signal 15 after publication.",
+            "remediation": "Inspect the destination and any named private file."
+          }
+        ]
+      },
+      "complete_destination": true,
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "after-block",
+        "private": [
+          "<RUN>/fault-checks/test_real_signals_at_observed_11/<OWNED_PRIVATE_NAME>"
+        ]
+      }
+    },
+    "[\"blocked\", false, 15, 1]": {
+      "hook": "blocked",
+      "signal": 15,
+      "exit": 0,
+      "result": {
+        "schema_version": 1,
+        "status": "written",
+        "output": "<RUN>/fault-checks/test_real_signals_at_observed_12/out.pdf",
+        "page_count": 2,
+        "warnings": [
+          {
+            "code": "POST_COMMIT_SIGNAL",
+            "message": "Caught signal 15 after publication.",
+            "remediation": "Inspect the destination and any named private file."
+          }
+        ]
+      },
+      "complete_destination": true,
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "blocked",
+        "private": [
+          "<RUN>/fault-checks/test_real_signals_at_observed_12/<OWNED_PRIVATE_NAME>"
+        ]
+      }
+    },
+    "[\"after-link\", false, 15, 1]": {
+      "hook": "after-link",
+      "signal": 15,
+      "exit": 0,
+      "result": {
+        "schema_version": 1,
+        "status": "written",
+        "output": "<RUN>/fault-checks/test_real_signals_at_observed_13/out.pdf",
+        "page_count": 2,
+        "warnings": [
+          {
+            "code": "POST_COMMIT_SIGNAL",
+            "message": "Caught signal 15 after publication.",
+            "remediation": "Inspect the destination and any named private file."
+          }
+        ]
+      },
+      "complete_destination": true,
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "after-link",
+        "private": [
+          "<RUN>/fault-checks/test_real_signals_at_observed_13/<OWNED_PRIVATE_NAME>"
+        ]
+      }
+    },
+    "[\"committed\", false, 15, 1]": {
+      "hook": "committed",
+      "signal": 15,
+      "exit": 0,
+      "result": {
+        "schema_version": 1,
+        "status": "written",
+        "output": "<RUN>/fault-checks/test_real_signals_at_observed_14/out.pdf",
+        "page_count": 2,
+        "warnings": [
+          {
+            "code": "POST_COMMIT_SIGNAL",
+            "message": "Caught signal 15 after publication.",
+            "remediation": "Inspect the destination and any named private file."
+          }
+        ]
+      },
+      "complete_destination": true,
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "committed",
+        "private": [
+          "<RUN>/fault-checks/test_real_signals_at_observed_14/<OWNED_PRIVATE_NAME>"
+        ]
+      }
+    },
+    "[\"cleanup\", false, 15, 1]": {
+      "hook": "cleanup",
+      "signal": 15,
+      "exit": 0,
+      "result": {
+        "schema_version": 1,
+        "status": "written",
+        "output": "<RUN>/fault-checks/test_real_signals_at_observed_15/out.pdf",
+        "page_count": 2,
+        "warnings": [
+          {
+            "code": "POST_COMMIT_SIGNAL",
+            "message": "Caught signal 15 after publication.",
+            "remediation": "Inspect the destination and any named private file."
+          }
+        ]
+      },
+      "complete_destination": true,
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "cleanup",
+        "private": [
+          "<RUN>/fault-checks/test_real_signals_at_observed_15/<OWNED_PRIVATE_NAME>"
+        ]
+      }
+    },
+    "[\"pending\", false, 2, 1]": {
+      "hook": "pending",
+      "signal": 2,
+      "exit": 130,
+      "result": {
+        "schema_version": 1,
+        "status": "error",
+        "code": "INTERRUPTED",
+        "message": "Signal 2 pending before publication.",
+        "remediation": "Inspect the destination and choose a new path to retry.",
+        "warnings": [],
+        "output": "<RUN>/fault-checks/test_real_signals_at_observed_2/out.pdf"
+      },
+      "complete_destination": false,
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "pending",
+        "private": [
+          "<RUN>/fault-checks/test_real_signals_at_observed_2/<OWNED_PRIVATE_NAME>"
+        ]
+      }
+    },
+    "[\"after-block\", false, 2, 1]": {
+      "hook": "after-block",
+      "signal": 2,
+      "exit": 0,
+      "result": {
+        "schema_version": 1,
+        "status": "written",
+        "output": "<RUN>/fault-checks/test_real_signals_at_observed_3/out.pdf",
+        "page_count": 2,
+        "warnings": [
+          {
+            "code": "POST_COMMIT_SIGNAL",
+            "message": "Caught signal 2 after publication.",
+            "remediation": "Inspect the destination and any named private file."
+          }
+        ]
+      },
+      "complete_destination": true,
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "after-block",
+        "private": [
+          "<RUN>/fault-checks/test_real_signals_at_observed_3/<OWNED_PRIVATE_NAME>"
+        ]
+      }
+    },
+    "[\"blocked\", false, 2, 1]": {
+      "hook": "blocked",
+      "signal": 2,
+      "exit": 0,
+      "result": {
+        "schema_version": 1,
+        "status": "written",
+        "output": "<RUN>/fault-checks/test_real_signals_at_observed_4/out.pdf",
+        "page_count": 2,
+        "warnings": [
+          {
+            "code": "POST_COMMIT_SIGNAL",
+            "message": "Caught signal 2 after publication.",
+            "remediation": "Inspect the destination and any named private file."
+          }
+        ]
+      },
+      "complete_destination": true,
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "blocked",
+        "private": [
+          "<RUN>/fault-checks/test_real_signals_at_observed_4/<OWNED_PRIVATE_NAME>"
+        ]
+      }
+    },
+    "[\"after-link\", false, 2, 1]": {
+      "hook": "after-link",
+      "signal": 2,
+      "exit": 0,
+      "result": {
+        "schema_version": 1,
+        "status": "written",
+        "output": "<RUN>/fault-checks/test_real_signals_at_observed_5/out.pdf",
+        "page_count": 2,
+        "warnings": [
+          {
+            "code": "POST_COMMIT_SIGNAL",
+            "message": "Caught signal 2 after publication.",
+            "remediation": "Inspect the destination and any named private file."
+          }
+        ]
+      },
+      "complete_destination": true,
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "after-link",
+        "private": [
+          "<RUN>/fault-checks/test_real_signals_at_observed_5/<OWNED_PRIVATE_NAME>"
+        ]
+      }
+    },
+    "[\"committed\", false, 2, 1]": {
+      "hook": "committed",
+      "signal": 2,
+      "exit": 0,
+      "result": {
+        "schema_version": 1,
+        "status": "written",
+        "output": "<RUN>/fault-checks/test_real_signals_at_observed_6/out.pdf",
+        "page_count": 2,
+        "warnings": [
+          {
+            "code": "POST_COMMIT_SIGNAL",
+            "message": "Caught signal 2 after publication.",
+            "remediation": "Inspect the destination and any named private file."
+          }
+        ]
+      },
+      "complete_destination": true,
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "committed",
+        "private": [
+          "<RUN>/fault-checks/test_real_signals_at_observed_6/<OWNED_PRIVATE_NAME>"
+        ]
+      }
+    },
+    "[\"cleanup\", false, 2, 1]": {
+      "hook": "cleanup",
+      "signal": 2,
+      "exit": 0,
+      "result": {
+        "schema_version": 1,
+        "status": "written",
+        "output": "<RUN>/fault-checks/test_real_signals_at_observed_7/out.pdf",
+        "page_count": 2,
+        "warnings": [
+          {
+            "code": "POST_COMMIT_SIGNAL",
+            "message": "Caught signal 2 after publication.",
+            "remediation": "Inspect the destination and any named private file."
+          }
+        ]
+      },
+      "complete_destination": true,
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "cleanup",
+        "private": [
+          "<RUN>/fault-checks/test_real_signals_at_observed_7/<OWNED_PRIVATE_NAME>"
+        ]
+      }
+    },
+    "[\"writing\", false, 15, 1]": {
+      "hook": "writing",
+      "signal": 15,
+      "exit": 143,
+      "result": {
+        "schema_version": 1,
+        "status": "error",
+        "code": "INTERRUPTED",
+        "message": "Caught signal 15 before publication.",
+        "remediation": "Inspect the destination and choose a new path to retry.",
+        "warnings": [],
+        "output": "<RUN>/fault-checks/test_real_signals_at_observed_8/out.pdf"
+      },
+      "complete_destination": false,
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "writing",
+        "private": [
+          "<RUN>/fault-checks/test_real_signals_at_observed_8/<OWNED_PRIVATE_NAME>"
+        ]
+      }
+    },
+    "[\"pre-region\", false, 15, 1]": {
+      "hook": "pre-region",
+      "signal": 15,
+      "exit": 143,
+      "result": {
+        "schema_version": 1,
+        "status": "error",
+        "code": "INTERRUPTED",
+        "message": "Caught signal 15 before publication.",
+        "remediation": "Inspect the destination and choose a new path to retry.",
+        "warnings": [],
+        "output": "<RUN>/fault-checks/test_real_signals_at_observed_9/out.pdf"
+      },
+      "complete_destination": false,
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "pre-region",
+        "private": [
+          "<RUN>/fault-checks/test_real_signals_at_observed_9/<OWNED_PRIVATE_NAME>"
+        ]
+      }
+    },
+    "[\"cleanup-interrupted\", false, 2, 2]": {
+      "hook": "cleanup-interrupted",
+      "signal": 2,
+      "signals_sent": 2,
+      "exit": 130,
+      "result": {
+        "schema_version": 1,
+        "status": "error",
+        "code": "INTERRUPTED",
+        "message": "Caught signal 2 before publication.",
+        "remediation": "Inspect the destination and choose a new path to retry.",
+        "warnings": [],
+        "output": "<RUN>/fault-checks/test_second_signal_cannot_inte0/out.pdf"
+      },
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "cleanup-second-signal",
+        "private": [
+          "<RUN>/fault-checks/test_second_signal_cannot_inte0/<OWNED_PRIVATE_NAME>"
+        ]
+      }
+    },
+    "[\"cleanup-interrupted\", false, 15, 2]": {
+      "hook": "cleanup-interrupted",
+      "signal": 15,
+      "signals_sent": 2,
+      "exit": 143,
+      "result": {
+        "schema_version": 1,
+        "status": "error",
+        "code": "INTERRUPTED",
+        "message": "Caught signal 15 before publication.",
+        "remediation": "Inspect the destination and choose a new path to retry.",
+        "warnings": [],
+        "output": "<RUN>/fault-checks/test_second_signal_cannot_inte1/out.pdf"
+      },
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "cleanup-second-signal",
+        "private": [
+          "<RUN>/fault-checks/test_second_signal_cannot_inte1/<OWNED_PRIVATE_NAME>"
+        ]
+      }
+    },
+    "[\"writing\", false, 9, 1]": {
+      "hook": "writing",
+      "signal": 9,
+      "exit": -9,
+      "destination_before_kill": false,
+      "destination_after_exit": false,
+      "private_before_kill": true,
+      "private_after_exit": true,
+      "same_file_before_and_after": false,
+      "complete_destination": false,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "writing",
+        "private": [
+          "<RUN>/fault-checks/test_sigkill_observes_state_an0/<OWNED_PRIVATE_NAME>"
+        ]
+      }
+    },
+    "[\"after-link\", false, 9, 1]": {
+      "hook": "after-link",
+      "signal": 9,
+      "exit": -9,
+      "destination_before_kill": true,
+      "destination_after_exit": true,
+      "private_before_kill": true,
+      "private_after_exit": true,
+      "same_file_before_and_after": true,
+      "complete_destination": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "after-link",
+        "private": [
+          "<RUN>/fault-checks/test_sigkill_observes_state_an1/<OWNED_PRIVATE_NAME>"
+        ]
+      }
+    },
+    "[\"after-open\", false, 15, 1]": {
+      "hook": "after-open",
+      "dry_run": false,
+      "signal": 15,
+      "exit": 143,
+      "result": {
+        "schema_version": 1,
+        "status": "error",
+        "code": "INTERRUPTED",
+        "message": "Caught signal 15 before publication.",
+        "remediation": "Inspect the destination and choose a new path to retry.",
+        "warnings": [],
+        "output": "<RUN>/fault-checks/test_signal_lifetime_gaps_15_a0/out.pdf"
+      },
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "after-open",
+        "private": [
+          "<RUN>/fault-checks/test_signal_lifetime_gaps_15_a0/<OWNED_PRIVATE_NAME>"
+        ]
+      }
+    },
+    "[\"cleanup-error\", false, 15, 1]": {
+      "hook": "cleanup-error",
+      "dry_run": false,
+      "signal": 15,
+      "exit": 5,
+      "result": {
+        "schema_version": 1,
+        "status": "error",
+        "code": "OUTPUT_INVALID",
+        "message": "Controlled original validation error.",
+        "remediation": "Inspect the destination and choose a new path to retry.",
+        "warnings": [],
+        "output": "<RUN>/fault-checks/test_signal_lifetime_gaps_15_c0/out.pdf"
+      },
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "cleanup-error",
+        "private": [
+          "<RUN>/fault-checks/test_signal_lifetime_gaps_15_c0/<OWNED_PRIVATE_NAME>"
+        ]
+      }
+    },
+    "[\"dry-traversal\", true, 15, 1]": {
+      "hook": "dry-traversal",
+      "dry_run": true,
+      "signal": 15,
+      "exit": 143,
+      "result": {
+        "schema_version": 1,
+        "status": "error",
+        "code": "INTERRUPTED",
+        "message": "Caught signal 15 before publication.",
+        "remediation": "Inspect the destination and choose a new path to retry.",
+        "warnings": [],
+        "output": "<RUN>/fault-checks/test_signal_lifetime_gaps_15_d0/out.pdf"
+      },
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "dry-traversal",
+        "private": []
+      }
+    },
+    "[\"error-emit\", false, 15, 1]": {
+      "hook": "error-emit",
+      "dry_run": false,
+      "signal": 15,
+      "exit": 3,
+      "result": {
+        "schema_version": 1,
+        "status": "error",
+        "code": "SOURCE_NOT_FOUND",
+        "message": "SOURCE_NOT_FOUND: <RUN>/fault-checks/test_signal_lifetime_gaps_15_e0/missing.pdf",
+        "remediation": "Check the explicit PDF path, file type and read permissions.",
+        "warnings": [],
+        "output": "<RUN>/fault-checks/test_signal_lifetime_gaps_15_e0/out.pdf",
+        "source": "<RUN>/fault-checks/test_signal_lifetime_gaps_15_e0/missing.pdf"
+      },
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "error-emit",
+        "private": []
+      }
+    },
+    "[\"finish\", false, 15, 1]": {
+      "hook": "finish",
+      "dry_run": false,
+      "signal": 15,
+      "exit": 143,
+      "result": {
+        "schema_version": 1,
+        "status": "error",
+        "code": "INTERRUPTED",
+        "message": "Caught signal 15 before publication.",
+        "remediation": "Inspect the destination and choose a new path to retry.",
+        "warnings": [],
+        "output": "<RUN>/fault-checks/test_signal_lifetime_gaps_15_f0/out.pdf"
+      },
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "finish",
+        "private": [
+          "<RUN>/fault-checks/test_signal_lifetime_gaps_15_f0/<OWNED_PRIVATE_NAME>"
+        ]
+      }
+    },
+    "[\"plan-emit\", true, 15, 1]": {
+      "hook": "plan-emit",
+      "dry_run": true,
+      "signal": 15,
+      "exit": 143,
+      "result": {
+        "schema_version": 1,
+        "status": "error",
+        "code": "INTERRUPTED",
+        "message": "Caught signal 15 before publication.",
+        "remediation": "Inspect the destination and choose a new path to retry.",
+        "warnings": [],
+        "output": "<RUN>/fault-checks/test_signal_lifetime_gaps_15_p0/out.pdf"
+      },
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "plan-emit",
+        "private": []
+      }
+    },
+    "[\"recheck\", false, 15, 1]": {
+      "hook": "recheck",
+      "dry_run": false,
+      "signal": 15,
+      "exit": 143,
+      "result": {
+        "schema_version": 1,
+        "status": "error",
+        "code": "INTERRUPTED",
+        "message": "Caught signal 15 before publication.",
+        "remediation": "Inspect the destination and choose a new path to retry.",
+        "warnings": [],
+        "output": "<RUN>/fault-checks/test_signal_lifetime_gaps_15_r0/out.pdf"
+      },
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "recheck",
+        "private": [
+          "<RUN>/fault-checks/test_signal_lifetime_gaps_15_r0/<OWNED_PRIVATE_NAME>"
+        ]
+      }
+    },
+    "[\"recheck\", true, 15, 1]": {
+      "hook": "recheck",
+      "dry_run": true,
+      "signal": 15,
+      "exit": 143,
+      "result": {
+        "schema_version": 1,
+        "status": "error",
+        "code": "INTERRUPTED",
+        "message": "Caught signal 15 before publication.",
+        "remediation": "Inspect the destination and choose a new path to retry.",
+        "warnings": [],
+        "output": "<RUN>/fault-checks/test_signal_lifetime_gaps_15_r1/out.pdf"
+      },
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "recheck",
+        "private": []
+      }
+    },
+    "[\"validation\", false, 15, 1]": {
+      "hook": "validation",
+      "dry_run": false,
+      "signal": 15,
+      "exit": 143,
+      "result": {
+        "schema_version": 1,
+        "status": "error",
+        "code": "INTERRUPTED",
+        "message": "Caught signal 15 before publication.",
+        "remediation": "Inspect the destination and choose a new path to retry.",
+        "warnings": [],
+        "output": "<RUN>/fault-checks/test_signal_lifetime_gaps_15_v0/out.pdf"
+      },
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "validation",
+        "private": [
+          "<RUN>/fault-checks/test_signal_lifetime_gaps_15_v0/<OWNED_PRIVATE_NAME>"
+        ]
+      }
+    },
+    "[\"after-open\", false, 2, 1]": {
+      "hook": "after-open",
+      "dry_run": false,
+      "signal": 2,
+      "exit": 130,
+      "result": {
+        "schema_version": 1,
+        "status": "error",
+        "code": "INTERRUPTED",
+        "message": "Caught signal 2 before publication.",
+        "remediation": "Inspect the destination and choose a new path to retry.",
+        "warnings": [],
+        "output": "<RUN>/fault-checks/test_signal_lifetime_gaps_2_af0/out.pdf"
+      },
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "after-open",
+        "private": [
+          "<RUN>/fault-checks/test_signal_lifetime_gaps_2_af0/<OWNED_PRIVATE_NAME>"
+        ]
+      }
+    },
+    "[\"cleanup-error\", false, 2, 1]": {
+      "hook": "cleanup-error",
+      "dry_run": false,
+      "signal": 2,
+      "exit": 5,
+      "result": {
+        "schema_version": 1,
+        "status": "error",
+        "code": "OUTPUT_INVALID",
+        "message": "Controlled original validation error.",
+        "remediation": "Inspect the destination and choose a new path to retry.",
+        "warnings": [],
+        "output": "<RUN>/fault-checks/test_signal_lifetime_gaps_2_cl0/out.pdf"
+      },
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "cleanup-error",
+        "private": [
+          "<RUN>/fault-checks/test_signal_lifetime_gaps_2_cl0/<OWNED_PRIVATE_NAME>"
+        ]
+      }
+    },
+    "[\"dry-traversal\", true, 2, 1]": {
+      "hook": "dry-traversal",
+      "dry_run": true,
+      "signal": 2,
+      "exit": 130,
+      "result": {
+        "schema_version": 1,
+        "status": "error",
+        "code": "INTERRUPTED",
+        "message": "Caught signal 2 before publication.",
+        "remediation": "Inspect the destination and choose a new path to retry.",
+        "warnings": [],
+        "output": "<RUN>/fault-checks/test_signal_lifetime_gaps_2_dr0/out.pdf"
+      },
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "dry-traversal",
+        "private": []
+      }
+    },
+    "[\"error-emit\", false, 2, 1]": {
+      "hook": "error-emit",
+      "dry_run": false,
+      "signal": 2,
+      "exit": 3,
+      "result": {
+        "schema_version": 1,
+        "status": "error",
+        "code": "SOURCE_NOT_FOUND",
+        "message": "SOURCE_NOT_FOUND: <RUN>/fault-checks/test_signal_lifetime_gaps_2_er0/missing.pdf",
+        "remediation": "Check the explicit PDF path, file type and read permissions.",
+        "warnings": [],
+        "output": "<RUN>/fault-checks/test_signal_lifetime_gaps_2_er0/out.pdf",
+        "source": "<RUN>/fault-checks/test_signal_lifetime_gaps_2_er0/missing.pdf"
+      },
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "error-emit",
+        "private": []
+      }
+    },
+    "[\"finish\", false, 2, 1]": {
+      "hook": "finish",
+      "dry_run": false,
+      "signal": 2,
+      "exit": 130,
+      "result": {
+        "schema_version": 1,
+        "status": "error",
+        "code": "INTERRUPTED",
+        "message": "Caught signal 2 before publication.",
+        "remediation": "Inspect the destination and choose a new path to retry.",
+        "warnings": [],
+        "output": "<RUN>/fault-checks/test_signal_lifetime_gaps_2_fi0/out.pdf"
+      },
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "finish",
+        "private": [
+          "<RUN>/fault-checks/test_signal_lifetime_gaps_2_fi0/<OWNED_PRIVATE_NAME>"
+        ]
+      }
+    },
+    "[\"plan-emit\", true, 2, 1]": {
+      "hook": "plan-emit",
+      "dry_run": true,
+      "signal": 2,
+      "exit": 130,
+      "result": {
+        "schema_version": 1,
+        "status": "error",
+        "code": "INTERRUPTED",
+        "message": "Caught signal 2 before publication.",
+        "remediation": "Inspect the destination and choose a new path to retry.",
+        "warnings": [],
+        "output": "<RUN>/fault-checks/test_signal_lifetime_gaps_2_pl0/out.pdf"
+      },
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "plan-emit",
+        "private": []
+      }
+    },
+    "[\"recheck\", false, 2, 1]": {
+      "hook": "recheck",
+      "dry_run": false,
+      "signal": 2,
+      "exit": 130,
+      "result": {
+        "schema_version": 1,
+        "status": "error",
+        "code": "INTERRUPTED",
+        "message": "Caught signal 2 before publication.",
+        "remediation": "Inspect the destination and choose a new path to retry.",
+        "warnings": [],
+        "output": "<RUN>/fault-checks/test_signal_lifetime_gaps_2_re0/out.pdf"
+      },
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "recheck",
+        "private": [
+          "<RUN>/fault-checks/test_signal_lifetime_gaps_2_re0/<OWNED_PRIVATE_NAME>"
+        ]
+      }
+    },
+    "[\"recheck\", true, 2, 1]": {
+      "hook": "recheck",
+      "dry_run": true,
+      "signal": 2,
+      "exit": 130,
+      "result": {
+        "schema_version": 1,
+        "status": "error",
+        "code": "INTERRUPTED",
+        "message": "Caught signal 2 before publication.",
+        "remediation": "Inspect the destination and choose a new path to retry.",
+        "warnings": [],
+        "output": "<RUN>/fault-checks/test_signal_lifetime_gaps_2_re1/out.pdf"
+      },
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "recheck",
+        "private": []
+      }
+    },
+    "[\"validation\", false, 2, 1]": {
+      "hook": "validation",
+      "dry_run": false,
+      "signal": 2,
+      "exit": 130,
+      "result": {
+        "schema_version": 1,
+        "status": "error",
+        "code": "INTERRUPTED",
+        "message": "Caught signal 2 before publication.",
+        "remediation": "Inspect the destination and choose a new path to retry.",
+        "warnings": [],
+        "output": "<RUN>/fault-checks/test_signal_lifetime_gaps_2_va0/out.pdf"
+      },
+      "private_removed": true,
+      "source_unchanged": true,
+      "writer_reaped": true,
+      "observed_barrier": {
+        "hook": "validation",
+        "private": [
+          "<RUN>/fault-checks/test_signal_lifetime_gaps_2_va0/<OWNED_PRIVATE_NAME>"
+        ]
+      }
+    }
+  },
+  "outcomes_equal_by_case": true
+}

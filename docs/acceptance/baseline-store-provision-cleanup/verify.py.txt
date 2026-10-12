@@ -1,0 +1,168 @@
+"""Read-only archive/current-boundary verification; no execution attestation."""
+
+import ast
+import hashlib
+import io
+import json
+import subprocess
+import xml.etree.ElementTree as ET
+import zipfile
+from pathlib import Path
+
+ROOT = Path.cwd()
+DEST = ROOT / 'docs/acceptance/baseline-store-provision-cleanup'
+TASK = '.grove/40-k47/01-k53/11-impl--baseline-finite-k63.md'
+PRODUCT = ['src/bookscan/assets.py', 'src/bookscan/checkpoints.py',
+           'src/bookscan/native_blobs.py', 'src/bookscan/project_reservation.py']
+
+
+def sha(data):
+    return hashlib.sha256(data).hexdigest()
+
+
+def read_archive():
+    index = json.loads((DEST / 'index.json').read_text())
+    parts = []
+    for part in index['parts']:
+        raw = (DEST / part['name']).read_bytes()
+        assert len(raw) == part['bytes'] and sha(raw) == part['sha256'], part['name']
+        parts.append(raw)
+    raw = b''.join(parts)
+    assert len(raw) == index['bytes'] and sha(raw) == index['sha256']
+    with zipfile.ZipFile(io.BytesIO(raw)) as archive:
+        assert len(archive.namelist()) == len(set(archive.namelist()))
+        assert set(archive.namelist()) == set(index['members'])
+        files = {name: archive.read(name) for name in archive.namelist()}
+    for name, data in files.items():
+        entry = index['members'][name]
+        assert len(data) == entry['bytes'] and sha(data) == entry['sha256'], name
+    return files
+
+
+def outcomes(raw):
+    rows = {}
+    for item in ET.fromstring(raw).iter('testcase'):
+        key = (item.get('classname'), item.get('name'))
+        assert key not in rows, key
+        rows[key] = tuple(c.tag for c in item if c.tag in {'failure', 'error', 'skipped'})
+    return rows
+
+
+def verify_records(files):
+    counts = {}
+    for label, expected in [('full', 2786), ('focused', 410), ('staff', 4)]:
+        a = outcomes(files['main/' + label + '-a.xml'])
+        b = outcomes(files['main/' + label + '-b.xml'])
+        assert a == b and len(a) == expected and not any(a.values()), label
+        counts[label] = len(a)
+    prior = outcomes(files['initial/predecessor-full.xml'])
+    current = outcomes(files['main/full-a.xml'])
+    assert len(prior) == 2735 and all(current[k] == v for k, v in prior.items())
+    for label, failed, passed in [('predecessor', 45, 6), ('inode-only', 9, 42)]:
+        rows = outcomes(files['initial/' + label + '.xml'])
+        assert sum('failure' in v for v in rows.values()) == failed
+        assert sum(not v for v in rows.values()) == passed
+        assert all('error' not in v for v in rows.values())
+    for family in ['main', 'workers']:
+        before = json.loads(files[family + '/measured-before.json'])
+        after = json.loads(files[family + '/measured-after.json'])
+        assert before == after
+        frozen = json.loads(files[family + '/freeze.json'])
+        assert frozen == {'subjects': len(before), 'changed': []}
+        assert len(before) == 7927
+        assert all(row['exit'] == 0 for row in json.loads(files[family + '/runs.json']))
+    for run in ['a', 'b']:
+        prefix = 'main/prepare-' + run + '/'
+        report = json.loads(files[prefix + 'report.json'])
+        assert report['digests_before'] == report['digests_after']
+        assert len(report['cases']) == 9
+        assert len(report['fault_checks']['observed_signal_and_kill_cases']) == 38
+        faults = outcomes(files[prefix + 'fault-checks.xml'])
+        assert len(faults) == 90 and not any(faults.values())
+        for label, field, count in [('asset', 'records', 8), ('header', 'cases', 40),
+                                    ('native-blob', 'records', 8)]:
+            name = 'report.json' if label == 'header' else 'result.json'
+            report = json.loads(files['workers/' + label + '-' + run + '/' + name])
+            assert len(report[field]) == count
+    comparison = json.loads(files['initial/comparison.json'])
+    assert comparison['wrong_report_controls'] == 2
+    assert comparison['preserved_predecessor_cases'] == 2735
+    return counts
+
+
+def functions(raw):
+    text = raw.decode()
+    result = {}
+
+    def visit(nodes, prefix=''):
+        for node in nodes:
+            if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
+                result[prefix + node.name] = ast.get_source_segment(text, node)
+            elif isinstance(node, ast.ClassDef):
+                visit(node.body, prefix + node.name + '.')
+    visit(ast.parse(text).body)
+    return result
+
+
+def verify_boundary(files, current):
+    starting = json.loads(files['initial/starting.json'])
+    allowed = set(PRODUCT + ['Taskfile.yml', TASK])
+    for name, digest in starting.items():
+        assert name in current, name
+        if name not in allowed:
+            assert sha(current[name]) == digest, name
+    for name in ['Taskfile.yml', TASK]:
+        assert current[name].startswith(files['starting/' + name]), name
+    protected = 0
+    for name in PRODUCT:
+        assert current[name] == files['final/' + name], name
+        before = functions(files['starting/' + name])
+        after = functions(current[name])
+        for symbol, source in before.items():
+            if symbol in {'Assets.provision', 'Checkpoints.provision', 'Blobs.provision'}:
+                continue
+            assert after[symbol] == source, (name, symbol)
+            protected += 1
+        assert set(after) - set(before) <= {'provision_store'}
+    for name in ['tests/test_store_provision.py', 'Taskfile.yml']:
+        assert current[name] == files['final/' + name], name
+    assert protected == 62 and len(starting) == 1862
+    return {'starting_paths': len(starting), 'protected_original_functions': protected}
+
+
+def refuses(fn):
+    try:
+        fn()
+    except (AssertionError, KeyError, ET.ParseError):
+        return
+    raise AssertionError('Wrong record was accepted')
+
+
+files = read_archive()
+counts = verify_records(files)
+starting = json.loads(files['initial/starting.json'])
+paths = subprocess.check_output(['jj', 'file', 'list'], text=True).splitlines()
+assert all(name in starting or name == 'tests/test_store_provision.py'
+           or name.startswith('docs/acceptance/baseline-store-provision-cleanup/')
+           for name in paths), 'Unexpected new repository path'
+current = {name: (ROOT / name).read_bytes() for name in [*starting, 'tests/test_store_provision.py']}
+boundary = verify_boundary(files, current)
+wrong = dict(current)
+wrong.pop('src/bookscan/assets.py')
+refuses(lambda: verify_boundary(files, wrong))
+wrong = dict(current)
+wrong['pyproject.toml'] += b'\n# unrelated edit\n'
+refuses(lambda: verify_boundary(files, wrong))
+wrong = dict(current)
+wrong['tests/test_project_header.py'] += b'\n# old test edit\n'
+refuses(lambda: verify_boundary(files, wrong))
+wrong = dict(current)
+wrong['src/bookscan/project_reservation.py'] += b'\n# post-measurement source edit\n'
+refuses(lambda: verify_boundary(files, wrong))
+wrong = dict(files)
+wrong['initial/predecessor.xml'] = files['main/full-a.xml']
+refuses(lambda: verify_records(wrong))
+wrong = dict(files)
+wrong['main/full-b.xml'] = b'<testsuites/>'
+refuses(lambda: verify_records(wrong))
+print(json.dumps({'paired': counts, 'boundary': boundary, 'wrong_inputs_rejected': 6}, sort_keys=True))

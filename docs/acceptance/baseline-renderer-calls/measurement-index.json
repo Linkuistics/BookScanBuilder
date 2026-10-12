@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "compression": "gzip",
+  "source": "/private/tmp/bookscan-k63-pixels-work/credited/report.json",
+  "sha256": "adfcb53788c42159b1f4a57bc0d6c4726d7fc71b114dcb42c0282a39130dd6f9",
+  "bytes": 20077243,
+  "compressed_sha256": "66615e461015886f4129ca45801c476bd0a177e93088fe66bfbc64c566b37ab2",
+  "parts": [
+    {
+      "file": "measurement-000.gzpart",
+      "sha256": "f1082df40a21239e8d4b8faae2f256cdb028a39073ae5294a116eddd1e60e6f7",
+      "bytes": 750000
+    },
+    {
+      "file": "measurement-001.gzpart",
+      "sha256": "7e2be555067c00eb1f9fd468f3f1aee96f24eb613dd02e0f54a554abc3d195be",
+      "bytes": 750000
+    },
+    {
+      "file": "measurement-002.gzpart",
+      "sha256": "86fc44fbcdc88834ae5c60d46b02aff7d673c33ea9f812fb9b13b8857a153b42",
+      "bytes": 750000
+    },
+    {
+      "file": "measurement-003.gzpart",
+      "sha256": "dfed6eafd7c7d892d46d71e3a2bad5791b4de7b16eaeb2f3be3272fe2af25934",
+      "bytes": 750000
+    },
+    {
+      "file": "measurement-004.gzpart",
+      "sha256": "43909014d0126024081f950d39b036b42e4364811bf816572b8e6fea9677819a",
+      "bytes": 750000
+    },
+    {
+      "file": "measurement-005.gzpart",
+      "sha256": "bb07bc8b1e27f17bc3096b61370c37228bc0160faedfac392af7f0d0fdbad46a",
+      "bytes": 74936
+    }
+  ]
+}

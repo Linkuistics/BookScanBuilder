@@ -1,0 +1,21 @@
+{
+  "verified": {
+    "native_render_writes": 16,
+    "native_render_cases": 14,
+    "native_render_controls": 10,
+    "asset_worker_cases": 8,
+    "native_occurrences": 7,
+    "paired_test_outcomes": {
+      "focused": 138,
+      "product": 3378,
+      "staff": 4
+    },
+    "preparation_cases": 9,
+    "preparation_faults": 90,
+    "preparation_signal_records": 38,
+    "source_workers": 40,
+    "frozen_subjects": 8072,
+    "passed": true
+  },
+  "wrong_digest_controls_rejected": 2
+}

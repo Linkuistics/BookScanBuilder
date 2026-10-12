@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "compression": "gzip",
+  "source": "/private/tmp/bookscan-k63-envelope-work/regression.json",
+  "sha256": "143a01c96b3ce9ee6ac3bbddac3207abb2fde6d6ed9cd4276b97498f4895a007",
+  "bytes": 3749731,
+  "compressed_sha256": "395e063163d33be81e444406dca48e5dda2cb9ef94d21e2e9aad597af55b0bd5",
+  "parts": [
+    {
+      "file": "regression-000.gzpart",
+      "sha256": "5c7bcbdce36346f8951d05995df55c8a50f4ce8dc8427534cea3ff457ac78f0d",
+      "bytes": 750000
+    },
+    {
+      "file": "regression-001.gzpart",
+      "sha256": "62163cbe2a18edc47d30c3f4425a1b1646d65bc3f8fac8aab8644a1432ea8357",
+      "bytes": 44073
+    }
+  ]
+}

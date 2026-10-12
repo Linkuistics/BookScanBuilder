@@ -1,0 +1,15 @@
+import gzip,hashlib,json,pathlib
+root=pathlib.Path.cwd();base=pathlib.Path('/private/tmp/bookscan-k63-acquired-lock-cleanup');destination=root/'docs/acceptance/baseline-acquired-bootstrap-cleanup'
+records=[json.loads(gzip.decompress((base/f'coverage-{i}.json.gz').read_bytes())) for i in range(19)]
+(destination/'coverage.json.gz').write_bytes(gzip.compress(json.dumps(records,sort_keys=True).encode(),mtime=0))
+starting=json.loads((base/'starting.json').read_text());fallback={};ranges={}
+for record in records:
+ for row in record['paths']:
+  if row['status']=='partial' or row['freshness']!='metadata_match' or row['status']=='excluded':
+   p=root/row['path'];raw=p.read_bytes();h=hashlib.sha256(raw).hexdigest();fallback[row['path']]={'bytes':len(raw),'sha256':h,'status':row['status'],'freshness':row['freshness'],'starting_bytes_preserved':h==starting.get(row['path']) if row['path'] in starting else None}
+   if row['status']=='partial':
+    lines=raw.decode().splitlines();wanted={n for issue in row['coverage'] for span in issue['ranges'] for n in range(span['start'],span['end']+1)};ranges[row['path']]={str(n):lines[n-1] for n in sorted(wanted)}
+(destination/'coverage-fallback.json.gz').write_bytes(gzip.compress(json.dumps({'read_subjects':fallback,'direct_missed_ranges':ranges,'limitation':'Best-effort coverage only; raw direct reads/hash preservation do not supply structural/native-completeness evidence.'},sort_keys=True).encode(),mtime=0))
+(destination/'graph.json.gz').write_bytes((base/'graph.json.gz').read_bytes())
+for name in ranges:print(name,ranges[name])
+print(json.dumps({'covered_paths':sum(len(r['paths']) for r in records),'fallback_files_read':len(fallback),'generations':sorted({r['indexed_at'] for r in records})}))

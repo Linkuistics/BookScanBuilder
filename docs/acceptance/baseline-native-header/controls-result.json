@@ -1,0 +1,26 @@
+[
+  {
+    "control": "invent-delivery",
+    "refused": "No finite delivery"
+  },
+  {
+    "control": "remove-semantic-disproof",
+    "refused": "Isolated omission disproof"
+  },
+  {
+    "control": "native-length",
+    "refused": "Exact retained native blob"
+  },
+  {
+    "control": "missing-oracle",
+    "refused": "Missing independent composition oracle limitation"
+  },
+  {
+    "control": "wrong-maximum",
+    "refused": "Resolution maximum"
+  },
+  {
+    "control": "writer-identity",
+    "refused": "Saved writer header"
+  }
+]

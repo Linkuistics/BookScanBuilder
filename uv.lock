@@ -8,6 +8,7 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "pikepdf" },
+    { name = "pillow" },
 ]
 
 [package.dev-dependencies]
@@ -18,7 +19,10 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "pikepdf", specifier = "==10.16.0" }]
+requires-dist = [
+    { name = "pikepdf", specifier = "==10.16.0" },
+    { name = "pillow", specifier = "==12.3.0" },
+]
 
 [package.metadata.requires-dev]
 dev = [

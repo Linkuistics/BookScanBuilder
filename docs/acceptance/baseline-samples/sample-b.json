@@ -1,0 +1,715 @@
+{
+  "format": "BookScanBuilderNativeSampleConstruction",
+  "version": 1,
+  "source_sha256": "b729b83a03dfab9b1210091572b9a9005d5f67446fc7e64075adad44dbbb0f24",
+  "pages": [
+    {
+      "source_page": 1,
+      "images": [
+        {
+          "size": [
+            3,
+            2
+          ],
+          "bits": 1,
+          "data": "a040",
+          "pixels": [
+            [
+              1
+            ],
+            [
+              0
+            ],
+            [
+              1
+            ],
+            [
+              0
+            ],
+            [
+              1
+            ],
+            [
+              0
+            ]
+          ],
+          "color": "/DeviceGray",
+          "decode": [
+            "0",
+            "1"
+          ],
+          "ppi": [
+            3.0,
+            2.0
+          ],
+          "matrix": [
+            "300",
+            "0",
+            "0",
+            "-300",
+            "0",
+            "300"
+          ],
+          "path": [
+            "page",
+            "1",
+            "1",
+            "/I"
+          ],
+          "raw_sha256": "0d58f58ae5983793dc2cba493d3edad823493d53400e869d5c86e91387ca3829",
+          "filters": [
+            "/FlateDecode"
+          ],
+          "parameters": null,
+          "composition_verified": false
+        }
+      ],
+      "concerns": [],
+      "resolution": {
+        "placements": [
+          {
+            "path": [
+              "page",
+              "1",
+              "1",
+              "/I"
+            ],
+            "object_id": [
+              12,
+              0
+            ],
+            "kind": "image",
+            "samples": [
+              3,
+              2
+            ],
+            "bits_per_component": 1,
+            "color_space": "/DeviceGray",
+            "matrix": [
+              "300",
+              "0",
+              "0",
+              "-300",
+              "0",
+              "300"
+            ],
+            "ppi": [
+              3.0,
+              2.0
+            ]
+          }
+        ],
+        "concerns": []
+      },
+      "composition_unavailable": "Independent complete-page colour/vector/text/mask/clipping/blending oracle unavailable."
+    },
+    {
+      "source_page": 2,
+      "images": [
+        {
+          "size": [
+            3,
+            2
+          ],
+          "bits": 2,
+          "data": "18e4",
+          "pixels": [
+            [
+              0
+            ],
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ],
+            [
+              2
+            ],
+            [
+              1
+            ]
+          ],
+          "color": "/DeviceGray",
+          "decode": [
+            "0",
+            "1"
+          ],
+          "ppi": [
+            3.0,
+            2.0
+          ],
+          "matrix": [
+            "300",
+            "0",
+            "0",
+            "-300",
+            "0",
+            "300"
+          ],
+          "path": [
+            "page",
+            "2",
+            "1",
+            "/I"
+          ],
+          "raw_sha256": "e66599c6c34d21edbc16e37b131d0e4e402e4ac3c4165f731db1196554204116",
+          "filters": [
+            "/FlateDecode"
+          ],
+          "parameters": null,
+          "composition_verified": false
+        }
+      ],
+      "concerns": [],
+      "resolution": {
+        "placements": [
+          {
+            "path": [
+              "page",
+              "2",
+              "1",
+              "/I"
+            ],
+            "object_id": [
+              14,
+              0
+            ],
+            "kind": "image",
+            "samples": [
+              3,
+              2
+            ],
+            "bits_per_component": 2,
+            "color_space": "/DeviceGray",
+            "matrix": [
+              "300",
+              "0",
+              "0",
+              "-300",
+              "0",
+              "300"
+            ],
+            "ppi": [
+              3.0,
+              2.0
+            ]
+          }
+        ],
+        "concerns": []
+      },
+      "composition_unavailable": "Independent complete-page colour/vector/text/mask/clipping/blending oracle unavailable."
+    },
+    {
+      "source_page": 3,
+      "images": [
+        {
+          "size": [
+            3,
+            1
+          ],
+          "bits": 4,
+          "data": "1f70",
+          "pixels": [
+            [
+              1
+            ],
+            [
+              15
+            ],
+            [
+              7
+            ]
+          ],
+          "color": "/DeviceGray",
+          "decode": [
+            "0",
+            "1"
+          ],
+          "ppi": [
+            3.0,
+            1.0
+          ],
+          "matrix": [
+            "300",
+            "0",
+            "0",
+            "-300",
+            "0",
+            "300"
+          ],
+          "path": [
+            "page",
+            "3",
+            "1",
+            "/I"
+          ],
+          "raw_sha256": "08cfd31e824ddc49a8b9d338107a31b258d2c1268fb3e89ddfebe976356efaaf",
+          "filters": [
+            "/FlateDecode"
+          ],
+          "parameters": null,
+          "composition_verified": false
+        }
+      ],
+      "concerns": [],
+      "resolution": {
+        "placements": [
+          {
+            "path": [
+              "page",
+              "3",
+              "1",
+              "/I"
+            ],
+            "object_id": [
+              16,
+              0
+            ],
+            "kind": "image",
+            "samples": [
+              3,
+              1
+            ],
+            "bits_per_component": 4,
+            "color_space": "/DeviceGray",
+            "matrix": [
+              "300",
+              "0",
+              "0",
+              "-300",
+              "0",
+              "300"
+            ],
+            "ppi": [
+              3.0,
+              1.0
+            ]
+          }
+        ],
+        "concerns": []
+      },
+      "composition_unavailable": "Independent complete-page colour/vector/text/mask/clipping/blending oracle unavailable."
+    },
+    {
+      "source_page": 4,
+      "images": [
+        {
+          "size": [
+            2,
+            1
+          ],
+          "bits": 16,
+          "data": "0102fffe",
+          "pixels": [
+            [
+              258
+            ],
+            [
+              65534
+            ]
+          ],
+          "color": "/DeviceGray",
+          "decode": [
+            "0",
+            "1"
+          ],
+          "ppi": [
+            2.0,
+            1.0
+          ],
+          "matrix": [
+            "300",
+            "0",
+            "0",
+            "-300",
+            "0",
+            "300"
+          ],
+          "path": [
+            "page",
+            "4",
+            "1",
+            "/I"
+          ],
+          "raw_sha256": "9e5754526f01215cfe57e446a2c031d3b2884e6aed9d4037726610eb4f1b71ff",
+          "filters": [
+            "/FlateDecode"
+          ],
+          "parameters": null,
+          "composition_verified": false
+        }
+      ],
+      "concerns": [],
+      "resolution": {
+        "placements": [
+          {
+            "path": [
+              "page",
+              "4",
+              "1",
+              "/I"
+            ],
+            "object_id": [
+              18,
+              0
+            ],
+            "kind": "image",
+            "samples": [
+              2,
+              1
+            ],
+            "bits_per_component": 16,
+            "color_space": "/DeviceGray",
+            "matrix": [
+              "300",
+              "0",
+              "0",
+              "-300",
+              "0",
+              "300"
+            ],
+            "ppi": [
+              2.0,
+              1.0
+            ]
+          }
+        ],
+        "concerns": []
+      },
+      "composition_unavailable": "Independent complete-page colour/vector/text/mask/clipping/blending oracle unavailable."
+    },
+    {
+      "source_page": 5,
+      "images": [
+        {
+          "size": [
+            2,
+            1
+          ],
+          "bits": 8,
+          "data": "0080ff123456",
+          "pixels": [
+            [
+              0,
+              128,
+              255
+            ],
+            [
+              18,
+              52,
+              86
+            ]
+          ],
+          "color": "/DeviceRGB",
+          "decode": [
+            "1",
+            "0",
+            "0",
+            "1",
+            "1",
+            "0"
+          ],
+          "ppi": [
+            2.0,
+            1.0
+          ],
+          "matrix": [
+            "300",
+            "0",
+            "0",
+            "-300",
+            "0",
+            "300"
+          ],
+          "path": [
+            "page",
+            "5",
+            "1",
+            "/I"
+          ],
+          "raw_sha256": "6872bf8676040555223ddd558e84a5b1db4e02b9ce13c18a5bf894898a37f79e",
+          "filters": [
+            "/FlateDecode"
+          ],
+          "parameters": null,
+          "composition_verified": false
+        }
+      ],
+      "concerns": [],
+      "resolution": {
+        "placements": [
+          {
+            "path": [
+              "page",
+              "5",
+              "1",
+              "/I"
+            ],
+            "object_id": [
+              20,
+              0
+            ],
+            "kind": "image",
+            "samples": [
+              2,
+              1
+            ],
+            "bits_per_component": 8,
+            "color_space": "/DeviceRGB",
+            "matrix": [
+              "300",
+              "0",
+              "0",
+              "-300",
+              "0",
+              "300"
+            ],
+            "ppi": [
+              2.0,
+              1.0
+            ]
+          }
+        ],
+        "concerns": []
+      },
+      "composition_unavailable": "Independent complete-page colour/vector/text/mask/clipping/blending oracle unavailable."
+    },
+    {
+      "source_page": 6,
+      "images": [
+        {
+          "size": [
+            1,
+            1
+          ],
+          "bits": 8,
+          "data": "01234567",
+          "pixels": [
+            [
+              1,
+              35,
+              69,
+              103
+            ]
+          ],
+          "color": "/DeviceCMYK",
+          "decode": [
+            "0",
+            "1",
+            "0",
+            "1",
+            "0",
+            "1",
+            "0",
+            "1"
+          ],
+          "ppi": [
+            1.0,
+            1.0
+          ],
+          "matrix": [
+            "300",
+            "0",
+            "0",
+            "-300",
+            "0",
+            "300"
+          ],
+          "path": [
+            "page",
+            "6",
+            "1",
+            "/I"
+          ],
+          "raw_sha256": "1a64ead36d566f23cd5eccbda7913e0d6604f3ff17a309a97d11a2695e2d6c0b",
+          "filters": [
+            "/FlateDecode"
+          ],
+          "parameters": null,
+          "composition_verified": false
+        }
+      ],
+      "concerns": [],
+      "resolution": {
+        "placements": [
+          {
+            "path": [
+              "page",
+              "6",
+              "1",
+              "/I"
+            ],
+            "object_id": [
+              22,
+              0
+            ],
+            "kind": "image",
+            "samples": [
+              1,
+              1
+            ],
+            "bits_per_component": 8,
+            "color_space": "/DeviceCMYK",
+            "matrix": [
+              "300",
+              "0",
+              "0",
+              "-300",
+              "0",
+              "300"
+            ],
+            "ppi": [
+              1.0,
+              1.0
+            ]
+          }
+        ],
+        "concerns": []
+      },
+      "composition_unavailable": "Independent complete-page colour/vector/text/mask/clipping/blending oracle unavailable."
+    },
+    {
+      "source_page": 7,
+      "images": [
+        {
+          "size": [
+            3,
+            2
+          ],
+          "bits": 1,
+          "data": "a040",
+          "pixels": [
+            [
+              1
+            ],
+            [
+              0
+            ],
+            [
+              1
+            ],
+            [
+              0
+            ],
+            [
+              1
+            ],
+            [
+              0
+            ]
+          ],
+          "color": "/DeviceGray",
+          "decode": [
+            "0",
+            "1"
+          ],
+          "ppi": [
+            3.0,
+            2.0
+          ],
+          "matrix": [
+            "300",
+            "0",
+            "0",
+            "-300",
+            "0",
+            "300"
+          ],
+          "path": [
+            "page",
+            "7",
+            "1",
+            "/I"
+          ],
+          "raw_sha256": "0d58f58ae5983793dc2cba493d3edad823493d53400e869d5c86e91387ca3829",
+          "filters": [
+            "/FlateDecode"
+          ],
+          "parameters": null,
+          "composition_verified": false
+        }
+      ],
+      "concerns": [],
+      "resolution": {
+        "placements": [
+          {
+            "path": [
+              "page",
+              "7",
+              "1",
+              "/I"
+            ],
+            "object_id": [
+              12,
+              0
+            ],
+            "kind": "image",
+            "samples": [
+              3,
+              2
+            ],
+            "bits_per_component": 1,
+            "color_space": "/DeviceGray",
+            "matrix": [
+              "300",
+              "0",
+              "0",
+              "-300",
+              "0",
+              "300"
+            ],
+            "ppi": [
+              3.0,
+              2.0
+            ]
+          }
+        ],
+        "concerns": []
+      },
+      "composition_unavailable": "Independent complete-page colour/vector/text/mask/clipping/blending oracle unavailable."
+    },
+    {
+      "source_page": 8,
+      "images": [],
+      "concerns": [],
+      "resolution": {
+        "placements": [],
+        "concerns": []
+      },
+      "composition_unavailable": "Independent complete-page colour/vector/text/mask/clipping/blending oracle unavailable."
+    }
+  ],
+  "controls": {
+    "wrong-image": [
+      "data"
+    ],
+    "wrong-row-padding": [
+      "pixels"
+    ],
+    "wrong-colour": [
+      "color"
+    ],
+    "wrong-decode": [
+      "decode"
+    ],
+    "wrong-ppi": [
+      "ppi"
+    ],
+    "wrong-placement": [
+      "matrix"
+    ],
+    "wrong-order": [
+      "bits",
+      "data",
+      "pixels"
+    ]
+  },
+  "source_loss_verified": true,
+  "snapshot_bytes_unchanged": true,
+  "composition_fidelity_verified": false,
+  "accepted_project_delivered": false
+}

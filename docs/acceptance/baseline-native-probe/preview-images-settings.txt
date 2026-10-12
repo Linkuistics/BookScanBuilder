@@ -1,0 +1,11 @@
+The following is a diff from the previous accessibility tree for Window: "Images" with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 71-77
+~70 dialogue Images, ID: PVPreferencesWindow, Secondary Actions: Raise
++	85 radio button 1 image pixel equals 1 screen pixel, Value: 1
++	86 radio button Size on screen equals size on printout, Value: 0
++	87 text Define 100% scale as: When opening files:
++	88 Images Opening Mode Matrix
++		89 radio button Open groups of files in the same window, Value: 1
++		90 radio button Open each file in its own window, Value: 0
++	91 text Images
+The focused UI element is 70 dialogue Images, ID: PVPreferencesWindow, Secondary Actions: Raise

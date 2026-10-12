@@ -1,0 +1,70 @@
+{
+  "README.md": {
+    "bytes": 4070,
+    "sha256": "5f026905fa0ba0a05413f43039f5d37735697a6d41d48e809e37f530cfbbaa2e"
+  },
+  "before.json.gz": {
+    "bytes": 81655,
+    "sha256": "f38b02c1aa2eda6a4e8aee9d6f7007cba0015e18ec35026e6c3d39a6df29c780"
+  },
+  "boundary-result.json": {
+    "bytes": 5480,
+    "sha256": "bf2e4c6ad27512901790eb1c2f5869b2732160664217b0e7e70be30113fe7286"
+  },
+  "boundary.py.txt": {
+    "bytes": 3885,
+    "sha256": "1152569e3c9af49fee206ad5959cea7df8415b7869c5d18163d5cd919eebdd10"
+  },
+  "coverage-fallback.json.gz": {
+    "bytes": 61614,
+    "sha256": "e442da5f37bf8d9d1a98e229e3261a04ba57523e0b35da153beea2702b314f9c"
+  },
+  "coverage.json.gz": {
+    "bytes": 19264,
+    "sha256": "20394f77b59df6abee298809f669dbc0988e39d1aad5c3b0f097ec9dc73b1b20"
+  },
+  "logs.json.gz": {
+    "bytes": 7533,
+    "sha256": "09c7d8e711f951ad6c497e4bf7b91bf710d484d50a84eb0da15d5e4bade42091"
+  },
+  "measure.py.txt": {
+    "bytes": 3117,
+    "sha256": "f2a20060222ee5470dd7af10cb311904d545c375354f8b71b26ebd3c80a33416"
+  },
+  "measured-after.json.gz": {
+    "bytes": 638765,
+    "sha256": "b5996b704cdceedc24ba9254a3b786efb68ca307e270edbc64ec513ace98bab1"
+  },
+  "measured-before.json.gz": {
+    "bytes": 638765,
+    "sha256": "b5996b704cdceedc24ba9254a3b786efb68ca307e270edbc64ec513ace98bab1"
+  },
+  "mutations-results.json.gz": {
+    "bytes": 1686,
+    "sha256": "42b5bb52ac83f78339738a8fe9defa06017d766bbc1aa9c6d3036281ab070e04"
+  },
+  "mutations.py.txt": {
+    "bytes": 2585,
+    "sha256": "3db1535b31e0f5558ba4a2fad573890037973a196986eb6b9620a8ea90e6a064"
+  },
+  "prefixes.json": {
+    "bytes": 741,
+    "sha256": "e9b866da0efecb27ccb7f7ff6acd96f3d457a0ce864ff438c52f9b75c5068038"
+  },
+  "preparation-comparison.json.gz": {
+    "bytes": 8154,
+    "sha256": "0199ddc8fe8365401e6c1d75b61e2bf65109d301793c81641cb7b3d4efa24a83"
+  },
+  "preparation-reports.json.gz": {
+    "bytes": 42566,
+    "sha256": "1685489601cb5c7e9d24f29abe185bc0e6a73bb89bc4ce03c211c0af117ff39c"
+  },
+  "runs.json.gz": {
+    "bytes": 72050,
+    "sha256": "38f2c472321a6aac8f1672052c632d068e6397e9ce0b15b4db04145d90db59aa"
+  },
+  "subjects.json.gz": {
+    "bytes": 17263,
+    "sha256": "52252d795655478a1ba48e08bcea72b883952d3e4f49dc50783ef850b2fcc260"
+  }
+}

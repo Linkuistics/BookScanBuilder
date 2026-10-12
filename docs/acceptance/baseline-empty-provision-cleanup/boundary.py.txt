@@ -1,0 +1,123 @@
+"""Read-only verification of this continuation's exact starting repository boundary."""
+
+import ast
+import hashlib
+import io
+import json
+import subprocess
+import zipfile
+from pathlib import Path
+
+root = Path.cwd()
+folder = root / "docs/acceptance/baseline-empty-provision-cleanup"
+index = json.loads((folder / "index.json").read_text())
+parts = []
+for part in index["parts"]:
+    raw = (folder / part["path"]).read_bytes()
+    assert len(raw) == part["bytes"]
+    assert hashlib.sha256(raw).hexdigest() == part["sha256"]
+    parts.append(raw)
+raw = b"".join(parts)
+assert len(raw) == index["bytes"]
+assert hashlib.sha256(raw).hexdigest() == index["sha256"]
+with zipfile.ZipFile(io.BytesIO(raw)) as archive:
+    names = archive.namelist()
+    assert len(set(names)) == len(names)
+    assert set(names) == set(index["members"])
+    assert archive.testzip() is None
+    members = {name: archive.read(name) for name in names}
+for name, item in index["members"].items():
+    assert len(members[name]) == item["bytes"]
+    assert hashlib.sha256(members[name]).hexdigest() == item["sha256"]
+
+starting = json.loads(members["starting-hashes.json"])
+current = {name: (root / name).read_bytes() for name in starting}
+source = "src/bookscan/project_header.py"
+allowed = {
+    source,
+    "tests/test_project_header.py",
+    "Taskfile.yml",
+    ".grove/40-k47/01-k53/11-impl--baseline-finite-k63.md",
+}
+
+
+def functions(raw):
+    result = {}
+
+    def walk(node, path):
+        for child in ast.iter_child_nodes(node):
+            name = getattr(child, "name", None)
+            parts = path + [name] if name else path
+            if isinstance(child, (ast.FunctionDef, ast.AsyncFunctionDef)):
+                result[".".join(parts)] = ast.get_source_segment(raw, child)
+            walk(child, parts)
+
+    walk(ast.parse(raw), [])
+    return result
+
+
+def verify(contents):
+    assert set(starting) <= set(contents)
+    changed = []
+    for name, digest in starting.items():
+        if hashlib.sha256(contents[name]).hexdigest() != digest:
+            changed.append(name)
+            assert name in allowed, name
+    for name in allowed - {source}:
+        assert contents[name].startswith(members["before/" + name]), name
+    old = members["before/" + source].decode()
+    new = contents[source].decode()
+    before, after = functions(old), functions(new)
+    assert [name for name, text in before.items() if text != after.get(name)] == [
+        "Stores.provision"
+    ]
+    assert old.replace(before["Stores.provision"], after["Stores.provision"], 1) == new
+    for kind in (ast.Import, ast.ImportFrom):
+        assert [ast.get_source_segment(old, n) for n in ast.parse(old).body if isinstance(n, kind)] == [
+            ast.get_source_segment(new, n) for n in ast.parse(new).body if isinstance(n, kind)
+        ]
+    return sorted(changed)
+
+
+changed = verify(current)
+assert current[source] == members["final-project_header.py"]
+assert current["tests/test_project_header.py"] == members["final-test_project_header.py"]
+assert json.loads(members["subjects-before.json"]) == json.loads(members["subjects-after.json"])
+tracked = set(subprocess.check_output(["jj", "file", "list"], text=True).splitlines())
+assert set(starting) <= tracked
+new_paths = tracked - set(starting)
+assert all(name.startswith("docs/acceptance/baseline-empty-provision-cleanup/") for name in new_paths)
+
+controls = []
+for fault in ["missing-path", "unrelated-edit", "old-test-edit", "protected-method-edit", "module-constant-edit"]:
+    wrong = dict(current)
+    if fault == "missing-path":
+        del wrong["CONTEXT.md"]
+    elif fault == "unrelated-edit":
+        wrong["CONTEXT.md"] += b"wrong content"
+    elif fault == "old-test-edit":
+        wrong["tests/test_project_header.py"] = b"wrong prefix\n" + wrong["tests/test_project_header.py"]
+    elif fault == "module-constant-edit":
+        wrong[source] = wrong[source].replace(b"MAX_HEADER_BYTES = 16_384", b"MAX_HEADER_BYTES = 1", 1)
+    else:
+        wrong[source] = wrong[source].replace(
+            b"self.owner, self._saved = owner, saved",
+            b"self.owner, self._saved = owner, None",
+            1,
+        )
+    try:
+        verify(wrong)
+    except AssertionError:
+        controls.append(fault)
+    else:
+        raise AssertionError("Negative boundary control was not rejected: " + fault)
+
+print(json.dumps({
+    "starting_paths_preserved": len(starting),
+    "changed_paths": changed,
+    "original_functions_changed": ["Stores.provision"],
+    "original_prefixes_preserved": True,
+    "new_paths_confined": True,
+    "archive_members_verified": len(members),
+    "negative_controls_rejected": controls,
+}, indent=2))

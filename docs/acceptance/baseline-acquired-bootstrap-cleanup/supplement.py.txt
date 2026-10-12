@@ -1,0 +1,6 @@
+import hashlib,json,pathlib
+folder=pathlib.Path('docs/acceptance/baseline-acquired-bootstrap-cleanup')
+index=folder/'supplemental-index.json'
+records={p.name:{'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in folder.iterdir() if p.is_file() and p!=index}
+index.write_text(json.dumps({'format':'OrdinaryEvidenceSupplementHashes','version':1,'files':records,'limitation':'Content integrity only; supplementary records were added after measurement.'},sort_keys=True,indent=2)+'\n')
+print(json.dumps({'indexed_files':len(records),'result':'written'}))

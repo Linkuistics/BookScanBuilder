@@ -1,0 +1,22 @@
+The following is a diff from the previous accessibility tree for Window: "ruler-72dpi.png" with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 78-84, 89-91
+~70 standard window ruler-72dpi.png, URL: file:///private/tmp/bookscan-k63-native-probe/ruler-72dpi.png, ID: PVDocumentWindow, Secondary Actions: Raise
++	71 split group
++		72 image
++	73 toolbar
++		74 menu button Description: View, Help: Choose sidebar display
++		75 container Zoom
++			76 button Description: zoom out, Help: Scale document down, Details: Zoom Out
++			77 button (disabled) Description: zoom to actual size, Help: Display at actual size, Details: Actual Size
++			78 button Description: zoom in, Help: Scale document up, Details: Zoom In
++		79 (disabled) Highlight Selection
++			80 radio button (disabled) Description: highlight, Value: 0
++		81 button (disabled) Description: Remove Background, Secondary Actions: Move previous, Move next, Remove from toolbar
++		82 radio button Description: Rotate, Help: Rotate Left, Value: 0, Secondary Actions: Move previous, Move next, Remove from toolbar
++		83 button (disabled) Search
++		84 pop-up button more toolbar items
+~	85 close button
+~	86 full screen button Help: this button also has an action to zoom the window, Secondary Actions: zoom the window
+~	87 minimise button
+~	88 text ruler-72dpi.png
+The focused UI element is 72 image

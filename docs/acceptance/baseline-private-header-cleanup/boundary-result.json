@@ -1,0 +1,92 @@
+{
+  "changed_starting_paths": [
+    ".grove/40-k47/01-k53/11-impl--baseline-finite-k63.md",
+    "Taskfile.yml",
+    "docs/acceptance/baseline-finite.md",
+    "src/bookscan/project_header.py",
+    "tests/test_project_header.py"
+  ],
+  "identity": [
+    "ryouonnvvlkzyyxmxrpqxnuqrysrqtvy",
+    "",
+    "03eb30abe1ae485696e5deec25bfb229a42ecf69",
+    "false"
+  ],
+  "new_paths": [
+    "docs/acceptance/baseline-private-header-cleanup/README.md",
+    "docs/acceptance/baseline-private-header-cleanup/boundary-result.json",
+    "docs/acceptance/baseline-private-header-cleanup/boundary.py.txt",
+    "docs/acceptance/baseline-private-header-cleanup/coverage-final.json",
+    "docs/acceptance/baseline-private-header-cleanup/index.json",
+    "docs/acceptance/baseline-private-header-cleanup/raw-000.zippart",
+    "docs/acceptance/baseline-private-header-cleanup/raw-001.zippart",
+    "docs/acceptance/baseline-private-header-cleanup/raw-002.zippart",
+    "docs/acceptance/baseline-private-header-cleanup/raw-003.zippart",
+    "docs/acceptance/baseline-private-header-cleanup/raw-004.zippart",
+    "docs/acceptance/baseline-private-header-cleanup/supplemental-index.json",
+    "docs/acceptance/baseline-private-header-cleanup/verification.json",
+    "docs/acceptance/baseline-private-header-cleanup/verify.py.txt"
+  ],
+  "prefixes": {
+    ".grove/40-k47/01-k53/11-impl--baseline-finite-k63.md": {
+      "bytes": 682640,
+      "sha256": "aece7b5e9b599c85c45ec5fb037514ebfec0bcd3e135017897158fabfc5130c2"
+    },
+    "Taskfile.yml": {
+      "bytes": 40956,
+      "sha256": "db4866f156ad91d421a59616f918a99930d9d9413c8975098ca976b3b4ba22cd"
+    },
+    "docs/acceptance/baseline-finite.md": {
+      "bytes": 347785,
+      "sha256": "a6abd2f2dfa7f760133dc3164638e0c985752cb8b60e523796a270c6d1ae82e1"
+    },
+    "tests/test_project_header.py": {
+      "bytes": 21673,
+      "sha256": "7c9a313422a0e65981417903782d0b8b5bfa5f1616f1812ba8a32f81dbee4c1d"
+    }
+  },
+  "protected_original_segments": [
+    "Header.from_json",
+    "Header.record",
+    "HeaderError.__str__",
+    "HeaderError.remediation",
+    "Import(names=[alias(name='json')])",
+    "Import(names=[alias(name='os')])",
+    "Import(names=[alias(name='re')])",
+    "Import(names=[alias(name='stat')])",
+    "Import(names=[alias(name='sys')])",
+    "Import(names=[alias(name='uuid')])",
+    "ImportFrom(module='bookscan', names=[alias(name='assets'), alias(name='checkpoints'), alias(name='native_blobs'), alias(name='records')], level=0)",
+    "ImportFrom(module='bookscan.ownership', names=[alias(name='LockIdentity'), alias(name='Writer')], level=0)",
+    "ImportFrom(module='collections.abc', names=[alias(name='Callable'), alias(name='Iterator')], level=0)",
+    "ImportFrom(module='contextlib', names=[alias(name='contextmanager')], level=0)",
+    "ImportFrom(module='dataclasses', names=[alias(name='dataclass')], level=0)",
+    "ImportFrom(module='pathlib', names=[alias(name='Path')], level=0)",
+    "ImportFrom(module='typing', names=[alias(name='Self'), alias(name='cast')], level=0)",
+    "Stores.__init__",
+    "Stores.provision",
+    "Stores.verify",
+    "_close",
+    "_directory_identity",
+    "_identity_record",
+    "_native",
+    "_numbers",
+    "_object",
+    "_read",
+    "_stamp",
+    "_unlink",
+    "resume"
+  ],
+  "refusing_controls": [
+    "missing",
+    "unrelated",
+    "foreign",
+    "change",
+    "parent",
+    "description",
+    "conflict",
+    "prefix"
+  ],
+  "result": "passed",
+  "starting_paths": 1842
+}

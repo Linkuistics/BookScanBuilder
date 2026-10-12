@@ -1,0 +1,38 @@
+import json,os,pathlib,shutil,subprocess,xml.etree.ElementTree as ET
+root=pathlib.Path.cwd()
+out=pathlib.Path('/private/tmp/bookscan-k63-empty-store-cleanup/mutations')
+source=root/'src/bookscan/project_reservation.py'
+raw=source.read_text()
+start=raw.index('    def remove_directory(')
+end=raw.index('    def close(',start)
+method=raw[start:end]
+mutations={
+    'omit-removal': method.replace('            os.rmdir(name, dir_fd=self._directory)','            pass'),
+    'omit-captured-identity': method.replace('not stat.S_ISDIR(entry.st_mode) or not matches(entry)','not stat.S_ISDIR(entry.st_mode)'),
+    'omit-root-recheck': method.replace('            self.verify()\n            current =','            current ='),
+    'float-time-recheck': method.replace('_file_stamp(current) != _file_stamp(entry)','current != entry'),
+    'allow-path-traversal': method.replace('        if not name or name in {".", ".."} or "/" in name or "\\0" in name:\n            raise ReservationError("INVALID_PROJECT", "Cleanup requires one directory name.")\n',''),
+}
+results=[]
+for name,changed in mutations.items():
+    assert changed!=method,name
+    directory=out/name
+    package=directory/'package'
+    package.mkdir(parents=True)
+    shutil.copytree(root/'src/bookscan',package/'bookscan',ignore=shutil.ignore_patterns('__pycache__'))
+    target=package/'bookscan/project_reservation.py'
+    target.write_text(raw[:start]+changed+raw[end:])
+    xml=directory/'cases.xml'
+    command=[str(root/'.venv/bin/python'),'-m','pytest','-q',str(root/'tests/test_project_reservation.py'),'--junitxml='+str(xml)]
+    env=os.environ.copy()
+    env['PYTHONPATH']=str(package)
+    env.pop('PYTEST_ADDOPTS',None)
+    with (directory/'output.log').open('wb') as log:
+        result=subprocess.run(command,env=env,stdout=log,stderr=subprocess.STDOUT)
+    cases=[(c.attrib['classname'],c.attrib['name'],'failed' if c.find('failure') is not None else 'error' if c.find('error') is not None else 'skipped' if c.find('skipped') is not None else 'passed') for c in ET.parse(xml).iter('testcase')]
+    failed=[c for c in cases if c[2]=='failed']
+    assert result.returncode==1 and failed and all(c[2] in {'failed','passed'} for c in cases),name
+    assert all('remove_directory' in c[1] or 'remove_owned_directory' in c[1] for c in failed),failed
+    results.append({'name':name,'command':command,'exit':result.returncode,'cases':cases})
+    print(name,len(failed),'failures',sum(c[2]=='passed' for c in cases),'passed',flush=True)
+(out/'results.json').write_text(json.dumps(results,sort_keys=True,indent=2)+'\n')

@@ -1,0 +1,38 @@
+{
+  "verified": true,
+  "change": "ryouonnvvlkzyyxmxrpqxnuqrysrqtvy",
+  "parent": "03eb30abe1ae485696e5deec25bfb229a42ecf69",
+  "base": "020c57b2ab5456e9c686d62b7e9dd0ec5aca00ff",
+  "live": true,
+  "empty_description": true,
+  "changed_paths": [
+    ".grove/40-k47/01-k53/11-impl--baseline-finite-k63.md",
+    "Taskfile.yml",
+    "docs/acceptance/baseline-finite.md",
+    "docs/acceptance/baseline-occurrence-core/boundary-result.json",
+    "docs/acceptance/baseline-occurrence-core/boundary.py.gz",
+    "docs/acceptance/baseline-occurrence-core/controls-result.json",
+    "docs/acceptance/baseline-occurrence-core/controls.py",
+    "docs/acceptance/baseline-occurrence-core/index.json.gz",
+    "docs/acceptance/baseline-occurrence-core/raw-000.zippart",
+    "docs/acceptance/baseline-occurrence-core/raw-001.zippart",
+    "docs/acceptance/baseline-occurrence-core/raw-002.zippart",
+    "docs/acceptance/baseline-occurrence-core/raw-003.zippart",
+    "docs/acceptance/baseline-occurrence-core/raw-004.zippart",
+    "docs/acceptance/baseline-occurrence-core/verify.py",
+    "src/bookscan/occurrence_record.py",
+    "src/bookscan/source_record.py",
+    "tests/test_occurrence_record.py"
+  ],
+  "subjects": 16697,
+  "notes_prefixes_preserved": true,
+  "controls_refused": [
+    "change",
+    "parent",
+    "description",
+    "conflict",
+    "paths",
+    "paths",
+    "live"
+  ]
+}

@@ -1,0 +1,132 @@
+"""Verify retained content relationships, without claiming historical execution."""
+import copy
+import hashlib
+import io
+import json
+import re
+import sys
+import xml.etree.ElementTree as ET
+import zipfile
+from pathlib import Path
+
+
+def sha(raw):
+    return hashlib.sha256(raw).hexdigest()
+
+
+def junit(raw):
+    rows = {}
+    for case in ET.fromstring(raw).iter('testcase'):
+        key = (case.get('classname'), case.get('name'))
+        assert key not in rows
+        rows[key] = tuple(c.tag for c in case if c.tag in {'failure', 'error', 'skipped'})
+    return rows
+
+
+def normal(value, artifact):
+    if isinstance(value, dict):
+        result = {}
+        for key, item in value.items():
+            if key in {'pid', 'writer_pid'}:
+                assert type(item) is int and item > 0
+                result[key] = '<positive-pid>'
+            else:
+                result[key] = normal(item, artifact)
+        return result
+    if isinstance(value, list):
+        return [normal(item, artifact) for item in value]
+    if isinstance(value, str):
+        return re.sub(r'\.bookscan-prepare-[0-9a-f]{32}\.tmp', '<private-staging-name>', value.replace(artifact, '<artifacts>'))
+    return value
+
+
+def validate(files, root):
+    load = lambda name: json.loads(files[name])
+    counts = load('comparison.json')
+    for label in ['full', 'focused', 'staff']:
+        a = junit(files[label + '-a.xml'])
+        b = junit(files[label + '-b.xml'])
+        assert a == b and not any(a.values())
+        assert counts[label] == len(a)
+    prior = junit(files['predecessor-full.xml'])
+    current = junit(files['full-a.xml'])
+    renames = {
+        'test_postlink_private_cleanup_failure_retains_both_header_names': 'test_postlink_private_cleanup_failure_rolls_back_owned_header_names',
+        'test_failed_provision_keeps_published_header_and_stores': 'test_failed_provision_rolls_back_unchanged_published_header_and_stores',
+    }
+    assert all(current[(cls, renames.get(name, name))] == outcome for (cls, name), outcome in prior.items())
+    assert counts['predecessor_outcomes'] == len(prior)
+    before, after = load('subjects-before.json'), load('subjects-after.json')
+    assert before == after and len(before) == counts['frozen_subjects']
+    for name in ['src/bookscan/project_header.py', 'tests/test_project_header.py', 'tests/test_header_rollback.py', 'Taskfile.yml']:
+        assert files['final/' + name] == (root / name).read_bytes()
+    for variant, expected in [('predecessor', 36), ('inode-only', 21)]:
+        cases = junit(files['copies/' + variant + '/report.xml'])
+        assert len(cases) == 60 and sum(bool(v) for v in cases.values()) == expected
+        record = load('disproof.json')[variant]
+        module = files['copies/' + variant + '/src/bookscan/project_header.py']
+        assert record['sha256_before'] == record['sha256_after'] == sha(module)
+        first = files['copies/' + variant + '/output.log'].decode().splitlines()[0]
+        assert first == record['path'] + ' ' + sha(module)
+    pairs = []
+    for run in ['a', 'b']:
+        report = load('preparation-' + run + '/report.json')
+        assert report['digests_before'] == report['digests_after']
+        faults = junit(files['preparation-' + run + '/fault-checks.xml'])
+        assert not any(faults.values()) and len(faults) == counts['preparation_faults']
+        pairs.append((normal(report['cases'], report['artifacts']), normal(report['fault_checks']['observed_signal_and_kill_cases'], report['artifacts']), faults, report['versions']))
+    assert pairs[0] == pairs[1]
+    header_pairs = []
+    for run in ['a', 'b']:
+        folder = 'header-' + run + '/'
+        report = load(folder + 'report.json')
+        rows = copy.deepcopy(report['cases'])
+        for row in rows:
+            event = load(folder + row['id'] + '.json')['event']
+            assert row['writer_pid'] == event['writer_pid'] > 0
+            checkpoint = row['checkpoint_sha256']
+            if checkpoint is not None:
+                base = folder + row['id'] + '/checkpoints/'
+                assert sha(files[base + checkpoint + '.json']) == checkpoint
+                assert files[base + 'current'].decode() == checkpoint + '.json'
+                row['checkpoint_sha256'] = '<verified-checkpoint>'
+        header_pairs.append(normal(rows, '/unused'))
+    assert header_pairs[0] == header_pairs[1] and len(header_pairs[0]) == counts['header_worker_cases']
+    assert load('boundary.json')['preserved_starting_paths'] == len(load('starting-paths.json'))
+    return counts
+
+
+def main():
+    directory = Path(__file__).resolve().parent
+    root = Path.cwd()
+    index = json.loads((directory / 'index.json').read_bytes())
+    chunks = []
+    for part in index['parts']:
+        raw = (directory / part['name']).read_bytes()
+        assert len(raw) == part['bytes'] and sha(raw) == part['sha256']
+        chunks.append(raw)
+    raw = b''.join(chunks)
+    assert len(raw) == index['bytes'] and sha(raw) == index['sha256']
+    with zipfile.ZipFile(io.BytesIO(raw)) as archive:
+        assert set(archive.namelist()) == set(index['members'])
+        files = {name: archive.read(name) for name in archive.namelist()}
+    for name, data in files.items():
+        assert len(data) == index['members'][name]['bytes']
+        assert sha(data) == index['members'][name]['sha256']
+    counts = validate(files, root)
+    rejected = 0
+    for key, value in [('full-b.xml', b'<testsuites/>'), ('final/src/bookscan/project_header.py', b'wrong source'), ('comparison.json', b'{}'), ('copies/predecessor/report.xml', b'<testsuites/>')]:
+        wrong = dict(files)
+        wrong[key] = value
+        try:
+            validate(wrong, root)
+        except (AssertionError, KeyError):
+            rejected += 1
+        else:
+            raise AssertionError('wrong record accepted: ' + key)
+    assert rejected == 4
+    print(json.dumps({'verified': True, 'members': len(files), 'wrong_controls': rejected, 'counts': counts}, sort_keys=True))
+
+
+if __name__ == '__main__':
+    main()

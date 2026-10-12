@@ -1,0 +1,7 @@
+screen=P40w-20 display_id=3 frame_points=(0.0, 0.0, 5120.0, 2160.0) backing_scale=1.0 framebuffer_pixels=5120x2160
+["kCGWindowBounds": {
+    Height = 584;
+    Width = 708;
+    X = 4;
+    Y = 35;
+}, "kCGWindowOwnerName": Preview, "kCGWindowMemoryUsage": 2432, "kCGWindowIsOnscreen": 1, "kCGWindowStoreType": 1, "kCGWindowOwnerPID": 58156, "kCGWindowAlpha": 1, "kCGWindowSharingState": 1, "kCGWindowName": ruler-72dpi.png, "kCGWindowNumber": 3280, "kCGWindowLayer": 0]
