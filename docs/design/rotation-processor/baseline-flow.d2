@@ -1,0 +1,22 @@
+direction: down
+classes: {
+  start: {style: {fill: "#17334b"; font-color: white; bold: true}}
+  pending: {style: {fill: "#fff5dd"; stroke-dash: 4}}
+}
+create: Start here\nbaseline create\nOne PDF -> complete saved baseline {class: start}
+views: baseline views\nAny occurrence / full / complete native tiles\nSource-native detail separately labelled
+viewer: Ordinary viewer\nVisible page, image and review revision\nVerify actual 1:1 scale
+record: Finite receipt action\nDisposition OR scoped inspection\nPixels remain unchanged
+summary: baseline status --output\nComplete export roster and unresolved reasons\nInspection scope shown separately
+ack: baseline acknowledge\nExplicit exact snapshot / limitations
+export: export\nLock -> verify -> freeze -> validate\nNo-clobber image-only PDF
+browser: Later complete browser extension\nCo-locate views and actions\nStill before orientation {class: pending}
+create -> views: "1. source-loss resume works"
+views -> viewer: "2. immutable matched packet"
+viewer -> record: "3. use displayed receipt + note"
+record -> views: "4. refresh after review changes"
+record -> summary: "5. ready to export"
+viewer -> summary: "5. also allowed uninspected"
+summary -> ack: "6. acknowledge, never infer inspection"
+ack -> export: "7. unchanged acknowledged snapshot"
+export -> browser: "8. compatibility fixture / full browser owed"

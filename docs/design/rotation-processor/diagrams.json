@@ -1,28 +1,124 @@
 {
-  "title": "Page and book geometry — Design v2",
-  "intro": "Current scope: page geometry and book alignment/matching, including odd/even or left/right assignments. Reordering and OCR are separate third-party passes. Dark Start here nodes mark graph entry; numbered edges give order. Within-page correction remains evidence-dependent.",
+  "title": "Page and book geometry — agreed finite baseline interface",
+  "intro": "The human replied yes to the concrete finite baseline interface and test seams, plus a finite-owner-only session exception. Design v2 geometry remains agreed. Dark Start here nodes mark graph entry; numbered edges give order. These workflow/dependency graphs are not checked models or product evidence.",
   "groups": [
-    {"id":"workflow","title":"Geometry workflow","description":"One PDF to reviewed geometry images; external reordering and OCR follow separately."},
-    {"id":"book","title":"Book geometry","description":"Independent body runs and geometry groups, explicit sides/repeats, reference anchors and matching targets."},
-    {"id":"review","title":"Geometry review","description":"Compare and adjust any page or group; preserve all occurrences and order."},
-    {"id":"versions","title":"Saved geometry lifecycle","description":"Local changes and shared references invalidate dependent placements, not unrelated accepted pages."}
+    {
+      "id": "baseline",
+      "title": "Finite baseline review",
+      "description": "Agreed ordinary-viewer packets, exact revision receipts and separate inspection/acknowledgement."
+    },
+    {
+      "id": "baseline-state",
+      "title": "Baseline checkpoint lifecycle",
+      "description": "Agreed assets-before-checkpoint, exclusive ownership and exact export publication."
+    },
+    {
+      "id": "baseline-delivery",
+      "title": "Complete delivery boundaries",
+      "description": "Agreed finite working handoff, finite-owner session exception and complete browser extension."
+    },
+    {
+      "id": "workflow",
+      "title": "Geometry workflow",
+      "description": "One PDF to reviewed geometry images; external reordering and OCR follow separately."
+    },
+    {
+      "id": "book",
+      "title": "Book geometry",
+      "description": "Independent body runs and geometry groups, explicit sides/repeats, reference anchors and matching targets."
+    },
+    {
+      "id": "review",
+      "title": "Geometry review",
+      "description": "Compare and adjust any page or group; preserve all occurrences and order."
+    },
+    {
+      "id": "versions",
+      "title": "Saved geometry lifecycle",
+      "description": "Local changes and shared references invalidate dependent placements, not unrelated accepted pages."
+    }
   ],
   "discussion": {
-    "title":"Geometry-only design and scale-preserving matching agreed",
-    "status":"Agreed — Design v2 with review clarifications; working-product acceptance outstanding",
-    "summary":"The human replied verbatim “agreed” to the presented v2 design and preserved-scale matching policy. The contract covers shell/local-browser page correction and book alignment, saved review, image-only export and public/full/native/pair/group test seams. Reordering and OCR are external. Scale normalization is not commissioned. No placement may silently clip content or certify unmeasured local distortion. Read the actual agreement/scope using the link above. The earned design review precedes implementation planning; no real output or historical comparison is accepted by this signature.",
-    "diagramIds":["workflow","book-alignment","review","versions"],
-    "updatedDiagrams":[
-      {"id":"workflow","summary":"Fixed 300-dpi MediaBox RGB import exposes source-fidelity and extent reasons; split/rotation/crop order is explicit."},
-      {"id":"book-alignment","summary":"Independent runs/groups and duplicate parity; white padding, canvas growth and unresolved unpositioned members at preserved scale."},
-      {"id":"review","summary":"Baseline retention is unresolved, drafts/stale placements block export and acknowledgement accepts no rotation."},
-      {"id":"versions","summary":"Reference edits invalidate all dependents; overflow reopens target review, authenticated actions and kernel locks protect checkpoints."}
+    "title": "Finite interface agreed; complete browser delivery remains required",
+    "status": "Agreed — actual reply yes; working-product acceptance outstanding",
+    "summary": "Permanent finite baseline commands use exact receipt-bound views and separate inspection, reason dispositions and scoped acknowledgement. Browser process/review remain foreground from their first release. The human explicitly permitted one complete finite owner across sessions with every check retained and no partial retirement. Browser completion still precedes orientation and assesses its own size. The canonical spec now contains the contract; no separate unsigned proposal remains.",
+    "diagramIds": [
+      "baseline-flow",
+      "baseline-checkpoints",
+      "baseline-delivery",
+      "workflow",
+      "review"
+    ],
+    "updatedDiagrams": [
+      {
+        "id": "baseline-delivery",
+        "summary": "Recorded the actual yes and scoped finite-owner exception before the complete finite handoff; browser ownership and its independent size assessment remain."
+      }
     ]
   },
-  "diagrams":[
-    {"id":"workflow","group":"workflow","title":"Geometry PDF and external passes","renderer":"svg","source":"workflow.d2","rendered":"workflow.svg","caption":"Design v2 preserves every occurrence/order. The 300-dpi RGB baseline re-rasterises input; source-fidelity and changed CropBox extent stay explicit. Confirmed halves use source region, rotation, rotated-frame crop, then placement. Export adds no further sampling. Full within-page acceptance remains outstanding."},
-    {"id":"book-alignment","group":"book","title":"Page sides and mirrored alignment","renderer":"svg","source":"book-alignment.d2","rendered":"book-alignment.svg","caption":"Body runs assign sides independently of geometry groups; explicit repeats retain a side without advancing parity. Frames guide registration without cropping. White translation/padding preserves scale and retained pixels; canvases may grow. Unpositioned members retain their own canvas unresolved. Images are never mirrored."},
-    {"id":"review","group":"review","title":"Page correction and book placement","renderer":"svg","source":"review.d2","rendered":"review.svg","caption":"Source/baseline/current full and labelled native views support any-page review; pair/group views expose added bands, margins and sides. Drafts and stale placements block export until accepted/discarded or removed. Snapshot acknowledgement can retain unresolved baselines without accepting rotation or implying inspection."},
-    {"id":"versions","group":"versions","title":"Geometry dependencies stay consistent","renderer":"svg","source":"versions.d2","rendered":"versions.svg","caption":"Reference-image edits invalidate all dependent placements and require re-marked anchors; member overflow reopens target review. Authenticated versioned actions and a kernel-released writer lock protect durable checkpoints. Export freezes one snapshot and includes a readable JSON attachment, omitting preparation hints. Reimport starts fresh."}
+  "diagrams": [
+    {
+      "id": "baseline-flow",
+      "group": "baseline",
+      "title": "Finite views and exact revision actions",
+      "renderer": "svg",
+      "source": "baseline-flow.d2",
+      "rendered": "baseline-flow.svg",
+      "caption": "Agreed workflow. Full/native/source-native views carry stable identity; actual native-scale usability remains required working acceptance. No geometry edit or inferred inspection."
+    },
+    {
+      "id": "baseline-checkpoints",
+      "group": "baseline-state",
+      "title": "Saved review and output publication",
+      "renderer": "svg",
+      "source": "baseline-checkpoints.d2",
+      "rendered": "baseline-checkpoints.svg",
+      "caption": "Agreed operation/ownership graph, not a checked state machine. Checkpoint commit and PDF publication have distinct signal outcomes; private incomplete assets never resume."
+    },
+    {
+      "id": "baseline-delivery",
+      "group": "baseline-delivery",
+      "title": "Complete finite handoff then browser completion",
+      "renderer": "svg",
+      "source": "baseline-delivery.d2",
+      "rendered": "baseline-delivery.svg",
+      "caption": "Agreed responsibility/dependency map, not source-package or deployment containers. One-session fit for F is unsubstantiated; the actual yes permits one complete finite owner across sessions without waived checks. B remains required before orientation."
+    },
+    {
+      "id": "workflow",
+      "group": "workflow",
+      "title": "Geometry PDF and external passes",
+      "renderer": "svg",
+      "source": "workflow.d2",
+      "rendered": "workflow.svg",
+      "caption": "Design v2 preserves every occurrence/order. The 300-dpi RGB baseline re-rasterises input; source-fidelity and changed CropBox extent stay explicit. Confirmed halves use source region, rotation, rotated-frame crop, then placement. Export adds no further sampling. Full within-page acceptance remains outstanding."
+    },
+    {
+      "id": "book-alignment",
+      "group": "book",
+      "title": "Page sides and mirrored alignment",
+      "renderer": "svg",
+      "source": "book-alignment.d2",
+      "rendered": "book-alignment.svg",
+      "caption": "Body runs assign sides independently of geometry groups; explicit repeats retain a side without advancing parity. Frames guide registration without cropping. White translation/padding preserves scale and retained pixels; canvases may grow. Unpositioned members retain their own canvas unresolved. Images are never mirrored."
+    },
+    {
+      "id": "review",
+      "group": "review",
+      "title": "Page correction and book placement",
+      "renderer": "svg",
+      "source": "review.d2",
+      "rendered": "review.svg",
+      "caption": "Source/baseline/current full and labelled native views support any-page review; pair/group views expose added bands, margins and sides. Drafts and stale placements block export until accepted/discarded or removed. Snapshot acknowledgement can retain unresolved baselines without accepting rotation or implying inspection."
+    },
+    {
+      "id": "versions",
+      "group": "versions",
+      "title": "Geometry dependencies stay consistent",
+      "renderer": "svg",
+      "source": "versions.d2",
+      "rendered": "versions.svg",
+      "caption": "Reference-image edits invalidate all dependent placements and require re-marked anchors; member overflow reopens target review. Authenticated versioned actions and a kernel-released writer lock protect durable checkpoints. Export freezes one snapshot and includes a readable JSON attachment, omitting preparation hints. Reimport starts fresh."
+    }
   ]
 }

@@ -131,16 +131,32 @@ tasks:
       - cp docs/specs/prepared-pdf.md docs/design/rotation-processor/prepared-pdf-reference.md
       - cp docs/adr/prepared-page-hints.md docs/design/rotation-processor/prepared-page-hints-reference.md
       - cp docs/adr/geometry-review-handoff.md docs/design/rotation-processor/geometry-review-handoff-reference.md
+      - cp docs/adr/finite-baseline-commands.md docs/design/rotation-processor/finite-baseline-commands-reference.md
       - >-
         uv run --no-project --python 3.12 --with 'markdown==3.9' python -c
         'from pathlib import Path; import markdown;
         source = Path("docs/specs/rotation-processor.md").read_text();
         body = markdown.markdown(source, extensions=["tables", "toc"]);
-        body = body.replace("href=\"../adr/prepared-page-hints.md\"", "href=\"prepared-page-hints-reference.md\"").replace("href=\"../adr/geometry-review-handoff.md\"", "href=\"geometry-review-handoff-reference.md\"").replace("href=\"../design/rotation-processor/README.md\"", "href=\"index.html#discussion\"");
-        page = "<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content=width=device-width><title>Page and book geometry — Design v2</title><style>body{font:17px/1.6 system-ui;margin:2rem auto;max-width:85ch;padding:0 1rem;color:#172d40;background:#fff}h1,h2,h3{scroll-margin-top:2rem}table{border-collapse:collapse;width:100%}td,th{border:1px solid #ccd5dd;padding:.5rem;text-align:left}a{color:#075ea5}code{overflow-wrap:anywhere}pre{overflow:auto}@media(prefers-color-scheme:dark){body{color:#ddd;background:#182028}a{color:#9acfff}td,th{border-color:#526272}}</style><a href=index.html#discussion>Editable visual discussion</a><main>" + body + "</main></html>";
+        body = body.replace("href=\"../adr/prepared-page-hints.md\"", "href=\"prepared-page-hints-reference.md\"").replace("href=\"../adr/geometry-review-handoff.md\"", "href=\"geometry-review-handoff-reference.md\"").replace("href=\"../adr/finite-baseline-commands.md\"", "href=\"finite-baseline-commands-reference.md\"").replace("href=\"../design/rotation-processor/README.md\"", "href=\"index.html#discussion\"");
+        page = "<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content=width=device-width><title>Page and book geometry — agreed baseline and Design v2</title><style>body{font:17px/1.6 system-ui;margin:2rem auto;max-width:85ch;padding:0 1rem;color:#172d40;background:#fff}h1,h2,h3{scroll-margin-top:2rem}table{display:block;overflow-x:auto;border-collapse:collapse;width:100%}td,th{border:1px solid #ccd5dd;padding:.5rem;text-align:left}a{color:#075ea5}code{overflow-wrap:anywhere}pre{overflow:auto}@media(prefers-color-scheme:dark){body{color:#ddd;background:#182028}a{color:#9acfff}td,th{border-color:#526272}}</style><a href=index.html#discussion>Editable visual discussion</a><main>" + body + "</main></html>";
         Path("docs/design/rotation-processor/contract.html").write_text(page)'
 
   process:design-serve:
     desc: Serve only the page/book geometry design on localhost
     cmds:
       - python3 -m http.server '{{.DESIGN_PORT}}' --bind 127.0.0.1 --directory docs/design/rotation-processor
+
+  process:baseline-design-render:
+    desc: Render the agreed finite baseline discussion from the canonical spec (D2 0.9.0)
+    cmds:
+      - d2 --layout=dagre --theme=0 --dark-theme=200 docs/design/rotation-processor/baseline-flow.d2 docs/design/rotation-processor/baseline-flow.svg
+      - d2 --layout=dagre --theme=0 --dark-theme=200 docs/design/rotation-processor/baseline-checkpoints.d2 docs/design/rotation-processor/baseline-checkpoints.svg
+      - d2 --layout=dagre --theme=0 --dark-theme=200 docs/design/rotation-processor/baseline-delivery.d2 docs/design/rotation-processor/baseline-delivery.svg
+      - task: process:design-render
+      - >-
+        python3 -c
+        'from pathlib import Path;
+        source = Path("docs/design/rotation-processor/contract.html").read_text();
+        panel = "<section id=current-decision><h2>Finite baseline interface agreed</h2><p>The human replied yes to the concrete command, lifecycle, compatibility and test seams, with a finite-owner-only session exception. Browser completion remains required. No product or image result is accepted.</p><p><a href=\"#finite-baseline-review\">Read the agreed baseline contract</a> · <a href=\"#finite-baseline-interface-and-test-seams\">Actual reply and scope</a></p></section>";
+        page = source.replace("<main>", "<main>" + panel, 1);
+        Path("docs/design/rotation-processor/baseline-delivery.html").write_text(page)'

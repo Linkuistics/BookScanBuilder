@@ -64,6 +64,17 @@ accepted state, without implying human inspection or corrected geometry.
 Processor-owned saved PDF snapshot, baselines, accepted revisions, book geometry
 and review records. Resume uses it; a geometry export report cannot recreate it.
 
+**Review revision / checkpoint revision**:
+The identity of the current image, assessment and inspection/disposition facts /
+the identity of a durable checkpoint, including acknowledgements and retry outcomes.
+Recording acknowledgement advances its checkpoint without changing the review
+revision or export snapshot it names.
+
+**View receipt**:
+A generated reference to an immutable packet's project, occurrence, displayed
+image/review revision and view-region coverage. A recorded action validates it
+against the saved descriptor/current state; possession alone implies no inspection.
+
 **Body run**:
 An ordered selection declaring logical side progression. An active identity has
 at most one run position. Blank pages advance parity; explicitly marked repeats

@@ -111,19 +111,29 @@ plans the smaller useful working cuts from the actual implementation size findin
 No baseline product or acceptance result was delivered by the decomposition;
 k53 and this node stay open. All baseline completion remains ahead of k54.
 
-k55's explicit requirements fallback has its actual answer in baseline-delivery-k56:
-“Permit the temporary finite reviewer staging”. The repaired twelve-criterion
-accounting and retained ordinary-PDF/300-dpi RGB/assessment/fidelity/safety contracts
-scope that permission. Commission its focused finite review/acknowledgement/export
-and compatible browser-completion design inside k53. Detailed commands, view/
-revision identity, lifecycle, schema/command transition and public/test seams still
-need actual design agreement. A still-oversized design inventories the remaining
-work and returns the specific residual trade-off, not an identical unanswered
-planning loop. Only the actual agreed artifact earns lazy review and fresh
-implementation planning with concrete working browser completion before k54.
-k53's original full browser closure and this node's orientation closure stay
-intact before k48; finite-only review or planning cannot satisfy either node.
-No multi-session exception, input restriction, new study or acceptance is inferred.
+k56 recorded “Permit the temporary finite reviewer staging”; k59 subsequently
+obtained the verbatim “yes” to its concrete interface/test seams and finite-owner-
+only multi-session delivery exception. Read the current spec's Finite baseline
+review and Agreement sections, the finite-baseline-commands ADR, and k59's Agreed
+first-handoff and browser ownership / Agreed delivery inventory. Those records
+bind permanent finite names, exact packet/revision receipts, scoped inspection
+and acknowledgement, transaction/lock/signal/export outcomes and private/public
+compatibility without changing the saved-report or preparation-hint meanings.
+
+The complete finite F owner may span sessions with all its required checks and
+no internal partial retirement or horizontal/acceptance-only child. This permission
+changes cadence only and is not a measured session-size reduction. The actual
+agreed artifact earns design review before a fresh planner; that planner must cut
+F and complete working browser B here before k54. B owns co-located any-page
+views/actions, process/review readiness/terminal/export schemas, token/Host/Origin,
+confirmed destination, Stop/tab/signals, lifetime lock/live freeze, predecessor/
+finite-command regression and actual browser/denied-read acceptance, and assesses
+its own size without borrowing F's exception. All twelve original k53 criteria,
+ordinary static PDFs/300-dpi RGB/every-page assessment, independent fidelity,
+writer faults, six-case/resource packets and actual missing-outcome ownership
+remain. Finite retirement or design/planning closes neither k53 nor k47; original
+Goal/Done when and downstream order stay intact. No product/fidelity/native-view
+result, geometry or preparation visual approval is supplied by the reply.
 
 ## Notes
 

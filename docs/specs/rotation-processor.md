@@ -1,6 +1,6 @@
 # Page and book geometry
 
-**Design v2 — agreed, with review clarifications.** The reply and its scope are
+**Design v2 geometry and finite baseline interface — agreed.** The replies and their scopes are
 recorded under [Agreement](#agreement).
 [The editable visual discussion](../design/rotation-processor/README.md) presents
 the geometry-only design, including page alignment and explicit side assignment.
@@ -23,9 +23,12 @@ A usable intermediate export is not acceptance of that unresolved geometry.
 
 ## Product shape and alternatives
 
-Start one book from the shell and review it in a local browser. The project
-saves partial review, geometry choices, page-side/group assignments and accepted
-images. Resume without reopening the original collection.
+Start one book from the shell. The finite baseline workflow supplies ordinary-
+viewer packets, saved reason/inspection records and acknowledged unchanged-image
+export; browser review supplies the complete co-located page/book interface.
+Both use the same project and resume without reopening the original collection.
+The project saves partial review, geometry choices, page-side/group assignments
+and accepted images as their supported operations become available.
 
 | Public command contract | Result |
 | --- | --- |
@@ -46,18 +49,430 @@ accept unresolved geometry. If export is in progress, Stop review waits for its
 separate publication/failure result before stopping. A caught SIGINT/SIGTERM exits
 130/143 after safe checkpoint cleanup; use Stop review for a successful shell-loop iteration.
 Closing the tab does not stop the server. Import/assessment completes before the
-ready event; no unattended import-only mode is offered. Each server start creates
+ready event. The finite baseline workflow is a complete review/resume/export
+interface; no importer-only handoff is offered. Each server start creates
 an unguessable session token, supplied in its local URL and every action. Validate
 the loopback Host and exact server Origin, reject tokenless/foreign-origin actions,
 and serve no cross-origin state-changing endpoint. The browser export control
 requires an explicit user-entered destination and confirmation; it never derives
 a destination from the source or a remote request. Stop is authenticated too.
 
-Local browser review is recommended over command-only edits plus external
-viewers: it keeps exact page identities, full/native comparisons and explicit
-acceptance together, at the cost of a local server and saved-project format.
+Browser review keeps exact identities, full/native comparisons and actions
+together for supported page/book edits. The finite unchanged-baseline workflow
+uses generated receipt-bound views and explicit shell actions. Its names remain
+finite after browser support arrives; process/review are blocking from their
+first release and never alias finite operations. The retained-name decision and
+its trade-off are recorded in [finite-baseline-commands](../adr/finite-baseline-commands.md).
 A native Mac app adds packaging/framework scope without changing this personal
-shell workflow. The agreed interface uses the shell and local browser.
+shell workflow. The complete interface includes shell and local-browser review.
+
+## Finite baseline review
+
+The finite workflow imports/assesses one ordinary static sole PDF, exposes every
+occurrence through matched full/native/source-native packets, records durable
+unresolved review facts, resumes without its original and exports exact acknowledged
+unchanged-baseline images. It introduces no orientation/crop/split/group edit state,
+applies no estimate and implies no geometry or source-fidelity acceptance. Browser
+completion retains the same project meanings and public export contract. The
+following command, lifecycle, compatibility and test seams are agreed.
+
+### Commands and user workflow
+
+All baseline commands are noninteractive finite operations: no server, prompt,
+pager or automatic application launch. They may take time to render/validate;
+completion means return to the shell. `prepare` keeps its existing grammar,
+help, finite schema version 1 and publication semantics unchanged.
+
+| Command | Concrete behaviour |
+| --- | --- |
+| `bookscan baseline create PDF --workdir PROJECT` | Create an unused project, freeze/validate one sole static PDF, render every complete page and assess every occurrence. Commit one complete usable baseline checkpoint; print the project path. |
+| `bookscan baseline status PROJECT` | Verify/resume the saved checkpoint without the original; print the complete ordered roster, limitations, dispositions and inspection scope. `--output DIR` also publishes a new summary packet for acknowledgement. |
+| `bookscan baseline views PROJECT --page ID --output DIR` | Publish a comparison packet for one stable occurrence. `--all` replaces `--page` to publish every identity, never only flagged pages. Print the packet's index PDF path. |
+| `bookscan baseline disposition PROJECT --receipt FILE --reason ID --decision reject\|retain-unresolved --note TEXT` | Record one reason disposition against the displayed image and review revision. Reject dismisses that assessment suggestion; it does not clear the underlying unverified limitation or change pixels. |
+| `bookscan baseline inspected PROJECT --receipt FILE --scope full\|native\|source-native --viewer TEXT --scale TEXT --note TEXT` | Record actual inspection of the packet's specified page/view scope and the actual viewer/scale used. Native receipts name covered tile regions; full inspection is not full native inspection. Never infer this act from opening a file. |
+| `bookscan baseline acknowledge PROJECT --receipt FILE --all\|--page ID --note TEXT` | A summary receipt displays the complete current export snapshot and all unresolved IDs/reasons, with inspection scope separately displayed. Explicitly acknowledge all identities or a named selection against that exact snapshot. Repeat `--page` for a selection. |
+| `bookscan export PROJECT --output PDF` | Lock, verify, require a current acknowledgement, freeze the complete roster, rebuild/validate and publish one exact image-only PDF without overwrite. |
+
+`--json` is available on all operations. `--help` at any level has precedence
+over other arguments, reads no input/project/dependency/cache and exits 0; an
+unknown subcommand without help exits 2 with nearest valid examples. Paths with
+spaces are quoted. Stable IDs returned by status/packets are accepted unchanged;
+ordinal-only actions and manual hash assembly are unavailable. `--page`/`--all`
+are mutually exclusive and one is required. A packet destination is an unused
+directory in an existing parent, outside the project/source; no overwrite option.
+
+The user starts with create, then status and the packet index in Preview or
+another ordinary PDF viewer. The ordered roster links each occurrence's full
+comparison, native tile index and any source-native material. Each packet prints
+the exact disposition/inspection command with its receipt path; the user supplies
+the decision/note. After decisions, status with `--output` creates a new summary
+packet, showing inspected regions separately from unresolved/uninspected pages.
+The user explicitly acknowledges that summary, then exports. An all-uninspected
+book may be acknowledged, but the summary and report say so. Required product
+fidelity checks and representative acceptance are independent of this choice.
+
+Example shape (IDs are illustrative values returned by the working command):
+
+```sh
+bookscan baseline create 'Prepared book.pdf' --workdir 'Book project'
+bookscan baseline views 'Book project' --page occ-000020 --output 'Page 20 views'
+bookscan baseline disposition 'Book project' --receipt 'Page 20 views/receipts/full.json' --reason skew-nonzero --decision reject --note 'Retain this baseline; no rotation accepted'
+bookscan baseline views 'Book project' --page occ-000020 --output 'Page 20 refreshed'
+bookscan baseline inspected 'Book project' --receipt 'Page 20 refreshed/receipts/native-001.json' --scope native --viewer 'Viewer used' --scale '1:1 verified with supplied ruler' --note 'Inspected the labelled gutter region'
+bookscan baseline status 'Book project' --output 'Export summary'
+bookscan baseline acknowledge 'Book project' --receipt 'Export summary/receipt.json' --all --note 'Export unchanged pages with the displayed unresolved limitations'
+bookscan export 'Book project' --output 'Baseline book.pdf' --json
+```
+
+After any action that changes review facts, regenerate the summary. A page packet
+from an earlier review checkpoint must also be refreshed before a subsequent
+action. This conservative rule adds packet refreshes; it prevents actions silently
+using review facts that changed since display. The packet index offers a complete
+native-view roster, not a selection of convenient crops. Inspecting one tile never
+attributes inspection to its neighbours.
+
+### Matched packets and revision identity
+
+Every packet has a version-1 manifest, all-page roster, PDF bookmarks/internal
+links, immutable view receipts and complete asset digests. A single-page packet
+includes its page plus the complete roster/limitations; `--all` adds every page's
+views. Every visible page/tile header names project ID, source snapshot digest,
+one-based source PDF page, occurrence ID, image revision, review revision, view
+kind, box, region and sampling/display scale. Duplicates have different occurrence
+IDs even if their decoded RGB asset is shared. Baseline and current are labelled
+identical; there are no unused edited-image states.
+
+Full comparisons put the saved source's MediaBox view, baseline and current at
+the same physical frame and labelled display scale, with the effective original
+CropBox boundary as a guide. Guides and headers live only in the packet, never in
+exported pixels. Include a separate saved source PDF link, with explicit guidance
+that an ordinary viewer may default to CropBox; do not call its zoom a 300-dpi
+native comparison. Distinct/reversed boxes, Rotate and UserUnit apply to the
+mapping, not a guessed raster bounding box. Source-render identity/settings are
+recorded; the rendering used to present it is **not** the independent fidelity oracle.
+
+Native packets partition the whole baseline pixel rectangle into labelled,
+gap-free regions (maximum 768 by 768 pixels, edge tiles smaller). Each region has
+adjacent source/baseline/current panels with the same mapping. At 100% *packet
+view scale* each project pixel occupies one PDF display point; the header tells
+the user to verify the pixel ruler and disable fit-to-page scaling. A PDF viewer's
+percentage does not establish one framebuffer pixel per project pixel on a Retina
+display. Also supply lossless PNG tiles and a pixel ruler for a viewer's actual
+1:1 pixel mode. Native inspection must name the actual viewer/scale and regions;
+until the implementation demonstrates true 1:1 presentation on this Mac, native
+usability is unfinished acceptance, not asserted from the PDF's construction.
+
+Source-native panels preserve decoded contributing samples/masks with their own
+effective horizontal/vertical ppi, placement, sample dimensions, colour metadata
+and labelled source region. Show above-300-ppi detail separately without shrinking
+it and calling it preserved. A composite/vector/colour region without validated
+independent native truth is explicitly unavailable with its missing oracle, beside
+the ordinary source/full views; it is never represented by the largest image alone.
+No page becomes unsupported merely because its numerical fidelity truth is missing.
+
+Receipts identify the packet, saved project, source/asset digests, occurrence,
+displayed image/review revision, view kind and exact region coverage. Summary
+receipts additionally name the ordered export-snapshot digest, unresolved roster
+and inspection/disposition digest. The project stores an immutable content-
+addressed packet descriptor, including receipt/header identities and file digests,
+before external packet publication. Descriptors are presentation records outside
+the review checkpoint: issuing them does not change review facts or invalidate
+acknowledgement. A descriptor without a completely published matching packet is
+unusable. The owning command verifies the receipt and referenced packet files
+against that project-owned descriptor and the current revision;
+missing, tampered, foreign or stale receipts cannot mutate state. Receipts are
+local identity evidence, not proof that a human inspected the view. The complete
+unresolved export scope is always shown, even when a user records a narrower
+inspection or a note about a named selection.
+
+### Saved states and transactional ownership
+
+The project owns one immutable verified source PDF, content-addressed lossless
+RGB baselines, per-occurrence geometry/analysis/provenance and immutable review
+checkpoints. Occurrence IDs encode initial order within a separately identified
+project; the image revision identifies its asset and physical mapping, the review
+revision identifies current review facts, and the export-snapshot digest excludes
+the acknowledgement itself. Checkpoint revision advances on every committed
+action; review revision advances only on disposition/inspection/analysis/roster/
+image changes. Acknowledgement binds the current review revision and snapshot
+digest without changing either. Dispositions/inspection/analysis/roster/image
+changes invalidate acknowledgement;
+packet creation, status reads and exports do not. An identical repeated action
+with the same receipt/values returns the original committed result; a conflicting
+or stale replay returns 6. No new IDs or history are inferred from the public report.
+
+Acknowledgement requires exactly one scope form: --all or one/more --page IDs.
+Each saved record names the exact same snapshot, selected IDs and their complete
+unresolved reasons plus universal limitation and note. Several selection records
+may cover one snapshot without invalidating one another. Export requires their
+union to cover every exported identity's retained unresolved reasons and universal
+limitation; a missing ID/reason returns ACKNOWLEDGEMENT_REQUIRED/6 with that scope.
+The public version-1 acknowledgement object reports the effective complete scope
+and separate inspection scope; an optional scopes array preserves individual
+notes without changing required field meanings. Narrow inspection never supplies
+missing export acknowledgement, and partial acknowledgement never drops pages.
+
+The normalized request identity (operation, receipt ID and all supplied semantic
+values) and its committed outcome are stored atomically with the resulting
+checkpoint. Under the writer lock, check that durable retry record **before**
+current-revision validation: an identical committed replay returns its original
+result without mutation, even after restart or later review changes. Reuse of its
+receipt with conflicting values, or an uncommitted request against a stale
+revision, returns 6. A kill before checkpoint commit leaves no successful retry
+record. This ordering is part of the stale-action/retry acceptance seam.
+
+Every command opening a project takes the same nonblocking kernel writer lock,
+including verified reads/packet generation, to keep one snapshot coherent. A
+busy project returns 4; ownership is the OS-held lock, never a PID/marker alone.
+The lock pathname/inode is retained rather than deleted/recreated on Stop/death;
+canonical project identity rejects aliased paths and replaced lock/store entries.
+After death and reap, another command can take ownership and verify the last
+committed checkpoint. There is no permanent export freeze on disk.
+
+Create first reserves an unused project directory; a competing creator cannot
+replace it. It assembles in private names within that reservation. Publish all
+snapshot/assets completely, verify digests/metadata/decodability, then commit the
+initial checkpoint through one atomic current-checkpoint pointer change. Before
+that commit, no baseline is saved. A caught failure removes only this run's owned
+reservation/private names where safe; a kill may leave an identifiable incomplete
+directory. Retrying create at an occupied directory returns 4; review/status says
+`INVALID_PROJECT`/3 and recommends a new unused directory or verified recovery,
+without treating partially imported pages as saved or offering silent continuation.
+
+Subsequent actions publish an immutable checkpoint only after its assets are
+complete. A signal/failure before pointer commit leaves the preceding checkpoint
+authoritative; after commit that new checkpoint is authoritative even if reporting
+fails. Signals may wait for an indivisible native operation, then return 130/143
+for create/actions/read operations, with a `committed` fact in the result when
+deliverable. Unlike an exported PDF, a project checkpoint does not turn a signal
+into a successful shell iteration. Already selected errors keep their exit.
+SIGKILL may prevent reporting; verified status/resume reveals the committed state.
+Private orphan assets are not referenced or promoted; cleanup touches only known
+owned names, never indiscriminately all temporary files. No power-loss guarantee.
+
+View/summary packets are built privately beside their unused destination and
+become visible only by a no-replace atomic directory publication supported and
+verified on this Mac/filesystem. Never use replacing rename or a file-by-file
+visible copy. Unsupported directory publication returns 5; concurrent/occupied/
+dangling destinations return 4. A packet published just before a project action
+remains a complete but stale packet. Resume never consumes packet assets as state.
+
+For views and status-with-output, the packet command's commit boundary is
+successful atomic directory publication, not descriptor persistence. A descriptor
+alone means committed false; complete publication means committed true even when
+a later signal returns 130/143 or result delivery fails. Block/defer caught signals
+only across the publication/outcome-recording region. Report packet publication
+separately from review-checkpoint commitment; status without output commits nothing.
+
+Export holds ownership throughout verification, freeze, image embedding, staged
+validation and no-clobber link publication. It uses the exact acknowledged roster,
+RGB and physical mapping; no source graph/text is copied. Validate decoded bytes,
+dimensions/transform, count/order/IDs, exact Subject, version-1 report and absent
+preparation hints. Unsupported halves/runs/groups/anchors/placements are explicit
+null/empty, sides unknown. Keep the existing public report's meanings and optional
+reader rules under the [handoff ADR](../adr/geometry-review-handoff.md).
+
+Before the output link, cancellation returns 130/143 and preserves prior output;
+link success is the publication commit. After it, cleanup/signals/result-delivery
+failure retain complete `written`/0 with named warnings, as preparation already
+does. A killed published output stays complete and occupied; inspect it before a
+retry, which returns 4. Signal deferral around link/outcome recording is bounded.
+Output aliases to source snapshot/assets/project and original source identity,
+including path/case/symlink/hard-link aliases, are rejected before generic occupation.
+The processor does not discover the collection to police it.
+
+### Protocol, errors and help
+
+Finite JSON stdout is exactly one object: `schema` =
+`BookScanBuilderCommandResult`, `schema_version` = 1, `operation`, `status`
+(`created`, `verified`, `views-written`, `recorded`, `acknowledged`, `written`,
+`error`), nullable `project_id`, `review_revision`, `snapshot_id`, `output`,
+`committed`, and `warnings`. Successful status includes the complete ordered
+`pages` roster; other results return affected IDs/receipt paths rather than
+repeating it. Errors add `code`, `message`, `remediation`, affected IDs and context.
+Each warning has code/message/remediation. Signals use status error with the
+committed fact; post-link export retains written. No stdout progress or prompts;
+human diagnostics/progress are stderr. Serialize before delivery; delivery failure
+is best-effort stderr, never rollback of a committed state or second JSON object.
+
+Results also state `replayed` and `current_review_revision`. An identical durable
+replay returns the historical operation result with replayed true and the current
+revision separately, so delivery never suggests that an old acknowledgement is
+still current; export independently validates current complete coverage.
+
+| Exit | Codes and concrete remedy |
+| --- | --- |
+| 2 | `INVALID_ARGUMENT`, `COMMAND_UNAVAILABLE`: show valid syntax; process/review are unavailable until the browser extension, with baseline examples. |
+| 3 | `SOURCE_NOT_FOUND`, `SOURCE_UNREADABLE`, `SOURCE_EMPTY`, `SOURCE_UNSUPPORTED`, `SOURCE_CHANGED`: identify path/feature/page and supply a stable supported static PDF. `INVALID_PROJECT`: missing/corrupt assets/checkpoint/unsupported private format; use named compatible reader/verified recovery, or explicit fresh import to a new directory. |
+| 4 | `SOURCE_OUTPUT_COLLISION`, `PROJECT_OUTPUT_COLLISION`, `OUTPUT_EXISTS`, `OUTPUT_DIRECTORY_INVALID`, `PROJECT_EXISTS`, `PROJECT_BUSY`: choose an unused valid destination; inspect existing output; finish current finite operation or Stop the live browser and retry. |
+| 5 | `DEPENDENCY_UNAVAILABLE`, `RENDER_FAILED`, `ASSESSMENT_FAILED`, `WRITE_FAILED`, `OUTPUT_INVALID`, `PUBLISH_FAILED`, `RESULT_DELIVERY_FAILED`: identify component/version/phase and actual setup or I/O remedy. Individual invalid estimator results are saved unavailable assessment, not ASSESSMENT_FAILED. |
+| 6 | `INVALID_RECEIPT`, `STALE_ACTION`, `ACKNOWLEDGEMENT_REQUIRED`, `BASELINE_ONLY`, `REVIEW_REQUIRED`, `EXPORT_IN_PROGRESS`: refresh a packet/summary, acknowledge exact current state, or use browser review for an edited project; wait for live export. |
+| 130/143 | `INTERRUPTED`: committed flag/phase and verify saved status or destination before retry. |
+
+First-error order: invocation/help; input/private-format readability; lock; full
+snapshot/assets/receipt validation; source/dependency preflight when needed;
+state/acknowledgement checks; destination aliases then occupation; processing,
+checkpoint/publication; result delivery. Input PDF support precedes dependency
+preflight; dependencies must pass before accepted import. Resume preflights
+supported tool identities/protocol before review, but never regenerates accepted
+pixels. Report missing helper/compiler/cache and use `process:setup`; no silent
+compile at runtime. Version-aware packaged helper self-test includes sign,
+status-zero/confidence-zero, nonfinite and known sentinel controls. Direct Pillow
+pin and exact installed Poppler/Leptonica/Pillow/pikepdf checks remain implementation
+work. API availability is verified against the actual selected versions then.
+
+Help gives two ordinary/space-containing examples per operation, finite/blocking
+semantics, exact exits/remedies, no input reads, unchanged-baseline/stage limits,
+1:1 viewer instructions, saved versus inspected meaning, separate acknowledgement,
+signal/kill/retry outcomes and no-clobber destinations. No `--force`, input
+restriction, hidden headless mode or public fault flags are added.
+
+### Private compatibility and browser command transition
+
+Private header: format `BookScanBuilderProject`, format version 1, monotonic
+checkpoint revision and required capabilities initially `baseline-rgb-v1`,
+`assessment-v1`, `review-records-v1`, `snapshot-ack-v1`. Asset and manifest digests
+are verified before use. These versions are distinct from report version 1,
+packet/receipt version 1 and command-result version 1. Unknown required capability
+or unsupported format fails INVALID_PROJECT/3 before modifying anything. Extra
+optional data may be ignored only when explicitly declared nonsemantic; unknown
+meaning cannot silently become acceptance.
+
+The browser extension reads the frozen finite-project fixture unchanged. Merely
+opening it adds no required capability and changes no image/ID/order/scale/review/
+acknowledgement meaning. An additive upgrade publishes a new validated checkpoint,
+retains the recoverable predecessor and never regenerates pixels; interrupted
+upgrade resumes either complete version. Before a new semantic feature is used,
+record its capability atomically with the new state; old readers fail actionably
+rather than omit it. A baseline command encountering edited/split/group state
+returns BASELINE_ONLY/6 before mutation; generic export handles supported current
+state. An older installed reader with unsupported capabilities returns 3.
+
+`baseline` names survive as an explicit unchanged-baseline workflow. This lasting
+public surface is the cost of avoiding incompatible command reuse; browser support
+owns its continued contract/regression acceptance. `export` remains finite and uses
+the same result schema. `process PDF --workdir PROJECT` and `review PROJECT` are
+reserved for blocking foreground servers from their first release. Before that,
+they return COMMAND_UNAVAILABLE/2; they never alias finite create/status. At browser
+release help names the two paths and shows Stop for shell loops. No implicit switch,
+deprecation or version-dependent optional mode changes a command's duration.
+
+Browser `--json` uses separate `BookScanBuilderReviewEvent`, schema version 1:
+`event` (`ready`, `action-result`, `export-result`, `terminal`), run/session ID,
+monotonic sequence, project/review/snapshot identity as applicable. Ready occurs
+once, after complete import/assessment or verified resume, and supplies the local
+URL and supported capabilities. Action-result names action/affected IDs and saved
+revision/error; export-result embeds the finite command-result record and means
+publication success/failure only. Terminal is last, names `stop`, `signal`, or
+`error`, exit code and committed project state. It never means exported. Fatal
+pre-ready failures have one terminal and no ready; SIGKILL/broken delivery can
+truncate the stream. No additional progress vocabulary on stdout.
+
+Browser action envelope version 1 names action (`disposition`, `inspected`,
+`acknowledge`, `export`, `stop` initially), request ID and displayed project/review/
+image identity, named reason/region/scope, note and destination/confirmation where
+applicable. It uses the same state operation boundary as finite receipts, with
+HTTP session authentication replacing receipt-file validation. Later supported
+actions are additive, advertised in capabilities; unknown actions fail 2. Existing
+fields and meanings never change within a schema version. Optional event/result
+fields and advertised event types may be added only with explicit reader rules;
+clients ignore unknown optional fields/types, but require terminal and never infer
+success from an unknown record. A breaking protocol gets a new explicit supported
+schema version and incompatible readers fail before mutation, not reinterpretation.
+
+### Complete working browser extension
+
+One complete subsequent working handoff owns any-page roster and matched full/
+native/source-native inspection co-located with revision-scoped actions, saved
+resume and acknowledged image-only export. Current remains baseline until an image-edit extension is explicitly supported.
+The server binds loopback, holds the same kernel lock for its lifetime and creates
+an unguessable per-session token. Validate exact bound loopback Host including port,
+exact Origin and token for all mutations, including export/Stop; reject missing/
+foreign values without mutation or server termination. No cross-origin mutation.
+Serve only allowed project views, never arbitrary local files. The browser takes
+an explicit destination and a separate confirmation naming that exact destination
+and snapshot; it does not derive an output from source or a remote request.
+
+Browser export retains server ownership and freezes actions until its separate
+result. Commits during freeze return EXPORT_IN_PROGRESS/6; status can display that
+state, with no mixed snapshot. Authenticated Stop queues behind the publication
+outcome, then completes checkpoints, discards drafts if later supported and emits
+terminal stop/0. Closing a tab changes no server state. SIGINT/SIGTERM exits 130/143
+after safe cleanup regardless of an earlier export's separate written/0 outcome.
+Kill/reap releases ownership; resume verifies the last checkpoint, treats private
+exports as private and preserves complete occupied published output. No persistent
+freeze, borrowed lock or unauthenticated Stop.
+
+Its working acceptance includes real test-owned browser navigation/actions on
+flagged and unflagged IDs, native-scale verification, Stop/tab closure/security,
+live frozen actions/export/signals/kill/resume, predecessor-project read/upgrade,
+and installed prepare -> process -> inspect/disposition/acknowledge/export -> Stop
+-> review -> finite export under demonstrated collection-read denial. The finite
+command contract is rerun at browser release; its old scripts still terminate.
+Browser review is a complete working handoff before orientation edits; its acceptance cannot be postponed to an unrelated edit extension.
+
+### Acceptance seams retained in the finite handoff
+
+Highest public seam: the installed commands with real saved assets and ordinary
+viewer navigation/scale observations. A single responsible operation boundary
+accepts private substitutes for rendering, storage, publication and controlled
+barriers; those faults supplement real tools/processes rather than exposing
+transaction protocol to callers. Browser actions later drive that same boundary.
+No new plugin framework, test-only product mode or source-study mechanism.
+
+Before comparison outputs, declare an independent native/analytic truth manifest:
+decoded contributing samples/masks/colour metadata and independently constructed
+placements/boxes/Rotate/UserUnit. Exact grid-aligned unfiltered construction uses
+exact pixels/channel values; misaligned grids require predeclared phase/coverage/
+feature and colour bounds justified by the construction and conversion, not the
+renderer output. Complex real regions lacking validated truth stay unavailable
+with their precise missing oracle. Same-renderer source/baseline equality and exact
+export bytes never pass source fidelity. Each oracle is observed rejecting the
+wrong image/box/unit/CTM/placement/order/colour/erased-feature subject for that
+mechanism, while unrelated checks remain green. Declare before generated outputs,
+freeze all read subjects before/after, one writer, and compare reruns itemwise.
+
+Required synthetic constructions include mixed vector/image/text, nested forms,
+inline images, one-bit/grayscale/RGB, stencils/masks, static appearances, distinct
+and reversed boxes, Rotate/UserUnit, aligned/misaligned <=300-ppi and >300-ppi fine
+detail, blanks/duplicates/order and earlier selectable text. The analyzer accounts
+for every contributing placement or records affected resolution unavailable, not
+a <=300-ppi pass from a partial scan. Test baseline physical mapping and exact
+lossless export/report/hints/fresh import; right-angle edits require their separate supported extension.
+
+Installed writer-PID barriers observe asset-complete/checkpoint pre/post-commit,
+packet pre/post-publication and export pre/post-link/cleanup/result delivery. Signal
+and SIGKILL the actual installed writer, reap it, then verify source/prior output,
+destination visibility and last committed state/lock ownership. Include source/
+project/output path/case/symlink/hard-link aliases, replaced lock identity,
+dangling/occupied/concurrently occupied destinations, unsupported no-replace/link,
+corrupt/missing snapshot/assets, stale/tampered/foreign receipts, ack invalidation,
+busy actions and additive upgrade interruption. Genuine EPIPE and cleanup failures
+are distinct outcomes. Internal deterministic fault seams are not substitutes for
+these actual installed-process observations.
+
+Installed preparation -> finite create -> actual packet inspection/navigation ->
+disposition -> scoped inspection -> current acknowledgement -> saved resume after
+original deletion/unavailability -> export is verified with collection reads
+genuinely denied. Observe a denied-read control from that same boundary; setting
+a different COLLECTION string is insufficient. Also use an ordinary unmarked
+multi-page sole PDF. Help is tested with input/tool reads denied; JSON/exit/remedy,
+packet header-to-receipt identity and exact native scale are checked at the public
+surface. Missing required public/synthetic verification is unfinished work.
+
+Keep six actual source/full/native/resource packets separately: Norwegian20 both
+gutters (whole spread), Garbage Collection30 glyphs/indentation/boxes/arrows,
+Counterpoint20 one landscape page/both columns, Fundamentals40 faint prose/music,
+SchoenbergComposition cover1 colour/sparse rules and Algorithm Design20 already-
+processed preservation. Each retains digests, commands/settings, dimensions/stored
+bytes/export size/peak memory, native truth or exact missing truth, numerical
+passed/failed-signed-resolution/failed-defect/unavailable and actual/pending scoped
+human view paths/verbatim reactions. Required defects/public/synthetic failures
+block completion of the supported technical handoff. An actual real signed-resolution
+loss requires an immediate scoped human policy decision before dependent image edits.
+Complete-default correction still owns missing real truth/reactions/defect remedies
+and nonrigid acceptance before appearance and final acceptance. No export or design
+agreement supplies a missing geometry, preparation or fine-detail result.
 
 ## Complete-page import and assessment
 
@@ -546,6 +961,27 @@ preservation failures and unresolved numerical/visual judgments remain explicit;
 neither default retention nor export acknowledgement waives them.
 
 ## Agreement
+
+### Finite baseline interface and test seams
+
+The human replied verbatim **“yes”** to approval of the presented finite
+interface/test-seam proposal and the separate delivery-cadence exception for its
+complete finite implementation owner. The presented proposal SHA-256 was
+`84658bf583232bada49d72b88407e05cd18323219a647c8f8ee1119fc45ce3fa`,
+at `http://127.0.0.1:8772/baseline-delivery.html#current-decision`, with the
+delivery diagram at `http://127.0.0.1:8772/#diagram-baseline-delivery`.
+The finite contract is incorporated into this current spec without a second
+parallel proposal. Agreement covers permanent finite baseline names, exact
+packet/receipt revision identity, separate inspection/dispositions/scoped
+acknowledgement, checkpoint/lock/signal/publication lifecycle, private-project
+and public-protocol compatibility, browser completion and the retained
+independent/public/fault/six-case seams. The finite owner may span sessions,
+retaining every required check and retiring only on complete delivery; that
+cadence permission supplies no corresponding browser-owner exception or scope
+waiver. Delivery ownership remains in the task briefs. This reply grants no
+product, native-view fidelity, geometry or preparation visual acceptance.
+
+### Geometry Design v2
 
 The human replied verbatim **“agreed”** to the presented v2 design and stated
 scale-preserving matching policy. This agreement covers the geometry-only

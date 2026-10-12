@@ -359,6 +359,8 @@ after the working default accepted-image/export seam. No method is chosen here.
 - `docs/adr/geometry-review-handoff.md` — processor-owned resumable project
   and optional exported report semantics, preserving preparation-hint meaning.
 
+- `docs/adr/finite-baseline-commands.md` — permanent finite names and blocking
+  browser names, preserving shell-loop termination through browser completion.
 - `CONTEXT.md` — the project's terminology.
 - `docs/specs/prepared-pdf.md` — preparation's public command, preservation and
   single-PDF handoff contract; its dependency evidence and visual companion are
@@ -658,14 +660,17 @@ is inferred; full within-page/default acceptance remains k28's before k22/k23.
 The agreed v2 design and k46 clarifications retain four stage owners in this
 existing workspace/tree. k52 decomposes the oversized first owner into two
 complete useful handoffs. k53 now retains its whole baseline handoff as a node,
-with baseline-delivery-k56 recording the permitted finite-review staging and
-commissioning its focused boundary design before k54. This carries
+with baseline-delivery-k56 permitting finite-review staging and
+baseline-delivery-k59 approving its concrete interface/test seams and finite-owner
+session exception before k54. This carries
 forward the human's earlier
 one-tree choice; it attributes no new workspace answer to k39 or k41. Each
 stage must stay green and demonstrable without its successor. The dependency is
-behaviour, not module location. The shell commands remain `bookscan process PDF
---workdir PROJECT`, `bookscan review PROJECT` and `bookscan export PROJECT
---output PDF`, with authenticated browser review and normal Stop review.
+behaviour, not module location. The complete browser commands remain `bookscan
+process PDF --workdir PROJECT`, `bookscan review PROJECT` and finite `bookscan
+export PROJECT --output PDF`, with authenticated review and normal Stop. The
+approved permanent finite baseline command family precedes browser completion;
+its duration never changes or silently aliases process/review.
 
 | Stage / owner | Independent useful handoff | Scope deliberately left to successor |
 | --- | --- | --- |
@@ -675,23 +680,35 @@ behaviour, not module location. The shell commands remain `bookscan process PDF
 | `book-placement-k50` | Explicit side/body-run/group review, integer placement and common canvas with full/native/pair/group acceptance/resume/export | Full within-page correction and full-default representative acceptance remain k28's. |
 
 baseline-review-k55 found no substantiated smaller browser-first baseline handoff
-among its examined cuts. In baseline-delivery-k56 the human replied verbatim
-“Permit the temporary finite reviewer staging” to the repaired k57/k58 question,
-including all twelve first-handoff accounting rows. This permits temporary finite
-matched-view inspection, revision-scoped dispositions/inspection/acknowledgement,
-saved resume and unchanged-baseline export before the browser. It grants no
-multi-session exception or flat-raster restriction and changes no representation,
-fidelity/safety obligation or product/visual acceptance. The focused
-baseline-delivery design inside k53 must settle usability, finite commands/help/
-results, view-to-revision identity, lifecycle and private compatibility, and the
-interim-to-browser command names/blocking semantics/schema evolution/survival.
-It must demonstrate complete useful cuts and obtain detailed public/test-seam
-agreement; a still-oversized design inventories the coupled work and returns the
-specific residual trade-off while retaining the same live owner. Only its actual
-agreed artifact earns lazy review and fresh implementation planning, including
-concrete complete working browser ownership inside k53 before k54. k53's complete
-original baseline/browser closure, k47's orientation closure and all later
-ownership stay live; finite retirement or planning cannot close either node.
+among its examined cuts. baseline-delivery-k56 obtained “Permit the temporary finite
+reviewer staging”. In baseline-delivery-k59 the human then replied verbatim “yes”
+to the concrete protocol/test-seam proposal and the specific finite-owner-only
+multi-session delivery exception. The current spec and finite-baseline-commands
+ADR now define permanent finite commands, exact view/revision receipts, separate
+inspection/reason disposition/scoped acknowledgement, transaction/lock/signal/export
+lifecycle and private/public compatibility. The saved-project/report and
+preparation-hint ADR meanings are unchanged.
+
+k59's Agreed first-handoff and browser ownership map retains all twelve original
+k53 criteria. Its Agreed delivery inventory specifies the remaining renderer/
+analyzer/helper, project/packet/actions/export and independent/public/fault/six-case
+work. One complete finite F implementation owner may stay live across focused
+sessions, with internal unfinished milestones and no partial retirement or
+horizontal/acceptance-only child. This explicit exception changes cadence only:
+ordinary static PDF, complete 300-dpi RGB, every-page assessment, fidelity/safety,
+six-case packets and compatibility remain required. No measured one-session fit,
+input restriction, image or product/visual acceptance follows.
+
+The actual agreed design earns review before its fresh implementation planner.
+That planner must cut both complete working F and complete browser B ownership
+inside k53 before k54. B retains co-located views/actions, authenticated Stop,
+foreground readiness/terminal/export events, lifetime lock/live export freeze,
+predecessor/command-schema compatibility and actual browser/denied-read acceptance;
+it assesses its own size and cannot borrow F's exception. Original k53/k47 closure
+stays intact; finite retirement or planning cannot close either. k28 retains every
+missing real truth/reaction/defect remedy and complete-default/nonrigid obligation.
+An actual real signed-resolution loss still earns immediate policy work before
+image-edit dependents. The design reply accepts none of those missing outcomes.
 
 The k47 node is earned by k51's concrete session-size finding, not speculative
 infrastructure work. No integration is pre-created. A stage that truly outgrows its
@@ -705,7 +722,7 @@ before k47. No in-session review competes with that scheduled review.
 
 ### Contract inherited by all four working charters
 
-Read the complete current `docs/specs/rotation-processor.md`, both cited ADRs,
+Read the complete current `docs/specs/rotation-processor.md`, the ADRs cited above,
 k41/k45/k46 and k44, and the actual preceding stage's artifact/acceptance rather
 than assuming that a retired task passed. The following obligations bind every
 cut through its root brief, with feature-specific checks added by the leaf.

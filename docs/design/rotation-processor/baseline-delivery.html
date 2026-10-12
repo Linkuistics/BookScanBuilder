@@ -1,0 +1,1063 @@
+<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content=width=device-width><title>Page and book geometry — agreed baseline and Design v2</title><style>body{font:17px/1.6 system-ui;margin:2rem auto;max-width:85ch;padding:0 1rem;color:#172d40;background:#fff}h1,h2,h3{scroll-margin-top:2rem}table{display:block;overflow-x:auto;border-collapse:collapse;width:100%}td,th{border:1px solid #ccd5dd;padding:.5rem;text-align:left}a{color:#075ea5}code{overflow-wrap:anywhere}pre{overflow:auto}@media(prefers-color-scheme:dark){body{color:#ddd;background:#182028}a{color:#9acfff}td,th{border-color:#526272}}</style><a href=index.html#discussion>Editable visual discussion</a><main><section id=current-decision><h2>Finite baseline interface agreed</h2><p>The human replied yes to the concrete command, lifecycle, compatibility and test seams, with a finite-owner-only session exception. Browser completion remains required. No product or image result is accepted.</p><p><a href="#finite-baseline-review">Read the agreed baseline contract</a> · <a href="#finite-baseline-interface-and-test-seams">Actual reply and scope</a></p></section><h1 id="page-and-book-geometry">Page and book geometry</h1>
+<p><strong>Design v2 geometry and finite baseline interface — agreed.</strong> The replies and their scopes are
+recorded under <a href="#agreement">Agreement</a>.
+<a href="index.html#discussion">The editable visual discussion</a> presents
+the geometry-only design, including page alignment and explicit side assignment.</p>
+<h2 id="purpose-and-boundary">Purpose and boundary</h2>
+<p>Turn one prepared or already-assembled PDF into a reviewed geometry-corrected
+PDF, preserving its visible page images. Focus on geometry within each page and
+consistent placement of pages in the book. Reordering, removal of unwanted
+pages and OCR happen in separate third-party tools. This processor preserves
+all input occurrences and order, expanding confirmed genuine spreads only.
+The shipped preparation command remains available for explicit initial assembly.</p>
+<p>The initial supported increment offers rigid rotation, safe border/crop/split
+controls and book alignment, with any-page review and image-only export. It
+cannot yet certify or automatically correct unmeasured within-page curvature or
+scanner-feed variation. Those difficult corrections remain required for the
+complete default product, through their own evidence and design agreement.
+A usable intermediate export is not acceptance of that unresolved geometry.</p>
+<h2 id="product-shape-and-alternatives">Product shape and alternatives</h2>
+<p>Start one book from the shell. The finite baseline workflow supplies ordinary-
+viewer packets, saved reason/inspection records and acknowledged unchanged-image
+export; browser review supplies the complete co-located page/book interface.
+Both use the same project and resume without reopening the original collection.
+The project saves partial review, geometry choices, page-side/group assignments
+and accepted images as their supported operations become available.</p>
+<table>
+<thead>
+<tr>
+<th>Public command contract</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bookscan process PDF --workdir PROJECT</code></td>
+<td>Import one read-only PDF into a new saved project, assess complete pages and serve local review.</td>
+</tr>
+<tr>
+<td><code>bookscan review PROJECT</code></td>
+<td>Resume page and book geometry review with matched views and the same controls.</td>
+</tr>
+<tr>
+<td><code>bookscan export PROJECT --output PDF</code></td>
+<td>Publish a new ordinary image-only PDF containing the accepted geometry in preserved order. Also available from review.</td>
+</tr>
+</tbody>
+</table>
+<p>Process/review run a foreground loopback server; readiness and terminal events
+are distinct from export success. Human diagnostics/progress use stderr;
+<code>--json</code> emits versioned JSON Lines for server events and one result for finite
+export. Help explains examples, saved state, limitations and errors without
+opening inputs. No daemon, application multi-book queue, native packaging,
+processor reordering UI or OCR engine is included.</p>
+<p>“Stop review” in the browser durably completes any in-flight accepted checkpoint,
+discards unsaved previews, stops the server and exits 0. It does not export or
+accept unresolved geometry. If export is in progress, Stop review waits for its
+separate publication/failure result before stopping. A caught SIGINT/SIGTERM exits
+130/143 after safe checkpoint cleanup; use Stop review for a successful shell-loop iteration.
+Closing the tab does not stop the server. Import/assessment completes before the
+ready event. The finite baseline workflow is a complete review/resume/export
+interface; no importer-only handoff is offered. Each server start creates
+an unguessable session token, supplied in its local URL and every action. Validate
+the loopback Host and exact server Origin, reject tokenless/foreign-origin actions,
+and serve no cross-origin state-changing endpoint. The browser export control
+requires an explicit user-entered destination and confirmation; it never derives
+a destination from the source or a remote request. Stop is authenticated too.</p>
+<p>Browser review keeps exact identities, full/native comparisons and actions
+together for supported page/book edits. The finite unchanged-baseline workflow
+uses generated receipt-bound views and explicit shell actions. Its names remain
+finite after browser support arrives; process/review are blocking from their
+first release and never alias finite operations. The retained-name decision and
+its trade-off are recorded in <a href="finite-baseline-commands-reference.md">finite-baseline-commands</a>.
+A native Mac app adds packaging/framework scope without changing this personal
+shell workflow. The complete interface includes shell and local-browser review.</p>
+<h2 id="finite-baseline-review">Finite baseline review</h2>
+<p>The finite workflow imports/assesses one ordinary static sole PDF, exposes every
+occurrence through matched full/native/source-native packets, records durable
+unresolved review facts, resumes without its original and exports exact acknowledged
+unchanged-baseline images. It introduces no orientation/crop/split/group edit state,
+applies no estimate and implies no geometry or source-fidelity acceptance. Browser
+completion retains the same project meanings and public export contract. The
+following command, lifecycle, compatibility and test seams are agreed.</p>
+<h3 id="commands-and-user-workflow">Commands and user workflow</h3>
+<p>All baseline commands are noninteractive finite operations: no server, prompt,
+pager or automatic application launch. They may take time to render/validate;
+completion means return to the shell. <code>prepare</code> keeps its existing grammar,
+help, finite schema version 1 and publication semantics unchanged.</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Concrete behaviour</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bookscan baseline create PDF --workdir PROJECT</code></td>
+<td>Create an unused project, freeze/validate one sole static PDF, render every complete page and assess every occurrence. Commit one complete usable baseline checkpoint; print the project path.</td>
+</tr>
+<tr>
+<td><code>bookscan baseline status PROJECT</code></td>
+<td>Verify/resume the saved checkpoint without the original; print the complete ordered roster, limitations, dispositions and inspection scope. <code>--output DIR</code> also publishes a new summary packet for acknowledgement.</td>
+</tr>
+<tr>
+<td><code>bookscan baseline views PROJECT --page ID --output DIR</code></td>
+<td>Publish a comparison packet for one stable occurrence. <code>--all</code> replaces <code>--page</code> to publish every identity, never only flagged pages. Print the packet's index PDF path.</td>
+</tr>
+<tr>
+<td><code>bookscan baseline disposition PROJECT --receipt FILE --reason ID --decision reject\|retain-unresolved --note TEXT</code></td>
+<td>Record one reason disposition against the displayed image and review revision. Reject dismisses that assessment suggestion; it does not clear the underlying unverified limitation or change pixels.</td>
+</tr>
+<tr>
+<td><code>bookscan baseline inspected PROJECT --receipt FILE --scope full\|native\|source-native --viewer TEXT --scale TEXT --note TEXT</code></td>
+<td>Record actual inspection of the packet's specified page/view scope and the actual viewer/scale used. Native receipts name covered tile regions; full inspection is not full native inspection. Never infer this act from opening a file.</td>
+</tr>
+<tr>
+<td><code>bookscan baseline acknowledge PROJECT --receipt FILE --all\|--page ID --note TEXT</code></td>
+<td>A summary receipt displays the complete current export snapshot and all unresolved IDs/reasons, with inspection scope separately displayed. Explicitly acknowledge all identities or a named selection against that exact snapshot. Repeat <code>--page</code> for a selection.</td>
+</tr>
+<tr>
+<td><code>bookscan export PROJECT --output PDF</code></td>
+<td>Lock, verify, require a current acknowledgement, freeze the complete roster, rebuild/validate and publish one exact image-only PDF without overwrite.</td>
+</tr>
+</tbody>
+</table>
+<p><code>--json</code> is available on all operations. <code>--help</code> at any level has precedence
+over other arguments, reads no input/project/dependency/cache and exits 0; an
+unknown subcommand without help exits 2 with nearest valid examples. Paths with
+spaces are quoted. Stable IDs returned by status/packets are accepted unchanged;
+ordinal-only actions and manual hash assembly are unavailable. <code>--page</code>/<code>--all</code>
+are mutually exclusive and one is required. A packet destination is an unused
+directory in an existing parent, outside the project/source; no overwrite option.</p>
+<p>The user starts with create, then status and the packet index in Preview or
+another ordinary PDF viewer. The ordered roster links each occurrence's full
+comparison, native tile index and any source-native material. Each packet prints
+the exact disposition/inspection command with its receipt path; the user supplies
+the decision/note. After decisions, status with <code>--output</code> creates a new summary
+packet, showing inspected regions separately from unresolved/uninspected pages.
+The user explicitly acknowledges that summary, then exports. An all-uninspected
+book may be acknowledged, but the summary and report say so. Required product
+fidelity checks and representative acceptance are independent of this choice.</p>
+<p>Example shape (IDs are illustrative values returned by the working command):</p>
+<p><code>sh
+bookscan baseline create 'Prepared book.pdf' --workdir 'Book project'
+bookscan baseline views 'Book project' --page occ-000020 --output 'Page 20 views'
+bookscan baseline disposition 'Book project' --receipt 'Page 20 views/receipts/full.json' --reason skew-nonzero --decision reject --note 'Retain this baseline; no rotation accepted'
+bookscan baseline views 'Book project' --page occ-000020 --output 'Page 20 refreshed'
+bookscan baseline inspected 'Book project' --receipt 'Page 20 refreshed/receipts/native-001.json' --scope native --viewer 'Viewer used' --scale '1:1 verified with supplied ruler' --note 'Inspected the labelled gutter region'
+bookscan baseline status 'Book project' --output 'Export summary'
+bookscan baseline acknowledge 'Book project' --receipt 'Export summary/receipt.json' --all --note 'Export unchanged pages with the displayed unresolved limitations'
+bookscan export 'Book project' --output 'Baseline book.pdf' --json</code></p>
+<p>After any action that changes review facts, regenerate the summary. A page packet
+from an earlier review checkpoint must also be refreshed before a subsequent
+action. This conservative rule adds packet refreshes; it prevents actions silently
+using review facts that changed since display. The packet index offers a complete
+native-view roster, not a selection of convenient crops. Inspecting one tile never
+attributes inspection to its neighbours.</p>
+<h3 id="matched-packets-and-revision-identity">Matched packets and revision identity</h3>
+<p>Every packet has a version-1 manifest, all-page roster, PDF bookmarks/internal
+links, immutable view receipts and complete asset digests. A single-page packet
+includes its page plus the complete roster/limitations; <code>--all</code> adds every page's
+views. Every visible page/tile header names project ID, source snapshot digest,
+one-based source PDF page, occurrence ID, image revision, review revision, view
+kind, box, region and sampling/display scale. Duplicates have different occurrence
+IDs even if their decoded RGB asset is shared. Baseline and current are labelled
+identical; there are no unused edited-image states.</p>
+<p>Full comparisons put the saved source's MediaBox view, baseline and current at
+the same physical frame and labelled display scale, with the effective original
+CropBox boundary as a guide. Guides and headers live only in the packet, never in
+exported pixels. Include a separate saved source PDF link, with explicit guidance
+that an ordinary viewer may default to CropBox; do not call its zoom a 300-dpi
+native comparison. Distinct/reversed boxes, Rotate and UserUnit apply to the
+mapping, not a guessed raster bounding box. Source-render identity/settings are
+recorded; the rendering used to present it is <strong>not</strong> the independent fidelity oracle.</p>
+<p>Native packets partition the whole baseline pixel rectangle into labelled,
+gap-free regions (maximum 768 by 768 pixels, edge tiles smaller). Each region has
+adjacent source/baseline/current panels with the same mapping. At 100% <em>packet
+view scale</em> each project pixel occupies one PDF display point; the header tells
+the user to verify the pixel ruler and disable fit-to-page scaling. A PDF viewer's
+percentage does not establish one framebuffer pixel per project pixel on a Retina
+display. Also supply lossless PNG tiles and a pixel ruler for a viewer's actual
+1:1 pixel mode. Native inspection must name the actual viewer/scale and regions;
+until the implementation demonstrates true 1:1 presentation on this Mac, native
+usability is unfinished acceptance, not asserted from the PDF's construction.</p>
+<p>Source-native panels preserve decoded contributing samples/masks with their own
+effective horizontal/vertical ppi, placement, sample dimensions, colour metadata
+and labelled source region. Show above-300-ppi detail separately without shrinking
+it and calling it preserved. A composite/vector/colour region without validated
+independent native truth is explicitly unavailable with its missing oracle, beside
+the ordinary source/full views; it is never represented by the largest image alone.
+No page becomes unsupported merely because its numerical fidelity truth is missing.</p>
+<p>Receipts identify the packet, saved project, source/asset digests, occurrence,
+displayed image/review revision, view kind and exact region coverage. Summary
+receipts additionally name the ordered export-snapshot digest, unresolved roster
+and inspection/disposition digest. The project stores an immutable content-
+addressed packet descriptor, including receipt/header identities and file digests,
+before external packet publication. Descriptors are presentation records outside
+the review checkpoint: issuing them does not change review facts or invalidate
+acknowledgement. A descriptor without a completely published matching packet is
+unusable. The owning command verifies the receipt and referenced packet files
+against that project-owned descriptor and the current revision;
+missing, tampered, foreign or stale receipts cannot mutate state. Receipts are
+local identity evidence, not proof that a human inspected the view. The complete
+unresolved export scope is always shown, even when a user records a narrower
+inspection or a note about a named selection.</p>
+<h3 id="saved-states-and-transactional-ownership">Saved states and transactional ownership</h3>
+<p>The project owns one immutable verified source PDF, content-addressed lossless
+RGB baselines, per-occurrence geometry/analysis/provenance and immutable review
+checkpoints. Occurrence IDs encode initial order within a separately identified
+project; the image revision identifies its asset and physical mapping, the review
+revision identifies current review facts, and the export-snapshot digest excludes
+the acknowledgement itself. Checkpoint revision advances on every committed
+action; review revision advances only on disposition/inspection/analysis/roster/
+image changes. Acknowledgement binds the current review revision and snapshot
+digest without changing either. Dispositions/inspection/analysis/roster/image
+changes invalidate acknowledgement;
+packet creation, status reads and exports do not. An identical repeated action
+with the same receipt/values returns the original committed result; a conflicting
+or stale replay returns 6. No new IDs or history are inferred from the public report.</p>
+<p>Acknowledgement requires exactly one scope form: --all or one/more --page IDs.
+Each saved record names the exact same snapshot, selected IDs and their complete
+unresolved reasons plus universal limitation and note. Several selection records
+may cover one snapshot without invalidating one another. Export requires their
+union to cover every exported identity's retained unresolved reasons and universal
+limitation; a missing ID/reason returns ACKNOWLEDGEMENT_REQUIRED/6 with that scope.
+The public version-1 acknowledgement object reports the effective complete scope
+and separate inspection scope; an optional scopes array preserves individual
+notes without changing required field meanings. Narrow inspection never supplies
+missing export acknowledgement, and partial acknowledgement never drops pages.</p>
+<p>The normalized request identity (operation, receipt ID and all supplied semantic
+values) and its committed outcome are stored atomically with the resulting
+checkpoint. Under the writer lock, check that durable retry record <strong>before</strong>
+current-revision validation: an identical committed replay returns its original
+result without mutation, even after restart or later review changes. Reuse of its
+receipt with conflicting values, or an uncommitted request against a stale
+revision, returns 6. A kill before checkpoint commit leaves no successful retry
+record. This ordering is part of the stale-action/retry acceptance seam.</p>
+<p>Every command opening a project takes the same nonblocking kernel writer lock,
+including verified reads/packet generation, to keep one snapshot coherent. A
+busy project returns 4; ownership is the OS-held lock, never a PID/marker alone.
+The lock pathname/inode is retained rather than deleted/recreated on Stop/death;
+canonical project identity rejects aliased paths and replaced lock/store entries.
+After death and reap, another command can take ownership and verify the last
+committed checkpoint. There is no permanent export freeze on disk.</p>
+<p>Create first reserves an unused project directory; a competing creator cannot
+replace it. It assembles in private names within that reservation. Publish all
+snapshot/assets completely, verify digests/metadata/decodability, then commit the
+initial checkpoint through one atomic current-checkpoint pointer change. Before
+that commit, no baseline is saved. A caught failure removes only this run's owned
+reservation/private names where safe; a kill may leave an identifiable incomplete
+directory. Retrying create at an occupied directory returns 4; review/status says
+<code>INVALID_PROJECT</code>/3 and recommends a new unused directory or verified recovery,
+without treating partially imported pages as saved or offering silent continuation.</p>
+<p>Subsequent actions publish an immutable checkpoint only after its assets are
+complete. A signal/failure before pointer commit leaves the preceding checkpoint
+authoritative; after commit that new checkpoint is authoritative even if reporting
+fails. Signals may wait for an indivisible native operation, then return 130/143
+for create/actions/read operations, with a <code>committed</code> fact in the result when
+deliverable. Unlike an exported PDF, a project checkpoint does not turn a signal
+into a successful shell iteration. Already selected errors keep their exit.
+SIGKILL may prevent reporting; verified status/resume reveals the committed state.
+Private orphan assets are not referenced or promoted; cleanup touches only known
+owned names, never indiscriminately all temporary files. No power-loss guarantee.</p>
+<p>View/summary packets are built privately beside their unused destination and
+become visible only by a no-replace atomic directory publication supported and
+verified on this Mac/filesystem. Never use replacing rename or a file-by-file
+visible copy. Unsupported directory publication returns 5; concurrent/occupied/
+dangling destinations return 4. A packet published just before a project action
+remains a complete but stale packet. Resume never consumes packet assets as state.</p>
+<p>For views and status-with-output, the packet command's commit boundary is
+successful atomic directory publication, not descriptor persistence. A descriptor
+alone means committed false; complete publication means committed true even when
+a later signal returns 130/143 or result delivery fails. Block/defer caught signals
+only across the publication/outcome-recording region. Report packet publication
+separately from review-checkpoint commitment; status without output commits nothing.</p>
+<p>Export holds ownership throughout verification, freeze, image embedding, staged
+validation and no-clobber link publication. It uses the exact acknowledged roster,
+RGB and physical mapping; no source graph/text is copied. Validate decoded bytes,
+dimensions/transform, count/order/IDs, exact Subject, version-1 report and absent
+preparation hints. Unsupported halves/runs/groups/anchors/placements are explicit
+null/empty, sides unknown. Keep the existing public report's meanings and optional
+reader rules under the <a href="geometry-review-handoff-reference.md">handoff ADR</a>.</p>
+<p>Before the output link, cancellation returns 130/143 and preserves prior output;
+link success is the publication commit. After it, cleanup/signals/result-delivery
+failure retain complete <code>written</code>/0 with named warnings, as preparation already
+does. A killed published output stays complete and occupied; inspect it before a
+retry, which returns 4. Signal deferral around link/outcome recording is bounded.
+Output aliases to source snapshot/assets/project and original source identity,
+including path/case/symlink/hard-link aliases, are rejected before generic occupation.
+The processor does not discover the collection to police it.</p>
+<h3 id="protocol-errors-and-help">Protocol, errors and help</h3>
+<p>Finite JSON stdout is exactly one object: <code>schema</code> =
+<code>BookScanBuilderCommandResult</code>, <code>schema_version</code> = 1, <code>operation</code>, <code>status</code>
+(<code>created</code>, <code>verified</code>, <code>views-written</code>, <code>recorded</code>, <code>acknowledged</code>, <code>written</code>,
+<code>error</code>), nullable <code>project_id</code>, <code>review_revision</code>, <code>snapshot_id</code>, <code>output</code>,
+<code>committed</code>, and <code>warnings</code>. Successful status includes the complete ordered
+<code>pages</code> roster; other results return affected IDs/receipt paths rather than
+repeating it. Errors add <code>code</code>, <code>message</code>, <code>remediation</code>, affected IDs and context.
+Each warning has code/message/remediation. Signals use status error with the
+committed fact; post-link export retains written. No stdout progress or prompts;
+human diagnostics/progress are stderr. Serialize before delivery; delivery failure
+is best-effort stderr, never rollback of a committed state or second JSON object.</p>
+<p>Results also state <code>replayed</code> and <code>current_review_revision</code>. An identical durable
+replay returns the historical operation result with replayed true and the current
+revision separately, so delivery never suggests that an old acknowledgement is
+still current; export independently validates current complete coverage.</p>
+<table>
+<thead>
+<tr>
+<th>Exit</th>
+<th>Codes and concrete remedy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td><code>INVALID_ARGUMENT</code>, <code>COMMAND_UNAVAILABLE</code>: show valid syntax; process/review are unavailable until the browser extension, with baseline examples.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>SOURCE_NOT_FOUND</code>, <code>SOURCE_UNREADABLE</code>, <code>SOURCE_EMPTY</code>, <code>SOURCE_UNSUPPORTED</code>, <code>SOURCE_CHANGED</code>: identify path/feature/page and supply a stable supported static PDF. <code>INVALID_PROJECT</code>: missing/corrupt assets/checkpoint/unsupported private format; use named compatible reader/verified recovery, or explicit fresh import to a new directory.</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>SOURCE_OUTPUT_COLLISION</code>, <code>PROJECT_OUTPUT_COLLISION</code>, <code>OUTPUT_EXISTS</code>, <code>OUTPUT_DIRECTORY_INVALID</code>, <code>PROJECT_EXISTS</code>, <code>PROJECT_BUSY</code>: choose an unused valid destination; inspect existing output; finish current finite operation or Stop the live browser and retry.</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>DEPENDENCY_UNAVAILABLE</code>, <code>RENDER_FAILED</code>, <code>ASSESSMENT_FAILED</code>, <code>WRITE_FAILED</code>, <code>OUTPUT_INVALID</code>, <code>PUBLISH_FAILED</code>, <code>RESULT_DELIVERY_FAILED</code>: identify component/version/phase and actual setup or I/O remedy. Individual invalid estimator results are saved unavailable assessment, not ASSESSMENT_FAILED.</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>INVALID_RECEIPT</code>, <code>STALE_ACTION</code>, <code>ACKNOWLEDGEMENT_REQUIRED</code>, <code>BASELINE_ONLY</code>, <code>REVIEW_REQUIRED</code>, <code>EXPORT_IN_PROGRESS</code>: refresh a packet/summary, acknowledge exact current state, or use browser review for an edited project; wait for live export.</td>
+</tr>
+<tr>
+<td>130/143</td>
+<td><code>INTERRUPTED</code>: committed flag/phase and verify saved status or destination before retry.</td>
+</tr>
+</tbody>
+</table>
+<p>First-error order: invocation/help; input/private-format readability; lock; full
+snapshot/assets/receipt validation; source/dependency preflight when needed;
+state/acknowledgement checks; destination aliases then occupation; processing,
+checkpoint/publication; result delivery. Input PDF support precedes dependency
+preflight; dependencies must pass before accepted import. Resume preflights
+supported tool identities/protocol before review, but never regenerates accepted
+pixels. Report missing helper/compiler/cache and use <code>process:setup</code>; no silent
+compile at runtime. Version-aware packaged helper self-test includes sign,
+status-zero/confidence-zero, nonfinite and known sentinel controls. Direct Pillow
+pin and exact installed Poppler/Leptonica/Pillow/pikepdf checks remain implementation
+work. API availability is verified against the actual selected versions then.</p>
+<p>Help gives two ordinary/space-containing examples per operation, finite/blocking
+semantics, exact exits/remedies, no input reads, unchanged-baseline/stage limits,
+1:1 viewer instructions, saved versus inspected meaning, separate acknowledgement,
+signal/kill/retry outcomes and no-clobber destinations. No <code>--force</code>, input
+restriction, hidden headless mode or public fault flags are added.</p>
+<h3 id="private-compatibility-and-browser-command-transition">Private compatibility and browser command transition</h3>
+<p>Private header: format <code>BookScanBuilderProject</code>, format version 1, monotonic
+checkpoint revision and required capabilities initially <code>baseline-rgb-v1</code>,
+<code>assessment-v1</code>, <code>review-records-v1</code>, <code>snapshot-ack-v1</code>. Asset and manifest digests
+are verified before use. These versions are distinct from report version 1,
+packet/receipt version 1 and command-result version 1. Unknown required capability
+or unsupported format fails INVALID_PROJECT/3 before modifying anything. Extra
+optional data may be ignored only when explicitly declared nonsemantic; unknown
+meaning cannot silently become acceptance.</p>
+<p>The browser extension reads the frozen finite-project fixture unchanged. Merely
+opening it adds no required capability and changes no image/ID/order/scale/review/
+acknowledgement meaning. An additive upgrade publishes a new validated checkpoint,
+retains the recoverable predecessor and never regenerates pixels; interrupted
+upgrade resumes either complete version. Before a new semantic feature is used,
+record its capability atomically with the new state; old readers fail actionably
+rather than omit it. A baseline command encountering edited/split/group state
+returns BASELINE_ONLY/6 before mutation; generic export handles supported current
+state. An older installed reader with unsupported capabilities returns 3.</p>
+<p><code>baseline</code> names survive as an explicit unchanged-baseline workflow. This lasting
+public surface is the cost of avoiding incompatible command reuse; browser support
+owns its continued contract/regression acceptance. <code>export</code> remains finite and uses
+the same result schema. <code>process PDF --workdir PROJECT</code> and <code>review PROJECT</code> are
+reserved for blocking foreground servers from their first release. Before that,
+they return COMMAND_UNAVAILABLE/2; they never alias finite create/status. At browser
+release help names the two paths and shows Stop for shell loops. No implicit switch,
+deprecation or version-dependent optional mode changes a command's duration.</p>
+<p>Browser <code>--json</code> uses separate <code>BookScanBuilderReviewEvent</code>, schema version 1:
+<code>event</code> (<code>ready</code>, <code>action-result</code>, <code>export-result</code>, <code>terminal</code>), run/session ID,
+monotonic sequence, project/review/snapshot identity as applicable. Ready occurs
+once, after complete import/assessment or verified resume, and supplies the local
+URL and supported capabilities. Action-result names action/affected IDs and saved
+revision/error; export-result embeds the finite command-result record and means
+publication success/failure only. Terminal is last, names <code>stop</code>, <code>signal</code>, or
+<code>error</code>, exit code and committed project state. It never means exported. Fatal
+pre-ready failures have one terminal and no ready; SIGKILL/broken delivery can
+truncate the stream. No additional progress vocabulary on stdout.</p>
+<p>Browser action envelope version 1 names action (<code>disposition</code>, <code>inspected</code>,
+<code>acknowledge</code>, <code>export</code>, <code>stop</code> initially), request ID and displayed project/review/
+image identity, named reason/region/scope, note and destination/confirmation where
+applicable. It uses the same state operation boundary as finite receipts, with
+HTTP session authentication replacing receipt-file validation. Later supported
+actions are additive, advertised in capabilities; unknown actions fail 2. Existing
+fields and meanings never change within a schema version. Optional event/result
+fields and advertised event types may be added only with explicit reader rules;
+clients ignore unknown optional fields/types, but require terminal and never infer
+success from an unknown record. A breaking protocol gets a new explicit supported
+schema version and incompatible readers fail before mutation, not reinterpretation.</p>
+<h3 id="complete-working-browser-extension">Complete working browser extension</h3>
+<p>One complete subsequent working handoff owns any-page roster and matched full/
+native/source-native inspection co-located with revision-scoped actions, saved
+resume and acknowledged image-only export. Current remains baseline until an image-edit extension is explicitly supported.
+The server binds loopback, holds the same kernel lock for its lifetime and creates
+an unguessable per-session token. Validate exact bound loopback Host including port,
+exact Origin and token for all mutations, including export/Stop; reject missing/
+foreign values without mutation or server termination. No cross-origin mutation.
+Serve only allowed project views, never arbitrary local files. The browser takes
+an explicit destination and a separate confirmation naming that exact destination
+and snapshot; it does not derive an output from source or a remote request.</p>
+<p>Browser export retains server ownership and freezes actions until its separate
+result. Commits during freeze return EXPORT_IN_PROGRESS/6; status can display that
+state, with no mixed snapshot. Authenticated Stop queues behind the publication
+outcome, then completes checkpoints, discards drafts if later supported and emits
+terminal stop/0. Closing a tab changes no server state. SIGINT/SIGTERM exits 130/143
+after safe cleanup regardless of an earlier export's separate written/0 outcome.
+Kill/reap releases ownership; resume verifies the last checkpoint, treats private
+exports as private and preserves complete occupied published output. No persistent
+freeze, borrowed lock or unauthenticated Stop.</p>
+<p>Its working acceptance includes real test-owned browser navigation/actions on
+flagged and unflagged IDs, native-scale verification, Stop/tab closure/security,
+live frozen actions/export/signals/kill/resume, predecessor-project read/upgrade,
+and installed prepare -&gt; process -&gt; inspect/disposition/acknowledge/export -&gt; Stop
+-&gt; review -&gt; finite export under demonstrated collection-read denial. The finite
+command contract is rerun at browser release; its old scripts still terminate.
+Browser review is a complete working handoff before orientation edits; its acceptance cannot be postponed to an unrelated edit extension.</p>
+<h3 id="acceptance-seams-retained-in-the-finite-handoff">Acceptance seams retained in the finite handoff</h3>
+<p>Highest public seam: the installed commands with real saved assets and ordinary
+viewer navigation/scale observations. A single responsible operation boundary
+accepts private substitutes for rendering, storage, publication and controlled
+barriers; those faults supplement real tools/processes rather than exposing
+transaction protocol to callers. Browser actions later drive that same boundary.
+No new plugin framework, test-only product mode or source-study mechanism.</p>
+<p>Before comparison outputs, declare an independent native/analytic truth manifest:
+decoded contributing samples/masks/colour metadata and independently constructed
+placements/boxes/Rotate/UserUnit. Exact grid-aligned unfiltered construction uses
+exact pixels/channel values; misaligned grids require predeclared phase/coverage/
+feature and colour bounds justified by the construction and conversion, not the
+renderer output. Complex real regions lacking validated truth stay unavailable
+with their precise missing oracle. Same-renderer source/baseline equality and exact
+export bytes never pass source fidelity. Each oracle is observed rejecting the
+wrong image/box/unit/CTM/placement/order/colour/erased-feature subject for that
+mechanism, while unrelated checks remain green. Declare before generated outputs,
+freeze all read subjects before/after, one writer, and compare reruns itemwise.</p>
+<p>Required synthetic constructions include mixed vector/image/text, nested forms,
+inline images, one-bit/grayscale/RGB, stencils/masks, static appearances, distinct
+and reversed boxes, Rotate/UserUnit, aligned/misaligned &lt;=300-ppi and &gt;300-ppi fine
+detail, blanks/duplicates/order and earlier selectable text. The analyzer accounts
+for every contributing placement or records affected resolution unavailable, not
+a &lt;=300-ppi pass from a partial scan. Test baseline physical mapping and exact
+lossless export/report/hints/fresh import; right-angle edits require their separate supported extension.</p>
+<p>Installed writer-PID barriers observe asset-complete/checkpoint pre/post-commit,
+packet pre/post-publication and export pre/post-link/cleanup/result delivery. Signal
+and SIGKILL the actual installed writer, reap it, then verify source/prior output,
+destination visibility and last committed state/lock ownership. Include source/
+project/output path/case/symlink/hard-link aliases, replaced lock identity,
+dangling/occupied/concurrently occupied destinations, unsupported no-replace/link,
+corrupt/missing snapshot/assets, stale/tampered/foreign receipts, ack invalidation,
+busy actions and additive upgrade interruption. Genuine EPIPE and cleanup failures
+are distinct outcomes. Internal deterministic fault seams are not substitutes for
+these actual installed-process observations.</p>
+<p>Installed preparation -&gt; finite create -&gt; actual packet inspection/navigation -&gt;
+disposition -&gt; scoped inspection -&gt; current acknowledgement -&gt; saved resume after
+original deletion/unavailability -&gt; export is verified with collection reads
+genuinely denied. Observe a denied-read control from that same boundary; setting
+a different COLLECTION string is insufficient. Also use an ordinary unmarked
+multi-page sole PDF. Help is tested with input/tool reads denied; JSON/exit/remedy,
+packet header-to-receipt identity and exact native scale are checked at the public
+surface. Missing required public/synthetic verification is unfinished work.</p>
+<p>Keep six actual source/full/native/resource packets separately: Norwegian20 both
+gutters (whole spread), Garbage Collection30 glyphs/indentation/boxes/arrows,
+Counterpoint20 one landscape page/both columns, Fundamentals40 faint prose/music,
+SchoenbergComposition cover1 colour/sparse rules and Algorithm Design20 already-
+processed preservation. Each retains digests, commands/settings, dimensions/stored
+bytes/export size/peak memory, native truth or exact missing truth, numerical
+passed/failed-signed-resolution/failed-defect/unavailable and actual/pending scoped
+human view paths/verbatim reactions. Required defects/public/synthetic failures
+block completion of the supported technical handoff. An actual real signed-resolution
+loss requires an immediate scoped human policy decision before dependent image edits.
+Complete-default correction still owns missing real truth/reactions/defect remedies
+and nonrigid acceptance before appearance and final acceptance. No export or design
+agreement supplies a missing geometry, preparation or fine-detail result.</p>
+<h2 id="complete-page-import-and-assessment">Complete-page import and assessment</h2>
+<p>Validate a supported static-page PDF, open it read-only, freeze its identity and
+make a verified private project snapshot. Use complete MediaBox RGB rendering
+at the existing 300-dpi comparison policy, respecting effective rotation and
+physical units. Include text, stencils, vectors, masks, colour and supported
+static annotation appearances; extracting the largest image is insufficient.
+Keep the original CropBox as an inspectable reference, not a destructive crop.
+Record pixel/physical dimensions, original boxes, orientation and render policy.
+This re-rasterises the complete PDF composition; source image objects, colour
+spaces, compression and vector/text representations are replaced by lossless RGB
+pixels. The fixed import resolution is 300 dpi, not a native-image pass-through.
+Record the effective horizontal/vertical ppi of contributing images, including
+stencils/masks and transformed placements. Effective ppi above 300, or an
+unavailable resolution assessment, adds an import-fidelity reason: downsampling
+may lose source detail. Higher rendering resolution cannot invent missing detail.
+Show source-relative full-page and native-detail comparisons, including source
+image detail above 300 ppi; baseline equality cannot prove input fidelity.</p>
+<p>The signed MediaBox policy preserves recoverable source content but may reveal
+material hidden by a smaller CropBox and change the default visible page size.
+Show both extents, add an extent-change reason whenever their effective display
+regions differ, and permit an explicitly reviewed/restorable crop to the original
+CropBox. No default-retained claim implies equality with a CropBox-based viewer.
+Honour <code>/Rotate</code> and UserUnit in both display guides and physical dimensions.</p>
+<p>Use the shipped preparation static-page support domain as the initial input
+boundary; its copying evidence does not prove renderer fidelity. Reject encrypted,
+recovery-required, unsupported interactive/external/optional-content dependencies
+with a named feature/page and remedy. Surface decoder warnings and unexpected
+canvases. Once rendering succeeds, unsupported geometry is a usable retained
+page with a reason, not a whole-book failure.</p>
+<p>Assess every page, including covers, sparse images and previously processed
+pages. Read optional preparation roles according to
+<a href="prepared-page-hints-reference.md">prepared-page-hints</a>. They are advisory, grant no
+geometry exemption and never cause source discovery/reopening.</p>
+<p>The initial accepted image is the complete rendered baseline. “Default retained”
+means no accepted geometric change after import, not input-byte preservation,
+human inspection or certified geometry. “Native detail” of a project image means
+one displayed pixel per baseline/accepted pixel; source-native comparisons are
+labelled separately with their own resolution. An import-fidelity or extent
+concern remains unresolved unless explicitly disposed of, and an export
+acknowledgement cannot turn a degraded import into a preservation-test pass.
+Preserve colour, faint print, music and illustrations; RGB conversion is explicit
+and matched source/render/native comparisons must check its fidelity. No default
+whitening, denoising or lossy image recompression is added.</p>
+<p>Production project/export size and peak memory are currently unmeasured. A
+decoded RGB image alone needs width × height × 3 bytes; the 3591×2695 Norwegian
+comparison raster is about 29 MB before renderer/sampler/store overhead. The
+project retains its PDF snapshot, full baselines and accepted revisions, so
+storage and working memory can substantially exceed compressed one-bit or
+grayscale inputs. Lossless compression and identical-asset reuse do not supply
+a bound on peak memory. Acceptance records per-page dimensions, stored bytes,
+export size and observed peak memory; resource failure is explicit, with no
+silent lower-resolution fallback.</p>
+<h2 id="page-geometry">Page geometry</h2>
+<h3 id="rotation-local-distortion-and-fallback">Rotation, local distortion and fallback</h3>
+<p>Use the installed Leptonica global skew estimator on a disposable analysis copy
+as a suggestion, recording status, signed angle, projection-score ratio, regions
+and settings. Never binarise the retained visible RGB. The ratio is not calibrated
+probability, local distortion detection or real-page ground truth. Sparse text,
+music, diagram rules, borders and differing columns can mislead it.</p>
+<p>Design v2 requires explicit acceptance of nonzero rotation. An estimate is
+unavailable if status is nonzero, confidence is zero, or either numeric output
+is non-finite. The zero-confidence invalid sentinel can accompany status zero;
+a zero angle is usable only after these validity checks. Nonzero or unavailable
+estimates are review reasons; the user accepts, adjusts or rejects a preview.
+A valid exactly-zero estimate retains baseline pixels without further resampling.
+No unsupported deadband,
+confidence threshold, ranking or accuracy promise follows from library defaults.
+Calibration that would enable unattended application needs its own evidence and
+agreement. Automate assessment/previews while making applied choices explicit.</p>
+<p>The selected default sweep is ±7° about upright. It supplies no 90°/180°
+orientation classification and no reliable beyond-range correction. Every page
+retains an orientation-unverified reason until orientation is explicitly reviewed;
+a valid skew angle does not clear it. Manual right-angle orientation is available.
+Range-edge warnings and unavailable measurements remain explicit. These limits
+come from <a href="https://raw.githubusercontent.com/DanBloomberg/leptonica/1.87.0/src/skew.c">Leptonica 1.87.0's primary skew implementation</a>,
+not from a tuned confidence policy. Nonzero estimates can create a large review
+queue, including tiny suggestions on already-correct pages; no prevalence or
+small-queue claim is established by the existing examples.</p>
+<p>The coordinate pipeline is immutable full baseline → source region (whole page
+or confirmed half) → orientation/rigid rotation on an expanded canvas → accepted
+crop in that rotated canvas → book translation/padding. Coordinates are pixel
+edges from the top-left, x right/y down; source regions and crop rectangles have
+integer, half-open bounds. Record the source-region offset, rotation mapping,
+expanded-canvas origin and crop offset so every output region maps back to source.
+Crop controls show that rotated frame alongside its mapped original discarded
+bands; changing angle invalidates the old crop preview and requires review.
+Compose the mapping from the immutable baseline, sampling fractional rotation
+once rather than successively sampling previews. Right angles permute pixels
+exactly; fractional preview rotation
+uses bicubic RGB interpolation, white fill and an expanded canvas retaining
+all source content. Verify sign conversion, fractional nonidentity mappings,
+colour/faint/native-detail fidelity and edges independently before accepting that
+sampler for the product. The fixed-canvas historical wrapper is not the production
+contract. Unsupported or harmful proposals remain unchanged/reverted and explicit.</p>
+<p>Rigid tilt removal does not remove within-page curvature or changing local angle.
+A global improvement cannot conceal a worsened region. Known conflicting local
+observations require reject/revert or retain-unresolved with an inspected reason.
+Later evidence-supported nonrigid edits produce new accepted images at the same
+review/book-alignment/export seam; no existing family is accepted or universally
+rejected by the failed source-observation attempts.</p>
+<h3 id="genuine-spreads-and-scanner-borders">Genuine spreads and scanner borders</h3>
+<p>Potential-spread evidence must identify separate printed-page boundaries or page
+furniture and an inspectable gutter/content division. A valley, two columns,
+aspect ratio, folder or role alone cannot classify a spread. No universal detector
+or classification threshold is demonstrated. Suggestions require explicit one-
+page/spread classification and boundary acceptance. Uncertainty retains the whole
+page until a user decision; any page can be classified manually.</p>
+<p>Norwegian20 is the genuine-spread reference; Counterpoint20 remains one landscape
+book page with both columns. Confirmed halves retain complete full-height source
+regions without a gap, with any deliberate gutter overlap recorded. Preserve
+input order with declared left-then-right reading order at the original occurrence.
+Keep blank/duplicate halves; external tools own later removal/reordering.</p>
+<p>The supported split uses full-height vertical regions in baseline coordinates.
+For a tilted gutter, choose a reviewed overlap wide enough to retain each page's
+content, then independently rotate each half and review an inner crop in its
+rotated frame. Facing-page material and repeated gutter pixels are visible in
+full/native views and the source mapping; they are explicitly cropped or retained
+unresolved, never silently assigned away. A gutter/content division that cannot
+be separated safely by this path stays whole or unresolved. Oblique partitioning
+is not supplied by the vertical split contract.</p>
+<p>Scanner-border candidates record edge-connected dark material, proposed removed
+bands and content near the boundary. Darkness is not proof of scanner identity.
+Show the exact discarded bands and full original at native detail. Accept a crop
+only after content-retention review; ambiguous material stays unchanged. Support
+all four crop edges, restoration and independent half-page adjustment. Do not
+silently remove faint printing, edge artwork or distorted gutter material.</p>
+<p>First splitting, changing a split or undoing it names the accepted parent/child
+geometry choices it supersedes and asks for that explicit replacement. Derive new
+halves from the complete immutable source occurrence, never a clipped parent.
+No hidden child or stale crop survives in the final roster.</p>
+<h2 id="book-geometry">Book geometry</h2>
+<h3 id="page-sides-groups-and-parity">Page sides, groups and parity</h3>
+<p>An occurrence is one input PDF page in source order, including repeated content;
+confirmed splitting replaces its active book-page identity with two half IDs.
+Each active identity has at most one body-run position and at most one geometry
+group. A body run is an ordered selection declaring logical side progression;
+a geometry group declares intended common canvas/reference placement. They are
+independent: a group may span runs, and a chapter opener may use a separate group
+while retaining its run side. Each identity has one explicit left/right/unknown
+side; outside a run it can be assigned individually. Unknown side cannot receive
+a mirrored-margin proposal.</p>
+<p>Geometry groups identify pages intended to share a layout. The user chooses their
+members without changing output membership/order. A body run declares a left/right
+starting side or logical page-number anchor where known. The interface may suggest
+assignments but never treats PDF ordinal, filename, cover role or inferred printed numbers
+as authoritative parity. “Odd/even” is a layout convention explicitly mapped to
+left/right, not an assumption about source indices.</p>
+<p>Covers, front matter, foldouts and other different layouts can remain standalone
+or belong to separate groups; they receive page-geometry assessment regardless.
+Within a declared consecutive body run, present alternating sides for confirmation.
+A physical blank page in that run consumes a side; excluding a cover from the
+geometry group does not remove it from the PDF. Show the entire side sequence
+before applying matching. An unknown/missing page or conflicting anchor permits
+an explicit parity break/reanchor from a chosen occurrence, preserving every image
+and order. Never repair parity by silently inserting/deleting/reordering pages.</p>
+<p>A duplicate occurrence inside a run is retained. The user can explicitly mark
+it as a repeat of an earlier active identity in that run: it takes that identity's
+side and does not advance logical parity. This relation is advisory user input,
+not automatic image-duplicate detection. The next ordinary page advances from
+the last non-repeat position. Removing/changing a repeat relation reopens the
+affected side sequence. An unclassified duplicate needs individual side override
+and explicit reanchoring, not a guessed deletion. Conflicting repeats/anchors
+require correction or unknown sides with an unresolved reason.</p>
+<p>Split halves have independent book-page identities and sides; a genuine facing
+spread can propose left/right based on its confirmed layout. Keep that physical
+side evidence distinct from the book's logical numbering. A side/group change
+invalidates dependent alignment proposals and requires their review, not unrelated
+page-geometry edits. Reimport after external reordering is a new project: exported
+side data describes its original export snapshot, not a trusted new page sequence.</p>
+<h3 id="alignment-target-and-scale-policy">Alignment target and scale policy</h3>
+<p><strong>Agreed scale policy:</strong> match placement and mirrored margins while preserving
+each page's scale. Scale normalization is outside this design. A later extension
+would require an explicit uniform-scaling policy, sampling acceptance and revised
+agreement; anisotropic text/music stretching is not implied by “matching.”</p>
+<p>For each group choose a target physical canvas and a reference page or reference
+left/right pair. Mark a reviewable printed-content frame or named visual anchors
+on the reference and candidate pages. Default proposal: match the top anchor and
+inner content edge, with mirrored binding margins for left/right pages. Frames
+are registration aids, not crop instructions; headers, footers, page numbers,
+illustrations and material outside a frame remain visible. Different chapter,
+prose/music or sparse layouts may need separate groups/anchors. A detector may
+suggest a frame with recorded regions; it is not a proved content boundary.</p>
+<p>Match through reviewed horizontal/vertical translation and white RGB padding on
+the common canvas, preserving the page's scale under the agreed policy. Outer/bottom
+margins follow actual content extents; matching inner/top placement does not
+assert equal content width/height. Exact integer-pixel shifts require no
+interpolation. Fractional placement, if offered, needs explicit sampling policy
+and independent fidelity evidence; it is not needed for the first supported
+alignment controls.</p>
+<p>Padding adds visible white bands on toned-paper scans; full and pair views show
+the added regions distinctly as guides without altering exported image pixels.
+The retained rectangle includes uncropped scanner borders and rotation fill.
+Preserving that rectangle at reviewed offsets can enlarge the common physical
+canvas beyond original paper dimensions; show both dimensions and all added bands.</p>
+<p>Preview the target canvas, anchors, inner/outer/top/bottom margins and displacement
+for every affected page. A target that would clip any retained image content must
+be enlarged or rejected; a smaller canvas requires a separately accepted page
+crop. Never trim content merely to make dimensions match. Apply a group proposal
+only after reviewing its affected pages, with individual adjustment/rejection and
+reversion available. Blank/sparse/unanchorable pages keep their current geometry
+until explicitly positioned; another page's detected frame cannot certify them.
+An unpositioned group member exports its current local canvas, with a retained
+unresolved placement reason and a visible size mismatch in the group overview.
+It joins the common canvas only after explicit manual integer placement with
+content-fit review. Group membership expresses intent, not completed matching.</p>
+<p>Local correction precedes the alignment preview. A later accepted local/nonrigid
+edit invalidates that image's anchors and alignment; re-mark anchors on the new
+revision, then regenerate and accept placement. Do not silently transport old
+marks, even through a known rigid mapping. If the edited image is a reference,
+invalidate every placement dependent on it, including other group members.
+If a member's retained rectangle no longer fits the target, mark that target
+invalid, require enlargement/rejection review and never clip. Group-target changes
+invalidate all member alignments. Changes to one page's anchor affect that page;
+changing a shared reference affects every dependent proposal. Unrelated accepted
+pages remain byte-identical.</p>
+<h3 id="review-surfaces">Review surfaces</h3>
+<p>Keep an all-page roster and a triage filter, matched original/current full-page
+and native-detail views, a left/right comparison view with mirrored guide lines,
+and a group overview exposing inconsistent tops, margins, canvas sizes and sides.
+These views use stable occurrence/half IDs rather than current ordinal alone.
+For pair comparisons, make scale and any mirroring of guide coordinates explicit;
+never mirror the actual book image to fake a match.</p>
+<p>The user can adjust any page, flagged or not: rigid angle/orientation, crop,
+spread/boundary, group/side/anchor assignment and supported alignment translation.
+No reordering, page exclusion, OCR, freehand warp or unproved automatic nonrigid
+correction is presented. Separate “page correction” from “book placement” so a
+matching adjustment cannot be mistaken for straightened local geometry.</p>
+<h2 id="honest-states-and-saved-review">Honest states and saved review</h2>
+<p>Every page carries “Within-page geometry unverified; rigid rotation and book
+alignment do not correct curvature or scanner-feed variation.” That universal
+limitation is separate from triage. Specific reasons record nonzero/unavailable
+angle, unverified orientation, import-fidelity/extent concerns, uncertain split/crop,
+unavailable/conflicting side or anchor, clipping risk, alignment proposal or an
+actual user-observed geometry/detail concern.
+Unflagged means only no recorded trigger, never distortion-free or certified.
+No invented ranking/threshold promises a small queue.</p>
+<p>A preview is a draft. Accept creates a saved immutable image/placement revision;
+discard returns to the last accepted one; revert is another explicit accepted
+transition to the relevant baseline. Per-page and group operations name their
+scope. Resolve flags by accept/reject/retain-unresolved with a reason. Initial
+assessment records baseline-retained/unresolved against each trigger, without
+attributing inspection. Rejecting a proposed rotation retains the last accepted
+pixels and records rejection; accepting it names the displayed revision and scope.
+Draft edits are never exported: explicitly accept or discard them first. Stale
+accepted placements cannot be exported; regenerate them, or explicitly remove
+that placement and retain the current local image as unresolved.</p>
+<p>The final acknowledgement may cover a named selection or the whole export's
+retained unresolved pages with a recorded reason. It lists IDs, dispositions,
+import/geometry/placement concerns and the universal limitation. It accepts no
+rotation proposals and implies no inspected page. No bulk rotation acceptance is
+offered. Thus an all-nonzero book can export its unchanged baselines after draft
+discard and snapshot acknowledgement; applying any rotation still needs explicit
+acceptance. Usable unresolved pages may be exported; that choice does not settle
+representative product acceptance or root geometry.</p>
+<p>The processor owns a generated project, not a required input sidecar: verified
+PDF snapshot, full baselines, immutable accepted images, edit/disposition/split
+records, group/reference/side/anchor/target records and default output roster.
+Use a transactional local store and content-addressed lossless assets. Publish an
+asset completely before its checkpoint; only durable checkpoints resume. One
+writer owns the project, and browser actions carry the revision they displayed.
+Reject stale actions/competing writers actionably. Unsaved previews may be lost;
+“saved” is shown only after a durable checkpoint.</p>
+<p>Writer exclusion is an operating-system lock on the project, released on process
+death; existence of a marker file is not ownership. Review holds it for its whole
+server lifetime, so a competing review or shell export returns <code>PROJECT_BUSY</code> (4)
+with Stop review/retry guidance. Review's own export uses its existing ownership.
+Export freeze is a live-owner constraint, not a persisted permanent lock. After
+a hard kill, resume the last durable checkpoint, verify assets and classify any
+private export artifact; never promote it merely because it exists. An output
+already published remains complete and occupied. Browser commits during live
+export return <code>EXPORT_IN_PROGRESS</code> (6), and completion/failure clears that freeze.</p>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Required lifecycle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Browser/server interruption</td>
+<td>Resume committed choices/assets, including partly reviewed groups; never promote a private partial image to accepted.</td>
+</tr>
+<tr>
+<td>Same PDF, new project</td>
+<td>Fresh assessment with no implicit migrated acceptance. Existing project paths require explicit resume, never reset.</td>
+</tr>
+<tr>
+<td>Source changes/disappears after snapshot</td>
+<td>Resume the verified snapshot. Changed bytes require a new import; filenames/ordinals do not migrate choices.</td>
+</tr>
+<tr>
+<td>Asset/snapshot mismatch</td>
+<td>Stop the affected operation and offer verified recovery/start-new guidance, rather than claim accepted state.</td>
+</tr>
+<tr>
+<td>Accepted local crop/rotation/nonrigid edit</td>
+<td>Invalidate replaced-image anchors/dispositions and its placement. A reference edit invalidates every dependent placement; member overflow invalidates the target. Re-mark/regenerate/review; unrelated groups remain unchanged.</td>
+</tr>
+<tr>
+<td>Shared target/reference or side sequence changes</td>
+<td>Invalidate affected member alignment proposals; require scoped review/acceptance again. No page order mutation.</td>
+</tr>
+<tr>
+<td>Undo/change split</td>
+<td>Confirm superseded parent/child choices, replace affected topology and side/alignment dependencies; preserve other source occurrences.</td>
+</tr>
+<tr>
+<td>Renderer/settings change</td>
+<td>Freeze existing accepted pixels. Explicit reprocessing creates new proposals/revisions, not silent reinterpretation.</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>Freeze the accepted image/placement roster and block commits until publication/failure. No mixed-revision PDF.</td>
+</tr>
+</tbody>
+</table>
+<p>The final screen shows retained/edited/unresolved pages and geometry groups,
+side assignments and any parity breaks. Export acknowledgement refers to that
+exact accepted snapshot and universal limitation; an affected change requires
+renewed acknowledgement. Processor state is a single useful review/export
+handoff, not a schema-only/display-only stage.</p>
+<h2 id="geometry-pdf-export">Geometry PDF export</h2>
+<p>Rebuild an ordinary PDF from losslessly embedded accepted RGB images at their
+recorded canvas/physical scale, one book page per output PDF page. Use unchanged
+input/default split order with all occurrences present. Copy no earlier hidden
+text/OCR or source text-resource graph into this fresh output. Visible source
+lettering remains in the image, but previous searchability is deliberately lost;
+run the separate OCR pass after geometry and any external reordering. This tool
+neither chooses an OCR engine nor guarantees another tool's image fidelity.</p>
+<p>Validate decoded image bytes, page/canvas transforms, count/order and accepted
+revision identity before publication. A zero/unchanged edit retains baseline
+pixels; padding/translation preserves the retained baseline/accepted region
+exactly under the supported integer placement policy. Export adds no further
+recolouring or sampling. This guarantee is relative to the imported RGB baseline,
+not the source PDF's native image objects or pre-import rendering/colour spaces.</p>
+<p>Expose the universal limitation in document Subject and an embedded readable
+review report listing source occurrence/half, accepted revisions, page geometry,
+group/side/anchors/target/alignment, triage and dispositions. Add no warning pages
+or image banners. Report loss in a third-party editor does not alter the images;
+a fresh import always starts with the universal limitation. The versioned report
+is an export snapshot, not a resume database or certificate. Geometry exports
+omit page-level <code>/BookScanBuilder</code> preparation hints instead of copying stale
+immediate-source provenance. Import still accepts ordinary PDFs and version-1
+preparation hints under their unchanged advisory meaning. Split/alignment lineage
+lives only in the geometry report/project. The persisted lifecycle
+decision and rejected alternatives are recorded in
+<a href="geometry-review-handoff-reference.md">geometry-review-handoff</a>.</p>
+<p>The report is a document-level embedded-file attachment named
+<code>BookScanBuilder-geometry-review.json</code>, keyed by that name in the PDF
+<code>/Names</code> → <code>/EmbeddedFiles</code> name tree, with MIME type <code>application/json</code>.
+Encode one UTF-8 JSON object without a BOM; do not attach original PDFs or the
+editable project. The <a href="https://pikepdf.readthedocs.io/en/latest/topics/attachments.html">selected PDF library's attachment API</a>
+supports this ordinary viewer-readable container. Required version-1 fields:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>format</code>, <code>version</code></td>
+<td><code>BookScanBuilderGeometryReview</code> and integer <code>1</code>.</td>
+</tr>
+<tr>
+<td><code>source_sha256</code>, <code>snapshot_id</code></td>
+<td>Input snapshot digest and the exact acknowledged accepted project revision. No collection path is required.</td>
+</tr>
+<tr>
+<td><code>limitation</code>, <code>toolchain</code></td>
+<td>Universal limitation text; renderer/estimator/sampler/library versions and render/analysis settings.</td>
+</tr>
+<tr>
+<td><code>pages</code></td>
+<td>Array in exported order; every entry has stable <code>id</code>, one-based <code>source_pdf_page</code>, nullable <code>half</code>, baseline <code>source_region</code>, <code>image_revision</code>, decoded <code>image_sha256</code>, pixel/physical canvas dimensions, page-edit mappings, nullable geometry-group/run IDs, side/repeat/anchors/reference/target/placement records, triage reasons and their dispositions. No acceptance is inferred from absent fields.</td>
+</tr>
+<tr>
+<td><code>acknowledgement</code></td>
+<td>Exact snapshot ID, affected unresolved IDs/reasons and explicit acknowledgement, with inspection scope recorded separately.</td>
+</tr>
+</tbody>
+</table>
+<p>A report-only reader ignores unknown additional fields; unknown version, malformed
+or absent reports are unavailable optional information. Processor import does not
+consume report dispositions, sides or acceptance at any version: reimporting an
+export, with or without its metadata, creates fresh baselines/assessment and the
+universal limitation. After external reordering/OCR, further edits use the
+original project and require re-export plus repeating those external passes.</p>
+<p>Originals stay read-only. Require an unused project directory; callers keep
+projects/derived artifacts outside their source collection. The sole-PDF processor
+does not discover or know that collection's root. Check source/project/output
+aliases by path, case, symlink or hard link. Never replace an occupied destination.
+Stage export privately beside the
+destination, validate/recheck the complete snapshot, then reuse the existing
+atomic no-clobber publication semantics. Pre-commit failure/cancellation keeps
+previous output absent/unchanged and review state recoverable. Post-commit
+signals/reporting failures preserve a complete published PDF with warnings.
+Hard kills can leave identifiable private artifacts; power-loss durability and
+indiscriminate orphan cleanup are not promised.</p>
+<p>Use the existing error convention for invocation (2), unreadable/unsupported or
+invalid project (3), destination conflict (4), processing/validation/I/O (5) and
+caught pre-publication signals (130/143). Pending undisposed changes, invalid
+matching targets still used by the export roster or missing current export
+acknowledgement return a named review-required condition (6) with affected
+IDs/remedy. A geometric concern is
+not an unsupported PDF. No unexposed recovery command or implicit reset is needed.
+Here “pending undisposed changes” means draft edits or invalidated placements,
+not baseline-retained unresolved assessment reasons. Codes 4 and 6 also cover
+<code>PROJECT_BUSY</code> and <code>EXPORT_IN_PROGRESS</code> as above. Clean server stop is 0;
+authentication/origin failure rejects the HTTP action without mutating the project
+or terminating an otherwise healthy server. Export's publication outcome is
+reported separately from a later server stop/signal.</p>
+<h2 id="ownership-and-verified-technology">Ownership and verified technology</h2>
+<p>Extend the current Python/pikepdf package: complete-page import/assessment;
+project and page/book geometry operations; local matched-view presentation;
+and frozen image export/publication. Public callers supply one PDF/project and
+destination, never resource graphs, geometry-cache keys or transaction protocols.
+The composition point can substitute controlled renderer/storage/publication
+outcomes for fault tests. These are responsibility boundaries, not horizontal
+implementation leaves or a plugin framework.</p>
+<p>Use Poppler full-page rendering, Leptonica angle suggestions and Pillow RGB
+geometry as the selected dependency approach. Exact installed angle signs, rotation/canvas
+semantics and pikepdf placement/publication assumptions must be verified when
+implementation pins them. The existing source/native experiments support only
+their recorded bounded claims; they are not a production processor.</p>
+<p>Before import or resume starts serving, preflight the renderer, estimator binding
+and RGB sampler against the project's supported versions. Missing/incompatible
+tools return <code>DEPENDENCY_UNAVAILABLE</code> (5), naming the tool/version and installation
+or locked-setup remedy, without creating accepted state. The estimator is reached
+through a packaged native bridge exposing Leptonica's installed version, status,
+angle and score ratio, not an unversioned experimental executable. Record Poppler,
+Leptonica, Pillow and pikepdf versions plus analysis/render settings in each project
+and exported snapshot. A changed toolchain follows the renderer/settings lifecycle
+rule; resume must not silently reinterpret accepted images. Pillow needs a direct
+product pin when the processor is implemented: the current lock resolves 12.3.0,
+whereas historical experiment evidence used 11.3.0. Verify the actual selected
+version's rotate/transpose/crop/paste semantics and independent sampler fidelity;
+a signature-compatible API alone does not establish image quality.</p>
+<h2 id="agreed-public-and-visual-test-seams">Agreed public and visual test seams</h2>
+<p>Exercise installed preparation where applicable, then the real public process,
+page/book review controls and image-only export, including ordinary unmarked
+sole-PDF input with the source collection genuinely unavailable. Observe a
+control that is denied read access in that same boundary; a changed collection
+string alone is insufficient. Controlled internal faults supplement public
+commands and actual writer signal/kill observations.</p>
+<table>
+<thead>
+<tr>
+<th>Case</th>
+<th>Independent required outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Known upright/tiny-angle/noisy/rigid, beyond-±7°, sideways/upside-down and blank fixtures</td>
+<td>Construction supplies angle/orientation independently. Check status-zero/confidence-zero as unavailable, valid zero separately, and orientation-unverified retention until review. No unaccepted sampling; accepted rotation retains all regions/content against justified measured limits. Wrong page/orientation/angle controls must fail the corresponding oracle.</td>
+</tr>
+<tr>
+<td>Input-relative import fidelity</td>
+<td>Include &gt;300-ppi detail, one-bit and grayscale compositions. Compare source full/native renders to the RGB baseline, expose downsampling/RGB changes and record resource costs. A known erased fine feature must fail preservation even if baseline/export bytes match.</td>
+</tr>
+<tr>
+<td>Distinct boxes, <code>/Rotate</code> and UserUnit≠1</td>
+<td>Independent effective pixel/physical extents and orientation; show CropBox-hidden MediaBox material, extent-change reason, and reviewed/restorable CropBox crop. Wrong box/rotation/unit controls must fail.</td>
+</tr>
+<tr>
+<td>Known curved/local-angle-variation fixtures</td>
+<td>Global rotation/alignment cannot be credited as local correction; check regions independently so aggregate improvement hides no worsening.</td>
+</tr>
+<tr>
+<td>Nonidentity fractional RGB sampling</td>
+<td>Independent coordinate/sampler oracle, edge/canvas/colour/faint/music checks and native detail. Identity/copy is insufficient. Reject wrong angle/image/region/mapping controls for the stated mechanism first.</td>
+</tr>
+<tr>
+<td>Known translated left/right page pair</td>
+<td>Independent source anchors and declared sides predict common top/inner placement and mirrored margins. Retained native pixels, scale and all source content survive. Wrong side/anchor/offset/canvas controls must fail independently.</td>
+</tr>
+<tr>
+<td>Covers/front matter/blank, missing page and duplicate-in-run sequence</td>
+<td>PDF index differs from logical parity. Blank consumes a side; an explicitly marked repeat retains its earlier side without advancing parity. Chapter opener in a separate geometry group keeps its run side; groups may span runs. Wrong duplicate-parity control must fail; all images/order survive.</td>
+</tr>
+<tr>
+<td>Different layouts, toned paper and unanchorable member</td>
+<td>Preview white padding and any enlarged canvas, including retained borders/rotation fill. An unpositioned member retains its own canvas with an unresolved mismatch; manual placement joins the common canvas only after fit review. No borrowed frame, forced scale or clipping.</td>
+</tr>
+<tr>
+<td>Any-page and group review</td>
+<td>Real accepted edit, discard and revert on flagged and unflagged pages; matched full/native/pair/group views, partial resume, stale-action rejection and final accepted geometry.</td>
+</tr>
+<tr>
+<td>Spread, tilted gutter and blank/duplicate halves</td>
+<td>Independent known gutter/source labels exercise vertical overlap → per-half rotation → rotated-frame crop. Preserve own-page content, expose/crop or explicitly retain foreign material, verify every coordinate mapping and split replacement. Landscape single page stays single; all halves/default order remain.</td>
+</tr>
+<tr>
+<td>Earlier OCR/text fixture</td>
+<td>Visible source lettering survives full rendering; fresh output contains exact accepted images and no stale old selectable text. This is text omission, not OCR recognition/alignment acceptance.</td>
+</tr>
+<tr>
+<td>All-nonzero multi-page review/export</td>
+<td>Pending drafts block with 6; discard retains baseline/unresolved reasons. Missing/stale acknowledgement blocks with 6; current scoped acknowledgement exports exact baselines and recorded dispositions without accepting rotation or implying inspection. Explicit accepted rotation changes only its named revision.</td>
+</tr>
+<tr>
+<td>Reference edit and member overflow</td>
+<td>Re-edit a reference: every dependent placement/anchor is stale, unrelated groups byte-identical. Enlarge a member beyond the target: target review is required, with no clipping and no silent anchor transport.</td>
+</tr>
+<tr>
+<td>Report and reimport</td>
+<td>Validate named UTF-8 JSON attachment/version/snapshot fields and absence of output preparation hints. Reimport ordinary, metadata-stripped, unknown-version and reordered exports: fresh state, unknown sides and universal limitation, with no restored acceptance.</td>
+</tr>
+<tr>
+<td>Server/security/dependencies</td>
+<td>Normal Stop review is 0, Ctrl-C is 130; kill −9 then resume has no stale ownership/freeze. Shell export against review returns 4; live frozen commits return 6. Reject tokenless/foreign-Origin/wrong-Host actions and unconfirmed destination writes. Missing/incompatible tools give named remedy; version changes preserve accepted assets.</td>
+</tr>
+<tr>
+<td>Failure/publication</td>
+<td>Corrupt assets, target/reference invalidation, split replacement, lock conflict, interruption and occupied destination preserve committed review/originals/prior output.</td>
+</tr>
+</tbody>
+</table>
+<p>Assess all fixed real cases independently: both Norwegian20 gutters;
+Garbage Collection30 indentation/glyphs/boxes/arrows; Counterpoint20 single
+landscape page/both columns; Fundamentals40 faint prose and any music detail;
+SchoenbergComposition cover1 colour/sparse rules; Algorithm Design20 already-
+processed preservation and nonidentity sampler companion. Preserve music140's
+unsupported-layout diagnostic separately from music20's acquisition candidate.
+Add adjacent/group book-page comparisons without replacing those fixed cases.
+Alignment numerical truth needs independent known anchors/regions and justified
+limits; a detector's own output/rerun is no oracle for real pages.</p>
+<p>Record numerical passed/failed/unavailable separately from human visual accepted/
+pending/rejected, with actual inspected full/native/pair/group views and verbatim
+scoped replies. A retired technical slice, export or alignment score supplies
+no missing acceptance. Full within-page and book-geometry acceptance still
+precedes optional appearance and complete-product acceptance. Source-relative
+preservation failures and unresolved numerical/visual judgments remain explicit;
+neither default retention nor export acknowledgement waives them.</p>
+<h2 id="agreement">Agreement</h2>
+<h3 id="finite-baseline-interface-and-test-seams">Finite baseline interface and test seams</h3>
+<p>The human replied verbatim <strong>“yes”</strong> to approval of the presented finite
+interface/test-seam proposal and the separate delivery-cadence exception for its
+complete finite implementation owner. The presented proposal SHA-256 was
+<code>84658bf583232bada49d72b88407e05cd18323219a647c8f8ee1119fc45ce3fa</code>,
+at <code>http://127.0.0.1:8772/baseline-delivery.html#current-decision</code>, with the
+delivery diagram at <code>http://127.0.0.1:8772/#diagram-baseline-delivery</code>.
+The finite contract is incorporated into this current spec without a second
+parallel proposal. Agreement covers permanent finite baseline names, exact
+packet/receipt revision identity, separate inspection/dispositions/scoped
+acknowledgement, checkpoint/lock/signal/publication lifecycle, private-project
+and public-protocol compatibility, browser completion and the retained
+independent/public/fault/six-case seams. The finite owner may span sessions,
+retaining every required check and retiring only on complete delivery; that
+cadence permission supplies no corresponding browser-owner exception or scope
+waiver. Delivery ownership remains in the task briefs. This reply grants no
+product, native-view fidelity, geometry or preparation visual acceptance.</p>
+<h3 id="geometry-design-v2">Geometry Design v2</h3>
+<p>The human replied verbatim <strong>“agreed”</strong> to the presented v2 design and stated
+scale-preserving matching policy. This agreement covers the geometry-only
+shell/local-browser workflow, supported page/book controls, saved review and
+image-only export, and the public/full-page/native/pair/group test seams above.
+OCR/reordering remain external, and scale normalization is not commissioned.
+The presented pre-signature spec SHA-256 was
+<code>b6c8458e0c42cfc2d1431ed49e1613b02c6e2b31ac5176a958ab47869e563caf</code>;
+the editable views and contract were presented at
+<code>http://127.0.0.1:8770/#diagram-book-alignment</code> and
+<code>http://127.0.0.1:8770/contract.html#book-geometry</code>.
+No actual output-view inspection is attributed to that reply. This is a design
+agreement, not acceptance of a working product, nonrigid result or historical
+preparation/geometry comparison. The agreed design undergoes its earned review
+before implementation planning; production verification remains outstanding.</p>
+<p>Review clarifications retain the signed fixed 300-dpi MediaBox RGB import,
+explicit nonzero-rotation acceptance, geometry-only shell/browser controls,
+preserved-scale alignment and the same public/full/native/pair/group seams.
+They expose import/extent costs and unresolved outcomes, define coordinates,
+parity/dispositions/dependencies, and specify report/server safety. Additional
+fixture cases test those existing seams. The original reply is not represented
+as a new signature or acceptance of these clarified limitations or real outputs.</p></main></html>

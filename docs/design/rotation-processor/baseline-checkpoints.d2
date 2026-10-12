@@ -1,0 +1,29 @@
+direction: down
+classes: {
+  start: {style: {fill: "#17334b"; font-color: white; bold: true}}
+  error: {style: {fill: "#fff5dd"; stroke-dash: 4}}
+}
+lock: Start here\nKernel writer ownership\nNonblocking conflict -> 4 {class: start}
+assets: Publish complete immutable assets\nPrivate partials never saved
+checkpoint: Atomic checkpoint commit\nImage identity + review revision
+receipt: Replay committed identical request OR\nVerify current receipt / project descriptor
+changed: Record disposition / inspection\nNew review facts invalidate acknowledgement
+ack: Acknowledge export-snapshot digest\nAcknowledgement excludes itself from digest
+freeze: Freeze exact roster under lock\nNo concurrent finite writer
+stage: Validate private complete image-only PDF
+publish_link: Atomic no-clobber link\nOutput publication commit
+published: Complete occupied output\nWritten / 0, even if delivery fails
+recovery: Kill -> reap -> verify resume\nLast committed checkpoint only\nNo permanent freeze / orphan promotion {class: error}
+lock -> assets: "1. initial create"
+assets -> checkpoint: "2. assets before checkpoint"
+checkpoint -> receipt: "3. action validates current display"
+receipt -> changed: "4a. durable review action"
+changed -> checkpoint: "5a. commit or keep predecessor"
+receipt -> ack: "4b. summary acknowledgement"
+ack -> freeze: "5b. current acknowledgement required"
+freeze -> stage: "6. rebuild exact retained pixels / scale"
+stage -> publish_link: "7. pre-link signal -> 130 / 143"
+publish_link -> published: "8. complete outcome before unblock"
+checkpoint -> recovery: signal / crash
+stage -> recovery: signal / crash
+published -> recovery: remains complete and occupied
