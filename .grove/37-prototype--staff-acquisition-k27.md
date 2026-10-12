@@ -55,6 +55,13 @@ Generate no fitted model, rigid image or corrected image in this session.
 
 ## Done when
 
+The human's current geometry-only scope in k41 governs references below to the
+intermediate product: page/book geometry, any-page review and image-only export.
+Reordering and OCR are external; consume the revised actual design and its
+book-side/alignment limitations, not Draft v1's removed requirements. This changes
+none of the source-only music observation/gate protocol, pending historical
+responses or k28's ownership of full within-page evidence and acceptance.
+
 - Consume k43's charter clarification with k41's actual handoff: its design
   needs a recorded scoped human signature; universal unverified nonrigidity is
   distinct from per-page triage. Carry numerical and visual product dispositions

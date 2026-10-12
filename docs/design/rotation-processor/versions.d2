@@ -1,0 +1,23 @@
+direction: down
+classes: {
+  start: {style: {fill: "#17334b"; font-color: white; bold: true}}
+}
+snapshot: Start here\nFrozen PDF + complete baselines {class: start}
+state: Saved geometry revision\nImages + split lineage + sides\nReferences + targets + dispositions
+action: Versioned review action\nOne writer, stale actions rejected
+local: Accepted local edit\nNew page image\nDependent alignment invalidated
+shared: Shared target / reference change\nAffected group alignment invalidated
+side: Side / anchor / split change\nAffected placement proposals invalidated
+review: Regenerate affected alignment\nScoped preview and acceptance
+freeze: Freeze accepted geometry snapshot\nAll occurrences and default order
+published: Validate images / canvases / report\nNo-clobber image-only PDF
+snapshot -> state: "1. verified import"
+state -> action: "2. compare then act"
+action -> local: page geometry
+action -> shared: group geometry
+action -> side: assignment / topology
+local -> review: "3. preserve unrelated accepted pages"
+shared -> review
+side -> review
+review -> freeze: "4. affected choices accepted or unresolved"
+freeze -> published: "5. one coherent snapshot"

@@ -33,6 +33,16 @@ Preparation's working contract/evidence are `docs/specs/prepared-pdf.md` and
 
 ## Done when
 
+**Latest human scope, before the inherited applicability clauses:** the tool
+focuses on page and book geometry, including page alignment/matching and explicit
+odd/even or left/right treatment. Processor reordering and OCR are external and
+are no longer work/acceptance obligations despite historical wording below.
+Consume k41's revised actual agreement and geometry-only working handoff. Preserve
+all source occurrences/default order except genuine spread expansion, accepted
+image review, book-side/group/parity/alignment semantics and image-only export
+without stale old text. Retain full within-page evidence/representative acceptance
+and all source protocols before k22/k23; the scope change approves no method.
+
 The local applicability clauses below govern the two inherited production
 bullets where they appear. Their original criteria remain intact: they bind
 complete nonrigid commitment and its extension of k41, not another initial
@@ -231,14 +241,13 @@ initial design again. Agreement precedes that extension's implementation planner
   representation and working reader/export land together; each implementation
   slice works independently with public-seam checks and docs. No schema-only,
   OCR-engine-only or test-only product staging is justified.
-- The design/trials demonstrate a tiny PDF with actual English search and
-  selection aligned to accepted images and an earlier-OCR fixture; the empty
-  text samples do not qualify. Choose old-text handling, prevent OCR from
-  silently rotating/recolouring/replacing visible images, invalidate affected
-  OCR after accepted edits, and match final image/order. Preserve split-half
-  provenance/default order and explicit exclusion/movement before OCR/export;
-  verify a blank half and duplicated half without silent deletion. Preparation
-  cannot satisfy book-page choices through its unsplit PDF-page selections.
+- The revised design/working acceptance preserves every complete accepted image,
+  split-half provenance and default order in an ordinary image-only PDF, omitting
+  earlier hidden text rather than retaining stale geometry. Blank/duplicate
+  halves remain present for external removal/reordering. Verify book-side/group
+  assignments, parity breaks, common canvas/margins and the agreed translation/
+  scale policy through page-pair/group views and independent synthetic controls.
+  No OCR engine or processor reordering implementation is commissioned.
 - The processor receives one prepared or ordinary unmarked already-assembled
   PDF, optional advisory roles only, without collection discovery or reopening
   sources through hints. Covers and previously processed pages still receive

@@ -1,0 +1,24 @@
+direction: down
+classes: {
+  start: {style: {fill: "#17334b"; font-color: white; bold: true}}
+}
+start: Start here\nDeclare matching group and page-side anchor {class: start}
+sequence: Confirm side sequence\nCovers / front matter / blanks explicit\nBreak or reanchor missing-page parity
+reference: Choose reference page or pair\nMark top and inner content anchors
+canvas: Shared canvas and target guides
+left_page: Left-page placement\nInner edge towards binding on right
+right_page: Right-page placement\nInner edge towards binding on left
+shift: Translation + padding\nPreserve each page's scale\nNever mirror page images
+check: Full / native / pair / group preview\nAll retained content fits? {shape: diamond}
+resize: Enlarge target or reject proposal\nA crop needs its own acceptance
+accept: Accept group or individual placement\nDefault page order unchanged
+start -> sequence: "1. assign, never infer from PDF ordinal"
+sequence -> reference: "2. choose layout evidence"
+reference -> canvas: "3. target top + mirrored binding margins"
+canvas -> left_page
+canvas -> right_page
+left_page -> shift
+right_page -> shift
+shift -> check: "4. preview"
+check -> accept: "5. content retained"
+check -> resize: clipping / uncertainty

@@ -4,19 +4,38 @@
 
 Provide a personal workflow on the current Mac that reconstructs corrected book
 PDFs from the user's scanned collection and optional separate cover PDFs.
-Preserve the corrected page images as the visible content and add an English
-OCR text layer for searching and selecting text.
+Preserve the corrected page images as the visible content. Focus this tool on
+geometry within each page and consistent book geometry: page alignment/matching
+and explicit odd/even or left/right treatment. Page reordering and OCR are
+separate third-party operations after geometry export.
 
 Process one book at a time in two stages that can be run from the shell:
 prepare one PDF by merging the chosen covers and content, then process that
 single PDF. The user will use the shell to iterate over the collection.
 
+## Current scope clarification
+
+In `rotation-processor-k41` the human stated: “We don't need to worry in this
+tool about re-ordering pages, because we can do that in a separate third-party
+tool. We can also do the OCR entirely as a separate pass. The difficult part
+that this tool needs to focus on is the geometry of each page, and the geometry
+of the book i.e. page alignment matching, odd/even pages etc.”
+
+This current instruction governs conflicting OCR/processor-reordering language
+in the historical decomposition and records below. Keep the shipped preparation
+command and its past evidence unchanged, but commission no processor reordering
+or OCR work. Preserve every input occurrence and order, expanding confirmed
+spreads only. The revised design must establish book-side/group assignment,
+alignment references, common canvas/margin and scale policy with their public/
+visual acceptance. Existing local/nonrigid evidence and pending human judgments
+remain required; the narrowed scope is no acceptance of geometry or Draft v1.
+
 ## Done when
 
 - Book PDFs from `Raw Scans`, `Processed Books`, and `Needing Cleanup`, with
   separate covers when supplied, can be prepared into one PDF per book.
-- The main processing entry point accepts that one PDF and performs correction,
-  cleanup, OCR, review and export without searching collection folders for
+- The main processing entry point accepts that one PDF and performs geometry
+  correction, supported cleanup, review and image-only export without searching collection folders for
   content or cover scans. A PDF whose covers are already assembled is also a
   valid single-PDF input.
 - Geometry correction addresses distortion that varies within a page, including
@@ -29,14 +48,16 @@ single PDF. The user will use the shell to iterate over the collection.
   whitening and noise removal are optional and previewable.
 - Automatic processing is followed by review of flagged pages, with adjustment
   of any page available before export. Review changes appear in the final PDF.
-- Assembly preserves source order by default, supports reordering and
-  user-controlled exclusion of blanks or duplicates, and supports inserting
-  cover pages. Preparation supplies these controls for selected PDF pages;
-  the processor supplies exclusion/reordering for the book pages created by
-  splitting a spread, before final OCR/export. Front and back covers have
-  explicit roles and placement.
-- The output retains visible page images and has an English OCR text layer
-  whose search and selection positions align with the corrected images.
+- Geometry processing preserves every input occurrence and source order,
+  expanding genuine spreads in declared reading order. Blanks and duplicates
+  are never silently deleted; subsequent reordering/removal and OCR are external.
+  The shipped preparation command retains its explicit cover/content assembly.
+- Book geometry supports reviewed page alignment/matching, a shared canvas and
+  explicit odd/even or left/right assignments without assuming PDF index equals
+  printed-page parity. Cover/front-matter/blank and parity-break cases remain
+  inspectable. Matching preserves content and the agreed scale policy.
+- The exported PDF retains accepted visible page images, contains no stale
+  earlier text layer and is usable as the input to separate reordering/OCR tools.
 - Originals remain untouched, and already-correct pages are not degraded.
 - The agreed test seam and visual comparisons demonstrate these behaviours on
   representative real inputs.
@@ -61,9 +82,9 @@ the trial, not to promise an algorithm's success.
 | Increment | Useful handoff | Dependency and ownership |
 | --- | --- | --- |
 | Explicit PDF preparation | One prepared PDF, with selected content order and explicit front/back covers, usable by ordinary PDF tools | First independently useful increment in this tree. `prepared-pdf-k9` and `prepared-pdf-k12` supply the integrated design; `prepared-pdf-k10` cuts `prepared-pdf-k13`, the complete command and its verification, ahead of geometry. No correction service is needed. |
-| Rotation, review and searchable export | One sole PDF processed through supported rigid rotation, safe borders/splitting, review/any-page adjustment, explicit post-split decisions and aligned English OCR; unresolved distortion stays usable and flagged | k39's “agreed” permits considering this independently useful intermediate increment before demonstrated nonrigid correction. `geometry-policy-k40` commissions the design agreement `rotation-processor-k41` before k27; k41 cuts its implementation-planning consumer lazily from an agreed artifact. Its own public/visual acceptance is required. Representation and working review/reader/export land together. This is no within-page or full-root acceptance. |
-| Corrected searchable book | The working review/export seam extended through demonstrated within-page correction and independent acceptance of the full representative set | Depends on preparation and the intermediate seam, with its own evidence/design agreement before nonrigid implementation. k35's failed fixed-grid addressing attempt remains bounded; k39/k40 commission no new Norwegian study. `staff-acquisition-k27` then `corrected-book-k28` stay live in their relative order. k28 consumes the intermediate design/actual working successors and music result before cutting only justified geometry/completion/design/working slices ahead of appearance. All unresolved comparisons/reactions and root geometry criteria remain owned; flags cannot satisfy them. |
-| Optional appearance cleanup | Preview and selectively apply whitening or noise removal while keeping the working default processor and its accepted-image/OCR alignment | `appearance-cleanup-k22` owns the precise successor design question after the default processor works, then cuts its planning consumer before `workflow-acceptance-k23`. Compare faint print, music, illustration and colour before choosing a cleanup method. |
+| Page and book geometry with review/export | One sole PDF processed through supported rigid rotation, safe borders/splitting, any-page review and book-side alignment/matching, with accepted image-only export; unresolved local distortion stays explicit | The human agreed k41's v2 geometry-only design and scale-preserving alignment. Earned design review precedes its fresh implementation planner. Its own public/visual acceptance includes alignment/odd-even cases. Representation/review/export land together. This is no within-page or full-root acceptance. |
+| Complete corrected book geometry | The same review/export seam extended through demonstrated within-page correction and independent full representative and book-alignment acceptance | Preparation and the supported intermediate seam remain inputs. k27 then k28 stay live; k28 owns justified nonrigid evidence/design/completion before appearance. No Norwegian study is commissioned by the scope clarification, and flags never satisfy correction. |
+| Optional appearance cleanup | Preview and selectively apply whitening/noise removal while preserving accepted page/book geometry and image-only export | k22 follows accepted complete default geometry, then cuts its planner before k23. OCR and reordering remain external. |
 
 The user chose one workspace and one Grove tree for the earlier working
 increments. This plan carries that choice forward to the intermediate stage
@@ -332,6 +353,12 @@ after the working default accepted-image/export seam. No method is chosen here.
 
 ## Pointers
 
+- `docs/specs/rotation-processor.md` — agreed v2 page/book geometry design,
+  with scale-preserving alignment, external OCR/reordering and its public/visual
+  test seams. The human replied “agreed”; no working-product acceptance follows.
+- `docs/adr/geometry-review-handoff.md` — processor-owned resumable project
+  and optional exported report semantics, preserving preparation-hint meaning.
+
 - `CONTEXT.md` — the project's terminology.
 - `docs/specs/prepared-pdf.md` — preparation's public command, preservation and
   single-PDF handoff contract; its dependency evidence and visual companion are
@@ -347,14 +374,14 @@ after the working default accepted-image/export seam. No method is chosen here.
 Agreed with the user: use representative source PDFs from all three book folders
 and separate covers. Check preparation at its public entry point for cover-role
 placement and preservation of content order. Then exercise the main processing
-entry point with one assembled PDF, through correction, cleanup, OCR, review
-decisions and export. The main process must work without access to the source
+entry point with one assembled PDF, through per-page correction, book alignment,
+supported cleanup, review decisions and image-only export. The main process must work without access to the source
 collection folders; it receives their prepared PDF rather than discovering
 inputs itself.
 
 Check geometry across the page, including text and staff lines; fine-detail
-retention; spread splitting and assembly order; alignment of English search
-and text selection; application of review adjustments; unchanged originals;
+retention; genuine spread splitting and preserved order; shared canvas and
+odd/even or left/right alignment; application of review adjustments; unchanged originals;
 and preservation of already-correct pages. Combine repeatable fixture checks
 with the user's visual judgment of before/after geometry samples. A numerical
 score alone does not establish visual acceptance.
@@ -407,10 +434,11 @@ The preparation/assembly flow must permit explicit assignment. Optional review
 adjustments after processing must still be reflected in the export; no later
 step may need to rediscover separate cover files.
 
-No correction algorithm, implementation language or review-interface technology
-has been selected. The first test book has not been explicitly chosen by the
-user; the inspected examples are candidate fixtures rather than approved
-correction results.
+The agreed k41 design selects the Python/PDF geometry dependency approach and
+shell/local-browser review, with scale-preserving book placement. A production
+nonrigid correction method and its measured support remain unresolved. The first
+test book has not been explicitly chosen by the user; the inspected examples
+are fixtures, not approved correction results.
 
 There was no project Taskfile at bootstrap. Adding a root `Taskfile.yml` was
 suggested; introduce it when deterministic development commands are concrete,
@@ -525,6 +553,23 @@ chooses production technology or closes within-page geometry/root acceptance.
 
 ## Intermediate processor design handoff
 
+**Current applicability:** k41's latest human scope correction governs this
+handoff. Its revised design is page/book geometry with review and image-only
+export; processor reordering and OCR are external. The descriptions below record
+the earlier commission and review repairs, not permission to restore the removed
+features. The revised agreement and working acceptance must include explicit
+book-side/group/parity semantics and alignment/matching without content loss.
+Within-page correction and all independent evidence/response obligations remain.
+
+The human has now replied **“agreed”** to the published v2 geometry-only design
+and scale-preserving matching policy. Its public/full/native/pair/group seam is
+the agreed design contract; implementation and actual product acceptance remain
+outstanding. k41 finishes that artifact, earns its external design review and
+cuts its fresh implementation planner before k27 as the last work act. Review
+integration, if actionable findings earn it, must precede that planner. k27 then
+k28 retain their source/nonrigid roles and k28 owns every complete-default gap
+before appearance/final acceptance. No OCR/reordering subtree is commissioned.
+
 `geometry-policy-k40` commissions `rotation-processor-k41` before k27: design
 the smallest complete supported-rotation/flagged-unknown/review/any-page-edit/
 post-split-assembly/aligned-English-OCR/export workflow, with its own public and
@@ -561,8 +606,9 @@ chooses complete working slices, preserves k27 → k28, and keeps the full defau
 correction increment before k22/k23. k27's music source protocol is unchanged;
 k28 consumes the intermediate agreement and actual working successors rather
 than duplicating its initial design. It still owns the exact within-page
-evidence/completion and later geometry-design agreement. The root Done when
-is unchanged. Appearance requires accepted complete default correction, not
+evidence/completion and later geometry-design agreement. The current root Done
+when retains full within-page/book geometry under the human's geometry-only
+scope. Appearance requires accepted complete default correction, not
 the intermediate export alone; final k23 still verifies all root criteria.
 Working-slice charters must state reaction-pending retirement boundaries and
 precise missing-acceptance ownership. Numerical pass/fail/unavailable and human
@@ -585,3 +631,13 @@ Numerical source admissibility and source reactions stay separate under “yes�
 both Norwegian source replies remain unavailable, real-anchor/output reactions
 unperformed, and historical geometry/preparation separately “Not inspected yet”.
 No intermediate design/export or flag closes those obligations by proxy.
+
+The agreed-design handoff is now concrete: rotation-processor-k41 → rotation-processor-k45
+(earned design review) → any actionable review integration → rotation-processor-k44
+(fresh implementation planner) → k27 → k28 → complete-default successors →
+k22 → k23. The planner consumes the reviewed v2 spec/ADR and preserves all
+page/book public and visual seams, separate numerical/reaction ownership and
+the outstanding full within-page/default acceptance. Integration, if earned,
+lands immediately before that planner; no integration/implementation subtree
+is pre-created. OCR/reordering remain external. All shifted live consumer
+bodies are unchanged by these two inserts; stable handles govern references.

@@ -4,8 +4,8 @@
 ## Goal
 
 Design previewable optional paper whitening and noise removal on top of the
-working default processor, preserving accepted geometry, colour and fine detail.
-This is the successor increment; default corrected/searchable export remains
+working default processor, preserving accepted page/book geometry, colour and fine detail.
+This is the successor increment; default corrected-image export remains
 independently useful with appearance cleanup disabled.
 
 
@@ -26,6 +26,12 @@ using the root's representative real fixtures. Read the final workflow consumer
 `workflow-acceptance-k23`; it must remain behind this increment's implementation.
 
 ## Done when
+
+The human's latest k41 scope governs this consumer: page/book geometry and
+image-only export, with reordering/OCR external. Preserve accepted matching,
+page-side/group assignments and final visible images when appearance changes.
+Older OCR regeneration/alignment language below is no implementation obligation.
+Full default within-page and book-geometry acceptance still precedes this leaf.
 
 - Read the actual scoped design signatures and separate numerical/visual
   product dispositions carried through k43/k41/k28. Numerical acceptance with
@@ -52,8 +58,8 @@ using the root's representative real fixtures. Read the final workflow consumer
   detail evidence and human judgment, stating rejected choices and limitations.
   Neither geometry acceptance nor an OCR score establishes appearance fidelity.
 - Specify opt-in behaviour, per-page review and usable unchanged outcomes;
-  applying accepted cleanup changes the final visible image, and dependent OCR
-  is regenerated/aligned to that image. Disabled/reverted cleanup preserves the
+  applying accepted cleanup changes the final visible image for external OCR.
+  Disabled/reverted cleanup preserves the
   working default seam. No silently global whitening/denoising or replacement
   of visible content by recognized text.
 - Deliver the design agreement/spec and its checkable tests against the existing

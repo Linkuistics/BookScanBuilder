@@ -25,6 +25,16 @@ do not substitute the historical two-page experiment for a processor.
 
 ## Done when
 
+The latest human k41 instruction changes this product acceptance to page/book
+geometry with review and image-only export. Reordering and OCR are external;
+historical searchable-output/reordering criteria below do not commission those
+features. Check the revised agreed alignment/canvas/scale and odd/even/group/
+parity-break behaviour at the public seam, with all source occurrences/default
+order retained through split expansion and no stale earlier hidden text.
+Within-page correction, every fixed case and separate visual acceptance remain
+required. The scope correction and an intermediate geometry export accept none
+of those by themselves.
+
 - Verify k43/k41's scoped actual design signatures and independent numerical
   and human visual dispositions through the delivered default/appearance work.
   Pending/ambiguous/unavailable replies are no approval or rejection, and a
@@ -72,18 +82,18 @@ do not substitute the historical two-page experiment for a processor.
   Exercise flagged review plus adjustment of an otherwise unflagged page, and
   show the accepted final image in the exported PDF.
 - A real/synthetic spread fixture includes a blank half and a duplicated half.
-  Show default provenance/order/no silent deletion, then explicit user exclusion
-  or movement at book-page granularity, and verify final order, retained image
-  geometry and aligned English OCR after those accepted decisions.
-- Verify actual English text search and selection positions on the final PDF,
-  including gutter halves, a manually adjusted page and an earlier-OCR fixture.
-  Earlier text must not produce stale/duplicate misaligned selection. Compare
-  final visible images to the accepted images: OCR cannot silently rotate,
-  recolour or substitute them. Preserve every original on success/failure.
+  Show default provenance/order/no silent deletion and retained image geometry;
+  external tools own subsequent removal/reordering. Verify explicit side/group
+  assignment rather than treating PDF ordinal as printed-page parity.
+- Verify the final PDF embeds exactly the accepted visible images, in preserved
+  order after genuine spread expansion, and omits stale earlier hidden text.
+  Test page-pair/group alignment, shared canvas and the agreed scale policy with
+  independent known placement/side controls and real native/full-page views.
+  Preserve every original on success/failure. OCR is a separate external pass.
 - Verify optional whitening/noise removal at its shipped preview/apply/revert
   seam against faint-print, music, illustration and colour companions. Default
   disabled behaviour remains useful; applied/reverted decisions affect final
-  images and aligned OCR as designed. Record the user's visual judgment rather
+  images and accepted book geometry as designed. Record the user's visual judgment rather
   than deriving acceptance from numerical quality or silence.
 - Run new/changed and affected existing Taskfile recipes, including preparation
   command checks. Freeze subjects before/after with one writer and no mid-run

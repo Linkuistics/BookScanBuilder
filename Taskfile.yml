@@ -120,3 +120,27 @@ tasks:
       vars: [ARTIFACTS]
     cmds:
       - uv run --script experiments/norwegian_addressing.py --artifacts '{{.ARTIFACTS}}'
+
+  process:design-render:
+    desc: Render the agreed editable page/book geometry design (D2 0.9.0)
+    cmds:
+      - d2 --layout=dagre --theme=0 --dark-theme=200 docs/design/rotation-processor/workflow.d2 docs/design/rotation-processor/workflow.svg
+      - d2 --layout=dagre --theme=0 --dark-theme=200 docs/design/rotation-processor/review.d2 docs/design/rotation-processor/review.svg
+      - d2 --layout=dagre --theme=0 --dark-theme=200 docs/design/rotation-processor/versions.d2 docs/design/rotation-processor/versions.svg
+      - d2 --layout=dagre --theme=0 --dark-theme=200 docs/design/rotation-processor/book-alignment.d2 docs/design/rotation-processor/book-alignment.svg
+      - cp docs/specs/prepared-pdf.md docs/design/rotation-processor/prepared-pdf-reference.md
+      - cp docs/adr/prepared-page-hints.md docs/design/rotation-processor/prepared-page-hints-reference.md
+      - cp docs/adr/geometry-review-handoff.md docs/design/rotation-processor/geometry-review-handoff-reference.md
+      - >-
+        uv run --no-project --python 3.12 --with 'markdown==3.9' python -c
+        'from pathlib import Path; import markdown;
+        source = Path("docs/specs/rotation-processor.md").read_text();
+        body = markdown.markdown(source, extensions=["tables", "toc"]);
+        body = body.replace("href=\"../adr/prepared-page-hints.md\"", "href=\"prepared-page-hints-reference.md\"").replace("href=\"../adr/geometry-review-handoff.md\"", "href=\"geometry-review-handoff-reference.md\"").replace("href=\"../design/rotation-processor/README.md\"", "href=\"index.html#discussion\"");
+        page = "<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content=width=device-width><title>Page and book geometry — Design v2</title><style>body{font:17px/1.6 system-ui;margin:2rem auto;max-width:85ch;padding:0 1rem;color:#172d40;background:#fff}h1,h2,h3{scroll-margin-top:2rem}table{border-collapse:collapse;width:100%}td,th{border:1px solid #ccd5dd;padding:.5rem;text-align:left}a{color:#075ea5}code{overflow-wrap:anywhere}pre{overflow:auto}@media(prefers-color-scheme:dark){body{color:#ddd;background:#182028}a{color:#9acfff}td,th{border-color:#526272}}</style><a href=index.html#discussion>Editable visual discussion</a><main>" + body + "</main></html>";
+        Path("docs/design/rotation-processor/contract.html").write_text(page)'
+
+  process:design-serve:
+    desc: Serve only the page/book geometry design on localhost
+    cmds:
+      - python3 -m http.server '{{.DESIGN_PORT}}' --bind 127.0.0.1 --directory docs/design/rotation-processor
