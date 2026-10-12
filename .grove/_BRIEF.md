@@ -658,8 +658,8 @@ is inferred; full within-page/default acceptance remains k28's before k22/k23.
 The agreed v2 design and k46 clarifications retain four stage owners in this
 existing workspace/tree. k52 decomposes the oversized first owner into two
 complete useful handoffs. k53 now retains its whole baseline handoff as a node,
-with baseline-delivery-k56 awaiting the scoped boundary decision identified by
-retired baseline-review-k55 and repaired through k57/k58 before k54. This carries
+with baseline-delivery-k56 recording the permitted finite-review staging and
+commissioning its focused boundary design before k54. This carries
 forward the human's earlier
 one-tree choice; it attributes no new workspace answer to k39 or k41. Each
 stage must stay green and demonstrable without its successor. The dependency is
@@ -675,21 +675,23 @@ behaviour, not module location. The shell commands remain `bookscan process PDF
 | `book-placement-k50` | Explicit side/body-run/group review, integer placement and common canvas with full/native/pair/group acceptance/resume/export | Full within-page correction and full-default representative acceptance remain k28's. |
 
 baseline-review-k55 found no substantiated smaller browser-first baseline handoff
-among its examined cuts. Its explicit fallback commissions baseline-delivery-k56
-inside k53 to settle a temporary finite command-driven inspection/disposition/
-resume/acknowledged-export boundary before the browser, or a different agreed
-browser-first session boundary. k58 repairs the question's twelve-criterion
-accounting, original browser rationale and interim-to-final command/event policy.
-If browser-first is required, k56 names a scoped multi-session delivery exception
-or an explicitly designed flat-raster domain restriction, disclosing each waiver
-and the lack of demonstrated size reduction for the latter. All are proposals:
-an actual verbatim scoped reply is required. Only the actual agreed boundary
-earns its design/work plan and working cuts, including full browser completion
-inside k53 before k54; a still-oversized design returns its specific residual
-trade-off rather than creating an identical unanswered planning loop. k53's
-complete original baseline/browser closure, k47's orientation closure and all
-later ownership stay live. No signed interface, session-rule exception, product
-acceptance, representation change or missing visual approval is inferred here.
+among its examined cuts. In baseline-delivery-k56 the human replied verbatim
+“Permit the temporary finite reviewer staging” to the repaired k57/k58 question,
+including all twelve first-handoff accounting rows. This permits temporary finite
+matched-view inspection, revision-scoped dispositions/inspection/acknowledgement,
+saved resume and unchanged-baseline export before the browser. It grants no
+multi-session exception or flat-raster restriction and changes no representation,
+fidelity/safety obligation or product/visual acceptance. The focused
+baseline-delivery design inside k53 must settle usability, finite commands/help/
+results, view-to-revision identity, lifecycle and private compatibility, and the
+interim-to-browser command names/blocking semantics/schema evolution/survival.
+It must demonstrate complete useful cuts and obtain detailed public/test-seam
+agreement; a still-oversized design inventories the coupled work and returns the
+specific residual trade-off while retaining the same live owner. Only its actual
+agreed artifact earns lazy review and fresh implementation planning, including
+concrete complete working browser ownership inside k53 before k54. k53's complete
+original baseline/browser closure, k47's orientation closure and all later
+ownership stay live; finite retirement or planning cannot close either node.
 
 The k47 node is earned by k51's concrete session-size finding, not speculative
 infrastructure work. No integration is pre-created. A stage that truly outgrows its

@@ -171,3 +171,108 @@ evidenced boundary conflict. It does not reject the signed browser product or
 replace it with a permanent command-only editor. Do no product work, fixed-case
 measurement or driver launch. Cut further work from the actual reply; do not
 pre-grow contingent implementation, a future review or another source study.
+
+## Decisions (running log)
+
+Loaded the mandated grove-requirements skill first, then the Grove spine.
+Bootstrap resolved this live leaf in the stated jj workspace and read the
+glossary, complete root -> k47 -> k53 brief chain, both ADRs, current v2 design,
+k46's F9 disposition and k55's boundary assessment with its actual k57/k58
+review/integration. The working change was empty at parent 9815d919. The existing
+Taskfile remains the reusable development entry point. No product, spec, ADR,
+measurement or driver work is commissioned in this requirements session.
+
+There is one open requirements choice: permit the temporary finite reviewer
+staging, or retain browser-first and resolve its delivery boundary. The detailed
+command/identity/compatibility questions belong to the resulting agreed-boundary
+design, not a full grilling here. Presented the concrete finite import -> matched
+full/native inspection -> revision-scoped dispositions/inspection/acknowledgement
+-> saved resume -> exact baseline export workflow, recommending finite staging.
+The question includes all twelve first-handoff accounting rows, the unchanged
+coupled rendering/analyzer/helper/fidelity/writer-fault/six-case work, v2's exact
+browser rationale and k46's F9 choice, and interim command/event transition risks.
+It discloses both conditional browser-first resolutions and their exact waivers,
+recommending the explicit multi-session delivery exception for that branch.
+Permission is still pending; no preselection or elapsed time supplies a reply.
+Full browser completion remains inside k53 before k54, and no implementation size,
+fidelity, geometry, test-seam agreement or visual acceptance is inferred.
+
+Tier 2 verification confirmed graph project
+Users-antony-Development-BookScanBuilder. Exact-path coverage for every relied-on
+contract/planning artifact at generation 2026-10-12T07:55:48Z reports
+metadata_match/no_recorded_issue, a best-effort signal rather than completeness.
+All Markdown was read directly. This session makes no new structural code or
+runtime claim and therefore needs no additional symbol or call-chain discovery.
+The original Grove tree and signed contract digests were frozen before edits at
+/private/tmp/bookscan-k56.84miIS. An unavailable answer leaves this same leaf live;
+no contingent design, planner, implementation or duplicate response leaf is cut.
+
+The human replied verbatim: **“Permit the temporary finite reviewer staging”**
+to the presented question about finite review before complete browser review
+inside k53 and before k54. This explicitly permits the proposed temporary
+interface/lifecycle/test-path staging. It preserves the ordinary static-PDF,
+immutable complete 300-dpi MediaBox RGB, every-page advisory assessment,
+source-native fidelity, durable revision-scoped dispositions/resume/scoped
+acknowledgement and exact unchanged-baseline export contracts. All twelve
+accounting rows and their acceptance ownership remain binding. The reply chooses
+neither browser-first alternative and supplies no multi-session exception,
+flat-raster restriction, representation change, geometry or visual approval.
+
+The agreed staging test path is installed preparation -> finite matched-view
+inspection/dispositions/inspection scope/acknowledgement -> saved resume ->
+unchanged-baseline export, with observed denied collection reads and all retained
+independent fidelity, actual writer-PID fault and six-case/resource checks. The
+full real-browser/action/security/Stop/live-export path remains required with
+the working browser completion inside k53 before k54. This is staging permission,
+not agreement to undesigned command syntax, view delivery, result schema or their
+final detailed public/test seams. The focused design must obtain that agreement
+before committing its design and cutting implementation planning.
+
+Commission the focused baseline-delivery boundary design as this session's final
+work act. It must design the smallest usable finite review/acknowledgement/export
+interface and compatible browser completion, substantiate complete useful cuts,
+and preserve k55's twelve-criterion coverage. If its first handoff remains too
+large, inventory the coupled components and acceptance, demonstrate useful cuts
+inside the permitted interface, or return the specific residual trade-off with
+evidence and a recommendation while keeping that same design live for any
+unavailable answer. Only an actual agreed design earns its lazy review and fresh
+implementation planner, which must cut concrete working browser completion
+inside k53 before k54. This requirements decision closes neither k53 nor k47.
+
+Reconciled the three ancestor staging summaries with that actual reply, preserving
+their original Goal/Done when and every downstream owner. No new ADR is earned:
+temporary work staging is reversible, and detailed durable interface choices are
+the focused design's artifact. The signed spec/ADR set stays unchanged until that
+design establishes its current contract. No additional requirements review is
+earned by faithfully recording this reply and its already-reviewed scope; the
+resulting actual design will judge its own lazy review. No competing in-session
+reviewer or contingent implementation/planner is cut.
+
+Pre-cut structural verification compared every original Grove item with the
+frozen tree. Only this running log and the three staging summaries differ;
+root/k47/k53 Goal and Done when are byte-identical, this complete original
+requirements charter survives as a byte-identical prefix, k27's entire protocol
+and all other original task files match, and k54 -> k48 -> k49 -> k50 -> k27 ->
+k28 -> k22 -> k23 retains order. Deliberately wrong protocol/closure/order
+controls were rejected. All verifier/tree/contract read-subject digests stayed
+stable during the run, with per-item evidence in verification-before-cut.json
+under the frozen directory. The independent signed-contract checksum check and
+jj's complete diff show no product, spec, ADR, glossary or Taskfile edits.
+No runtime/product test is needed or claimed for this requirements/tree change.
+
+As the final work act, cut and fully chartered design baseline-delivery-k59 inside
+k53, before unchanged k54. It owns finite usability/identity/commands/lifecycle,
+private and public transition compatibility, all twelve retained criteria, the
+session-size demonstration/residual-trade-off branch, detailed seam agreement
+and the eventual complete working browser ownership. No planner, implementation,
+review or further source study is pre-created. The live-tree verification passed
+item by item with k59 as the sole new path; all original unrelated tree files and
+closure/order controls still match, and every read subject stayed frozen. Evidence
+is verification-live.json in the frozen directory. Exact-path/scope coverage at
+generation 2026-10-12T08:15:27Z reports metadata_match/no_recorded_issue for the
+edited artifacts and new charter, with no recorded Grove-scope gap; this remains
+best-effort and the complete tree was read directly. All existing review declaration
+lines were enumerated; none names this requirements producer, so no creator line
+is due. Retire only k56 and seal its focused jj change. The live k59 design keeps
+k53 open, k54 keeps k47's orientation completion open, and the remaining consumers
+keep the root open; no parent closure, promotion or teardown is due.

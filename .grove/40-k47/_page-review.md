@@ -111,17 +111,19 @@ plans the smaller useful working cuts from the actual implementation size findin
 No baseline product or acceptance result was delivered by the decomposition;
 k53 and this node stay open. All baseline completion remains ahead of k54.
 
-k55 takes its explicit requirements fallback after examining narrower inputs and
-controls: baseline-delivery-k56 resolves a temporary finite review/export boundary
-before the browser, or a different agreed browser-first session boundary. k58
-repairs that question with per-criterion staging costs, v2's browser rationale,
-command/event transition ownership and concrete browser-first alternatives with
-their exact waivers. A still-oversized design must name the residual trade-off;
-no changed interface or session exception is authorized by the proposal. Its
-actual scoped reply earns design/work planning and complete working cuts inside
-k53, including browser completion before k54; k53's full closure and this node's
-orientation closure are preserved before k48. Planning or finite-only review
-cannot satisfy either node. No new source study or product acceptance is inferred.
+k55's explicit requirements fallback has its actual answer in baseline-delivery-k56:
+“Permit the temporary finite reviewer staging”. The repaired twelve-criterion
+accounting and retained ordinary-PDF/300-dpi RGB/assessment/fidelity/safety contracts
+scope that permission. Commission its focused finite review/acknowledgement/export
+and compatible browser-completion design inside k53. Detailed commands, view/
+revision identity, lifecycle, schema/command transition and public/test seams still
+need actual design agreement. A still-oversized design inventories the remaining
+work and returns the specific residual trade-off, not an identical unanswered
+planning loop. Only the actual agreed artifact earns lazy review and fresh
+implementation planning with concrete working browser completion before k54.
+k53's original full browser closure and this node's orientation closure stay
+intact before k48; finite-only review or planning cannot satisfy either node.
+No multi-session exception, input restriction, new study or acceptance is inferred.
 
 ## Notes
 

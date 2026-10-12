@@ -108,25 +108,27 @@ All resulting baseline work precedes page-orientation-k54; no geometry ownership
 signed representation or missing-acceptance policy changes by this decomposition.
 
 k55's boundary assessment found no substantiated smaller same-interface handoff
-among its examined cuts. baseline-delivery-k56 now owns the concrete requirements
-question: permit finite command-driven full/native inspection with durable scoped
-dispositions/resume/acknowledged export before the browser, or retain browser-first
-and resolve a different explicit session boundary. Its recommended interim keeps
-the ordinary static-PDF/300-dpi RGB/every-page-assessment contract. This is a
-proposal requiring an actual reply, not authorization to build headless import.
-Integration k58 repairs k56's question with twelve-criterion staging accounting,
-the original browser rationale and interim-to-final command/event consequences.
-Its browser-first alternatives disclose an explicit multi-session work exception
-or a designed flat-raster domain restriction; neither is authorized or proved
-session-sized here. On actual permission, k56 commissions the corresponding
-boundary design/work plan here. A changed-interface design must demonstrate
-complete useful cuts or return its specific residual trade-off with an inventory;
-only the actual agreed design earns its planner and complete working charters,
-including concrete full browser completion here before k54. No identical planner
-or implementation is pre-created. Original Goal/Done when above remain intact;
-k53 cannot close on this decision, planning or a finite-only interim. All full
-browser completion remains ahead of k54. See k55 for criterion-by-criterion
-coverage and the examined alternatives; pending human choice stays in k56.
+among its examined cuts. baseline-delivery-k56 obtained the verbatim answer
+“Permit the temporary finite reviewer staging” to the repaired k57/k58 question.
+The permission covers finite matched source/full/native inspection with durable
+revision-scoped dispositions/inspection/acknowledgement, saved resume and exact
+unchanged-baseline export before the browser. Its twelve-criterion accounting
+retains ordinary static-PDF/300-dpi RGB/every-page assessment, independent fidelity,
+writer safety, six-case packets and compatibility. No browser-first alternative,
+multi-session exception, input restriction or measured size reduction is approved.
+Commission the focused baseline-delivery design here to settle finite usability,
+commands/help/results, view-to-revision identity, dispositions/scoped acknowledgement,
+lock/signal/publication lifecycle, private reader compatibility and interim-to-final
+names/blocking semantics/event schemas/command survival. It must demonstrate
+complete useful cuts and obtain detailed public/test-seam agreement, or inventory
+the remaining coupled work and return the specific residual trade-off while
+keeping that same design live for an unavailable answer. Only its actual agreed
+artifact earns lazy review and a fresh implementation planner with concrete
+complete working browser ownership here before k54. No identical planner or
+implementation is pre-created. Original Goal/Done when above remain intact;
+k53 cannot close on this decision, planning or a finite-only interim. Full browser
+completion remains ahead of k54. See k55 for criterion coverage and the examined
+alternatives, and k56's running log for the exact scoped reply.
 
 ## Decisions (running log)
 
