@@ -685,6 +685,17 @@ before k47. No in-session review competes with that scheduled review.
 
 ### Contract inherited by all four working charters
 
+baseline-review-k55 found no substantiated smaller browser-first baseline handoff
+among its examined cuts. Its explicit fallback commissions baseline-delivery-k56
+inside k53 to settle a temporary finite command-driven inspection/disposition/
+resume/acknowledged-export boundary before the browser, or a different agreed
+browser-first session boundary. This recommendation changes no signed interface:
+an actual scoped human reply is required before its changed-boundary design,
+and only an actual agreed design earns working cuts. k53's complete original
+baseline/browser closure, k47's orientation closure and all later consumer
+ownership stay live. No duplicate unresolved planner, implementation, source
+study, representation change or missing visual approval is inferred.
+
 Read the complete current `docs/specs/rotation-processor.md`, both cited ADRs,
 k41/k45/k46 and k44, and the actual preceding stage's artifact/acceptance rather
 than assuming that a retired task passed. The following obligations bind every

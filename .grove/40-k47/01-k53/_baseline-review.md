@@ -107,6 +107,20 @@ acceptance. No horizontal infrastructure or acceptance-only child is authorized.
 All resulting baseline work precedes page-orientation-k54; no geometry ownership,
 signed representation or missing-acceptance policy changes by this decomposition.
 
+k55's boundary assessment found no substantiated smaller same-interface handoff
+among its examined cuts. baseline-delivery-k56 now owns the concrete requirements
+question: permit finite command-driven full/native inspection with durable scoped
+dispositions/resume/acknowledged export before the browser, or retain browser-first
+and resolve a different explicit session boundary. Its recommended interim keeps
+the ordinary static-PDF/300-dpi RGB/every-page-assessment contract. This is a
+proposal requiring an actual reply, not authorization to build headless import.
+On permission, k56 commissions the changed-boundary design here; only the actual
+agreed design cuts its planner and complete working charters. No identical planner
+or implementation is pre-created. Original Goal/Done when above remain intact;
+k53 cannot close on this decision, planning or a finite-only interim. All full
+browser completion remains ahead of k54. See k55 for criterion-by-criterion
+coverage and the examined alternatives; pending human choice stays in k56.
+
 ## Decisions (running log)
 
 The mandated impl skill was loaded first, followed by the Grove spine. Bootstrap
