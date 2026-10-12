@@ -6,7 +6,7 @@ unmarked PDF and treat every marker as a reviewable hint; `content` records only
 the absence of an explicit front/back assignment in that assembly. The field
 schema and reader behaviour are specified in [Prepared PDF](../specs/prepared-pdf.md#embedded-page-roles).
 
-This convention binds two increments and persists in the user's exported PDFs,
+This convention binds preparation and geometry import and persists in prepared PDFs,
 so changing its meaning requires continued reader compatibility. The
 [copying evidence](../research/prepared-pdf-copy.md) demonstrates independent
 roles on repeated unannotated pages and identifies the page-piece convention.
@@ -18,3 +18,6 @@ the simpler inert dictionary with explicit versioning and optional consumption;
 no timestamp or source digest grants an exemption from geometry review.
 Reconsider the container if a required interoperability consumer needs
 page-piece data, retaining support for existing version-1 hints.
+Geometry export omits these assembly hints; its separate
+[review report](geometry-review-handoff.md) records transformed/split lineage
+without redefining version-1 immediate-source provenance.

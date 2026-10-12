@@ -4,13 +4,13 @@ classes: {
 }
 snapshot: Start here\nFrozen PDF + complete baselines {class: start}
 state: Saved geometry revision\nImages + split lineage + sides\nReferences + targets + dispositions
-action: Versioned review action\nOne writer, stale actions rejected
-local: Accepted local edit\nNew page image\nDependent alignment invalidated
+action: Authenticated versioned action\nKernel writer lock / stale actions rejected
+local: Accepted local edit\nRe-mark replaced-image anchors\nReference edit invalidates all dependents
 shared: Shared target / reference change\nAffected group alignment invalidated
 side: Side / anchor / split change\nAffected placement proposals invalidated
-review: Regenerate affected alignment\nScoped preview and acceptance
+review: Regenerate affected alignment\nOverflow reopens target / never clips\nScoped preview and acceptance
 freeze: Freeze accepted geometry snapshot\nAll occurrences and default order
-published: Validate images / canvases / report\nNo-clobber image-only PDF
+published: Validate images / canvases / JSON report\nNo-clobber image-only PDF / no preparation hints
 snapshot -> state: "1. verified import"
 state -> action: "2. compare then act"
 action -> local: page geometry

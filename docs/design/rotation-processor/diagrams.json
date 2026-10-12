@@ -3,23 +3,26 @@
   "intro": "Current scope: page geometry and book alignment/matching, including odd/even or left/right assignments. Reordering and OCR are separate third-party passes. Dark Start here nodes mark graph entry; numbered edges give order. Within-page correction remains evidence-dependent.",
   "groups": [
     {"id":"workflow","title":"Geometry workflow","description":"One PDF to reviewed geometry images; external reordering and OCR follow separately."},
-    {"id":"book","title":"Book geometry","description":"Explicit page sides, layout groups, reference anchors and matching targets."},
+    {"id":"book","title":"Book geometry","description":"Independent body runs and geometry groups, explicit sides/repeats, reference anchors and matching targets."},
     {"id":"review","title":"Geometry review","description":"Compare and adjust any page or group; preserve all occurrences and order."},
     {"id":"versions","title":"Saved geometry lifecycle","description":"Local changes and shared references invalidate dependent placements, not unrelated accepted pages."}
   ],
   "discussion": {
     "title":"Geometry-only design and scale-preserving matching agreed",
-    "status":"Agreed — Design v2; working-product acceptance outstanding",
+    "status":"Agreed — Design v2 with review clarifications; working-product acceptance outstanding",
     "summary":"The human replied verbatim “agreed” to the presented v2 design and preserved-scale matching policy. The contract covers shell/local-browser page correction and book alignment, saved review, image-only export and public/full/native/pair/group test seams. Reordering and OCR are external. Scale normalization is not commissioned. No placement may silently clip content or certify unmeasured local distortion. Read the actual agreement/scope using the link above. The earned design review precedes implementation planning; no real output or historical comparison is accepted by this signature.",
     "diagramIds":["workflow","book-alignment","review","versions"],
     "updatedDiagrams":[
-      {"id":"book-alignment","summary":"Settled preserved page scale for translation/padding and mirrored binding-margin placement."}
+      {"id":"workflow","summary":"Fixed 300-dpi MediaBox RGB import exposes source-fidelity and extent reasons; split/rotation/crop order is explicit."},
+      {"id":"book-alignment","summary":"Independent runs/groups and duplicate parity; white padding, canvas growth and unresolved unpositioned members at preserved scale."},
+      {"id":"review","summary":"Baseline retention is unresolved, drafts/stale placements block export and acknowledgement accepts no rotation."},
+      {"id":"versions","summary":"Reference edits invalidate all dependents; overflow reopens target review, authenticated actions and kernel locks protect checkpoints."}
     ]
   },
   "diagrams":[
-    {"id":"workflow","group":"workflow","title":"Geometry PDF and external passes","renderer":"svg","source":"workflow.d2","rendered":"workflow.svg","caption":"Design v2 preserves input order and every occurrence, expanding only confirmed genuine spreads. The useful output is accepted page images. Within-page evidence/correction is still required for full-default acceptance."},
-    {"id":"book-alignment","group":"book","title":"Page sides and mirrored alignment","renderer":"svg","source":"book-alignment.d2","rendered":"book-alignment.svg","caption":"Left/right mapping is explicitly declared, not inferred from PDF index. Reference frames guide registration without cropping other content. Match top and inner placement by translation/padding at the agreed preserved scale; images themselves are never mirrored."},
-    {"id":"review","group":"review","title":"Page correction and book placement","renderer":"svg","source":"review.d2","rendered":"review.svg","caption":"Original/current full and native views support local geometry; pair/group views expose placement, margins and sides. Any page is adjustable. Acceptance, discard/revert and unresolved reasons remain explicit."},
-    {"id":"versions","group":"versions","title":"Geometry dependencies stay consistent","renderer":"svg","source":"versions.d2","rendered":"versions.svg","caption":"Saved projects resume without collection access. Local image changes, shared target/reference changes and side/split changes invalidate their dependent alignment proposals. Export freezes one accepted geometry snapshot with unchanged default ordering."}
+    {"id":"workflow","group":"workflow","title":"Geometry PDF and external passes","renderer":"svg","source":"workflow.d2","rendered":"workflow.svg","caption":"Design v2 preserves every occurrence/order. The 300-dpi RGB baseline re-rasterises input; source-fidelity and changed CropBox extent stay explicit. Confirmed halves use source region, rotation, rotated-frame crop, then placement. Export adds no further sampling. Full within-page acceptance remains outstanding."},
+    {"id":"book-alignment","group":"book","title":"Page sides and mirrored alignment","renderer":"svg","source":"book-alignment.d2","rendered":"book-alignment.svg","caption":"Body runs assign sides independently of geometry groups; explicit repeats retain a side without advancing parity. Frames guide registration without cropping. White translation/padding preserves scale and retained pixels; canvases may grow. Unpositioned members retain their own canvas unresolved. Images are never mirrored."},
+    {"id":"review","group":"review","title":"Page correction and book placement","renderer":"svg","source":"review.d2","rendered":"review.svg","caption":"Source/baseline/current full and labelled native views support any-page review; pair/group views expose added bands, margins and sides. Drafts and stale placements block export until accepted/discarded or removed. Snapshot acknowledgement can retain unresolved baselines without accepting rotation or implying inspection."},
+    {"id":"versions","group":"versions","title":"Geometry dependencies stay consistent","renderer":"svg","source":"versions.d2","rendered":"versions.svg","caption":"Reference-image edits invalidate all dependent placements and require re-marked anchors; member overflow reopens target review. Authenticated versioned actions and a kernel-released writer lock protect durable checkpoints. Export freezes one snapshot and includes a readable JSON attachment, omitting preparation hints. Reimport starts fresh."}
   ]
 }

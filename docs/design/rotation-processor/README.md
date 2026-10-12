@@ -1,7 +1,10 @@
 # Page and book geometry discussion
 
 Design v2 is agreed: the human replied **“agreed”** to the presented geometry-only
-design and preserved-scale alignment. Reordering and OCR remain external.
+design and preserved-scale alignment. Review clarifications expose the fixed
+300-dpi MediaBox RGB import's fidelity/extent costs and define existing
+coordinate, parity, disposition, dependency and report/server contracts.
+Reordering and OCR remain external.
 The current contract and public/visual seams are
 [Page and book geometry](../../specs/rotation-processor.md). This agreement does
 not accept a working product or unresolved within-page geometry.
@@ -14,7 +17,7 @@ registration-dependency views, not physical scale drawings or checked models.
 - [Agreement → Geometry-only Design v2](http://127.0.0.1:8770/contract.html#agreement) — Recorded the actual “agreed” reply and its design/test-seam scope, without attributing output inspection or acceptance.
 - [Book geometry → Page sides and mirrored alignment](http://127.0.0.1:8770/#diagram-book-alignment) — Settled scale preservation; placement uses translation/padding and never mirrors page images.
 
-Unchanged discussion context: [workflow](http://127.0.0.1:8770/#diagram-workflow),
+Reviewed discussion: [workflow](http://127.0.0.1:8770/#diagram-workflow),
 [page/group review](http://127.0.0.1:8770/#diagram-review) and
 [saved geometry dependencies](http://127.0.0.1:8770/#diagram-versions).
 

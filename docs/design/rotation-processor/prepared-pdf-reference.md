@@ -323,8 +323,10 @@ treat absent/unknown/malformed markers as unavailable hints, and never reopen a
 source by digest or path. Moving a page with its dictionary moves its role;
 third-party tools may discard private data. Hints do not exempt covers or
 previously processed content from geometry assessment or later review.
-Post-split book-page order and exclusions remain the processor's responsibility.
-This does not choose the processor's correction, OCR or review implementation.
+The geometry processor preserves every occurrence and order, expanding confirmed
+spreads in declared reading order. Subsequent removal/reordering and OCR belong
+to separate tools. This does not choose the processor's correction or review
+implementation.
 
 ## Originals and output publication
 
@@ -563,9 +565,10 @@ recipe still calls, or replace/remove its recipe and verify the replacement.
 ## Scope boundary
 
 Preparation is independently useful with ordinary PDF readers. Geometry,
-border removal, spread classification/splitting, OCR and review controls are
-later work. This design supplies their sole required PDF input and optional
-role hints. Native packaging, a GUI, a multi-book queue, collection discovery,
+border removal, spread classification/splitting and review controls belong to
+the geometry processor; OCR and later removal/reordering use separate tools.
+This design supplies the sole required geometry input and optional role hints.
+Native packaging, a GUI, a multi-book queue, collection discovery,
 appearance cleanup and general interactive-PDF editing are unnecessary for this
 increment. Shell loops may call the single-book command repeatedly.
 

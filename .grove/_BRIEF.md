@@ -392,8 +392,9 @@ Preparation accepts explicitly selected source PDFs/pages, preserves content
 order by default and permits deliberate reordering/exclusion at PDF-page
 granularity. Cover roles and placement are explicit, including multi-page
 covers and the already-assembled/no-cover case; page count or filename cannot
-decide roles. The processor owns equivalent controls for halves created by
-spread splitting. Preparation preserves each complete selected PDF page's
+decide roles. The geometry processor preserves every half created by confirmed
+spread splitting in declared reading order; external tools own later removal
+and reordering. Preparation preserves each complete selected PDF page's
 visible content and canvas, with no spread classification, warping, appearance
 cleanup or OCR. Selection errors must be actionable; source/output collisions
 and failed/interrupted writes cannot corrupt originals.
@@ -633,11 +634,21 @@ unperformed, and historical geometry/preparation separately “Not inspected yet
 No intermediate design/export or flag closes those obligations by proxy.
 
 The agreed-design handoff is now concrete: rotation-processor-k41 → rotation-processor-k45
-(earned design review) → any actionable review integration → rotation-processor-k44
+(earned design review) → rotation-processor-k46 (integrated clarifications) → rotation-processor-k44
 (fresh implementation planner) → k27 → k28 → complete-default successors →
 k22 → k23. The planner consumes the reviewed v2 spec/ADR and preserves all
 page/book public and visual seams, separate numerical/reaction ownership and
 the outstanding full within-page/default acceptance. Integration, if earned,
 lands immediately before that planner; no integration/implementation subtree
 is pre-created. OCR/reordering remain external. All shifted live consumer
-bodies are unchanged by these two inserts; stable handles govern references.
+bodies are unchanged by these inserts; stable handles govern references.
+
+k46 retains the signed 300-dpi MediaBox RGB baseline and exposes source-relative
+downsampling/colour/extent limitations; unchanged baseline bytes or an export
+acknowledgement cannot pass failed preservation by proxy. Coordinate composition,
+run/group/repeat parity, padding/unpositioned members, reference/overflow
+invalidation, unresolved dispositions, report schema/hint omission and authenticated
+server/lock/stop semantics are now explicit at the same public/full/native/pair/
+group seams. k44 consumes those repaired cases and actual unresolved outcomes.
+No new signature, source study, production geometry acceptance or root closure
+is inferred; full within-page/default acceptance remains k28's before k22/k23.

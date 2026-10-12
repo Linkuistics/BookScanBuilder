@@ -3,15 +3,15 @@ classes: {
   start: {style: {fill: "#17334b"; font-color: white; bold: true}}
 }
 open: Start here\nANY page or geometry group {class: start}
-compare: Original / current\nFull page + native detail\nPair / group alignment views
+compare: Source / baseline / current\nFull page + labelled native detail\nPair / group alignment views
 choose: Choose adjustment {shape: diamond}
 local: Page correction\nRotation / crop / split
 book: Book placement\nSide / anchor / translation / canvas
 preview: Draft preview\nShow affected pages and retained content
 accept: Accept displayed change\nSave new geometry revision
 discard: Discard or revert\nRecover retained baseline
-unresolved: Retain unresolved\nRecord exact concern
-final: Export screen\nEvery page remains in default order\nAcknowledge geometric limitations
+unresolved: Retain baseline / local image unresolved\nRecord concern and inspection scope
+final: Export screen\nDiscard drafts / remove stale placements first\nAcknowledge exact unresolved snapshot
 open -> compare: "1. inspect"
 compare -> choose: "2. choose"
 choose -> local

@@ -2,15 +2,15 @@ direction: down
 classes: {
   start: {style: {fill: "#17334b"; font-color: white; bold: true}}
 }
-start: Start here\nDeclare matching group and page-side anchor {class: start}
-sequence: Confirm side sequence\nCovers / front matter / blanks explicit\nBreak or reanchor missing-page parity
+start: Start here\nDeclare body run / side and independent geometry group {class: start}
+sequence: Confirm side sequence\nBlanks advance / explicit repeats do not\nChapter group keeps run side / reanchor breaks
 reference: Choose reference page or pair\nMark top and inner content anchors
-canvas: Shared canvas and target guides
+canvas: Common canvas and target guides\nWhite padding / visible paper-size growth
 left_page: Left-page placement\nInner edge towards binding on right
 right_page: Right-page placement\nInner edge towards binding on left
 shift: Translation + padding\nPreserve each page's scale\nNever mirror page images
 check: Full / native / pair / group preview\nAll retained content fits? {shape: diamond}
-resize: Enlarge target or reject proposal\nA crop needs its own acceptance
+resize: Enlarge target or reject proposal\nUnpositioned member retains own canvas unresolved\nA crop needs its own acceptance
 accept: Accept group or individual placement\nDefault page order unchanged
 start -> sequence: "1. assign, never infer from PDF ordinal"
 sequence -> reference: "2. choose layout evidence"
