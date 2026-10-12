@@ -635,13 +635,13 @@ No intermediate design/export or flag closes those obligations by proxy.
 
 The agreed-design handoff is now concrete: rotation-processor-k41 → rotation-processor-k45
 (earned design review) → rotation-processor-k46 (integrated clarifications) → rotation-processor-k44
-(fresh implementation planner) → k27 → k28 → complete-default successors →
+(fresh implementation planner) → k47 → k48 → k49 → k50 → k27 → k28 → complete-default successors →
 k22 → k23. The planner consumes the reviewed v2 spec/ADR and preserves all
 page/book public and visual seams, separate numerical/reaction ownership and
 the outstanding full within-page/default acceptance. Integration, if earned,
-lands immediately before that planner; no integration/implementation subtree
-is pre-created. OCR/reordering remain external. All shifted live consumer
-bodies are unchanged by these inserts; stable handles govern references.
+lands immediately before that planner; k44's concrete cuts and earned planning
+review are described below. OCR/reordering remain external. Stable handles govern
+references; k44 adds explicit missing-acceptance ownership to its consumers below.
 
 k46 retains the signed 300-dpi MediaBox RGB baseline and exposes source-relative
 downsampling/colour/extent limitations; unchanged baseline bytes or an export
@@ -652,3 +652,174 @@ server/lock/stop semantics are now explicit at the same public/full/native/pair/
 group seams. k44 consumes those repaired cases and actual unresolved outcomes.
 No new signature, source study, production geometry acceptance or root closure
 is inferred; full within-page/default acceptance remains k28's before k22/k23.
+
+## Reviewed-design working slices from k44
+
+The agreed v2 design and k46 clarifications are planned as four useful
+stages in this existing workspace/tree. This carries forward the human's earlier
+one-tree choice; it attributes no new workspace answer to k39 or k41. Each
+stage must stay green and demonstrable without its successor. The dependency is
+behaviour, not module location. The shell commands remain `bookscan process PDF
+--workdir PROJECT`, `bookscan review PROJECT` and `bookscan export PROJECT
+--output PDF`, with authenticated browser review and normal Stop review.
+
+| Stage / owner | Independent useful handoff | Scope deliberately left to successor |
+| --- | --- | --- |
+| `page-review-k47` | Full-page RGB import/assessment, source/full/native inspection, any-page exact right-angle orientation, saved accept/discard/revert and acknowledged image-only export | Fractional rotations, crops, splitting and book placement are visibly unsupported; every occurrence remains whole. Skew suggestions are assessment records, never applied edits. |
+| `rigid-pages-k48` | Accept/adjust/reject fractional rigid proposals and restorable four-edge crops through the same resume/export reader | No spread expansion or group placement yet. Ambiguous/curved geometry remains retained/unresolved. |
+| `spread-pages-k49` | Confirm genuine spreads, edit each complete half independently and export expanded order/provenance | Book-side matching follows; single landscape pages remain single. |
+| `book-placement-k50` | Explicit side/body-run/group review, integer placement and common canvas with full/native/pair/group acceptance/resume/export | Full within-page correction and full-default representative acceptance remain k28's. |
+
+No speculative node or integration is created. A stage that truly outgrows its
+session decomposes lazily at a complete narrower public handoff, keeping the
+remaining concrete work before its consumer. It cannot split storage, rendering,
+UI or verification into dead horizontal children. A new state is usable in its
+reader, any-page/group controls as applicable, resume and export in the same leaf.
+An implementation's earned review/integration runs before the next stage; it is
+cut only from the actual completed artifact. k44's earned planning review runs
+before k47. No in-session review competes with that scheduled review.
+
+### Contract inherited by all four working charters
+
+Read the complete current `docs/specs/rotation-processor.md`, both cited ADRs,
+k41/k45/k46 and k44, and the actual preceding stage's artifact/acceptance rather
+than assuming that a retired task passed. The following obligations bind every
+cut through its root brief, with feature-specific checks added by the leaf.
+
+- Extend the installed Python/pikepdf command without changing preparation's
+  public contract or frozen experiments. Verify the exact pinned Poppler,
+  Leptonica, Pillow and pikepdf APIs before relying on them. Add a direct product
+  Pillow pin and packaged, version-checked estimator bridge; an experiment
+  executable or its fit path is not a runtime dependency. Before serving import
+  or resume, dependency failures are named with a locked-setup remedy. Persist
+  versions/settings and freeze accepted assets across toolchain changes.
+- Keep source/support gates consistent with preparation's static-page domain,
+  but independently verify rendering of full MediaBox composition, effective
+  rotation/UserUnit, static appearances, images/stencils/masks and vector/text.
+  Record original boxes, effective image ppi, pixel/physical dimensions, decoder
+  warnings and extent/fidelity concerns. Fixed 300-dpi lossless RGB re-rendering
+  replaces source representations. Input-relative source-native detail above
+  300 ppi, colour conversion and CropBox-visible extent are separate comparisons;
+  an acknowledgement or unchanged baseline is no preservation-test pass.
+- Retain every source occurrence/order, blank and duplicate. Assess all pages,
+  covers and already-processed scans; hints grant no exemption or source reopen.
+  Universal within-page unverified, orientation unverified and page-specific
+  triage are distinct. Unflagged is only absence of a recorded trigger. No
+  deadband, calibrated confidence, automatic nonzero rotation, free warp, scale
+  normalization, appearance cleanup, OCR or reorder/removal UI is commissioned.
+- Initial baseline retention means unresolved/uninspected accepted state. Every
+  preview/disposition/accepted revision names stable IDs and its displayed
+  revision. Accept is durable; discard/revert are inspectable. No bulk rotation
+  acceptance. Pending drafts block export (6); retained baseline/unresolved
+  assessment reasons do not. A current scoped snapshot acknowledgement, with
+  explicit unresolved IDs/reasons and separate inspection scope, permits usable
+  unresolved export. Edits invalidate acknowledgement and relevant dependencies.
+- One kernel-released project writer lock, transactional checkpoints and
+  completely published content-addressed lossless assets own resume. Reject
+  stale actions, competing writers (`PROJECT_BUSY`, 4), corrupt/missing assets
+  and live frozen-export commits (`EXPORT_IN_PROGRESS`, 6) actionably. Crash
+  recovery never accepts a private partial image/export or permanent freeze.
+  Closing a tab differs from authenticated Stop review (0); SIGINT/SIGTERM
+  return 130/143 with durable state preserved, and Stop waits for export's
+  separate outcome. Token, exact Host/Origin and explicit confirmed destination
+  checks apply to all state-changing browser actions.
+- Export rebuilds from frozen accepted RGB images at recorded physical scale,
+  with no old hidden selectable text/resources. Validate decoded image bytes,
+  identity, count/order and page transforms before atomic no-clobber publication.
+  Report Subject limitation and the exact version-1 UTF-8 JSON attachment from
+  the spec; unsupported stage fields are explicit null/empty/unresolved, never
+  fabricated acceptance. Omit preparation hints. New import of unmarked,
+  metadata-stripped, malformed/unknown-version or externally reordered exports
+  always starts fresh with unknown sides and unverified geometry. A project
+  is the resume artifact; the report is never one.
+- Exercise source/project/output path, case, symlink and hard-link aliases,
+  occupied destinations (including dangling links), concurrent occupation,
+  actual writer interruption and no-link failures. Observe the installed writer
+  PID at private stage/checkpoint/publication barriers, signal/kill and reap it;
+  observing a uv/Task launcher is insufficient. Check both sides of link commit,
+  cleanup/result-delivery failures, unchanged sources/previous output, no partial
+  destination, exact mapped exits/remedies and recoverable project state.
+- A full installed-command test prepares labelled/real selections outside the
+  collection, then runs process → real browser actions → Stop → review resume →
+  export. Also accept an ordinary unmarked already-assembled sole PDF. Run
+  processing with collection reads genuinely denied and observe a read-denied
+  control from the same boundary; merely changing COLLECTION is no isolation.
+  Use a test-owned browser driver for real UI actions and a denied-read boundary
+  around the actual processor. If the host cannot demonstrate either, keep that
+  verification as concrete unfinished work before the next product consumer.
+  Controlled internal faults supplement these public tests; no public fault flags.
+- Extend root Taskfile shared locked setup and `process:` run/review/export/check/
+  acceptance recipes only as they acquire working implementations. Preserve or
+  reconcile existing preparation/geometry wrappers and recipes. Run all new,
+  changed and affected recipes, `prepare:check`, `geometry:staff-check`, and
+  synthetic preparation acceptance; run affected real preparation comparisons
+  too when their subjects change. Finish all edits first, digest every script,
+  manifest, lock, fixture, normative input, library/tool and other read subject
+  before/after with one writer, then compare reruns per item. Keep derived
+  artifacts outside the read-only collection and retain ordinary durable evidence.
+
+### Independent acceptance and retirement ownership
+
+Each stage supplies a current durable acceptance note and ordinary full-page/
+native view manifest, tied to source, baseline, accepted and output digests,
+settings and exact commands. Keep the distinction between independent numerical
+passed/failed/unavailable and human visual accepted/pending/rejected. Actual human
+inspection records exact paths and verbatim scoped replies; no reply is pending/
+unavailable, never inferred acceptance or a fabricated “Not inspected yet”.
+
+Every stage independently assesses the six fixed cases against its offered
+operations and input fidelity: Norwegian20 both gutters (whole-spread detail
+until k49); Garbage Collection30 glyph widths/indentation/boxes/arrows;
+Counterpoint20 one landscape page/both columns; Fundamentals40 faint prose and
+any music; SchoenbergComposition cover1 colour/sparse rules; Algorithm Design20
+already-processed preservation. k48 adds its nonidentity fractional companion,
+which later stages rerun. Music140 remains an unsupported-layout diagnostic and
+music20 the source-acquisition candidate; neither replaces any fixed case.
+k50 adds real adjacent pair/group full/native comparisons for book placement.
+The estimator/detector or its rerun supplies no real ground truth; real numerical
+improvement stays unavailable without an independently validated instrument.
+
+For offered numerical mechanisms use known-by-construction truth with controls
+seen to fail first on a deliberately wrong subject. k47 covers import geometry,
+exact orientation and retained export; k48 adds known upright/tiny/noisy/rigid
+angles, curved/local variation and fractional RGB mapping; k49 adds source-region/
+split/crop retention; k50 adds independently known side/anchor/offset/canvas and
+parity. Aggregate geometry cannot hide regional worsening. Numeric tolerances
+need an independent justification stated before outputs, never detector tuning,
+historical visual estimates or a confidence ratio treated as probability.
+
+A technical implementation may retire with pending human reactions only when
+its complete supported public handoff, independent executable controls, fixed-case
+packets and separate dispositions are delivered. Failed safety/preservation or
+an unavailable required public/synthetic verification is incomplete implementation
+work, requiring precise repair/decomposition before that consumer; do not relabel
+it pending visual review. A real unsupported geometry outcome may be usable and
+unresolved without falsely passing correction. Verified >300-ppi losses remain
+failed preservation for that fixture, even when visibly flagged; retain the
+signed limitation and hand a precise remedy/representation-policy question to
+k28 rather than silently changing resolution or scope here.
+
+The next stage consumes prior missing reactions/defects and adds its own; k28 is
+the live owner of ALL missing intermediate import/rigid/split/book/preservation
+reactions or defect-specific repairs, plus full representative/nonrigid acceptance
+before k22/k23. Pending replies do not veto separately admissible numerical
+evidence under k39's “yes”, and numeric success does not accept the product.
+No response-only or test-only stage is pre-grown. Any justified evidence/response
+completion gets its own fresh planner on every outcome; an identical unanswered
+response is not an automatic relaunch loop. Implementations judge their actual
+artifacts for earned review before the next live consumer.
+
+k27 retains its exact source-only music protocol and separately owns the existing
+historical geometry/preparation questions; its body/gates remain unchanged.
+k28 consumes k44 and all actual working/review successors, then owns full
+within-page evidence/design extension/completion and accepted book geometry
+before appearance. k31's conditional per-half unchanged/rigid/vertical/default-
+validity/field/application/fallback-copy, independent source/output marks,
+held-out/systematic uncertainty, control/nonidentity-sampler/detail and separate
+actual reactions remain unperformed. Both fixed-grid addressing attempts failed
+before marks or masked extraction; this rejects neither all instruments nor the
+vertical family. No automatic dense music marking, forced fit, addressing retry,
+holdout/gate rescue, tuning or new Norwegian study is authorized. Both Norwegian
+source replies remain unavailable, real-anchor/output reactions unperformed and
+historical geometry/preparation separately “Not inspected yet”. k28 must retain
+each named gap before k22; k23 still verifies the complete root after appearance.

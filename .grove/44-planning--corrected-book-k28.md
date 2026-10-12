@@ -33,6 +33,20 @@ Preparation's working contract/evidence are `docs/specs/prepared-pdf.md` and
 
 ## Done when
 
+**Actual k44 working handoff and missing acceptance:** consume `page-review-k47`
+→ `rigid-pages-k48` → `spread-pages-k49` → `book-placement-k50` and their actual
+earned reviews/integrations and durable packets, not queued promises. These
+complete useful supported technical slices can retire under the root's explicit
+reaction-pending policy. This leaf owns every missing intermediate import-fidelity,
+orientation/rigid/crop/split/book-placement and fixed-case visual response,
+unavailable real numerical truth or defect/preservation remedy before k22/k23.
+Known import detail loss remains failed preservation even with exact baseline
+bytes; name its remedy/representation-policy question rather than granting a pass.
+Retain complete within-page evidence/design extension/implementation and full
+book-geometry acceptance here. No identical missing-response loop, initial-design
+re-agreement, OCR/reordering subtree or Norwegian study is commissioned by k44.
+This clause adds ownership; every current scope/protocol/criterion below remains.
+
 **Latest human scope, before the inherited applicability clauses:** the tool
 focuses on page and book geometry, including page alignment/matching and explicit
 odd/even or left/right treatment. Processor reordering and OCR are external and

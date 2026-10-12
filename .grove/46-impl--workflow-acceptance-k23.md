@@ -12,6 +12,11 @@ evidence and retain any missing scope before root closure.
 
 ## Context
 
+Consume the actual k44 working stages k47/k48/k49/k50 through k28 and their
+earned reviews/packets. Each stage's accepted pixels and technical retirement
+can coexist with pending representative reactions; require k28's concrete
+completion/repair and full within-page/book acceptance before final acceptance.
+
 Read the root brief, `corrected-book-k28` and its cut successors' designs/results,
 `corrected-book-k30`'s repaired evidence and the actual committed Norwegian/music
 chain carried by k28 (k31 → k34 → k35 → its fresh planner before k27, including

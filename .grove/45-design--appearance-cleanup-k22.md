@@ -12,6 +12,12 @@ independently useful with appearance cleanup disabled.
 
 ## Context
 
+The actual intermediate stage owners are k47/k48/k49/k50 from k44, with earned
+reviews and separate numerical/visual packets. k28 must resolve every missing
+intermediate/fixed-case preservation or visual judgment and full within-page/
+book acceptance before this optional increment; their technical retirement
+with pending reactions is no accepted complete default product.
+
 Consume the landed processor design, working accepted-image/review/OCR/export
 seam and `corrected-book-k28` plus the successors it cuts and their acceptance
 evidence. Read `corrected-book-k30` for the repaired evidence/ordering contract.
